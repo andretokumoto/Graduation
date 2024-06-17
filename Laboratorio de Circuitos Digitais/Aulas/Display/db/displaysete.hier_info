@@ -1,0 +1,36 @@
+|displaysete
+a <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+w => inst2.IN0
+w => inst9.IN0
+w => inst22.IN0
+w => inst32.IN0
+w => inst37.IN0
+Y => inst6.IN1
+Y => inst4.IN0
+Y => inst14.IN1
+Y => inst20.IN1
+Y => inst21.IN2
+Y => inst26.IN1
+Y => inst34.IN1
+Y => inst35.IN2
+Y => inst35.IN3
+X => inst8.IN1
+X => inst3.IN0
+X => inst16.IN1
+X => inst24.IN1
+X => inst31.IN1
+X => inst30.IN1
+X => inst36.IN1
+Z => inst8.IN2
+Z => inst5.IN0
+Z => inst14.IN2
+Z => inst18.IN1
+Z => inst24.IN3
+b <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+c <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+d <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+e <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+f <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+g <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+
+

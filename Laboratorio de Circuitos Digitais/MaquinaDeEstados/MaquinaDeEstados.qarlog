@@ -1,0 +1,29 @@
+Quartus Prime Archive log --	C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/MaquinaDeEstados.qarlog
+
+Archive:	C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/MaquinaDeEstados.qar
+Date:		Sun Oct 07 13:19:17 2018
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/CircuitoEntrada.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/CircuitoSaida.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/MaquinaDeEstados.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/MaquinaDeMoore.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/Waveform1.vwf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/Y0.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/Y1.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/Y2.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/Y3.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/cont.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/contdec.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/contdec.qpf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/contdec.qsf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/debaunce.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/displaysete.bdf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/output_files/Waveform.vwf
+C:/Users/andre/Documents/unifesp/4semestre/Lab CD/MaquinaDeEstados/temporizador.bdf
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Aug 29 22:22:04 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : contdec
+Top-level Entity Name : contdec
+Family : Cyclone IV E
+Total logic elements : 10
+    Total combinational functions : 10
+    Dedicated logic registers : 3
+Total registers : 3
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,113 @@
+|temporizador
+saida <= cont:ul.y
+reset => cont:ul.clear
+reset => cont:inst8.clear
+reset => cont:inst7.clear
+reset => cont:inst6.clear
+reset => cont:inst5.clear
+reset => cont:inst4.clear
+reset => cont:inst3.clear
+reset => cont:inst2.clear
+reset => cont:inst.clear
+clock => cont:inst.clock
+
+
+|temporizador|cont:ul
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont:inst8
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont:inst7
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont:inst6
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont:inst5
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont:inst4
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont:inst3
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont:inst2
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont:inst
+z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst4.CLK
+clock => inst.CLK
+clock => inst1.CLK
+clock => inst2.CLK
+clear => inst4.DATAIN
+y <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+x <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
