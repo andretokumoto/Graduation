@@ -1,0 +1,11 @@
+int numero(void){
+
+   return 2;
+}
+
+
+void main(void){
+
+    output(numero());
+    
+}

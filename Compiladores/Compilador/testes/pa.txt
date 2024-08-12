@@ -1,0 +1,22 @@
+int termo(int primeiro,int n,int razao){
+
+	int tn;
+	int progressao;
+	progressao = n - 1;
+	progressao = progressao * razao;
+	tn = primeiro + progressao;
+	return tn;
+}
+
+void main(void){
+
+	int razao;
+	int primeiro;
+	int n;
+	input(n);
+input(razao);
+input(primeiro);
+output(termo(primeiro,n,razao));
+
+}
+

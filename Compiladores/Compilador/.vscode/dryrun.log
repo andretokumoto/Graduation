@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/andre/Documentos/Unifesp/Compilador_Andre'
+flex Scanner.l
+bison -d tiny.y
+gcc -c *.c -fno-builtin-exp -Wno-implicit-function-declaration
+gcc *.o -lfl -o compiler -fno-builtin-exp
+make: Leaving directory '/home/andre/Documentos/Unifesp/Compilador_Andre'
+ 
