@@ -1,0 +1,1045 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DadosRegistro[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[16]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[17]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[18]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[19]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[20]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[21]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[22]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[23]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[24]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[25]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[26]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[27]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[28]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[29]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[30]",
+					"strict" : false
+				},
+				{
+					"name" : "DadosRegistro[31]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoRegControl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoRegControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoRegControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[2]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[4]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[6]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[8]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[8]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[10]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[10]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[11]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[11]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[12]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[12]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[13]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[13]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[14]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[15]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[15]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[16]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[16]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[16]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[16]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[16]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[17]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[17]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[17]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[17]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[17]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[18]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[18]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[18]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[18]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[18]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[19]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[19]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[19]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[19]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[19]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[20]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[20]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[20]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[20]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[20]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[21]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[21]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[21]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[21]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[21]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[22]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[22]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[22]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[22]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[22]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[23]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[23]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[23]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[23]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[23]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[24]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[24]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[24]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[24]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[24]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[25]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[25]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[25]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[25]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[25]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[26]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[26]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[26]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[26]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[26]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[27]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[27]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[27]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[27]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[27]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[28]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[28]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[28]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[28]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[28]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[29]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[29]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[29]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[29]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[29]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[30]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[30]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[30]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[30]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[30]",
+					"strict" : false
+				},
+				{
+					"name" : "resulULA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "valorRegRS[31]",
+					"strict" : false
+				},
+				{
+					"name" : "HiLoData[31]",
+					"strict" : false
+				},
+				{
+					"name" : "dadoMEM[31]",
+					"strict" : false
+				},
+				{
+					"name" : "imediato[31]",
+					"strict" : false
+				},
+				{
+					"name" : "dadosEntrada[31]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[31]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

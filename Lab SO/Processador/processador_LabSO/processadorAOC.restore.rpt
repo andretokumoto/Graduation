@@ -1,0 +1,283 @@
+Restore Archived Project report for processadorAOC
+Tue Oct  8 20:07:12 2024
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Tue Oct  8 20:07:12 2024 ;
+; Revision Name                   ; processadorAOC                        ;
+; Top-level Entity Name           ; CPU                                   ;
+; Family                          ; Cyclone IV E                          ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '/home/andre/Documentos/Projetos/Graduation/Lab SO/processadorAOC - fatorial funcionando.qar' into the '/home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/' directory
+Info: Generated report 'processadorAOC.restore.rpt'
+Info (23030): Evaluation of Tcl script /home/andre/intelFPGA_lite/qstd/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 586 megabytes
+    Info: Processing ended: Tue Oct  8 20:07:12 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-------------------------------------+
+; Files Restored                      ;
++-------------------------------------+
+; File Name                           ;
++-------------------------------------+
+; qar_info.json                       ;
+; BCD.v                               ;
+; BancoRegistradores.v                ;
+; CPU.v                               ;
+; DeBounce.v                          ;
+; DeBouncebuton.v                     ;
+; EntradaSaida.v                      ;
+; MEMInstrucoes.v                     ;
+; MemoriaDados.v                      ;
+; PC.v                                ;
+; ParadaSistema.v                     ;
+; ULA.v                               ;
+; UnidadeDeControle.v                 ;
+; Waveform.vwf                        ;
+; Waveform0.vwf                       ;
+; Waveform1.vwf                       ;
+; Waveform10.vwf                      ;
+; Waveform100.vwf                     ;
+; Waveform101.vwf                     ;
+; Waveform102.vwf                     ;
+; Waveform103.vwf                     ;
+; Waveform104.vwf                     ;
+; Waveform105.vwf                     ;
+; Waveform106.vwf                     ;
+; Waveform107.vwf                     ;
+; Waveform108.vwf                     ;
+; Waveform109.vwf                     ;
+; Waveform11.vwf                      ;
+; Waveform110.vwf                     ;
+; Waveform111.vwf                     ;
+; Waveform112.vwf                     ;
+; Waveform113.vwf                     ;
+; Waveform114.vwf                     ;
+; Waveform115.vwf                     ;
+; Waveform116.vwf                     ;
+; Waveform117.vwf                     ;
+; Waveform118.vwf                     ;
+; Waveform119.vwf                     ;
+; Waveform12.vwf                      ;
+; Waveform120.vwf                     ;
+; Waveform121.vwf                     ;
+; Waveform122.vwf                     ;
+; Waveform123.vwf                     ;
+; Waveform124.vwf                     ;
+; Waveform125.vwf                     ;
+; Waveform126.vwf                     ;
+; Waveform127.vwf                     ;
+; Waveform128.vwf                     ;
+; Waveform129.vwf                     ;
+; Waveform13.vwf                      ;
+; Waveform130.vwf                     ;
+; Waveform131.vwf                     ;
+; Waveform132.vwf                     ;
+; Waveform133.vwf                     ;
+; Waveform134.vwf                     ;
+; Waveform135.vwf                     ;
+; Waveform136.vwf                     ;
+; Waveform137.vwf                     ;
+; Waveform138.vwf                     ;
+; Waveform139.vwf                     ;
+; Waveform14.vwf                      ;
+; Waveform140.vwf                     ;
+; Waveform141.vwf                     ;
+; Waveform142.vwf                     ;
+; Waveform143.vwf                     ;
+; Waveform144.vwf                     ;
+; Waveform145.vwf                     ;
+; Waveform146.vwf                     ;
+; Waveform147.vwf                     ;
+; Waveform148.vwf                     ;
+; Waveform149.vwf                     ;
+; Waveform15.vwf                      ;
+; Waveform150.vwf                     ;
+; Waveform151.vwf                     ;
+; Waveform152.vwf                     ;
+; Waveform153.vwf                     ;
+; Waveform154.vwf                     ;
+; Waveform155.vwf                     ;
+; Waveform156.vwf                     ;
+; Waveform157.vwf                     ;
+; Waveform158.vwf                     ;
+; Waveform159.vwf                     ;
+; Waveform16.vwf                      ;
+; Waveform160.vwf                     ;
+; Waveform161.vwf                     ;
+; Waveform162.vwf                     ;
+; Waveform163.vwf                     ;
+; Waveform164.vwf                     ;
+; Waveform165.vwf                     ;
+; Waveform166.vwf                     ;
+; Waveform167.vwf                     ;
+; Waveform168.vwf                     ;
+; Waveform169.vwf                     ;
+; Waveform17.vwf                      ;
+; Waveform170.vwf                     ;
+; Waveform171.vwf                     ;
+; Waveform172.vwf                     ;
+; Waveform173.vwf                     ;
+; Waveform18.vwf                      ;
+; Waveform19.vwf                      ;
+; Waveform2.vwf                       ;
+; Waveform20.vwf                      ;
+; Waveform21.vwf                      ;
+; Waveform22.vwf                      ;
+; Waveform23.vwf                      ;
+; Waveform24.vwf                      ;
+; Waveform25.vwf                      ;
+; Waveform26.vwf                      ;
+; Waveform27.vwf                      ;
+; Waveform28.vwf                      ;
+; Waveform29.vwf                      ;
+; Waveform3.vwf                       ;
+; Waveform30.vwf                      ;
+; Waveform31.vwf                      ;
+; Waveform32.vwf                      ;
+; Waveform33.vwf                      ;
+; Waveform34.vwf                      ;
+; Waveform35.vwf                      ;
+; Waveform36.vwf                      ;
+; Waveform37.vwf                      ;
+; Waveform38.vwf                      ;
+; Waveform39.vwf                      ;
+; Waveform4.vwf                       ;
+; Waveform40.vwf                      ;
+; Waveform41.vwf                      ;
+; Waveform42.vwf                      ;
+; Waveform43.vwf                      ;
+; Waveform44.vwf                      ;
+; Waveform45.vwf                      ;
+; Waveform46.vwf                      ;
+; Waveform47.vwf                      ;
+; Waveform48.vwf                      ;
+; Waveform49.vwf                      ;
+; Waveform5.vwf                       ;
+; Waveform50.vwf                      ;
+; Waveform51.vwf                      ;
+; Waveform52.vwf                      ;
+; Waveform53.vwf                      ;
+; Waveform54.vwf                      ;
+; Waveform55.vwf                      ;
+; Waveform56.vwf                      ;
+; Waveform57.vwf                      ;
+; Waveform58.vwf                      ;
+; Waveform59.vwf                      ;
+; Waveform6.vwf                       ;
+; Waveform60.vwf                      ;
+; Waveform61.vwf                      ;
+; Waveform62.vwf                      ;
+; Waveform63.vwf                      ;
+; Waveform64.vwf                      ;
+; Waveform65.vwf                      ;
+; Waveform66.vwf                      ;
+; Waveform67.vwf                      ;
+; Waveform68.vwf                      ;
+; Waveform69.vwf                      ;
+; Waveform7.vwf                       ;
+; Waveform70.vwf                      ;
+; Waveform71.vwf                      ;
+; Waveform72.vwf                      ;
+; Waveform73.vwf                      ;
+; Waveform74.vwf                      ;
+; Waveform75.vwf                      ;
+; Waveform76.vwf                      ;
+; Waveform77.vwf                      ;
+; Waveform78.vwf                      ;
+; Waveform79.vwf                      ;
+; Waveform8.vwf                       ;
+; Waveform80.vwf                      ;
+; Waveform81.vwf                      ;
+; Waveform82.vwf                      ;
+; Waveform83.vwf                      ;
+; Waveform84.vwf                      ;
+; Waveform85.vwf                      ;
+; Waveform86.vwf                      ;
+; Waveform87.vwf                      ;
+; Waveform88.vwf                      ;
+; Waveform89.vwf                      ;
+; Waveform9.vwf                       ;
+; Waveform90.vwf                      ;
+; Waveform91.vwf                      ;
+; Waveform92.vwf                      ;
+; Waveform93.vwf                      ;
+; Waveform94.vwf                      ;
+; Waveform95.vwf                      ;
+; Waveform96.vwf                      ;
+; Waveform97.vwf                      ;
+; Waveform98.vwf                      ;
+; Waveform99.vwf                      ;
+; Waveformee.vwf                      ;
+; Waveformm.vwf                       ;
+; assignment_defaults.qdf             ;
+; clock_divider.v                     ;
+; displaySete.v                       ;
+; gfhjd.vwf                           ;
+; gjuhkfuyd.vwf                       ;
+; jjjj.vwf                            ;
+; kk.vwf                              ;
+; monostable.v                        ;
+; mux6.v                              ;
+; muxDesvio.v                         ;
+; output_files/Waveform.vwf           ;
+; processadorAOC.qpf                  ;
+; processadorAOC.qsf                  ;
+; pulsoBotao.v                        ;
+; simple_dual_port_ram_dual_clock.v   ;
+; simple_dual_port_ram_single_clock.v ;
+; testecpu1.vwf                       ;
+; tratamentoBotao.v                   ;
+; unidadeDeComparacao.v               ;
++-------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

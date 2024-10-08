@@ -1,0 +1,14 @@
+int gcd (int u, int v){
+    if (v==0)
+        return u;
+    else
+        return gcd(v, u - u / v * v);
+}
+
+void main(void){
+    int y;
+    int x;
+    x = 12;
+    y = 8;
+    output(gcd(x,y));
+}

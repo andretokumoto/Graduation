@@ -1,0 +1,20 @@
+int fatorial(int num){
+
+	int fat;
+int result;
+            fat = 1;
+result = 1;
+	while(fat < num){
+	result = result*fat;
+fat = fat + 1;	
+	}
+	return( result );
+}
+
+void main(void){
+
+	int num;
+	input(num);
+	output(fatorial(num));
+}
+

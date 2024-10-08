@@ -1,0 +1,1197 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/08/2024 20:20:04"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          mux6
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module mux6_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [31:0] HiLoData;
+reg [31:0] PC;
+reg [31:0] dadoMEM;
+reg [2:0] dadoRegControl;
+reg [31:0] dadosEntrada;
+reg [31:0] imediato;
+reg [31:0] resulULA;
+reg [31:0] valorRegRS;
+// wires                                               
+wire [31:0] DadosRegistro;
+
+// assign statements (if any)                          
+mux6 i1 (
+// port map - connection between master ports and signals/registers   
+	.DadosRegistro(DadosRegistro),
+	.HiLoData(HiLoData),
+	.PC(PC),
+	.dadoMEM(dadoMEM),
+	.dadoRegControl(dadoRegControl),
+	.dadosEntrada(dadosEntrada),
+	.imediato(imediato),
+	.resulULA(resulULA),
+	.valorRegRS(valorRegRS)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// HiLoData[ 31 ]
+initial
+begin
+	HiLoData[31] = 1'b0;
+end 
+// HiLoData[ 30 ]
+initial
+begin
+	HiLoData[30] = 1'b0;
+end 
+// HiLoData[ 29 ]
+initial
+begin
+	HiLoData[29] = 1'b0;
+end 
+// HiLoData[ 28 ]
+initial
+begin
+	HiLoData[28] = 1'b0;
+end 
+// HiLoData[ 27 ]
+initial
+begin
+	HiLoData[27] = 1'b0;
+end 
+// HiLoData[ 26 ]
+initial
+begin
+	HiLoData[26] = 1'b0;
+end 
+// HiLoData[ 25 ]
+initial
+begin
+	HiLoData[25] = 1'b0;
+end 
+// HiLoData[ 24 ]
+initial
+begin
+	HiLoData[24] = 1'b0;
+end 
+// HiLoData[ 23 ]
+initial
+begin
+	HiLoData[23] = 1'b0;
+end 
+// HiLoData[ 22 ]
+initial
+begin
+	HiLoData[22] = 1'b0;
+end 
+// HiLoData[ 21 ]
+initial
+begin
+	HiLoData[21] = 1'b0;
+end 
+// HiLoData[ 20 ]
+initial
+begin
+	HiLoData[20] = 1'b0;
+end 
+// HiLoData[ 19 ]
+initial
+begin
+	HiLoData[19] = 1'b0;
+end 
+// HiLoData[ 18 ]
+initial
+begin
+	HiLoData[18] = 1'b0;
+end 
+// HiLoData[ 17 ]
+initial
+begin
+	HiLoData[17] = 1'b0;
+end 
+// HiLoData[ 16 ]
+initial
+begin
+	HiLoData[16] = 1'b0;
+end 
+// HiLoData[ 15 ]
+initial
+begin
+	HiLoData[15] = 1'b0;
+end 
+// HiLoData[ 14 ]
+initial
+begin
+	HiLoData[14] = 1'b0;
+end 
+// HiLoData[ 13 ]
+initial
+begin
+	HiLoData[13] = 1'b0;
+end 
+// HiLoData[ 12 ]
+initial
+begin
+	HiLoData[12] = 1'b0;
+end 
+// HiLoData[ 11 ]
+initial
+begin
+	HiLoData[11] = 1'b0;
+end 
+// HiLoData[ 10 ]
+initial
+begin
+	HiLoData[10] = 1'b0;
+end 
+// HiLoData[ 9 ]
+initial
+begin
+	HiLoData[9] = 1'b0;
+end 
+// HiLoData[ 8 ]
+initial
+begin
+	HiLoData[8] = 1'b0;
+end 
+// HiLoData[ 7 ]
+initial
+begin
+	HiLoData[7] = 1'b0;
+end 
+// HiLoData[ 6 ]
+initial
+begin
+	HiLoData[6] = 1'b0;
+end 
+// HiLoData[ 5 ]
+initial
+begin
+	HiLoData[5] = 1'b0;
+end 
+// HiLoData[ 4 ]
+initial
+begin
+	HiLoData[4] = 1'b0;
+end 
+// HiLoData[ 3 ]
+initial
+begin
+	HiLoData[3] = 1'b0;
+end 
+// HiLoData[ 2 ]
+initial
+begin
+	HiLoData[2] = 1'b0;
+end 
+// HiLoData[ 1 ]
+initial
+begin
+	HiLoData[1] = 1'b0;
+end 
+// HiLoData[ 0 ]
+initial
+begin
+	HiLoData[0] = 1'b0;
+end 
+// PC[ 31 ]
+initial
+begin
+	PC[31] = 1'b0;
+end 
+// PC[ 30 ]
+initial
+begin
+	PC[30] = 1'b0;
+end 
+// PC[ 29 ]
+initial
+begin
+	PC[29] = 1'b0;
+end 
+// PC[ 28 ]
+initial
+begin
+	PC[28] = 1'b0;
+end 
+// PC[ 27 ]
+initial
+begin
+	PC[27] = 1'b0;
+end 
+// PC[ 26 ]
+initial
+begin
+	PC[26] = 1'b0;
+end 
+// PC[ 25 ]
+initial
+begin
+	PC[25] = 1'b0;
+end 
+// PC[ 24 ]
+initial
+begin
+	PC[24] = 1'b0;
+end 
+// PC[ 23 ]
+initial
+begin
+	PC[23] = 1'b0;
+end 
+// PC[ 22 ]
+initial
+begin
+	PC[22] = 1'b0;
+end 
+// PC[ 21 ]
+initial
+begin
+	PC[21] = 1'b0;
+end 
+// PC[ 20 ]
+initial
+begin
+	PC[20] = 1'b0;
+end 
+// PC[ 19 ]
+initial
+begin
+	PC[19] = 1'b0;
+end 
+// PC[ 18 ]
+initial
+begin
+	PC[18] = 1'b0;
+end 
+// PC[ 17 ]
+initial
+begin
+	PC[17] = 1'b0;
+end 
+// PC[ 16 ]
+initial
+begin
+	PC[16] = 1'b0;
+end 
+// PC[ 15 ]
+initial
+begin
+	PC[15] = 1'b0;
+end 
+// PC[ 14 ]
+initial
+begin
+	PC[14] = 1'b0;
+end 
+// PC[ 13 ]
+initial
+begin
+	PC[13] = 1'b0;
+end 
+// PC[ 12 ]
+initial
+begin
+	PC[12] = 1'b0;
+end 
+// PC[ 11 ]
+initial
+begin
+	PC[11] = 1'b0;
+end 
+// PC[ 10 ]
+initial
+begin
+	PC[10] = 1'b0;
+end 
+// PC[ 9 ]
+initial
+begin
+	PC[9] = 1'b0;
+end 
+// PC[ 8 ]
+initial
+begin
+	PC[8] = 1'b0;
+end 
+// PC[ 7 ]
+initial
+begin
+	PC[7] = 1'b0;
+end 
+// PC[ 6 ]
+initial
+begin
+	PC[6] = 1'b0;
+end 
+// PC[ 5 ]
+initial
+begin
+	PC[5] = 1'b0;
+end 
+// PC[ 4 ]
+initial
+begin
+	PC[4] = 1'b0;
+end 
+// PC[ 3 ]
+initial
+begin
+	PC[3] = 1'b0;
+end 
+// PC[ 2 ]
+initial
+begin
+	PC[2] = 1'b0;
+end 
+// PC[ 1 ]
+initial
+begin
+	PC[1] = 1'b0;
+end 
+// PC[ 0 ]
+initial
+begin
+	PC[0] = 1'b0;
+end 
+// dadoMEM[ 31 ]
+initial
+begin
+	dadoMEM[31] = 1'b0;
+end 
+// dadoMEM[ 30 ]
+initial
+begin
+	dadoMEM[30] = 1'b0;
+end 
+// dadoMEM[ 29 ]
+initial
+begin
+	dadoMEM[29] = 1'b0;
+end 
+// dadoMEM[ 28 ]
+initial
+begin
+	dadoMEM[28] = 1'b0;
+end 
+// dadoMEM[ 27 ]
+initial
+begin
+	dadoMEM[27] = 1'b0;
+end 
+// dadoMEM[ 26 ]
+initial
+begin
+	dadoMEM[26] = 1'b0;
+end 
+// dadoMEM[ 25 ]
+initial
+begin
+	dadoMEM[25] = 1'b0;
+end 
+// dadoMEM[ 24 ]
+initial
+begin
+	dadoMEM[24] = 1'b0;
+end 
+// dadoMEM[ 23 ]
+initial
+begin
+	dadoMEM[23] = 1'b0;
+end 
+// dadoMEM[ 22 ]
+initial
+begin
+	dadoMEM[22] = 1'b0;
+end 
+// dadoMEM[ 21 ]
+initial
+begin
+	dadoMEM[21] = 1'b0;
+end 
+// dadoMEM[ 20 ]
+initial
+begin
+	dadoMEM[20] = 1'b0;
+end 
+// dadoMEM[ 19 ]
+initial
+begin
+	dadoMEM[19] = 1'b0;
+end 
+// dadoMEM[ 18 ]
+initial
+begin
+	dadoMEM[18] = 1'b0;
+end 
+// dadoMEM[ 17 ]
+initial
+begin
+	dadoMEM[17] = 1'b0;
+end 
+// dadoMEM[ 16 ]
+initial
+begin
+	dadoMEM[16] = 1'b0;
+end 
+// dadoMEM[ 15 ]
+initial
+begin
+	dadoMEM[15] = 1'b0;
+end 
+// dadoMEM[ 14 ]
+initial
+begin
+	dadoMEM[14] = 1'b0;
+end 
+// dadoMEM[ 13 ]
+initial
+begin
+	dadoMEM[13] = 1'b0;
+end 
+// dadoMEM[ 12 ]
+initial
+begin
+	dadoMEM[12] = 1'b0;
+end 
+// dadoMEM[ 11 ]
+initial
+begin
+	dadoMEM[11] = 1'b0;
+end 
+// dadoMEM[ 10 ]
+initial
+begin
+	dadoMEM[10] = 1'b0;
+end 
+// dadoMEM[ 9 ]
+initial
+begin
+	dadoMEM[9] = 1'b0;
+end 
+// dadoMEM[ 8 ]
+initial
+begin
+	dadoMEM[8] = 1'b0;
+end 
+// dadoMEM[ 7 ]
+initial
+begin
+	dadoMEM[7] = 1'b0;
+end 
+// dadoMEM[ 6 ]
+initial
+begin
+	dadoMEM[6] = 1'b0;
+end 
+// dadoMEM[ 5 ]
+initial
+begin
+	dadoMEM[5] = 1'b0;
+end 
+// dadoMEM[ 4 ]
+initial
+begin
+	dadoMEM[4] = 1'b0;
+end 
+// dadoMEM[ 3 ]
+initial
+begin
+	dadoMEM[3] = 1'b0;
+end 
+// dadoMEM[ 2 ]
+initial
+begin
+	dadoMEM[2] = 1'b0;
+end 
+// dadoMEM[ 1 ]
+initial
+begin
+	dadoMEM[1] = 1'b0;
+end 
+// dadoMEM[ 0 ]
+initial
+begin
+	dadoMEM[0] = 1'b0;
+end 
+// dadoRegControl[ 2 ]
+initial
+begin
+	dadoRegControl[2] = 1'b0;
+end 
+// dadoRegControl[ 1 ]
+initial
+begin
+	dadoRegControl[1] = 1'b0;
+end 
+// dadoRegControl[ 0 ]
+initial
+begin
+	dadoRegControl[0] = 1'b0;
+end 
+// dadosEntrada[ 31 ]
+initial
+begin
+	dadosEntrada[31] = 1'b0;
+end 
+// dadosEntrada[ 30 ]
+initial
+begin
+	dadosEntrada[30] = 1'b0;
+end 
+// dadosEntrada[ 29 ]
+initial
+begin
+	dadosEntrada[29] = 1'b0;
+end 
+// dadosEntrada[ 28 ]
+initial
+begin
+	dadosEntrada[28] = 1'b0;
+end 
+// dadosEntrada[ 27 ]
+initial
+begin
+	dadosEntrada[27] = 1'b0;
+end 
+// dadosEntrada[ 26 ]
+initial
+begin
+	dadosEntrada[26] = 1'b0;
+end 
+// dadosEntrada[ 25 ]
+initial
+begin
+	dadosEntrada[25] = 1'b0;
+end 
+// dadosEntrada[ 24 ]
+initial
+begin
+	dadosEntrada[24] = 1'b0;
+end 
+// dadosEntrada[ 23 ]
+initial
+begin
+	dadosEntrada[23] = 1'b0;
+end 
+// dadosEntrada[ 22 ]
+initial
+begin
+	dadosEntrada[22] = 1'b0;
+end 
+// dadosEntrada[ 21 ]
+initial
+begin
+	dadosEntrada[21] = 1'b0;
+end 
+// dadosEntrada[ 20 ]
+initial
+begin
+	dadosEntrada[20] = 1'b0;
+end 
+// dadosEntrada[ 19 ]
+initial
+begin
+	dadosEntrada[19] = 1'b0;
+end 
+// dadosEntrada[ 18 ]
+initial
+begin
+	dadosEntrada[18] = 1'b0;
+end 
+// dadosEntrada[ 17 ]
+initial
+begin
+	dadosEntrada[17] = 1'b0;
+end 
+// dadosEntrada[ 16 ]
+initial
+begin
+	dadosEntrada[16] = 1'b0;
+end 
+// dadosEntrada[ 15 ]
+initial
+begin
+	dadosEntrada[15] = 1'b0;
+end 
+// dadosEntrada[ 14 ]
+initial
+begin
+	dadosEntrada[14] = 1'b0;
+end 
+// dadosEntrada[ 13 ]
+initial
+begin
+	dadosEntrada[13] = 1'b0;
+end 
+// dadosEntrada[ 12 ]
+initial
+begin
+	dadosEntrada[12] = 1'b0;
+end 
+// dadosEntrada[ 11 ]
+initial
+begin
+	dadosEntrada[11] = 1'b0;
+end 
+// dadosEntrada[ 10 ]
+initial
+begin
+	dadosEntrada[10] = 1'b0;
+end 
+// dadosEntrada[ 9 ]
+initial
+begin
+	dadosEntrada[9] = 1'b0;
+end 
+// dadosEntrada[ 8 ]
+initial
+begin
+	dadosEntrada[8] = 1'b0;
+end 
+// dadosEntrada[ 7 ]
+initial
+begin
+	dadosEntrada[7] = 1'b0;
+end 
+// dadosEntrada[ 6 ]
+initial
+begin
+	dadosEntrada[6] = 1'b0;
+end 
+// dadosEntrada[ 5 ]
+initial
+begin
+	dadosEntrada[5] = 1'b0;
+end 
+// dadosEntrada[ 4 ]
+initial
+begin
+	dadosEntrada[4] = 1'b0;
+end 
+// dadosEntrada[ 3 ]
+initial
+begin
+	dadosEntrada[3] = 1'b0;
+end 
+// dadosEntrada[ 2 ]
+initial
+begin
+	dadosEntrada[2] = 1'b0;
+end 
+// dadosEntrada[ 1 ]
+initial
+begin
+	dadosEntrada[1] = 1'b0;
+end 
+// dadosEntrada[ 0 ]
+initial
+begin
+	dadosEntrada[0] = 1'b0;
+end 
+// imediato[ 31 ]
+initial
+begin
+	imediato[31] = 1'b0;
+end 
+// imediato[ 30 ]
+initial
+begin
+	imediato[30] = 1'b0;
+end 
+// imediato[ 29 ]
+initial
+begin
+	imediato[29] = 1'b0;
+end 
+// imediato[ 28 ]
+initial
+begin
+	imediato[28] = 1'b0;
+end 
+// imediato[ 27 ]
+initial
+begin
+	imediato[27] = 1'b0;
+end 
+// imediato[ 26 ]
+initial
+begin
+	imediato[26] = 1'b0;
+end 
+// imediato[ 25 ]
+initial
+begin
+	imediato[25] = 1'b0;
+end 
+// imediato[ 24 ]
+initial
+begin
+	imediato[24] = 1'b0;
+end 
+// imediato[ 23 ]
+initial
+begin
+	imediato[23] = 1'b0;
+end 
+// imediato[ 22 ]
+initial
+begin
+	imediato[22] = 1'b0;
+end 
+// imediato[ 21 ]
+initial
+begin
+	imediato[21] = 1'b0;
+end 
+// imediato[ 20 ]
+initial
+begin
+	imediato[20] = 1'b0;
+end 
+// imediato[ 19 ]
+initial
+begin
+	imediato[19] = 1'b0;
+end 
+// imediato[ 18 ]
+initial
+begin
+	imediato[18] = 1'b0;
+end 
+// imediato[ 17 ]
+initial
+begin
+	imediato[17] = 1'b0;
+end 
+// imediato[ 16 ]
+initial
+begin
+	imediato[16] = 1'b0;
+end 
+// imediato[ 15 ]
+initial
+begin
+	imediato[15] = 1'b0;
+end 
+// imediato[ 14 ]
+initial
+begin
+	imediato[14] = 1'b0;
+end 
+// imediato[ 13 ]
+initial
+begin
+	imediato[13] = 1'b0;
+end 
+// imediato[ 12 ]
+initial
+begin
+	imediato[12] = 1'b0;
+end 
+// imediato[ 11 ]
+initial
+begin
+	imediato[11] = 1'b0;
+end 
+// imediato[ 10 ]
+initial
+begin
+	imediato[10] = 1'b0;
+end 
+// imediato[ 9 ]
+initial
+begin
+	imediato[9] = 1'b0;
+end 
+// imediato[ 8 ]
+initial
+begin
+	imediato[8] = 1'b0;
+end 
+// imediato[ 7 ]
+initial
+begin
+	imediato[7] = 1'b0;
+end 
+// imediato[ 6 ]
+initial
+begin
+	imediato[6] = 1'b0;
+end 
+// imediato[ 5 ]
+initial
+begin
+	imediato[5] = 1'b0;
+end 
+// imediato[ 4 ]
+initial
+begin
+	imediato[4] = 1'b0;
+end 
+// imediato[ 3 ]
+initial
+begin
+	imediato[3] = 1'b0;
+end 
+// imediato[ 2 ]
+initial
+begin
+	imediato[2] = 1'b0;
+end 
+// imediato[ 1 ]
+initial
+begin
+	imediato[1] = 1'b0;
+end 
+// imediato[ 0 ]
+initial
+begin
+	imediato[0] = 1'b0;
+end 
+// resulULA[ 31 ]
+initial
+begin
+	resulULA[31] = 1'b0;
+end 
+// resulULA[ 30 ]
+initial
+begin
+	resulULA[30] = 1'b0;
+end 
+// resulULA[ 29 ]
+initial
+begin
+	resulULA[29] = 1'b0;
+end 
+// resulULA[ 28 ]
+initial
+begin
+	resulULA[28] = 1'b0;
+end 
+// resulULA[ 27 ]
+initial
+begin
+	resulULA[27] = 1'b0;
+end 
+// resulULA[ 26 ]
+initial
+begin
+	resulULA[26] = 1'b0;
+end 
+// resulULA[ 25 ]
+initial
+begin
+	resulULA[25] = 1'b0;
+end 
+// resulULA[ 24 ]
+initial
+begin
+	resulULA[24] = 1'b0;
+end 
+// resulULA[ 23 ]
+initial
+begin
+	resulULA[23] = 1'b0;
+end 
+// resulULA[ 22 ]
+initial
+begin
+	resulULA[22] = 1'b0;
+end 
+// resulULA[ 21 ]
+initial
+begin
+	resulULA[21] = 1'b0;
+end 
+// resulULA[ 20 ]
+initial
+begin
+	resulULA[20] = 1'b0;
+end 
+// resulULA[ 19 ]
+initial
+begin
+	resulULA[19] = 1'b0;
+end 
+// resulULA[ 18 ]
+initial
+begin
+	resulULA[18] = 1'b0;
+end 
+// resulULA[ 17 ]
+initial
+begin
+	resulULA[17] = 1'b0;
+end 
+// resulULA[ 16 ]
+initial
+begin
+	resulULA[16] = 1'b0;
+end 
+// resulULA[ 15 ]
+initial
+begin
+	resulULA[15] = 1'b0;
+end 
+// resulULA[ 14 ]
+initial
+begin
+	resulULA[14] = 1'b0;
+end 
+// resulULA[ 13 ]
+initial
+begin
+	resulULA[13] = 1'b0;
+end 
+// resulULA[ 12 ]
+initial
+begin
+	resulULA[12] = 1'b0;
+end 
+// resulULA[ 11 ]
+initial
+begin
+	resulULA[11] = 1'b0;
+end 
+// resulULA[ 10 ]
+initial
+begin
+	resulULA[10] = 1'b0;
+end 
+// resulULA[ 9 ]
+initial
+begin
+	resulULA[9] = 1'b0;
+end 
+// resulULA[ 8 ]
+initial
+begin
+	resulULA[8] = 1'b0;
+end 
+// resulULA[ 7 ]
+initial
+begin
+	resulULA[7] = 1'b0;
+end 
+// resulULA[ 6 ]
+initial
+begin
+	resulULA[6] = 1'b0;
+end 
+// resulULA[ 5 ]
+initial
+begin
+	resulULA[5] = 1'b0;
+end 
+// resulULA[ 4 ]
+initial
+begin
+	resulULA[4] = 1'b0;
+end 
+// resulULA[ 3 ]
+initial
+begin
+	resulULA[3] = 1'b0;
+end 
+// resulULA[ 2 ]
+initial
+begin
+	resulULA[2] = 1'b0;
+end 
+// resulULA[ 1 ]
+initial
+begin
+	resulULA[1] = 1'b0;
+end 
+// resulULA[ 0 ]
+initial
+begin
+	resulULA[0] = 1'b0;
+end 
+// valorRegRS[ 31 ]
+initial
+begin
+	valorRegRS[31] = 1'b0;
+end 
+// valorRegRS[ 30 ]
+initial
+begin
+	valorRegRS[30] = 1'b0;
+end 
+// valorRegRS[ 29 ]
+initial
+begin
+	valorRegRS[29] = 1'b0;
+end 
+// valorRegRS[ 28 ]
+initial
+begin
+	valorRegRS[28] = 1'b0;
+end 
+// valorRegRS[ 27 ]
+initial
+begin
+	valorRegRS[27] = 1'b0;
+end 
+// valorRegRS[ 26 ]
+initial
+begin
+	valorRegRS[26] = 1'b0;
+end 
+// valorRegRS[ 25 ]
+initial
+begin
+	valorRegRS[25] = 1'b0;
+end 
+// valorRegRS[ 24 ]
+initial
+begin
+	valorRegRS[24] = 1'b0;
+end 
+// valorRegRS[ 23 ]
+initial
+begin
+	valorRegRS[23] = 1'b0;
+end 
+// valorRegRS[ 22 ]
+initial
+begin
+	valorRegRS[22] = 1'b0;
+end 
+// valorRegRS[ 21 ]
+initial
+begin
+	valorRegRS[21] = 1'b0;
+end 
+// valorRegRS[ 20 ]
+initial
+begin
+	valorRegRS[20] = 1'b0;
+end 
+// valorRegRS[ 19 ]
+initial
+begin
+	valorRegRS[19] = 1'b0;
+end 
+// valorRegRS[ 18 ]
+initial
+begin
+	valorRegRS[18] = 1'b0;
+end 
+// valorRegRS[ 17 ]
+initial
+begin
+	valorRegRS[17] = 1'b0;
+end 
+// valorRegRS[ 16 ]
+initial
+begin
+	valorRegRS[16] = 1'b0;
+end 
+// valorRegRS[ 15 ]
+initial
+begin
+	valorRegRS[15] = 1'b0;
+end 
+// valorRegRS[ 14 ]
+initial
+begin
+	valorRegRS[14] = 1'b0;
+end 
+// valorRegRS[ 13 ]
+initial
+begin
+	valorRegRS[13] = 1'b0;
+end 
+// valorRegRS[ 12 ]
+initial
+begin
+	valorRegRS[12] = 1'b0;
+end 
+// valorRegRS[ 11 ]
+initial
+begin
+	valorRegRS[11] = 1'b0;
+end 
+// valorRegRS[ 10 ]
+initial
+begin
+	valorRegRS[10] = 1'b0;
+end 
+// valorRegRS[ 9 ]
+initial
+begin
+	valorRegRS[9] = 1'b0;
+end 
+// valorRegRS[ 8 ]
+initial
+begin
+	valorRegRS[8] = 1'b0;
+end 
+// valorRegRS[ 7 ]
+initial
+begin
+	valorRegRS[7] = 1'b0;
+end 
+// valorRegRS[ 6 ]
+initial
+begin
+	valorRegRS[6] = 1'b0;
+end 
+// valorRegRS[ 5 ]
+initial
+begin
+	valorRegRS[5] = 1'b0;
+end 
+// valorRegRS[ 4 ]
+initial
+begin
+	valorRegRS[4] = 1'b0;
+end 
+// valorRegRS[ 3 ]
+initial
+begin
+	valorRegRS[3] = 1'b0;
+end 
+// valorRegRS[ 2 ]
+initial
+begin
+	valorRegRS[2] = 1'b0;
+end 
+// valorRegRS[ 1 ]
+initial
+begin
+	valorRegRS[1] = 1'b0;
+end 
+// valorRegRS[ 0 ]
+initial
+begin
+	valorRegRS[0] = 1'b0;
+end 
+endmodule
+

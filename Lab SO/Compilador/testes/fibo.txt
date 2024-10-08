@@ -1,0 +1,24 @@
+void main(void){
+
+    int n;
+    int a;
+    int b;
+    int i;
+    int nfibo;
+
+    n = input();
+    i = 1;
+    a = 1;
+    b = 1;
+    nfibo = 1;
+    
+
+    while(i<n){
+
+        nfibo = a + b;
+        a = b;
+        b = nfibo;
+        i = i + 1;
+    }
+    output(nfibo);
+}
