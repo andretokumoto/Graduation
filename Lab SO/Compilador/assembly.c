@@ -384,7 +384,7 @@ void generateInstruction (QuadList l) {
                             instructionFormatI(mov, $bp, $sp, curmemloc, NULL);
                         } */
                         instructionFormatI(addi,$bp,$bp,aux,NULL);//cria pilha
-                        instructionFormatR(spc, $zero, $zero, $zero);//salva pc
+                        instructionFormatR(spc, $ret, $zero, $zero);//salva pc
                         instructionFormatI(sw, $ra, $bp,1, NULL);//salva na pilha
                         instructionFormatJ(j, -1, a2.contents.var.name);//salta para a função 
                         instructionFormatI(subi,$bp, $bp, aux, NULL);//desempilha
