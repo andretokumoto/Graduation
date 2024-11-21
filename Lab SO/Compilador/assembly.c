@@ -375,7 +375,7 @@ void generateInstruction (QuadList l) {
                 }
                 else if (strcmp(a2.contents.var.name, "output") == 0) {//saida de dados
                     instructionFormatO(out, getArgReg(), 0, NULL);
-                    //instructionFormatR(pause, $zero, $zero, $zero);
+                    instructionFormatR(pause, $zero, $zero, $zero);
                 }
                 else{//outros tipos de função
                         aux = getFunSize(a1.contents.var.scope);
@@ -384,7 +384,7 @@ void generateInstruction (QuadList l) {
                             instructionFormatI(mov, $bp, $sp, curmemloc, NULL);
                         } */
                         instructionFormatI(addi,$bp,$bp,aux,NULL);//cria pilha
-                        instructionFormatR(spc, $ret, $zero, $zero);//salva pc
+                        instructionFormatR(spc, $ra, $zero, $zero);//salva pc
                         instructionFormatI(sw, $ra, $bp,1, NULL);//salva na pilha
                         instructionFormatJ(j, -1, a2.contents.var.name);//salta para a função 
                         instructionFormatI(subi,$bp, $bp, aux, NULL);//desempilha
