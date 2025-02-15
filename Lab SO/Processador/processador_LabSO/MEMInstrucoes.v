@@ -1,39 +1,50 @@
 module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao, posicaoParaSalvarInstrucao, controleSalvaInstrucao, biosEmExecucao, encerrarBios);
 
-		input [31:0] pc, entradaDeInstrucao, posicaoParaSalvarInstrucao;
-		input clock, reset;
-		input encerrarBios;
-		input [2:0] controleSalvaInstrucao;
-		output reg [5:0] opcode;
-		output reg [4:0] OUTrs, OUTrt, OUTrd;
-		output reg [15:0] imediato;
-		output reg [25:0] jump;
-		output reg biosEmExecucao; // Sinal que indica que a bios está em execução
+    input [31:0] pc, entradaDeInstrucao, posicaoParaSalvarInstrucao;
+    input clock, reset;
+    input encerrarBios;
+    input [2:0] controleSalvaInstrucao;
+    output reg [5:0] opcode;
+    output reg [4:0] OUTrs, OUTrt, OUTrd;
+    output reg [15:0] imediato;
+    output reg [25:0] jump;
+    output reg biosEmExecucao; // Sinal que indica que a bios está em execução
 
-		reg [31:0] Bios[120:0];
-		reg [1:0] executaBios;
-		reg [31:0] instrucao;
-		reg [31:0] memoria[200:0];
+    reg [31:0] Bios[120:0];
+    reg [1:0] executaBios;
+    reg [31:0] instrucao;
+    reg [31:0] memoria[200:0];
 
-		// Lógica combinatória para verificar se a bios está em execução
-		always @(*) begin
-			 if(executaBios == 2'b01) begin
-				  biosEmExecucao = 1'b1;
-			 end
-			 else begin
-				  biosEmExecucao = 1'b0;
-			 end
-		end
+    // Lógica combinatória para verificar se a bios está em execução
+    always @(*) begin
+        if(executaBios == 2'b01) begin
+            biosEmExecucao = 1'b1;
+        end
+        else begin
+            biosEmExecucao = 1'b0;
+        end
+    end
 
-		// Lógica síncrona para reset e encerrarBios
-		always@(posedge clock or posedge reset)                           
-		begin 
-			 if(reset == 1'b1) begin
-				  executaBios <= 2'b01; // Executa a bios
-			 end
-			 else if(encerrarBios == 1'b1) begin
-				  executaBios <= 2'b00; // Encerra a bios
-			 end
+    // Lógica combinatória para selecionar a instrução (BIOS ou memória principal)
+    always @(*) begin
+        if(executaBios == 2'b01) begin
+            instrucao = Bios[pc];
+        end
+        else begin
+            instrucao = memoria[pc];
+        end
+    end
+
+    // Lógica síncrona para reset e encerrarBios
+    always@(posedge clock or posedge reset)                           
+    begin 
+        if(reset == 1'b1) begin
+            executaBios <= 2'b01; // Executa a bios
+        end
+        else if(encerrarBios == 1'b1) begin
+            executaBios <= 2'b00; // Encerra a bios
+        end
+
 
 			//bios ---------------------------------------------------------------			
 						//lfhd puxa uma programa 
@@ -92,15 +103,15 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 					memoria[32'd7] = {6'b010001,5'd0,5'd0,5'd0,11'd4};//j linha 4
 					memoria[32'd8] = {6'b011000,5'd3,5'd3,5'd3,11'd0};//sw r3,0(r0)
 					memoria[32'd9] = {6'b011110,5'd3,5'd3,5'd3,11'd0};//out 0(r0)*/
-					
-			 instrucao <= memoria[pc];
-			 opcode    <= instrucao[31:26];
-			 jump      <= instrucao[25:0];
-			 OUTrd     <= instrucao[25:21];
-			 OUTrs     <= instrucao[20:16];
-			 OUTrt     <= instrucao[15:11];
-			 imediato  <= instrucao[10:0];
-		end
+
+
+        // Atualiza os sinais de saída com base na instrução selecionada
+        opcode    <= instrucao[31:26];
+        jump      <= instrucao[25:0];
+        OUTrd     <= instrucao[25:21];
+        OUTrs     <= instrucao[20:16];
+        OUTrt     <= instrucao[15:11];
+        imediato  <= instrucao[10:0];
+    end
 
 endmodule
-
