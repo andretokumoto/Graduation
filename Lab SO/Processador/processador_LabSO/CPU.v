@@ -30,6 +30,8 @@ wire [25:0] jump;
 wire [31:0] dadosMux6;
 wire [10:0] imediato;
 
+
+wire [1:0] zerarPC;
 wire clk;
 wire  [1:0] entradaSaidaControl;
 wire valueULA;
@@ -140,6 +142,8 @@ assign testedesvio = DesvioControl;
 			testePC = pc;
 		//atualização de pc
 		   if(reset) pc<=32'd0;
+			
+			else if(zerarPC == 2'b11) pc<=32'd0;
 			
 			else 
 			  begin
