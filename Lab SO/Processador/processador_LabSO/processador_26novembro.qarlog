@@ -1,0 +1,40 @@
+Quartus Prime Archive log --	C:/Users/Acer/Documents/processadorLSO/processador_26novembro.qarlog
+
+Archive:	C:/Users/Acer/Documents/processadorLSO/processador_26novembro.qar
+Date:		Tue Nov 26 20:59:08 2024
+Quartus Prime		23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Acer/Documents/processadorLSO/BCD.v
+C:/Users/Acer/Documents/processadorLSO/BancoRegistradores.v
+C:/Users/Acer/Documents/processadorLSO/CPU.v
+C:/Users/Acer/Documents/processadorLSO/DeBounce.v
+C:/Users/Acer/Documents/processadorLSO/DeBouncebuton.v
+C:/Users/Acer/Documents/processadorLSO/EntradaSaida.v
+C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v
+C:/Users/Acer/Documents/processadorLSO/MemoriaDados.v
+C:/Users/Acer/Documents/processadorLSO/PC.v
+C:/Users/Acer/Documents/processadorLSO/ParadaSistema.v
+C:/Users/Acer/Documents/processadorLSO/ULA.v
+C:/Users/Acer/Documents/processadorLSO/UnidadeDeControle.v
+C:/Users/Acer/Documents/processadorLSO/Waveform10.vwf
+C:/Users/Acer/Documents/processadorLSO/Waveform7.vwf
+C:/Users/Acer/Documents/processadorLSO/Waveform8.vwf
+C:/Users/Acer/Documents/processadorLSO/Waveform9.vwf
+C:/Users/Acer/Documents/processadorLSO/assignment_defaults.qdf
+C:/Users/Acer/Documents/processadorLSO/clock_divider.v
+C:/Users/Acer/Documents/processadorLSO/displaySete.v
+C:/Users/Acer/Documents/processadorLSO/monostable.v
+C:/Users/Acer/Documents/processadorLSO/mux6.v
+C:/Users/Acer/Documents/processadorLSO/muxDesvio.v
+C:/Users/Acer/Documents/processadorLSO/processadorAOC.qpf
+C:/Users/Acer/Documents/processadorLSO/processadorAOC.qsf
+C:/Users/Acer/Documents/processadorLSO/processadorAOC_assignment_defaults.qdf
+C:/Users/Acer/Documents/processadorLSO/pulsoBotao.v
+C:/Users/Acer/Documents/processadorLSO/simple_dual_port_ram_dual_clock.v
+C:/Users/Acer/Documents/processadorLSO/tratamentoBotao.v
+C:/Users/Acer/Documents/processadorLSO/unidadeDeComparacao.v
+	======= Total: 29 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

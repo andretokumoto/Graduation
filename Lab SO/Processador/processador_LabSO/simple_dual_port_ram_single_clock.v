@@ -29,7 +29,7 @@ module simple_dual_port_ram_single_clock
 		
 	end
 	
-	always@(negedge clk)
+	always@(/*negedge*/clk)
 	 begin
 	 
 	   if (we)

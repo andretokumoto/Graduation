@@ -1,0 +1,432 @@
+// Copyright (C) 2024  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "01/23/2025 20:07:59"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Gerenciador_memoria
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Gerenciador_memoria_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [31:0] Bloco_para_analise_hd;
+reg [31:0] Bloco_para_analise_ram;
+reg [3:0] bloco_para_alteracao;
+reg clk;
+reg reset;
+reg [1:0] tipo_alteracao;
+// wires                                               
+wire [31:0] cabecalho_bloco_para_salvar_na_memoriaRAM;
+wire testeEntrou;
+wire [3:0] teste_bloco_livre;
+wire [31:0] teste_blocos_de_memoria;
+wire [3:0] teste_cursor_memoria;
+wire [30:0] teste_nome_bloco;
+
+// assign statements (if any)                          
+Gerenciador_memoria i1 (
+// port map - connection between master ports and signals/registers   
+	.Bloco_para_analise_hd(Bloco_para_analise_hd),
+	.Bloco_para_analise_ram(Bloco_para_analise_ram),
+	.bloco_para_alteracao(bloco_para_alteracao),
+	.cabecalho_bloco_para_salvar_na_memoriaRAM(cabecalho_bloco_para_salvar_na_memoriaRAM),
+	.clk(clk),
+	.reset(reset),
+	.testeEntrou(testeEntrou),
+	.teste_bloco_livre(teste_bloco_livre),
+	.teste_blocos_de_memoria(teste_blocos_de_memoria),
+	.teste_cursor_memoria(teste_cursor_memoria),
+	.teste_nome_bloco(teste_nome_bloco),
+	.tipo_alteracao(tipo_alteracao)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #10000 1'b1;
+	#10000;
+end 
+// Bloco_para_analise_hd[ 31 ]
+initial
+begin
+	Bloco_para_analise_hd[31] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 30 ]
+initial
+begin
+	Bloco_para_analise_hd[30] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 29 ]
+initial
+begin
+	Bloco_para_analise_hd[29] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 28 ]
+initial
+begin
+	Bloco_para_analise_hd[28] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 27 ]
+initial
+begin
+	Bloco_para_analise_hd[27] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 26 ]
+initial
+begin
+	Bloco_para_analise_hd[26] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 25 ]
+initial
+begin
+	Bloco_para_analise_hd[25] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 24 ]
+initial
+begin
+	Bloco_para_analise_hd[24] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 23 ]
+initial
+begin
+	Bloco_para_analise_hd[23] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 22 ]
+initial
+begin
+	Bloco_para_analise_hd[22] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 21 ]
+initial
+begin
+	Bloco_para_analise_hd[21] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 20 ]
+initial
+begin
+	Bloco_para_analise_hd[20] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 19 ]
+initial
+begin
+	Bloco_para_analise_hd[19] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 18 ]
+initial
+begin
+	Bloco_para_analise_hd[18] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 17 ]
+initial
+begin
+	Bloco_para_analise_hd[17] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 16 ]
+initial
+begin
+	Bloco_para_analise_hd[16] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 15 ]
+initial
+begin
+	Bloco_para_analise_hd[15] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 14 ]
+initial
+begin
+	Bloco_para_analise_hd[14] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 13 ]
+initial
+begin
+	Bloco_para_analise_hd[13] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 12 ]
+initial
+begin
+	Bloco_para_analise_hd[12] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 11 ]
+initial
+begin
+	Bloco_para_analise_hd[11] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 10 ]
+initial
+begin
+	Bloco_para_analise_hd[10] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 9 ]
+initial
+begin
+	Bloco_para_analise_hd[9] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 8 ]
+initial
+begin
+	Bloco_para_analise_hd[8] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 7 ]
+initial
+begin
+	Bloco_para_analise_hd[7] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 6 ]
+initial
+begin
+	Bloco_para_analise_hd[6] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 5 ]
+initial
+begin
+	Bloco_para_analise_hd[5] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 4 ]
+initial
+begin
+	Bloco_para_analise_hd[4] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 3 ]
+initial
+begin
+	Bloco_para_analise_hd[3] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 2 ]
+initial
+begin
+	Bloco_para_analise_hd[2] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 1 ]
+initial
+begin
+	Bloco_para_analise_hd[1] = 1'b0;
+end 
+// Bloco_para_analise_hd[ 0 ]
+initial
+begin
+	Bloco_para_analise_hd[0] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 31 ]
+initial
+begin
+	Bloco_para_analise_ram[31] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 30 ]
+initial
+begin
+	Bloco_para_analise_ram[30] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 29 ]
+initial
+begin
+	Bloco_para_analise_ram[29] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 28 ]
+initial
+begin
+	Bloco_para_analise_ram[28] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 27 ]
+initial
+begin
+	Bloco_para_analise_ram[27] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 26 ]
+initial
+begin
+	Bloco_para_analise_ram[26] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 25 ]
+initial
+begin
+	Bloco_para_analise_ram[25] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 24 ]
+initial
+begin
+	Bloco_para_analise_ram[24] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 23 ]
+initial
+begin
+	Bloco_para_analise_ram[23] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 22 ]
+initial
+begin
+	Bloco_para_analise_ram[22] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 21 ]
+initial
+begin
+	Bloco_para_analise_ram[21] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 20 ]
+initial
+begin
+	Bloco_para_analise_ram[20] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 19 ]
+initial
+begin
+	Bloco_para_analise_ram[19] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 18 ]
+initial
+begin
+	Bloco_para_analise_ram[18] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 17 ]
+initial
+begin
+	Bloco_para_analise_ram[17] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 16 ]
+initial
+begin
+	Bloco_para_analise_ram[16] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 15 ]
+initial
+begin
+	Bloco_para_analise_ram[15] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 14 ]
+initial
+begin
+	Bloco_para_analise_ram[14] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 13 ]
+initial
+begin
+	Bloco_para_analise_ram[13] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 12 ]
+initial
+begin
+	Bloco_para_analise_ram[12] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 11 ]
+initial
+begin
+	Bloco_para_analise_ram[11] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 10 ]
+initial
+begin
+	Bloco_para_analise_ram[10] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 9 ]
+initial
+begin
+	Bloco_para_analise_ram[9] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 8 ]
+initial
+begin
+	Bloco_para_analise_ram[8] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 7 ]
+initial
+begin
+	Bloco_para_analise_ram[7] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 6 ]
+initial
+begin
+	Bloco_para_analise_ram[6] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 5 ]
+initial
+begin
+	Bloco_para_analise_ram[5] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 4 ]
+initial
+begin
+	Bloco_para_analise_ram[4] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 3 ]
+initial
+begin
+	Bloco_para_analise_ram[3] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 2 ]
+initial
+begin
+	Bloco_para_analise_ram[2] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 1 ]
+initial
+begin
+	Bloco_para_analise_ram[1] = 1'b0;
+end 
+// Bloco_para_analise_ram[ 0 ]
+initial
+begin
+	Bloco_para_analise_ram[0] = 1'b0;
+end 
+// bloco_para_alteracao[ 3 ]
+initial
+begin
+	bloco_para_alteracao[3] = 1'b0;
+end 
+// bloco_para_alteracao[ 2 ]
+initial
+begin
+	bloco_para_alteracao[2] = 1'b0;
+end 
+// bloco_para_alteracao[ 1 ]
+initial
+begin
+	bloco_para_alteracao[1] = 1'b0;
+end 
+// bloco_para_alteracao[ 0 ]
+initial
+begin
+	bloco_para_alteracao[0] = 1'b0;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+// tipo_alteracao[ 1 ]
+initial
+begin
+	tipo_alteracao[1] = 1'b0;
+end 
+// tipo_alteracao[ 0 ]
+initial
+begin
+	tipo_alteracao[0] = 1'b0;
+end 
+endmodule
+

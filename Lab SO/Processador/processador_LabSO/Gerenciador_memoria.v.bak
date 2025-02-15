@@ -1,0 +1,8 @@
+module GerenciadorDeMemoria(bloco_para_plterar,tipo_alteracao,)
+
+//recebe o endereço do bloco que sera alterado arquivo 1,2 3 ...
+//recebe o tipo da operação deletar,alterar ...
+//talvez o nome do bloco e a alteração desse seja aqui
+
+
+endmodule

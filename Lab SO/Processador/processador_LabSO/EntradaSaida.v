@@ -5,21 +5,23 @@ input [3:0]  entradaDeDados;
 input [1:0]  entradaSaidaControl;
 input clk,clock,botaoIN;
 
-reg [31:0] saidaDeDados;
+//reg [31:0] saidaDeDados;
+//reg controlesaida;
+//wire saidaDeDados;
 output wire [3:0] unidade,dezena,centena;
 
 output reg [31:0] DadosLidos;
 
 
-BCD bcd(.binario(saidaDeDados),.unidade(unidade),.dezena(dezena),.centena(centena));
+BCD bcd(.binario(/*saidaDeDados*/dadosEscrita),.unidade(unidade),.dezena(dezena),.centena(centena),.controlesaida(entradaSaidaControl));
 
-
- always@(negedge clock)//saida
+ 
+ /*always@(negedge clock)//saida
   begin
   
-   if(entradaSaidaControl==2'b01) saidaDeDados = dadosEscrita;
+   if(entradaSaidaControl==2'b01) assign saidaDeDados = dadosEscrita;
 	
-  end
+  end*/
   
 
   

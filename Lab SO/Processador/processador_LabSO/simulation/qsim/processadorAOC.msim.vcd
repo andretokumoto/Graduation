@@ -1,0 +1,2654 @@
+$comment
+	File created using the following command:
+		vcd file processadorAOC.msim.vcd -direction
+$end
+$date
+	Mon Feb 03 20:50:27 2025
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module Gerenciador_memoria_vlg_vec_tst $end
+$var reg 32 ! Bloco_para_analise_hd [31:0] $end
+$var reg 32 " Bloco_para_analise_ram [31:0] $end
+$var reg 4 # bloco_para_alteracao [3:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % reset $end
+$var reg 2 & tipo_alteracao [1:0] $end
+$var wire 1 ' cabecalho_bloco_para_salvar_na_memoriaRAM [31] $end
+$var wire 1 ( cabecalho_bloco_para_salvar_na_memoriaRAM [30] $end
+$var wire 1 ) cabecalho_bloco_para_salvar_na_memoriaRAM [29] $end
+$var wire 1 * cabecalho_bloco_para_salvar_na_memoriaRAM [28] $end
+$var wire 1 + cabecalho_bloco_para_salvar_na_memoriaRAM [27] $end
+$var wire 1 , cabecalho_bloco_para_salvar_na_memoriaRAM [26] $end
+$var wire 1 - cabecalho_bloco_para_salvar_na_memoriaRAM [25] $end
+$var wire 1 . cabecalho_bloco_para_salvar_na_memoriaRAM [24] $end
+$var wire 1 / cabecalho_bloco_para_salvar_na_memoriaRAM [23] $end
+$var wire 1 0 cabecalho_bloco_para_salvar_na_memoriaRAM [22] $end
+$var wire 1 1 cabecalho_bloco_para_salvar_na_memoriaRAM [21] $end
+$var wire 1 2 cabecalho_bloco_para_salvar_na_memoriaRAM [20] $end
+$var wire 1 3 cabecalho_bloco_para_salvar_na_memoriaRAM [19] $end
+$var wire 1 4 cabecalho_bloco_para_salvar_na_memoriaRAM [18] $end
+$var wire 1 5 cabecalho_bloco_para_salvar_na_memoriaRAM [17] $end
+$var wire 1 6 cabecalho_bloco_para_salvar_na_memoriaRAM [16] $end
+$var wire 1 7 cabecalho_bloco_para_salvar_na_memoriaRAM [15] $end
+$var wire 1 8 cabecalho_bloco_para_salvar_na_memoriaRAM [14] $end
+$var wire 1 9 cabecalho_bloco_para_salvar_na_memoriaRAM [13] $end
+$var wire 1 : cabecalho_bloco_para_salvar_na_memoriaRAM [12] $end
+$var wire 1 ; cabecalho_bloco_para_salvar_na_memoriaRAM [11] $end
+$var wire 1 < cabecalho_bloco_para_salvar_na_memoriaRAM [10] $end
+$var wire 1 = cabecalho_bloco_para_salvar_na_memoriaRAM [9] $end
+$var wire 1 > cabecalho_bloco_para_salvar_na_memoriaRAM [8] $end
+$var wire 1 ? cabecalho_bloco_para_salvar_na_memoriaRAM [7] $end
+$var wire 1 @ cabecalho_bloco_para_salvar_na_memoriaRAM [6] $end
+$var wire 1 A cabecalho_bloco_para_salvar_na_memoriaRAM [5] $end
+$var wire 1 B cabecalho_bloco_para_salvar_na_memoriaRAM [4] $end
+$var wire 1 C cabecalho_bloco_para_salvar_na_memoriaRAM [3] $end
+$var wire 1 D cabecalho_bloco_para_salvar_na_memoriaRAM [2] $end
+$var wire 1 E cabecalho_bloco_para_salvar_na_memoriaRAM [1] $end
+$var wire 1 F cabecalho_bloco_para_salvar_na_memoriaRAM [0] $end
+$var wire 1 G testeEntrou $end
+$var wire 1 H teste_bloco_livre [3] $end
+$var wire 1 I teste_bloco_livre [2] $end
+$var wire 1 J teste_bloco_livre [1] $end
+$var wire 1 K teste_bloco_livre [0] $end
+$var wire 1 L teste_blocos_de_memoria [31] $end
+$var wire 1 M teste_blocos_de_memoria [30] $end
+$var wire 1 N teste_blocos_de_memoria [29] $end
+$var wire 1 O teste_blocos_de_memoria [28] $end
+$var wire 1 P teste_blocos_de_memoria [27] $end
+$var wire 1 Q teste_blocos_de_memoria [26] $end
+$var wire 1 R teste_blocos_de_memoria [25] $end
+$var wire 1 S teste_blocos_de_memoria [24] $end
+$var wire 1 T teste_blocos_de_memoria [23] $end
+$var wire 1 U teste_blocos_de_memoria [22] $end
+$var wire 1 V teste_blocos_de_memoria [21] $end
+$var wire 1 W teste_blocos_de_memoria [20] $end
+$var wire 1 X teste_blocos_de_memoria [19] $end
+$var wire 1 Y teste_blocos_de_memoria [18] $end
+$var wire 1 Z teste_blocos_de_memoria [17] $end
+$var wire 1 [ teste_blocos_de_memoria [16] $end
+$var wire 1 \ teste_blocos_de_memoria [15] $end
+$var wire 1 ] teste_blocos_de_memoria [14] $end
+$var wire 1 ^ teste_blocos_de_memoria [13] $end
+$var wire 1 _ teste_blocos_de_memoria [12] $end
+$var wire 1 ` teste_blocos_de_memoria [11] $end
+$var wire 1 a teste_blocos_de_memoria [10] $end
+$var wire 1 b teste_blocos_de_memoria [9] $end
+$var wire 1 c teste_blocos_de_memoria [8] $end
+$var wire 1 d teste_blocos_de_memoria [7] $end
+$var wire 1 e teste_blocos_de_memoria [6] $end
+$var wire 1 f teste_blocos_de_memoria [5] $end
+$var wire 1 g teste_blocos_de_memoria [4] $end
+$var wire 1 h teste_blocos_de_memoria [3] $end
+$var wire 1 i teste_blocos_de_memoria [2] $end
+$var wire 1 j teste_blocos_de_memoria [1] $end
+$var wire 1 k teste_blocos_de_memoria [0] $end
+$var wire 1 l teste_cursor_memoria [3] $end
+$var wire 1 m teste_cursor_memoria [2] $end
+$var wire 1 n teste_cursor_memoria [1] $end
+$var wire 1 o teste_cursor_memoria [0] $end
+$var wire 1 p teste_nome_bloco [30] $end
+$var wire 1 q teste_nome_bloco [29] $end
+$var wire 1 r teste_nome_bloco [28] $end
+$var wire 1 s teste_nome_bloco [27] $end
+$var wire 1 t teste_nome_bloco [26] $end
+$var wire 1 u teste_nome_bloco [25] $end
+$var wire 1 v teste_nome_bloco [24] $end
+$var wire 1 w teste_nome_bloco [23] $end
+$var wire 1 x teste_nome_bloco [22] $end
+$var wire 1 y teste_nome_bloco [21] $end
+$var wire 1 z teste_nome_bloco [20] $end
+$var wire 1 { teste_nome_bloco [19] $end
+$var wire 1 | teste_nome_bloco [18] $end
+$var wire 1 } teste_nome_bloco [17] $end
+$var wire 1 ~ teste_nome_bloco [16] $end
+$var wire 1 !! teste_nome_bloco [15] $end
+$var wire 1 "! teste_nome_bloco [14] $end
+$var wire 1 #! teste_nome_bloco [13] $end
+$var wire 1 $! teste_nome_bloco [12] $end
+$var wire 1 %! teste_nome_bloco [11] $end
+$var wire 1 &! teste_nome_bloco [10] $end
+$var wire 1 '! teste_nome_bloco [9] $end
+$var wire 1 (! teste_nome_bloco [8] $end
+$var wire 1 )! teste_nome_bloco [7] $end
+$var wire 1 *! teste_nome_bloco [6] $end
+$var wire 1 +! teste_nome_bloco [5] $end
+$var wire 1 ,! teste_nome_bloco [4] $end
+$var wire 1 -! teste_nome_bloco [3] $end
+$var wire 1 .! teste_nome_bloco [2] $end
+$var wire 1 /! teste_nome_bloco [1] $end
+$var wire 1 0! teste_nome_bloco [0] $end
+
+$scope module i1 $end
+$var wire 1 1! gnd $end
+$var wire 1 2! vcc $end
+$var wire 1 3! unknown $end
+$var tri1 1 4! devclrn $end
+$var tri1 1 5! devpor $end
+$var tri1 1 6! devoe $end
+$var wire 1 7! Bloco_para_analise_ram[0]~input_o $end
+$var wire 1 8! Bloco_para_analise_ram[1]~input_o $end
+$var wire 1 9! Bloco_para_analise_ram[2]~input_o $end
+$var wire 1 :! Bloco_para_analise_ram[3]~input_o $end
+$var wire 1 ;! Bloco_para_analise_ram[4]~input_o $end
+$var wire 1 <! Bloco_para_analise_ram[5]~input_o $end
+$var wire 1 =! Bloco_para_analise_ram[6]~input_o $end
+$var wire 1 >! Bloco_para_analise_ram[7]~input_o $end
+$var wire 1 ?! Bloco_para_analise_ram[8]~input_o $end
+$var wire 1 @! Bloco_para_analise_ram[9]~input_o $end
+$var wire 1 A! Bloco_para_analise_ram[10]~input_o $end
+$var wire 1 B! Bloco_para_analise_ram[11]~input_o $end
+$var wire 1 C! Bloco_para_analise_ram[12]~input_o $end
+$var wire 1 D! Bloco_para_analise_ram[13]~input_o $end
+$var wire 1 E! Bloco_para_analise_ram[14]~input_o $end
+$var wire 1 F! Bloco_para_analise_ram[15]~input_o $end
+$var wire 1 G! Bloco_para_analise_ram[16]~input_o $end
+$var wire 1 H! Bloco_para_analise_ram[17]~input_o $end
+$var wire 1 I! Bloco_para_analise_ram[18]~input_o $end
+$var wire 1 J! Bloco_para_analise_ram[19]~input_o $end
+$var wire 1 K! Bloco_para_analise_ram[20]~input_o $end
+$var wire 1 L! Bloco_para_analise_ram[21]~input_o $end
+$var wire 1 M! Bloco_para_analise_ram[22]~input_o $end
+$var wire 1 N! Bloco_para_analise_ram[23]~input_o $end
+$var wire 1 O! Bloco_para_analise_ram[24]~input_o $end
+$var wire 1 P! Bloco_para_analise_ram[25]~input_o $end
+$var wire 1 Q! Bloco_para_analise_ram[26]~input_o $end
+$var wire 1 R! Bloco_para_analise_ram[27]~input_o $end
+$var wire 1 S! Bloco_para_analise_ram[28]~input_o $end
+$var wire 1 T! Bloco_para_analise_ram[29]~input_o $end
+$var wire 1 U! Bloco_para_analise_ram[30]~input_o $end
+$var wire 1 V! Bloco_para_analise_ram[31]~input_o $end
+$var wire 1 W! Bloco_para_analise_hd[31]~input_o $end
+$var wire 1 X! cabecalho_bloco_para_salvar_na_memoriaRAM[0]~output_o $end
+$var wire 1 Y! cabecalho_bloco_para_salvar_na_memoriaRAM[1]~output_o $end
+$var wire 1 Z! cabecalho_bloco_para_salvar_na_memoriaRAM[2]~output_o $end
+$var wire 1 [! cabecalho_bloco_para_salvar_na_memoriaRAM[3]~output_o $end
+$var wire 1 \! cabecalho_bloco_para_salvar_na_memoriaRAM[4]~output_o $end
+$var wire 1 ]! cabecalho_bloco_para_salvar_na_memoriaRAM[5]~output_o $end
+$var wire 1 ^! cabecalho_bloco_para_salvar_na_memoriaRAM[6]~output_o $end
+$var wire 1 _! cabecalho_bloco_para_salvar_na_memoriaRAM[7]~output_o $end
+$var wire 1 `! cabecalho_bloco_para_salvar_na_memoriaRAM[8]~output_o $end
+$var wire 1 a! cabecalho_bloco_para_salvar_na_memoriaRAM[9]~output_o $end
+$var wire 1 b! cabecalho_bloco_para_salvar_na_memoriaRAM[10]~output_o $end
+$var wire 1 c! cabecalho_bloco_para_salvar_na_memoriaRAM[11]~output_o $end
+$var wire 1 d! cabecalho_bloco_para_salvar_na_memoriaRAM[12]~output_o $end
+$var wire 1 e! cabecalho_bloco_para_salvar_na_memoriaRAM[13]~output_o $end
+$var wire 1 f! cabecalho_bloco_para_salvar_na_memoriaRAM[14]~output_o $end
+$var wire 1 g! cabecalho_bloco_para_salvar_na_memoriaRAM[15]~output_o $end
+$var wire 1 h! cabecalho_bloco_para_salvar_na_memoriaRAM[16]~output_o $end
+$var wire 1 i! cabecalho_bloco_para_salvar_na_memoriaRAM[17]~output_o $end
+$var wire 1 j! cabecalho_bloco_para_salvar_na_memoriaRAM[18]~output_o $end
+$var wire 1 k! cabecalho_bloco_para_salvar_na_memoriaRAM[19]~output_o $end
+$var wire 1 l! cabecalho_bloco_para_salvar_na_memoriaRAM[20]~output_o $end
+$var wire 1 m! cabecalho_bloco_para_salvar_na_memoriaRAM[21]~output_o $end
+$var wire 1 n! cabecalho_bloco_para_salvar_na_memoriaRAM[22]~output_o $end
+$var wire 1 o! cabecalho_bloco_para_salvar_na_memoriaRAM[23]~output_o $end
+$var wire 1 p! cabecalho_bloco_para_salvar_na_memoriaRAM[24]~output_o $end
+$var wire 1 q! cabecalho_bloco_para_salvar_na_memoriaRAM[25]~output_o $end
+$var wire 1 r! cabecalho_bloco_para_salvar_na_memoriaRAM[26]~output_o $end
+$var wire 1 s! cabecalho_bloco_para_salvar_na_memoriaRAM[27]~output_o $end
+$var wire 1 t! cabecalho_bloco_para_salvar_na_memoriaRAM[28]~output_o $end
+$var wire 1 u! cabecalho_bloco_para_salvar_na_memoriaRAM[29]~output_o $end
+$var wire 1 v! cabecalho_bloco_para_salvar_na_memoriaRAM[30]~output_o $end
+$var wire 1 w! cabecalho_bloco_para_salvar_na_memoriaRAM[31]~output_o $end
+$var wire 1 x! teste_cursor_memoria[0]~output_o $end
+$var wire 1 y! teste_cursor_memoria[1]~output_o $end
+$var wire 1 z! teste_cursor_memoria[2]~output_o $end
+$var wire 1 {! teste_cursor_memoria[3]~output_o $end
+$var wire 1 |! teste_bloco_livre[0]~output_o $end
+$var wire 1 }! teste_bloco_livre[1]~output_o $end
+$var wire 1 ~! teste_bloco_livre[2]~output_o $end
+$var wire 1 !" teste_bloco_livre[3]~output_o $end
+$var wire 1 "" teste_nome_bloco[0]~output_o $end
+$var wire 1 #" teste_nome_bloco[1]~output_o $end
+$var wire 1 $" teste_nome_bloco[2]~output_o $end
+$var wire 1 %" teste_nome_bloco[3]~output_o $end
+$var wire 1 &" teste_nome_bloco[4]~output_o $end
+$var wire 1 '" teste_nome_bloco[5]~output_o $end
+$var wire 1 (" teste_nome_bloco[6]~output_o $end
+$var wire 1 )" teste_nome_bloco[7]~output_o $end
+$var wire 1 *" teste_nome_bloco[8]~output_o $end
+$var wire 1 +" teste_nome_bloco[9]~output_o $end
+$var wire 1 ," teste_nome_bloco[10]~output_o $end
+$var wire 1 -" teste_nome_bloco[11]~output_o $end
+$var wire 1 ." teste_nome_bloco[12]~output_o $end
+$var wire 1 /" teste_nome_bloco[13]~output_o $end
+$var wire 1 0" teste_nome_bloco[14]~output_o $end
+$var wire 1 1" teste_nome_bloco[15]~output_o $end
+$var wire 1 2" teste_nome_bloco[16]~output_o $end
+$var wire 1 3" teste_nome_bloco[17]~output_o $end
+$var wire 1 4" teste_nome_bloco[18]~output_o $end
+$var wire 1 5" teste_nome_bloco[19]~output_o $end
+$var wire 1 6" teste_nome_bloco[20]~output_o $end
+$var wire 1 7" teste_nome_bloco[21]~output_o $end
+$var wire 1 8" teste_nome_bloco[22]~output_o $end
+$var wire 1 9" teste_nome_bloco[23]~output_o $end
+$var wire 1 :" teste_nome_bloco[24]~output_o $end
+$var wire 1 ;" teste_nome_bloco[25]~output_o $end
+$var wire 1 <" teste_nome_bloco[26]~output_o $end
+$var wire 1 =" teste_nome_bloco[27]~output_o $end
+$var wire 1 >" teste_nome_bloco[28]~output_o $end
+$var wire 1 ?" teste_nome_bloco[29]~output_o $end
+$var wire 1 @" teste_nome_bloco[30]~output_o $end
+$var wire 1 A" teste_blocos_de_memoria[0]~output_o $end
+$var wire 1 B" teste_blocos_de_memoria[1]~output_o $end
+$var wire 1 C" teste_blocos_de_memoria[2]~output_o $end
+$var wire 1 D" teste_blocos_de_memoria[3]~output_o $end
+$var wire 1 E" teste_blocos_de_memoria[4]~output_o $end
+$var wire 1 F" teste_blocos_de_memoria[5]~output_o $end
+$var wire 1 G" teste_blocos_de_memoria[6]~output_o $end
+$var wire 1 H" teste_blocos_de_memoria[7]~output_o $end
+$var wire 1 I" teste_blocos_de_memoria[8]~output_o $end
+$var wire 1 J" teste_blocos_de_memoria[9]~output_o $end
+$var wire 1 K" teste_blocos_de_memoria[10]~output_o $end
+$var wire 1 L" teste_blocos_de_memoria[11]~output_o $end
+$var wire 1 M" teste_blocos_de_memoria[12]~output_o $end
+$var wire 1 N" teste_blocos_de_memoria[13]~output_o $end
+$var wire 1 O" teste_blocos_de_memoria[14]~output_o $end
+$var wire 1 P" teste_blocos_de_memoria[15]~output_o $end
+$var wire 1 Q" teste_blocos_de_memoria[16]~output_o $end
+$var wire 1 R" teste_blocos_de_memoria[17]~output_o $end
+$var wire 1 S" teste_blocos_de_memoria[18]~output_o $end
+$var wire 1 T" teste_blocos_de_memoria[19]~output_o $end
+$var wire 1 U" teste_blocos_de_memoria[20]~output_o $end
+$var wire 1 V" teste_blocos_de_memoria[21]~output_o $end
+$var wire 1 W" teste_blocos_de_memoria[22]~output_o $end
+$var wire 1 X" teste_blocos_de_memoria[23]~output_o $end
+$var wire 1 Y" teste_blocos_de_memoria[24]~output_o $end
+$var wire 1 Z" teste_blocos_de_memoria[25]~output_o $end
+$var wire 1 [" teste_blocos_de_memoria[26]~output_o $end
+$var wire 1 \" teste_blocos_de_memoria[27]~output_o $end
+$var wire 1 ]" teste_blocos_de_memoria[28]~output_o $end
+$var wire 1 ^" teste_blocos_de_memoria[29]~output_o $end
+$var wire 1 _" teste_blocos_de_memoria[30]~output_o $end
+$var wire 1 `" teste_blocos_de_memoria[31]~output_o $end
+$var wire 1 a" testeEntrou~output_o $end
+$var wire 1 b" clk~input_o $end
+$var wire 1 c" clk~inputclkctrl_outclk $end
+$var wire 1 d" tipo_alteracao[1]~input_o $end
+$var wire 1 e" Bloco_para_analise_hd[0]~input_o $end
+$var wire 1 f" nome_bloco[0]~feeder_combout $end
+$var wire 1 g" tipo_alteracao[0]~input_o $end
+$var wire 1 h" Mux192~0_combout $end
+$var wire 1 i" bloco_para_alteracao[3]~input_o $end
+$var wire 1 j" bloco_para_alteracao[2]~input_o $end
+$var wire 1 k" bloco_para_alteracao[1]~input_o $end
+$var wire 1 l" bloco_para_alteracao[0]~input_o $end
+$var wire 1 m" Decoder1~3_combout $end
+$var wire 1 n" reset~input_o $end
+$var wire 1 o" cursor_memoria~4_combout $end
+$var wire 1 p" Mux65~0_combout $end
+$var wire 1 q" Mux65~1_combout $end
+$var wire 1 r" blocos_de_memoria[3][31]~q $end
+$var wire 1 s" Decoder1~0_combout $end
+$var wire 1 t" bloco_livre~0_combout $end
+$var wire 1 u" bloco_livre[1]~1_combout $end
+$var wire 1 v" bloco_livre~2_combout $end
+$var wire 1 w" Add0~0_combout $end
+$var wire 1 x" cursor_memoria~7_combout $end
+$var wire 1 y" bloco_livre~3_combout $end
+$var wire 1 z" Decoder0~2_combout $end
+$var wire 1 {" Mux97~0_combout $end
+$var wire 1 |" Mux97~1_combout $end
+$var wire 1 }" blocos_de_memoria[2][31]~q $end
+$var wire 1 ~" Decoder1~1_combout $end
+$var wire 1 !# Decoder0~0_combout $end
+$var wire 1 "# Mux129~0_combout $end
+$var wire 1 ## Mux129~1_combout $end
+$var wire 1 $# blocos_de_memoria[1][31]~q $end
+$var wire 1 %# Decoder1~2_combout $end
+$var wire 1 &# Mux161~0_combout $end
+$var wire 1 '# Mux161~1_combout $end
+$var wire 1 (# blocos_de_memoria[0][31]~q $end
+$var wire 1 )# Mux0~0_combout $end
+$var wire 1 *# Mux0~1_combout $end
+$var wire 1 +# cursor_memoria~5_combout $end
+$var wire 1 ,# cursor_memoria[0]~feeder_combout $end
+$var wire 1 -# cursor_memoria~6_combout $end
+$var wire 1 .# cursor_memoria[1]~feeder_combout $end
+$var wire 1 /# Equal0~0_combout $end
+$var wire 1 0# cursor_memoria~8_combout $end
+$var wire 1 1# bloco_livre~4_combout $end
+$var wire 1 2# Decoder0~1_combout $end
+$var wire 1 3# blocos_de_memoria[3][25]~4_combout $end
+$var wire 1 4# blocos_de_memoria[3][0]~q $end
+$var wire 1 5# blocos_de_memoria[2][23]~0_combout $end
+$var wire 1 6# blocos_de_memoria[2][23]~1_combout $end
+$var wire 1 7# blocos_de_memoria[2][0]~q $end
+$var wire 1 8# blocos_de_memoria[1][16]~2_combout $end
+$var wire 1 9# blocos_de_memoria[1][0]~q $end
+$var wire 1 :# blocos_de_memoria[0][14]~3_combout $end
+$var wire 1 ;# blocos_de_memoria[0][0]~q $end
+$var wire 1 <# Mux64~0_combout $end
+$var wire 1 =# Mux64~1_combout $end
+$var wire 1 ># Mux224~0_combout $end
+$var wire 1 ?# Mux224~1_combout $end
+$var wire 1 @# Mux224~2_combout $end
+$var wire 1 A# cabecalho_bloco_para_salvar_na_memoriaRAM[4]~0_combout $end
+$var wire 1 B# cabecalho_bloco_para_salvar_na_memoriaRAM[0]~reg0_q $end
+$var wire 1 C# Bloco_para_analise_hd[1]~input_o $end
+$var wire 1 D# nome_bloco[1]~feeder_combout $end
+$var wire 1 E# Mux191~0_combout $end
+$var wire 1 F# blocos_de_memoria[3][1]~feeder_combout $end
+$var wire 1 G# blocos_de_memoria[3][1]~q $end
+$var wire 1 H# blocos_de_memoria[1][1]~q $end
+$var wire 1 I# blocos_de_memoria[2][1]~q $end
+$var wire 1 J# blocos_de_memoria[0][1]~q $end
+$var wire 1 K# Mux63~0_combout $end
+$var wire 1 L# Mux63~1_combout $end
+$var wire 1 M# Mux223~0_combout $end
+$var wire 1 N# Mux223~1_combout $end
+$var wire 1 O# Mux223~2_combout $end
+$var wire 1 P# cabecalho_bloco_para_salvar_na_memoriaRAM[1]~reg0_q $end
+$var wire 1 Q# Bloco_para_analise_hd[2]~input_o $end
+$var wire 1 R# nome_bloco[2]~feeder_combout $end
+$var wire 1 S# Mux190~0_combout $end
+$var wire 1 T# blocos_de_memoria[2][2]~q $end
+$var wire 1 U# blocos_de_memoria[3][2]~q $end
+$var wire 1 V# blocos_de_memoria[1][2]~q $end
+$var wire 1 W# blocos_de_memoria[0][2]~q $end
+$var wire 1 X# Mux62~0_combout $end
+$var wire 1 Y# Mux62~1_combout $end
+$var wire 1 Z# Mux222~0_combout $end
+$var wire 1 [# Mux222~1_combout $end
+$var wire 1 \# Mux222~2_combout $end
+$var wire 1 ]# cabecalho_bloco_para_salvar_na_memoriaRAM[2]~reg0_q $end
+$var wire 1 ^# Bloco_para_analise_hd[3]~input_o $end
+$var wire 1 _# nome_bloco[3]~feeder_combout $end
+$var wire 1 `# Mux189~0_combout $end
+$var wire 1 a# blocos_de_memoria[0][3]~q $end
+$var wire 1 b# blocos_de_memoria[2][3]~q $end
+$var wire 1 c# Mux61~0_combout $end
+$var wire 1 d# blocos_de_memoria[3][3]~feeder_combout $end
+$var wire 1 e# blocos_de_memoria[3][3]~q $end
+$var wire 1 f# blocos_de_memoria[1][3]~q $end
+$var wire 1 g# Mux61~1_combout $end
+$var wire 1 h# Mux221~0_combout $end
+$var wire 1 i# Mux221~1_combout $end
+$var wire 1 j# Mux221~2_combout $end
+$var wire 1 k# cabecalho_bloco_para_salvar_na_memoriaRAM[3]~reg0_q $end
+$var wire 1 l# Bloco_para_analise_hd[4]~input_o $end
+$var wire 1 m# nome_bloco[4]~feeder_combout $end
+$var wire 1 n# blocos_de_memoria[2][4]~q $end
+$var wire 1 o# blocos_de_memoria[1][4]~q $end
+$var wire 1 p# blocos_de_memoria[0][4]~q $end
+$var wire 1 q# Mux60~0_combout $end
+$var wire 1 r# Mux60~1_combout $end
+$var wire 1 s# Mux188~0_combout $end
+$var wire 1 t# blocos_de_memoria[3][4]~q $end
+$var wire 1 u# Mux220~0_combout $end
+$var wire 1 v# Mux220~1_combout $end
+$var wire 1 w# Mux220~2_combout $end
+$var wire 1 x# cabecalho_bloco_para_salvar_na_memoriaRAM[4]~reg0_q $end
+$var wire 1 y# Bloco_para_analise_hd[5]~input_o $end
+$var wire 1 z# nome_bloco[5]~feeder_combout $end
+$var wire 1 {# Mux187~0_combout $end
+$var wire 1 |# blocos_de_memoria[1][5]~q $end
+$var wire 1 }# blocos_de_memoria[3][5]~feeder_combout $end
+$var wire 1 ~# blocos_de_memoria[3][5]~q $end
+$var wire 1 !$ blocos_de_memoria[2][5]~q $end
+$var wire 1 "$ blocos_de_memoria[0][5]~q $end
+$var wire 1 #$ Mux59~0_combout $end
+$var wire 1 $$ Mux59~1_combout $end
+$var wire 1 %$ Mux219~0_combout $end
+$var wire 1 &$ Mux219~1_combout $end
+$var wire 1 '$ Mux219~2_combout $end
+$var wire 1 ($ cabecalho_bloco_para_salvar_na_memoriaRAM[5]~reg0_q $end
+$var wire 1 )$ blocos_de_memoria[2][6]~q $end
+$var wire 1 *$ blocos_de_memoria[1][6]~q $end
+$var wire 1 +$ blocos_de_memoria[0][6]~q $end
+$var wire 1 ,$ Mux58~0_combout $end
+$var wire 1 -$ Mux58~1_combout $end
+$var wire 1 .$ Bloco_para_analise_hd[6]~input_o $end
+$var wire 1 /$ nome_bloco[6]~feeder_combout $end
+$var wire 1 0$ Mux186~0_combout $end
+$var wire 1 1$ blocos_de_memoria[3][6]~q $end
+$var wire 1 2$ Mux218~0_combout $end
+$var wire 1 3$ Mux218~1_combout $end
+$var wire 1 4$ Mux218~2_combout $end
+$var wire 1 5$ cabecalho_bloco_para_salvar_na_memoriaRAM[6]~reg0_q $end
+$var wire 1 6$ Bloco_para_analise_hd[7]~input_o $end
+$var wire 1 7$ nome_bloco[7]~feeder_combout $end
+$var wire 1 8$ blocos_de_memoria[1][7]~q $end
+$var wire 1 9$ blocos_de_memoria[2][7]~q $end
+$var wire 1 :$ blocos_de_memoria[0][7]~q $end
+$var wire 1 ;$ Mux57~0_combout $end
+$var wire 1 <$ Mux57~1_combout $end
+$var wire 1 =$ Mux185~0_combout $end
+$var wire 1 >$ blocos_de_memoria[3][7]~q $end
+$var wire 1 ?$ Mux217~0_combout $end
+$var wire 1 @$ Mux217~1_combout $end
+$var wire 1 A$ Mux217~2_combout $end
+$var wire 1 B$ cabecalho_bloco_para_salvar_na_memoriaRAM[7]~reg0_q $end
+$var wire 1 C$ Bloco_para_analise_hd[8]~input_o $end
+$var wire 1 D$ nome_bloco[8]~feeder_combout $end
+$var wire 1 E$ Mux184~0_combout $end
+$var wire 1 F$ blocos_de_memoria[2][8]~q $end
+$var wire 1 G$ blocos_de_memoria[3][8]~q $end
+$var wire 1 H$ blocos_de_memoria[1][8]~q $end
+$var wire 1 I$ blocos_de_memoria[0][8]~q $end
+$var wire 1 J$ Mux56~0_combout $end
+$var wire 1 K$ Mux56~1_combout $end
+$var wire 1 L$ Mux216~0_combout $end
+$var wire 1 M$ Mux216~1_combout $end
+$var wire 1 N$ Mux216~2_combout $end
+$var wire 1 O$ cabecalho_bloco_para_salvar_na_memoriaRAM[8]~reg0_q $end
+$var wire 1 P$ Bloco_para_analise_hd[9]~input_o $end
+$var wire 1 Q$ nome_bloco[9]~feeder_combout $end
+$var wire 1 R$ Mux183~0_combout $end
+$var wire 1 S$ blocos_de_memoria[3][9]~q $end
+$var wire 1 T$ blocos_de_memoria[1][9]~q $end
+$var wire 1 U$ blocos_de_memoria[2][9]~feeder_combout $end
+$var wire 1 V$ blocos_de_memoria[2][9]~q $end
+$var wire 1 W$ blocos_de_memoria[0][9]~feeder_combout $end
+$var wire 1 X$ blocos_de_memoria[0][9]~q $end
+$var wire 1 Y$ Mux55~0_combout $end
+$var wire 1 Z$ Mux55~1_combout $end
+$var wire 1 [$ Mux215~0_combout $end
+$var wire 1 \$ Mux215~1_combout $end
+$var wire 1 ]$ Mux215~2_combout $end
+$var wire 1 ^$ cabecalho_bloco_para_salvar_na_memoriaRAM[9]~reg0_q $end
+$var wire 1 _$ Bloco_para_analise_hd[10]~input_o $end
+$var wire 1 `$ nome_bloco[10]~feeder_combout $end
+$var wire 1 a$ Mux182~0_combout $end
+$var wire 1 b$ blocos_de_memoria[3][10]~q $end
+$var wire 1 c$ blocos_de_memoria[2][10]~q $end
+$var wire 1 d$ blocos_de_memoria[1][10]~q $end
+$var wire 1 e$ blocos_de_memoria[0][10]~q $end
+$var wire 1 f$ Mux54~0_combout $end
+$var wire 1 g$ Mux54~1_combout $end
+$var wire 1 h$ Mux214~0_combout $end
+$var wire 1 i$ Mux214~1_combout $end
+$var wire 1 j$ Mux214~2_combout $end
+$var wire 1 k$ cabecalho_bloco_para_salvar_na_memoriaRAM[10]~reg0_q $end
+$var wire 1 l$ blocos_de_memoria[1][11]~q $end
+$var wire 1 m$ blocos_de_memoria[0][11]~q $end
+$var wire 1 n$ blocos_de_memoria[2][11]~q $end
+$var wire 1 o$ Mux53~0_combout $end
+$var wire 1 p$ Mux53~1_combout $end
+$var wire 1 q$ Bloco_para_analise_hd[11]~input_o $end
+$var wire 1 r$ Mux181~0_combout $end
+$var wire 1 s$ blocos_de_memoria[3][11]~q $end
+$var wire 1 t$ Mux213~0_combout $end
+$var wire 1 u$ Mux213~1_combout $end
+$var wire 1 v$ Mux213~2_combout $end
+$var wire 1 w$ cabecalho_bloco_para_salvar_na_memoriaRAM[11]~reg0_q $end
+$var wire 1 x$ Bloco_para_analise_hd[12]~input_o $end
+$var wire 1 y$ nome_bloco[12]~feeder_combout $end
+$var wire 1 z$ Mux180~0_combout $end
+$var wire 1 {$ blocos_de_memoria[1][12]~q $end
+$var wire 1 |$ blocos_de_memoria[0][12]~q $end
+$var wire 1 }$ Mux52~0_combout $end
+$var wire 1 ~$ blocos_de_memoria[3][12]~q $end
+$var wire 1 !% blocos_de_memoria[2][12]~q $end
+$var wire 1 "% Mux52~1_combout $end
+$var wire 1 #% Mux212~0_combout $end
+$var wire 1 $% Mux212~1_combout $end
+$var wire 1 %% Mux212~2_combout $end
+$var wire 1 &% cabecalho_bloco_para_salvar_na_memoriaRAM[12]~reg0_q $end
+$var wire 1 '% Bloco_para_analise_hd[13]~input_o $end
+$var wire 1 (% nome_bloco[13]~feeder_combout $end
+$var wire 1 )% Mux179~0_combout $end
+$var wire 1 *% blocos_de_memoria[2][13]~q $end
+$var wire 1 +% blocos_de_memoria[0][13]~feeder_combout $end
+$var wire 1 ,% blocos_de_memoria[0][13]~q $end
+$var wire 1 -% Mux51~0_combout $end
+$var wire 1 .% blocos_de_memoria[1][13]~q $end
+$var wire 1 /% blocos_de_memoria[3][13]~q $end
+$var wire 1 0% Mux51~1_combout $end
+$var wire 1 1% Mux211~0_combout $end
+$var wire 1 2% Mux211~1_combout $end
+$var wire 1 3% Mux211~2_combout $end
+$var wire 1 4% cabecalho_bloco_para_salvar_na_memoriaRAM[13]~reg0_q $end
+$var wire 1 5% Bloco_para_analise_hd[14]~input_o $end
+$var wire 1 6% nome_bloco[14]~feeder_combout $end
+$var wire 1 7% Mux178~0_combout $end
+$var wire 1 8% blocos_de_memoria[3][14]~feeder_combout $end
+$var wire 1 9% blocos_de_memoria[3][14]~q $end
+$var wire 1 :% blocos_de_memoria[2][14]~q $end
+$var wire 1 ;% blocos_de_memoria[1][14]~q $end
+$var wire 1 <% blocos_de_memoria[0][14]~q $end
+$var wire 1 =% Mux50~0_combout $end
+$var wire 1 >% Mux50~1_combout $end
+$var wire 1 ?% Mux210~0_combout $end
+$var wire 1 @% Mux210~1_combout $end
+$var wire 1 A% Mux210~2_combout $end
+$var wire 1 B% cabecalho_bloco_para_salvar_na_memoriaRAM[14]~reg0_q $end
+$var wire 1 C% Bloco_para_analise_hd[15]~input_o $end
+$var wire 1 D% Mux177~0_combout $end
+$var wire 1 E% blocos_de_memoria[1][15]~q $end
+$var wire 1 F% blocos_de_memoria[3][15]~q $end
+$var wire 1 G% blocos_de_memoria[2][15]~q $end
+$var wire 1 H% blocos_de_memoria[0][15]~q $end
+$var wire 1 I% Mux49~0_combout $end
+$var wire 1 J% Mux49~1_combout $end
+$var wire 1 K% Mux209~0_combout $end
+$var wire 1 L% Mux209~1_combout $end
+$var wire 1 M% Mux209~2_combout $end
+$var wire 1 N% cabecalho_bloco_para_salvar_na_memoriaRAM[15]~reg0_q $end
+$var wire 1 O% Bloco_para_analise_hd[16]~input_o $end
+$var wire 1 P% nome_bloco[16]~feeder_combout $end
+$var wire 1 Q% Mux176~0_combout $end
+$var wire 1 R% blocos_de_memoria[2][16]~q $end
+$var wire 1 S% blocos_de_memoria[3][16]~q $end
+$var wire 1 T% blocos_de_memoria[1][16]~q $end
+$var wire 1 U% blocos_de_memoria[0][16]~q $end
+$var wire 1 V% Mux48~0_combout $end
+$var wire 1 W% Mux48~1_combout $end
+$var wire 1 X% Mux208~0_combout $end
+$var wire 1 Y% Mux208~1_combout $end
+$var wire 1 Z% Mux208~2_combout $end
+$var wire 1 [% cabecalho_bloco_para_salvar_na_memoriaRAM[16]~reg0_q $end
+$var wire 1 \% Bloco_para_analise_hd[17]~input_o $end
+$var wire 1 ]% nome_bloco[17]~feeder_combout $end
+$var wire 1 ^% Mux175~0_combout $end
+$var wire 1 _% blocos_de_memoria[1][17]~q $end
+$var wire 1 `% blocos_de_memoria[3][17]~q $end
+$var wire 1 a% blocos_de_memoria[0][17]~q $end
+$var wire 1 b% blocos_de_memoria[2][17]~q $end
+$var wire 1 c% Mux47~0_combout $end
+$var wire 1 d% Mux47~1_combout $end
+$var wire 1 e% Mux207~0_combout $end
+$var wire 1 f% Mux207~1_combout $end
+$var wire 1 g% Mux207~2_combout $end
+$var wire 1 h% cabecalho_bloco_para_salvar_na_memoriaRAM[17]~reg0_q $end
+$var wire 1 i% Bloco_para_analise_hd[18]~input_o $end
+$var wire 1 j% nome_bloco[18]~feeder_combout $end
+$var wire 1 k% Mux174~0_combout $end
+$var wire 1 l% blocos_de_memoria[2][18]~q $end
+$var wire 1 m% blocos_de_memoria[3][18]~feeder_combout $end
+$var wire 1 n% blocos_de_memoria[3][18]~q $end
+$var wire 1 o% blocos_de_memoria[1][18]~q $end
+$var wire 1 p% blocos_de_memoria[0][18]~q $end
+$var wire 1 q% Mux46~0_combout $end
+$var wire 1 r% Mux46~1_combout $end
+$var wire 1 s% Mux206~0_combout $end
+$var wire 1 t% Mux206~1_combout $end
+$var wire 1 u% Mux206~2_combout $end
+$var wire 1 v% cabecalho_bloco_para_salvar_na_memoriaRAM[18]~reg0_q $end
+$var wire 1 w% Bloco_para_analise_hd[19]~input_o $end
+$var wire 1 x% Mux173~0_combout $end
+$var wire 1 y% blocos_de_memoria[3][19]~feeder_combout $end
+$var wire 1 z% blocos_de_memoria[3][19]~q $end
+$var wire 1 {% blocos_de_memoria[1][19]~q $end
+$var wire 1 |% blocos_de_memoria[2][19]~q $end
+$var wire 1 }% blocos_de_memoria[0][19]~q $end
+$var wire 1 ~% Mux45~0_combout $end
+$var wire 1 !& Mux45~1_combout $end
+$var wire 1 "& Mux205~0_combout $end
+$var wire 1 #& Mux205~1_combout $end
+$var wire 1 $& Mux205~2_combout $end
+$var wire 1 %& cabecalho_bloco_para_salvar_na_memoriaRAM[19]~reg0_q $end
+$var wire 1 && Bloco_para_analise_hd[20]~input_o $end
+$var wire 1 '& Mux172~0_combout $end
+$var wire 1 (& blocos_de_memoria[2][20]~q $end
+$var wire 1 )& blocos_de_memoria[3][20]~q $end
+$var wire 1 *& blocos_de_memoria[1][20]~q $end
+$var wire 1 +& blocos_de_memoria[0][20]~q $end
+$var wire 1 ,& Mux44~0_combout $end
+$var wire 1 -& Mux44~1_combout $end
+$var wire 1 .& Mux204~0_combout $end
+$var wire 1 /& Mux204~1_combout $end
+$var wire 1 0& Mux204~2_combout $end
+$var wire 1 1& cabecalho_bloco_para_salvar_na_memoriaRAM[20]~reg0_q $end
+$var wire 1 2& Bloco_para_analise_hd[21]~input_o $end
+$var wire 1 3& nome_bloco[21]~feeder_combout $end
+$var wire 1 4& Mux171~0_combout $end
+$var wire 1 5& blocos_de_memoria[3][21]~q $end
+$var wire 1 6& blocos_de_memoria[0][21]~feeder_combout $end
+$var wire 1 7& blocos_de_memoria[0][21]~q $end
+$var wire 1 8& blocos_de_memoria[2][21]~q $end
+$var wire 1 9& Mux43~0_combout $end
+$var wire 1 :& blocos_de_memoria[1][21]~q $end
+$var wire 1 ;& Mux43~1_combout $end
+$var wire 1 <& Mux203~0_combout $end
+$var wire 1 =& Mux203~1_combout $end
+$var wire 1 >& Mux203~2_combout $end
+$var wire 1 ?& cabecalho_bloco_para_salvar_na_memoriaRAM[21]~reg0_q $end
+$var wire 1 @& Bloco_para_analise_hd[22]~input_o $end
+$var wire 1 A& Mux170~0_combout $end
+$var wire 1 B& blocos_de_memoria[2][22]~q $end
+$var wire 1 C& blocos_de_memoria[3][22]~q $end
+$var wire 1 D& blocos_de_memoria[1][22]~q $end
+$var wire 1 E& blocos_de_memoria[0][22]~q $end
+$var wire 1 F& Mux42~0_combout $end
+$var wire 1 G& Mux42~1_combout $end
+$var wire 1 H& Mux202~0_combout $end
+$var wire 1 I& Mux202~1_combout $end
+$var wire 1 J& Mux202~2_combout $end
+$var wire 1 K& cabecalho_bloco_para_salvar_na_memoriaRAM[22]~reg0_q $end
+$var wire 1 L& Bloco_para_analise_hd[23]~input_o $end
+$var wire 1 M& Mux169~0_combout $end
+$var wire 1 N& blocos_de_memoria[3][23]~feeder_combout $end
+$var wire 1 O& blocos_de_memoria[3][23]~q $end
+$var wire 1 P& blocos_de_memoria[2][23]~q $end
+$var wire 1 Q& blocos_de_memoria[0][23]~q $end
+$var wire 1 R& Mux41~0_combout $end
+$var wire 1 S& blocos_de_memoria[1][23]~q $end
+$var wire 1 T& Mux41~1_combout $end
+$var wire 1 U& Mux201~0_combout $end
+$var wire 1 V& Mux201~1_combout $end
+$var wire 1 W& Mux201~2_combout $end
+$var wire 1 X& cabecalho_bloco_para_salvar_na_memoriaRAM[23]~reg0_q $end
+$var wire 1 Y& Bloco_para_analise_hd[24]~input_o $end
+$var wire 1 Z& nome_bloco[24]~feeder_combout $end
+$var wire 1 [& Mux168~0_combout $end
+$var wire 1 \& blocos_de_memoria[2][24]~q $end
+$var wire 1 ]& blocos_de_memoria[3][24]~feeder_combout $end
+$var wire 1 ^& blocos_de_memoria[3][24]~q $end
+$var wire 1 _& blocos_de_memoria[1][24]~q $end
+$var wire 1 `& blocos_de_memoria[0][24]~q $end
+$var wire 1 a& Mux40~0_combout $end
+$var wire 1 b& Mux40~1_combout $end
+$var wire 1 c& Mux200~0_combout $end
+$var wire 1 d& Mux200~1_combout $end
+$var wire 1 e& Mux200~2_combout $end
+$var wire 1 f& cabecalho_bloco_para_salvar_na_memoriaRAM[24]~reg0_q $end
+$var wire 1 g& Bloco_para_analise_hd[25]~input_o $end
+$var wire 1 h& nome_bloco[25]~feeder_combout $end
+$var wire 1 i& Mux167~0_combout $end
+$var wire 1 j& blocos_de_memoria[1][25]~q $end
+$var wire 1 k& blocos_de_memoria[2][25]~q $end
+$var wire 1 l& blocos_de_memoria[0][25]~q $end
+$var wire 1 m& Mux39~0_combout $end
+$var wire 1 n& blocos_de_memoria[3][25]~q $end
+$var wire 1 o& Mux39~1_combout $end
+$var wire 1 p& Mux199~0_combout $end
+$var wire 1 q& Mux199~1_combout $end
+$var wire 1 r& Mux199~2_combout $end
+$var wire 1 s& cabecalho_bloco_para_salvar_na_memoriaRAM[25]~reg0_q $end
+$var wire 1 t& Bloco_para_analise_hd[26]~input_o $end
+$var wire 1 u& nome_bloco[26]~feeder_combout $end
+$var wire 1 v& Mux166~0_combout $end
+$var wire 1 w& blocos_de_memoria[2][26]~q $end
+$var wire 1 x& blocos_de_memoria[3][26]~feeder_combout $end
+$var wire 1 y& blocos_de_memoria[3][26]~q $end
+$var wire 1 z& blocos_de_memoria[1][26]~q $end
+$var wire 1 {& blocos_de_memoria[0][26]~q $end
+$var wire 1 |& Mux38~0_combout $end
+$var wire 1 }& Mux38~1_combout $end
+$var wire 1 ~& Mux198~0_combout $end
+$var wire 1 !' Mux198~1_combout $end
+$var wire 1 "' Mux198~2_combout $end
+$var wire 1 #' cabecalho_bloco_para_salvar_na_memoriaRAM[26]~reg0_q $end
+$var wire 1 $' Bloco_para_analise_hd[27]~input_o $end
+$var wire 1 %' nome_bloco[27]~feeder_combout $end
+$var wire 1 &' blocos_de_memoria[1][27]~q $end
+$var wire 1 '' blocos_de_memoria[2][27]~q $end
+$var wire 1 (' blocos_de_memoria[0][27]~q $end
+$var wire 1 )' Mux37~0_combout $end
+$var wire 1 *' Mux37~1_combout $end
+$var wire 1 +' Mux165~0_combout $end
+$var wire 1 ,' blocos_de_memoria[3][27]~feeder_combout $end
+$var wire 1 -' blocos_de_memoria[3][27]~q $end
+$var wire 1 .' Mux197~0_combout $end
+$var wire 1 /' Mux197~1_combout $end
+$var wire 1 0' Mux197~2_combout $end
+$var wire 1 1' cabecalho_bloco_para_salvar_na_memoriaRAM[27]~reg0_q $end
+$var wire 1 2' Bloco_para_analise_hd[28]~input_o $end
+$var wire 1 3' nome_bloco[28]~feeder_combout $end
+$var wire 1 4' Mux164~0_combout $end
+$var wire 1 5' blocos_de_memoria[2][28]~q $end
+$var wire 1 6' blocos_de_memoria[1][28]~q $end
+$var wire 1 7' blocos_de_memoria[0][28]~q $end
+$var wire 1 8' Mux36~0_combout $end
+$var wire 1 9' blocos_de_memoria[3][28]~feeder_combout $end
+$var wire 1 :' blocos_de_memoria[3][28]~q $end
+$var wire 1 ;' Mux36~1_combout $end
+$var wire 1 <' Mux196~0_combout $end
+$var wire 1 =' Mux196~1_combout $end
+$var wire 1 >' Mux196~2_combout $end
+$var wire 1 ?' cabecalho_bloco_para_salvar_na_memoriaRAM[28]~reg0_q $end
+$var wire 1 @' Bloco_para_analise_hd[29]~input_o $end
+$var wire 1 A' nome_bloco[29]~feeder_combout $end
+$var wire 1 B' Mux163~0_combout $end
+$var wire 1 C' blocos_de_memoria[1][29]~q $end
+$var wire 1 D' blocos_de_memoria[3][29]~feeder_combout $end
+$var wire 1 E' blocos_de_memoria[3][29]~q $end
+$var wire 1 F' blocos_de_memoria[2][29]~q $end
+$var wire 1 G' blocos_de_memoria[0][29]~q $end
+$var wire 1 H' Mux35~0_combout $end
+$var wire 1 I' Mux35~1_combout $end
+$var wire 1 J' Mux195~0_combout $end
+$var wire 1 K' Mux195~1_combout $end
+$var wire 1 L' Mux195~2_combout $end
+$var wire 1 M' cabecalho_bloco_para_salvar_na_memoriaRAM[29]~reg0_q $end
+$var wire 1 N' Bloco_para_analise_hd[30]~input_o $end
+$var wire 1 O' Mux162~0_combout $end
+$var wire 1 P' blocos_de_memoria[2][30]~q $end
+$var wire 1 Q' blocos_de_memoria[1][30]~q $end
+$var wire 1 R' blocos_de_memoria[0][30]~q $end
+$var wire 1 S' Mux34~0_combout $end
+$var wire 1 T' blocos_de_memoria[3][30]~feeder_combout $end
+$var wire 1 U' blocos_de_memoria[3][30]~q $end
+$var wire 1 V' Mux34~1_combout $end
+$var wire 1 W' Mux194~0_combout $end
+$var wire 1 X' Mux194~1_combout $end
+$var wire 1 Y' Mux194~2_combout $end
+$var wire 1 Z' cabecalho_bloco_para_salvar_na_memoriaRAM[30]~reg0_q $end
+$var wire 1 [' Mux33~0_combout $end
+$var wire 1 \' Mux33~1_combout $end
+$var wire 1 ]' Mux193~0_combout $end
+$var wire 1 ^' Mux193~1_combout $end
+$var wire 1 _' Mux193~2_combout $end
+$var wire 1 `' cabecalho_bloco_para_salvar_na_memoriaRAM[31]~reg0_q $end
+$var wire 1 a' teste_cursor_memoria[0]~reg0_q $end
+$var wire 1 b' teste_cursor_memoria[1]~reg0_q $end
+$var wire 1 c' teste_cursor_memoria[2]~reg0feeder_combout $end
+$var wire 1 d' teste_cursor_memoria[2]~reg0_q $end
+$var wire 1 e' teste_cursor_memoria[3]~reg0feeder_combout $end
+$var wire 1 f' teste_cursor_memoria[3]~reg0_q $end
+$var wire 1 g' teste_bloco_livre[0]~reg0feeder_combout $end
+$var wire 1 h' cursor_memoria~9_combout $end
+$var wire 1 i' teste_bloco_livre[0]~reg0_q $end
+$var wire 1 j' teste_bloco_livre[1]~reg0_q $end
+$var wire 1 k' teste_bloco_livre[2]~reg0_q $end
+$var wire 1 l' teste_bloco_livre[3]~reg0_q $end
+$var wire 1 m' teste_nome_bloco[0]~reg0feeder_combout $end
+$var wire 1 n' teste_nome_bloco[0]~reg0_q $end
+$var wire 1 o' teste_nome_bloco[1]~reg0_q $end
+$var wire 1 p' teste_nome_bloco[2]~reg0_q $end
+$var wire 1 q' teste_nome_bloco[3]~reg0feeder_combout $end
+$var wire 1 r' teste_nome_bloco[3]~reg0_q $end
+$var wire 1 s' teste_nome_bloco[4]~reg0feeder_combout $end
+$var wire 1 t' teste_nome_bloco[4]~reg0_q $end
+$var wire 1 u' teste_nome_bloco[5]~reg0feeder_combout $end
+$var wire 1 v' teste_nome_bloco[5]~reg0_q $end
+$var wire 1 w' teste_nome_bloco[6]~reg0_q $end
+$var wire 1 x' teste_nome_bloco[7]~reg0feeder_combout $end
+$var wire 1 y' teste_nome_bloco[7]~reg0_q $end
+$var wire 1 z' teste_nome_bloco[8]~reg0_q $end
+$var wire 1 {' teste_nome_bloco[9]~reg0_q $end
+$var wire 1 |' teste_nome_bloco[10]~reg0_q $end
+$var wire 1 }' teste_nome_bloco[11]~reg0feeder_combout $end
+$var wire 1 ~' teste_nome_bloco[11]~reg0_q $end
+$var wire 1 !( teste_nome_bloco[12]~reg0_q $end
+$var wire 1 "( teste_nome_bloco[13]~reg0_q $end
+$var wire 1 #( teste_nome_bloco[14]~reg0feeder_combout $end
+$var wire 1 $( teste_nome_bloco[14]~reg0_q $end
+$var wire 1 %( teste_nome_bloco[15]~reg0_q $end
+$var wire 1 &( teste_nome_bloco[16]~reg0feeder_combout $end
+$var wire 1 '( teste_nome_bloco[16]~reg0_q $end
+$var wire 1 (( teste_nome_bloco[17]~reg0_q $end
+$var wire 1 )( teste_nome_bloco[18]~reg0_q $end
+$var wire 1 *( teste_nome_bloco[19]~reg0_q $end
+$var wire 1 +( teste_nome_bloco[20]~reg0feeder_combout $end
+$var wire 1 ,( teste_nome_bloco[20]~reg0_q $end
+$var wire 1 -( teste_nome_bloco[21]~reg0feeder_combout $end
+$var wire 1 .( teste_nome_bloco[21]~reg0_q $end
+$var wire 1 /( teste_nome_bloco[22]~reg0feeder_combout $end
+$var wire 1 0( teste_nome_bloco[22]~reg0_q $end
+$var wire 1 1( teste_nome_bloco[23]~reg0_q $end
+$var wire 1 2( teste_nome_bloco[24]~reg0feeder_combout $end
+$var wire 1 3( teste_nome_bloco[24]~reg0_q $end
+$var wire 1 4( teste_nome_bloco[25]~reg0_q $end
+$var wire 1 5( teste_nome_bloco[26]~reg0_q $end
+$var wire 1 6( teste_nome_bloco[27]~reg0feeder_combout $end
+$var wire 1 7( teste_nome_bloco[27]~reg0_q $end
+$var wire 1 8( teste_nome_bloco[28]~reg0feeder_combout $end
+$var wire 1 9( teste_nome_bloco[28]~reg0_q $end
+$var wire 1 :( teste_nome_bloco[29]~reg0feeder_combout $end
+$var wire 1 ;( teste_nome_bloco[29]~reg0_q $end
+$var wire 1 <( teste_nome_bloco[30]~reg0feeder_combout $end
+$var wire 1 =( teste_nome_bloco[30]~reg0_q $end
+$var wire 1 >( teste_blocos_de_memoria[0]~reg0feeder_combout $end
+$var wire 1 ?( teste_blocos_de_memoria[0]~reg0_q $end
+$var wire 1 @( teste_blocos_de_memoria[1]~reg0feeder_combout $end
+$var wire 1 A( teste_blocos_de_memoria[1]~reg0_q $end
+$var wire 1 B( teste_blocos_de_memoria[2]~reg0feeder_combout $end
+$var wire 1 C( teste_blocos_de_memoria[2]~reg0_q $end
+$var wire 1 D( teste_blocos_de_memoria[3]~reg0feeder_combout $end
+$var wire 1 E( teste_blocos_de_memoria[3]~reg0_q $end
+$var wire 1 F( teste_blocos_de_memoria[4]~reg0feeder_combout $end
+$var wire 1 G( teste_blocos_de_memoria[4]~reg0_q $end
+$var wire 1 H( teste_blocos_de_memoria[5]~reg0feeder_combout $end
+$var wire 1 I( teste_blocos_de_memoria[5]~reg0_q $end
+$var wire 1 J( teste_blocos_de_memoria[6]~reg0_q $end
+$var wire 1 K( teste_blocos_de_memoria[7]~reg0feeder_combout $end
+$var wire 1 L( teste_blocos_de_memoria[7]~reg0_q $end
+$var wire 1 M( teste_blocos_de_memoria[8]~reg0_q $end
+$var wire 1 N( teste_blocos_de_memoria[9]~reg0_q $end
+$var wire 1 O( teste_blocos_de_memoria[10]~reg0feeder_combout $end
+$var wire 1 P( teste_blocos_de_memoria[10]~reg0_q $end
+$var wire 1 Q( teste_blocos_de_memoria[11]~reg0feeder_combout $end
+$var wire 1 R( teste_blocos_de_memoria[11]~reg0_q $end
+$var wire 1 S( teste_blocos_de_memoria[12]~reg0feeder_combout $end
+$var wire 1 T( teste_blocos_de_memoria[12]~reg0_q $end
+$var wire 1 U( teste_blocos_de_memoria[13]~reg0feeder_combout $end
+$var wire 1 V( teste_blocos_de_memoria[13]~reg0_q $end
+$var wire 1 W( teste_blocos_de_memoria[14]~reg0feeder_combout $end
+$var wire 1 X( teste_blocos_de_memoria[14]~reg0_q $end
+$var wire 1 Y( teste_blocos_de_memoria[15]~reg0feeder_combout $end
+$var wire 1 Z( teste_blocos_de_memoria[15]~reg0_q $end
+$var wire 1 [( teste_blocos_de_memoria[16]~reg0_q $end
+$var wire 1 \( teste_blocos_de_memoria[17]~reg0feeder_combout $end
+$var wire 1 ]( teste_blocos_de_memoria[17]~reg0_q $end
+$var wire 1 ^( teste_blocos_de_memoria[18]~reg0feeder_combout $end
+$var wire 1 _( teste_blocos_de_memoria[18]~reg0_q $end
+$var wire 1 `( teste_blocos_de_memoria[19]~reg0feeder_combout $end
+$var wire 1 a( teste_blocos_de_memoria[19]~reg0_q $end
+$var wire 1 b( teste_blocos_de_memoria[20]~reg0_q $end
+$var wire 1 c( teste_blocos_de_memoria[21]~reg0feeder_combout $end
+$var wire 1 d( teste_blocos_de_memoria[21]~reg0_q $end
+$var wire 1 e( teste_blocos_de_memoria[22]~reg0feeder_combout $end
+$var wire 1 f( teste_blocos_de_memoria[22]~reg0_q $end
+$var wire 1 g( teste_blocos_de_memoria[23]~reg0feeder_combout $end
+$var wire 1 h( teste_blocos_de_memoria[23]~reg0_q $end
+$var wire 1 i( teste_blocos_de_memoria[24]~reg0_q $end
+$var wire 1 j( teste_blocos_de_memoria[25]~reg0feeder_combout $end
+$var wire 1 k( teste_blocos_de_memoria[25]~reg0_q $end
+$var wire 1 l( teste_blocos_de_memoria[26]~reg0_q $end
+$var wire 1 m( teste_blocos_de_memoria[27]~reg0feeder_combout $end
+$var wire 1 n( teste_blocos_de_memoria[27]~reg0_q $end
+$var wire 1 o( teste_blocos_de_memoria[28]~reg0feeder_combout $end
+$var wire 1 p( teste_blocos_de_memoria[28]~reg0_q $end
+$var wire 1 q( teste_blocos_de_memoria[29]~reg0feeder_combout $end
+$var wire 1 r( teste_blocos_de_memoria[29]~reg0_q $end
+$var wire 1 s( teste_blocos_de_memoria[30]~reg0feeder_combout $end
+$var wire 1 t( teste_blocos_de_memoria[30]~reg0_q $end
+$var wire 1 u( teste_blocos_de_memoria[31]~reg0_q $end
+$var wire 1 v( bloco_livre [3] $end
+$var wire 1 w( bloco_livre [2] $end
+$var wire 1 x( bloco_livre [1] $end
+$var wire 1 y( bloco_livre [0] $end
+$var wire 1 z( cursor_memoria [3] $end
+$var wire 1 {( cursor_memoria [2] $end
+$var wire 1 |( cursor_memoria [1] $end
+$var wire 1 }( cursor_memoria [0] $end
+$var wire 1 ~( nome_bloco [30] $end
+$var wire 1 !) nome_bloco [29] $end
+$var wire 1 ") nome_bloco [28] $end
+$var wire 1 #) nome_bloco [27] $end
+$var wire 1 $) nome_bloco [26] $end
+$var wire 1 %) nome_bloco [25] $end
+$var wire 1 &) nome_bloco [24] $end
+$var wire 1 ') nome_bloco [23] $end
+$var wire 1 () nome_bloco [22] $end
+$var wire 1 )) nome_bloco [21] $end
+$var wire 1 *) nome_bloco [20] $end
+$var wire 1 +) nome_bloco [19] $end
+$var wire 1 ,) nome_bloco [18] $end
+$var wire 1 -) nome_bloco [17] $end
+$var wire 1 .) nome_bloco [16] $end
+$var wire 1 /) nome_bloco [15] $end
+$var wire 1 0) nome_bloco [14] $end
+$var wire 1 1) nome_bloco [13] $end
+$var wire 1 2) nome_bloco [12] $end
+$var wire 1 3) nome_bloco [11] $end
+$var wire 1 4) nome_bloco [10] $end
+$var wire 1 5) nome_bloco [9] $end
+$var wire 1 6) nome_bloco [8] $end
+$var wire 1 7) nome_bloco [7] $end
+$var wire 1 8) nome_bloco [6] $end
+$var wire 1 9) nome_bloco [5] $end
+$var wire 1 :) nome_bloco [4] $end
+$var wire 1 ;) nome_bloco [3] $end
+$var wire 1 <) nome_bloco [2] $end
+$var wire 1 =) nome_bloco [1] $end
+$var wire 1 >) nome_bloco [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+b0 #
+0$
+0%
+b0 &
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0G
+0K
+0J
+0I
+0H
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0o
+0n
+0m
+0l
+00!
+0/!
+0.!
+0-!
+0,!
+0+!
+0*!
+0)!
+0(!
+0'!
+0&!
+0%!
+0$!
+0#!
+0"!
+0!!
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+01!
+12!
+x3!
+14!
+15!
+16!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+0`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+0o!
+0p!
+0q!
+0r!
+0s!
+0t!
+0u!
+0v!
+0w!
+0x!
+0y!
+0z!
+0{!
+0|!
+0}!
+0~!
+0!"
+0""
+0#"
+0$"
+0%"
+0&"
+0'"
+0("
+0)"
+0*"
+0+"
+0,"
+0-"
+0."
+0/"
+00"
+01"
+02"
+03"
+04"
+05"
+06"
+07"
+08"
+09"
+0:"
+0;"
+0<"
+0="
+0>"
+0?"
+0@"
+0A"
+0B"
+0C"
+0D"
+0E"
+0F"
+0G"
+0H"
+0I"
+0J"
+0K"
+0L"
+0M"
+0N"
+0O"
+0P"
+0Q"
+0R"
+0S"
+0T"
+0U"
+0V"
+0W"
+0X"
+0Y"
+0Z"
+0["
+0\"
+0]"
+0^"
+0_"
+0`"
+0a"
+0b"
+0c"
+0d"
+0e"
+0f"
+0g"
+0h"
+0i"
+0j"
+0k"
+0l"
+0m"
+0n"
+1o"
+0p"
+0q"
+0r"
+0s"
+0t"
+1u"
+0v"
+0w"
+0x"
+0y"
+1z"
+0{"
+0|"
+0}"
+0~"
+0!#
+0"#
+0##
+0$#
+1%#
+1&#
+0'#
+0(#
+0)#
+0*#
+0+#
+0,#
+0-#
+0.#
+0/#
+00#
+01#
+02#
+03#
+04#
+05#
+06#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+0=#
+0>#
+0?#
+0@#
+0A#
+0B#
+0C#
+0D#
+0E#
+0F#
+0G#
+0H#
+0I#
+0J#
+0K#
+0L#
+0M#
+0N#
+0O#
+0P#
+0Q#
+0R#
+0S#
+0T#
+0U#
+0V#
+0W#
+0X#
+0Y#
+0Z#
+0[#
+0\#
+0]#
+0^#
+0_#
+0`#
+0a#
+0b#
+0c#
+0d#
+0e#
+0f#
+0g#
+0h#
+0i#
+0j#
+0k#
+0l#
+0m#
+0n#
+0o#
+0p#
+0q#
+0r#
+0s#
+0t#
+0u#
+0v#
+0w#
+0x#
+0y#
+0z#
+0{#
+0|#
+0}#
+0~#
+0!$
+0"$
+0#$
+0$$
+0%$
+0&$
+0'$
+0($
+0)$
+0*$
+0+$
+0,$
+0-$
+0.$
+0/$
+00$
+01$
+02$
+03$
+04$
+05$
+06$
+07$
+08$
+09$
+0:$
+0;$
+0<$
+0=$
+0>$
+0?$
+0@$
+0A$
+0B$
+0C$
+0D$
+0E$
+0F$
+0G$
+0H$
+0I$
+0J$
+0K$
+0L$
+0M$
+0N$
+0O$
+0P$
+0Q$
+0R$
+0S$
+0T$
+0U$
+0V$
+0W$
+0X$
+0Y$
+0Z$
+0[$
+0\$
+0]$
+0^$
+0_$
+0`$
+0a$
+0b$
+0c$
+0d$
+0e$
+0f$
+0g$
+0h$
+0i$
+0j$
+0k$
+0l$
+0m$
+0n$
+0o$
+0p$
+0q$
+0r$
+0s$
+0t$
+0u$
+0v$
+0w$
+0x$
+0y$
+0z$
+0{$
+0|$
+0}$
+0~$
+0!%
+0"%
+0#%
+0$%
+0%%
+0&%
+0'%
+0(%
+0)%
+0*%
+0+%
+0,%
+0-%
+0.%
+0/%
+00%
+01%
+02%
+03%
+04%
+05%
+06%
+07%
+08%
+09%
+0:%
+0;%
+0<%
+0=%
+0>%
+0?%
+0@%
+0A%
+0B%
+0C%
+0D%
+0E%
+0F%
+0G%
+0H%
+0I%
+0J%
+0K%
+0L%
+0M%
+0N%
+0O%
+0P%
+0Q%
+0R%
+0S%
+0T%
+0U%
+0V%
+0W%
+0X%
+0Y%
+0Z%
+0[%
+0\%
+0]%
+0^%
+0_%
+0`%
+0a%
+0b%
+0c%
+0d%
+0e%
+0f%
+0g%
+0h%
+0i%
+0j%
+0k%
+0l%
+0m%
+0n%
+0o%
+0p%
+0q%
+0r%
+0s%
+0t%
+0u%
+0v%
+0w%
+0x%
+0y%
+0z%
+0{%
+0|%
+0}%
+0~%
+0!&
+0"&
+0#&
+0$&
+0%&
+0&&
+0'&
+0(&
+0)&
+0*&
+0+&
+0,&
+0-&
+0.&
+0/&
+00&
+01&
+02&
+03&
+04&
+05&
+06&
+07&
+08&
+09&
+0:&
+0;&
+0<&
+0=&
+0>&
+0?&
+0@&
+0A&
+0B&
+0C&
+0D&
+0E&
+0F&
+0G&
+0H&
+0I&
+0J&
+0K&
+0L&
+0M&
+0N&
+0O&
+0P&
+0Q&
+0R&
+0S&
+0T&
+0U&
+0V&
+0W&
+0X&
+0Y&
+0Z&
+0[&
+0\&
+0]&
+0^&
+0_&
+0`&
+0a&
+0b&
+0c&
+0d&
+0e&
+0f&
+0g&
+0h&
+0i&
+0j&
+0k&
+0l&
+0m&
+0n&
+0o&
+0p&
+0q&
+0r&
+0s&
+0t&
+0u&
+0v&
+0w&
+0x&
+0y&
+0z&
+0{&
+0|&
+0}&
+0~&
+0!'
+0"'
+0#'
+0$'
+0%'
+0&'
+0''
+0('
+0)'
+0*'
+0+'
+0,'
+0-'
+0.'
+0/'
+00'
+01'
+02'
+03'
+04'
+05'
+06'
+07'
+08'
+09'
+0:'
+0;'
+0<'
+0='
+0>'
+0?'
+0@'
+0A'
+0B'
+0C'
+0D'
+0E'
+0F'
+0G'
+0H'
+0I'
+0J'
+0K'
+0L'
+0M'
+0N'
+0O'
+0P'
+0Q'
+0R'
+0S'
+0T'
+0U'
+0V'
+0W'
+0X'
+0Y'
+0Z'
+0['
+0\'
+0]'
+0^'
+0_'
+0`'
+0a'
+0b'
+0c'
+0d'
+0e'
+0f'
+0g'
+1h'
+0i'
+0j'
+0k'
+0l'
+0m'
+0n'
+0o'
+0p'
+0q'
+0r'
+0s'
+0t'
+0u'
+0v'
+0w'
+0x'
+0y'
+0z'
+0{'
+0|'
+0}'
+0~'
+0!(
+0"(
+0#(
+0$(
+0%(
+0&(
+0'(
+0((
+0)(
+0*(
+0+(
+0,(
+0-(
+0.(
+0/(
+00(
+01(
+02(
+03(
+04(
+05(
+06(
+07(
+08(
+09(
+0:(
+0;(
+0<(
+0=(
+0>(
+0?(
+0@(
+0A(
+0B(
+0C(
+0D(
+0E(
+0F(
+0G(
+0H(
+0I(
+0J(
+0K(
+0L(
+0M(
+0N(
+0O(
+0P(
+0Q(
+0R(
+0S(
+0T(
+0U(
+0V(
+0W(
+0X(
+0Y(
+0Z(
+0[(
+0\(
+0](
+0^(
+0_(
+0`(
+0a(
+0b(
+0c(
+0d(
+0e(
+0f(
+0g(
+0h(
+0i(
+0j(
+0k(
+0l(
+0m(
+0n(
+0o(
+0p(
+0q(
+0r(
+0s(
+0t(
+0u(
+0y(
+0x(
+0w(
+0v(
+0}(
+0|(
+0{(
+0z(
+0>)
+0=)
+0<)
+0;)
+0:)
+09)
+08)
+07)
+06)
+05)
+04)
+03)
+02)
+01)
+00)
+0/)
+0.)
+0-)
+0,)
+0+)
+0*)
+0))
+0()
+0')
+0&)
+0%)
+0$)
+0#)
+0")
+0!)
+0~(
+$end
+#10000
+1$
+1b"
+1c"
+#20000
+0$
+0b"
+0c"
+#30000
+b1000000 !
+b1100000 !
+b1100010 !
+b1100011 !
+1$
+1e"
+1C#
+1y#
+1.$
+1b"
+1c"
+1f"
+1D#
+1z#
+1/$
+#40000
+0$
+0b"
+0c"
+#50000
+b1 &
+1$
+1g"
+1b"
+1c"
+1A#
+15#
+1p"
+1'#
+1:#
+18)
+19)
+1=)
+1>)
+1{#
+1E#
+10$
+1u'
+1m'
+1h"
+1}#
+1F#
+#60000
+0$
+0b"
+0c"
+#70000
+1$
+1b"
+1c"
+1+$
+1"$
+1J#
+1;#
+1(#
+1w'
+1v'
+1o'
+1n'
+1""
+1#"
+1'"
+1("
+12$
+1,$
+1%$
+1#$
+1M#
+1K#
+1>#
+1<#
+1]'
+1['
+1)#
+1*!
+1+!
+1/!
+10!
+13$
+1&$
+1$$
+1N#
+1L#
+1?#
+1=#
+1^'
+1*#
+1-$
+1\'
+0h'
+0u"
+14$
+1'$
+1H(
+1O#
+1@(
+1@#
+1>(
+1_'
+1+#
+1,#
+#80000
+0$
+0b"
+0c"
+1}(
+1a'
+1x!
+0)#
+1v"
+1o
+1-#
+0+#
+0*#
+1.#
+0,#
+1h'
+1u"
+0-#
+1+#
+0.#
+1,#
+#90000
+1$
+1b"
+1c"
+1u(
+1J(
+1I(
+1A(
+1?(
+1`'
+15$
+1($
+1P#
+1B#
+1X!
+1Y!
+1]!
+1^!
+1w!
+1A"
+1B"
+1F"
+1G"
+1`"
+1L
+1e
+1f
+1j
+1k
+1'
+1@
+1A
+1E
+1F
+#100000
+b0 &
+0$
+0g"
+0b"
+0c"
+0A#
+05#
+0p"
+0:#
+1y(
+0^'
+0]'
+02$
+0&$
+0%$
+0N#
+0M#
+0>#
+1!#
+0z"
+1g'
+03$
+0?#
+0&#
+0_'
+0'$
+0O#
+04$
+0@#
+#110000
+1$
+1b"
+1c"
+#120000
+0$
+0b"
+0c"
+1i'
+1|!
+1K
+#130000
+1$
+1b"
+1c"
+#140000
+0$
+0b"
+0c"
+#150000
+b100011 !
+b11 !
+b1 !
+b0 !
+1$
+0e"
+0C#
+0y#
+0.$
+1b"
+1c"
+0f"
+0D#
+0z#
+0/$
+#160000
+0$
+0b"
+0c"
+#170000
+1$
+1b"
+1c"
+08)
+09)
+0=)
+0>)
+0u'
+0m'
+#180000
+0$
+0b"
+0c"
+#190000
+1$
+1b"
+1c"
+0w'
+0v'
+0o'
+0n'
+0""
+0#"
+0'"
+0("
+0*!
+0+!
+0/!
+00!
+#200000
+0$
+0b"
+0c"
+#210000
+b1000 !
+b1100 !
+b1001100 !
+b1001101 !
+1$
+1e"
+1Q#
+1^#
+1.$
+1b"
+1c"
+1f"
+1R#
+1_#
+1/$
+#220000
+b1 &
+0$
+1g"
+0b"
+0c"
+0{#
+0E#
+1A#
+18#
+1"#
+1p"
+00$
+0h"
+0}#
+0F#
+1##
+#230000
+1$
+1b"
+1c"
+18)
+1;)
+1<)
+1$#
+1>)
+0`'
+05$
+0($
+0P#
+0B#
+0X!
+0Y!
+0]!
+0^!
+0w!
+1`#
+1S#
+1^'
+1)#
+0'
+0@
+0A
+0E
+0F
+10$
+1q'
+1m'
+1h"
+1*#
+1d#
+1_'
+0h'
+0u"
+1-#
+0+#
+1.#
+0,#
+#240000
+0$
+0b"
+0c"
+0}(
+1|(
+0a'
+1b'
+1y!
+0x!
+0)#
+0v"
+0*#
+1t"
+0o
+1n
+1+#
+1h'
+1u"
+0+#
+1,#
+0,#
+#250000
+b0 &
+1$
+0g"
+1b"
+1c"
+1{#
+0`#
+0S#
+1E#
+0A#
+08#
+0p"
+1}#
+0d#
+1F#
+1*$
+1f#
+1V#
+19#
+1w'
+1r'
+1p'
+1n'
+1`'
+1w!
+1""
+1$"
+1%"
+1("
+12$
+1i#
+1Z#
+1>#
+1*!
+1-!
+1.!
+10!
+1'
+13$
+1[#
+1?#
+1j#
+14$
+1\#
+1@#
+#260000
+0$
+0b"
+0c"
+1x(
+0y(
+03$
+02$
+0[#
+0Z#
+0?#
+0>#
+0!#
+0^'
+0i#
+1z"
+0g'
+1{"
+04$
+0\#
+0@#
+0_'
+0j#
+#270000
+1$
+1b"
+1c"
+#280000
+b1000101 !
+b1000001 !
+b1 !
+b0 !
+0$
+0e"
+0Q#
+0^#
+0.$
+0b"
+0c"
+0f"
+0R#
+0_#
+0/$
+0i'
+1j'
+1}!
+0|!
+0K
+1J
+#290000
+1$
+1b"
+1c"
+08)
+0;)
+0<)
+0>)
+0q'
+0m'
+#300000
+0$
+0b"
+0c"
+#310000
+b10 &
+b11 &
+1$
+1g"
+1d"
+1b"
+1c"
+0{#
+0E#
+1A#
+15#
+1:#
+1&#
+0{"
+00$
+1|"
+0h"
+1_'
+14$
+1'$
+1O#
+1@#
+0}#
+0F#
+0|"
+0w'
+0r'
+0p'
+0n'
+0""
+0$"
+0%"
+0("
+0*!
+0-!
+0.!
+00!
+#320000
+0$
+0b"
+0c"
+#330000
+1$
+1b"
+1c"
+0+$
+0"$
+0J#
+0;#
+15$
+1($
+1P#
+1B#
+1X!
+1Y!
+1]!
+1^!
+0,$
+0#$
+0K#
+0<#
+1@
+1A
+1E
+1F
+0$$
+0L#
+0=#
+0-$
+0H(
+0'$
+0@(
+0O#
+0>(
+0@#
+04$
+#340000
+b1 &
+b0 &
+0$
+0g"
+0d"
+0b"
+0c"
+0A#
+05#
+0:#
+16#
+0&#
+1{"
+0_'
+06#
+#350000
+1$
+1b"
+1c"
+0J(
+0I(
+0A(
+0?(
+0A"
+0B"
+0F"
+0G"
+0e
+0f
+0j
+0k
+#360000
+0$
+0b"
+0c"
+#370000
+1$
+1b"
+1c"
+#380000
+0$
+0b"
+0c"
+#390000
+1$
+1b"
+1c"
+#400000
+0$
+0b"
+0c"
+#410000
+1$
+1b"
+1c"
+#420000
+b10 &
+0$
+1d"
+0b"
+0c"
+1A#
+1:#
+1&#
+0"#
+0{"
+1_'
+0'#
+#430000
+1$
+1b"
+1c"
+0(#
+05$
+0($
+0P#
+0B#
+0X!
+0Y!
+0]!
+0^!
+0['
+0@
+0A
+0E
+0F
+0\'
+0_'
+#440000
+0$
+0b"
+0c"
+#450000
+b0 &
+1$
+0d"
+1b"
+1c"
+0A#
+0:#
+0&#
+1"#
+1{"
+0##
+1##
+0u(
+0`'
+0w!
+0`"
+0L
+0'
+#460000
+0$
+0b"
+0c"
+#470000
+1$
+1b"
+1c"
+#480000
+0$
+0b"
+0c"
+#490000
+1$
+1b"
+1c"
+#500000
+0$
+0b"
+0c"
+#510000
+1$
+1b"
+1c"
+#520000
+0$
+0b"
+0c"
+#530000
+1$
+1b"
+1c"
+#540000
+0$
+0b"
+0c"
+#550000
+1$
+1b"
+1c"
+#560000
+0$
+0b"
+0c"
+#570000
+1$
+1b"
+1c"
+#580000
+0$
+0b"
+0c"
+#590000
+1$
+1b"
+1c"
+#600000
+0$
+0b"
+0c"
+#610000
+1$
+1b"
+1c"
+#620000
+0$
+0b"
+0c"
+#630000
+1$
+1b"
+1c"
+#640000
+0$
+0b"
+0c"
+#650000
+1$
+1b"
+1c"
+#660000
+0$
+0b"
+0c"
+#670000
+1$
+1b"
+1c"
+#680000
+0$
+0b"
+0c"
+#690000
+1$
+1b"
+1c"
+#700000
+0$
+0b"
+0c"
+#710000
+1$
+1b"
+1c"
+#720000
+0$
+0b"
+0c"
+#730000
+1$
+1b"
+1c"
+#740000
+0$
+0b"
+0c"
+#750000
+1$
+1b"
+1c"
+#760000
+0$
+0b"
+0c"
+#770000
+1$
+1b"
+1c"
+#780000
+0$
+0b"
+0c"
+#790000
+1$
+1b"
+1c"
+#800000
+0$
+0b"
+0c"
+#810000
+1$
+1b"
+1c"
+#820000
+0$
+0b"
+0c"
+#830000
+1$
+1b"
+1c"
+#840000
+0$
+0b"
+0c"
+#850000
+1$
+1b"
+1c"
+#860000
+0$
+0b"
+0c"
+#870000
+1$
+1b"
+1c"
+#880000
+0$
+0b"
+0c"
+#890000
+1$
+1b"
+1c"
+#900000
+0$
+0b"
+0c"
+#910000
+1$
+1b"
+1c"
+#920000
+0$
+0b"
+0c"
+#930000
+1$
+1b"
+1c"
+#940000
+0$
+0b"
+0c"
+#950000
+1$
+1b"
+1c"
+#960000
+0$
+0b"
+0c"
+#970000
+1$
+1b"
+1c"
+#980000
+0$
+0b"
+0c"
+#990000
+1$
+1b"
+1c"
+#1000000

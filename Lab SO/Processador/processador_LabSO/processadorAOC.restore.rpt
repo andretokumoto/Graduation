@@ -1,6 +1,6 @@
 Restore Archived Project report for processadorAOC
-Tue Oct  8 20:07:12 2024
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Mon Nov 11 18:24:07 2024
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Tue Oct  8 20:07:12 2024 ;
+; Restore Archived Project Status ; Successful - Mon Nov 11 18:24:07 2024 ;
 ; Revision Name                   ; processadorAOC                        ;
 ; Top-level Entity Name           ; CPU                                   ;
 ; Family                          ; Cyclone IV E                          ;
@@ -47,12 +47,12 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored '/home/andre/Documentos/Projetos/Graduation/Lab SO/processadorAOC - fatorial funcionando.qar' into the '/home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/' directory
+Info: Successfully restored 'C:/Users/Acer/Documents/processadorAOC - fatorial funcionando.qar' into the 'C:/Users/Acer/Documents/processadorLSO/' directory
 Info: Generated report 'processadorAOC.restore.rpt'
-Info (23030): Evaluation of Tcl script /home/andre/intelFPGA_lite/qstd/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/23.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 586 megabytes
-    Info: Processing ended: Tue Oct  8 20:07:12 2024
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Mon Nov 11 18:24:07 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -15,12 +15,12 @@ parameter OR=6'b001001,AND=6'b001010,NOT=6'b001011,XOR=6'b001100,NOR=6'b001101,N
 parameter jump=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b010101,blt=6'b010110;
 parameter lw=6'b010111,sw=6'b011000;
 parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
-parameter in=6'b011101,out=6'b011110,END=6'b011111,pause=6'b100000;
+parameter in=6'b011101,out=6'b011110,END=6'b011111,pause=6'b100000,spc = 6'b100110;
 
 
 
                                
-always@(*)
+always@(opcode)
  begin
  
    case(opcode)
@@ -472,7 +472,22 @@ always@(*)
 		  status=1'b0;
 		  
 		end 
+	
+    spc:
+	   begin
 		
+		  DesvioControl = 1'b0;
+		  branchControl = 1'b0;
+		  branchTipo= 1'b0;
+		  jumpControl= 1'b0;
+		  escritaRegControl= 1'b1;
+		  valueULA= 1'b0;
+		  linkControl = 1'b1;
+		  memControl= 1'b0;
+		  dadoRegControl = 3'b110;
+		  status=1'b0;
+		end  
+	
 	 mov:
 	   begin
 		

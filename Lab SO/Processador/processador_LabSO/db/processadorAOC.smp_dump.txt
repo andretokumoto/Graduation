@@ -1,0 +1,6 @@
+
+State Machine - |CPU|ParadaSistema:mest|estadoAtual
+Name estadoAtual.00 estadoAtual.10 estadoAtual.01 
+estadoAtual.10 0 0 0 
+estadoAtual.01 0 1 1 
+estadoAtual.00 1 1 0 

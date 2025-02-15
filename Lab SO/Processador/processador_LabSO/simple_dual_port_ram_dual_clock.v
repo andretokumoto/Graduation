@@ -1,4 +1,4 @@
-// Quartus Prime Verilog Template
+ // Quartus Prime Verilog Template
 // Simple Dual Port RAM with separate read/write addresses and
 // separate read/write clocks
 
@@ -9,6 +9,7 @@ module simple_dual_port_ram_dual_clock
 	input [(ADDR_WIDTH-1):0] read_addr, write_addr,
 	input we, read_clock, write_clock,
 	output reg [(DATA_WIDTH-1):0] q
+	//output wire [(DATA_WIDTH-1):0] q
 );
 	
 	// Declare the RAM variable
@@ -26,5 +27,7 @@ module simple_dual_port_ram_dual_clock
 		// Read 
 		q <= ram[read_addr];
 	end
+	
+	//assign q = ram[read_addr];
 	
 endmodule

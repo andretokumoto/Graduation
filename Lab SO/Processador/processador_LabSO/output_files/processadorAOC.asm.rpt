@@ -1,6 +1,6 @@
 Assembler report for processadorAOC
-Tue Oct  8 20:09:11 2024
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Mon Feb  3 20:36:34 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: processadorAOC.sof
+  5. Assembler Device Options: C:/Users/Acer/Documents/processadorLSO/output_files/processadorAOC.sof
   6. Assembler Messages
 
 
@@ -18,7 +18,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Oct  8 20:09:11 2024 ;
+; Assembler Status      ; Successful - Mon Feb  3 20:36:34 2025 ;
 ; Revision Name         ; processadorAOC                        ;
-; Top-level Entity Name ; mux6                                  ;
+; Top-level Entity Name ; Gerenciador_memoria                   ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE115F29C7                         ;
 +-----------------------+---------------------------------------+
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                           ;
-+-----------------------------------------------------------------------------------------------------+
-; File Name                                                                                           ;
-+-----------------------------------------------------------------------------------------------------+
-; /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/output_files/processadorAOC.sof ;
-+-----------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Assembler Generated Files                                              ;
++------------------------------------------------------------------------+
+; File Name                                                              ;
++------------------------------------------------------------------------+
+; C:/Users/Acer/Documents/processadorLSO/output_files/processadorAOC.sof ;
++------------------------------------------------------------------------+
 
 
-+----------------------------------------------+
-; Assembler Device Options: processadorAOC.sof ;
-+----------------+-----------------------------+
-; Option         ; Setting                     ;
-+----------------+-----------------------------+
-; JTAG usercode  ; 0x00590FC1                  ;
-; Checksum       ; 0x00590FC1                  ;
-+----------------+-----------------------------+
++--------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Acer/Documents/processadorLSO/output_files/processadorAOC.sof ;
++----------------+---------------------------------------------------------------------------------+
+; Option         ; Setting                                                                         ;
++----------------+---------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x005A60CC                                                                      ;
+; Checksum       ; 0x005A60CC                                                                      ;
++----------------+---------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,16 +77,16 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Oct  8 20:09:06 2024
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Mon Feb  3 20:36:28 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 382 megabytes
-    Info: Processing ended: Tue Oct  8 20:09:11 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4709 megabytes
+    Info: Processing ended: Mon Feb  3 20:36:34 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for processadorAOC
-Tue Oct  8 20:08:34 2024
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Mon Feb  3 20:35:43 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -13,9 +13,9 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |Gerenciador_memoria
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
@@ -26,7 +26,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -46,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct  8 20:08:33 2024          ;
-; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb  3 20:35:43 2025          ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
-; Top-level Entity Name              ; mux6                                           ;
+; Top-level Entity Name              ; Gerenciador_memoria                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 163                                            ;
-;     Total combinational functions  ; 163                                            ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 259                                            ;
+; Total logic elements               ; 390                                            ;
+;     Total combinational functions  ; 227                                            ;
+;     Dedicated logic registers      ; 270                                            ;
+; Total registers                    ; 270                                            ;
+; Total pins                         ; 176                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -63,90 +63,90 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; mux6               ; processadorAOC     ;
-; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                               ;
++------------------------------------------------------------------+---------------------+--------------------+
+; Option                                                           ; Setting             ; Default Value      ;
++------------------------------------------------------------------+---------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7       ;                    ;
+; Top-level entity name                                            ; Gerenciador_memoria ; processadorAOC     ;
+; Family name                                                      ; Cyclone IV E        ; Cyclone V          ;
+; Use smart compilation                                            ; Off                 ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                  ; On                 ;
+; Enable compact report table                                      ; Off                 ; Off                ;
+; Restructure Multiplexers                                         ; Auto                ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                 ; Off                ;
+; Preserve fewer node names                                        ; On                  ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable              ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001        ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993           ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto                ; Auto               ;
+; Safe State Machine                                               ; Off                 ; Off                ;
+; Extract Verilog State Machines                                   ; On                  ; On                 ;
+; Extract VHDL State Machines                                      ; On                  ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                 ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000                ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                 ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                  ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                  ; On                 ;
+; Parallel Synthesis                                               ; On                  ; On                 ;
+; DSP Block Balancing                                              ; Auto                ; Auto               ;
+; NOT Gate Push-Back                                               ; On                  ; On                 ;
+; Power-Up Don't Care                                              ; On                  ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                 ; Off                ;
+; Remove Duplicate Registers                                       ; On                  ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                 ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                 ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                 ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                 ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                 ; Off                ;
+; Ignore SOFT Buffers                                              ; On                  ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                 ; Off                ;
+; Optimization Technique                                           ; Balanced            ; Balanced           ;
+; Carry Chain Length                                               ; 70                  ; 70                 ;
+; Auto Carry Chains                                                ; On                  ; On                 ;
+; Auto Open-Drain Pins                                             ; On                  ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                 ; Off                ;
+; Auto ROM Replacement                                             ; On                  ; On                 ;
+; Auto RAM Replacement                                             ; On                  ; On                 ;
+; Auto DSP Block Replacement                                       ; On                  ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto                ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                  ; On                 ;
+; Strict RAM Replacement                                           ; Off                 ; Off                ;
+; Allow Synchronous Control Signals                                ; On                  ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                 ; Off                ;
+; Auto RAM Block Balancing                                         ; On                  ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                 ; Off                ;
+; Auto Resource Sharing                                            ; Off                 ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                 ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                 ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                 ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                  ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                 ; Off                ;
+; Timing-Driven Synthesis                                          ; On                  ; On                 ;
+; Report Parameter Settings                                        ; On                  ; On                 ;
+; Report Source Assignments                                        ; On                  ; On                 ;
+; Report Connectivity Checks                                       ; On                  ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                 ; Off                ;
+; Synchronization Register Chain Length                            ; 2                   ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation  ; Normal compilation ;
+; HDL message level                                                ; Level2              ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                 ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                 ; 100                ;
+; Clock MUX Protection                                             ; On                  ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                 ; Off                ;
+; Block Design Naming                                              ; Auto                ; Auto               ;
+; SDC constraint protection                                        ; Off                 ; Off                ;
+; Synthesis Effort                                                 ; Auto                ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                  ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                 ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium              ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto                ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                  ; On                 ;
++------------------------------------------------------------------+---------------------+--------------------+
 
 
 +------------------------------------------+
@@ -166,97 +166,55 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; mux6.v                           ; yes             ; User Verilog HDL File  ; /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; Gerenciador_memoria.v            ; yes             ; User Verilog HDL File  ; C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 163                     ;
-;                                             ;                         ;
-; Total combinational functions               ; 163                     ;
-; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 128                     ;
-;     -- 3 input functions                    ; 34                      ;
-;     -- <=2 input functions                  ; 1                       ;
-;                                             ;                         ;
-; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 163                     ;
-;     -- arithmetic mode                      ; 0                       ;
-;                                             ;                         ;
-; Total registers                             ; 0                       ;
-;     -- Dedicated logic registers            ; 0                       ;
-;     -- I/O registers                        ; 0                       ;
-;                                             ;                         ;
-; I/O pins                                    ; 259                     ;
-;                                             ;                         ;
-; Embedded Multiplier 9-bit elements          ; 0                       ;
-;                                             ;                         ;
-; Maximum fan-out node                        ; dadoRegControl[0]~input ;
-; Maximum fan-out                             ; 52                      ;
-; Total fan-out                               ; 907                     ;
-; Average fan-out                             ; 1.33                    ;
-+---------------------------------------------+-------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 390       ;
+;                                             ;           ;
+; Total combinational functions               ; 227       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 154       ;
+;     -- 3 input functions                    ; 68        ;
+;     -- <=2 input functions                  ; 5         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 227       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 270       ;
+;     -- Dedicated logic registers            ; 270       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 176       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 270       ;
+; Total fan-out                               ; 1813      ;
+; Average fan-out                             ; 2.14      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |mux6                      ; 163 (163)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 259  ; 0            ; |mux6               ; mux6        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Entity Name         ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
+; |Gerenciador_memoria       ; 227 (227)           ; 270 (270)                 ; 0           ; 0            ; 0       ; 0         ; 176  ; 0            ; |Gerenciador_memoria ; Gerenciador_memoria ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; DadosRegistro[0]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[1]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[2]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[3]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[4]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[5]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[6]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[7]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[8]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[9]$latch                              ; Mux32               ; yes                    ;
-; DadosRegistro[10]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[11]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[12]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[13]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[14]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[15]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[16]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[17]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[18]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[19]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[20]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[21]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[22]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[23]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[24]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[25]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[26]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[27]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[28]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[29]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[30]$latch                             ; Mux32               ; yes                    ;
-; DadosRegistro[31]$latch                             ; Mux32               ; yes                    ;
-; Number of user-specified and inferred latches = 32  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -264,23 +222,42 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 270   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 164   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |mux6|Mux16                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Gerenciador_memoria|bloco_livre[1]                                    ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |Gerenciador_memoria|cabecalho_bloco_para_salvar_na_memoriaRAM[4]~reg0 ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |Gerenciador_memoria|blocos_de_memoria[3][25]                          ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |Gerenciador_memoria|blocos_de_memoria[2][23]                          ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |Gerenciador_memoria|blocos_de_memoria[1][16]                          ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |Gerenciador_memoria|blocos_de_memoria[0][14]                          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Gerenciador_memoria|Mux50                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Gerenciador_memoria|cursor_memoria                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Gerenciador_memoria ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; criar          ; 01    ; Unsigned Binary                                            ;
+; deletar        ; 10    ; Unsigned Binary                                            ;
+; alterar_nome   ; 11    ; Unsigned Binary                                            ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -288,15 +265,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 259                         ;
-; cycloneiii_lcell_comb ; 163                         ;
-;     normal            ; 163                         ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 34                          ;
-;         4 data inputs ; 128                         ;
+; boundary_port         ; 176                         ;
+; cycloneiii_ff         ; 270                         ;
+;     ENA               ; 164                         ;
+;     plain             ; 106                         ;
+; cycloneiii_lcell_comb ; 228                         ;
+;     normal            ; 228                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 68                          ;
+;         4 data inputs ; 154                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.62                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.97                        ;
 +-----------------------+-----------------------------+
 
 
@@ -314,173 +295,118 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Oct  8 20:08:20 2024
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Mon Feb  3 20:35:25 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file CPU.v
-    Info (12023): Found entity 1: CPU File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/CPU.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file MEMInstrucoes.v
-    Info (12023): Found entity 1: MEMInstrucoes File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/MEMInstrucoes.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file BancoRegistradores.v
-    Info (12023): Found entity 1: BancoRegistradores File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/BancoRegistradores.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file unidadeDeComparacao.v
-    Info (12023): Found entity 1: unidadeDeComparacao File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/unidadeDeComparacao.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
+    Info (12023): Found entity 1: CPU File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file meminstrucoes.v
+    Info (12023): Found entity 1: MEMInstrucoes File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bancoregistradores.v
+    Info (12023): Found entity 1: BancoRegistradores File: C:/Users/Acer/Documents/processadorLSO/BancoRegistradores.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file unidadedecomparacao.v
+    Info (12023): Found entity 1: unidadeDeComparacao File: C:/Users/Acer/Documents/processadorLSO/unidadeDeComparacao.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux6.v
-    Info (12023): Found entity 1: mux6 File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ULA.v
-    Info (12023): Found entity 1: ULA File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/ULA.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file MemoriaDados.v
-    Info (12023): Found entity 1: MemoriaDados File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/MemoriaDados.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file UnidadeDeControle.v
-    Info (12023): Found entity 1: UnidadeDeControle File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/UnidadeDeControle.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file EntradaSaida.v
-    Info (12023): Found entity 1: EntradaSaida File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/EntradaSaida.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file muxDesvio.v
-    Info (12023): Found entity 1: muxDesvio File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/muxDesvio.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file simple_dual_port_ram_single_clock.v
-    Info (12023): Found entity 1: simple_dual_port_ram_single_clock File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/simple_dual_port_ram_single_clock.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file BCD.v
-    Info (12023): Found entity 1: BCD File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/BCD.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file displaySete.v
-    Info (12023): Found entity 1: displaySete File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/displaySete.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file PC.v
-    Info (12023): Found entity 1: PC File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/PC.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ParadaSistema.v
-    Info (12023): Found entity 1: ParadaSistema File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/ParadaSistema.v Line: 1
+    Info (12023): Found entity 1: mux6 File: C:/Users/Acer/Documents/processadorLSO/mux6.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ula.v
+    Info (12023): Found entity 1: ULA File: C:/Users/Acer/Documents/processadorLSO/ULA.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memoriadados.v
+    Info (12023): Found entity 1: MemoriaDados File: C:/Users/Acer/Documents/processadorLSO/MemoriaDados.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file unidadedecontrole.v
+    Info (12023): Found entity 1: UnidadeDeControle File: C:/Users/Acer/Documents/processadorLSO/UnidadeDeControle.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file entradasaida.v
+    Info (12023): Found entity 1: EntradaSaida File: C:/Users/Acer/Documents/processadorLSO/EntradaSaida.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file muxdesvio.v
+    Info (12023): Found entity 1: muxDesvio File: C:/Users/Acer/Documents/processadorLSO/muxDesvio.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bcd.v
+    Info (12023): Found entity 1: BCD File: C:/Users/Acer/Documents/processadorLSO/BCD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file displaysete.v
+    Info (12023): Found entity 1: displaySete File: C:/Users/Acer/Documents/processadorLSO/displaySete.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc.v
+    Info (12023): Found entity 1: PC File: C:/Users/Acer/Documents/processadorLSO/PC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file paradasistema.v
+    Info (12023): Found entity 1: ParadaSistema File: C:/Users/Acer/Documents/processadorLSO/ParadaSistema.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file monostable.v
-    Info (12023): Found entity 1: monostable File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/monostable.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file DeBounce.v
-    Info (12023): Found entity 1: DeBounce File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/DeBounce.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pulsoBotao.v
-    Info (12023): Found entity 1: pulsoBotao File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/pulsoBotao.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file DeBouncebuton.v
-    Info (12023): Found entity 1: DeBouncebuton File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/DeBouncebuton.v Line: 28
-Info (12021): Found 1 design units, including 1 entities, in source file tratamentoBotao.v
-    Info (12023): Found entity 1: tratamentoBotao File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/tratamentoBotao.v Line: 1
+    Info (12023): Found entity 1: monostable File: C:/Users/Acer/Documents/processadorLSO/monostable.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file debounce.v
+    Info (12023): Found entity 1: DeBounce File: C:/Users/Acer/Documents/processadorLSO/DeBounce.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pulsobotao.v
+    Info (12023): Found entity 1: pulsoBotao File: C:/Users/Acer/Documents/processadorLSO/pulsoBotao.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file debouncebuton.v
+    Info (12023): Found entity 1: DeBouncebuton File: C:/Users/Acer/Documents/processadorLSO/DeBouncebuton.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file tratamentobotao.v
+    Info (12023): Found entity 1: tratamentoBotao File: C:/Users/Acer/Documents/processadorLSO/tratamentoBotao.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.v
-    Info (12023): Found entity 1: clock_divider File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/clock_divider.v Line: 1
+    Info (12023): Found entity 1: clock_divider File: C:/Users/Acer/Documents/processadorLSO/clock_divider.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file simple_dual_port_ram_dual_clock.v
-    Info (12023): Found entity 1: simple_dual_port_ram_dual_clock File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/simple_dual_port_ram_dual_clock.v Line: 5
-Critical Warning (10846): Verilog HDL Instantiation warning at CPU.v(53): instance has no name File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/CPU.v Line: 53
-Info (12127): Elaborating entity "mux6" for the top level hierarchy
-Warning (10270): Verilog HDL Case Statement warning at mux6.v(11): incomplete case statement has no default case item File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Warning (10240): Verilog HDL Always Construct warning at mux6.v(11): inferring latch(es) for variable "DadosRegistro", which holds its previous value in one or more paths through the always construct File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[0]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[1]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[2]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[3]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[4]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[5]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[6]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[7]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[8]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[9]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[10]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[11]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[12]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[13]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[14]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[15]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[16]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[17]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[18]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[19]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[20]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[21]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[22]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[23]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[24]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[25]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[26]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[27]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[28]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[29]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[30]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Info (10041): Inferred latch for "DadosRegistro[31]" at mux6.v(11) File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-Warning (13012): Latch DadosRegistro[0]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[1]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[2]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[3]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[4]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[5]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[6]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[7]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[8]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[9]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[10]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[11]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[12]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[13]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[14]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[15]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[16]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[17]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[18]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[19]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[20]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[21]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[22]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[23]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[24]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[25]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[26]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[27]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[28]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[29]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[30]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
-Warning (13012): Latch DadosRegistro[31]$latch has unsafe behavior File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal dadoRegControl[0] File: /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/mux6.v Line: 3
+    Info (12023): Found entity 1: simple_dual_port_ram_dual_clock File: C:/Users/Acer/Documents/processadorLSO/simple_dual_port_ram_dual_clock.v Line: 5
+Warning (10335): Unrecognized synthesis attribute "o" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
+Warning (10335): Unrecognized synthesis attribute "estado" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
+Warning (10335): Unrecognized synthesis attribute "e" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
+Warning (10335): Unrecognized synthesis attribute "ou" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
+Warning (10335): Unrecognized synthesis attribute "par" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
+Info (12021): Found 1 design units, including 1 entities, in source file gerenciador_memoria.v
+    Info (12023): Found entity 1: Gerenciador_memoria File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(85): created implicit net for "entradaDeDadosIO" File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 85
+Critical Warning (10846): Verilog HDL Instantiation warning at CPU.v(53): instance has no name File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 53
+Info (12127): Elaborating entity "Gerenciador_memoria" for the top level hierarchy
+Warning (10034): Output port "testeEntrou" at Gerenciador_memoria.v(16) has no driver File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 16
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "testeEntrou" is stuck at GND File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 16
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/output_files/processadorAOC.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Acer/Documents/processadorLSO/output_files/processadorAOC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 422 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 227 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 163 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
-    Info: Peak virtual memory: 377 megabytes
-    Info: Processing ended: Tue Oct  8 20:08:34 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+Warning (21074): Design contains 33 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[0]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[1]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[2]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[3]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[4]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[5]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[6]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[7]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[8]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[9]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[10]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[11]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[12]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[13]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[14]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[15]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[16]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[17]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[18]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[19]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[20]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[21]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[22]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[23]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[24]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[25]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[26]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[27]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[28]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[29]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[30]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[31]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
+    Warning (15610): No output dependent on input pin "Bloco_para_analise_hd[31]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 5
+Info (21057): Implemented 633 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 72 input pins
+    Info (21059): Implemented 104 output pins
+    Info (21061): Implemented 457 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 4742 megabytes
+    Info: Processing ended: Mon Feb  3 20:35:43 2025
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:32
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/andre/Documentos/Projetos/Graduation/Lab SO/processador_LabSO/output_files/processadorAOC.map.smsg.
+The suppressed messages can be found in C:/Users/Acer/Documents/processadorLSO/output_files/processadorAOC.map.smsg.
 
 

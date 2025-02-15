@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Oct  8 20:08:33 2024
-Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Analysis & Synthesis Status : Successful - Mon Feb  3 20:35:43 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : processadorAOC
-Top-level Entity Name : mux6
+Top-level Entity Name : Gerenciador_memoria
 Family : Cyclone IV E
-Total logic elements : 163
-    Total combinational functions : 163
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 259
+Total logic elements : 390
+    Total combinational functions : 227
+    Dedicated logic registers : 270
+Total registers : 270
+Total pins : 176
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
