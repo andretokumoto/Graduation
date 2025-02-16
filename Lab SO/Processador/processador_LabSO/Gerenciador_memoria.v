@@ -6,8 +6,8 @@ module Gerenciador_memoria(
     input [31:0] Bloco_para_analise_hd,  // Dados do bloco no HD
     input clk,
     input reset,
-	 input [1:0] ControlePuxarDoHD;
-	 input [1:0] VarrerMemoriaHD;
+	 input [1:0] ControlePuxarDoH,
+	 input [1:0] VarrerMemoriaHD,
 	 
 	 
 	 output reg[31:0] enderecoHD, 
@@ -29,25 +29,29 @@ module Gerenciador_memoria(
    // reg [3:0] bloco_livre;
   //  reg [30:0] nome_bloco;
       reg [31:0] blocos_de_memoria [3:0]; // Vetor de 16 blocos de memória
-		reg [31:0] LinhaASerLida;
+		reg [31:0] LinhaASerLida, cabecalhoDoBloco;
 		reg [31:0] numero_bloco_analisado_extendido;
 		reg [31:0] tamanhoDosBlocos [7:0];
 		reg [31:0] contadorLeituraHD;
+		reg [31:0] blocoNaVarredura = 32'd0;
 
   //  parameter criar = 2'b01, deletar = 2'b10, alterar_nome = 2'b11;
-		parameter Tamanho_bloco = 32'b200;
+		parameter Tamanho_bloco = 32'b200,TamMemoriaHD = 32'd4000;
 	 //percorre as posições
 	
 	
 	always@(numero_bloco_analisado)
 		begin
-			LinhaASerLida = numero_bloco_analisado * Tamanho_bloco;
+			cabecalhoDoBloco = numero_bloco_analisado * Tamanho_bloco;
+			LinhaASerLida = cabecalhoDoBloco + 31'd1;//pega a primeira linha após o cabeçalho
 			contadorLeituraHD = LinhaASerLida + tamanhoDosBlocos[numero_bloco_analisado[7:0]];
 		end
 	
 	 
-	 always@(posedge clk)
+	 always@(posedge clk or posedge reset)
 		begin
+			
+			//if(reset) blocoNaVarredura = 32'd0;
 			
 			if(ControlePuxarDoHD==2'b01)//instrução para puxar um programa do hd , mada o endereço para acessar o dado da memoria
 				begin
@@ -60,6 +64,13 @@ module Gerenciador_memoria(
 					if(LinhaASerLida == contadorLeituraHD) ControleFimDeLeitura = 2'b01;
 					else ControleFimDeLeitura = 2'b00;
 					
+				end
+				
+			if(VarrerMemoriaHD==2'b01) 
+				begin
+				
+				 
+				
 				end
 			
 			
