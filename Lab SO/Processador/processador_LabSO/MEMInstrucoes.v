@@ -1,21 +1,24 @@
-module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao, posicaoParaSalvarInstrucao, controleSalvaInstrucao, biosEmExecucao, encerrarBios);
+module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao,ControleFimDeLeitura, posicaoBlocoRAM, controleSalvaInstrucao, biosEmExecucao, encerrarBios,processoEmExecucao);
 
-    input [31:0] pc, entradaDeInstrucao, posicaoParaSalvarInstrucao;
+    input [31:0] pc, entradaDeInstrucao, posicaoBlocoRAM;
     input clock, reset;
     input encerrarBios;
-    input [2:0] controleSalvaInstrucao;
+    input [2:0] controleSalvaInstrucao,ControleFimDeLeitura;
     output reg [5:0] opcode;
     output reg [4:0] OUTrs, OUTrt, OUTrd;
     output reg [15:0] imediato;
     output reg [25:0] jump;
     output reg biosEmExecucao; // Sinal que indica que a bios está em execução
+	 output reg [31:0] processoEmExecucao; 
 
     reg [31:0] Bios[120:0];
     reg [1:0] executaBios;
     reg [31:0] instrucao;
     reg [31:0] memoria[200:0];
-
-    // Lógica combinatória para verificar se a bios está em execução
+	 reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
+	 	
+		
+    // verificar se a bios está em execução
     always @(*) begin
         if(executaBios == 2'b01) begin
             biosEmExecucao = 1'b1;
@@ -25,8 +28,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
         end
     end
 
-    // Lógica combinatória para selecionar a instrução (BIOS ou memória principal)
-    always @(*) begin
+    //selecionar a instrução (BIOS ou memória principal)
+    always @(pc) begin
         if(executaBios == 2'b01) begin
             instrucao = Bios[pc];
         end
@@ -35,16 +38,38 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
         end
     end
 
-    // Lógica síncrona para reset e encerrarBios
+	 
+	always@(negedge clock)
+		begin
+			
+			//puxar do hd para memória
+			if(controleSalvaInstrucao == 2'b01 and ControleFimDeLeitura == 2'b00)
+				begin
+					memoria[cursorDePosicao] = entradaDeInstrucao;
+				end
+			
+			
+		end
+	 
+	 
+	 
+  
     always@(posedge clock or posedge reset)                           
     begin 
         if(reset == 1'b1) begin
             executaBios <= 2'b01; // Executa a bios
+				cursorDePosicao = 15'd0;//zera cursor
         end
         else if(encerrarBios == 1'b1) begin
             executaBios <= 2'b00; // Encerra a bios
         end
 
+		  //puxar do hd para memória - atulização de cursor
+		  	if(controleSalvaInstrucao == 2'b01 and ControleFimDeLeitura == 2'b00)
+				begin
+					cursorDePosicao = cursorDePosicao + 32'd1;
+				end
+		  
 
 			//bios ---------------------------------------------------------------			
 						//lfhd puxa uma programa 
