@@ -9,7 +9,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
     output reg [15:0] imediato;
     output reg [25:0] jump;
     output reg biosEmExecucao; // Sinal que indica que a bios está em execução
-	output reg [31:0] processoEmExecucao; 
+	 output reg [31:0] processoEmExecucao; 
 
     reg [31:0] Bios[120:0];
     reg [1:0] executaBios;
