@@ -87,6 +87,23 @@ module simple_dual_port_ram_single_clock
 			// jr r21 // retorna o pocessamento do processo
 			//------------------------------fim mudança de contexto---------------------------
 
+			//----------------------verifica blocos do hd que estão em uso------------------------
+			//movi r20 , 1
+			//movi r23, 0
+			//movi r24, 10
+			//lhd r21 , rzero, 0
+			//começo loop
+			//lhd r22 , r20, 200
+			//blt r22,r21, +4
+			//sw r20, r23, 0
+			//addi r23, 1
+			//addi r20 , 1
+			//subi r25, r24 ,r20
+			//beq rzero, r25 , +2
+			//jump começo loop
+			//jump menu 
+			// ----------------------- fim da verificação --------------------------------
+
 
 
 

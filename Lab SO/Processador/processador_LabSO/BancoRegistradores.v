@@ -24,6 +24,7 @@ r20 até r25:
 	RS4   :  "5'b10111"
 	RS5   :  "5'b11000"
 	RS6   :  "5'b11001"
+	
 
 registradores especiais:
 
@@ -31,7 +32,6 @@ registradores especiais:
 	RBP   :  "5'b11011"
 	RA    :  "5'b11100"
 	RRET  :  "5'b11111"
-
 */
 
 
