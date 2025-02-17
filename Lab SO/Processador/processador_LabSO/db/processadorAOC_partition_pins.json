@@ -4,435 +4,279 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[0]",
+					"name" : "opcode[0]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[1]",
+					"name" : "opcode[1]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[2]",
+					"name" : "opcode[2]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[3]",
+					"name" : "opcode[3]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[4]",
+					"name" : "opcode[4]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[5]",
+					"name" : "opcode[5]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[6]",
+					"name" : "OUTrs[0]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[7]",
+					"name" : "OUTrs[1]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[8]",
+					"name" : "OUTrs[2]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[9]",
+					"name" : "OUTrs[3]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[10]",
+					"name" : "OUTrs[4]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[11]",
+					"name" : "OUTrt[0]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[12]",
+					"name" : "OUTrt[1]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[13]",
+					"name" : "OUTrt[2]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[14]",
+					"name" : "OUTrt[3]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[15]",
+					"name" : "OUTrt[4]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[16]",
+					"name" : "OUTrd[0]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[17]",
+					"name" : "OUTrd[1]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[18]",
+					"name" : "OUTrd[2]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[19]",
+					"name" : "OUTrd[3]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[20]",
+					"name" : "OUTrd[4]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[21]",
+					"name" : "imediato[0]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[22]",
+					"name" : "imediato[1]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[23]",
+					"name" : "imediato[2]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[24]",
+					"name" : "imediato[3]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[25]",
+					"name" : "imediato[4]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[26]",
+					"name" : "imediato[5]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[27]",
+					"name" : "imediato[6]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[28]",
+					"name" : "imediato[7]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[29]",
+					"name" : "imediato[8]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[30]",
+					"name" : "imediato[9]",
 					"strict" : false
 				},
 				{
-					"name" : "cabecalho_bloco_para_salvar_na_memoriaRAM[31]",
+					"name" : "imediato[10]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_cursor_memoria[0]",
+					"name" : "jump[0]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_cursor_memoria[1]",
+					"name" : "jump[1]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_cursor_memoria[2]",
+					"name" : "jump[2]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_cursor_memoria[3]",
+					"name" : "jump[3]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_bloco_livre[0]",
+					"name" : "jump[4]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_bloco_livre[1]",
+					"name" : "jump[5]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_bloco_livre[2]",
+					"name" : "jump[6]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_bloco_livre[3]",
+					"name" : "jump[7]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[0]",
+					"name" : "jump[8]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[1]",
+					"name" : "jump[9]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[2]",
+					"name" : "jump[10]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[3]",
+					"name" : "jump[11]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[4]",
+					"name" : "jump[12]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[5]",
+					"name" : "jump[13]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[6]",
+					"name" : "jump[14]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[7]",
+					"name" : "jump[15]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[8]",
+					"name" : "jump[16]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[9]",
+					"name" : "jump[17]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[10]",
+					"name" : "jump[18]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[11]",
+					"name" : "jump[19]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[12]",
+					"name" : "jump[20]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[13]",
+					"name" : "jump[21]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[14]",
+					"name" : "jump[22]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[15]",
+					"name" : "jump[23]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[16]",
+					"name" : "jump[24]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[17]",
+					"name" : "jump[25]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[18]",
+					"name" : "biosEmExecucao",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[19]",
+					"name" : "pc[3]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[20]",
+					"name" : "pc[2]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[21]",
+					"name" : "pc[5]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[22]",
+					"name" : "pc[4]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[23]",
+					"name" : "pc[1]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[24]",
+					"name" : "pc[0]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[25]",
+					"name" : "pc[7]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[26]",
+					"name" : "pc[6]",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[27]",
+					"name" : "encerrarBios",
 					"strict" : false
 				},
 				{
-					"name" : "teste_nome_bloco[28]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_nome_bloco[29]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_nome_bloco[30]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[0]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[1]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[2]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[3]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[4]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[5]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[6]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[7]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[8]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[9]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[10]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[11]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[12]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[13]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[14]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[15]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[16]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[17]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[18]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[19]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[20]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[21]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[22]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[23]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[24]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[25]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[26]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[27]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[28]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[29]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[30]",
-					"strict" : false
-				},
-				{
-					"name" : "teste_blocos_de_memoria[31]",
-					"strict" : false
-				},
-				{
-					"name" : "bloco_para_alteracao[1]",
-					"strict" : false
-				},
-				{
-					"name" : "bloco_para_alteracao[0]",
-					"strict" : false
-				},
-				{
-					"name" : "tipo_alteracao[1]",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "tipo_alteracao[0]",
+					"name" : "clock",
 					"strict" : false
 				},
 				{
@@ -440,135 +284,155 @@
 					"strict" : false
 				},
 				{
-					"name" : "bloco_para_alteracao[2]",
+					"name" : "entradaDeInstrucao[26]",
 					"strict" : false
 				},
 				{
-					"name" : "bloco_para_alteracao[3]",
+					"name" : "controleSalvaInstrucao[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[0]",
+					"name" : "controleSalvaInstrucao[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[1]",
+					"name" : "controleSalvaInstrucao[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[2]",
+					"name" : "ControleFimDeLeitura[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[3]",
+					"name" : "ControleFimDeLeitura[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[4]",
+					"name" : "ControleFimDeLeitura[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[5]",
+					"name" : "entradaDeInstrucao[27]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[6]",
+					"name" : "entradaDeInstrucao[28]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[7]",
+					"name" : "entradaDeInstrucao[29]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[8]",
+					"name" : "entradaDeInstrucao[30]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[9]",
+					"name" : "entradaDeInstrucao[31]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[10]",
+					"name" : "entradaDeInstrucao[16]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[11]",
+					"name" : "entradaDeInstrucao[17]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[12]",
+					"name" : "entradaDeInstrucao[18]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[13]",
+					"name" : "entradaDeInstrucao[19]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[14]",
+					"name" : "entradaDeInstrucao[20]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[15]",
+					"name" : "entradaDeInstrucao[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[16]",
+					"name" : "entradaDeInstrucao[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[17]",
+					"name" : "entradaDeInstrucao[13]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[18]",
+					"name" : "entradaDeInstrucao[14]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[19]",
+					"name" : "entradaDeInstrucao[15]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[20]",
+					"name" : "entradaDeInstrucao[21]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[21]",
+					"name" : "entradaDeInstrucao[22]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[22]",
+					"name" : "entradaDeInstrucao[23]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[23]",
+					"name" : "entradaDeInstrucao[24]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[24]",
+					"name" : "entradaDeInstrucao[25]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[25]",
+					"name" : "entradaDeInstrucao[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[26]",
+					"name" : "entradaDeInstrucao[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[27]",
+					"name" : "entradaDeInstrucao[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[28]",
+					"name" : "entradaDeInstrucao[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[29]",
+					"name" : "entradaDeInstrucao[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Bloco_para_analise_hd[30]",
+					"name" : "entradaDeInstrucao[5]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaDeInstrucao[6]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaDeInstrucao[7]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaDeInstrucao[8]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaDeInstrucao[9]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaDeInstrucao[10]",
 					"strict" : false
 				}
 			]

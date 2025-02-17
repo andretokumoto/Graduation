@@ -1,0 +1,13 @@
+module Escalonador(
+    input clock,
+    input reset,
+    input pc_atual,
+	 output reg processo_atual,
+);
+
+	reg contador = 32'd0;
+	reg [31:0] processos [4:0]; //lista de processos rodando
+	
+
+
+endmodule

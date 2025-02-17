@@ -1,5 +1,3 @@
-Warning (10268): Verilog HDL information at CPU.v(117): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 117
-Warning (10268): Verilog HDL information at CPU.v(137): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 137
-Warning (10268): Verilog HDL information at MEMInstrucoes.v(18): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 18
-Warning (10268): Verilog HDL information at Gerenciador_memoria.v(28): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 28
-Warning (10268): Verilog HDL information at Gerenciador_memoria.v(57): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 57
+Warning (10268): Verilog HDL information at CPU.v(119): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 119
+Warning (10268): Verilog HDL information at CPU.v(139): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 139
+Warning (10268): Verilog HDL information at MEMInstrucoes.v(55): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 55

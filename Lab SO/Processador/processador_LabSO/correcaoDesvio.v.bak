@@ -1,0 +1,15 @@
+module correcaoDesvio(
+
+	input reg [10:0] desvioOriginal,
+	input valorCorrecao,
+	output desvioCorrigido
+
+);
+
+	always@(desvioOriginal)
+		begin
+				desvioCorrigido = desvioOriginal+valorCorrecao;
+		end
+
+
+endmodule

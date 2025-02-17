@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/processadorLSO/Waveform31.vwf" --testbench_file="C:/Users/Acer/Documents/processadorLSO/simulation/qsim/Waveform31.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/processadorLSO/Waveform32.vwf" --testbench_file="C:/Users/Acer/Documents/processadorLSO/simulation/qsim/Waveform32.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,13 +26,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Feb  3 20:50:21 2025
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source=C:/Users/Acer/Documents/processadorLSO/Waveform31.vwf --testbench_file=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/Waveform31.vwf.vt
+    Info: Processing started: Sun Feb 16 20:11:45 2025
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source=C:/Users/Acer/Documents/processadorLSO/Waveform32.vwf --testbench_file=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/Waveform32.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
- bench files
+t pin "imediato[12]" in vector source file when writing test bench files
 
-este_nome_bloco[24]" in vector source file when writing test bench files
+rce file when writing test bench files
+
+g (201005): Ignoring output pin "processoEmExecucao[2]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -59,15 +61,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Feb  3 20:50:22 2025
+    Info: Processing started: Sun Feb 16 20:11:47 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/ processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file processadorAOC.vo in folder "C:/Users/Acer/Documents/processadorLSO/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4654 megabytes
-    Info: Processing ended: Mon Feb  3 20:50:24 2025
+    Info: Peak virtual memory: 4686 megabytes
+    Info: Processing ended: Sun Feb 16 20:11:49 2025
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
 
@@ -93,44 +95,44 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 20:50:26 on Feb 03,2025
+# Start time: 20:11:51 on Feb 16,2025
 
 # vlog -work work processadorAOC.vo 
 
-# -- Compiling module Gerenciador_memoria
+# -- Compiling module MEMInstrucoes
 
 # -- Compiling module hard_block
 
 # 
 
 # Top level modules:
-# 	Gerenciador_memoria
+# 	MEMInstrucoes
 
-# End time: 20:50:26 on Feb 03,2025, Elapsed time: 0:00:00
+# End time: 20:11:54 on Feb 16,2025, Elapsed time: 0:00:03
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 20:50:26 on Feb 03,2025
+# Start time: 20:11:54 on Feb 16,2025
 
-# vlog -work work Waveform31.vwf.vt 
+# vlog -work work Waveform32.vwf.vt 
 
-# -- Compiling module Gerenciador_memoria_vlg_vec_tst
+# -- Compiling module MEMInstrucoes_vlg_vec_tst
 
 # 
 
 # Top level modules:
-# 	Gerenciador_memoria_vlg_vec_tst
+# 	MEMInstrucoes_vlg_vec_tst
 
-# End time: 20:50:26 on Feb 03,2025, Elapsed time: 0:00:00
+# End time: 20:11:55 on Feb 16,2025, Elapsed time: 0:00:01
 
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Gerenciador_memoria_vlg_vec_tst 
-# Start time: 20:50:26 on Feb 03,2025
-# Loading work.Gerenciador_memoria_vlg_vec_tst
-# Loading work.Gerenciador_memoria
+# vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MEMInstrucoes_vlg_vec_tst 
+# Start time: 20:11:55 on Feb 16,2025
+# Loading work.MEMInstrucoes_vlg_vec_tst
+# Loading work.MEMInstrucoes
 # Loading work.hard_block
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
@@ -140,26 +142,38 @@ Reading pref.tcl
 # Loading cycloneive_ver.cycloneive_lcell_comb
 # Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 38141 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
 
 # after#26
 
-# ** Note: $finish    : Waveform31.vwf.vt(65)
-#    Time: 1 us  Iteration: 0  Instance: /Gerenciador_memoria_vlg_vec_tst
+# Simulation time: 0 ps
 
-# End time: 20:50:27 on Feb 03,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# ** Note: $finish    : Waveform32.vwf.vt(73)
+#    Time: 1 us  Iteration: 0  Instance: /MEMInstrucoes_vlg_vec_tst
+
+# End time: 20:12:11 on Feb 16,2025, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Acer/Documents/processadorLSO/Waveform31.vwf...
+Reading C:/Users/Acer/Documents/processadorLSO/Waveform32.vwf...
 
 Reading C:/Users/Acer/Documents/processadorLSO/simulation/qsim/processadorAOC.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Acer/Documents/processadorLSO/simulation/qsim/processadorAOC_20250203205027.sim.vwf
+Writing the resulting VWF to C:/Users/Acer/Documents/processadorLSO/simulation/qsim/processadorAOC_20250216201212.sim.vwf
 
 Finished VCD to VWF conversion.
 

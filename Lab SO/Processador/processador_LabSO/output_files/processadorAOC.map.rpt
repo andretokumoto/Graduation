@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorAOC
-Mon Feb  3 20:35:43 2025
+Sun Feb 16 22:12:14 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,16 +10,8 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |Gerenciador_memoria
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
- 14. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,107 +38,107 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb  3 20:35:43 2025          ;
+; Analysis & Synthesis Status        ; Failed - Sun Feb 16 22:12:14 2025              ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
-; Top-level Entity Name              ; Gerenciador_memoria                            ;
+; Top-level Entity Name              ; MEMInstrucoes                                  ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 390                                            ;
-;     Total combinational functions  ; 227                                            ;
-;     Dedicated logic registers      ; 270                                            ;
-; Total registers                    ; 270                                            ;
-; Total pins                         ; 176                                            ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
 +------------------------------------+------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                               ;
-+------------------------------------------------------------------+---------------------+--------------------+
-; Option                                                           ; Setting             ; Default Value      ;
-+------------------------------------------------------------------+---------------------+--------------------+
-; Device                                                           ; EP4CE115F29C7       ;                    ;
-; Top-level entity name                                            ; Gerenciador_memoria ; processadorAOC     ;
-; Family name                                                      ; Cyclone IV E        ; Cyclone V          ;
-; Use smart compilation                                            ; Off                 ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                  ; On                 ;
-; Enable compact report table                                      ; Off                 ; Off                ;
-; Restructure Multiplexers                                         ; Auto                ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                 ; Off                ;
-; Preserve fewer node names                                        ; On                  ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable              ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001        ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993           ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto                ; Auto               ;
-; Safe State Machine                                               ; Off                 ; Off                ;
-; Extract Verilog State Machines                                   ; On                  ; On                 ;
-; Extract VHDL State Machines                                      ; On                  ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                 ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000                ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                 ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                  ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                  ; On                 ;
-; Parallel Synthesis                                               ; On                  ; On                 ;
-; DSP Block Balancing                                              ; Auto                ; Auto               ;
-; NOT Gate Push-Back                                               ; On                  ; On                 ;
-; Power-Up Don't Care                                              ; On                  ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                 ; Off                ;
-; Remove Duplicate Registers                                       ; On                  ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                 ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                 ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                 ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                 ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                 ; Off                ;
-; Ignore SOFT Buffers                                              ; On                  ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                 ; Off                ;
-; Optimization Technique                                           ; Balanced            ; Balanced           ;
-; Carry Chain Length                                               ; 70                  ; 70                 ;
-; Auto Carry Chains                                                ; On                  ; On                 ;
-; Auto Open-Drain Pins                                             ; On                  ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                 ; Off                ;
-; Auto ROM Replacement                                             ; On                  ; On                 ;
-; Auto RAM Replacement                                             ; On                  ; On                 ;
-; Auto DSP Block Replacement                                       ; On                  ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto                ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto                ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                  ; On                 ;
-; Strict RAM Replacement                                           ; Off                 ; Off                ;
-; Allow Synchronous Control Signals                                ; On                  ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                 ; Off                ;
-; Auto RAM Block Balancing                                         ; On                  ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                 ; Off                ;
-; Auto Resource Sharing                                            ; Off                 ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                 ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                 ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                 ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                  ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                 ; Off                ;
-; Timing-Driven Synthesis                                          ; On                  ; On                 ;
-; Report Parameter Settings                                        ; On                  ; On                 ;
-; Report Source Assignments                                        ; On                  ; On                 ;
-; Report Connectivity Checks                                       ; On                  ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                 ; Off                ;
-; Synchronization Register Chain Length                            ; 2                   ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation  ; Normal compilation ;
-; HDL message level                                                ; Level2              ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                 ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000                ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000                ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                 ; 100                ;
-; Clock MUX Protection                                             ; On                  ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                 ; Off                ;
-; Block Design Naming                                              ; Auto                ; Auto               ;
-; SDC constraint protection                                        ; Off                 ; Off                ;
-; Synthesis Effort                                                 ; Auto                ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                  ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                 ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium              ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto                ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                  ; On                 ;
-+------------------------------------------------------------------+---------------------+--------------------+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; MEMInstrucoes      ; processadorAOC     ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -158,136 +150,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; Gerenciador_memoria.v            ; yes             ; User Verilog HDL File  ; C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 390       ;
-;                                             ;           ;
-; Total combinational functions               ; 227       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 154       ;
-;     -- 3 input functions                    ; 68        ;
-;     -- <=2 input functions                  ; 5         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 227       ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 270       ;
-;     -- Dedicated logic registers            ; 270       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 176       ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 270       ;
-; Total fan-out                               ; 1813      ;
-; Average fan-out                             ; 2.14      ;
-+---------------------------------------------+-----------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Entity Name         ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
-; |Gerenciador_memoria       ; 227 (227)           ; 270 (270)                 ; 0           ; 0            ; 0       ; 0         ; 176  ; 0            ; |Gerenciador_memoria ; Gerenciador_memoria ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 270   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 164   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Gerenciador_memoria|bloco_livre[1]                                    ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |Gerenciador_memoria|cabecalho_bloco_para_salvar_na_memoriaRAM[4]~reg0 ;
-; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |Gerenciador_memoria|blocos_de_memoria[3][25]                          ;
-; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |Gerenciador_memoria|blocos_de_memoria[2][23]                          ;
-; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |Gerenciador_memoria|blocos_de_memoria[1][16]                          ;
-; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |Gerenciador_memoria|blocos_de_memoria[0][14]                          ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Gerenciador_memoria|Mux50                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Gerenciador_memoria|cursor_memoria                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |Gerenciador_memoria ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; criar          ; 01    ; Unsigned Binary                                            ;
-; deletar        ; 10    ; Unsigned Binary                                            ;
-; alterar_nome   ; 11    ; Unsigned Binary                                            ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 176                         ;
-; cycloneiii_ff         ; 270                         ;
-;     ENA               ; 164                         ;
-;     plain             ; 106                         ;
-; cycloneiii_lcell_comb ; 228                         ;
-;     normal            ; 228                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 68                          ;
-;         4 data inputs ; 154                         ;
-;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.97                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -296,7 +163,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Feb  3 20:35:25 2025
+    Info: Processing started: Sun Feb 16 22:11:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -342,66 +209,60 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_d
     Info (12023): Found entity 1: clock_divider File: C:/Users/Acer/Documents/processadorLSO/clock_divider.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file simple_dual_port_ram_dual_clock.v
     Info (12023): Found entity 1: simple_dual_port_ram_dual_clock File: C:/Users/Acer/Documents/processadorLSO/simple_dual_port_ram_dual_clock.v Line: 5
-Warning (10335): Unrecognized synthesis attribute "o" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
-Warning (10335): Unrecognized synthesis attribute "estado" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
-Warning (10335): Unrecognized synthesis attribute "e" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
-Warning (10335): Unrecognized synthesis attribute "ou" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
-Warning (10335): Unrecognized synthesis attribute "par" at Gerenciador_memoria.v(64) File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 64
 Info (12021): Found 1 design units, including 1 entities, in source file gerenciador_memoria.v
     Info (12023): Found entity 1: Gerenciador_memoria File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at CPU.v(85): created implicit net for "entradaDeDadosIO" File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 85
-Critical Warning (10846): Verilog HDL Instantiation warning at CPU.v(53): instance has no name File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 53
-Info (12127): Elaborating entity "Gerenciador_memoria" for the top level hierarchy
-Warning (10034): Output port "testeEntrou" at Gerenciador_memoria.v(16) has no driver File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 16
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "testeEntrou" is stuck at GND File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 16
-Info (286030): Timing-Driven Synthesis is running
+Info (12021): Found 1 design units, including 1 entities, in source file escalonador.v
+    Info (12023): Found entity 1: Escalonador File: C:/Users/Acer/Documents/processadorLSO/Escalonador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file correcaodesvio.v
+    Info (12023): Found entity 1: correcaoDesvio File: C:/Users/Acer/Documents/processadorLSO/correcaoDesvio.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(87): created implicit net for "entradaDeDadosIO" File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 87
+Critical Warning (10846): Verilog HDL Instantiation warning at CPU.v(55): instance has no name File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 55
+Info (12127): Elaborating entity "MEMInstrucoes" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at MEMInstrucoes.v(33): variable "executaBios" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 33
+Error (10200): Verilog HDL Conditional Statement error at MEMInstrucoes.v(66): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Warning (10240): Verilog HDL Always Construct warning at MEMInstrucoes.v(55): inferring latch(es) for variable "cursorDePosicao", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 55
+Warning (10030): Net "Bios[120..33]" at MEMInstrucoes.v(14) has no driver or initial value, using a default initial value '0' File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 14
+Warning (10030): Net "Bios[0]" at MEMInstrucoes.v(14) has no driver or initial value, using a default initial value '0' File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 14
+Warning (10034): Output port "processoEmExecucao" at MEMInstrucoes.v(12) has no driver File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 12
+Info (10041): Inferred latch for "cursorDePosicao[0]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[1]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[2]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[3]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[4]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[5]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[6]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[7]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[8]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[9]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[10]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[11]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[12]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[13]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[14]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[15]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[16]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[17]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[18]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[19]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[20]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[21]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[22]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[23]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[24]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[25]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[26]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[27]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[28]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[29]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[30]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Info (10041): Inferred latch for "cursorDePosicao[31]" at MEMInstrucoes.v(66) File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 66
+Error (12153): Can't elaborate top-level user hierarchy
 Info (144001): Generated suppressed messages file C:/Users/Acer/Documents/processadorLSO/output_files/processadorAOC.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 33 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[0]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[1]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[2]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[3]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[4]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[5]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[6]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[7]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[8]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[9]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[10]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[11]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[12]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[13]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[14]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[15]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[16]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[17]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[18]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[19]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[20]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[21]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[22]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[23]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[24]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[25]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[26]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[27]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[28]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[29]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[30]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_ram[31]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 4
-    Warning (15610): No output dependent on input pin "Bloco_para_analise_hd[31]" File: C:/Users/Acer/Documents/processadorLSO/Gerenciador_memoria.v Line: 5
-Info (21057): Implemented 633 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 72 input pins
-    Info (21059): Implemented 104 output pins
-    Info (21061): Implemented 457 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 4742 megabytes
-    Info: Processing ended: Mon Feb  3 20:35:43 2025
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:32
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 8 warnings
+    Error: Peak virtual memory: 4724 megabytes
+    Error: Processing ended: Sun Feb 16 22:12:14 2025
+    Error: Elapsed time: 00:00:15
+    Error: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+

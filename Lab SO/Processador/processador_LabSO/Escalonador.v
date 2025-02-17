@@ -10,7 +10,7 @@ module Escalonador(
     
     parameter quantum = 32'd20; 
 
-    reg [31:0] processos [0:9]; // Lista de processos 
+    reg [31:0] processos [4:0]; // Lista de processos 
     reg [3:0] indice_processo_atual = 4'd0; //processo atual
     reg [31:0] contador = 32'd0; 
 	 reg [3:0] num_processos;

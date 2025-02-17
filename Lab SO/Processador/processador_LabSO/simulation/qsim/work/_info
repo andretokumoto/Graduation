@@ -65,7 +65,7 @@ R2
 Ioo2P4SKQ:j@H8?G5R7nVl0
 R3
 R0
-Z12 w1738626624
+w1738626624
 R4
 R5
 !i122 108
@@ -74,7 +74,7 @@ R6
 r1
 !s85 0
 31
-Z13 !s108 1738626626.000000
+Z12 !s108 1738626626.000000
 R7
 R8
 !i113 1
@@ -98,7 +98,7 @@ R6
 r1
 !s85 0
 31
-R13
+R12
 !s107 Waveform31.vwf.vt|
 !s90 -work|work|Waveform31.vwf.vt|
 !i113 1
@@ -106,25 +106,73 @@ R9
 R10
 n@gerenciador_memoria_vlg_vec_tst
 vhard_block
-R11
+Z13 !s110 1739747514
 !i10b 1
-!s100 ^5g9`CMTlk^VhiHCl^@KO2
+!s100 MVMhYg2L]nd4[XaIEnj3>0
 R2
-I`h`K=W@[Q[e4zMYB>=8KS2
+I^l8V2J9mZ>lg`fk[W>lj;0
 R3
 R0
-R12
+Z14 w1739747509
 R4
 R5
-!i122 108
-L0 13734 34
+!i122 116
+L0 236634 34
 R6
 r1
 !s85 0
 31
-R13
+Z15 !s108 1739747511.000000
 R7
 R8
 !i113 1
 R9
 R10
+vMEMInstrucoes
+R13
+!i10b 1
+!s100 Eo>YP^JEiBHjKmTA_AOIM0
+R2
+IR>:;RllMUEoDjl55zN=h[1
+R3
+R0
+R14
+R4
+R5
+!i122 116
+L0 32 236601
+R6
+r1
+!s85 0
+31
+R15
+R7
+R8
+!i113 1
+R9
+R10
+n@m@e@m@instrucoes
+vMEMInstrucoes_vlg_vec_tst
+!s110 1739747515
+!i10b 1
+!s100 F9j?4<5lLlQl8HmEk<;6[1
+R2
+I88jM[zSOWmoF^IWYGE]K61
+R3
+R0
+w1739747506
+8Waveform32.vwf.vt
+FWaveform32.vwf.vt
+!i122 117
+L0 30 584
+R6
+r1
+!s85 0
+31
+!s108 1739747514.000000
+!s107 Waveform32.vwf.vt|
+!s90 -work|work|Waveform32.vwf.vt|
+!i113 1
+R9
+R10
+n@m@e@m@instrucoes_vlg_vec_tst

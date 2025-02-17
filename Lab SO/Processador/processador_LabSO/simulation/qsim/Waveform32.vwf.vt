@@ -1,0 +1,614 @@
+// Copyright (C) 2024  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/16/2025 20:11:46"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          MEMInstrucoes
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module MEMInstrucoes_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [2:0] ControleFimDeLeitura;
+reg clock;
+reg [2:0] controleSalvaInstrucao;
+reg encerrarBios;
+reg [31:0] entradaDeInstrucao;
+reg [31:0] pc;
+reg [31:0] posicaoBlocoRAM;
+reg reset;
+// wires                                               
+wire [4:0] OUTrd;
+wire [4:0] OUTrs;
+wire [4:0] OUTrt;
+wire biosEmExecucao;
+wire [15:0] imediato;
+wire [25:0] jump;
+wire [5:0] opcode;
+wire [31:0] processoEmExecucao;
+
+// assign statements (if any)                          
+MEMInstrucoes i1 (
+// port map - connection between master ports and signals/registers   
+	.ControleFimDeLeitura(ControleFimDeLeitura),
+	.OUTrd(OUTrd),
+	.OUTrs(OUTrs),
+	.OUTrt(OUTrt),
+	.biosEmExecucao(biosEmExecucao),
+	.clock(clock),
+	.controleSalvaInstrucao(controleSalvaInstrucao),
+	.encerrarBios(encerrarBios),
+	.entradaDeInstrucao(entradaDeInstrucao),
+	.imediato(imediato),
+	.jump(jump),
+	.opcode(opcode),
+	.pc(pc),
+	.posicaoBlocoRAM(posicaoBlocoRAM),
+	.processoEmExecucao(processoEmExecucao),
+	.reset(reset)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// clock
+always
+begin
+	clock = 1'b0;
+	clock = #10000 1'b1;
+	#10000;
+end 
+// pc[ 31 ]
+initial
+begin
+	pc[31] = 1'b0;
+end 
+// pc[ 30 ]
+initial
+begin
+	pc[30] = 1'b0;
+end 
+// pc[ 29 ]
+initial
+begin
+	pc[29] = 1'b0;
+end 
+// pc[ 28 ]
+initial
+begin
+	pc[28] = 1'b0;
+end 
+// pc[ 27 ]
+initial
+begin
+	pc[27] = 1'b0;
+end 
+// pc[ 26 ]
+initial
+begin
+	pc[26] = 1'b0;
+end 
+// pc[ 25 ]
+initial
+begin
+	pc[25] = 1'b0;
+end 
+// pc[ 24 ]
+initial
+begin
+	pc[24] = 1'b0;
+end 
+// pc[ 23 ]
+initial
+begin
+	pc[23] = 1'b0;
+end 
+// pc[ 22 ]
+initial
+begin
+	pc[22] = 1'b0;
+end 
+// pc[ 21 ]
+initial
+begin
+	pc[21] = 1'b0;
+end 
+// pc[ 20 ]
+initial
+begin
+	pc[20] = 1'b0;
+end 
+// pc[ 19 ]
+initial
+begin
+	pc[19] = 1'b0;
+end 
+// pc[ 18 ]
+initial
+begin
+	pc[18] = 1'b0;
+end 
+// pc[ 17 ]
+initial
+begin
+	pc[17] = 1'b0;
+end 
+// pc[ 16 ]
+initial
+begin
+	pc[16] = 1'b0;
+end 
+// pc[ 15 ]
+initial
+begin
+	pc[15] = 1'b0;
+end 
+// pc[ 14 ]
+initial
+begin
+	pc[14] = 1'b0;
+end 
+// pc[ 13 ]
+initial
+begin
+	pc[13] = 1'b0;
+end 
+// pc[ 12 ]
+initial
+begin
+	pc[12] = 1'b0;
+end 
+// pc[ 11 ]
+initial
+begin
+	pc[11] = 1'b0;
+end 
+// pc[ 10 ]
+initial
+begin
+	pc[10] = 1'b0;
+end 
+// pc[ 9 ]
+initial
+begin
+	pc[9] = 1'b0;
+end 
+// pc[ 8 ]
+initial
+begin
+	pc[8] = 1'b0;
+end 
+// pc[ 7 ]
+initial
+begin
+	pc[7] = 1'b0;
+end 
+// pc[ 6 ]
+initial
+begin
+	pc[6] = 1'b0;
+end 
+// pc[ 5 ]
+initial
+begin
+	pc[5] = 1'b0;
+end 
+// pc[ 4 ]
+initial
+begin
+	pc[4] = 1'b0;
+end 
+// pc[ 3 ]
+initial
+begin
+	pc[3] = 1'b0;
+end 
+// pc[ 2 ]
+initial
+begin
+	pc[2] = 1'b0;
+end 
+// pc[ 1 ]
+initial
+begin
+	pc[1] = 1'b0;
+	pc[1] = #220000 1'b1;
+	pc[1] = #90000 1'b0;
+end 
+// pc[ 0 ]
+initial
+begin
+	pc[0] = 1'b0;
+	pc[0] = #110000 1'b1;
+	pc[0] = #110000 1'b0;
+end 
+// controleSalvaInstrucao[ 2 ]
+initial
+begin
+	controleSalvaInstrucao[2] = 1'b0;
+end 
+// controleSalvaInstrucao[ 1 ]
+initial
+begin
+	controleSalvaInstrucao[1] = 1'b0;
+end 
+// controleSalvaInstrucao[ 0 ]
+initial
+begin
+	controleSalvaInstrucao[0] = 1'b0;
+end 
+// ControleFimDeLeitura[ 2 ]
+initial
+begin
+	ControleFimDeLeitura[2] = 1'b0;
+end 
+// ControleFimDeLeitura[ 1 ]
+initial
+begin
+	ControleFimDeLeitura[1] = 1'b0;
+end 
+// ControleFimDeLeitura[ 0 ]
+initial
+begin
+	ControleFimDeLeitura[0] = 1'b0;
+end 
+
+// encerrarBios
+initial
+begin
+	encerrarBios = 1'b0;
+	encerrarBios = #660000 1'b1;
+	encerrarBios = #40000 1'b0;
+end 
+// entradaDeInstrucao[ 31 ]
+initial
+begin
+	entradaDeInstrucao[31] = 1'b0;
+end 
+// entradaDeInstrucao[ 30 ]
+initial
+begin
+	entradaDeInstrucao[30] = 1'b0;
+end 
+// entradaDeInstrucao[ 29 ]
+initial
+begin
+	entradaDeInstrucao[29] = 1'b0;
+end 
+// entradaDeInstrucao[ 28 ]
+initial
+begin
+	entradaDeInstrucao[28] = 1'b0;
+end 
+// entradaDeInstrucao[ 27 ]
+initial
+begin
+	entradaDeInstrucao[27] = 1'b0;
+end 
+// entradaDeInstrucao[ 26 ]
+initial
+begin
+	entradaDeInstrucao[26] = 1'b0;
+end 
+// entradaDeInstrucao[ 25 ]
+initial
+begin
+	entradaDeInstrucao[25] = 1'b0;
+end 
+// entradaDeInstrucao[ 24 ]
+initial
+begin
+	entradaDeInstrucao[24] = 1'b0;
+end 
+// entradaDeInstrucao[ 23 ]
+initial
+begin
+	entradaDeInstrucao[23] = 1'b0;
+end 
+// entradaDeInstrucao[ 22 ]
+initial
+begin
+	entradaDeInstrucao[22] = 1'b0;
+end 
+// entradaDeInstrucao[ 21 ]
+initial
+begin
+	entradaDeInstrucao[21] = 1'b0;
+end 
+// entradaDeInstrucao[ 20 ]
+initial
+begin
+	entradaDeInstrucao[20] = 1'b0;
+end 
+// entradaDeInstrucao[ 19 ]
+initial
+begin
+	entradaDeInstrucao[19] = 1'b0;
+end 
+// entradaDeInstrucao[ 18 ]
+initial
+begin
+	entradaDeInstrucao[18] = 1'b0;
+end 
+// entradaDeInstrucao[ 17 ]
+initial
+begin
+	entradaDeInstrucao[17] = 1'b0;
+end 
+// entradaDeInstrucao[ 16 ]
+initial
+begin
+	entradaDeInstrucao[16] = 1'b0;
+end 
+// entradaDeInstrucao[ 15 ]
+initial
+begin
+	entradaDeInstrucao[15] = 1'b0;
+end 
+// entradaDeInstrucao[ 14 ]
+initial
+begin
+	entradaDeInstrucao[14] = 1'b0;
+end 
+// entradaDeInstrucao[ 13 ]
+initial
+begin
+	entradaDeInstrucao[13] = 1'b0;
+end 
+// entradaDeInstrucao[ 12 ]
+initial
+begin
+	entradaDeInstrucao[12] = 1'b0;
+end 
+// entradaDeInstrucao[ 11 ]
+initial
+begin
+	entradaDeInstrucao[11] = 1'b0;
+end 
+// entradaDeInstrucao[ 10 ]
+initial
+begin
+	entradaDeInstrucao[10] = 1'b0;
+end 
+// entradaDeInstrucao[ 9 ]
+initial
+begin
+	entradaDeInstrucao[9] = 1'b0;
+end 
+// entradaDeInstrucao[ 8 ]
+initial
+begin
+	entradaDeInstrucao[8] = 1'b0;
+end 
+// entradaDeInstrucao[ 7 ]
+initial
+begin
+	entradaDeInstrucao[7] = 1'b0;
+end 
+// entradaDeInstrucao[ 6 ]
+initial
+begin
+	entradaDeInstrucao[6] = 1'b0;
+end 
+// entradaDeInstrucao[ 5 ]
+initial
+begin
+	entradaDeInstrucao[5] = 1'b0;
+end 
+// entradaDeInstrucao[ 4 ]
+initial
+begin
+	entradaDeInstrucao[4] = 1'b0;
+end 
+// entradaDeInstrucao[ 3 ]
+initial
+begin
+	entradaDeInstrucao[3] = 1'b0;
+end 
+// entradaDeInstrucao[ 2 ]
+initial
+begin
+	entradaDeInstrucao[2] = 1'b0;
+end 
+// entradaDeInstrucao[ 1 ]
+initial
+begin
+	entradaDeInstrucao[1] = 1'b0;
+end 
+// entradaDeInstrucao[ 0 ]
+initial
+begin
+	entradaDeInstrucao[0] = 1'b0;
+end 
+// posicaoBlocoRAM[ 31 ]
+initial
+begin
+	posicaoBlocoRAM[31] = 1'b0;
+end 
+// posicaoBlocoRAM[ 30 ]
+initial
+begin
+	posicaoBlocoRAM[30] = 1'b0;
+end 
+// posicaoBlocoRAM[ 29 ]
+initial
+begin
+	posicaoBlocoRAM[29] = 1'b0;
+end 
+// posicaoBlocoRAM[ 28 ]
+initial
+begin
+	posicaoBlocoRAM[28] = 1'b0;
+end 
+// posicaoBlocoRAM[ 27 ]
+initial
+begin
+	posicaoBlocoRAM[27] = 1'b0;
+end 
+// posicaoBlocoRAM[ 26 ]
+initial
+begin
+	posicaoBlocoRAM[26] = 1'b0;
+end 
+// posicaoBlocoRAM[ 25 ]
+initial
+begin
+	posicaoBlocoRAM[25] = 1'b0;
+end 
+// posicaoBlocoRAM[ 24 ]
+initial
+begin
+	posicaoBlocoRAM[24] = 1'b0;
+end 
+// posicaoBlocoRAM[ 23 ]
+initial
+begin
+	posicaoBlocoRAM[23] = 1'b0;
+end 
+// posicaoBlocoRAM[ 22 ]
+initial
+begin
+	posicaoBlocoRAM[22] = 1'b0;
+end 
+// posicaoBlocoRAM[ 21 ]
+initial
+begin
+	posicaoBlocoRAM[21] = 1'b0;
+end 
+// posicaoBlocoRAM[ 20 ]
+initial
+begin
+	posicaoBlocoRAM[20] = 1'b0;
+end 
+// posicaoBlocoRAM[ 19 ]
+initial
+begin
+	posicaoBlocoRAM[19] = 1'b0;
+end 
+// posicaoBlocoRAM[ 18 ]
+initial
+begin
+	posicaoBlocoRAM[18] = 1'b0;
+end 
+// posicaoBlocoRAM[ 17 ]
+initial
+begin
+	posicaoBlocoRAM[17] = 1'b0;
+end 
+// posicaoBlocoRAM[ 16 ]
+initial
+begin
+	posicaoBlocoRAM[16] = 1'b0;
+end 
+// posicaoBlocoRAM[ 15 ]
+initial
+begin
+	posicaoBlocoRAM[15] = 1'b0;
+end 
+// posicaoBlocoRAM[ 14 ]
+initial
+begin
+	posicaoBlocoRAM[14] = 1'b0;
+end 
+// posicaoBlocoRAM[ 13 ]
+initial
+begin
+	posicaoBlocoRAM[13] = 1'b0;
+end 
+// posicaoBlocoRAM[ 12 ]
+initial
+begin
+	posicaoBlocoRAM[12] = 1'b0;
+end 
+// posicaoBlocoRAM[ 11 ]
+initial
+begin
+	posicaoBlocoRAM[11] = 1'b0;
+end 
+// posicaoBlocoRAM[ 10 ]
+initial
+begin
+	posicaoBlocoRAM[10] = 1'b0;
+end 
+// posicaoBlocoRAM[ 9 ]
+initial
+begin
+	posicaoBlocoRAM[9] = 1'b0;
+end 
+// posicaoBlocoRAM[ 8 ]
+initial
+begin
+	posicaoBlocoRAM[8] = 1'b0;
+end 
+// posicaoBlocoRAM[ 7 ]
+initial
+begin
+	posicaoBlocoRAM[7] = 1'b0;
+end 
+// posicaoBlocoRAM[ 6 ]
+initial
+begin
+	posicaoBlocoRAM[6] = 1'b0;
+end 
+// posicaoBlocoRAM[ 5 ]
+initial
+begin
+	posicaoBlocoRAM[5] = 1'b0;
+end 
+// posicaoBlocoRAM[ 4 ]
+initial
+begin
+	posicaoBlocoRAM[4] = 1'b0;
+end 
+// posicaoBlocoRAM[ 3 ]
+initial
+begin
+	posicaoBlocoRAM[3] = 1'b0;
+end 
+// posicaoBlocoRAM[ 2 ]
+initial
+begin
+	posicaoBlocoRAM[2] = 1'b0;
+end 
+// posicaoBlocoRAM[ 1 ]
+initial
+begin
+	posicaoBlocoRAM[1] = 1'b0;
+end 
+// posicaoBlocoRAM[ 0 ]
+initial
+begin
+	posicaoBlocoRAM[0] = 1'b0;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+	reset = #10000 1'b1;
+	reset = #20000 1'b0;
+end 
+endmodule
+

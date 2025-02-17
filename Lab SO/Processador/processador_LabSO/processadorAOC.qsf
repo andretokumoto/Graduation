@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Gerenciador_memoria
+set_global_assignment -name TOP_LEVEL_ENTITY MEMInstrucoes
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:16:34  MAY 08, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
@@ -98,22 +98,11 @@ set_global_assignment -name VERILOG_FILE tratamentoBotao.v
 set_global_assignment -name VERILOG_FILE clock_divider.v
 set_global_assignment -name VERILOG_FILE simple_dual_port_ram_dual_clock.v
 set_global_assignment -name VERILOG_FILE Gerenciador_memoria.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform19.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform20.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform21.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform22.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform23.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform24.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform25.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform26.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform27.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform28.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform29.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform30.vwf
+set_global_assignment -name VERILOG_FILE Escalonador.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE correcaoDesvio.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform31.vwf

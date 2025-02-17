@@ -1,5 +1,5 @@
 Flow report for processadorAOC
-Mon Feb  3 20:50:24 2025
+Sun Feb 16 22:12:14 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Mon Feb  3 20:50:24 2025          ;
+; Flow Status                        ; Flow Failed - Sun Feb 16 22:12:14 2025         ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
-; Top-level Entity Name              ; Gerenciador_memoria                            ;
+; Top-level Entity Name              ; MEMInstrucoes                                  ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE115F29C7                                  ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 327 / 114,480 ( < 1 % )                        ;
-;     Total combinational functions  ; 227 / 114,480 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 270 / 114,480 ( < 1 % )                        ;
-; Total registers                    ; 270                                            ;
-; Total pins                         ; 176 / 529 ( 33 % )                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                          ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                  ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -65,27 +65,29 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/03/2025 20:35:26 ;
+; Start date & time ; 02/16/2025 22:12:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processadorAOC      ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                 ;
-+-------------------------------------+----------------------------------------+----------------+---------------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name         ; Section Id ;
-+-------------------------------------+----------------------------------------+----------------+---------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 277375815945034.173862572608940        ; --             ; --                  ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --                  ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --                  ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --             ; --                  ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; Gerenciador_memoria ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; Gerenciador_memoria ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; Gerenciador_memoria ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --                  ; --         ;
-; TOP_LEVEL_ENTITY                    ; Gerenciador_memoria                    ; processadorAOC ; --                  ; --         ;
-+-------------------------------------+----------------------------------------+----------------+---------------------+------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+----------------------------------------+----------------+---------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name   ; Section Id ;
++-------------------------------------+----------------------------------------+----------------+---------------+------------+
+; COMPILER_SIGNATURE_ID               ; 277375815945034.173975472015300        ; --             ; --            ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --            ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --            ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --             ; --            ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; MEMInstrucoes ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; MEMInstrucoes ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; MEMInstrucoes ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --            ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --            ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --            ; --         ;
+; TOP_LEVEL_ENTITY                    ; MEMInstrucoes                          ; processadorAOC ; --            ; --         ;
++-------------------------------------+----------------------------------------+----------------+---------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -93,19 +95,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4738 MB             ; 00:00:32                           ;
-; Fitter               ; 00:00:42     ; 1.0                     ; 5490 MB             ; 00:00:44                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4708 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4841 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
-; Total                ; 00:01:21     ; --                      ; --                  ; 00:01:34                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4723 MB             ; 00:00:29                           ;
+; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -115,17 +106,6 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -133,17 +113,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
-quartus_fit --read_settings_files=off --write_settings_files=off processadorAOC -c processadorAOC
-quartus_asm --read_settings_files=off --write_settings_files=off processadorAOC -c processadorAOC
-quartus_sta processadorAOC -c processadorAOC
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source=C:/Users/Acer/Documents/processadorLSO/Waveform31.vwf --testbench_file=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/Waveform31.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/ processadorAOC -c processadorAOC
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source=C:/Users/Acer/Documents/processadorLSO/Waveform31.vwf --testbench_file=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/Waveform31.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/ processadorAOC -c processadorAOC
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source=C:/Users/Acer/Documents/processadorLSO/Waveform31.vwf --testbench_file=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/Waveform31.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/ processadorAOC -c processadorAOC
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source=C:/Users/Acer/Documents/processadorLSO/Waveform31.vwf --testbench_file=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/Waveform31.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Acer/Documents/processadorLSO/simulation/qsim/ processadorAOC -c processadorAOC
 
 
 
