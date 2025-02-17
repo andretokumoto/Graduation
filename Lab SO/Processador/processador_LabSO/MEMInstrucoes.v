@@ -1,6 +1,6 @@
-module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao,ControleFimDeLeitura, posicaoBlocoRAM, controleSalvaInstrucao, biosEmExecucao, encerrarBios,processoEmExecucao);
+module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao, biosEmExecucao, encerrarBios,processoEmExecucao,pc_processo_interrompido);
 
-    input [31:0] pc, entradaDeInstrucao, posicaoBlocoRAM;
+    input [31:0] pc, entradaDeInstrucao, pc_processo_interrompido;
     input clock, reset;
     input encerrarBios;
     input [1:0] controleSalvaInstrucao,ControleFimDeLeitura;
@@ -9,13 +9,13 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
     output reg [15:0] imediato;
     output reg [25:0] jump;
     output reg biosEmExecucao; // Sinal que indica que a bios está em execução
-	 output reg [31:0] processoEmExecucao; 
+	output reg [31:0] processoEmExecucao; 
 
     reg [31:0] Bios[120:0];
     reg [1:0] executaBios;
     reg [31:0] instrucao;
     reg [31:0] memoria[200:0];
-	 reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
+	reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
 	 	
 		
     // verificar se a bios está em execução

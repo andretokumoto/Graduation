@@ -1,10 +1,12 @@
 module Escalonador(
     input clock,
     input reset,
-	 input [31:0] novo_processo,
-	 input controle_novo_processo,
+	input [31:0] novo_processo,
+    input [31:0]  pc,
+	input controle_novo_processo,
     output reg [31:0] processo_atual, // Número do processo atual
     output reg troca_contexto // Sinal de troca de contexto
+    output reg [31:0] pc_processo_atual,
 );
 
     
@@ -40,7 +42,8 @@ module Escalonador(
             contador <= contador + 32'd1;
 
             // quantum foi atingido
-            if (contador >= quantum) begin
+            if (contador >= quantum) 
+                begin
        
                 contador <= 32'd0;
 
@@ -56,6 +59,7 @@ module Escalonador(
 						end
 
                 // atualiza processo atual
+                pc_processo_atual = pc;//salva o pc do processo que sera interrompido
                 processo_atual <= processos[indice_processo_atual];
 
                 // sinal de troca de contexto
