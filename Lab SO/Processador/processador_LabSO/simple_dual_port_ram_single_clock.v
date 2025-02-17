@@ -142,6 +142,30 @@ module simple_dual_port_ram_single_clock
 
 			// ------------------------ fim do gerenciador de diretórios ---------------------------------
 
+			//--------------------------gerenciamento de processos---------------------------------------------
+
+			//-------------------------fim gerenciador de processos ----------------------------------------------
+
+			//----------------------------menu do SO---------------------------------------------------------------
+			//led menu
+			//in r20 // opçao
+			//movi r21 , 1 //  //listar
+			//movi r22 , 2 // criar
+			//movi r23 , 3  // editar
+			//movi r24 , 4 // deletar
+			//beq rzero, r20, +    // executar
+			//beq r21, r20, + 
+			//beq r22, r20, +
+			//beq r23, r20, +
+			//beq r24, r20, +
+			//jump menu
+			//jump gerenciador de processos
+			//jump listar diretórios
+			//jump criar
+			//jump editar
+			//jump deletar
+
+			// ------------------------------------fim do menu-----------------------------------------
 
 
 
