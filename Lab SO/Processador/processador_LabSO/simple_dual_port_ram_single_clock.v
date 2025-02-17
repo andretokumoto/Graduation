@@ -84,7 +84,7 @@ module simple_dual_port_ram_single_clock
 			//lcrg r29
 			//lcrg r30
 			//lcrg r31
-			// jr r21 // retorna o pocessamento do processo
+			//jr r21 // retorna o pocessamento do processo
 			//------------------------------fim mudança de contexto---------------------------
 
 			//----------------------verifica blocos do hd que estão em uso------------------------
@@ -103,6 +103,45 @@ module simple_dual_port_ram_single_clock
 			//jump começo loop
 			//jump menu 
 			// ----------------------- fim da verificação --------------------------------
+
+			//--------------------gerenciamento de diretórios---------------------------------------------------
+
+			//--------criar diretório ----------------------------------------
+
+			// --- achar uma posição livre --------
+			//movi r20 , 1
+			//lhd r21 , rzero, 0
+			//começo loop
+			//lhd r22 , r20, 200
+			//blt r22 , r21 , + 3 //achou uma posição livre
+			//addi r20,r20,1
+			//jump começo loop
+			// --- criar diretório ----
+			//in r23
+			// add r23,r23,r21 // marca como bloco em uso
+			//shd r23 , r20, 200 //salva o nome do novo diretório
+			// jump menu
+
+			//--------------editar diretório--------------------------
+			//lhd r21 , rzero, 0
+			//in r23 //bloco a ser alterado
+			//lhd r22 , r23, 200
+			//blt r22,r21, + 4 //bloco não esta em uso
+			//in r24 //novo nome
+			//add r24, r24,r21
+			//shd r24 , r23, 200 // salva novo nome
+			// jump menu
+
+			//---------------deletar diretorio-------------
+			//lhd r21 , rzero, 0
+			//in r20
+			//lhd r22 , r20, 200
+			//sub r22 , r22, r22
+			//shd r22, r20 , 200
+			//jump menu
+
+			// ------------------------ fim do gerenciador de diretórios ---------------------------------
+
 
 
 

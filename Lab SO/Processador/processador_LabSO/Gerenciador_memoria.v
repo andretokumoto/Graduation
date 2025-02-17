@@ -37,12 +37,15 @@ module Gerenciador_memoria(
             dadoLidoHD <= Bloco_para_analise_hd;
             LinhaASerLida <= LinhaASerLida + 32'd1;
 
-            if (LinhaASerLida == contadorLeituraHD) begin
-                ControleFimDeLeitura <= 2'b01;
-            end
-            else begin
-                ControleFimDeLeitura <= 2'b00;
-            end
+            if (LinhaASerLida == contadorLeituraHD) 
+                begin
+                    ControleFimDeLeitura <= 2'b01;
+                end
+
+            else 
+                begin
+                    ControleFimDeLeitura <= 2'b00;
+                end
         end
     end
 
