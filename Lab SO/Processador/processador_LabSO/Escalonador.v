@@ -27,7 +27,7 @@ module Escalonador(
 		end
 	 
   
-    always @(posedge clock or posedge reset) begin
+    always @(negedge clock or posedge reset) begin
 			
 			//resetando escalonador
         if (reset) begin
@@ -35,7 +35,7 @@ module Escalonador(
             indice_processo_atual <= 4'd0;
             processo_atual <= 32'd0; 
             troca_contexto <= 1'b0; 
-				num_processos <= 4'd0;
+			num_processos <= 4'd0;
         end
         else begin
             
