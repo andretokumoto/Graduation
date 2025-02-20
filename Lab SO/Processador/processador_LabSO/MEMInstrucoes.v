@@ -1,6 +1,6 @@
-module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao, biosEmExecucao, encerrarBios,processoEmExecucao,pc_processo_interrompido);
+module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao, biosEmExecucao, encerrarBios,processoEmExecucao,pc_processo_interrompido,processo_atual);
 
-    input [31:0] pc, entradaDeInstrucao, pc_processo_interrompido;
+    input [31:0] pc, entradaDeInstrucao,processo_atual, pc_processo_interrompido;
     input clock, reset;
     input encerrarBios;
     input [1:0] controleSalvaInstrucao,ControleFimDeLeitura;
@@ -17,6 +17,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
     reg [31:0] memoria[200:0];
 	reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
 	 	
+	parameter TAM_BLOCO = 32'd200;//tamanho dos blocos na memoria
 		
     // verificar se a bios está em execução
     always @(*) begin
@@ -43,9 +44,14 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		begin
 			
 			//puxar do hd para memória - salva na memória de instrução
-			if(controleSalvaInstrucao == 2'b01 && ControleFimDeLeitura == 2'b00) // Corrigido: substituído "and" por "&&"
+			if(controleSalvaInstrucao == 2'b01 && ControleFimDeLeitura == 2'b00) 
 				begin
 					memoria[cursorDePosicao] = entradaDeInstrucao;
+				end
+
+			if(ControleFimDeLeitura == 2'b01)
+				begin
+					cursorDePosicao = cursorDePosicao + TAM_BLOCO;//os blocos de processos são fixos em 150 posições
 				end
 			
 			
@@ -63,11 +69,13 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
         end
 
 		  //puxar do hd para memória - atulização de cursor
-		  	if(controleSalvaInstrucao == 2'b01 /*&& ControleFimDeLeitura == 2'b00*/) 
+		  	if(controleSalvaInstrucao == 2'b01) 
 				begin
 					cursorDePosicao = cursorDePosicao + 32'd1;
 				end
-		  
+			
+
+
 			//bios ---------------------------------------------------------------			
 						//lfhd puxa uma programa 
 						Bios[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
@@ -102,7 +110,6 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 						Bios[32'd30] = {6'b011010,5'd29,5'd0,5'd0,11'd0};// movi r29, 0
 						Bios[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd0};// movi r30, 0
 						Bios[32'd32] = {6'b011010,5'd31,5'd0,5'd0,11'd0};// movi r31, 0
-						// checkMem
 						// lfhd r0  // puxa o SO do HD
 						// encerraBios
 			//-------------------------------------------------------------------------------------
