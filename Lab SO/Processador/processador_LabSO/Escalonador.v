@@ -9,14 +9,16 @@ module Escalonador(
     output reg [31:0] pc_processo_atual,
 );
 
+
+//criar status dos processos
     
-    parameter quantum = 32'd20; 
+    parameter quantum = 32'd10; 
 
     reg [31:0] processos [4:0]; // Lista de processos 
     reg [3:0] indice_processo_atual = 4'd0; //processo atual
     reg [31:0] contador = 32'd0; 
-	 reg [3:0] num_processos;
-
+	reg [3:0] num_processos;
+    reg [9:0] statusProcesso;//processo ativo ou inativo
 
 	 always@(posedge controle_novo_processo)
 		begin
@@ -31,6 +33,7 @@ module Escalonador(
 			
 			//resetando escalonador
         if (reset) begin
+            statusProcesso = 10'd0;//marca todos os processos como inativo
             contador <= 32'd0;
             indice_processo_atual <= 4'd0;
             processo_atual <= 32'd0; 
