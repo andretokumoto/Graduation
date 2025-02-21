@@ -30,7 +30,7 @@ module simple_dual_port_ram_single_clock
 			//jump menu
 			//------------------------------------mudança contexto-----------
 			//-----------salva contexto--------
-			//scpc r20 -- salva o contexto do pc
+			//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
 			//sw r20
 			//scrg r1 , 1--- salva o contexto dos registradores
 			//scrg r2 , 2
@@ -143,6 +143,25 @@ module simple_dual_port_ram_single_clock
 			// ------------------------ fim do gerenciador de diretórios ---------------------------------
 
 			//--------------------------gerenciamento de processos---------------------------------------------
+
+			//--------entrada de dados---------
+
+			//scpc r20 - armazena pc do processo
+			//addi r20,r20,1 -- pc+1
+			//in r25 -- entrada de dados do usuario
+			//jr r20 - retorna para o processo 
+
+			//----saida de dados----------------
+
+			//scpc r20 - armazena pc do processo
+			//addi r20,r20,1 -- pc+1
+			//mov r24, rret -- move o valor do registrador de retorno do processo para um registrador de sistema
+			//out r24
+			//jr r20 - retorna para o processo
+
+			//----- criar um processo --------
+
+			//lw r20,   -- puxa numero de processos atual
 
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
