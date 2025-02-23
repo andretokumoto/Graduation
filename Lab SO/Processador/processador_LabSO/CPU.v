@@ -31,7 +31,7 @@ wire [31:0] dadosMux6;
 wire [10:0] imediato;
 
 
-wire [1:0] zerarPC;
+wire [1:0] mudancaContexto;
 wire clk;
 wire  [1:0] entradaSaidaControl;
 wire valueULA;
@@ -50,6 +50,8 @@ output wire [3:0] testesaidaUNI,testesaidaDez,testesaidaCent;
 output wire  [2:0] testeSelMux;
 output wire[4:0] enRD,enRS,enRT;
 output wire [25:0] testeJump;
+
+parameter Escalonador = 32'd0;
 
 //divisor de clock
 clock_divider(.clock_in(clock),.clock_out(clk));
@@ -144,7 +146,7 @@ assign testedesvio = DesvioControl;
 		//atualização de pc
 		   if(reset) pc<=32'd0;
 			
-			else if(zerarPC == 2'b11) pc<=32'd0;
+			else if(mudancaContexto == 2'b11) pc<= Escalonador; // desvia para o escalonador
 			
 			else 
 			  begin
