@@ -31,7 +31,7 @@ wire [31:0] dadosMux6;
 wire [10:0] imediato;
 
 
-wire [1:0] mudancaContexto;
+wire [1:0] troca_contexto;
 wire clk;
 wire  [1:0] entradaSaidaControl;
 wire valueULA;
@@ -146,7 +146,7 @@ assign testedesvio = DesvioControl;
 		//atualização de pc
 		   if(reset) pc<=32'd0;
 			
-			else if(mudancaContexto == 2'b11) pc<= Escalonador; // desvia para o escalonador
+			else if(troca_contexto == 2'b11) pc<= Escalonador; // desvia para o escalonador
 			
 			else 
 			  begin
