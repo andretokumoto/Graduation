@@ -32,6 +32,7 @@ wire [10:0] imediato;
 
 
 wire [1:0] troca_contexto;
+wire intrucaoIOContexto;
 wire clk;
 wire  [1:0] entradaSaidaControl;
 wire valueULA;
@@ -51,7 +52,7 @@ output wire  [2:0] testeSelMux;
 output wire[4:0] enRD,enRS,enRT;
 output wire [25:0] testeJump;
 
-parameter Escalonador = 32'd0;
+parameter Escalonador = 32'd0, IntrucaoIO = 32'dX;
 
 //divisor de clock
 clock_divider(.clock_in(clock),.clock_out(clk));
@@ -148,6 +149,8 @@ assign testedesvio = DesvioControl;
 			
 			else if(troca_contexto == 2'b11) pc<= Escalonador; // desvia para o escalonador
 			
+			else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO; //desvia para IO
+
 			else 
 			  begin
 			    
