@@ -228,11 +228,14 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//addi r21,1
 
 			//mov r31,r25 // manda o dado lido para o processo
+			//movi r23, 13
+			//lw r24, 1(r23)
+			//cproc, r24 -- comando para mudar o processo
 			//jr r22 // retorna o pocessamento do processo
 			//------------------------------fim mudança de contexto---------------------------
 			
 			//-----interrupção para entrada de dados ------ 
-
+			//cproc,rzero --- muda processo para o SO
 			//movi r20,13 // pega numero do processo
 			//movi r21, 2 // valor de status correspondente a espera por io
 			//sw r1, 1(r20) // muda status do processo
@@ -249,7 +252,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//jump escalonador
 			
 			//-------------- escalonador --------------
-
+			//cproc,rzero
 			//movi r20 , 0 // inicia o contador
 			//movi r21 , 1 // estado processo como 01
 			//lw r22, 0(rzero) //numero de processos ativos
@@ -287,6 +290,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//------------fim escalonador --------------
 
 			//-----finalizar um processo------
+			//cproc,rzero
 			//movi r20,13
 			//lw r21, 1(r20) // pega o processo atual
 			//mov r22 , rzero
@@ -310,7 +314,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//jr r20 - retorna para o processo
 
 			//----- inicia um processo --------
-
+		
 			//movi r22, 11
 			//lw r20, 1(r22)    -- puxa o processo a ser iniciado
 			//movi r21, 11'd1 // marca processo como em processamento normal
@@ -349,6 +353,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			//----------------------------menu do SO---------------------------------------------------------------
 			//ledmenuon
+			//cproc,rzero
 			//in r20 // opçao
 			//movi r21 , 1 //  //listar
 			//movi r22 , 2 // criar
