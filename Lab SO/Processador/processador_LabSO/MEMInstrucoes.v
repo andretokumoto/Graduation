@@ -115,6 +115,74 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//-------------------------------------------------------------------------------------
 
 
+			//--------entrada de dados---------
+
+			//scpc r20 - armazena pc do processo
+			//addi r20,r20,1 -- pc+1
+			//in r25 -- entrada de dados do usuario
+			//jr r20 - retorna para o processo 
+
+			//----saida de dados----------------
+
+			//scpc r20 - armazena pc do processo
+			//addi r20,r20,1 -- pc+1
+			//mov r24, rret -- move o valor do registrador de retorno do processo para um registrador de sistema
+			//out r24
+			//jr r20 - retorna para o processo
+
+			//----- inicia um processo --------
+
+			//movi r22, 11
+			//lw r20, 1(r22)    -- puxa o processo a ser iniciado
+			//movi r21, 11'd1 // marca processo como em processamento normal
+			//sw r21 , 1(r20) //salva estado do processo na lista de processos
+			//jump executar processos
+
+			// -------  executar processos --------
+
+			//movi r22, 0 // contador de processos que foram iniciados
+			//in r20 // entrada do numero de processos que irão rodar
+			//sw r20, 0, rzero // salva na memoria de dados o numero de processos rodando
+			//beq r20, rzero // volta para o menu
+
+			//----entrada processo
+			//in r21 processo que ira rodar
+			//movi r24, 11
+			//sw r21, 1(r24) // salva qual processo vai ser 
+			//movi r23, 12 //endereço de onde esta o contador de processos
+			//lw r22, 1(r23) // puxa o valor do contador
+			//addi r22,r22,1 // incrementa contador
+			//sw r22 , 1 r23 // salva contador
+			//jump inicia processo
+			//lw r22, 1(r23) // puxa o valor do contador
+			//lw r20, 0(rzero) // puxa numero de processos totais
+			//beq r20,r22, escalonador
+			//jump entrada processo
+
+
+			//-------------------------fim gerenciador de processos ----------------------------------------------
+
+			//----------------------------menu do SO---------------------------------------------------------------
+			//led menu
+			//in r20 // opçao
+			//movi r21 , 1 //  //listar
+			//movi r22 , 2 // criar
+			//movi r23 , 3  // editar
+			//movi r24 , 4 // deletar
+			//beq rzero, r20, +    // executar
+			//beq r21, r20, + 
+			//beq r22, r20, +
+			//beq r23, r20, +
+			//beq r24, r20, +
+			//jump menu
+			//jump gerenciador de processos
+			//jump listar diretórios
+			//jump criar
+			//jump editar
+			//jump deletar
+
+			// ------------------------------------fim do menu-----------------------------------------
+
     end
 	 
 	 
