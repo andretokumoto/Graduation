@@ -12,7 +12,7 @@ reg [31:0] dadosRegistro;
 reg [31:0] pc, pcsomado;
 reg [31:0] operando;
 wire[3:0] inUnidade,inDezena,inCentena;
-
+reg [31:0] processo_atual;
 
 wire botaoIN;
 wire selecaoMuxDesvio;
@@ -29,6 +29,7 @@ wire resultComparacao;
 wire [25:0] jump;
 wire [31:0] dadosMux6;
 wire [10:0] imediato;
+wire [1:0] changeProcess; //criar na unidade de controle
 
 
 wire [1:0] troca_contexto;
@@ -41,6 +42,7 @@ wire  [2:0] dadoRegControl;//sinal de 3 bits
 wire  [4:0] ulaOP;//sinal 5 bits 
 
 //output wire [6:0] unidade,dezena,centena;
+
 output wire halt;
 output reg [31:0]testePC,testeReg,testeOP,testeImediato;
 output wire testedesvio;
@@ -172,7 +174,15 @@ assign testedesvio = DesvioControl;
 		pcsomado = pc + 32'd1;
 	end
 
-  
+ //****************************************************************************************************************************************************************************************************************** 
+
+ always(changeProcess)
+	begin
+		if(changeProcess==2'b01) 
+			begin
+				processo_atual = rs;
+			end
+	end
  //************************************************************************************************************************************************************************************************************* 
   always@(imediato)//extensor de bits
   begin
