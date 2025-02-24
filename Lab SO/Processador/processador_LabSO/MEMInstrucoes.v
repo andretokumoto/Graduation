@@ -58,7 +58,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		end*/
 	 
   
-    always@(posedge clock or posedge reset)                           
+    always@(negedge clock or posedge reset)                           
     begin 
         if(reset == 1'b1) begin
             executaBios <= 2'b01; // Executa a bios
@@ -145,6 +145,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//scrg r30
 			//scrg r31
 			//jump escalonador
+
 			//-----------retorna contexto------
 			//movi r20, 13
 			//lw r21, 1(r20)//puxa numero do processo atual
@@ -251,22 +252,27 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			//movi r20 , 0 // inicia o contador
 			//movi r21 , 1 // estado processo como 01
-			//sw r22, 0(rzero) //numero de processos ativos
+			//lw r22, 0(rzero) //numero de processos ativos
 			//beq r22 , rzero , volta menu
 			
 		//LO - procura um processo interrompido que esteja com processamento normal(não IO)
 
 			//movi r23, 1 // index analizado
+			//sw r25, 13(r23)
 			//beq r22 , r20, proximo laço // fim do laço
-			//sw r24, 1(r23) // pega o estado naquele index
+			//beq r25,r23, // incrementa index --- e o processo atual
+			//lw r24, 1(r23) // pega o estado naquele index
 			//beq r24,r21, muda para esse processo
 			//addi r23,1 // incrementa index
 			//addi r20,1//incrementa contador
 			//jump LO
+
 			// -- muda para o processo
+
 			//movi r25, 13 //posição que salva processo atual
 			//sw r23, 1(r25) //muda o processo atual
 			//jump carrega contexto
+
 		//L1 - pega uma instrução esperando IO
 			//movi r21, 14 
 			//lw r22, 1(r21)//numero processo esperando io
@@ -309,24 +315,30 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//lw r20, 1(r22)    -- puxa o processo a ser iniciado
 			//movi r21, 11'd1 // marca processo como em processamento normal
 			//sw r21 , 1(r20) //salva estado do processo na lista de processos
-			//jump executar processos
+			//mov r23, r20 
+			//multi r23,r23,200 //pc(zero) relativo
+			//sw r23, 1(r23)
+			//jump entrada de novo processo
 
 			// -------  executar processos --------
-
+			//ledmenuoff
 			//movi r22, 0 // contador de processos que foram iniciados
 			//in r20 // entrada do numero de processos que irão rodar
 			//sw r20, 0, rzero // salva na memoria de dados o numero de processos rodando
-			//beq r20, rzero // volta para o menu
+			//beq r20, rzero // volta para o menu(sem processos para rodar)
 
-			//----entrada processo
+						//----entrada processo
 			//in r21 processo que ira rodar
 			//movi r24, 11
-			//sw r21, 1(r24) // salva qual processo vai ser 
+			//sw r21, 1(r24) // salva qual processo vai ser executado
 			//movi r23, 12 //endereço de onde esta o contador de processos
 			//lw r22, 1(r23) // puxa o valor do contador
 			//addi r22,r22,1 // incrementa contador
 			//sw r22 , 1 r23 // salva contador
 			//jump inicia processo
+
+//---entrada de novo processo
+			//movi r23, 12 //endereço de onde esta o contador de processos
 			//lw r22, 1(r23) // puxa o valor do contador
 			//lw r20, 0(rzero) // puxa numero de processos totais
 			//beq r20,r22, escalonador
@@ -336,19 +348,19 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
 			//----------------------------menu do SO---------------------------------------------------------------
-			//led menu
+			//ledmenuon
 			//in r20 // opçao
 			//movi r21 , 1 //  //listar
 			//movi r22 , 2 // criar
 			//movi r23 , 3  // editar
 			//movi r24 , 4 // deletar
-			//beq rzero, r20, +    // executar
+			//beq rzero, r20, +5  // executar
 			//beq r21, r20, + 
 			//beq r22, r20, +
 			//beq r23, r20, +
 			//beq r24, r20, +
 			//jump menu
-			//jump gerenciador de processos
+			//jump executar processos
 
 			// ------------------------------------fim do menu-----------------------------------------
 
