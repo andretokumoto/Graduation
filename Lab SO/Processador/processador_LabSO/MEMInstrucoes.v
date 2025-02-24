@@ -285,6 +285,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//lw r21, 1(r20) // pega o processo atual
 			//mov r22 , rzero
 			//sw r22, 1(r21)//marca o processo como inativo
+			//lw r23, 0(rzero)//numero de processos rodando
+			//subi r23, 1 // decrementa o numero de processos ativos
+			//sw r23, 0(rzero)//salva novo numero de processos rodando
 			//jump escalonador
 
 			//--------entrada de dados---------
