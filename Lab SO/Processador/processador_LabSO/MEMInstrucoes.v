@@ -113,14 +113,104 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 						// lfhd r0  // puxa o SO do HD
 						// encerraBios
 			//-------------------------------------------------------------------------------------
+//---------------------------SO---------------------------------------------------
+			//jump menu
+			//------------------------------------mudança contexto-----------
+			//-----------salva contexto--------
+			//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
+			//sw r20
+			//scrg r1 , 1--- salva o contexto dos registradores
+			//scrg r2 , 2
+			//scrg r3 , 3
+			//scrg r4 , 4
+			//scrg r5
+			//scrg r6
+			//scrg r7
+			//scrg r8
+			//scrg r9
+			//scrg r10
+			//scrg r11
+			//scrg r12
+			//scrg r13
+			//scrg r14
+			//scrg r15
+			//scrg r16
+			//scrg r17
+			//scrg r18
+			//scrg r19
+			//scrg r26
+			//scrg r27
+			//scrg r28
+			//scrg r29
+			//scrg r30
+			//scrg r31
+			//-----------retorna contexto------
+			//movi r20, 13
+			//lw r21, 1(r20)//puxa numero do processo atual
+			//multi r21, r21, 200
+			//lw r22, 1(r21)//pega pc do processo atual
+			//lcrg r1 , 1--- puxa o contexto dos registradores
+			//lcrg r2 , 2
+			//lcrg r3 , 3
+			//lcrg r4 , 4
+			//lcrg r5
+			//lcrg r6
+			//lcrg r7
+			//lcrg r8
+			//lcrg r9
+			//lcrg r10
+			//lcrg r11
+			//lcrg r12
+			//lcrg r13
+			//lcrg r14
+			//lcrg r15
+			//lcrg r16
+			//lcrg r17
+			//lcrg r18
+			//lcrg r19
+			//lcrg r26
+			//lcrg r27
+			//lcrg r28
+			//lcrg r29
+			//lcrg r30
+			//lcrg r31
+			//jr r22 // retorna o pocessamento do processo
+			//------------------------------fim mudança de contexto---------------------------
+			//-------------- escalonador --------------
 
+			//movi r20 , 0 // inicia o contador
+		//LO
+			//movi r21 , 1 // estado processo como 01
+			//sw r22, 0(rzero) //numero de processos ativos
+			//beq r22 , rzero , volta menu
+			//addi r22,1
+			//movi r23, 1 // index analizado
+			//beq r22 , r20, proximo laço // fim do laço
+			//sw r24, 1(r23) // pega o estado naquele index
+			//beq r24,r21, muda para esse processo
+			//addi r23,1 // incrementa index
+			//jump LO
+			// -- muda para o processo
+			//movi r25, 13 //posição qu salva processo atual
+			//sw r23, 1(r25) //muda o processo atual
+			//jump carrega contexto
+		//L1
+			//movi r21, 14 
+			//lw r22, 1(r21)//numero processo esperando io
+			//beq r22,rzero, volta menu
+			//movi r21, 15
+			//lw r22, 1(r21) // pega o processo do inicio da fila de processos IO 
+			// -- muda para o processo
+			//movi r25, 13 //posição qu salva processo atual
+			//sw r22, 1(r25) //muda o processo atual
+			//jump entrada de dados
+
+			//------------fim escalonador --------------
 
 			//--------entrada de dados---------
 
-			//scpc r20 - armazena pc do processo
-			//addi r20,r20,1 -- pc+1
 			//in r25 -- entrada de dados do usuario
-			//jr r20 - retorna para o processo 
+			//jump carrega contexto
 
 			//----saida de dados----------------
 
