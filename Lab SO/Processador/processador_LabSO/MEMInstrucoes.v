@@ -144,57 +144,130 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//scrg r29
 			//scrg r30
 			//scrg r31
+			//jump escalonador
 			//-----------retorna contexto------
 			//movi r20, 13
 			//lw r21, 1(r20)//puxa numero do processo atual
 			//multi r21, r21, 200
 			//lw r22, 1(r21)//pega pc do processo atual
-			//lcrg r1 , 1--- puxa o contexto dos registradores
-			//lcrg r2 , 2
-			//lcrg r3 , 3
-			//lcrg r4 , 4
-			//lcrg r5
-			//lcrg r6
-			//lcrg r7
-			//lcrg r8
-			//lcrg r9
-			//lcrg r10
-			//lcrg r11
-			//lcrg r12
-			//lcrg r13
-			//lcrg r14
-			//lcrg r15
-			//lcrg r16
-			//lcrg r17
-			//lcrg r18
-			//lcrg r19
-			//lcrg r26
-			//lcrg r27
-			//lcrg r28
-			//lcrg r29
-			//lcrg r30
-			//lcrg r31
+			//--- puxa o contexto dos registradores
+
+			//movi r20, 1
+			//add r21,r21,r20
+			//lw r1, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r2, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r3, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r4, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r5, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r6, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r7, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r8, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r9, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r10, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r11, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r12, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r13, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r14, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r15, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r16, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r17, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r18, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r19, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r26, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r27, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r28, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r29, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//lw r30, 1(r21)//pega o contexto do reg na mem de dados
+			//addi r21,1
+
+			//mov r31,r25 // manda o dado lido para o processo
 			//jr r22 // retorna o pocessamento do processo
 			//------------------------------fim mudança de contexto---------------------------
+			
+			//-----interrupção para entrada de dados ------ 
+
+			//movi r20,13 // pega numero do processo
+			//movi r21, 2 // valor de status correspondente a espera por io
+			//sw r1, 1(r20) // muda status do processo
+			//movi r21, 14 
+			//lw r22 , 1(r21) // pega numero de processos esperando io
+			//movi r23, 50 //inicio da fila de processos IO
+			//add r23, r23,r22 // pega a proxima posição da fila
+			//sw r20 , 1(r23) //salva processo na fila
+			//addi r22, 1 //incrementa o numero de processos io
+
+			//movi r21, 15 // ponteiro para inicio da fila
+			//sw r23, 1(r21)//salva o ponteiro
+
+			//jump escalonador
+			
 			//-------------- escalonador --------------
 
 			//movi r20 , 0 // inicia o contador
-		//LO
 			//movi r21 , 1 // estado processo como 01
 			//sw r22, 0(rzero) //numero de processos ativos
 			//beq r22 , rzero , volta menu
-			//addi r22,1
+			
+		//LO - procura um processo interrompido que esteja com processamento normal(não IO)
+
 			//movi r23, 1 // index analizado
 			//beq r22 , r20, proximo laço // fim do laço
 			//sw r24, 1(r23) // pega o estado naquele index
 			//beq r24,r21, muda para esse processo
 			//addi r23,1 // incrementa index
+			//addi r20,1//incrementa contador
 			//jump LO
 			// -- muda para o processo
-			//movi r25, 13 //posição qu salva processo atual
+			//movi r25, 13 //posição que salva processo atual
 			//sw r23, 1(r25) //muda o processo atual
 			//jump carrega contexto
-		//L1
+		//L1 - pega uma instrução esperando IO
 			//movi r21, 14 
 			//lw r22, 1(r21)//numero processo esperando io
 			//beq r22,rzero, volta menu
@@ -206,6 +279,13 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//jump entrada de dados
 
 			//------------fim escalonador --------------
+
+			//-----finalizar um processo------
+			//movi r20,13
+			//lw r21, 1(r20) // pega o processo atual
+			//mov r22 , rzero
+			//sw r22, 1(r21)//marca o processo como inativo
+			//jump escalonador
 
 			//--------entrada de dados---------
 
@@ -266,10 +346,6 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//beq r24, r20, +
 			//jump menu
 			//jump gerenciador de processos
-			//jump listar diretórios
-			//jump criar
-			//jump editar
-			//jump deletar
 
 			// ------------------------------------fim do menu-----------------------------------------
 
