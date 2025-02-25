@@ -1,0 +1,42 @@
+Quartus Prime Archive log --	C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processador_25fevereiro.qarlog
+
+Archive:	C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processador_25fevereiro.qar
+Date:		Tue Feb 25 17:00:41 2025
+Quartus Prime		23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BCD.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BancoRegistradores.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ContadorDeQuantum.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/DeBounce.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/DeBouncebuton.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EnderecoRelativo.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EntradaSaida.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Escalonador.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Gerenciador_memoria.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MemoriaDados.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/PC.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ParadaSistema.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/assignment_defaults.qdf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/clock_divider.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/correcaoDesvio.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/displaySete.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/monostable.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/mux6.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/muxDesvio.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processadorAOC.qpf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processadorAOC.qsf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processadorAOC_assignment_defaults.qdf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/pulsoBotao.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simple_dual_port_ram_dual_clock.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simple_dual_port_ram_single_clock.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/tratamentoBotao.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/unidadeDeComparacao.v
+	======= Total: 31 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
