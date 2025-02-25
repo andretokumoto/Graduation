@@ -39,7 +39,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
         end
     end
 
-	 
+	 //funçao de puxar algoritmo do hd para memoria de instruções
 	/*always@(negedge clock)
 		begin
 			
@@ -146,7 +146,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//scrg r31
 			//jump escalonador
 
-			//-----------retorna contexto------
+			//-----------carrega contexto------
 			//movi r20, 13
 			//lw r21, 1(r20)//puxa numero do processo atual
 			//multi r21, r21, 200
@@ -238,14 +238,17 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//cproc,rzero --- muda processo para o SO
 			//movi r20,13 // pega numero do processo
 			//movi r21, 2 // valor de status correspondente a espera por io
-			//sw r1, 1(r20) // muda status do processo
-			//movi r21, 14 
-			//lw r22 , 1(r21) // pega numero de processos esperando io
-			//movi r23, 50 //inicio da fila de processos IO
-			//add r23, r23,r22 // pega a proxima posição da fila
-			//sw r20 , 1(r23) //salva processo na fila
-			//addi r22, 1 //incrementa o numero de processos io
+			//lw r24, 1(r20)//pega o processo interrompidoS
+			//sw r21, 1(r24) // muda status do processo
+			//movi r21, 14  // posição com contador de processos io
 
+			//movi r20,15
+			//lw r23, 1(r20) //inicio da fila de processos IO
+			//add r23, r23,r22 // pega a proxima posição da fila
+			
+			//sw r24 , 1(r23) //salva processo na fila
+			//addi r22, 1 //incrementa o numero de processos io
+			//sw r22 , 1(r21)//atualiza numero de processos io
 			//movi r21, 15 // ponteiro para inicio da fila
 			//sw r23, 1(r21)//salva o ponteiro
 
@@ -253,39 +256,67 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			
 			//-------------- escalonador --------------
 			//cproc,rzero
-			//movi r20 , 0 // inicia o contador
+			//movi r20 , 1 // inicia o contador
 			//movi r21 , 1 // estado processo como 01
 			//lw r22, 0(rzero) //numero de processos ativos
 			//beq r22 , rzero , volta menu
-			
+			//movi r22, 11 // condição de saida do laço - lista toda percorrida
+			//movi r23,1
+			//lw r25, 13(r23)
+
 		//LO - procura um processo interrompido que esteja com processamento normal(não IO)
 
-			//movi r23, 1 // index analizado
-			//sw r25, 13(r23)
-			//beq r22 , r20, proximo laço // fim do laço
-			//beq r25,r23, // incrementa index --- e o processo atual
-			//lw r24, 1(r23) // pega o estado naquele index
-			//beq r24,r21, muda para esse processo
-			//addi r23,1 // incrementa index
+			//beq r22 , r20, L1 // fim do laço
+			//beq r25,r20, // incrementa index --- e o processo atual
+			//lw r24, 1(r20) // pega o estado naquele index
+			//beq r24,r21, muda processo atual
 			//addi r20,1//incrementa contador
 			//jump LO
+			
+			//---muda processo atual
+			//movi r21,13
+			//sw r20, 1(r21)//muda o processo em execução
+			//jump muda para o processo
 
-			// -- muda para o processo
+		//L1 --- ve se o processo atual esta em processamento normal(Não IO)
+			//movi r20,1 // estado normal
+			//lw r21, 13(r20) // pega o processo atual
+			//lw r22, 1(r21)//pega o estado do processo
+			//beq r22,r20, muda para o processo
+			//jump L2
 
-			//movi r25, 13 //posição que salva processo atual
-			//sw r23, 1(r25) //muda o processo atual
-			//jump carrega contexto
-
-		//L1 - pega uma instrução esperando IO
+		//L2 - pega uma instrução esperando IO
 			//movi r21, 14 
 			//lw r22, 1(r21)//numero processo esperando io
 			//beq r22,rzero, volta menu
 			//movi r21, 15
-			//lw r22, 1(r21) // pega o processo do inicio da fila de processos IO 
+			//lw r22, 1(r21) // o inicio da fila de processos IO 
+			//lw r24, 1(r22)//pega o processo
+
 			// -- muda para o processo
 			//movi r25, 13 //posição qu salva processo atual
-			//sw r22, 1(r25) //muda o processo atual
+			//sw r24, 1(r25) //muda o processo atual
+			//movi r20,1
+			//sw r20, 1(r24)//muda status do processo
+
+			//-----desenfila
+			//movi r21, 14 //decrementa contador
+			//lw r22, 1(r21)
+			//subi r22,1
+			//sw r22, 1(r21)
+
+			//movi r21, 15//muda ponteiro
+			//lw r22, 1(r21)
+			//addi r22,1 //pega o proximo da fila			
+			//sw r22, 1(r21)
+
 			//jump entrada de dados
+
+
+		// -- muda para o processo
+
+			//jump carrega contexto
+
 
 			//------------fim escalonador --------------
 
@@ -336,9 +367,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//movi r24, 11
 			//sw r21, 1(r24) // salva qual processo vai ser executado
 			//movi r23, 12 //endereço de onde esta o contador de processos
-			//lw r22, 1(r23) // puxa o valor do contador
+			//lw r22, 1(r23) // puxa o valor do contador de processos iniciados
 			//addi r22,r22,1 // incrementa contador
-			//sw r22 , 1 r23 // salva contador
+			//sw r22 , 1(r23) // salva contador
 			//jump inicia processo
 
 //---entrada de novo processo
