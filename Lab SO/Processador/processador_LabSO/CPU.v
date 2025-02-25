@@ -147,6 +147,9 @@ assign testedesvio = DesvioControl;
        	 
 			testePC = pc;
 		//atualização de pc
+		
+		
+		
 		   if(reset) pc<=32'd0;
 			
 			else if(troca_contexto == 2'b11) pc<= Escalonador; // desvia para o escalonador
