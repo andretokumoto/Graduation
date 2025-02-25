@@ -1,4 +1,4 @@
-module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,linkControl,escritaRegControl,branchControl,branchTipo,dadoRegControl,memControl,HILOcontrol,entradaSaidaControl,mudaProcesso,encerrarBios,);
+module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,linkControl,escritaRegControl,branchControl,branchTipo,dadoRegControl,memControl,HILOcontrol,entradaSaidaControl,mudaProcesso,encerrarBios,fimprocesso,intrucaoIOContexto);
 
 input [5:0] opcode;
 output reg DesvioControl,HILOcontrol,branchControl,branchTipo,jumpControl,escritaRegControl,valueULA,linkControl,memControl;//sinal 1 bit
@@ -742,8 +742,67 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  
 	  end 
+	  
+	scpc:	
+	   begin
 		
+		  DesvioControl = 1'b0;
+		  branchControl = 1'b0;
+		  branchTipo= 1'b0;
+		  jumpControl= 1'b0;
+		  escritaRegControl= 1'b1;
+		  valueULA= 1'b0;
+		  linkControl = 1'b0;
+		  memControl= 1'b0;
+		  dadoRegControl = 3'b111;
+		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
+		  
+		end 
 		
+	cproc:
+		 begin
+		
+		  DesvioControl = 1'b0;
+		  branchControl = 1'b0;
+		  branchTipo= 1'b0;
+		  jumpControl= 1'b0;
+		  escritaRegControl= 1'b0;
+		  valueULA= 1'b0;
+		  linkControl = 1'b0;
+		  memControl= 1'b0;
+		  dadoRegControl = 3'b000;
+		  status=1'b0;
+		  mudaProcesso = 1'b1;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
+		  
+		end 
+			
+	scrg:
+			begin
+		
+				  DesvioControl = 1'b0;
+				  branchControl = 1'b0;
+				  jumpControl= 1'b0;
+				  escritaRegControl= 1'b0;
+				  valueULA= 1'b1;
+				  linkControl = 1'b0;
+				  memControl= 1'b1;
+				  entradaSaidaControl = 2'b00;
+				  ulaOP = 5'b11111;
+				  status=1'b0;
+				  mudaProcesso = 1'b0;
+				  fimprocesso	= 1'b0;
+				  intrucaoIOContexto = 1'b0;
+				  encerrarBios = 2'b00;
+		  
+		end 
+	
  endcase
 
 

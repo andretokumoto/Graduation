@@ -1,9 +1,9 @@
-module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao, biosEmExecucao, encerrarBios);
+module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock/*, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao*/, biosEmExecucao, encerrarBios);
 
-    input [31:0] pc, entradaDeInstrucao,processo_atual, pc_processo_interrompido;
+    input [31:0] pc/*, entradaDeInstrucao*/;
     input clock, reset;
     input encerrarBios;
-    input [1:0] controleSalvaInstrucao,ControleFimDeLeitura;
+    /*input [1:0] controleSalvaInstrucao,ControleFimDeLeitura;*/
     output reg [5:0] opcode;
     output reg [4:0] OUTrs, OUTrt, OUTrd;
     output reg [15:0] imediato;
@@ -18,6 +18,16 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	 reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
 	 	
 	parameter TAM_BLOCO = 32'd200;//tamanho dos blocos na memoria
+	
+	
+	parameter add=6'b000000,addi=6'b000001,sub=6'b000010,subi=6'b000011,mult=6'b000100;
+	parameter j=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b010101,blt=6'b010110;
+	parameter lw=6'b010111,sw=6'b011000,multi=6'b000101,div=6'b000110,divi=6'b000111,rdiv=6'b001000;
+	parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
+	parameter in=6'b011101,out=6'b011110,fim=6'b011111,spc = 6'b100110;
+	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011;
+	
+	
 		
     // verificar se a bios está em execução
     always @(*) begin
@@ -122,7 +132,10 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//------------------------------------mudança contexto-----------
 			//-----------salva contexto--------
 			//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
-			//sw r20
+			//movi r21, 13
+			//lw r22, 1(r20)//puxa numero do processo atual
+			//multi r22, r22, 200
+			//sw r20, 1(r22)//salva contexto do pc
 			//scrg r1 , 1--- salva o contexto dos registradores
 			//scrg r2 , 2
 			//scrg r3 , 3

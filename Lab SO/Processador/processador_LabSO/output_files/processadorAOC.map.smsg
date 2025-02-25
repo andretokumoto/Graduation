@@ -1,3 +1,5 @@
-Warning (10268): Verilog HDL information at CPU.v(119): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 119
-Warning (10268): Verilog HDL information at CPU.v(139): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/CPU.v Line: 139
-Warning (10268): Verilog HDL information at MEMInstrucoes.v(55): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/processadorLSO/MEMInstrucoes.v Line: 55
+Warning (10268): Verilog HDL information at CPU.v(135): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 135
+Warning (10268): Verilog HDL information at CPU.v(155): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 155
+Info (10281): Verilog HDL Declaration information at CPU.v(37): object "fimprocesso" differs only in case from object "fimProcesso" in the same scope File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
+Warning (10268): Verilog HDL information at MEMInstrucoes.v(71): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 71
+Warning (10268): Verilog HDL information at Escalonador.v(32): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Escalonador.v Line: 32

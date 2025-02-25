@@ -30,12 +30,13 @@ wire [25:0] jump;
 wire [31:0] dadosMux6;
 wire [10:0] imediato,desvioCorrigido;
 wire [1:0] mudaProcesso; //criar na unidade de controle
+wire ocorrenciaIO;
 
 wire [31:0] enderecoRelativo;
 wire [1:0] troca_contexto;
 wire intrucaoIOContexto,fimprocesso;
 wire clk;
-wire  [1:0] entradaSaidaControl;
+wire  [1:0] entradaSaidaControl,encerrarBios;
 wire valueULA;
 wire  DesvioControl,branchControl,branchTipo,jumpControl,linkControl,memControl,HILOcontrol,escritaRegControl;//sinal 1 bit
 wire  [2:0] dadoRegControl;//sinal de 3 bits
@@ -47,7 +48,7 @@ wire InstrucaIO,fimProcesso;
 output wire halt,biosEmExecucao;
 output reg [31:0]testePC,testeReg,testeOP,testeImediato;
 output wire testedesvio;
-output wire [1:0] controlIO,encerrarBios;
+output wire [1:0] controlIO;
 output wire testeStatus,testeSinal;
 output wire [31:0] testeIN,testeout,testeUla,testeRS,testeMux;
 output wire [3:0] testesaidaUNI,testesaidaDez,testesaidaCent;
@@ -55,22 +56,22 @@ output wire  [2:0] testeSelMux;
 output wire[4:0] enRD,enRS,enRT;
 output wire [25:0] testeJump;
 
-parameter Escalonador = 32'd1, IntrucaoIO = 32'dX;
+parameter Escalonador = 32'd1, IntrucaoIO = 32'd10;
 
 //divisor de clock
 clock_divider(.clock_in(clock),.clock_out(clk));
 
 //ligaçao com pulso botao
-monostable mon(.clk(clk),.reset(reset),.trigger(botaoPlaca),.pulse(botaoIN));
+//monostable mon(.clk(clk),.reset(reset),.trigger(botaoPlaca),.pulse(botaoIN));
   
 //ligaçao com memoria de instruçoes
 MEMInstrucoes inst(.reset(reset),.pc(pc),.opcode(opcode),.jump(jump),.OUTrs(endRS),.OUTrt(endRT),.OUTrd(endRD),.imediato(imediato),.clock(clock),.biosEmExecucao(biosEmExecucao), .encerrarBios(encerrarBios));
 
 //contador de quantum
-ContadorDeQuantum quantum( .clock(clk),.reset(reset),.pc(pc),.InstrucaIO(InstrucaIO),.fimProcesso(fimProcesso),processoAtual(processo_atual),.troca_contexto(troca_contexto),.pc_processo_trocado(pc_contexto),.intrucaoIOContexto(intrucaoIOContexto));
+ContadorDeQuantum quantum( .clock(clk),.reset(reset),.pc(pc),.InstrucaIO(ocorrenciaIO),.fimProcesso(fimProcesso),.processoAtual(processo_atual),.troca_contexto(troca_contexto),.pc_processo_trocado(pc_contexto),.intrucaoIOContexto(intrucaoIOContexto));
 
 //ligaçao com unidade de controle
-UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(intrucaoIOContexto));
+UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO));
 
 //ligaçao com  parada de sistema
 ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada));
@@ -88,7 +89,7 @@ unidadeDeComparacao compara(.branchTipo(branchTipo),.resultadoULA(resultadoULA),
 mux6 muxRegistro(.dadoRegControl(dadoRegControl),.HiLoData(HILOdata),.resulULA(resultadoULA),.valorRegRS(rs),.dadoMEM(dadoMem),.dadosEntrada(dadosDeEntrada),.imediato(imediatoExtendido),.PC(pcsomado),.DadosRegistro(dadosMux6),.pc_contexto(pc_contexto));
 
 //correção de endereço para memoria
-EnderecoRelativo er(.numeroProcesso(processo_atual),.resultadoULA(resultadoULA),.enderecoRelativo(enderecoRelativo))
+EnderecoRelativo er(.numeroProcesso(processo_atual),.resultadoULA(resultadoULA),.enderecoRelativo(enderecoRelativo));
 
 //correçao desvio
 correcaoDesvio desvio( .desvioOriginal(imediato),.processo_atual(processo_atual),.desvioCorrigido(desvioCorrigido) );
@@ -188,7 +189,7 @@ assign testedesvio = DesvioControl;
 
  //****************************************************************************************************************************************************************************************************************** 
 
- always(mudaProcesso)
+ always@(mudaProcesso)
 	begin
 		if(mudaProcesso==1'b1) 
 			begin

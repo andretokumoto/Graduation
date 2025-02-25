@@ -2,7 +2,7 @@ module EnderecoRelativo(
 
 	input [31:0] numeroProcesso,
 	input [31:0] resultadoULA,
-	output reg[31:0] enderecoRelativo
+	output reg[31:0] enderecoRelativo,
 );
 	reg [31:0] desvio;
 	parameter TamBloco = 32'd200;

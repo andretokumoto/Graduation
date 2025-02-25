@@ -5,8 +5,8 @@ module Escalonador(
     input [31:0]  pc,
 	input controle_novo_processo,
     output reg [31:0] processo_atual, // Número do processo atual
-    output reg troca_contexto // Sinal de troca de contexto
-    output reg [31:0] pc_processo_atual,
+    output reg troca_contexto, // Sinal de troca de contexto
+    output reg [31:0] pc_processo_atual
 );
 
 
