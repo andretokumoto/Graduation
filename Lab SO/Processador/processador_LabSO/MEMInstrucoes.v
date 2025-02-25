@@ -1,4 +1,4 @@
-module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao, biosEmExecucao, encerrarBios,processoEmExecucao,pc_processo_interrompido,processo_atual);
+module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao, biosEmExecucao, encerrarBios);
 
     input [31:0] pc, entradaDeInstrucao,processo_atual, pc_processo_interrompido;
     input clock, reset;
@@ -15,7 +15,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
     reg [1:0] executaBios;
     reg [31:0] instrucao;
     reg [31:0] memoria[200:0];
-	reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
+	 reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
 	 	
 	parameter TAM_BLOCO = 32'd200;//tamanho dos blocos na memoria
 		
@@ -108,10 +108,14 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 						Bios[32'd28] = {6'b011010,5'd27,5'd0,5'd0,11'd0};// movi r27, 0
 						Bios[32'd29] = {6'b011010,5'd28,5'd0,5'd0,11'd0};// movi r28, 0
 						Bios[32'd30] = {6'b011010,5'd29,5'd0,5'd0,11'd0};// movi r29, 0
-						Bios[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd0};// movi r30, 0
-						Bios[32'd32] = {6'b011010,5'd31,5'd0,5'd0,11'd0};// movi r31, 0
-						// lfhd r0  // puxa o SO do HD
-						// encerraBios
+						Bios[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd1};// movi r30, 1
+						Bios[32'd32] = {6'b011010,5'd31,5'd0,5'd0,11'd10};// movi r31, 10
+						
+						Bios[32'd33] = {6'b011000,5'd31,5'd0,5'd0,11'd0};//sw rzero, 200(r30)
+						Bios[32'd34] = {6'b011010,5'd31,5'd0,5'd0,11'd0};//addi r30,r30,1
+						Bios[32'd35] = {6'b011010,5'd31,5'd0,5'd0,11'd0};//beq r30,r31, +2
+						Bios[32'd36] = {6'b011010,26'd33};					//jump 33
+						Bios[32'd37] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// encerraBios
 			//-------------------------------------------------------------------------------------
 //---------------------------SO---------------------------------------------------
 			//jump menu
@@ -341,7 +345,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//scpc r20 - armazena pc do processo
 			//addi r20,r20,1 -- pc+1
 			//mov r24, rret -- move o valor do registrador de retorno do processo para um registrador de sistema
-			//out r24
+			//movi r21,16
+			//sw r24, 1(r21)
+			//out 1(r21)
 			//jr r20 - retorna para o processo
 
 			//----- inicia um processo --------

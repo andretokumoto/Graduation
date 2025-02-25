@@ -1,4 +1,4 @@
-module CPU(reset,clock,botaoPlaca/*,entradaDeDadosIO,unidade,dezena,centena*/,halt,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOP,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent);
+module CPU(reset,clock,botaoPlaca/*,entradaDeDadosIO,unidade,dezena,centena*/,biosEmExecucao,halt,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOP,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent);
 
 input clock,botaoPlaca,reset;
 //input [3:0] entradaDeDadosIO;
@@ -28,25 +28,26 @@ wire [31:0] dadosDeEntrada;
 wire resultComparacao;
 wire [25:0] jump;
 wire [31:0] dadosMux6;
-wire [10:0] imediato;
-wire [1:0] changeProcess; //criar na unidade de controle
+wire [10:0] imediato,desvioCorrigido;
+wire [1:0] mudaProcesso; //criar na unidade de controle
 
-
+wire [31:0] enderecoRelativo;
 wire [1:0] troca_contexto;
-wire intrucaoIOContexto;
+wire intrucaoIOContexto,fimprocesso;
 wire clk;
 wire  [1:0] entradaSaidaControl;
 wire valueULA;
 wire  DesvioControl,branchControl,branchTipo,jumpControl,linkControl,memControl,HILOcontrol,escritaRegControl;//sinal 1 bit
 wire  [2:0] dadoRegControl;//sinal de 3 bits
 wire  [4:0] ulaOP;//sinal 5 bits 
-
+wire [31:0] pc_contexto;
+wire InstrucaIO,fimProcesso;
 //output wire [6:0] unidade,dezena,centena;
 
-output wire halt;
+output wire halt,biosEmExecucao;
 output reg [31:0]testePC,testeReg,testeOP,testeImediato;
 output wire testedesvio;
-output wire [1:0] controlIO;
+output wire [1:0] controlIO,encerrarBios;
 output wire testeStatus,testeSinal;
 output wire [31:0] testeIN,testeout,testeUla,testeRS,testeMux;
 output wire [3:0] testesaidaUNI,testesaidaDez,testesaidaCent;
@@ -54,7 +55,7 @@ output wire  [2:0] testeSelMux;
 output wire[4:0] enRD,enRS,enRT;
 output wire [25:0] testeJump;
 
-parameter Escalonador = 32'd0, IntrucaoIO = 32'dX;
+parameter Escalonador = 32'd1, IntrucaoIO = 32'dX;
 
 //divisor de clock
 clock_divider(.clock_in(clock),.clock_out(clk));
@@ -63,10 +64,13 @@ clock_divider(.clock_in(clock),.clock_out(clk));
 monostable mon(.clk(clk),.reset(reset),.trigger(botaoPlaca),.pulse(botaoIN));
   
 //ligaçao com memoria de instruçoes
-MEMInstrucoes inst(.reset(reset),.pc(pc),.opcode(opcode),.jump(jump),.OUTrs(endRS),.OUTrt(endRT),.OUTrd(endRD),.imediato(imediato),.clock(clock));
+MEMInstrucoes inst(.reset(reset),.pc(pc),.opcode(opcode),.jump(jump),.OUTrs(endRS),.OUTrt(endRT),.OUTrd(endRD),.imediato(imediato),.clock(clock),.biosEmExecucao(biosEmExecucao), .encerrarBios(encerrarBios));
+
+//contador de quantum
+ContadorDeQuantum quantum( .clock(clk),.reset(reset),.pc(pc),.InstrucaIO(InstrucaIO),.fimProcesso(fimProcesso),processoAtual(processo_atual),.troca_contexto(troca_contexto),.pc_processo_trocado(pc_contexto),.intrucaoIOContexto(intrucaoIOContexto));
 
 //ligaçao com unidade de controle
-UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl));
+UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(intrucaoIOContexto));
 
 //ligaçao com  parada de sistema
 ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada));
@@ -81,14 +85,19 @@ ULA alu(.ulaOP(ulaOP),.RS(rs),.RT(operando),.saidaULA(resultadoULA),.saidaHI(HI)
 unidadeDeComparacao compara(.branchTipo(branchTipo),.resultadoULA(resultadoULA),.resultadoComparacao(resultComparacao));
 
 //ligacao mux6
-mux6 muxRegistro(.dadoRegControl(dadoRegControl),.HiLoData(HILOdata),.resulULA(resultadoULA),.valorRegRS(rs),.dadoMEM(dadoMem),.dadosEntrada(dadosDeEntrada),.imediato(imediatoExtendido),.PC(pcsomado),.DadosRegistro(dadosMux6));
+mux6 muxRegistro(.dadoRegControl(dadoRegControl),.HiLoData(HILOdata),.resulULA(resultadoULA),.valorRegRS(rs),.dadoMEM(dadoMem),.dadosEntrada(dadosDeEntrada),.imediato(imediatoExtendido),.PC(pcsomado),.DadosRegistro(dadosMux6),.pc_contexto(pc_contexto));
+
+//correção de endereço para memoria
+EnderecoRelativo er(.numeroProcesso(processo_atual),.resultadoULA(resultadoULA),.enderecoRelativo(enderecoRelativo))
+
+//correçao desvio
+correcaoDesvio desvio( .desvioOriginal(imediato),.processo_atual(processo_atual),.desvioCorrigido(desvioCorrigido) );
+
 
 //ligaçao com memoria de dados
 //simple_dual_port_ram_single_clock memPrincipal(.data(RT),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.clk(clock),.q(dadoMem));
-simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(/*clk*/clock),.q(dadoMem));
+simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(enderecoRelativo),.write_addr(enderecoRelativo),.we(memControl),.read_clock(clock),.write_clock(/*clk*/clock),.q(dadoMem));
 	
-
-
 //ligaçao com entrada e saida
 EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(dadoMem),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
 
@@ -127,14 +136,14 @@ assign testedesvio = DesvioControl;
 		 
    begin
 		 
-	    testeImediato = imediatoExtendido;	
+	    testeImediato = desvioCorrigido;	
 	    testeReg = dadosRegistro;
 		 
-		 if(selecaoMuxDesvio) resulSomador <= {pc[31:11],imediato};
+		 if(selecaoMuxDesvio) resulSomador <= {pc[31:11],desvioCorrigido};
 		   else  resulSomador <= pc + 32'd1;
 		 
 		 if(jumpControl) concatena <= {pc[31:26],rs[25:0]};//concatenacao para o jump registrador
-		   else concatena <= {pc[31:11],imediato};//concatenacao para o jump
+		   else concatena <= {pc[31:11],desvioCorrigido};//concatenacao para o jump
 			
 	end
   
@@ -179,9 +188,9 @@ assign testedesvio = DesvioControl;
 
  //****************************************************************************************************************************************************************************************************************** 
 
- always(changeProcess)
+ always(mudaProcesso)
 	begin
-		if(changeProcess==2'b01) 
+		if(mudaProcesso==1'b1) 
 			begin
 				processo_atual = rs;
 			end

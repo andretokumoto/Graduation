@@ -4,6 +4,7 @@ module ContadorDeQuantum(
   input [31:0]  pc,
   input InstrucaIO,
   input fimProcesso,
+  input processoAtual,
   output reg troca_contexto // Sinal de troca de contexto
   output reg [31:0] pc_processo_trocado,//salva o pc do processo interrompido
   output reg intrucaoIOContexto//sinal para dar salto em intrução de io
@@ -12,17 +13,17 @@ module ContadorDeQuantum(
  parameter quantum = 32'd10; 
  reg [31:0] contador=32'd0;
  
- always@(pc || posedge reset)
+ always@(negedge clock || posedge reset)
 	begin
 		
-		if(reset || fimProcesso)begin
+		if(reset || fimProcesso=1'd1)begin
 			contador=32'd0;
 			troca_contexto = 1'b0;
 			intrucaoIOContexto = 1'b0;
 		end
 		
 		
-		else
+		else if(processoAtual != 32'd0)//não faz a contagem do SO
 			begin
 				
 					if(contador>=quantum) //quantum atingido 

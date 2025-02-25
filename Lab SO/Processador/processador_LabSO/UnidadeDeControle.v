@@ -1,11 +1,12 @@
-module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,linkControl,escritaRegControl,branchControl,branchTipo,dadoRegControl,memControl,HILOcontrol,entradaSaidaControl);
+module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,linkControl,escritaRegControl,branchControl,branchTipo,dadoRegControl,memControl,HILOcontrol,entradaSaidaControl,mudaProcesso,encerrarBios,);
 
 input [5:0] opcode;
 output reg DesvioControl,HILOcontrol,branchControl,branchTipo,jumpControl,escritaRegControl,valueULA,linkControl,memControl;//sinal 1 bit
 output reg status = 0;
-output reg  [1:0] entradaSaidaControl;//sinal 2 bits
+output reg  [1:0] entradaSaidaControl,encerrarBios;//sinal 2 bits
 output reg  [2:0] dadoRegControl;//sinal de 3 bits
 output reg  [4:0] ulaOP;//sinal 5 bits 
+output reg mudaProcesso,fimprocesso,intrucaoIOContexto;
 
 
 
@@ -16,7 +17,8 @@ parameter jump=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b0101
 parameter lw=6'b010111,sw=6'b011000;
 parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
 parameter in=6'b011101,out=6'b011110,fim=6'b011111,pause=6'b100000,spc = 6'b100110;
-
+//op de SO
+parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011;
 
 
                                
@@ -40,6 +42,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00000;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
     
@@ -58,6 +64,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00000;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
 		
@@ -76,6 +86,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00001;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
 		
@@ -94,6 +108,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00001;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
 	 
@@ -113,6 +131,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00010;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
 	 
@@ -131,6 +153,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00010;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
 	 
@@ -149,6 +175,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00011;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 	
@@ -168,6 +198,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00011;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end	
 	
@@ -186,6 +220,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00100;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 	
 	 
@@ -204,6 +242,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00101;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 	 
 		
@@ -222,6 +264,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00110;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 	
@@ -241,6 +287,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b00111;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 	
@@ -260,6 +310,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b01000;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 	
@@ -279,6 +333,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b01001;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 	
@@ -298,6 +356,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b01010;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 	
@@ -317,6 +379,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b01011;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 	
 	
@@ -335,6 +401,10 @@ always@(opcode)
 		  dadoRegControl = 3'b001;
 		  ulaOP = 5'b01110;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
 		
@@ -350,6 +420,10 @@ always@(opcode)
 		  linkControl = 1'b0;
 		  memControl= 1'b0;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 	
 		
@@ -365,6 +439,10 @@ always@(opcode)
 		  linkControl = 1'b0;
 		  memControl= 1'b0;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 	
@@ -381,6 +459,10 @@ always@(opcode)
 		  memControl= 1'b0;
 		  dadoRegControl = 3'b110;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end	
 	 
@@ -400,6 +482,10 @@ always@(opcode)
 		  entradaSaidaControl = 2'b00;
 		  ulaOP = 5'b00001;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
  
@@ -418,6 +504,10 @@ always@(opcode)
 		  entradaSaidaControl = 2'b00;
 		  ulaOP = 5'b00001;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
  
@@ -436,6 +526,10 @@ always@(opcode)
 		  entradaSaidaControl = 2'b00;
 		  ulaOP = 5'b01110; 
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end
 
@@ -454,6 +548,10 @@ always@(opcode)
 		  dadoRegControl = 3'b011;
 		  ulaOP = 5'b00010;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 		
@@ -470,6 +568,10 @@ always@(opcode)
 		  entradaSaidaControl = 2'b00;
 		  ulaOP = 5'b00010;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 	
@@ -486,6 +588,11 @@ always@(opcode)
 		  memControl= 1'b0;
 		  dadoRegControl = 3'b110;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
+		  
 		end  
 	
 	 mov:
@@ -502,6 +609,10 @@ always@(opcode)
 		  entradaSaidaControl = 2'b00;
 		  dadoRegControl = 3'b010;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 	
 
@@ -520,6 +631,10 @@ always@(opcode)
 		  entradaSaidaControl = 2'b00;
 		  dadoRegControl = 3'b101;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 	
 		
@@ -538,6 +653,10 @@ always@(opcode)
 		  HILOcontrol = 1'b1;
 		  dadoRegControl = 3'b000;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
    
@@ -556,6 +675,10 @@ always@(opcode)
 		  HILOcontrol = 1'b0;
 		  dadoRegControl = 3'b000;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
   
@@ -574,6 +697,10 @@ always@(opcode)
 		  dadoRegControl = 3'b100;
 		  status=1'b1;
 		  ulaOP = 5'b00010;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 
@@ -592,6 +719,10 @@ always@(opcode)
 		  dadoRegControl = 3'b000;
 		  ulaOP = 5'b00010;
 		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
 		  
 		end 
 
@@ -605,6 +736,11 @@ always@(opcode)
 	     memControl= 1'b0;
 	     entradaSaidaControl = 2'b00;
 		  status=1'b1;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
+		  
 	  end 
 		
 		

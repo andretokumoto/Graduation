@@ -1,7 +1,7 @@
-module mux6(dadoRegControl,HiLoData,resulULA,valorRegRS,dadoMEM,dadosEntrada,imediato,PC,DadosRegistro);
+module mux6(dadoRegControl,HiLoData,resulULA,valorRegRS,dadoMEM,dadosEntrada,imediato,PC,DadosRegistro,pc_contexto);
 
 input [2:0] dadoRegControl;
-input [31:0] HiLoData,resulULA,valorRegRS,dadoMEM,dadosEntrada,imediato,PC;
+input [31:0] HiLoData,resulULA,valorRegRS,dadoMEM,dadosEntrada,imediato,PC,pc_contexto;
 output reg [31:0] DadosRegistro;
 
 
@@ -17,6 +17,7 @@ case(dadoRegControl)
 3'b100:DadosRegistro=dadosEntrada;
 3'b101:DadosRegistro=imediato;
 3'b110:DadosRegistro=PC;
+3'b111:DadosRegistro=pc_contexto;
 
 endcase
 
