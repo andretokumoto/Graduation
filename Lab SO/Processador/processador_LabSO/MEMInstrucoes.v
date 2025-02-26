@@ -10,7 +10,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
     output reg [25:0] jump;
     output reg biosEmExecucao; // Sinal que indica que a bios está em execução
 	
-
+	
+	 reg [5:0] OP_processoHD;
     reg [31:0] Bios[120:0];
     reg [1:0] executaBios;
     reg [31:0] instrucao;
@@ -27,6 +28,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	parameter in=6'b011101,out=6'b011110,fim=6'b011111,spc = 6'b100110;
 	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011;
 	
+	
+
 	
 		
     // verificar se a bios está em execução
@@ -68,7 +71,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		end*/
 	 
   
-    always@(negedge clock or posedge reset)                           
+    always@(negedge clock || reset)                           
     begin 
         if(reset == 1'b1) begin
             executaBios <= 2'b01; // Executa a bios
@@ -87,7 +90,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 			//bios ---------------------------------------------------------------			
-						//lfhd puxa uma programa 
+						//lcproc rzero
 						Bios[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
 						Bios[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd0};// movi r1, 0
 						Bios[32'd3] = {6'b011010,5'd2,5'd0,5'd0,11'd0};// movi r2, 0
@@ -118,11 +121,11 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 						Bios[32'd28] = {6'b011010,5'd27,5'd0,5'd0,11'd0};// movi r27, 0
 						Bios[32'd29] = {6'b011010,5'd28,5'd0,5'd0,11'd0};// movi r28, 0
 						Bios[32'd30] = {6'b011010,5'd29,5'd0,5'd0,11'd0};// movi r29, 0
-						Bios[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd1};// movi r30, 1
-						Bios[32'd32] = {6'b011010,5'd31,5'd0,5'd0,11'd10};// movi r31, 10
+						Bios[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd1};// movi r30, 200
+						Bios[32'd32] = {6'b011010,5'd31,5'd0,5'd0,11'd10};// movi r31,2000
 						
-						Bios[32'd33] = {6'b011000,5'd31,5'd0,5'd0,11'd0};//sw rzero, 200(r30)
-						Bios[32'd34] = {6'b011010,5'd31,5'd0,5'd0,11'd0};//addi r30,r30,1
+						Bios[32'd33] = {6'b011000,5'd31,5'd0,5'd0,11'd0};//sw r30, 1(r30)
+						Bios[32'd34] = {6'b011010,5'd31,5'd0,5'd0,11'd0};//addi r30,r30,200
 						Bios[32'd35] = {6'b011010,5'd31,5'd0,5'd0,11'd0};//beq r30,r31, +2
 						Bios[32'd36] = {6'b011010,26'd33};					//jump 33
 						Bios[32'd37] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// encerraBios

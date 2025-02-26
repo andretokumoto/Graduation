@@ -33,7 +33,7 @@ wire [1:0] mudaProcesso; //criar na unidade de controle
 wire ocorrenciaIO;
 
 wire [31:0] enderecoRelativo;
-wire [1:0] troca_contexto;
+wire troca_contexto;
 wire intrucaoIOContexto,fimprocesso;
 wire clk;
 wire  [1:0] entradaSaidaControl,encerrarBios;
@@ -162,7 +162,9 @@ assign testedesvio = DesvioControl;
 		
 		   if(reset) pc<=32'd0;
 			
-			else if(troca_contexto == 2'b11) pc<= Escalonador; // desvia para o escalonador
+			else if(encerrarBios=1'b1) pc<=32'd0;
+			
+			else if(troca_contexto == 1'b1) pc<= Escalonador; // desvia para o escalonador
 			
 			else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO; //desvia para IO
 
@@ -179,7 +181,7 @@ assign testedesvio = DesvioControl;
 					
 			      end	
 			  end
-
+0
   end
  //****************************************************************************************************************************************************************************************************************** 
   always@(pc)
