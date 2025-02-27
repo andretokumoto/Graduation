@@ -31,7 +31,7 @@ wire [31:0] dadosMux6;
 wire [10:0] imediato,desvioCorrigido;
 wire [1:0] mudaProcesso; //criar na unidade de controle
 wire ocorrenciaIO;
-wire ledControl;
+wire ledControl,comandoOUT,comandoIN;
 
 wire [31:0] enderecoRelativo;
 wire troca_contexto;
@@ -57,7 +57,7 @@ output wire  [2:0] testeSelMux;
 output wire[4:0] enRD,enRS,enRT;
 output wire [25:0] testeJump;
 
-parameter Escalonador = 32'd1, IntrucaoIO = 32'd92;
+parameter Escalonador = 32'd1, IntrucaoIO = 32'd92,PCout = 32'd160;
 
 //divisor de clock
 clock_divider(.clock_in(clock),.clock_out(clk));
@@ -72,7 +72,7 @@ MEMInstrucoes inst(.reset(reset),.pc(pc),.opcode(opcode),.jump(jump),.OUTrs(endR
 ContadorDeQuantum quantum( .clock(clk),.reset(reset),.pc(pc),.InstrucaIO(ocorrenciaIO),.fimProcesso(fimProcesso),.processoAtual(processo_atual),.troca_contexto(troca_contexto),.pc_processo_trocado(pc_contexto),.intrucaoIOContexto(intrucaoIOContexto));
 
 //ligaçao com unidade de controle
-UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl));
+UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl),.comandoIN(comandoIN),.comandoOUT(comandoOUT));
 
 //ligaçao com  parada de sistema
 ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada));
@@ -169,6 +169,7 @@ assign testedesvio = DesvioControl;
 			
 			else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO; //desvia para IO
 
+			else if (comandoOUT == 1'b1) pc <= PCout;
 			else 
 			  begin
 			    
