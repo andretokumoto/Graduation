@@ -17,7 +17,7 @@ int jmpmain = 0;
 int i;
 
 
-const char * InstrNames[] =  {  "add", "sub", "mult", "div", "and", "or", "xor", "nor", "mov", "movi", "nand", "lw", "sw", "in", "out", "addi", "subi", "multi", "divi", "lt", "andi", "ori", "beq", "bne", "blt", "bgt", "bleq", "bgeq", "j", "jal", "jra", "not", "jr", "xnor", "end","pause","spc"};
+const char * InstrNames[] =  {  "add", "sub", "mult", "div", "and", "or", "xor", "nor", "mov", "movi", "nand", "lw", "sw", "in", "out", "addi", "subi", "multi", "divi", "lt", "andi", "ori", "beq", "bne", "blt", "bgt", "bleq", "bgeq", "j", "jal", "jra", "not", "jr", "xnor", "end","pause","spc","inproc","outproc"};
 
 const char * regNames[] = { "$zero", "$t1", "$t2", "$t3", "$t4", "$t5", "$t6", "$t7", "$t8", "$t9", "$t10","$t11", "$t12", "$p1", "$p2", "$p3", "$p4", "$p5", "$p6", "$s1", "$s2", "$s3", "$s4", "$s5", "$s6","$sp","$ra", "$bp","$ret"};
 
@@ -372,10 +372,11 @@ void generateInstruction (QuadList l) {
             case opCALL://chada de função
                 if (strcmp(a2.contents.var.name, "input") == 0) {//entrada de dados
                     instructionFormatO(in, getReg(a1.contents.var.name), 0, NULL);
+                    instructionFormatR(mov, getReg(a1.contents.var.name), $s6, $zero);
                 }
                 else if (strcmp(a2.contents.var.name, "output") == 0) {//saida de dados
                     instructionFormatO(out, getArgReg(), 0, NULL);
-                    instructionFormatR(pause, $zero, $zero, $zero);
+                    //instructionFormatR(pause, $zero, $zero, $zero);
                 }
                 else{//outros tipos de função
                         aux = getFunSize(a1.contents.var.scope);

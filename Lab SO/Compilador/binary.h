@@ -38,6 +38,8 @@
 #define OP_ANDI  "6'b100100"
 #define OP_ORI   "6'b100101"
 #define OP_SPC   "6'b100110"
+#define OP_INPROC  "6'b100110"
+#define OP_OUTPROC  "6'b100111"
 
 
 //definições de registradores

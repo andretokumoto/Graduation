@@ -1,11 +1,18 @@
-int numero(void){
-
-   return 2;
-}
-
-
 void main(void){
 
-    output(numero());
+    int a;
+    int r;
+    int cont;
+
+    a = input();
+    r = 1;
+    cont=0;
+
+    while(cont < a)
+    {
+        r = r * 2;
+    }
+    output(r);
+
     
 }

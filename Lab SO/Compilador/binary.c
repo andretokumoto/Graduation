@@ -167,11 +167,11 @@ char *get_op(InstrKind tipo){
     break;   
 
     case in:
-      return OP_IN;
+      return OP_INPROC;
     break;
 
     case out:
-      return OP_OUT;
+      return OP_OUTPROC;
     break;   
     
     case addi:
@@ -278,9 +278,9 @@ char * assumbly_para_binario (Instruction i) {
     }
     else if (i.format == formatO) {
         if (i.opcode == in)
-            sprintf(bin, "%s,%s,%s", OP_IN, get_register(i.reg1),"21'd0");
+            sprintf(bin, "%s,%s,%s", OP_INPROC, get_register(i.reg1),"21'd0");
         if (i.opcode == out)
-            sprintf(bin, "%s,%s,%s,%s", OP_OUT, RZERO, get_register(i.reg1), "16'd0");
+            sprintf(bin, "%s,%s,%s,%s", OP_OUTPROC, RZERO, get_register(i.reg1), "16'd0");
     }
     else {
         if (i.opcode == jra )
