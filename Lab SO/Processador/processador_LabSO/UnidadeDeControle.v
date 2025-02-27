@@ -6,7 +6,7 @@ output reg status = 0;
 output reg  [1:0] entradaSaidaControl,encerrarBios;//sinal 2 bits
 output reg  [2:0] dadoRegControl;//sinal de 3 bits
 output reg  [4:0] ulaOP;//sinal 5 bits 
-output reg mudaProcesso,fimprocesso,intrucaoIOContexto;
+output reg mudaProcesso,fimprocesso,intrucaoIOContexto,ledControl,comandoIN,comandoOUT;
 
 
 

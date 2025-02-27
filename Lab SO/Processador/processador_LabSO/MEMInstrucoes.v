@@ -15,7 +15,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
     reg [31:0] Bios[120:0];
     reg [1:0] executaBios;
     reg [31:0] instrucao;
-    reg [31:0] memoria[200:0];
+    reg [31:0] memoria[3000:0];
 	 reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
 	 	
 	parameter TAM_BLOCO = 32'd300;//tamanho dos blocos na memoria
@@ -90,7 +90,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 			//bios ---------------------------------------------------------------			
-						Bios[32'd0] = {cproc,26'd0}					  //cproc rzero
+						/*Bios[32'd0] = {cproc,26'd0};					  //cproc rzero
 						Bios[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
 						Bios[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd0};// movi r1, 0
 						Bios[32'd3] = {6'b011010,5'd2,5'd0,5'd0,11'd0};// movi r2, 0
@@ -131,7 +131,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 						Bios[32'd37] = {encBios,26'd0};// encerraBios
 			//-------------------------------------------------------------------------------------
 //---------------------------SO---------------------------------------------------
-			memoria[32'd0] = {}//jump menu
+			memoria[32'd0] = {j,26'd197};//jump menu
 		//------------------------------------mudança contexto-----------
 			//-----------salva contexto--------
 			memoria[32'd1] = {cproc,RZERO,RZERO,RZERO,11'd0};//muda processo para SO
@@ -374,7 +374,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd187] = {movi,R23,RZERO,RZERO,11'd12};//movi r23, 12 //endereço de onde esta o contador de processos
 			memoria[32'd188] = {lw,R22,R23,RZERO,11'd1};//lw r22, 1(r23) // puxa o valor do contador de processos iniciados
 			memoria[32'd189] = {addi,R22,R22,RZERO,11'd1};//addi r22,r22,1 // incrementa contador
-			memoria[32'd190] = {sw,RZERO,R23,R22,11'd1};/sw r22 , 1(r23) // salva contador
+			memoria[32'd190] = {sw,RZERO,R23,R22,11'd1};//sw r22 , 1(r23) // salva contador
 			memoria[32'd191] = {j,26'd167};//jump inicia processo
 
 //---entrada de novo processo
@@ -391,7 +391,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd197] = {led,26'd1};//led, 1
 			memoria[32'd198] = {cproc,26'd0};//cproc,rzero
 			memoria[32'd199] = {in,R20,21'd0};//in r20 // opçao
-			memoria[32'd200] = {movi,R2,RZERO,RZERO,11'd1};//movi r21 , 1 //  //listar
+			memoria[32'd200] = {movi,R21,RZERO,RZERO,11'd1};//movi r21 , 1 //  //listar
 			memoria[32'd201] = {movi,R22,RZERO,RZERO,11'd2};//movi r22 , 2 // criar
 			memoria[32'd202] = {movi,R23,RZERO,RZERO,11'd3};//movi r23 , 3  // editar
 			memoria[32'd203] = {movi,R24,RZERO,RZERO,11'd4};//movi r24 , 4 // deletar
@@ -408,7 +408,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 //fatorial
 		memoria[32'd300] = {6'b100110,5'd2,5'd0,5'd0,11'd0};//in r2
-		memoria[32'd300] = {mov,5'd2,R25,R25,11'd0}
+		memoria[32'd300] = {mov,5'd2,R25,R25,11'd0};
 		memoria[32'd302] = {6'b011010,5'd0,5'd0,5'd0,11'd1};//movi r0,1
 		memoria[32'd303] = {6'b011010,5'd1,5'd0,5'd0,11'd1};//movi r1,1
 		memoria[32'd304] = {6'b011001,5'd3,5'd1,5'd1,11'd0};//mov r3,r1
@@ -499,7 +499,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	memoria[32'd937] = {6'b010111,5'b00110,5'b11010,16'd3};
 	memoria[32'd938] = {6'b010111,5'b00111,5'b11010,16'd5};
 	memoria[32'd939] = {6'b011001,5'b00110,5'b00111,16'd0};
-	memoria[32'd940] = {6'b011000,5'b00000,5'b11010,5'b00110,11'd3};
+	memoria[32'd940] = {6'b011000,5'b00000,5'b11010,5'b00110,11'd3};*/
 
     end
 	 

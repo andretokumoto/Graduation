@@ -1,7 +1,7 @@
-module CPU(reset,clock,botaoPlaca/*,entradaDeDadosIO,unidade,dezena,centena*/,biosEmExecucao,halt,ledmenu,lednumprocessos,ledprocesso,ledin,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOP,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent);
+module CPU(reset,clock,botaoPlaca,entradaDeDadosIO,unidade,dezena,centena,biosEmExecucao,halt,ledmenu,lednumprocessos,ledprocesso,ledin,uniProc/*,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOP,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent*/);
 
 input clock,botaoPlaca,reset;
-//input [3:0] entradaDeDadosIO;
+input [3:0] entradaDeDadosIO;
 reg [31:0] concatena;
 reg [31:0] resulSomador;
 reg [31:0] imediatoExtendido;
@@ -11,7 +11,7 @@ reg [31:0] regHI,regLO;
 reg [31:0] dadosRegistro;
 reg [31:0] pc, pcsomado;
 reg [31:0] operando;
-wire[3:0] inUnidade,inDezena,inCentena;
+wire[3:0] inUnidade,inDezena,inCentena,un,dez,cen;
 reg [31:0] processo_atual;
 
 wire botaoIN;
@@ -44,10 +44,11 @@ wire  [2:0] dadoRegControl;//sinal de 3 bits
 wire  [4:0] ulaOP;//sinal 5 bits 
 wire [31:0] pc_contexto;
 wire InstrucaIO,fimProcesso;
-//output wire [6:0] unidade,dezena,centena;
+output wire [6:0] unidade,dezena,centena,uniProc;
 
-output wire halt,biosEmExecucao,ledmenu,lednumprocessos,ledprocesso,ledin;
-output reg [31:0]testePC,testeReg,testeOP,testeImediato;
+output wire halt,biosEmExecucao;
+output reg ledmenu,lednumprocessos,ledprocesso,ledin;
+/*output reg [31:0]testePC,testeReg,testeOP,testeImediato;
 output wire testedesvio;
 output wire [1:0] controlIO;
 output wire testeStatus,testeSinal;
@@ -55,7 +56,7 @@ output wire [31:0] testeIN,testeout,testeUla,testeRS,testeMux;
 output wire [3:0] testesaidaUNI,testesaidaDez,testesaidaCent;
 output wire  [2:0] testeSelMux;
 output wire[4:0] enRD,enRS,enRT;
-output wire [25:0] testeJump;
+output wire [25:0] testeJump;*/
 
 parameter Escalonador = 32'd1, IntrucaoIO = 32'd92,PCout = 32'd160;
 
@@ -63,6 +64,7 @@ parameter Escalonador = 32'd1, IntrucaoIO = 32'd92,PCout = 32'd160;
 clock_divider(.clock_in(clock),.clock_out(clk));
 
 //ligaçao com pulso botao
+ DeBouncebuton db(.clk(clk), .n_reset(reset), .button_in(botaoPlaca),.DB_out(botaoIN));
 //monostable mon(.clk(clk),.reset(reset),.trigger(botaoPlaca),.pulse(botaoIN));
   
 //ligaçao com memoria de instruçoes
@@ -104,13 +106,16 @@ simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(enderecoRelativo),.writ
 EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(dadoMem),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
 
 //ligaçao com display
- /*displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));
+ displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));
  displaySete displayDezena(.entrada(inDezena),.saidas(dezena));
- displaySete displayCentena(.entrada(inCentena),.saidas(centena));*/
-   
+ displaySete displayCentena(.entrada(inCentena),.saidas(centena));
+  
+ BCD bcd(.binario(processo_atual),.unidade(un),.dezena(dez),.centena(cen),.controlesaida(entradaSaidaControl)); 
+ displaySete displayprocessouni(.entrada(un),.saidas(uniProc));
+
 assign selecaoMuxDesvio = branchControl & resultComparacao;
 
-assign halt = parada;
+/*assign halt = parada;
 assign testeStatus = resultComparacao;
 assign testeIN = dadosDeEntrada;
 assign testeout = dadoMem;
@@ -129,7 +134,7 @@ assign botaoIN = botaoPlaca;
 assign testesaidaUNI = inUnidade;
 assign testesaidaDez = inDezena;
 assign testesaidaCent = inCentena;
-assign testedesvio = DesvioControl;
+assign testedesvio = DesvioControl;*/
 
 
 //************************************************************************************************************************************************************************************************************
@@ -138,8 +143,8 @@ assign testedesvio = DesvioControl;
 		 
    begin
 		 
-	    testeImediato = desvioCorrigido;	
-	    testeReg = dadosRegistro;
+	    //testeImediato = desvioCorrigido;	
+	   // testeReg = dadosRegistro;
 		 
 		 if(selecaoMuxDesvio) resulSomador <= {pc[31:11],desvioCorrigido};
 		   else  resulSomador <= pc + 32'd1;
@@ -156,14 +161,14 @@ assign testedesvio = DesvioControl;
  always@(posedge clk or posedge reset)
   begin
        	 
-			testePC = pc;
+			//testePC = pc;
 		//atualização de pc
 		
 		
 		
 		   if(reset) pc<=32'd0;
 			
-			else if(encerrarBios=1'b1) pc<=32'd0;
+			else if(encerrarBios==1'b1) pc<=32'd0;
 			
 			else if(troca_contexto == 1'b1) pc<= Escalonador; // desvia para o escalonador
 			
@@ -183,7 +188,7 @@ assign testedesvio = DesvioControl;
 					
 			      end	
 			  end
-0
+
   end
  //****************************************************************************************************************************************************************************************************************** 
   always@(pc)
