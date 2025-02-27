@@ -5,7 +5,7 @@ module correcaoDesvio(
 	output reg [10:0] desvioCorrigido
 
 );
-	parameter TAM_BLOCO = 32'd200;
+	parameter TAM_BLOCO = 32'd300;
 	
 	reg [10:0] valorCorrecao;
 

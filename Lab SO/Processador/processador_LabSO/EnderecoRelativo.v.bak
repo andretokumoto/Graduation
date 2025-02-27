@@ -5,7 +5,7 @@ module EnderecoRelativo(
 	output reg[31:0] enderecoRelativo,
 );
 	reg [31:0] desvio;
-	parameter TamBloco = 32'd200;
+	parameter TamBloco = 32'd300;
 	
 	always@(numeroProcesso)
 		begin

@@ -56,7 +56,7 @@ output wire  [2:0] testeSelMux;
 output wire[4:0] enRD,enRS,enRT;
 output wire [25:0] testeJump;
 
-parameter Escalonador = 32'd1, IntrucaoIO = 32'd10;
+parameter Escalonador = 32'd1, IntrucaoIO = 32'd92;
 
 //divisor de clock
 clock_divider(.clock_in(clock),.clock_out(clk));
