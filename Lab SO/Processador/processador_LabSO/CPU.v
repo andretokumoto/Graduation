@@ -1,4 +1,4 @@
-module CPU(reset,clock,botaoPlaca/*,entradaDeDadosIO,unidade,dezena,centena*/,biosEmExecucao,halt,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOP,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent);
+module CPU(reset,clock,botaoPlaca/*,entradaDeDadosIO,unidade,dezena,centena*/,biosEmExecucao,halt,ledmenu,lednumprocessos,ledprocesso,ledin,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOP,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent);
 
 input clock,botaoPlaca,reset;
 //input [3:0] entradaDeDadosIO;
@@ -31,6 +31,7 @@ wire [31:0] dadosMux6;
 wire [10:0] imediato,desvioCorrigido;
 wire [1:0] mudaProcesso; //criar na unidade de controle
 wire ocorrenciaIO;
+wire ledControl;
 
 wire [31:0] enderecoRelativo;
 wire troca_contexto;
@@ -45,7 +46,7 @@ wire [31:0] pc_contexto;
 wire InstrucaIO,fimProcesso;
 //output wire [6:0] unidade,dezena,centena;
 
-output wire halt,biosEmExecucao;
+output wire halt,biosEmExecucao,ledmenu,lednumprocessos,ledprocesso,ledin;
 output reg [31:0]testePC,testeReg,testeOP,testeImediato;
 output wire testedesvio;
 output wire [1:0] controlIO;
@@ -71,7 +72,7 @@ MEMInstrucoes inst(.reset(reset),.pc(pc),.opcode(opcode),.jump(jump),.OUTrs(endR
 ContadorDeQuantum quantum( .clock(clk),.reset(reset),.pc(pc),.InstrucaIO(ocorrenciaIO),.fimProcesso(fimProcesso),.processoAtual(processo_atual),.troca_contexto(troca_contexto),.pc_processo_trocado(pc_contexto),.intrucaoIOContexto(intrucaoIOContexto));
 
 //ligaçao com unidade de controle
-UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO));
+UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl));
 
 //ligaçao com  parada de sistema
 ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada));
@@ -231,6 +232,31 @@ assign testedesvio = DesvioControl;
   
  //************************************************************************************************************************************************************************************************************* 
 
+
+always@(posedge reset || ledControl)
+	begin
+		if (reset)
+			begin
+				ledmenu = 1'b0;
+				lednumprocessos = 1'b0;
+				ledprocesso = 1'b0;
+				ledin = 1'b0;
+			end
+		else if(ledControl)
+			begin
+				 if (imediato == 11'd1) ledmenu = 1'b1;
+				 else if (imediato == 11'd2) ledmenu = 1'b0;
+				 else if (imediato == 11'd3) ledin = 1'b1;
+				 else if (imediato == 11'd4) ledin = 1'b0;
+				 else if (imediato == 11'd5) lednumprocessos = 1'b1;
+				 else if (imediato == 11'd6) lednumprocessos = 1'b0;
+				 else if (imediato == 11'd7) ledprocesso = 1'b1;
+				 else if (imediato == 11'd8) ledprocesso = 1'b0;
+			end
+	end
+
+
+//***********************************************************************
  always@(imediatoExtendido,rt)//selecao de valor que vai para a ula(imediato ou RT)
   begin
 

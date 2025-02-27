@@ -1,4 +1,4 @@
-module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,linkControl,escritaRegControl,branchControl,branchTipo,dadoRegControl,memControl,HILOcontrol,entradaSaidaControl,mudaProcesso,encerrarBios,fimprocesso,intrucaoIOContexto);
+module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,linkControl,escritaRegControl,branchControl,branchTipo,dadoRegControl,memControl,HILOcontrol,entradaSaidaControl,mudaProcesso,encerrarBios,fimprocesso,intrucaoIOContexto,ledControl);
 
 input [5:0] opcode;
 output reg DesvioControl,HILOcontrol,branchControl,branchTipo,jumpControl,escritaRegControl,valueULA,linkControl,memControl;//sinal 1 bit
@@ -18,7 +18,7 @@ parameter lw=6'b010111,sw=6'b011000;
 parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
 parameter in=6'b011101,out=6'b011110,fim=6'b011111,pause=6'b100000,spc = 6'b100110;
 //op de SO
-parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011,encBios = 6'b100100;
+parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011,encBios = 6'b100100,led = 6'b100101;
 
 
                                
@@ -46,6 +46,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
     
@@ -68,6 +69,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
 		
@@ -90,6 +92,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
 		
@@ -112,6 +115,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
 	 
@@ -135,6 +139,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
 	 
@@ -157,6 +162,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
 	 
@@ -179,6 +185,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 	
@@ -202,6 +209,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end	
 	
@@ -224,6 +232,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 	
 	 
@@ -360,6 +369,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 	
@@ -383,6 +393,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 	
 	
@@ -405,6 +416,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
 		
@@ -424,6 +436,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 	
 		
@@ -443,6 +456,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 	
@@ -463,6 +477,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end	
 	 
@@ -486,6 +501,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
  
@@ -508,6 +524,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
  
@@ -530,6 +547,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end
 
@@ -552,6 +570,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 		
@@ -572,6 +591,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 	
@@ -592,6 +612,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end  
 	
@@ -613,6 +634,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 	
 
@@ -635,6 +657,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 	
 		
@@ -657,6 +680,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
    
@@ -679,6 +703,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
   
@@ -701,6 +726,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 
@@ -723,6 +749,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 
@@ -740,6 +767,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 	  end 
 	  
@@ -760,6 +788,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 		
@@ -780,6 +809,7 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
 		  
 		end 
 			
@@ -800,6 +830,7 @@ always@(opcode)
 				  fimprocesso	= 1'b0;
 				  intrucaoIOContexto = 1'b0;
 				  encerrarBios = 2'b00;
+				  ledControl = 1'b0;
 		  
 		end 
 	
@@ -820,6 +851,28 @@ always@(opcode)
 				  fimprocesso	= 1'b0;
 				  intrucaoIOContexto = 1'b0;
 				  encerrarBios = 2'b01;
+				  ledControl = 1'b0;
+		  
+		end 
+
+	led:
+				begin
+		
+				  DesvioControl = 1'b0;
+				  branchControl = 1'b0;
+				  jumpControl= 1'b0;
+				  escritaRegControl= 1'b0;
+				  valueULA= 1'b1;
+				  linkControl = 1'b0;
+				  memControl= 1'b0;
+				  entradaSaidaControl = 2'b00;
+				  ulaOP = 5'b00000;
+				  status=1'b0;
+				  mudaProcesso = 1'b0;
+				  fimprocesso	= 1'b0;
+				  intrucaoIOContexto = 1'b0;
+				  encerrarBios = 2'b00;
+				  ledControl = 1'b1;
 		  
 		end 
 
