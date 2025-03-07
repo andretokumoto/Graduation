@@ -53,7 +53,7 @@ set_location_assignment PIN_AA22 -to entradaDeDadosIO[1]
 set_location_assignment PIN_Y24 -to entradaDeDadosIO[2]
 set_location_assignment PIN_Y23 -to entradaDeDadosIO[3]
 set_location_assignment PIN_AB28 -to reset
-set_location_assignment PIN_AD27 -to botaoPlaca
+set_location_assignment PIN_M21 -to botaoPlaca
 set_location_assignment PIN_H22 -to unidade[0]
 set_location_assignment PIN_J22 -to unidade[1]
 set_location_assignment PIN_L25 -to unidade[2]
@@ -78,6 +78,22 @@ set_location_assignment PIN_AA25 -to centena[6]
 set_location_assignment PIN_E21 -to halt
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_E25 -to ledmenu
+set_location_assignment PIN_F18 -to ledin
+set_location_assignment PIN_H21 -to biosEmExecucao
+set_location_assignment PIN_G19 -to lednumprocessos
+set_location_assignment PIN_E19 -to ledprocesso
+set_location_assignment PIN_AD18 -to uniProc[6]
+set_location_assignment PIN_AC18 -to uniProc[5]
+set_location_assignment PIN_AB18 -to uniProc[4]
+set_location_assignment PIN_AH19 -to uniProc[3]
+set_location_assignment PIN_AG19 -to uniProc[2]
+set_location_assignment PIN_AF18 -to uniProc[1]
+set_location_assignment PIN_AH18 -to uniProc[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE simple_dual_port_ram_single_clock.v
 set_global_assignment -name VERILOG_FILE CPU.v
 set_global_assignment -name VERILOG_FILE MEMInstrucoes.v
@@ -103,9 +119,6 @@ set_global_assignment -name VERILOG_FILE simple_dual_port_ram_dual_clock.v
 set_global_assignment -name VERILOG_FILE Gerenciador_memoria.v
 set_global_assignment -name VERILOG_FILE Escalonador.v
 set_global_assignment -name VERILOG_FILE correcaoDesvio.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE ContadorDeQuantum.v
 set_global_assignment -name VERILOG_FILE EnderecoRelativo.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf

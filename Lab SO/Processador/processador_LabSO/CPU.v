@@ -27,8 +27,8 @@ wire [31:0] dadoMem;
 wire [31:0] dadosDeEntrada;
 wire resultComparacao;
 wire [25:0] jump;
-wire [31:0] dadosMux6;
-wire [10:0] imediato,desvioCorrigido;
+wire [31:0] dadosMux6,desvioCorrigido;
+wire [10:0] imediato;
 wire [1:0] mudaProcesso; //criar na unidade de controle
 wire ocorrenciaIO;
 wire ledControl,comandoOUT,comandoIN;
@@ -95,7 +95,7 @@ mux6 muxRegistro(.dadoRegControl(dadoRegControl),.HiLoData(HILOdata),.resulULA(r
 EnderecoRelativo er(.numeroProcesso(processo_atual),.resultadoULA(resultadoULA),.enderecoRelativo(enderecoRelativo));
 
 //correçao desvio
-correcaoDesvio desvio( .desvioOriginal(imediato),.processo_atual(processo_atual),.desvioCorrigido(desvioCorrigido) );
+correcaoDesvio desvio( .desvioOriginal(imediatoExtendido),.processo_atual(processo_atual),.desvioCorrigido(desvioCorrigido) );
 
 
 //ligaçao com memoria de dados
@@ -146,11 +146,11 @@ assign testedesvio = DesvioControl;*/
 	    //testeImediato = desvioCorrigido;	
 	   // testeReg = dadosRegistro;
 		 
-		 if(selecaoMuxDesvio) resulSomador <= {pc[31:11],desvioCorrigido};
+		 if(selecaoMuxDesvio) resulSomador <= pc + imediatoExtendido/*{pc[31:11],imediato}*/;
 		   else  resulSomador <= pc + 32'd1;
 		 
 		 if(jumpControl) concatena <= {pc[31:26],rs[25:0]};//concatenacao para o jump registrador
-		   else concatena <= {pc[31:11],desvioCorrigido};//concatenacao para o jump
+		   else concatena <= {pc[31:26],desvioCorrigido[25:0]};//concatenacao para o jump
 			
 	end
   
@@ -239,7 +239,7 @@ assign testedesvio = DesvioControl;*/
  //************************************************************************************************************************************************************************************************************* 
 
 
-always@(posedge reset || ledControl)
+always@(posedge clk || ledControl)
 	begin
 		if (reset)
 			begin

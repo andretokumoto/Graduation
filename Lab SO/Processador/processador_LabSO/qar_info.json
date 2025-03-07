@@ -1,7 +1,7 @@
 {
-	"common_dir" : "/home-local/aluno/Documentos/tentativamil/",
-	"acds_version" : "Version 17.1.0",
+	"common_dir" : "/home/aluno/Downloads/andre_restored/",
+	"acds_version" : "Version 20.1.0",
 	"platform" : "linux",
-	"os" : "Debian GNU/Linux",
+	"os" : "Ubuntu 18.04.6",
 	"qpf" : "processadorAOC.qpf"
 }

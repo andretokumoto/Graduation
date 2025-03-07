@@ -1,13 +1,13 @@
 module correcaoDesvio(
 
-	input [10:0] desvioOriginal,
+	input [31:0] desvioOriginal,
 	input processo_atual,
-	output reg [10:0] desvioCorrigido
+	output reg [31:0] desvioCorrigido
 
 );
 	parameter TAM_BLOCO = 32'd300;
 	
-	reg [10:0] valorCorrecao;
+	reg [31:0] valorCorrecao;
 
 	always@(processo_atual)
 		begin
