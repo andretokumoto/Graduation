@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest:manifest xmlns:manifest="urn:scilab:xcos:xmlns:manifest:0.1">
+ <manifest:file-entry manifest:full-path="/" manifest:media-type="application/x-scilab-xcos" manifest:version="0.2"/>
+ <manifest:file-entry manifest:full-path="content.xml" manifest:media-type="text/xml"/>
+ <manifest:file-entry manifest:full-path="dictionary/dictionary.ser" manifest:media-type="bin/ser"/>
+</manifest:manifest>
