@@ -146,8 +146,8 @@ assign testedesvio = DesvioControl;*/
 	    //testeImediato = desvioCorrigido;	
 	   // testeReg = dadosRegistro;
 		 
-		 if(selecaoMuxDesvio) resulSomador <= pc + imediatoExtendido/*{pc[31:11],imediato}*/;
-		   else  resulSomador <= pc + 32'd1;
+		 if(selecaoMuxDesvio) resulSomador <= pc + imediatoExtendido; //branch
+		   else  resulSomador <= pcsomado; //atualização normal de PC
 		 
 		 if(jumpControl) concatena <= {pc[31:26],rs[25:0]};//concatenacao para o jump registrador
 		   else concatena <= {pc[31:26],desvioCorrigido[25:0]};//concatenacao para o jump
@@ -174,7 +174,7 @@ assign testedesvio = DesvioControl;*/
 			
 			else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO; //desvia para IO
 
-			else if (comandoOUT == 1'b1) pc <= PCout;
+			else if (comandoOUT == 1'b1) pc <= PCout;//output de dados
 			else 
 			  begin
 			    
