@@ -1,4 +1,4 @@
-module CPU(reset,clock,botaoPlaca,entradaDeDadosIO,unidade,dezena,centena,biosEmExecucao,halt,ledmenu,lednumprocessos,ledprocesso,ledin,uniProc/*,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOP,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent*/);
+module CPU(reset,clock,botaoPlaca,entradaDeDadosIO,unidade,dezena,centena,biosEmExecucao,halt,ledmenu,lednumprocessos,ledprocesso,ledin,uniProc,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOPCODE,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent);
 
 input clock,botaoPlaca,reset;
 input [3:0] entradaDeDadosIO;
@@ -48,7 +48,7 @@ output wire [6:0] unidade,dezena,centena,uniProc;
 
 output wire halt,biosEmExecucao;
 output reg ledmenu,lednumprocessos,ledprocesso,ledin;
-/*output reg [31:0]testePC,testeReg,testeOP,testeImediato;
+output reg [31:0]testePC,testeReg,testeImediato;
 output wire testedesvio;
 output wire [1:0] controlIO;
 output wire testeStatus,testeSinal;
@@ -56,7 +56,8 @@ output wire [31:0] testeIN,testeout,testeUla,testeRS,testeMux;
 output wire [3:0] testesaidaUNI,testesaidaDez,testesaidaCent;
 output wire  [2:0] testeSelMux;
 output wire[4:0] enRD,enRS,enRT;
-output wire [25:0] testeJump;*/
+output wire [25:0] testeJump;
+output wire[5:0] testeOPCODE;
 
 parameter Escalonador = 32'd1, IntrucaoIO = 32'd92,PCout = 32'd160;
 
@@ -64,7 +65,7 @@ parameter Escalonador = 32'd1, IntrucaoIO = 32'd92,PCout = 32'd160;
 clock_divider(.clock_in(clock),.clock_out(clk));
 
 //ligaçao com pulso botao
- DeBouncebuton db(.clk(clk), .n_reset(reset), .button_in(botaoPlaca),.DB_out(botaoIN));
+// DeBouncebuton db(.clk(clk), .n_reset(reset), .button_in(botaoPlaca),.DB_out(botaoIN));
 //monostable mon(.clk(clk),.reset(reset),.trigger(botaoPlaca),.pulse(botaoIN));
   
 //ligaçao com memoria de instruçoes
@@ -115,7 +116,7 @@ EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(dadoMem)
 
 assign selecaoMuxDesvio = branchControl & resultComparacao;
 
-/*assign halt = parada;
+assign halt = parada;
 assign testeStatus = resultComparacao;
 assign testeIN = dadosDeEntrada;
 assign testeout = dadoMem;
@@ -134,7 +135,8 @@ assign botaoIN = botaoPlaca;
 assign testesaidaUNI = inUnidade;
 assign testesaidaDez = inDezena;
 assign testesaidaCent = inCentena;
-assign testedesvio = DesvioControl;*/
+assign testedesvio = DesvioControl;
+assign testeOPCODE = opcode;
 
 
 //************************************************************************************************************************************************************************************************************
@@ -161,7 +163,7 @@ assign testedesvio = DesvioControl;*/
  always@(posedge clk or posedge reset)
   begin
        	 
-			//testePC = pc;
+			testePC = pc;
 		//atualização de pc
 		
 		

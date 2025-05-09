@@ -16,7 +16,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
     reg [1:0] executaBios;
     reg [31:0] instrucao;
     reg [31:0] memoria[3000:0];
-	 reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
+	 //reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
 	 	
 	parameter TAM_BLOCO = 32'd300;//tamanho dos blocos na memoria
 	parameter endEscalonador = 26'd106, endMenu = 26'd270; //pc do escalonador
@@ -63,13 +63,13 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
   
     always@(negedge clock || reset)                           
     begin 
-        if(reset == 1'b1) begin
+       /* if(reset == 1'b1) begin
             executaBios <= 2'b01; // Executa a bios
-				cursorDePosicao = 15'd0;//zera cursor
+				//cursorDePosicao = 15'd0;//zera cursor
         end
         else if(encerrarBios == 1'b1) begin
             executaBios <= 2'b00; // Encerra a bios
-        end
+        end*/
 
 		  //puxar do hd para memória - atulização de cursor
 		/*if(controleSalvaInstrucao == 2'b01) 
@@ -434,7 +434,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 //fatorial
-		/*memoria[32'd300] = {6'b100110,5'd2,5'd0,5'd0,11'd0};//in r2
+		//memoria[32'd300] = {6'b100110,5'd2,5'd0,5'd0,11'd0};//in r2
 		memoria[32'd300] = {mov,5'd2,R25,R25,11'd0};
 		memoria[32'd302] = {6'b011010,5'd0,5'd0,5'd0,11'd1};//movi r0,1
 		memoria[32'd303] = {6'b011010,5'd1,5'd0,5'd0,11'd1};//movi r1,1
@@ -447,7 +447,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd310] = {6'b100111,5'd3,5'd3,5'd0,11'd0};//outproc
 
 //potencia de 2
-		memoria[32'd600] = {6'b011010,5'b11010,5'b00000,16'd1};
+		/*memoria[32'd600] = {6'b011010,5'b11010,5'b00000,16'd1};
 		memoria[32'd601] = {6'b011010,5'b11011,5'b00000,16'd30};
 		memoria[32'd602] = {6'b010001,26'd3};
 		//main

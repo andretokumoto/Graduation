@@ -106,23 +106,23 @@ R9
 R10
 n@gerenciador_memoria_vlg_vec_tst
 vhard_block
-Z13 !s110 1739747514
+Z13 !s110 1746806492
 !i10b 1
-!s100 MVMhYg2L]nd4[XaIEnj3>0
+!s100 HKY_BQdWLIU<]S?CL9mP11
 R2
-I^l8V2J9mZ>lg`fk[W>lj;0
+IjXHlEg_=5A7OL_MGS3]G30
 R3
-R0
-Z14 w1739747509
+Z14 dC:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim
+Z15 w1746806485
 R4
 R5
-!i122 116
-L0 236634 34
+!i122 118
+L0 11469 34
 R6
 r1
 !s85 0
 31
-Z15 !s108 1739747511.000000
+Z16 !s108 1746806491.000000
 R7
 R8
 !i113 1
@@ -131,21 +131,21 @@ R10
 vMEMInstrucoes
 R13
 !i10b 1
-!s100 Eo>YP^JEiBHjKmTA_AOIM0
+!s100 8[FjZG;Xh[ODmJ64iUbSX3
 R2
-IR>:;RllMUEoDjl55zN=h[1
+IE;<LTR51E4Rzz7gIPVUA21
 R3
-R0
 R14
+R15
 R4
 R5
-!i122 116
-L0 32 236601
+!i122 118
+L0 32 11436
 R6
 r1
 !s85 0
 31
-R15
+R16
 R7
 R8
 !i113 1
@@ -153,25 +153,25 @@ R9
 R10
 n@m@e@m@instrucoes
 vMEMInstrucoes_vlg_vec_tst
-!s110 1739747515
+!s110 1746806493
 !i10b 1
-!s100 F9j?4<5lLlQl8HmEk<;6[1
+!s100 ^zb[R9YTF2XbM0Ro5Wk=<3
 R2
-I88jM[zSOWmoF^IWYGE]K61
+I;=?EiX[Jb0i8hdKng;P`B3
 R3
-R0
-w1739747506
-8Waveform32.vwf.vt
-FWaveform32.vwf.vt
-!i122 117
-L0 30 584
+R14
+w1746806483
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 119
+L0 30 242
 R6
 r1
 !s85 0
 31
-!s108 1739747514.000000
-!s107 Waveform32.vwf.vt|
-!s90 -work|work|Waveform32.vwf.vt|
+!s108 1746806492.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
 !i113 1
 R9
 R10
