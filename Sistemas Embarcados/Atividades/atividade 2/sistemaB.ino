@@ -9,6 +9,7 @@ const int LDR = A0;
 int ValorLidoLDR = 0;
 int ValorPot = 0;
 int volume = 0; 
+int pwmLuminoso = 0;
 
 void setup() {
     Serial.begin(9600);
@@ -26,8 +27,11 @@ void setup() {
 }
 
 void loop() {
+
     ValorPot = analogRead(Potenciomentro);
     volume = map(ValorPot, 0, 1023, 0, 100); // Calcula porcentagem
+
+    ValorLidoLDR = analogRead(LDR);
 
     //----------------Controle de Volume----------------
     if(volume == 0) {
@@ -61,8 +65,28 @@ void loop() {
     Serial.print("Volume: ");
     Serial.print(volume);
     Serial.println("%");
-    
+    delay(100);
     //------------ Controle de luminosidade-----------------
 
-    
+    if(ValorLidoLDR < 500){ //baixa luminosidade
+
+        analogWrite(ledY1, pwmLuminoso);
+        analogWrite(ledY2, pwmLuminoso);
+        pwmLuminoso++;
+        delay(100);
+    }
+    else if(ValorLidoLDR < 900){//luz natural
+        digitalWrite(ledY1, HIGH);
+        digitalWrite(ledY2, LOW);
+        pwmLuminoso = 0;
+    }
+    else{
+        digitalWrite(ledY1, LOW);
+        digitalWrite(ledY2, LOW);
+        pwmLuminoso = 0; 
+    }
+
+    if (pwm > 255){ // Define o valor limite para o duty cycle
+        pwm=255;
+    }
 }
