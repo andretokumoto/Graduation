@@ -100,7 +100,7 @@ void loop() {
 
   }
 
-  else if(temperatura > (Tdes - 1.5)){ //temperatura acima
+  else if(temperatura > (Tdes + 1.5)){ //temperatura acima
     
     unsigned currentMillis = millis();
     if( currentMillis - previousMilliBuzzer >= intervaloBuzzer ){
