@@ -4,8 +4,3 @@ Name estadoAtual.00 estadoAtual.10 estadoAtual.01
 estadoAtual.10 0 0 0 
 estadoAtual.01 0 1 1 
 estadoAtual.00 1 1 0 
-
-State Machine - |CPU|MEMInstrucoes:inst|executaBios
-Name executaBios.00 
-executaBios.01 0 
-executaBios.00 1 
