@@ -1,0 +1,8 @@
+[PROJECTS]
+Count=4
+Project0=..\..\..\Desktop\aula1-PIC\Display7\display.mcppi
+Project1=..\exemplodisplay\display.mcppi
+Project2=..\exemplodisplaycombotao\displaybotao.mcppi
+Project3=desafioPic.mcppi
+[ActiveProject]
+Index=3

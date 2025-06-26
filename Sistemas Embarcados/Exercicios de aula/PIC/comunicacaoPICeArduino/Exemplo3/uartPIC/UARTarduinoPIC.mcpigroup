@@ -1,0 +1,7 @@
+[PROJECTS]
+Count=3
+Project0=..\..\..\DesafioPic\desafioPic.mcppi
+Project1=..\..\..\UART_PIC_exemplo3\UARTarduinoPIC.mcppi
+Project2=UARTarduinoPIC.mcppi
+[ActiveProject]
+Index=2
