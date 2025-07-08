@@ -95,9 +95,10 @@ void main() {
             IntToStr(pot1_percent, pot1_string);
             //Ltrim(pot1_string);
 
-            Lcd_Out(1,1,"V = ");
-            Lcd_Out(pot1_string);
-            Lcd_Out("% Vmax   ");
+	    Lcd_Out(1,1,"V = ");
+            Lcd_Out(1,5, pot1_string);
+            Lcd_Out(1,8,"% Vmax   ");
+
 
 
       }
