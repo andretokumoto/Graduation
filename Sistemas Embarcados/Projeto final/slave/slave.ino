@@ -27,7 +27,7 @@ const int sensorPorta = 10;
 const int sensorPreseca = 52;
 const int ledAlarme = 12;
 const int ledPedeSenha = 13;
-const int buzzerAlarme = A0;
+const int buzzerAlarme = 11;
 
 //debounce e acionamento do sensorPorta (swich)
 unsigned long lastDebaunce = 0;
@@ -39,7 +39,9 @@ int lastPortaSatus = LOW;
 unsigned long previousMilli = 0;
 const long intervalo = 15000; //30 segundos
 
-int statusBuzzer = LOW;
+const long intervaloBuzzer = 1000;
+unsigned long previousMilliBuzzer = 0;
+int BuzzerStatus = LOW;
 int alarmeDisparado = LOW;
 int lastStatusAlarme = LOW;
 
@@ -130,8 +132,27 @@ void loop() {
     if(alarmeDisparado != lastStatusAlarme){//verifica mudança no estado do alarme
         //manda para pic
         if(alarmeDisparado == HIGH){
-          analogWrite(buzzerAlarme,255);
-          Serial.println("buzzer");
+          
+              unsigned currentMillis = millis();
+              if( currentMillis - previousMilliBuzzer >= intervaloBuzzer ){
+          
+                previousMilliBuzzer = currentMillis;
+                   
+                if(BuzzerStatus == LOW){
+                  BuzzerStatus = HIGH;
+                }
+                else{
+                  BuzzerStatus = LOW;
+                }
+                digitalWrite(buzzerAlarme, BuzzerStatus);
+              
+            }
+          
+        }
+        else{ // alerme desativado
+        
+            digitalWrite(buzzerAlarme, LOW);
+            contadorDeErros = 0;
         }
 
         lastStatusAlarme = alarmeDisparado;
