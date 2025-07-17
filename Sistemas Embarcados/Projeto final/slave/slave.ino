@@ -1,7 +1,9 @@
-// Projeto final da UC de sistemas embarcados desenvolvido por André Filipe Siqueira Tokumoto
-
 #include <Key.h>
 #include <Keypad.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h> // Adicionado
+
+// Projeto final da UC de sistemas embarcados desenvolvido por André Filipe Siqueira Tokumoto
 
 // teclado matricial
 const byte LINHAS = 4;
@@ -51,6 +53,8 @@ int pwmLedAlarme = 0;
 
 Keypad teclado = Keypad(makeKeymap(teclas), pinosLinhas, pinosColunas, LINHAS, COLUNAS);
 
+// LCD I2C
+LiquidCrystal_I2C lcd(0x27, 16, 2); // Endereço 0x27, LCD 16x2
 
 int brilho = 0;
 int incremento = 5;
@@ -64,6 +68,13 @@ void setup() {
   pinMode(ledPedeSenha, OUTPUT);
   pinMode(buzzerAlarme, OUTPUT);
   Serial.begin(9600);
+
+  // Inicializa o LCD
+  lcd.init();
+  lcd.backlight();
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Senha: ");
 }
 
 void loop() {
@@ -92,18 +103,41 @@ void loop() {
       char tecla = teclado.getKey();
       if (tecla) {
         senhaEntrada += tecla;
+        
+        //limpa mensagem da linha 2
+        lcd.setCursor(0, 1);
+        lcd.print("            ");
+        
+        // linha 1 sempre exibe a senha digitada
+        lcd.setCursor(0, 0);
+        lcd.print("Senha: ");
+        lcd.print(senhaEntrada);
+        int espaçosRestantes = 10 - senhaEntrada.length();
+        for (int i = 0; i < espaçosRestantes; i++) lcd.print(" ");
+
         if (tecla == '#') {
           if (senhaEntrada == senhaSalva) {
             alarmeAtivo = LOW;
             presencaDetectada = LOW;
             senhaEntrada = "";
             digitalWrite(ledPedeSenha, LOW);
-            Serial.print("desarmou");
+            
+            // mensagem na linha 2: alarme desativado
+            lcd.setCursor(0, 1);
+            lcd.print("Alarme desativado ");
           } 
           else {
             senhaEntrada = "";
             contadorDeErros++;
+
+            // mensagem na linha 2: senha incorreta
+            lcd.setCursor(0, 1);
+            lcd.print("Senha incorreta   ");
           }
+
+          // limpar linha 1 após validação
+          lcd.setCursor(0, 0);
+          lcd.print("Senha:            ");
         }
       }
     } 
@@ -151,12 +185,13 @@ void loop() {
       unsigned long currentMilliAtivou = millis();
       if (currentMilliAtivou - previousMilliAtivou <= intervalo) {
         
-          //mensagem feche a porta para o lcd
+          //mensagem feche a porta para o lcd (linha 2)
+          lcd.setCursor(0, 1);
+          lcd.print("Alarme Ativo");
       }
       else{//alarme ativo mas porta aberta
         alarmeDisparado = HIGH;
       }      
-      
     } 
     
     lastStatusAlarme = alarmeAtivo;
