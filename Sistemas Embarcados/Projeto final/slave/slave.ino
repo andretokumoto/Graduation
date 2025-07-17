@@ -1,7 +1,7 @@
+// Projeto final da UC de sistemas embarcados desenvolvido por André Filipe Siqueira Tokumoto
+
 #include <Key.h>
 #include <Keypad.h>
-
-// Projeto final da UC de sistemas embarcados desenvolvido por André Filipe Siqueira Tokumoto
 
 // teclado matricial
 const byte LINHAS = 4;
@@ -32,6 +32,7 @@ int lastPortaSatus = LOW;
 
 // intervalo para disparo do alarme
 unsigned long previousMilli = 0;
+unsigned long previousMilliAtivou = 0;
 const long intervalo = 15000;
 
 const long intervaloBuzzer = 1000;
@@ -69,12 +70,11 @@ void loop() {
   int DetectaSensorPorta = digitalRead(sensorPorta);
   int DetectaPresenca = digitalRead(sensorPreseca);
 
-  if ((millis() - lastDebaunce) > debaunceDelay) {
-    if (DetectaSensorPorta != statusPorta) {
-      statusPorta = DetectaSensorPorta;
-      if (statusPorta == HIGH) {
-        if (alarmeAtivo == HIGH) presencaDetectada = HIGH;
-      }
+  if (DetectaSensorPorta != statusPorta) {
+    lastDebaunce = millis();
+    statusPorta = DetectaSensorPorta;
+    if (statusPorta == HIGH) {
+      if (alarmeAtivo == HIGH) presencaDetectada = HIGH;
     }
   }
 
@@ -99,33 +99,30 @@ void loop() {
             senhaEntrada = "";
             digitalWrite(ledPedeSenha, LOW);
             Serial.print("desarmou");
-          } else {
+          } 
+          else {
             senhaEntrada = "";
             contadorDeErros++;
           }
         }
       }
-    } else {
+    } 
+    else {
       alarmeDisparado = HIGH;
       digitalWrite(ledPedeSenha, LOW);
     }
   }
 
-  if (alarmeDisparado != lastStatusAlarme) {
-    if (alarmeDisparado == HIGH) {
-      // Buzzer 
-      unsigned long currentMillis = millis();
-      if (currentMillis - previousMilliBuzzer >= intervaloBuzzer) {
-        previousMilliBuzzer = currentMillis;
-        BuzzerStatus = !BuzzerStatus;
-        digitalWrite(buzzerAlarme, BuzzerStatus);
-      }
-    } else {
-      digitalWrite(buzzerAlarme, LOW);
-      contadorDeErros = 0;
+  if (alarmeDisparado == HIGH) { 
+    unsigned long currentMillis = millis();
+    if (currentMillis - previousMilliBuzzer >= intervaloBuzzer) {
+      previousMilliBuzzer = currentMillis;
+      BuzzerStatus = !BuzzerStatus;
+      digitalWrite(buzzerAlarme, BuzzerStatus);
     }
-
-    lastStatusAlarme = alarmeDisparado;
+  } else {
+    digitalWrite(buzzerAlarme, LOW);
+    contadorDeErros = 0;
   }
 
   //controle de led alrme com efeito fade
@@ -144,8 +141,25 @@ void loop() {
   }
 
   if (contadorDeErros >= 3) alarmeDisparado = HIGH;
+  
+  //alarme ativado
+  if(lastStatusAlarme != alarmeAtivo){
+     
+   //alarme que estava desativado foi ativo 
+    if(alarmeAtivo == HIGH && DetectaSensorPorta == 1){
+      
+      unsigned long currentMilliAtivou = millis();
+      if (currentMilliAtivou - previousMilliAtivou <= intervalo) {
+        
+          //mensagem feche a porta para o lcd
+      }
+      else{//alarme ativo mas porta aberta
+        alarmeDisparado = HIGH;
+      }      
+      
+    } 
+    
+    lastStatusAlarme = alarmeAtivo;
+  }
 }
-
-
-
 
