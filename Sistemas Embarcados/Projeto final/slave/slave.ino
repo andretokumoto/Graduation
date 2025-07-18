@@ -1,9 +1,9 @@
+// Projeto final da UC de sistemas embarcados desenvolvido por André Filipe Siqueira Tokumoto
+
 #include <Key.h>
 #include <Keypad.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h> // Adicionado
-
-// Projeto final da UC de sistemas embarcados desenvolvido por André Filipe Siqueira Tokumoto
 
 // teclado matricial
 const byte LINHAS = 4;
@@ -50,6 +50,7 @@ static String senhaEntrada = "";
 static String senhaSalva = "1234#";
 int contadorDeErros = 0;
 int pwmLedAlarme = 0;
+byte ByteRecebido;
 
 Keypad teclado = Keypad(makeKeymap(teclas), pinosLinhas, pinosColunas, LINHAS, COLUNAS);
 
@@ -68,6 +69,7 @@ void setup() {
   pinMode(ledPedeSenha, OUTPUT);
   pinMode(buzzerAlarme, OUTPUT);
   Serial.begin(9600);
+  Serial2.begin(9600);   // UART2 para comunicação com o PIC
 
   // Inicializa o LCD
   lcd.init();
@@ -92,6 +94,7 @@ void loop() {
   if (DetectaPresenca == HIGH) {
     if (alarmeAtivo == HIGH) {
       presencaDetectada = HIGH;
+      Serial2.write('p'); // manda que foi detectado uma presenca
     }
   }
 
@@ -144,6 +147,7 @@ void loop() {
     else {
       alarmeDisparado = HIGH;
       digitalWrite(ledPedeSenha, LOW);
+      Serial2.write('d');//mensagem de alarme disparado
     }
   }
 
@@ -174,7 +178,10 @@ void loop() {
       }
   }
 
-  if (contadorDeErros >= 3) alarmeDisparado = HIGH;
+  if (contadorDeErros >= 3) {
+    alarmeDisparado = HIGH;
+    Serial2.write('d');//mensagem de alarme disparado
+  }
   
   //alarme ativado
   if(lastStatusAlarme != alarmeAtivo){
@@ -191,10 +198,37 @@ void loop() {
       }
       else{//alarme ativo mas porta aberta
         alarmeDisparado = HIGH;
+        Serial2.write('d');//mensagem de alarme disparado
       }      
     } 
     
     lastStatusAlarme = alarmeAtivo;
   }
-}
 
+  //Recebe comando do PIC
+  if (Serial2.available()) {
+     
+     ByteRecebido = Serial2.read();
+     delay(50);
+
+     if(ByteRecebido == '0'){//desativar alarme
+        alarmeDisparado = LOW;
+        alarmeAtivo = LOW;
+        contadorDeErros = 0;
+
+        lcd.setCursor(0, 1);
+        lcd.print("Alarme Desativado");
+
+     }
+     else if(ByteRecebido == '1'){//ativar o alarme - sem disparo
+        alarmeAtivo = HIGH;
+     }
+     else{//disparo do alarme
+          alarmeDisparado = HIGH;
+          Serial2.write('d');//mensagem de alarme disparado
+     }
+
+  }
+
+
+}
