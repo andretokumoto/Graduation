@@ -1,9 +1,9 @@
-#include <Key.h>
-#include <Keypad.h>
+//#include <Key.h>
+//#include <Keypad.h>
 #include <Wire.h>
 
 // Configurações do teclado matricial
-const byte LINHAS = 4;
+/*const byte LINHAS = 4;
 const byte COLUNAS = 4;
 
 char teclas[LINHAS][COLUNAS] = {
@@ -14,15 +14,15 @@ char teclas[LINHAS][COLUNAS] = {
 };
 
 byte pinosLinhas[LINHAS] = {2, 3, 4, 5};
-byte pinosColunas[COLUNAS] = {6, 7, 8, 9};
+byte pinosColunas[COLUNAS] = {6, 7, 8, 9};*/
 
 // periféricos externos
-const int botaoPorta = 51;
+const int botaoPorta = 2;
 const int sensorPresenca = 50;
 const int ledAlarme = 12;
 const int ledPedeSenha = 13;
 const int buzzerAlarme = 11;
-const int ledPorta = 52;
+const int ledPorta = 7;
 
 // debounce e acionamento do botão
 unsigned long lastDebounce = 0;
@@ -54,7 +54,7 @@ byte ByteRecebido;
 int portaberta = HIGH;
 int controleBitDisparado = LOW;
 
-Keypad teclado = Keypad(makeKeymap(teclas), pinosLinhas, pinosColunas, LINHAS, COLUNAS);
+//Keypad teclado = Keypad(makeKeymap(teclas), pinosLinhas, pinosColunas, LINHAS, COLUNAS);
 
 int brilho = 0;
 int incremento = 5;
@@ -69,7 +69,7 @@ void setup() {
   pinMode(ledPorta, OUTPUT);
   pinMode(buzzerAlarme, OUTPUT);
   Serial.begin(9600);
-  Serial2.begin(9600);
+  //Serial1.begin(9600);
 }
 
 void loop() {
@@ -132,71 +132,34 @@ void loop() {
               senhaEntrada = "";
             }
         }
-      
-      
-      
-      /*char tecla = teclado.getKey();
-      if (tecla) {
-        senhaEntrada += tecla;
-        Serial.println(senhaEntrada);
 
-        if (tecla == '#') {
-          if (senhaEntrada == senhaSalva) {
-            alarmeAtivo = LOW;
-            presencaDetectada = LOW;
-            senhaEntrada = "";
-            digitalWrite(ledPedeSenha, LOW);
-          } 
-          else {
-            senhaEntrada = "";
-          }
-        }
-      }*/
+   
     } 
     else {
       alarmeDisparado = HIGH;
       digitalWrite(ledPedeSenha, LOW);
-      
     }
   }
 
   // Verificação de senha quando alarme está desativado
   if (alarmeAtivo == LOW) {
-/*    char tecla = teclado.getKey();
-    if (tecla) {
-      senhaEntrada += tecla;
-      Serial.println(senhaEntrada);
 
-      if (tecla == '#') {
-        if (senhaEntrada == senhaSalva) {
-          // Inicia o processo de ativação com temporizador
-          tempoAtivacao = millis();
-          aguardandoAtivacao = 1;
-          senhaEntrada = "";
-         // Serial.println("Aguardando 5 segundos para ativar alarme");
-        } 
-        else {
-          senhaEntrada = "";
-        }
+
+    if (Serial.available()) {
+      senhaEntrada = Serial.readStringUntil('\n');
+      senhaEntrada.trim();
+      delay(50);
+      
+      if (senhaEntrada == senhaSalva) {
+        tempoAtivacao = millis();
+        previousMilli = millis(); 
+        aguardandoAtivacao = 1;
+        senhaEntrada = "";
+      } 
+      else {
+        senhaEntrada = "";
       }
-    }*/
-   
-        if (Serial.available()) {
-            senhaEntrada = Serial.readStringUntil('\n');
-            senhaEntrada.trim();
-            delay(50);
-            
-            if (senhaEntrada == senhaSalva) {
-              // Inicia o processo de ativação com temporizador
-              tempoAtivacao = millis();
-              aguardandoAtivacao = 1;
-              senhaEntrada = "";
-             // Serial.println("Aguardando 5 segundos para ativar alarme");
-            } 
-            else {
-              senhaEntrada = "";
-            }
-        }    
+    }    
   }
 
   // Verifica se passaram os 5 segundos de ativação
@@ -204,13 +167,14 @@ void loop() {
     alarmeAtivo = HIGH;
     presencaDetectada = LOW;
     aguardandoAtivacao = 0;
- 
+    
+    if(portaberta == LOW) alarmeDisparado = HIGH;
   }
 
   if (alarmeDisparado == HIGH) { 
     
     if(controleBitDisparado == LOW){
-        Serial2.write(2);
+        //Serial1.write(2);
         controleBitDisparado = HIGH;
     }
     
@@ -224,7 +188,6 @@ void loop() {
         digitalWrite(buzzerAlarme, LOW);
     }
   }
-
 
   //controle de led alarme com efeito fade
   if (alarmeDisparado == HIGH) {
@@ -241,23 +204,23 @@ void loop() {
   }
 
   //Recebe comando do PIC
-  if (Serial2.available()) {
-    
-    ByteRecebido = Serial2.read();
+  /*if (Serial1.available()) {
+    ByteRecebido = Serial1.read();
 
     if(ByteRecebido == 0) { //desativar alarme
       alarmeDisparado = LOW;
       alarmeAtivo = LOW;
-      aguardandoAtivacao = 0; // Cancela qualquer ativação pendente
+      aguardandoAtivacao = 0;
       digitalWrite(buzzerAlarme, LOW);
       controleBitDisparado = LOW;
     }
-    else if(ByteRecebido == 1) { //ativar o alarme - sem disparo
+    else if(ByteRecebido == 1) {
       alarmeAtivo = HIGH;
-      aguardandoAtivacao = 0; // Cancela qualquer ativação pendente
+      aguardandoAtivacao = 0;
     }
-    else if(ByteRecebido == 2){ //disparo do alarme
+    else if(ByteRecebido == 2){
       alarmeDisparado = HIGH;
     }
-  }
+  }*/
 }
+
