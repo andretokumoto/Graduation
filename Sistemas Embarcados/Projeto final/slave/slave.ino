@@ -69,7 +69,7 @@ void setup() {
   pinMode(ledPorta, OUTPUT);
   pinMode(buzzerAlarme, OUTPUT);
   Serial.begin(9600);
-  //Serial1.begin(9600);
+  Serial1.begin(9600);
 }
 
 void loop() {
@@ -174,7 +174,7 @@ void loop() {
   if (alarmeDisparado == HIGH) { 
     
     if(controleBitDisparado == LOW){
-        //Serial1.write(2);
+        Serial1.write(2);
         controleBitDisparado = HIGH;
     }
     
@@ -204,7 +204,7 @@ void loop() {
   }
 
   //Recebe comando do PIC
-  /*if (Serial1.available()) {
+  if (Serial1.available()) {
     ByteRecebido = Serial1.read();
 
     if(ByteRecebido == 0) { //desativar alarme
@@ -221,6 +221,6 @@ void loop() {
     else if(ByteRecebido == 2){
       alarmeDisparado = HIGH;
     }
-  }*/
+  }
 }
 
