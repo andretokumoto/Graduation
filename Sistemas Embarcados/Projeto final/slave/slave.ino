@@ -49,10 +49,10 @@ int alarmeAtivo = HIGH;
 int presencaDetectada = LOW;
 static String senhaEntrada = "";
 static String senhaSalva = "1234#";
-int contadorDeErros = 0;
 int pwmLedAlarme = 0;
 byte ByteRecebido;
 int portaberta = HIGH;
+int controleBitDisparado = LOW;
 
 Keypad teclado = Keypad(makeKeymap(teclas), pinosLinhas, pinosColunas, LINHAS, COLUNAS);
 
@@ -93,7 +93,7 @@ void loop() {
       
       if (statusBotao == LOW ) {
         portaberta = !portaberta;
-        if(alarmeAtivo == HIGH) {
+        if(alarmeAtivo == HIGH && portaberta == LOW) {
           presencaDetectada = HIGH;
         }
       }
@@ -107,11 +107,11 @@ void loop() {
   if (DetectaPresenca == HIGH) {
     if (alarmeAtivo == HIGH) {
       presencaDetectada = HIGH;
-      Serial2.write('p');
     }
   }
 
   if (presencaDetectada == HIGH && alarmeDisparado == LOW) {
+    
     digitalWrite(ledPedeSenha, HIGH);
     unsigned long currentMilli = millis();
 
@@ -172,16 +172,23 @@ void loop() {
   }
 
   if (alarmeDisparado == HIGH) { 
+    
+    if(controleBitDisparado == LOW){
+        Serial2.write(2);
+        controleBitDisparado = HIGH;
+    }
+    
     unsigned long currentMillis = millis();
     if (currentMillis - previousMilliBuzzer >= intervaloBuzzer) {
       previousMilliBuzzer = currentMillis;
       BuzzerStatus = !BuzzerStatus;
       digitalWrite(buzzerAlarme, BuzzerStatus);
     }
-  } else {
-    digitalWrite(buzzerAlarme, LOW);
-    contadorDeErros = 0;
+    else {
+        digitalWrite(buzzerAlarme, LOW);
+    }
   }
+
 
   //controle de led alarme com efeito fade
   if (alarmeDisparado == HIGH) {
@@ -199,22 +206,23 @@ void loop() {
 
   //Recebe comando do PIC
   if (Serial2.available()) {
+    
     ByteRecebido = Serial2.read();
-    delay(50);
 
-    if(ByteRecebido == '0') { //desativar alarme
+    if(ByteRecebido == 0) { //desativar alarme
       alarmeDisparado = LOW;
       alarmeAtivo = LOW;
-      contadorDeErros = 0;
       aguardandoAtivacao = 0; // Cancela qualquer ativação pendente
+      digitalWrite(buzzerAlarme, LOW);
+      controleBitDisparado = LOW;
     }
-    else if(ByteRecebido == '1') { //ativar o alarme - sem disparo
+    else if(ByteRecebido == 1) { //ativar o alarme - sem disparo
       alarmeAtivo = HIGH;
       aguardandoAtivacao = 0; // Cancela qualquer ativação pendente
     }
-    else { //disparo do alarme
+    else if(ByteRecebido == 2){ //disparo do alarme
       alarmeDisparado = HIGH;
-      Serial2.write('d');
+      //Serial2.write(2);
     }
   }
 }
