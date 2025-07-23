@@ -137,7 +137,7 @@ void loop() {
     else {
       alarmeDisparado = HIGH;
       digitalWrite(ledPedeSenha, LOW);
-      Serial2.write('d');
+      
     }
   }
 
@@ -222,7 +222,6 @@ void loop() {
     }
     else if(ByteRecebido == 2){ //disparo do alarme
       alarmeDisparado = HIGH;
-      //Serial2.write(2);
     }
   }
 }

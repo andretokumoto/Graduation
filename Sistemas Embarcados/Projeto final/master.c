@@ -20,7 +20,8 @@ sbit LCD_D4_Direction at TRISD4_bit;
 char recebido;
 char lastRecebido = 0;
 unsigned char ucStatus = 1;
-int AlarmeDisparado = 0;
+unsigned char controleBitDisparado = 0;
+
 
 // Variáveis para temporização e debounce
 unsigned int timerCounter = 0;
@@ -29,8 +30,21 @@ unsigned int lastRB1Time = 0;
 unsigned int lastRB2Time = 0;
 const unsigned int debounceDelay = 200; // ~200ms
 
+unsigned int buzzerLevel = 0;
+unsigned int buzzerFadeStep = 10;
+unsigned int buzzerMax = 1023;
+unsigned int lastBuzzerUpdate = 0;
+const unsigned int fadeDelay = 5; // ajuste para mais/menos velocidade do fade
+
+
 // Protótipo da função de interrupção
 void Interrupt();
+
+void setPWM(unsigned int value) {
+    if (value > 1023) value = 1023;
+    CCPR1L = value >> 2;
+    CCP1CON = (CCP1CON & 0xCF) | ((value & 0x03) << 4);
+}
 
 void main() {
     // Configuração de portas
@@ -58,6 +72,14 @@ void main() {
     // Inicializa USART para comunicação com Arduino
     UART1_Init(9600);       // Baud rate 9600
     Delay_ms(100);          // Espera estabilização
+
+        // Configura PWM no CCP1 (RC2)
+    TRISC.RC2 = 0;      // RC2 como saída
+    PR2 = 255;          // Período do PWM (ajustável)
+    CCPR1L = 0;         // Duty cycle inicial 0
+    CCP1CON = 0b00001100; // PWM mode
+    T2CON = 0x04;       // Timer2 ON, prescaler 1:1
+
 
     while (1) {
         // --- Controle do botão RB0 (Ativar Alarme) ---
@@ -114,14 +136,21 @@ void main() {
                 lastRecebido = recebido;
             }
         }
-        if(controleBitDisparado == 1){
 
+        if (timerCounter - lastBuzzerUpdate > fadeDelay) {
+            lastBuzzerUpdate = timerCounter;
 
-            //dispara buzzer
+            if (controleBitDisparado == 1 && buzzerLevel < buzzerMax) {
+                buzzerLevel += buzzerFadeStep;
+                if (buzzerLevel > buzzerMax) buzzerLevel = buzzerMax;
+                setPWM(buzzerLevel); // liga buzzer com fade-in
+            }
+            else if (controleBitDisparado == 0 && buzzerLevel != 0) {
+                buzzerLevel = 0;
+                setPWM(0); 
+            }
         }
-        else{
-            //para buzzer
-        }
+
 
     }
 }
