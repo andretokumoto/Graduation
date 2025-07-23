@@ -20,6 +20,7 @@ sbit LCD_D4_Direction at TRISD4_bit;
 char recebido;
 char lastRecebido = 0;
 unsigned char ucStatus = 1;
+int AlarmeDisparado = 0;
 
 // Variáveis para temporização e debounce
 unsigned int timerCounter = 0;
@@ -63,7 +64,7 @@ void main() {
         if (PORTB.RB0 == 0 && (timerCounter - lastRB0Time > debounceDelay)) {
             lastRB0Time = timerCounter;
 
-            UART1_Write('1');  // Envia comando para ativar
+            UART1_Write(1);  // Envia comando para ativar
             Lcd_Cmd(_LCD_CLEAR);
             Lcd_Out(1,1,"Alarme Ativado");
             Delay_ms(1000);
@@ -73,7 +74,8 @@ void main() {
         if (PORTB.RB1 == 0 && (timerCounter - lastRB1Time > debounceDelay)) {
             lastRB1Time = timerCounter;
 
-            UART1_Write('0');  // Envia comando para desativar
+            controleBitDisparado = 0;
+            UART1_Write(0);  // Envia comando para desativar
             Lcd_Cmd(_LCD_CLEAR);
             Lcd_Out(1,1,"Alarme Desativado");
             Delay_ms(1000);
@@ -83,9 +85,10 @@ void main() {
         if (PORTB.RB2 == 0 && (timerCounter - lastRB2Time > debounceDelay)) {
             lastRB2Time = timerCounter;
 
-            UART1_Write('2');  // Envia comando para disparar
-            Lcd_Cmd(_LCD_CLEAR);
-            Lcd_Out(1,1,"Alarme Disparado!");
+            UART1_Write(2);  // Envia comando para disparar
+            controleBitDisparado = 1;
+          //  Lcd_Cmd(_LCD_CLEAR);
+          //  Lcd_Out(1,1,"Alarme Disparado!");
             Delay_ms(1000);
         }
 
@@ -94,21 +97,32 @@ void main() {
             recebido = UART1_Read();
 
             if (lastRecebido != recebido) {
-                if (recebido == '2') {
+                if (recebido == 2) {
+
+                    controleBitDisparado = 1;
                     Lcd_Cmd(_LCD_CLEAR);
                     Lcd_Out(1,1,"ALARME DISPARADO!!");
                 }
-                else if (recebido == '3') {
+                else if (recebido == 3) {
                     Lcd_Cmd(_LCD_CLEAR);
                     Lcd_Out(1,1,"Presenca detectada");
                 }
-                else if (recebido == '4') {
+                else if (recebido == 4) {
                     Lcd_Cmd(_LCD_CLEAR);
                     Lcd_Out(1,1,"ALARME DESARMADO!!");
                 }
                 lastRecebido = recebido;
             }
         }
+        if(controleBitDisparado == 1){
+
+
+            //dispara buzzer
+        }
+        else{
+            //para buzzer
+        }
+
     }
 }
 
