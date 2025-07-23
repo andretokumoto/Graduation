@@ -1,13 +1,8 @@
-// Projeto final da UC de sistemas embarcados desenvolvido por André Filipe Siqueira Tokumoto
-
 #include <Key.h>
 #include <Keypad.h>
-#include <Wire.h>]
-#include <LiquidCrystal_I2C.h>
+#include <Wire.h>
 
-
-
-// teclado matricial
+// Configurações do teclado matricial
 const byte LINHAS = 4;
 const byte COLUNAS = 4;
 
@@ -22,29 +17,32 @@ byte pinosLinhas[LINHAS] = {2, 3, 4, 5};
 byte pinosColunas[COLUNAS] = {6, 7, 8, 9};
 
 // periféricos externos
-const int sensorPorta = 4; // Agora usando porta 4 da chave DIP
-const int sensorPreseca = 50;
+const int botaoPorta = 51;
+const int sensorPresenca = 50;
 const int ledAlarme = 12;
 const int ledPedeSenha = 13;
-const int ledAlarmeDesativado = 52;
 const int buzzerAlarme = 11;
+const int ledPorta = 52;
 
-// debounce e acionamento do sensorPorta
-unsigned long lastDebaunce = 0;
-unsigned long debaunceDelay = 50;
-int statusPorta = HIGH;
-int lastPortaSatus = LOW;
+// debounce e acionamento do botão
+unsigned long lastDebounce = 0;
+unsigned long debounceDelay = 50;
+int statusBotao = HIGH;      
+int lastBotaoStatus = LOW;
 
-// intervalo para disparo do alarme
+// intervalos de tempo
 unsigned long previousMilli = 0;
 unsigned long previousMilliAtivou = 0;
+unsigned long previousMilliTranca = 0;
+unsigned long tempoAtivacao = 0; // Variável para controle do tempo de ativação
 const long intervalo = 15000;
-
 const long intervaloBuzzer = 1000;
+const long tempoEsperaAtivacao = 5000; // 5 segundos para ativação
 unsigned long previousMilliBuzzer = 0;
 int BuzzerStatus = LOW;
 int alarmeDisparado = LOW;
 int lastStatusAlarme = LOW;
+int aguardandoAtivacao = 0; // Flag para indicar que está no período de ativação
 
 // variáveis diversas
 int alarmeAtivo = HIGH;
@@ -54,12 +52,9 @@ static String senhaSalva = "1234#";
 int contadorDeErros = 0;
 int pwmLedAlarme = 0;
 byte ByteRecebido;
-int controleDeteccao = 0;
+int portaberta = HIGH;
 
 Keypad teclado = Keypad(makeKeymap(teclas), pinosLinhas, pinosColunas, LINHAS, COLUNAS);
-
-// LCD I2C
-LiquidCrystal_I2C lcd(0x27, 16, 2); // Endereço 0x27, LCD 16x2
 
 int brilho = 0;
 int incremento = 5;
@@ -67,108 +62,116 @@ unsigned long ultimoTempoFade = 0;
 unsigned long intervaloFade = 10;
 
 void setup() {
-  pinMode(sensorPorta, INPUT_PULLUP); // <- Usando pull-up interno
-  pinMode(sensorPreseca, INPUT);
+  pinMode(botaoPorta, INPUT_PULLUP);
+  pinMode(sensorPresenca, INPUT);
   pinMode(ledAlarme, OUTPUT);
   pinMode(ledPedeSenha, OUTPUT);
-  pinMode(ledAlarmeDesativado, OUTPUT);
-  pinMode(buzzerAlarme, OUTPUT); 
+  pinMode(ledPorta, OUTPUT);
+  pinMode(buzzerAlarme, OUTPUT);
   Serial.begin(9600);
-  Serial2.begin(9600);   // UART2 para comunicação com o PIC
-
-  // Inicializa o LCD
-  lcd.init();
-  lcd.backlight();
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Senha: ");
+  Serial2.begin(9600);
 }
 
 void loop() {
-  int DetectaSensorPorta = digitalRead(sensorPorta);
-  int DetectaPresenca = digitalRead(sensorPreseca);
+  
+  digitalWrite(ledPorta, portaberta);
 
-  if(alarmeAtivo == LOW){
-    digitalWrite(ledAlarmeDesativado,HIGH);
+  if(alarmeDisparado == LOW){
+    digitalWrite(ledAlarme,alarmeAtivo);
   }
 
-  if(alarmeAtivo == HIGH){
-    digitalWrite(ledAlarmeDesativado,LOW);
+  int estadoBotao = digitalRead(botaoPorta);
+
+  // Detecta mudança no estado do botão (porta)
+  if (estadoBotao != lastBotaoStatus) {
+    lastDebounce = millis();
   }
 
-  if (DetectaSensorPorta != statusPorta) {
-    lastDebaunce = millis();
-    statusPorta = DetectaSensorPorta;
-    if (statusPorta == LOW) {  // Invertido devido ao INPUT_PULLUP
-      if (alarmeAtivo == HIGH) presencaDetectada = HIGH;
+  if ((millis() - lastDebounce) > debounceDelay) {
+    if (estadoBotao != statusBotao) {
+      statusBotao = estadoBotao;
+      
+      if (statusBotao == LOW ) {
+        portaberta = !portaberta;
+        if(alarmeAtivo == HIGH) {
+          presencaDetectada = HIGH;
+        }
+      }
     }
   }
 
-  if (DetectaPresenca == HIGH && controleDeteccao==0) {
+  lastBotaoStatus = estadoBotao;
+
+  int DetectaPresenca = digitalRead(sensorPresenca);
+
+  if (DetectaPresenca == HIGH) {
     if (alarmeAtivo == HIGH) {
       presencaDetectada = HIGH;
       Serial2.write('p');
-      controleDeteccao = 1;
     }
   }
 
   if (presencaDetectada == HIGH && alarmeDisparado == LOW) {
-
-
-
     digitalWrite(ledPedeSenha, HIGH);
-    unsigned long courrentMilli = millis();
+    unsigned long currentMilli = millis();
 
-    if (courrentMilli - previousMilli <= intervalo) {
+    if (currentMilli - previousMilli <= intervalo) {
       char tecla = teclado.getKey();
       if (tecla) {
         senhaEntrada += tecla;
-
-        lcd.setCursor(0, 1);
-        lcd.print("            ");
-
-        lcd.setCursor(0, 0);
-        lcd.print("Senha: ");
-        lcd.print(senhaEntrada);
-        int espacosRestantes = 10 - senhaEntrada.length();
-        for (int i = 0; i < espacosRestantes; i++) lcd.print(" ");
+        Serial.println(senhaEntrada);
 
         if (tecla == '#') {
           if (senhaEntrada == senhaSalva) {
-            if (alarmeAtivo == HIGH) {
-              alarmeAtivo = LOW;
-              presencaDetectada = LOW;
-              senhaEntrada = "";
-              digitalWrite(ledPedeSenha, LOW);
-              analogWrite(ledAlarme,0);
-              lcd.setCursor(0, 1);
-              lcd.print("Alarme desativado ");
-              Serial.println("desativado");
-            } else {
-              alarmeAtivo = HIGH;
-              lcd.setCursor(0, 1);
-              lcd.print("Alarme Ativo ");
-            }
-          } else {
+            alarmeAtivo = LOW;
+            presencaDetectada = LOW;
             senhaEntrada = "";
-            contadorDeErros++;
-            lcd.setCursor(0, 1);
-            lcd.print("Senha incorreta   ");
+            digitalWrite(ledPedeSenha, LOW);
+          } 
+          else {
+            senhaEntrada = "";
           }
-
-          lcd.setCursor(0, 0);
-          lcd.print("Senha:            ");
         }
       }
-    } else {
+    } 
+    else {
       alarmeDisparado = HIGH;
       digitalWrite(ledPedeSenha, LOW);
       Serial2.write('d');
     }
   }
 
-  if (alarmeDisparado == HIGH) {
-    //Serial.println("alarme disparado"); 
+  // Verificação de senha quando alarme está desativado
+  if (alarmeAtivo == LOW) {
+    char tecla = teclado.getKey();
+    if (tecla) {
+      senhaEntrada += tecla;
+      Serial.println(senhaEntrada);
+
+      if (tecla == '#') {
+        if (senhaEntrada == senhaSalva) {
+          // Inicia o processo de ativação com temporizador
+          tempoAtivacao = millis();
+          aguardandoAtivacao = 1;
+          senhaEntrada = "";
+         // Serial.println("Aguardando 5 segundos para ativar alarme");
+        } 
+        else {
+          senhaEntrada = "";
+        }
+      }
+    } 
+  }
+
+  // Verifica se passaram os 5 segundos de ativação
+  if (aguardandoAtivacao && (millis() - tempoAtivacao >= tempoEsperaAtivacao)) {
+    alarmeAtivo = HIGH;
+    presencaDetectada = LOW;
+    aguardandoAtivacao = 0;
+ 
+  }
+
+  if (alarmeDisparado == HIGH) { 
     unsigned long currentMillis = millis();
     if (currentMillis - previousMilliBuzzer >= intervaloBuzzer) {
       previousMilliBuzzer = currentMillis;
@@ -180,63 +183,36 @@ void loop() {
     contadorDeErros = 0;
   }
 
+  //controle de led alarme com efeito fade
   if (alarmeDisparado == HIGH) {
     unsigned long tempoAtual = millis();
     if (tempoAtual - ultimoTempoFade >= intervaloFade) {
       ultimoTempoFade = tempoAtual;
       analogWrite(ledAlarme, brilho);
       brilho += incremento;
+  
       if (brilho <= 0 || brilho >= 255) {
         incremento = -incremento;
       }
     }
   }
 
-  if (contadorDeErros >= 3) {
-    alarmeDisparado = HIGH;
-    Serial2.write('d');
-  }
-
-  if (alarmeAtivo == HIGH && alarmeDisparado == LOW) {
-    analogWrite(ledAlarme,255);
-  }
-
-  if (lastStatusAlarme != alarmeAtivo) {
-    if (alarmeAtivo == HIGH && DetectaSensorPorta == LOW) {  // Invertido para pull-up
-      unsigned long currentMilliAtivou = millis();
-      if (currentMilliAtivou - previousMilliAtivou <= intervalo) {
-        lcd.setCursor(0, 1);
-        lcd.print("Alarme Ativo");
-      } else {
-        alarmeDisparado = HIGH;
-        Serial2.write('d');
-      }
-    } 
-    if(alarmeAtivo == LOW){
-      controleDeteccao = 0;
-    }
-
-    lastStatusAlarme = alarmeAtivo;
-  }
-
+  //Recebe comando do PIC
   if (Serial2.available()) {
     ByteRecebido = Serial2.read();
     delay(50);
 
-    Serial.print("recebido: ");
-    Serial.println(ByteRecebido);
-
-    if (ByteRecebido == 0) {
+    if(ByteRecebido == '0') { //desativar alarme
       alarmeDisparado = LOW;
       alarmeAtivo = LOW;
       contadorDeErros = 0;
-      lcd.setCursor(0, 1);
-      lcd.print("Alarme Desativado");
+      aguardandoAtivacao = 0; // Cancela qualquer ativação pendente
     }
-    else if (ByteRecebido == 1) {
+    else if(ByteRecebido == '1') { //ativar o alarme - sem disparo
       alarmeAtivo = HIGH;
+      aguardandoAtivacao = 0; // Cancela qualquer ativação pendente
     }
-    else {
+    else { //disparo do alarme
       alarmeDisparado = HIGH;
       Serial2.write('d');
     }
