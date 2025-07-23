@@ -116,7 +116,26 @@ void loop() {
     unsigned long currentMilli = millis();
 
     if (currentMilli - previousMilli <= intervalo) {
-      char tecla = teclado.getKey();
+      
+        if (Serial.available()) {
+            senhaEntrada = Serial.readStringUntil('\n');
+            senhaEntrada.trim();
+            delay(50);
+            
+            if (senhaEntrada == senhaSalva) {
+              alarmeAtivo = LOW;
+              presencaDetectada = LOW;
+              senhaEntrada = "";
+              digitalWrite(ledPedeSenha, LOW);
+            } 
+            else {
+              senhaEntrada = "";
+            }
+        }
+      
+      
+      
+      /*char tecla = teclado.getKey();
       if (tecla) {
         senhaEntrada += tecla;
         Serial.println(senhaEntrada);
@@ -132,7 +151,7 @@ void loop() {
             senhaEntrada = "";
           }
         }
-      }
+      }*/
     } 
     else {
       alarmeDisparado = HIGH;
@@ -143,7 +162,7 @@ void loop() {
 
   // Verificação de senha quando alarme está desativado
   if (alarmeAtivo == LOW) {
-    char tecla = teclado.getKey();
+/*    char tecla = teclado.getKey();
     if (tecla) {
       senhaEntrada += tecla;
       Serial.println(senhaEntrada);
@@ -160,7 +179,24 @@ void loop() {
           senhaEntrada = "";
         }
       }
-    } 
+    }*/
+   
+        if (Serial.available()) {
+            senhaEntrada = Serial.readStringUntil('\n');
+            senhaEntrada.trim();
+            delay(50);
+            
+            if (senhaEntrada == senhaSalva) {
+              // Inicia o processo de ativação com temporizador
+              tempoAtivacao = millis();
+              aguardandoAtivacao = 1;
+              senhaEntrada = "";
+             // Serial.println("Aguardando 5 segundos para ativar alarme");
+            } 
+            else {
+              senhaEntrada = "";
+            }
+        }    
   }
 
   // Verifica se passaram os 5 segundos de ativação
