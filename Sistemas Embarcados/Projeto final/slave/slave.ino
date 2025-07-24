@@ -1,24 +1,6 @@
-//#include <Key.h>
-//#include <Keypad.h>
-#include <Wire.h>
-
-// Configurações do teclado matricial
-/*const byte LINHAS = 4;
-const byte COLUNAS = 4;
-
-char teclas[LINHAS][COLUNAS] = {
-  {'1','2','3','A'},
-  {'4','5','6','B'},
-  {'7','8','9','C'},
-  {'*','0','#','D'}
-};
-
-byte pinosLinhas[LINHAS] = {2, 3, 4, 5};
-byte pinosColunas[COLUNAS] = {6, 7, 8, 9};*/
-
 // periféricos externos
 const int botaoPorta = 2;
-const int sensorPresenca = 50;
+const int sensorPresenca = 4;
 const int ledAlarme = 12;
 const int ledPedeSenha = 13;
 const int buzzerAlarme = 11;
@@ -32,34 +14,27 @@ int lastBotaoStatus = LOW;
 
 // intervalos de tempo
 unsigned long previousMilli = 0;
-unsigned long previousMilliAtivou = 0;
-unsigned long previousMilliTranca = 0;
-unsigned long tempoAtivacao = 0; // Variável para controle do tempo de ativação
+unsigned long tempoAtivacao = 0; 
 const long intervalo = 15000;
-const long intervaloBuzzer = 1000;
-const long tempoEsperaAtivacao = 5000; // 5 segundos para ativação
-unsigned long previousMilliBuzzer = 0;
-int BuzzerStatus = LOW;
+const long tempoEsperaAtivacao = 5000; 
+
 int alarmeDisparado = LOW;
-int lastStatusAlarme = LOW;
-int aguardandoAtivacao = 0; // Flag para indicar que está no período de ativação
+int aguardandoAtivacao = 0;
 
 // variáveis diversas
 int alarmeAtivo = HIGH;
 int presencaDetectada = LOW;
 static String senhaEntrada = "";
 static String senhaSalva = "1234#";
-int pwmLedAlarme = 0;
 byte ByteRecebido;
 int portaberta = HIGH;
 int controleBitDisparado = LOW;
-
-//Keypad teclado = Keypad(makeKeymap(teclas), pinosLinhas, pinosColunas, LINHAS, COLUNAS);
 
 int brilho = 0;
 int incremento = 5;
 unsigned long ultimoTempoFade = 0;
 unsigned long intervaloFade = 10;
+int desarme = LOW;
 
 void setup() {
   pinMode(botaoPorta, INPUT_PULLUP);
@@ -69,20 +44,27 @@ void setup() {
   pinMode(ledPorta, OUTPUT);
   pinMode(buzzerAlarme, OUTPUT);
   Serial.begin(9600);
-  Serial1.begin(9600);
+  Serial2.begin(9600);
 }
 
 void loop() {
-  
   digitalWrite(ledPorta, portaberta);
 
-  if(alarmeDisparado == LOW){
-    digitalWrite(ledAlarme,alarmeAtivo);
+  if (alarmeDisparado == LOW) {
+    digitalWrite(ledAlarme, alarmeAtivo);
   }
 
   int estadoBotao = digitalRead(botaoPorta);
 
-  // Detecta mudança no estado do botão (porta)
+  if(desarme == HIGH){
+
+    alarmeAtivo == LOW;
+    alarmeDisparado = LOW;
+    presencaDetectada = LOW;
+
+    desarme = LOW;
+  }
+
   if (estadoBotao != lastBotaoStatus) {
     lastDebounce = millis();
   }
@@ -90,20 +72,17 @@ void loop() {
   if ((millis() - lastDebounce) > debounceDelay) {
     if (estadoBotao != statusBotao) {
       statusBotao = estadoBotao;
-      
-      if (statusBotao == LOW ) {
+      if (statusBotao == LOW) {
         portaberta = !portaberta;
-        if(alarmeAtivo == HIGH && portaberta == LOW) {
+        if (alarmeAtivo == HIGH && portaberta == LOW) {
           presencaDetectada = HIGH;
         }
       }
     }
   }
-
   lastBotaoStatus = estadoBotao;
 
   int DetectaPresenca = digitalRead(sensorPresenca);
-
   if (DetectaPresenca == HIGH) {
     if (alarmeAtivo == HIGH) {
       presencaDetectada = HIGH;
@@ -111,114 +90,113 @@ void loop() {
   }
 
   if (presencaDetectada == HIGH && alarmeDisparado == LOW) {
-    
     digitalWrite(ledPedeSenha, HIGH);
     unsigned long currentMilli = millis();
 
     if (currentMilli - previousMilli <= intervalo) {
-      
-        if (Serial.available()) {
-            senhaEntrada = Serial.readStringUntil('\n');
-            senhaEntrada.trim();
-            delay(50);
-            
-            if (senhaEntrada == senhaSalva) {
-              alarmeAtivo = LOW;
-              presencaDetectada = LOW;
-              senhaEntrada = "";
-              digitalWrite(ledPedeSenha, LOW);
-            } 
-            else {
-              senhaEntrada = "";
-            }
-        }
+      if (Serial.available()) {
+        senhaEntrada = Serial.readStringUntil('\n');
+        senhaEntrada.trim();
+        delay(50);
 
-   
-    } 
-    else {
+        if (senhaEntrada == senhaSalva) {
+          alarmeAtivo = LOW;
+          Serial2.write(4);
+          presencaDetectada = LOW;
+          senhaEntrada = "";
+          digitalWrite(ledPedeSenha, LOW);
+        } 
+        else {
+          senhaEntrada = "";
+        }
+      }
+    } else {
       alarmeDisparado = HIGH;
       digitalWrite(ledPedeSenha, LOW);
     }
   }
 
-  // Verificação de senha quando alarme está desativado
+
   if (alarmeAtivo == LOW) {
-
-
     if (Serial.available()) {
       senhaEntrada = Serial.readStringUntil('\n');
       senhaEntrada.trim();
       delay(50);
-      
+
       if (senhaEntrada == senhaSalva) {
         tempoAtivacao = millis();
         previousMilli = millis(); 
         aguardandoAtivacao = 1;
         senhaEntrada = "";
-      } 
-      else {
+      } else {
         senhaEntrada = "";
       }
-    }    
+    }
   }
 
-  // Verifica se passaram os 5 segundos de ativação
+
   if (aguardandoAtivacao && (millis() - tempoAtivacao >= tempoEsperaAtivacao)) {
     alarmeAtivo = HIGH;
     presencaDetectada = LOW;
     aguardandoAtivacao = 0;
-    
-    if(portaberta == LOW) alarmeDisparado = HIGH;
+    Serial2.write(3);
+
+    if (portaberta == LOW) alarmeDisparado = HIGH;
   }
 
-  if (alarmeDisparado == HIGH) { 
-    
-    if(controleBitDisparado == LOW){
-        Serial1.write(2);
-        controleBitDisparado = HIGH;
+
+  if (alarmeDisparado == HIGH) {
+    if (controleBitDisparado == LOW) {
+      Serial2.write(2);
+      controleBitDisparado = HIGH;
     }
-    
-    unsigned long currentMillis = millis();
-    if (currentMillis - previousMilliBuzzer >= intervaloBuzzer) {
-      previousMilliBuzzer = currentMillis;
-      BuzzerStatus = !BuzzerStatus;
-      digitalWrite(buzzerAlarme, BuzzerStatus);
-    }
-    else {
-        digitalWrite(buzzerAlarme, LOW);
-    }
+    digitalWrite(buzzerAlarme, HIGH);  
+  } else {
+    digitalWrite(buzzerAlarme, LOW);   
+    controleBitDisparado = LOW;
   }
 
-  //controle de led alarme com efeito fade
   if (alarmeDisparado == HIGH) {
     unsigned long tempoAtual = millis();
     if (tempoAtual - ultimoTempoFade >= intervaloFade) {
       ultimoTempoFade = tempoAtual;
       analogWrite(ledAlarme, brilho);
       brilho += incremento;
-  
       if (brilho <= 0 || brilho >= 255) {
         incremento = -incremento;
       }
     }
   }
 
-  //Recebe comando do PIC
-  if (Serial1.available()) {
-    ByteRecebido = Serial1.read();
 
-    if(ByteRecebido == 0) { //desativar alarme
+  if (Serial2.available()) {
+ 
+    ByteRecebido = Serial2.read();
+    
+
+    if (ByteRecebido == 0) { 
+
+      desarme = HIGH;
       alarmeDisparado = LOW;
       alarmeAtivo = LOW;
       aguardandoAtivacao = 0;
       digitalWrite(buzzerAlarme, LOW);
       controleBitDisparado = LOW;
+
+      Serial.print("alarme desarmado");
+      Serial.println(alarmeDisparado);
+
+    } 
+    else if (ByteRecebido == 1) {
+
+      Serial.print("alarme armado");
+
+      tempoAtivacao = millis();
+      previousMilli = millis(); 
+      aguardandoAtivacao = 1;
+
     }
-    else if(ByteRecebido == 1) {
-      alarmeAtivo = HIGH;
-      aguardandoAtivacao = 0;
-    }
-    else if(ByteRecebido == 2){
+     else if (ByteRecebido == 2) {
       alarmeDisparado = HIGH;
     }
   }
