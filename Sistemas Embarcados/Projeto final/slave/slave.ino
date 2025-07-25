@@ -1,4 +1,6 @@
-// periféricos externos
+//trabalho final de sistemas embarcados desenvolvido por André Filipe Siqueira Tokumoto
+
+
 const int botaoPorta = 2;
 const int sensorPresenca = 4;
 const int ledAlarme = 12;
@@ -6,13 +8,13 @@ const int ledPedeSenha = 13;
 const int buzzerAlarme = 11;
 const int ledPorta = 7;
 
-// debounce e acionamento do botão
+
 unsigned long lastDebounce = 0;
 unsigned long debounceDelay = 50;
 int statusBotao = HIGH;      
 int lastBotaoStatus = LOW;
 
-// intervalos de tempo
+
 unsigned long previousMilli = 0;
 unsigned long tempoAtivacao = 0; 
 const long intervalo = 15000;
@@ -21,7 +23,7 @@ const long tempoEsperaAtivacao = 5000;
 int alarmeDisparado = LOW;
 int aguardandoAtivacao = 0;
 
-// variáveis diversas
+
 int alarmeAtivo = HIGH;
 int presencaDetectada = LOW;
 static String senhaEntrada = "";
