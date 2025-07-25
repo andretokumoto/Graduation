@@ -76,6 +76,7 @@ void loop() {
         portaberta = !portaberta;
         if (alarmeAtivo == HIGH && portaberta == LOW) {
           presencaDetectada = HIGH;
+          previousMilli = millis(); 
         }
       }
     }
@@ -86,6 +87,7 @@ void loop() {
   if (DetectaPresenca == HIGH) {
     if (alarmeAtivo == HIGH) {
       presencaDetectada = HIGH;
+      previousMilli = millis(); 
     }
   }
 
@@ -125,7 +127,6 @@ void loop() {
 
       if (senhaEntrada == senhaSalva) {
         tempoAtivacao = millis();
-        previousMilli = millis(); 
         aguardandoAtivacao = 1;
         senhaEntrada = "";
       } else {
@@ -192,7 +193,6 @@ void loop() {
       Serial.print("alarme armado");
 
       tempoAtivacao = millis();
-      previousMilli = millis(); 
       aguardandoAtivacao = 1;
 
     }
