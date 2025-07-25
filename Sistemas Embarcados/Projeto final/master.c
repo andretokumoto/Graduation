@@ -28,7 +28,6 @@ unsigned char rb2Travado = 0;
 unsigned char pwmValue = 0;
 unsigned char fadeDirection = 1;
 
-void Interrupt();
 
 void main() {
     ADCON1 = 0x0E;
@@ -37,16 +36,8 @@ void main() {
     TRISB.RB2 = 1;
     INTCON2.RBPU = 0;
 
-
     TRISD = 0x00;
     PORTD = 0x00;
-
-
-    T0CON = 0xC7;
-    TMR0H = 0x00;
-    TMR0L = 0x00;
-    INTCON.TMR0IE = 1;
-    INTCON.GIE = 1;
 
     PWM1_Init(5000);
     PWM1_Start();
@@ -142,10 +133,3 @@ void main() {
     }
 }
 
-void Interrupt() {
-    if (INTCON.TMR0IF) {
-        INTCON.TMR0IF = 0;
-        TMR0H = 0x00;
-        TMR0L = 0x00;
-    }
-}
