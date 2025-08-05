@@ -81,7 +81,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 		//bios ---------------------------------------------------------------			
 			memoria[32'd0] = {cproc,26'd0};					  //cproc rzero
-			memoria[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
+			memoria[32'd1] = {cproc,26'd5};					  // apenas teste retirar
+			/*memoria[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
 			memoria[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd0};// movi r1, 0
 			memoria[32'd3] = {6'b011010,5'd2,5'd0,5'd0,11'd0};// movi r2, 0
 			memoria[32'd4] = {6'b011010,5'd3,5'd0,5'd0,11'd0};// movi r3, 0
@@ -123,11 +124,11 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 //---------------------------SO---------------------------------------------------
 	
 
-			memoria[32'd37] = {j,endMenu};//jump menu
+			/*memoria[32'd37] = {j,endMenu};//jump menu
 		//------------------------------------mudança contexto-----------
 			//-----------salva contexto--------
 			memoria[32'd38] = {cproc,RZERO,RZERO,RZERO,11'd0};//muda processo para SO
-			memoria[32'd39] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
+   		memoria[32'd39] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
 			memoria[32'd40] = {movi,R21,RZERO,RZERO,11'd13};//movi r21, 13
 			memoria[32'd41] = {lw,R22,R20,RZERO,11'd1};//lw r22, 1(r20)//puxa numero do processo atual
 			memoria[32'd42] = {multi,R22,R22,R22,11'd300};//multi r22, r22, 200
@@ -445,7 +446,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd308] = {6'b010001,5'd0,5'd0,5'd0,11'd4};//j linha 4
 		memoria[32'd309] = {6'b011000,5'd3,5'd3,5'd3,11'd0};//sw r3,0(r0)
 		memoria[32'd310] = {6'b100111,5'd3,5'd3,5'd0,11'd0};//outproc
-
+*/
 //potencia de 2
 		/*memoria[32'd600] = {6'b011010,5'b11010,5'b00000,16'd1};
 		memoria[32'd601] = {6'b011010,5'b11011,5'b00000,16'd30};

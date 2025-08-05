@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/11/2024 20:13:45"
+// Generated on "08/05/2025 10:24:43"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          CPU
 // 
@@ -35,6 +35,7 @@ reg clock;
 reg [3:0] entradaDeDadosIO;
 reg reset;
 // wires                                               
+wire [31:0] Testeprocesso_atual;
 wire [6:0] centena;
 wire [1:0] controlIO;
 wire [6:0] dezena;
@@ -42,11 +43,15 @@ wire [4:0] enRD;
 wire [4:0] enRS;
 wire [4:0] enRT;
 wire halt;
-wire [3:0] testeD;
+wire ledin;
+wire ledmenu;
+wire lednumprocessos;
+wire ledprocesso;
 wire [31:0] testeIN;
 wire [31:0] testeImediato;
+wire [25:0] testeJump;
 wire [31:0] testeMux;
-wire [31:0] testeOP;
+wire [5:0] testeOPCODE;
 wire [31:0] testePC;
 wire [31:0] testeRS;
 wire [31:0] testeReg;
@@ -54,13 +59,18 @@ wire [2:0] testeSelMux;
 wire testeSinal;
 wire testeStatus;
 wire [31:0] testeUla;
+wire testedesvio;
 wire [31:0] testeout;
-wire testepulso;
+wire [3:0] testesaidaCent;
+wire [3:0] testesaidaDez;
+wire [3:0] testesaidaUNI;
+wire [6:0] uniProc;
 wire [6:0] unidade;
 
 // assign statements (if any)                          
 CPU i1 (
 // port map - connection between master ports and signals/registers   
+	.Testeprocesso_atual(Testeprocesso_atual),
 	.botaoPlaca(botaoPlaca),
 	.centena(centena),
 	.clock(clock),
@@ -71,12 +81,16 @@ CPU i1 (
 	.enRT(enRT),
 	.entradaDeDadosIO(entradaDeDadosIO),
 	.halt(halt),
+	.ledin(ledin),
+	.ledmenu(ledmenu),
+	.lednumprocessos(lednumprocessos),
+	.ledprocesso(ledprocesso),
 	.reset(reset),
-	.testeD(testeD),
 	.testeIN(testeIN),
 	.testeImediato(testeImediato),
+	.testeJump(testeJump),
 	.testeMux(testeMux),
-	.testeOP(testeOP),
+	.testeOPCODE(testeOPCODE),
 	.testePC(testePC),
 	.testeRS(testeRS),
 	.testeReg(testeReg),
@@ -84,8 +98,12 @@ CPU i1 (
 	.testeSinal(testeSinal),
 	.testeStatus(testeStatus),
 	.testeUla(testeUla),
+	.testedesvio(testedesvio),
 	.testeout(testeout),
-	.testepulso(testepulso),
+	.testesaidaCent(testesaidaCent),
+	.testesaidaDez(testesaidaDez),
+	.testesaidaUNI(testesaidaUNI),
+	.uniProc(uniProc),
 	.unidade(unidade)
 );
 initial 
@@ -93,44 +111,18 @@ begin
 #1000000 $finish;
 end 
 
-// botaoPlaca
+// reset
 initial
 begin
-	botaoPlaca = 1'b0;
+	reset = 1'b0;
 end 
 
 // clock
 always
 begin
 	clock = 1'b0;
-	clock = #10000 1'b1;
-	#10000;
-end 
-// entradaDeDadosIO[ 3 ]
-initial
-begin
-	entradaDeDadosIO[3] = 1'b0;
-end 
-// entradaDeDadosIO[ 2 ]
-initial
-begin
-	entradaDeDadosIO[2] = 1'b0;
-end 
-// entradaDeDadosIO[ 1 ]
-initial
-begin
-	entradaDeDadosIO[1] = 1'b0;
-end 
-// entradaDeDadosIO[ 0 ]
-initial
-begin
-	entradaDeDadosIO[0] = 1'b0;
-end 
-
-// reset
-initial
-begin
-	reset = 1'b0;
+	clock = #50000 1'b1;
+	#50000;
 end 
 endmodule
 

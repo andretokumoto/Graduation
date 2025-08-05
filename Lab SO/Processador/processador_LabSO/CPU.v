@@ -1,4 +1,4 @@
-module CPU(reset,clock,botaoPlaca,entradaDeDadosIO,unidade,dezena,centena,biosEmExecucao,halt,ledmenu,lednumprocessos,ledprocesso,ledin,uniProc,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOPCODE,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent);
+module CPU(reset,clock,botaoPlaca,entradaDeDadosIO,unidade,dezena,centena,halt,ledmenu,lednumprocessos,ledprocesso,ledin,uniProc,enRD,enRS,enRT,testeMux,testeImediato,testeSelMux,testeRS,testeOPCODE,testePC,testeUla,testeReg,testedesvio,testeIN,testeStatus,testeSinal,testeout,controlIO,testeJump,testesaidaUNI,testesaidaDez,testesaidaCent,Testeprocesso_atual);
 
 input clock,botaoPlaca,reset;
 input [3:0] entradaDeDadosIO;
@@ -46,9 +46,9 @@ wire [31:0] pc_contexto;
 wire InstrucaIO,fimProcesso;
 output wire [6:0] unidade,dezena,centena,uniProc;
 
-output wire halt,biosEmExecucao;
+output wire halt;
 output reg ledmenu,lednumprocessos,ledprocesso,ledin;
-output reg [31:0]testePC,testeReg,testeImediato;
+output reg [31:0]testePC,testeReg,testeImediato,Testeprocesso_atual;
 output wire testedesvio;
 output wire [1:0] controlIO;
 output wire testeStatus,testeSinal;
@@ -163,7 +163,7 @@ assign testeOPCODE = opcode;
  always@(posedge clk or posedge reset)
   begin
        	 
-			testePC = pc;
+			
 		//atualização de pc
 		
 		
@@ -190,7 +190,7 @@ assign testeOPCODE = opcode;
 					
 			      end	
 			  end
-
+				testePC = pc;
   end
  //****************************************************************************************************************************************************************************************************************** 
   always@(pc)
@@ -204,7 +204,8 @@ assign testeOPCODE = opcode;
 	begin
 		if(mudaProcesso==1'b1) 
 			begin
-				processo_atual = rs;
+				processo_atual = imediatoExtendido;
+				Testeprocesso_atual = processo_atual;
 			end
 	end
  //************************************************************************************************************************************************************************************************************* 
