@@ -213,6 +213,7 @@ assign testeOPCODE = opcode;
   begin
   
     imediatoExtendido = {21'b000000000000000000000,imediato};
+	 testeImediato = imediatoExtendido;
     
   end
   

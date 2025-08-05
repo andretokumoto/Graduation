@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dC:/Users/Acer/Documents/processadorLSO/simulation/qsim
 vCPU
-Z1 !s110 1754400290
+Z1 !s110 1754404242
 !i10b 1
-!s100 LU>ombceE3;03ziCC5Cb;1
+!s100 _TWa[F4>@d7n;=dBG[Kde1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IoJ87]]GWd7;3WEmC16B9m3
+I1:bC3URTjJ7@3JfC3U:N^1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 dC:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim
-Z5 w1754400285
+Z5 w1754404238
 Z6 8processadorAOC.vo
 Z7 FprocessadorAOC.vo
-!i122 120
-L0 32 10899
+!i122 126
+L0 32 91053
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1754400288.000000
+Z9 !s108 1754404241.000000
 Z10 !s107 processadorAOC.vo|
 Z11 !s90 -work|work|processadorAOC.vo|
 !i113 1
@@ -34,25 +34,25 @@ Z12 o-work work
 Z13 tCvgOpt 0
 n@c@p@u
 vCPU_vlg_vec_tst
-R1
+!s110 1754404243
 !i10b 1
-!s100 ?_U=>OTK>jYK7kZ9W_JE^1
+!s100 2g<Gz`42ZR4nm`B?gL5aA1
 R2
-IAS_494nLhd@`e3:<O`bkg3
+I]V3fBY:8SCzEB_R9XEUNi1
 R3
 R4
-w1754400283
-8Waveform1.vwf.vt
-FWaveform1.vwf.vt
-!i122 121
-L0 30 98
+w1754404236
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 127
+L0 30 118
 R8
 r1
 !s85 0
 31
-!s108 1754400290.000000
-!s107 Waveform1.vwf.vt|
-!s90 -work|work|Waveform1.vwf.vt|
+!s108 1754404242.000000
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
 !i113 1
 R12
 R13
@@ -108,16 +108,16 @@ n@gerenciador_memoria_vlg_vec_tst
 vhard_block
 R1
 !i10b 1
-!s100 OEKn9Chc37c0`[aFlV3`R1
+!s100 4:C5DAJZKSW[B0GChG1GW1
 R2
-I>IGYZM>Ycj;jHFZzFoaIa0
+IDcF<BV792GPRZ4Z6E:`iC2
 R3
 R4
 R5
 R6
 R7
-!i122 120
-L0 10932 34
+!i122 126
+L0 91086 34
 R8
 r1
 !s85 0

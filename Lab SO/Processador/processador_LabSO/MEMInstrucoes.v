@@ -34,55 +34,20 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
     //selecionar a instrução (BIOS ou memória principal)
     always @(pc) begin
-       // if(executaBios == 2'b01) begin
-            //instrucao = Bios[pc];
-       // end
-       // else begin
             instrucao = memoria[pc];
-        //end
     end
 
-	 //funçao de puxar algoritmo do hd para memoria de instruções
-	/*always@(negedge clock)
-		begin
-			
-			//puxar do hd para memória - salva na memória de instrução
-			if(controleSalvaInstrucao == 2'b01 && ControleFimDeLeitura == 2'b00) 
-				begin
-					memoria[cursorDePosicao] = entradaDeInstrucao;
-				end
 
-			if(ControleFimDeLeitura == 2'b01)
-				begin
-					cursorDePosicao = cursorDePosicao + TAM_BLOCO;//os blocos de processos são fixos em 150 posições
-				end
-			
-			
-		end*/
-	 
   
     always@(negedge clock || reset)                           
     begin 
-       /* if(reset == 1'b1) begin
-            executaBios <= 2'b01; // Executa a bios
-				//cursorDePosicao = 15'd0;//zera cursor
-        end
-        else if(encerrarBios == 1'b1) begin
-            executaBios <= 2'b00; // Encerra a bios
-        end*/
 
-		  //puxar do hd para memória - atulização de cursor
-		/*if(controleSalvaInstrucao == 2'b01) 
-				begin
-					cursorDePosicao = cursorDePosicao + 32'd1;
-				end*/
-			
 
 
 		//bios ---------------------------------------------------------------			
 			memoria[32'd0] = {cproc,26'd0};					  //cproc rzero
-			memoria[32'd1] = {cproc,26'd5};					  // apenas teste retirar
-			/*memoria[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
+			//memoria[32'd1] = {cproc,26'd5};					  // apenas teste retirar
+			memoria[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
 			memoria[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd0};// movi r1, 0
 			memoria[32'd3] = {6'b011010,5'd2,5'd0,5'd0,11'd0};// movi r2, 0
 			memoria[32'd4] = {6'b011010,5'd3,5'd0,5'd0,11'd0};// movi r3, 0
@@ -112,8 +77,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd28] = {6'b011010,5'd27,5'd0,5'd0,11'd0};// movi r27, 0
 			memoria[32'd29] = {6'b011010,5'd28,5'd0,5'd0,11'd0};// movi r28, 0
 			memoria[32'd30] = {6'b011010,5'd29,5'd0,5'd0,11'd0};// movi r29, 0
-			memoria[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd300};// movi r30, 200
-			memoria[32'd32] = {6'b011010,5'd31,5'd0,5'd0,11'd3000};// movi r31,2000
+			memoria[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd300};// movi r30, 300
+			memoria[32'd32] = {6'b011010,5'd31,5'd0,5'd0,11'd3000};// movi r31,3000
 						
 			memoria[32'd33] = {sw,5'd0,5'd30,5'd30,11'd1};//sw r30, 1(r30)
 			memoria[32'd34] = {addi,5'd30,5'd30,5'd30,11'd300};//addi r30,r30,200
@@ -124,10 +89,10 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 //---------------------------SO---------------------------------------------------
 	
 
-			/*memoria[32'd37] = {j,endMenu};//jump menu
+			memoria[32'd37] = {j,endMenu};//jump menu
 		//------------------------------------mudança contexto-----------
 			//-----------salva contexto--------
-			memoria[32'd38] = {cproc,RZERO,RZERO,RZERO,11'd0};//muda processo para SO
+			/*memoria[32'd38] = {cproc,RZERO,RZERO,RZERO,11'd0};//muda processo para SO
    		memoria[32'd39] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
 			memoria[32'd40] = {movi,R21,RZERO,RZERO,11'd13};//movi r21, 13
 			memoria[32'd41] = {lw,R22,R20,RZERO,11'd1};//lw r22, 1(r20)//puxa numero do processo atual

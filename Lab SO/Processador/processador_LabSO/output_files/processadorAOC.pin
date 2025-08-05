@@ -70,485 +70,485 @@ CHIP  "processadorAOC"  ASSIGNED TO AN: EP4CE115F29C7
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A2        : power  :                   : 2.5V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
-testesaidaDez[0]             : A4        : output : 2.5 V             :         : 8         : N              
+testeImediato[24]            : A3        : output : 2.5 V             :         : 8         : N              
+testeImediato[22]            : A4        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : A5        : power  :                   : 2.5V    : 8         :                
-testeMux[15]                 : A6        : output : 2.5 V             :         : 8         : N              
-testesaidaUNI[2]             : A7        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8         :                
+testeJump[22]                : A6        : output : 2.5 V             :         : 8         : N              
+testeRS[0]                   : A7        : output : 2.5 V             :         : 8         : N              
+Testeprocesso_atual[15]      : A8        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : A9        : power  :                   : 2.5V    : 8         :                
-testeJump[10]                : A10       : output : 2.5 V             :         : 8         : N              
-testeImediato[4]             : A11       : output : 2.5 V             :         : 8         : N              
-testeUla[5]                  : A12       : output : 2.5 V             :         : 8         : N              
+testeMux[11]                 : A10       : output : 2.5 V             :         : 8         : N              
+testeMux[22]                 : A11       : output : 2.5 V             :         : 8         : N              
+testeMux[28]                 : A12       : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : A13       : power  :                   : 2.5V    : 8         :                
 GND+                         : A14       :        :                   :         : 8         :                
 GND+                         : A15       :        :                   :         : 7         :                
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
-testeImediato[10]            : A17       : output : 2.5 V             :         : 7         : N              
-testeUla[7]                  : A18       : output : 2.5 V             :         : 7         : N              
-testeImediato[27]            : A19       : output : 2.5 V             :         : 7         : N              
+testePC[7]                   : A17       : output : 2.5 V             :         : 7         : N              
+testePC[19]                  : A18       : output : 2.5 V             :         : 7         : N              
+testePC[21]                  : A19       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : A20       : power  :                   : 2.5V    : 7         :                
-testeReg[10]                 : A21       : output : 2.5 V             :         : 7         : N              
-testeRS[3]                   : A22       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A23       :        :                   :         : 7         :                
+testeOPCODE[4]               : A21       : output : 2.5 V             :         : 7         : N              
+testeout[19]                 : A22       : output : 2.5 V             :         : 7         : N              
+testeout[3]                  : A23       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : A24       : power  :                   : 2.5V    : 7         :                
-testeRS[5]                   : A25       : output : 2.5 V             :         : 7         : N              
-testesaidaCent[0]            : A26       : output : 2.5 V             :         : 7         : N              
+testesaidaUNI[3]             : A25       : output : 2.5 V             :         : 7         : N              
+testeMux[29]                 : A26       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : A27       : power  :                   : 2.5V    : 7         :                
 VCCIO2                       : AA1       : power  :                   : 2.5V    : 2         :                
 GND                          : AA2       : gnd    :                   :         :           :                
-testeout[19]                 : AA3       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA3       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 2         :                
-Testeprocesso_atual[25]      : AA7       : output : 2.5 V             :         : 2         : N              
-testeSelMux[2]               : AA8       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA8       :        :                   :         : 3         :                
 GNDA1                        : AA9       : gnd    :                   :         :           :                
-testeImediato[13]            : AA10      : output : 2.5 V             :         : 3         : N              
+testeReg[31]                 : AA10      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AA11      : power  :                   : 2.5V    : 3         :                
-testeUla[20]                 : AA12      : output : 2.5 V             :         : 3         : N              
-testeRS[12]                  : AA13      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 3         :                
-testeUla[18]                 : AA15      : output : 2.5 V             :         : 4         : N              
-testeReg[30]                 : AA16      : output : 2.5 V             :         : 4         : N              
-testeOPCODE[3]               : AA17      : output : 2.5 V             :         : 4         : N              
+testeIN[19]                  : AA12      : output : 2.5 V             :         : 3         : N              
+testeImediato[25]            : AA13      : output : 2.5 V             :         : 3         : N              
+testeRS[6]                   : AA14      : output : 2.5 V             :         : 3         : N              
+testeMux[30]                 : AA15      : output : 2.5 V             :         : 4         : N              
+testeImediato[26]            : AA16      : output : 2.5 V             :         : 4         : N              
+testeUla[13]                 : AA17      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AA18      : power  :                   : 2.5V    : 4         :                
-testeImediato[14]            : AA19      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4         :                
 GNDA4                        : AA20      : gnd    :                   :         :           :                
-testeRS[16]                  : AA21      : output : 2.5 V             :         : 4         : N              
+testeReg[5]                  : AA21      : output : 2.5 V             :         : 4         : N              
 entradaDeDadosIO[1]          : AA22      : input  : 2.5 V             :         : 5         : Y              
 entradaDeDadosIO[0]          : AA23      : input  : 2.5 V             :         : 5         : Y              
-testeIN[19]                  : AA24      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA24      :        :                   :         : 5         :                
 centena[6]                   : AA25      : output : 2.5 V             :         : 5         : Y              
 centena[5]                   : AA26      : output : 2.5 V             :         : 5         : Y              
 GND                          : AA27      : gnd    :                   :         :           :                
 VCCIO5                       : AA28      : power  :                   : 2.5V    : 5         :                
-testeMux[20]                 : AB1       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB1       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB2       :        :                   :         : 2         :                
-testeUla[25]                 : AB3       : output : 2.5 V             :         : 2         : N              
+testeReg[25]                 : AB3       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 2         :                
-testeJump[13]                : AB5       : output : 2.5 V             :         : 2         : N              
-testeJump[8]                 : AB6       : output : 2.5 V             :         : 2         : N              
-testeIN[9]                   : AB7       : output : 2.5 V             :         : 3         : N              
-testeMux[6]                  : AB8       : output : 2.5 V             :         : 3         : N              
-testeout[25]                 : AB9       : output : 2.5 V             :         : 3         : N              
-enRT[0]                      : AB10      : output : 2.5 V             :         : 3         : N              
-testeReg[24]                 : AB11      : output : 2.5 V             :         : 3         : N              
-Testeprocesso_atual[1]       : AB12      : output : 2.5 V             :         : 3         : N              
-enRD[0]                      : AB13      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB14      :        :                   :         : 3         :                
-enRS[4]                      : AB15      : output : 2.5 V             :         : 4         : N              
-Testeprocesso_atual[4]       : AB16      : output : 2.5 V             :         : 4         : N              
-testeout[12]                 : AB17      : output : 2.5 V             :         : 4         : N              
+Testeprocesso_atual[27]      : AB5       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 2         :                
+testeJump[15]                : AB7       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 3         :                
+Testeprocesso_atual[10]      : AB9       : output : 2.5 V             :         : 3         : N              
+testeMux[17]                 : AB10      : output : 2.5 V             :         : 3         : N              
+testeReg[30]                 : AB11      : output : 2.5 V             :         : 3         : N              
+testeImediato[30]            : AB12      : output : 2.5 V             :         : 3         : N              
+testeJump[12]                : AB13      : output : 2.5 V             :         : 3         : N              
+testeImediato[3]             : AB14      : output : 2.5 V             :         : 3         : N              
+testeMux[27]                 : AB15      : output : 2.5 V             :         : 4         : N              
+testeRS[27]                  : AB16      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
 uniProc[4]                   : AB18      : output : 2.5 V             :         : 4         : Y              
-Testeprocesso_atual[29]      : AB19      : output : 2.5 V             :         : 4         : N              
-testeRS[30]                  : AB20      : output : 2.5 V             :         : 4         : N              
-controlIO[1]                 : AB21      : output : 2.5 V             :         : 4         : N              
-testeReg[18]                 : AB22      : output : 2.5 V             :         : 4         : N              
+testeIN[12]                  : AB19      : output : 2.5 V             :         : 4         : N              
+enRS[0]                      : AB20      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4         :                
+testeIN[20]                  : AB22      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :         : 5         :                
-testeUla[23]                 : AB24      : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB24      :        :                   :         : 5         :                
+testesaidaCent[2]            : AB25      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB26      :        :                   :         : 5         :                
-testeUla[27]                 : AB27      : output : 2.5 V             :         : 5         : N              
+testesaidaDez[3]             : AB27      : output : 2.5 V             :         : 5         : N              
 reset                        : AB28      : input  : 2.5 V             :         : 5         : Y              
-Testeprocesso_atual[14]      : AC1       : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC2       :        :                   :         : 2         :                
-testeUla[31]                 : AC3       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC1       :        :                   :         : 2         :                
+Testeprocesso_atual[31]      : AC2       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC3       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC4       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC5       :        :                   :         : 2         :                
 GND                          : AC6       : gnd    :                   :         :           :                
-testeIN[26]                  : AC7       : output : 2.5 V             :         : 3         : N              
-testeImediato[20]            : AC8       : output : 2.5 V             :         : 3         : N              
+Testeprocesso_atual[18]      : AC7       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC8       :        :                   :         : 3         :                
 GND                          : AC9       : gnd    :                   :         :           :                
-testeRS[9]                   : AC10      : output : 2.5 V             :         : 3         : N              
-testeRS[19]                  : AC11      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC12      :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC10      :        :                   :         : 3         :                
+testeRS[1]                   : AC11      : output : 2.5 V             :         : 3         : N              
+testeReg[13]                 : AC12      : output : 2.5 V             :         : 3         : N              
 GND                          : AC13      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC14      :        :                   :         : 3         :                
-testeReg[8]                  : AC15      : output : 2.5 V             :         : 4         : N              
+testeImediato[2]             : AC14      : output : 2.5 V             :         : 3         : N              
+testeImediato[19]            : AC15      : output : 2.5 V             :         : 4         : N              
 GND                          : AC16      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC17      :        :                   :         : 4         :                
+testeRS[31]                  : AC17      : output : 2.5 V             :         : 4         : N              
 uniProc[5]                   : AC18      : output : 2.5 V             :         : 4         : Y              
-testeReg[20]                 : AC19      : output : 2.5 V             :         : 4         : N              
+testeReg[23]                 : AC19      : output : 2.5 V             :         : 4         : N              
 GND                          : AC20      : gnd    :                   :         :           :                
-testeUla[19]                 : AC21      : output : 2.5 V             :         : 4         : N              
-testeout[5]                  : AC22      : output : 2.5 V             :         : 4         : N              
+testeIN[31]                  : AC21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4         :                
 GND                          : AC23      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC24      :        :                   :         : 5         :                
-testeout[22]                 : AC25      : output : 2.5 V             :         : 5         : N              
-Testeprocesso_atual[9]       : AC26      : output : 2.5 V             :         : 5         : N              
-testesaidaCent[1]            : AC27      : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC28      :        :                   :         : 5         :                
-testeIN[21]                  : AD1       : output : 2.5 V             :         : 2         : N              
-testeIN[3]                   : AD2       : output : 2.5 V             :         : 2         : N              
-testeRS[24]                  : AD3       : output : 2.5 V             :         : 2         : N              
-testeReg[6]                  : AD4       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD5       :        :                   :         : 3         :                
+testeImediato[20]            : AC24      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :         : 5         :                
+Testeprocesso_atual[3]       : AC26      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC27      :        :                   :         : 5         :                
+testesaidaCent[0]            : AC28      : output : 2.5 V             :         : 5         : N              
+enRT[2]                      : AD1       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD2       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD3       :        :                   :         : 2         :                
+testeReg[12]                 : AD4       : output : 2.5 V             :         : 3         : N              
+testeJump[19]                : AD5       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD6       : power  :                   : 2.5V    : 3         :                
-enRT[2]                      : AD7       : output : 2.5 V             :         : 3         : N              
-testeIN[16]                  : AD8       : output : 2.5 V             :         : 3         : N              
+enRT[3]                      : AD7       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD8       :        :                   :         : 3         :                
 VCCIO3                       : AD9       : power  :                   : 2.5V    : 3         :                
-Testeprocesso_atual[18]      : AD10      : output : 2.5 V             :         : 3         : N              
-Testeprocesso_atual[17]      : AD11      : output : 2.5 V             :         : 3         : N              
-testeIN[13]                  : AD12      : output : 2.5 V             :         : 3         : N              
+testeImediato[23]            : AD10      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :         : 3         :                
+testeIN[16]                  : AD12      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
-testeJump[6]                 : AD14      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD15      :        :                   :         : 4         :                
+testeImediato[9]             : AD14      : output : 2.5 V             :         : 3         : N              
+Testeprocesso_atual[6]       : AD15      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
-testesaidaUNI[1]             : AD17      : output : 2.5 V             :         : 4         : N              
+testeout[27]                 : AD17      : output : 2.5 V             :         : 4         : N              
 uniProc[6]                   : AD18      : output : 2.5 V             :         : 4         : Y              
-testeRS[4]                   : AD19      : output : 2.5 V             :         : 4         : N              
+testeReg[17]                 : AD19      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
-testeUla[30]                 : AD21      : output : 2.5 V             :         : 4         : N              
-testeUla[2]                  : AD22      : output : 2.5 V             :         : 4         : N              
+testeIN[13]                  : AD21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD22      :        :                   :         : 4         :                
 VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
-testesaidaDez[1]             : AD24      : output : 2.5 V             :         : 4         : N              
-testeJump[25]                : AD25      : output : 2.5 V             :         : 4         : N              
+testeImediato[6]             : AD24      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD25      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD26      :        :                   :         : 5         :                
-testeMux[30]                 : AD27      : output : 2.5 V             :         : 5         : N              
+Testeprocesso_atual[22]      : AD27      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD28      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE1       :        :                   :         : 2         :                
-Testeprocesso_atual[12]      : AE2       : output : 2.5 V             :         : 2         : N              
-testeReg[9]                  : AE3       : output : 2.5 V             :         : 2         : N              
-testeout[7]                  : AE4       : output : 2.5 V             :         : 3         : N              
-Testeprocesso_atual[19]      : AE5       : output : 2.5 V             :         : 3         : N              
-testeRS[14]                  : AE6       : output : 2.5 V             :         : 3         : N              
-testeImediato[19]            : AE7       : output : 2.5 V             :         : 3         : N              
-controlIO[0]                 : AE8       : output : 2.5 V             :         : 3         : N              
-testeout[16]                 : AE9       : output : 2.5 V             :         : 3         : N              
-testeImediato[22]            : AE10      : output : 2.5 V             :         : 3         : N              
-testesaidaUNI[3]             : AE11      : output : 2.5 V             :         : 3         : N              
-testeJump[5]                 : AE12      : output : 2.5 V             :         : 3         : N              
-testeReg[29]                 : AE13      : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE14      :        :                   :         : 3         :                
-testeImediato[15]            : AE15      : output : 2.5 V             :         : 4         : N              
-testeRS[21]                  : AE16      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE17      :        :                   :         : 4         :                
-testeMux[21]                 : AE18      : output : 2.5 V             :         : 4         : N              
-testeImediato[28]            : AE19      : output : 2.5 V             :         : 4         : N              
-testeReg[22]                 : AE20      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE21      :        :                   :         : 4         :                
-testeout[6]                  : AE22      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 4         :                
-Testeprocesso_atual[22]      : AE24      : output : 2.5 V             :         : 4         : N              
-testeSelMux[1]               : AE25      : output : 2.5 V             :         : 4         : N              
-enRT[3]                      : AE26      : output : 2.5 V             :         : 5         : N              
-testeReg[28]                 : AE27      : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE2       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE3       :        :                   :         : 2         :                
+enRS[3]                      : AE4       : output : 2.5 V             :         : 3         : N              
+testeReg[14]                 : AE5       : output : 2.5 V             :         : 3         : N              
+testeJump[14]                : AE6       : output : 2.5 V             :         : 3         : N              
+enRS[4]                      : AE7       : output : 2.5 V             :         : 3         : N              
+testeJump[17]                : AE8       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE9       :        :                   :         : 3         :                
+testeJump[6]                 : AE10      : output : 2.5 V             :         : 3         : N              
+Testeprocesso_atual[21]      : AE11      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE12      :        :                   :         : 3         :                
+testeReg[1]                  : AE13      : output : 2.5 V             :         : 3         : N              
+testeIN[14]                  : AE14      : output : 2.5 V             :         : 3         : N              
+testeRS[11]                  : AE15      : output : 2.5 V             :         : 4         : N              
+testeUla[16]                 : AE16      : output : 2.5 V             :         : 4         : N              
+testeStatus                  : AE17      : output : 2.5 V             :         : 4         : N              
+testeIN[4]                   : AE18      : output : 2.5 V             :         : 4         : N              
+testeRS[29]                  : AE19      : output : 2.5 V             :         : 4         : N              
+testeImediato[4]             : AE20      : output : 2.5 V             :         : 4         : N              
+testeRS[13]                  : AE21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4         :                
+testeIN[30]                  : AE23      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE24      :        :                   :         : 4         :                
+testeReg[10]                 : AE25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE26      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 5         :                
+Testeprocesso_atual[8]       : AE28      : output : 2.5 V             :         : 5         : N              
 GND                          : AF1       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF2       :        :                   :         : 2         :                
+Testeprocesso_atual[24]      : AF2       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF3       :        :                   :         : 3         :                
-testeMux[4]                  : AF4       : output : 2.5 V             :         : 3         : N              
+testeIN[17]                  : AF4       : output : 2.5 V             :         : 3         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF5       :        :                   :         : 3         :                
-enRT[4]                      : AF6       : output : 2.5 V             :         : 3         : N              
-testeIN[0]                   : AF7       : output : 2.5 V             :         : 3         : N              
-testeStatus                  : AF8       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF9       :        :                   :         : 3         :                
-Testeprocesso_atual[16]      : AF10      : output : 2.5 V             :         : 3         : N              
-enRD[1]                      : AF11      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF6       :        :                   :         : 3         :                
+testeImediato[16]            : AF7       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF8       :        :                   :         : 3         :                
+testeImediato[17]            : AF9       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF10      :        :                   :         : 3         :                
+testeRS[8]                   : AF11      : output : 2.5 V             :         : 3         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF12      :        :                   :         : 3         :                
-testeout[1]                  : AF13      : output : 2.5 V             :         : 3         : N              
-testeUla[11]                 : AF14      : output : 2.5 V             :         : 3         : N              
-testeout[21]                 : AF15      : output : 2.5 V             :         : 4         : N              
-testeRS[11]                  : AF16      : output : 2.5 V             :         : 4         : N              
-testeReg[5]                  : AF17      : output : 2.5 V             :         : 4         : N              
+testeIN[18]                  : AF13      : output : 2.5 V             :         : 3         : N              
+testeRS[3]                   : AF14      : output : 2.5 V             :         : 3         : N              
+testeRS[23]                  : AF15      : output : 2.5 V             :         : 4         : N              
+testeRS[14]                  : AF16      : output : 2.5 V             :         : 4         : N              
+testeImediato[11]            : AF17      : output : 2.5 V             :         : 4         : N              
 uniProc[1]                   : AF18      : output : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF19      :        :                   :         : 4         :                
-testeJump[7]                 : AF20      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF22      :        :                   :         : 4         :                
-testeJump[1]                 : AF23      : output : 2.5 V             :         : 4         : N              
-Testeprocesso_atual[28]      : AF24      : output : 2.5 V             :         : 4         : N              
-testeout[26]                 : AF25      : output : 2.5 V             :         : 4         : N              
-testeMux[23]                 : AF26      : output : 2.5 V             :         : 4         : N              
-testeJump[9]                 : AF27      : output : 2.5 V             :         : 5         : N              
+testeJump[8]                 : AF19      : output : 2.5 V             :         : 4         : N              
+testeUla[2]                  : AF20      : output : 2.5 V             :         : 4         : N              
+testeUla[31]                 : AF21      : output : 2.5 V             :         : 4         : N              
+testeIN[5]                   : AF22      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF23      :        :                   :         : 4         :                
+testeUla[17]                 : AF24      : output : 2.5 V             :         : 4         : N              
+testeUla[24]                 : AF25      : output : 2.5 V             :         : 4         : N              
+testeMux[20]                 : AF26      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF27      :        :                   :         : 5         :                
 GND                          : AF28      : gnd    :                   :         :           :                
 VCCIO2                       : AG1       : power  :                   : 2.5V    : 2         :                
 GND                          : AG2       : gnd    :                   :         :           :                
-Testeprocesso_atual[20]      : AG3       : output : 2.5 V             :         : 3         : N              
-testeJump[12]                : AG4       : output : 2.5 V             :         : 3         : N              
+testeReg[2]                  : AG3       : output : 2.5 V             :         : 3         : N              
+testeIN[25]                  : AG4       : output : 2.5 V             :         : 3         : N              
 GND                          : AG5       : gnd    :                   :         :           :                
-testeRS[26]                  : AG6       : output : 2.5 V             :         : 3         : N              
-testeOPCODE[2]               : AG7       : output : 2.5 V             :         : 3         : N              
-testeImediato[23]            : AG8       : output : 2.5 V             :         : 3         : N              
+Testeprocesso_atual[11]      : AG6       : output : 2.5 V             :         : 3         : N              
+testeReg[19]                 : AG7       : output : 2.5 V             :         : 3         : N              
+testeImediato[8]             : AG8       : output : 2.5 V             :         : 3         : N              
 GND                          : AG9       : gnd    :                   :         :           :                
-Testeprocesso_atual[5]       : AG10      : output : 2.5 V             :         : 3         : N              
-testeMux[3]                  : AG11      : output : 2.5 V             :         : 3         : N              
-enRD[2]                      : AG12      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG10      :        :                   :         : 3         :                
+testeUla[10]                 : AG11      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG12      :        :                   :         : 3         :                
 GND                          : AG13      : gnd    :                   :         :           :                
 GND+                         : AG14      :        :                   :         : 3         :                
 GND+                         : AG15      :        :                   :         : 4         :                
 GND                          : AG16      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG17      :        :                   :         : 4         :                
-testeMux[7]                  : AG18      : output : 2.5 V             :         : 4         : N              
+testeIN[28]                  : AG17      : output : 2.5 V             :         : 4         : N              
+testeUla[14]                 : AG18      : output : 2.5 V             :         : 4         : N              
 uniProc[2]                   : AG19      : output : 2.5 V             :         : 4         : Y              
 GND                          : AG20      : gnd    :                   :         :           :                
-testeout[20]                 : AG21      : output : 2.5 V             :         : 4         : N              
-enRS[1]                      : AG22      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4         :                
+testeUla[26]                 : AG21      : output : 2.5 V             :         : 4         : N              
+testeRS[17]                  : AG22      : output : 2.5 V             :         : 4         : N              
+testeJump[3]                 : AG23      : output : 2.5 V             :         : 4         : N              
 GND                          : AG24      : gnd    :                   :         :           :                
-testeRS[23]                  : AG25      : output : 2.5 V             :         : 4         : N              
-testeUla[21]                 : AG26      : output : 2.5 V             :         : 4         : N              
+testeIN[1]                   : AG25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4         :                
 GND                          : AG27      : gnd    :                   :         :           :                
 VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
 VCCIO3                       : AH2       : power  :                   : 2.5V    : 3         :                
-testeMux[31]                 : AH3       : output : 2.5 V             :         : 3         : N              
-testeUla[1]                  : AH4       : output : 2.5 V             :         : 3         : N              
+testeJump[20]                : AH3       : output : 2.5 V             :         : 3         : N              
+testeJump[18]                : AH4       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH5       : power  :                   : 2.5V    : 3         :                
-testeImediato[26]            : AH6       : output : 2.5 V             :         : 3         : N              
-testeRS[29]                  : AH7       : output : 2.5 V             :         : 3         : N              
-Testeprocesso_atual[24]      : AH8       : output : 2.5 V             :         : 3         : N              
+testeReg[0]                  : AH6       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 3         :                
+enRS[2]                      : AH8       : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH9       : power  :                   : 2.5V    : 3         :                
-testeIN[11]                  : AH10      : output : 2.5 V             :         : 3         : N              
-testeJump[23]                : AH11      : output : 2.5 V             :         : 3         : N              
-testeout[24]                 : AH12      : output : 2.5 V             :         : 3         : N              
+testeImediato[10]            : AH10      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH11      :        :                   :         : 3         :                
+Testeprocesso_atual[19]      : AH12      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH13      : power  :                   : 2.5V    : 3         :                
 GND+                         : AH14      :        :                   :         : 3         :                
 GND+                         : AH15      :        :                   :         : 4         :                
 VCCIO4                       : AH16      : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH17      :        :                   :         : 4         :                
+testeRS[26]                  : AH17      : output : 2.5 V             :         : 4         : N              
 uniProc[0]                   : AH18      : output : 2.5 V             :         : 4         : Y              
 uniProc[3]                   : AH19      : output : 2.5 V             :         : 4         : Y              
 VCCIO4                       : AH20      : power  :                   : 2.5V    : 4         :                
-testeMux[16]                 : AH21      : output : 2.5 V             :         : 4         : N              
-testeImediato[8]             : AH22      : output : 2.5 V             :         : 4         : N              
-enRS[0]                      : AH23      : output : 2.5 V             :         : 4         : N              
+testeUla[27]                 : AH21      : output : 2.5 V             :         : 4         : N              
+Testeprocesso_atual[14]      : AH22      : output : 2.5 V             :         : 4         : N              
+testeUla[20]                 : AH23      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH25      :        :                   :         : 4         :                
-testeImediato[6]             : AH26      : output : 2.5 V             :         : 4         : N              
+testeMux[25]                 : AH25      : output : 2.5 V             :         : 4         : N              
+testeIN[7]                   : AH26      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
 VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
-testeMux[12]                 : B4        : output : 2.5 V             :         : 8         : N              
+testeImediato[15]            : B3        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
 GND                          : B5        : gnd    :                   :         :           :                
-testeIN[14]                  : B6        : output : 2.5 V             :         : 8         : N              
-testeImediato[2]             : B7        : output : 2.5 V             :         : 8         : N              
-testeUla[4]                  : B8        : output : 2.5 V             :         : 8         : N              
+testeRS[10]                  : B6        : output : 2.5 V             :         : 8         : N              
+testeRS[28]                  : B7        : output : 2.5 V             :         : 8         : N              
+Testeprocesso_atual[16]      : B8        : output : 2.5 V             :         : 8         : N              
 GND                          : B9        : gnd    :                   :         :           :                
-testeIN[2]                   : B10       : output : 2.5 V             :         : 8         : N              
-testeImediato[24]            : B11       : output : 2.5 V             :         : 8         : N              
+testeMux[4]                  : B10       : output : 2.5 V             :         : 8         : N              
+enRD[0]                      : B11       : output : 2.5 V             :         : 8         : N              
 GND                          : B12       : gnd    :                   :         :           :                
 GND                          : B13       : gnd    :                   :         :           :                
 GND+                         : B14       :        :                   :         : 8         :                
 GND+                         : B15       :        :                   :         : 7         :                
 GND                          : B16       : gnd    :                   :         :           :                
-testeIN[12]                  : B17       : output : 2.5 V             :         : 7         : N              
-testeIN[22]                  : B18       : output : 2.5 V             :         : 7         : N              
-testeUla[14]                 : B19       : output : 2.5 V             :         : 7         : N              
+testePC[3]                   : B17       : output : 2.5 V             :         : 7         : N              
+testePC[12]                  : B18       : output : 2.5 V             :         : 7         : N              
+testePC[16]                  : B19       : output : 2.5 V             :         : 7         : N              
 GND                          : B20       : gnd    :                   :         :           :                
-testeReg[16]                 : B21       : output : 2.5 V             :         : 7         : N              
-testeImediato[21]            : B22       : output : 2.5 V             :         : 7         : N              
-testeReg[27]                 : B23       : output : 2.5 V             :         : 7         : N              
+testeRS[20]                  : B21       : output : 2.5 V             :         : 7         : N              
+testePC[27]                  : B22       : output : 2.5 V             :         : 7         : N              
+testePC[24]                  : B23       : output : 2.5 V             :         : 7         : N              
 GND                          : B24       : gnd    :                   :         :           :                
-testeRS[20]                  : B25       : output : 2.5 V             :         : 7         : N              
-testeIN[28]                  : B26       : output : 2.5 V             :         : 7         : N              
+testeout[1]                  : B25       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B26       :        :                   :         : 7         :                
 GND                          : B27       : gnd    :                   :         :           :                
 VCCIO6                       : B28       : power  :                   : 2.5V    : 6         :                
 GND                          : C1        : gnd    :                   :         :           :                
-testeout[8]                  : C2        : output : 2.5 V             :         : 1         : N              
-testeout[10]                 : C3        : output : 2.5 V             :         : 8         : N              
-testeIN[18]                  : C4        : output : 2.5 V             :         : 8         : N              
-testeIN[15]                  : C5        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
-testesaidaUNI[0]             : C7        : output : 2.5 V             :         : 8         : N              
-testeout[13]                 : C8        : output : 2.5 V             :         : 8         : N              
-testeImediato[5]             : C9        : output : 2.5 V             :         : 8         : N              
-testeOPCODE[4]               : C10       : output : 2.5 V             :         : 8         : N              
-testesaidaCent[2]            : C11       : output : 2.5 V             :         : 8         : N              
-testeout[23]                 : C12       : output : 2.5 V             :         : 8         : N              
-testeMux[11]                 : C13       : output : 2.5 V             :         : 8         : N              
-testeMux[17]                 : C14       : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
-testeRS[17]                  : C17       : output : 2.5 V             :         : 7         : N              
-testeRS[2]                   : C18       : output : 2.5 V             :         : 7         : N              
-testeJump[18]                : C19       : output : 2.5 V             :         : 7         : N              
-testedesvio                  : C20       : output : 2.5 V             :         : 7         : N              
-testeMux[27]                 : C21       : output : 2.5 V             :         : 7         : N              
-testeIN[20]                  : C22       : output : 2.5 V             :         : 7         : N              
-testeMux[5]                  : C23       : output : 2.5 V             :         : 7         : N              
-testeIN[8]                   : C24       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
+testeReg[21]                 : C3        : output : 2.5 V             :         : 8         : N              
+testeIN[9]                   : C4        : output : 2.5 V             :         : 8         : N              
+testeImediato[13]            : C5        : output : 2.5 V             :         : 8         : N              
+testeReg[9]                  : C6        : output : 2.5 V             :         : 8         : N              
+Testeprocesso_atual[9]       : C7        : output : 2.5 V             :         : 8         : N              
+Testeprocesso_atual[4]       : C8        : output : 2.5 V             :         : 8         : N              
+testeJump[7]                 : C9        : output : 2.5 V             :         : 8         : N              
+testeMux[5]                  : C10       : output : 2.5 V             :         : 8         : N              
+testeUla[29]                 : C11       : output : 2.5 V             :         : 8         : N              
+testeMux[7]                  : C12       : output : 2.5 V             :         : 8         : N              
+testeSinal                   : C13       : output : 2.5 V             :         : 8         : N              
+testeMux[0]                  : C14       : output : 2.5 V             :         : 8         : N              
+testeIN[3]                   : C15       : output : 2.5 V             :         : 7         : N              
+testeMux[15]                 : C16       : output : 2.5 V             :         : 7         : N              
+testeout[28]                 : C17       : output : 2.5 V             :         : 7         : N              
+testeSelMux[2]               : C18       : output : 2.5 V             :         : 7         : N              
+testeout[22]                 : C19       : output : 2.5 V             :         : 7         : N              
+testePC[28]                  : C20       : output : 2.5 V             :         : 7         : N              
+testeout[8]                  : C21       : output : 2.5 V             :         : 7         : N              
+testeout[4]                  : C22       : output : 2.5 V             :         : 7         : N              
+enRD[2]                      : C23       : output : 2.5 V             :         : 7         : N              
+testePC[20]                  : C24       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C25       :        :                   :         : 7         :                
-testeMux[25]                 : C26       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C27       :        :                   :         : 6         :                
+testeReg[15]                 : C26       : output : 2.5 V             :         : 7         : N              
+testeout[2]                  : C27       : output : 2.5 V             :         : 6         : N              
 GND                          : C28       : gnd    :                   :         :           :                
-testeRS[28]                  : D1        : output : 2.5 V             :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 1         :                
+testeReg[3]                  : D1        : output : 2.5 V             :         : 1         : N              
+testeIN[23]                  : D2        : output : 2.5 V             :         : 1         : N              
 GND                          : D3        : gnd    :                   :         :           :                
-testeJump[20]                : D4        : output : 2.5 V             :         : 8         : N              
-testeIN[30]                  : D5        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
-testeImediato[3]             : D9        : output : 2.5 V             :         : 8         : N              
-testeJump[21]                : D10       : output : 2.5 V             :         : 8         : N              
+testeReg[4]                  : D4        : output : 2.5 V             :         : 8         : N              
+testeImediato[1]             : D5        : output : 2.5 V             :         : 8         : N              
+testeIN[24]                  : D6        : output : 2.5 V             :         : 8         : N              
+testeIN[22]                  : D7        : output : 2.5 V             :         : 8         : N              
+Testeprocesso_atual[12]      : D8        : output : 2.5 V             :         : 8         : N              
+testeRS[7]                   : D9        : output : 2.5 V             :         : 8         : N              
+testeRS[5]                   : D10       : output : 2.5 V             :         : 8         : N              
 testeJump[4]                 : D11       : output : 2.5 V             :         : 8         : N              
-testeRS[15]                  : D12       : output : 2.5 V             :         : 8         : N              
-testeMux[8]                  : D13       : output : 2.5 V             :         : 8         : N              
-testeMux[13]                 : D14       : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7         :                
-testeout[0]                  : D16       : output : 2.5 V             :         : 7         : N              
-testeReg[19]                 : D17       : output : 2.5 V             :         : 7         : N              
-testeMux[18]                 : D18       : output : 2.5 V             :         : 7         : N              
-testesaidaDez[2]             : D19       : output : 2.5 V             :         : 7         : N              
-testeUla[22]                 : D20       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 7         :                
-Testeprocesso_atual[23]      : D22       : output : 2.5 V             :         : 7         : N              
-Testeprocesso_atual[11]      : D23       : output : 2.5 V             :         : 7         : N              
-testeout[31]                 : D24       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D25       :        :                   :         : 7         :                
-testeIN[24]                  : D26       : output : 2.5 V             :         : 6         : N              
-testeImediato[29]            : D27       : output : 2.5 V             :         : 6         : N              
-testeImediato[25]            : D28       : output : 2.5 V             :         : 6         : N              
-Testeprocesso_atual[2]       : E1        : output : 2.5 V             :         : 1         : N              
+testeUla[0]                  : D12       : output : 2.5 V             :         : 8         : N              
+testeMux[21]                 : D13       : output : 2.5 V             :         : 8         : N              
+testeMux[3]                  : D14       : output : 2.5 V             :         : 8         : N              
+testeMux[2]                  : D15       : output : 2.5 V             :         : 7         : N              
+testeIN[2]                   : D16       : output : 2.5 V             :         : 7         : N              
+testeJump[1]                 : D17       : output : 2.5 V             :         : 7         : N              
+testeout[23]                 : D18       : output : 2.5 V             :         : 7         : N              
+testeout[25]                 : D19       : output : 2.5 V             :         : 7         : N              
+testeout[13]                 : D20       : output : 2.5 V             :         : 7         : N              
+testesaidaUNI[0]             : D21       : output : 2.5 V             :         : 7         : N              
+Testeprocesso_atual[30]      : D22       : output : 2.5 V             :         : 7         : N              
+testeJump[23]                : D23       : output : 2.5 V             :         : 7         : N              
+enRD[4]                      : D24       : output : 2.5 V             :         : 7         : N              
+testeJump[25]                : D25       : output : 2.5 V             :         : 7         : N              
+testeMux[14]                 : D26       : output : 2.5 V             :         : 6         : N              
+testeout[5]                  : D27       : output : 2.5 V             :         : 6         : N              
+testeout[10]                 : D28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E1        :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
-testeReg[3]                  : E3        : output : 2.5 V             :         : 1         : N              
-testeUla[26]                 : E4        : output : 2.5 V             :         : 8         : N              
-testeMux[2]                  : E5        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1         :                
+Testeprocesso_atual[13]      : E4        : output : 2.5 V             :         : 8         : N              
+Testeprocesso_atual[20]      : E5        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : E6        : power  :                   : 2.5V    : 8         :                
-testeReg[11]                 : E7        : output : 2.5 V             :         : 8         : N              
-testeJump[16]                : E8        : output : 2.5 V             :         : 8         : N              
+testeIN[29]                  : E7        : output : 2.5 V             :         : 8         : N              
+testeReg[18]                 : E8        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : E9        : power  :                   : 2.5V    : 8         :                
-testeMux[29]                 : E10       : output : 2.5 V             :         : 8         : N              
-testeImediato[31]            : E11       : output : 2.5 V             :         : 8         : N              
-testeMux[24]                 : E12       : output : 2.5 V             :         : 8         : N              
+testeReg[16]                 : E10       : output : 2.5 V             :         : 8         : N              
+testeMux[23]                 : E11       : output : 2.5 V             :         : 8         : N              
+enRD[3]                      : E12       : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : E13       : power  :                   : 2.5V    : 8         :                
-testeUla[6]                  : E14       : output : 2.5 V             :         : 8         : N              
-testeUla[9]                  : E15       : output : 2.5 V             :         : 7         : N              
+testeIN[0]                   : E14       : output : 2.5 V             :         : 8         : N              
+testeSelMux[0]               : E15       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : E16       : power  :                   : 2.5V    : 7         :                
 unidade[4]                   : E17       : output : 2.5 V             :         : 7         : Y              
-testeImediato[12]            : E18       : output : 2.5 V             :         : 7         : N              
+testeout[9]                  : E18       : output : 2.5 V             :         : 7         : N              
 ledprocesso                  : E19       : output : 2.5 V             :         : 7         : Y              
 VCCIO7                       : E20       : power  :                   : 2.5V    : 7         :                
 halt                         : E21       : output : 2.5 V             :         : 7         : Y              
-testeUla[3]                  : E22       : output : 2.5 V             :         : 7         : N              
+testesaidaUNI[2]             : E22       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : E23       : power  :                   : 2.5V    : 7         :                
-testeUla[8]                  : E24       : output : 2.5 V             :         : 7         : N              
+testeout[17]                 : E24       : output : 2.5 V             :         : 7         : N              
 ledmenu                      : E25       : output : 2.5 V             :         : 7         : Y              
-testeUla[17]                 : E26       : output : 2.5 V             :         : 6         : N              
-testeUla[0]                  : E27       : output : 2.5 V             :         : 6         : N              
-testeout[3]                  : E28       : output : 2.5 V             :         : 6         : N              
-testeJump[0]                 : F1        : output : 2.5 V             :         : 1         : N              
-Testeprocesso_atual[0]       : F2        : output : 2.5 V             :         : 1         : N              
-testeReg[13]                 : F3        : output : 2.5 V             :         : 1         : N              
+testeout[6]                  : E26       : output : 2.5 V             :         : 6         : N              
+testeout[15]                 : E27       : output : 2.5 V             :         : 6         : N              
+testeUla[5]                  : E28       : output : 2.5 V             :         : 6         : N              
+testeJump[10]                : F1        : output : 2.5 V             :         : 1         : N              
+testeReg[26]                 : F2        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 2.5 V             :         : 1         : N              
-Testeprocesso_atual[31]      : F5        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1         :                
 GND                          : F6        : gnd    :                   :         :           :                
-testeIN[31]                  : F7        : output : 2.5 V             :         : 8         : N              
-testesaidaCent[3]            : F8        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
 GND                          : F9        : gnd    :                   :         :           :                
-testeReg[14]                 : F10       : output : 2.5 V             :         : 8         : N              
-testeJump[3]                 : F11       : output : 2.5 V             :         : 8         : N              
-testeReg[1]                  : F12       : output : 2.5 V             :         : 8         : N              
+testeOPCODE[0]               : F10       : output : 2.5 V             :         : 8         : N              
+enRD[1]                      : F11       : output : 2.5 V             :         : 8         : N              
+testeJump[24]                : F12       : output : 2.5 V             :         : 8         : N              
 GND                          : F13       : gnd    :                   :         :           :                
-testeIN[5]                   : F14       : output : 2.5 V             :         : 8         : N              
-testeRS[22]                  : F15       : output : 2.5 V             :         : 7         : N              
+testeMux[16]                 : F14       : output : 2.5 V             :         : 8         : N              
+testeRS[12]                  : F15       : output : 2.5 V             :         : 7         : N              
 GND                          : F16       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F17       :        :                   :         : 7         :                
+testePC[5]                   : F17       : output : 2.5 V             :         : 7         : N              
 ledin                        : F18       : output : 2.5 V             :         : 7         : Y              
-testeout[29]                 : F19       : output : 2.5 V             :         : 7         : N              
+testeout[20]                 : F19       : output : 2.5 V             :         : 7         : N              
 GND                          : F20       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 7         :                
+testeUla[19]                 : F21       : output : 2.5 V             :         : 7         : N              
 unidade[5]                   : F22       : output : 2.5 V             :         : 7         : Y              
 GND                          : F23       : gnd    :                   :         :           :                
-testeImediato[30]            : F24       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : F25       :        :                   :         : 6         :                
-testeRS[18]                  : F26       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : F27       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F28       :        :                   :         : 6         :                
-testePC[4]                   : G1        : output : 2.5 V             :         : 1         : N              
-testePC[14]                  : G2        : output : 2.5 V             :         : 1         : N              
-testeIN[7]                   : G3        : output : 2.5 V             :         : 1         : N              
-testeMux[10]                 : G4        : output : 2.5 V             :         : 1         : N              
-testeJump[24]                : G5        : output : 2.5 V             :         : 1         : N              
-testeRS[0]                   : G6        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F24       :        :                   :         : 6         :                
+testeImediato[27]            : F25       : output : 2.5 V             :         : 6         : N              
+testeout[7]                  : F26       : output : 2.5 V             :         : 6         : N              
+testeRS[18]                  : F27       : output : 2.5 V             :         : 6         : N              
+testeout[30]                 : F28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
+testeReg[20]                 : G2        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G6        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 8         :                
-testeRS[1]                   : G8        : output : 2.5 V             :         : 8         : N              
+testeIN[27]                  : G8        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :         : 8         :                
-testeout[17]                 : G10       : output : 2.5 V             :         : 8         : N              
-testeReg[0]                  : G11       : output : 2.5 V             :         : 8         : N              
-testeout[14]                 : G12       : output : 2.5 V             :         : 8         : N              
-testeImediato[0]             : G13       : output : 2.5 V             :         : 8         : N              
-testeUla[28]                 : G14       : output : 2.5 V             :         : 8         : N              
-testesaidaDez[3]             : G15       : output : 2.5 V             :         : 7         : N              
-enRD[3]                      : G16       : output : 2.5 V             :         : 7         : N              
-testeIN[17]                  : G17       : output : 2.5 V             :         : 7         : N              
+Testeprocesso_atual[7]       : G10       : output : 2.5 V             :         : 8         : N              
+testeJump[9]                 : G11       : output : 2.5 V             :         : 8         : N              
+testeMux[6]                  : G12       : output : 2.5 V             :         : 8         : N              
+testeRS[22]                  : G13       : output : 2.5 V             :         : 8         : N              
+testeMux[1]                  : G14       : output : 2.5 V             :         : 8         : N              
+testePC[0]                   : G15       : output : 2.5 V             :         : 7         : N              
+testeMux[18]                 : G16       : output : 2.5 V             :         : 7         : N              
+testeJump[0]                 : G17       : output : 2.5 V             :         : 7         : N              
 unidade[6]                   : G18       : output : 2.5 V             :         : 7         : Y              
 lednumprocessos              : G19       : output : 2.5 V             :         : 7         : Y              
-testeIN[29]                  : G20       : output : 2.5 V             :         : 7         : N              
-testeIN[1]                   : G21       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 7         :                
+testePC[23]                  : G20       : output : 2.5 V             :         : 7         : N              
+testePC[25]                  : G21       : output : 2.5 V             :         : 7         : N              
+testePC[26]                  : G22       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G23       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G24       :        :                   :         : 6         :                
-testeout[15]                 : G25       : output : 2.5 V             :         : 6         : N              
-Testeprocesso_atual[8]       : G26       : output : 2.5 V             :         : 6         : N              
-testeout[4]                  : G27       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G28       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G25       :        :                   :         : 6         :                
+testesaidaUNI[1]             : G26       : output : 2.5 V             :         : 6         : N              
+testeRS[21]                  : G27       : output : 2.5 V             :         : 6         : N              
+testeOPCODE[5]               : G28       : output : 2.5 V             :         : 6         : N              
 VCCIO1                       : H1        : power  :                   : 2.5V    : 1         :                
 GND                          : H2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1         :                
-enRT[1]                      : H4        : output : 2.5 V             :         : 1         : N              
-testeJump[2]                 : H5        : output : 2.5 V             :         : 1         : N              
-testeUla[29]                 : H6        : output : 2.5 V             :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 1         :                
-testeRS[13]                  : H8        : output : 2.5 V             :         : 8         : N              
+testeReg[28]                 : H3        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H4        :        :                   :         : 1         :                
+testeImediato[31]            : H5        : output : 2.5 V             :         : 1         : N              
+testeReg[24]                 : H6        : output : 2.5 V             :         : 1         : N              
+testeIN[11]                  : H7        : output : 2.5 V             :         : 1         : N              
+testeJump[16]                : H8        : output : 2.5 V             :         : 8         : N              
 GNDA3                        : H9        : gnd    :                   :         :           :                
-testeMux[9]                  : H10       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 8         :                
 VCCIO8                       : H11       : power  :                   : 2.5V    : 8         :                
-testeout[9]                  : H12       : output : 2.5 V             :         : 8         : N              
-enRD[4]                      : H13       : output : 2.5 V             :         : 8         : N              
-testeImediato[16]            : H14       : output : 2.5 V             :         : 8         : N              
-testeMux[22]                 : H15       : output : 2.5 V             :         : 7         : N              
-testeReg[17]                 : H16       : output : 2.5 V             :         : 7         : N              
-testeRS[6]                   : H17       : output : 2.5 V             :         : 7         : N              
+Testeprocesso_atual[5]       : H12       : output : 2.5 V             :         : 8         : N              
+testeJump[5]                 : H13       : output : 2.5 V             :         : 8         : N              
+testeMux[8]                  : H14       : output : 2.5 V             :         : 8         : N              
+testePC[1]                   : H15       : output : 2.5 V             :         : 7         : N              
+testePC[2]                   : H16       : output : 2.5 V             :         : 7         : N              
+testePC[9]                   : H17       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : H18       : power  :                   : 2.5V    : 7         :                
-Testeprocesso_atual[3]       : H19       : output : 2.5 V             :         : 7         : N              
+testePC[13]                  : H19       : output : 2.5 V             :         : 7         : N              
 GNDA2                        : H20       : gnd    :                   :         :           :                
-testeout[28]                 : H21       : output : 2.5 V             :         : 7         : N              
+testePC[14]                  : H21       : output : 2.5 V             :         : 7         : N              
 unidade[0]                   : H22       : output : 2.5 V             :         : 6         : Y              
-testeReg[15]                 : H23       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H24       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H25       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H26       :        :                   :         : 6         :                
+testeIN[21]                  : H23       : output : 2.5 V             :         : 6         : N              
+testeout[0]                  : H24       : output : 2.5 V             :         : 6         : N              
+testeMux[24]                 : H25       : output : 2.5 V             :         : 6         : N              
+testeout[18]                 : H26       : output : 2.5 V             :         : 6         : N              
 GND                          : H27       : gnd    :                   :         :           :                
 VCCIO6                       : H28       : power  :                   : 2.5V    : 6         :                
 GND+                         : J1        :        :                   :         : 1         :                
 GND                          : J2        : gnd    :                   :         :           :                
-testePC[15]                  : J3        : output : 2.5 V             :         : 1         : N              
-testePC[12]                  : J4        : output : 2.5 V             :         : 1         : N              
-testePC[10]                  : J5        : output : 2.5 V             :         : 1         : N              
-testePC[0]                   : J6        : output : 2.5 V             :         : 1         : N              
-testePC[24]                  : J7        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1         :                
+testeMux[12]                 : J5        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J6        :        :                   :         : 1         :                
+testeUla[22]                 : J7        : output : 2.5 V             :         : 1         : N              
 VCCA3                        : J8        : power  :                   : 2.5V    :           :                
 VCCD_PLL3                    : J9        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J10       :        :                   :         : 8         :                
+Testeprocesso_atual[26]      : J10       : output : 2.5 V             :         : 8         : N              
 GND                          : J11       : gnd    :                   :         :           :                
-testeJump[22]                : J12       : output : 2.5 V             :         : 8         : N              
-testeReg[4]                  : J13       : output : 2.5 V             :         : 8         : N              
-testeJump[19]                : J14       : output : 2.5 V             :         : 8         : N              
-testeout[18]                 : J15       : output : 2.5 V             :         : 7         : N              
-Testeprocesso_atual[13]      : J16       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J17       :        :                   :         : 7         :                
+testeJump[21]                : J12       : output : 2.5 V             :         : 8         : N              
+testeMux[13]                 : J13       : output : 2.5 V             :         : 8         : N              
+testeMux[9]                  : J14       : output : 2.5 V             :         : 8         : N              
+testePC[11]                  : J15       : output : 2.5 V             :         : 7         : N              
+testePC[8]                   : J16       : output : 2.5 V             :         : 7         : N              
+testePC[10]                  : J17       : output : 2.5 V             :         : 7         : N              
 GND                          : J18       : gnd    :                   :         :           :                
-testeReg[31]                 : J19       : output : 2.5 V             :         : 7         : N              
+testePC[15]                  : J19       : output : 2.5 V             :         : 7         : N              
 VCCD_PLL2                    : J20       : power  :                   : 1.2V    :           :                
 VCCA2                        : J21       : power  :                   : 2.5V    :           :                
 unidade[1]                   : J22       : output : 2.5 V             :         : 6         : Y              
-testeReg[23]                 : J23       : output : 2.5 V             :         : 6         : N              
+testeout[21]                 : J23       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J24       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J25       :        :                   :         : 6         :                
-testeUla[24]                 : J26       : output : 2.5 V             :         : 6         : N              
+testedesvio                  : J25       : output : 2.5 V             :         : 6         : N              
+testeOPCODE[1]               : J26       : output : 2.5 V             :         : 6         : N              
 GND+                         : J27       :        :                   :         : 6         :                
 GND+                         : J28       :        :                   :         : 6         :                
-testePC[5]                   : K1        : output : 2.5 V             :         : 1         : N              
-testePC[2]                   : K2        : output : 2.5 V             :         : 1         : N              
-testePC[1]                   : K3        : output : 2.5 V             :         : 1         : N              
-testePC[9]                   : K4        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 1         :                
+testePC[18]                  : K3        : output : 2.5 V             :         : 1         : N              
+testeout[16]                 : K4        : output : 2.5 V             :         : 1         : N              
 VCCIO1                       : K5        : power  :                   : 2.5V    : 1         :                
 GND                          : K6        : gnd    :                   :         :           :                
-testePC[16]                  : K7        : output : 2.5 V             :         : 1         : N              
-testePC[21]                  : K8        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K7        :        :                   :         : 1         :                
+testeIN[10]                  : K8        : output : 2.5 V             :         : 1         : N              
 VCCINT                       : K9        : power  :                   : 1.2V    :           :                
 GND                          : K10       : gnd    :                   :         :           :                
 VCCINT                       : K11       : power  :                   : 1.2V    :           :                
@@ -561,22 +561,22 @@ VCCINT                       : K17       : power  :                   : 1.2V    
 GND                          : K18       : gnd    :                   :         :           :                
 VCCINT                       : K19       : power  :                   : 1.2V    :           :                
 GND                          : K20       : gnd    :                   :         :           :                
-testeUla[16]                 : K21       : output : 2.5 V             :         : 6         : N              
-testeReg[7]                  : K22       : output : 2.5 V             :         : 6         : N              
+testeReg[7]                  : K21       : output : 2.5 V             :         : 6         : N              
+testeReg[11]                 : K22       : output : 2.5 V             :         : 6         : N              
 GND                          : K23       : gnd    :                   :         :           :                
 VCCIO6                       : K24       : power  :                   : 2.5V    : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K25       :        :                   :         : 6         :                
-testeout[27]                 : K26       : output : 2.5 V             :         : 6         : N              
-testeIN[27]                  : K27       : output : 2.5 V             :         : 6         : N              
-enRS[2]                      : K28       : output : 2.5 V             :         : 6         : N              
-testePC[18]                  : L1        : output : 2.5 V             :         : 1         : N              
-testePC[23]                  : L2        : output : 2.5 V             :         : 1         : N              
-testePC[8]                   : L3        : output : 2.5 V             :         : 1         : N              
-testePC[6]                   : L4        : output : 2.5 V             :         : 1         : N              
-testePC[13]                  : L5        : output : 2.5 V             :         : 1         : N              
-testePC[7]                   : L6        : output : 2.5 V             :         : 1         : N              
-testePC[25]                  : L7        : output : 2.5 V             :         : 1         : N              
-testePC[29]                  : L8        : output : 2.5 V             :         : 1         : N              
+testeout[11]                 : K25       : output : 2.5 V             :         : 6         : N              
+testePC[6]                   : K26       : output : 2.5 V             :         : 6         : N              
+testeJump[2]                 : K27       : output : 2.5 V             :         : 6         : N              
+testePC[17]                  : K28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 1         :                
+testeReg[6]                  : L2        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L5        :        :                   :         : 1         :                
+enRS[1]                      : L6        : output : 2.5 V             :         : 1         : N              
+enRT[4]                      : L7        : output : 2.5 V             :         : 1         : N              
+controlIO[1]                 : L8        : output : 2.5 V             :         : 1         : N              
 GND                          : L9        : gnd    :                   :         :           :                
 VCCINT                       : L10       : power  :                   : 1.2V    :           :                
 GND                          : L11       : gnd    :                   :         :           :                
@@ -589,22 +589,22 @@ GND                          : L17       : gnd    :                   :         
 VCCINT                       : L18       : power  :                   : 1.2V    :           :                
 GND                          : L19       : gnd    :                   :         :           :                
 VCCINT                       : L20       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L21       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L22       :        :                   :         : 6         :                
-testeRS[7]                   : L23       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : L24       :        :                   :         : 6         :                
+testeUla[3]                  : L21       : output : 2.5 V             :         : 6         : N              
+testeMux[19]                 : L22       : output : 2.5 V             :         : 6         : N              
+testePC[22]                  : L23       : output : 2.5 V             :         : 6         : N              
+testePC[29]                  : L24       : output : 2.5 V             :         : 6         : N              
 unidade[2]                   : L25       : output : 2.5 V             :         : 6         : Y              
 unidade[3]                   : L26       : output : 2.5 V             :         : 6         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : L27       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L28       :        :                   :         : 6         :                
-testePC[20]                  : M1        : output : 2.5 V             :         : 1         : N              
-testePC[26]                  : M2        : output : 2.5 V             :         : 1         : N              
-testePC[3]                   : M3        : output : 2.5 V             :         : 1         : N              
-testePC[11]                  : M4        : output : 2.5 V             :         : 1         : N              
-testePC[31]                  : M5        : output : 2.5 V             :         : 1         : N              
+testeSelMux[1]               : L27       : output : 2.5 V             :         : 6         : N              
+testePC[31]                  : L28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 1         :                
+testePC[4]                   : M3        : output : 2.5 V             :         : 1         : N              
+controlIO[0]                 : M4        : output : 2.5 V             :         : 1         : N              
+testeMux[10]                 : M5        : output : 2.5 V             :         : 1         : N              
 nSTATUS                      : M6        :        :                   :         : 1         :                
-testePC[19]                  : M7        : output : 2.5 V             :         : 1         : N              
-testePC[28]                  : M8        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M7        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 1         :                
 VCCINT                       : M9        : power  :                   : 1.2V    :           :                
 GND                          : M10       : gnd    :                   :         :           :                
 VCCINT                       : M11       : power  :                   : 1.2V    :           :                
@@ -619,20 +619,20 @@ VCCINT                       : M19       : power  :                   : 1.2V    
 GND                          : M20       : gnd    :                   :         :           :                
 botaoPlaca                   : M21       : input  : 2.5 V             :         : 6         : Y              
 MSEL2                        : M22       :        :                   :         : 6         :                
-testeMux[1]                  : M23       : output : 2.5 V             :         : 6         : N              
+testeout[14]                 : M23       : output : 2.5 V             :         : 6         : N              
 dezena[6]                    : M24       : output : 2.5 V             :         : 6         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : M25       :        :                   :         : 6         :                
-testeUla[13]                 : M26       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : M27       :        :                   :         : 6         :                
-testeUla[15]                 : M28       : output : 2.5 V             :         : 6         : N              
+testeOPCODE[3]               : M25       : output : 2.5 V             :         : 6         : N              
+testePC[30]                  : M26       : output : 2.5 V             :         : 6         : N              
+Testeprocesso_atual[0]       : M27       : output : 2.5 V             :         : 6         : N              
+testeout[12]                 : M28       : output : 2.5 V             :         : 6         : N              
 VCCIO1                       : N1        : power  :                   : 2.5V    : 1         :                
 GND                          : N2        : gnd    :                   :         :           :                
-testePC[22]                  : N3        : output : 2.5 V             :         : 1         : N              
-testePC[27]                  : N4        : output : 2.5 V             :         : 1         : N              
+testeMux[31]                 : N3        : output : 2.5 V             :         : 1         : N              
+testeImediato[7]             : N4        : output : 2.5 V             :         : 1         : N              
 VCCIO1                       : N5        : power  :                   : 2.5V    : 1         :                
 GND                          : N6        : gnd    :                   :         :           :                
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : N7        : input  : 2.5 V             :         : 1         : N              
-testePC[30]                  : N8        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 1         :                
 GND                          : N9        : gnd    :                   :         :           :                
 VCCINT                       : N10       : power  :                   : 1.2V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
@@ -645,16 +645,16 @@ GND                          : N17       : gnd    :                   :         
 VCCINT                       : N18       : power  :                   : 1.2V    :           :                
 GND                          : N19       : gnd    :                   :         :           :                
 VCCINT                       : N20       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N21       :        :                   :         : 6         :                
+testeout[24]                 : N21       : output : 2.5 V             :         : 6         : N              
 MSEL0                        : N22       :        :                   :         : 6         :                
 GND                          : N23       : gnd    :                   :         :           :                
 VCCIO6                       : N24       : power  :                   : 2.5V    : 6         :                
-testeRS[31]                  : N25       : output : 2.5 V             :         : 6         : N              
-testeReg[21]                 : N26       : output : 2.5 V             :         : 6         : N              
+testeout[29]                 : N25       : output : 2.5 V             :         : 6         : N              
+Testeprocesso_atual[2]       : N26       : output : 2.5 V             :         : 6         : N              
 GND                          : N27       : gnd    :                   :         :           :                
 VCCIO6                       : N28       : power  :                   : 2.5V    : 6         :                
-testeSinal                   : P1        : output : 2.5 V             :         : 1         : N              
-testePC[17]                  : P2        : output : 2.5 V             :         : 1         : N              
+testeUla[21]                 : P1        : output : 2.5 V             :         : 1         : N              
+testeMux[26]                 : P2        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DCLK~                : P3        : output : 2.5 V             :         : 1         : N              
 nCONFIG                      : P4        :        :                   :         : 1         :                
 TCK                          : P5        : input  :                   :         : 1         :                
@@ -673,21 +673,21 @@ VCCINT                       : P17       : power  :                   : 1.2V    
 GND                          : P18       : gnd    :                   :         :           :                
 VCCINT                       : P19       : power  :                   : 1.2V    :           :                
 GND                          : P20       : gnd    :                   :         :           :                
-testeRS[10]                  : P21       : output : 2.5 V             :         : 5         : N              
+testeUla[7]                  : P21       : output : 2.5 V             :         : 5         : N              
 MSEL3                        : P22       :        :                   :         : 6         :                
 MSEL1                        : P23       :        :                   :         : 6         :                
 CONF_DONE                    : P24       :        :                   :         : 6         :                
-testeMux[0]                  : P25       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : P26       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P27       :        :                   :         : 6         :                
+Testeprocesso_atual[1]       : P25       : output : 2.5 V             :         : 6         : N              
+testeUla[1]                  : P26       : output : 2.5 V             :         : 6         : N              
+testeout[26]                 : P27       : output : 2.5 V             :         : 6         : N              
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : P28       : output : 2.5 V             :         : 6         : N              
-testeOPCODE[0]               : R1        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
-testeImediato[7]             : R3        : output : 2.5 V             :         : 2         : N              
-testeJump[15]                : R4        : output : 2.5 V             :         : 2         : N              
-Testeprocesso_atual[26]      : R5        : output : 2.5 V             :         : 2         : N              
-testeSelMux[0]               : R6        : output : 2.5 V             :         : 2         : N              
-testeRS[25]                  : R7        : output : 2.5 V             :         : 2         : N              
+testeRS[24]                  : R1        : output : 2.5 V             :         : 2         : N              
+testeIN[15]                  : R2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
+testeRS[4]                   : R4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
+Testeprocesso_atual[17]      : R6        : output : 2.5 V             :         : 2         : N              
+testeRS[2]                   : R7        : output : 2.5 V             :         : 2         : N              
 nCE                          : R8        :        :                   :         : 1         :                
 GND                          : R9        : gnd    :                   :         :           :                
 VCCINT                       : R10       : power  :                   : 1.2V    :           :                
@@ -701,22 +701,22 @@ GND                          : R17       : gnd    :                   :         
 VCCINT                       : R18       : power  :                   : 1.2V    :           :                
 GND                          : R19       : gnd    :                   :         :           :                
 VCCINT                       : R20       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R21       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R22       :        :                   :         : 5         :                
-testeJump[14]                : R23       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R24       :        :                   :         : 5         :                
-testeout[2]                  : R25       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R26       :        :                   :         : 5         :                
-Testeprocesso_atual[10]      : R27       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R28       :        :                   :         : 5         :                
+testeRS[16]                  : R21       : output : 2.5 V             :         : 5         : N              
+testeRS[30]                  : R22       : output : 2.5 V             :         : 5         : N              
+testeUla[11]                 : R23       : output : 2.5 V             :         : 5         : N              
+testeUla[6]                  : R24       : output : 2.5 V             :         : 5         : N              
+testeRS[15]                  : R25       : output : 2.5 V             :         : 5         : N              
+testeUla[8]                  : R26       : output : 2.5 V             :         : 5         : N              
+testeUla[9]                  : R27       : output : 2.5 V             :         : 5         : N              
+testeUla[18]                 : R28       : output : 2.5 V             :         : 5         : N              
 VCCIO2                       : T1        : power  :                   : 2.5V    : 2         :                
 GND                          : T2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 2         :                
-testeReg[26]                 : T4        : output : 2.5 V             :         : 2         : N              
+testeRS[9]                   : T4        : output : 2.5 V             :         : 2         : N              
 VCCIO2                       : T5        : power  :                   : 2.5V    : 2         :                
 GND                          : T6        : gnd    :                   :         :           :                
-testeUla[12]                 : T7        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 2         :                
+testeReg[22]                 : T8        : output : 2.5 V             :         : 2         : N              
 VCCINT                       : T9        : power  :                   : 1.2V    :           :                
 GND                          : T10       : gnd    :                   :         :           :                
 VCCINT                       : T11       : power  :                   : 1.2V    :           :                
@@ -729,22 +729,22 @@ VCCINT                       : T17       : power  :                   : 1.2V    
 GND                          : T18       : gnd    :                   :         :           :                
 VCCINT                       : T19       : power  :                   : 1.2V    :           :                
 GND                          : T20       : gnd    :                   :         :           :                
-testeImediato[1]             : T21       : output : 2.5 V             :         : 5         : N              
-testeIN[4]                   : T22       : output : 2.5 V             :         : 5         : N              
+testeUla[25]                 : T21       : output : 2.5 V             :         : 5         : N              
+testeUla[12]                 : T22       : output : 2.5 V             :         : 5         : N              
 GND                          : T23       : gnd    :                   :         :           :                
 VCCIO5                       : T24       : power  :                   : 2.5V    : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T25       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T26       :        :                   :         : 5         :                
+testesaidaDez[2]             : T25       : output : 2.5 V             :         : 5         : N              
+testeUla[4]                  : T26       : output : 2.5 V             :         : 5         : N              
 GND                          : T27       : gnd    :                   :         :           :                
 VCCIO5                       : T28       : power  :                   : 2.5V    : 5         :                
-Testeprocesso_atual[15]      : U1        : output : 2.5 V             :         : 2         : N              
-Testeprocesso_atual[7]       : U2        : output : 2.5 V             :         : 2         : N              
-testeOPCODE[1]               : U3        : output : 2.5 V             :         : 2         : N              
-testeOPCODE[5]               : U4        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : U5        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 2         :                
-testeImediato[18]            : U8        : output : 2.5 V             :         : 2         : N              
+testeIN[8]                   : U1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2         :                
+Testeprocesso_atual[25]      : U3        : output : 2.5 V             :         : 2         : N              
+testeImediato[14]            : U4        : output : 2.5 V             :         : 2         : N              
+Testeprocesso_atual[23]      : U5        : output : 2.5 V             :         : 2         : N              
+Testeprocesso_atual[29]      : U6        : output : 2.5 V             :         : 2         : N              
+enRT[1]                      : U7        : output : 2.5 V             :         : 2         : N              
+testeJump[13]                : U8        : output : 2.5 V             :         : 2         : N              
 GND                          : U9        : gnd    :                   :         :           :                
 VCCINT                       : U10       : power  :                   : 1.2V    :           :                
 GND                          : U11       : gnd    :                   :         :           :                
@@ -757,22 +757,22 @@ GND                          : U17       : gnd    :                   :         
 VCCINT                       : U18       : power  :                   : 1.2V    :           :                
 GND                          : U19       : gnd    :                   :         :           :                
 VCCINT                       : U20       : power  :                   : 1.2V    :           :                
-Testeprocesso_atual[27]      : U21       : output : 2.5 V             :         : 5         : N              
-testeout[11]                 : U22       : output : 2.5 V             :         : 5         : N              
+testeRS[19]                  : U21       : output : 2.5 V             :         : 5         : N              
+testeUla[15]                 : U22       : output : 2.5 V             :         : 5         : N              
 dezena[1]                    : U23       : output : 2.5 V             :         : 5         : Y              
 dezena[0]                    : U24       : output : 2.5 V             :         : 5         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : U25       :        :                   :         : 5         :                
-testeImediato[17]            : U26       : output : 2.5 V             :         : 5         : N              
-testeJump[17]                : U27       : output : 2.5 V             :         : 5         : N              
-testeIN[25]                  : U28       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 2         :                
-testeout[30]                 : V2        : output : 2.5 V             :         : 2         : N              
-testeUla[10]                 : V3        : output : 2.5 V             :         : 2         : N              
-testeMux[19]                 : V4        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 2         :                
+testeUla[23]                 : U25       : output : 2.5 V             :         : 5         : N              
+testeUla[30]                 : U26       : output : 2.5 V             :         : 5         : N              
+testesaidaDez[0]             : U27       : output : 2.5 V             :         : 5         : N              
+testesaidaDez[1]             : U28       : output : 2.5 V             :         : 5         : N              
+testeImediato[21]            : V1        : output : 2.5 V             :         : 2         : N              
+testeReg[29]                 : V2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 2         :                
+testeReg[8]                  : V5        : output : 2.5 V             :         : 2         : N              
+testeReg[27]                 : V6        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 2         :                
-Testeprocesso_atual[21]      : V8        : output : 2.5 V             :         : 2         : N              
+Testeprocesso_atual[28]      : V8        : output : 2.5 V             :         : 2         : N              
 VCCINT                       : V9        : power  :                   : 1.2V    :           :                
 GND                          : V10       : gnd    :                   :         :           :                
 VCCINT                       : V11       : power  :                   : 1.2V    :           :                
@@ -785,22 +785,22 @@ VCCINT                       : V17       : power  :                   : 1.2V    
 GND                          : V18       : gnd    :                   :         :           :                
 VCCINT                       : V19       : power  :                   : 1.2V    :           :                
 GND                          : V20       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 5         :                
-testeReg[2]                  : V22       : output : 2.5 V             :         : 5         : N              
-testeMux[14]                 : V23       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V24       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V25       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V26       :        :                   :         : 5         :                
-testeImediato[11]            : V27       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V28       :        :                   :         : 5         :                
-testeIN[10]                  : W1        : output : 2.5 V             :         : 2         : N              
-testeRS[27]                  : W2        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 2         :                
-testeMux[26]                 : W4        : output : 2.5 V             :         : 2         : N              
+testeJump[11]                : V21       : output : 2.5 V             :         : 5         : N              
+testeRS[25]                  : V22       : output : 2.5 V             :         : 5         : N              
+testeOPCODE[2]               : V23       : output : 2.5 V             :         : 5         : N              
+enRT[0]                      : V24       : output : 2.5 V             :         : 5         : N              
+testesaidaCent[1]            : V25       : output : 2.5 V             :         : 5         : N              
+testeUla[28]                 : V26       : output : 2.5 V             :         : 5         : N              
+testesaidaCent[3]            : V27       : output : 2.5 V             :         : 5         : N              
+testeout[31]                 : V28       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 2         :                
+testeImediato[18]            : W3        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 2         :                
 VCCIO2                       : W5        : power  :                   : 2.5V    : 2         :                
 GND                          : W6        : gnd    :                   :         :           :                
-testeReg[25]                 : W7        : output : 2.5 V             :         : 2         : N              
-testeRS[8]                   : W8        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W7        :        :                   :         : 2         :                
+testeImediato[12]            : W8        : output : 2.5 V             :         : 2         : N              
 GND                          : W9        : gnd    :                   :         :           :                
 VCCINT                       : W10       : power  :                   : 1.2V    :           :                
 GND                          : W11       : gnd    :                   :         :           :                
@@ -823,23 +823,23 @@ centena[1]                   : W27       : output : 2.5 V             :         
 centena[0]                   : W28       : output : 2.5 V             :         : 5         : Y              
 GND+                         : Y1        :        :                   :         : 2         :                
 clock                        : Y2        : input  : 2.5 V             :         : 2         : Y              
-enRS[3]                      : Y3        : output : 2.5 V             :         : 2         : N              
-testeImediato[9]             : Y4        : output : 2.5 V             :         : 2         : N              
-testeMux[28]                 : Y5        : output : 2.5 V             :         : 2         : N              
-testeJump[11]                : Y6        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y3        :        :                   :         : 2         :                
+testeImediato[29]            : Y4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 2         :                
 VCCA1                        : Y8        : power  :                   : 2.5V    :           :                
 VCCD_PLL1                    : Y9        : power  :                   : 1.2V    :           :                
-testeIN[23]                  : Y10       : output : 2.5 V             :         : 3         : N              
+testeImediato[0]             : Y10       : output : 2.5 V             :         : 3         : N              
 GND                          : Y11       : gnd    :                   :         :           :                
-Testeprocesso_atual[6]       : Y12       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 3         :                
-testeReg[12]                 : Y14       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y15       :        :                   :         : 3         :                
-testeIN[6]                   : Y16       : output : 2.5 V             :         : 4         : N              
-Testeprocesso_atual[30]      : Y17       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y12       :        :                   :         : 3         :                
+testeIN[26]                  : Y13       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y14       :        :                   :         : 3         :                
+testeIN[6]                   : Y15       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 4         :                
+testeImediato[28]            : Y17       : output : 2.5 V             :         : 4         : N              
 GND                          : Y18       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y19       :        :                   :         : 4         :                
+testeImediato[5]             : Y19       : output : 2.5 V             :         : 4         : N              
 VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
 VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
 dezena[5]                    : Y22       : output : 2.5 V             :         : 5         : Y              

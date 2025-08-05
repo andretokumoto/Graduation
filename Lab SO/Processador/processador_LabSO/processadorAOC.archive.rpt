@@ -1,5 +1,5 @@
 Archive Project report for processadorAOC
-Thu Feb 27 15:42:41 2025
+Tue Aug  5 12:04:55 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Thu Feb 27 15:42:41 2025 ;
+; Archive Project Status ; Successful - Tue Aug  5 12:04:55 2025 ;
 ; Revision Name          ; processadorAOC                        ;
 ; Top-level Entity Name  ; CPU                                   ;
 ; Family                 ; Cyclone IV E                          ;
@@ -54,14 +54,14 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processador_27parte1.qar'
+Info: Generated archive 'C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/dia5agosto.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'processadorAOC.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/23.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Thu Feb 27 15:42:41 2025
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Tue Aug  5 12:04:55 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
@@ -90,6 +90,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; monostable.v                           ;
 ; mux6.v                                 ;
 ; muxDesvio.v                            ;
+; output_files/Waveform.vwf              ;
 ; ParadaSistema.v                        ;
 ; PC.v                                   ;
 ; processadorAOC.qpf                     ;
@@ -102,6 +103,11 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; ULA.v                                  ;
 ; unidadeDeComparacao.v                  ;
 ; UnidadeDeControle.v                    ;
+; Waveform.vwf                           ;
+; Waveform1.vwf                          ;
+; Waveform2.vwf                          ;
+; Waveform_testeSO.vwf                   ;
+; WaveformSO.vwf                         ;
 +----------------------------------------+
 
 
