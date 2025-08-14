@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/23/2024 18:21:19"
+// Generated on "08/14/2025 16:47:31"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          CPU
 // 
@@ -32,77 +32,121 @@ module CPU_vlg_vec_tst();
 // general purpose registers
 reg botaoPlaca;
 reg clock;
+reg [3:0] entradaDeDadosIO;
 reg reset;
 // wires                                               
-wire [1:0] controlIO;
+wire [31:0] Testeprocesso_atual;
+wire [31:0] ValorRS;
+wire [31:0] ValorRT;
+wire [6:0] centena;
+wire [6:0] dezena;
 wire [4:0] enRD;
 wire [4:0] enRS;
 wire [4:0] enRT;
 wire halt;
-wire [3:0] testeD;
+wire ledin;
+wire ledmenu;
+wire lednumprocessos;
+wire ledprocesso;
+wire testeBranchControl;
+wire [31:0] testeDadosMux;
+wire testeDesvioControl;
 wire [31:0] testeIN;
 wire [31:0] testeImediato;
-wire [31:0] testeMux;
-wire [31:0] testeOP;
+wire [25:0] testeJump;
+wire testeMemControl;
+wire [5:0] testeOPCODE;
 wire [31:0] testePC;
-wire [31:0] testeRS;
-wire [31:0] testeReg;
+wire testeResultComparacao;
 wire [2:0] testeSelMux;
-wire testeSinal;
-wire testeStatus;
+wire testeSelecaoMuxDesvio;
 wire [31:0] testeUla;
-wire [31:0] testeout;
-wire testepulso;
+wire [31:0] testedadoMem;
+wire [31:0] testeoperando;
 wire [3:0] testesaidaCent;
 wire [3:0] testesaidaDez;
 wire [3:0] testesaidaUNI;
+wire [6:0] uniProc;
+wire [6:0] unidade;
 
 // assign statements (if any)                          
 CPU i1 (
 // port map - connection between master ports and signals/registers   
+	.Testeprocesso_atual(Testeprocesso_atual),
+	.ValorRS(ValorRS),
+	.ValorRT(ValorRT),
 	.botaoPlaca(botaoPlaca),
+	.centena(centena),
 	.clock(clock),
-	.controlIO(controlIO),
+	.dezena(dezena),
 	.enRD(enRD),
 	.enRS(enRS),
 	.enRT(enRT),
+	.entradaDeDadosIO(entradaDeDadosIO),
 	.halt(halt),
+	.ledin(ledin),
+	.ledmenu(ledmenu),
+	.lednumprocessos(lednumprocessos),
+	.ledprocesso(ledprocesso),
 	.reset(reset),
-	.testeD(testeD),
+	.testeBranchControl(testeBranchControl),
+	.testeDadosMux(testeDadosMux),
+	.testeDesvioControl(testeDesvioControl),
 	.testeIN(testeIN),
 	.testeImediato(testeImediato),
-	.testeMux(testeMux),
-	.testeOP(testeOP),
+	.testeJump(testeJump),
+	.testeMemControl(testeMemControl),
+	.testeOPCODE(testeOPCODE),
 	.testePC(testePC),
-	.testeRS(testeRS),
-	.testeReg(testeReg),
+	.testeResultComparacao(testeResultComparacao),
 	.testeSelMux(testeSelMux),
-	.testeSinal(testeSinal),
-	.testeStatus(testeStatus),
+	.testeSelecaoMuxDesvio(testeSelecaoMuxDesvio),
 	.testeUla(testeUla),
-	.testeout(testeout),
-	.testepulso(testepulso),
+	.testedadoMem(testedadoMem),
+	.testeoperando(testeoperando),
 	.testesaidaCent(testesaidaCent),
 	.testesaidaDez(testesaidaDez),
-	.testesaidaUNI(testesaidaUNI)
+	.testesaidaUNI(testesaidaUNI),
+	.uniProc(uniProc),
+	.unidade(unidade)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
 
-// clock
-always
-begin
-	clock = 1'b0;
-	clock = #10000 1'b1;
-	#10000;
-end 
-
 // reset
 initial
 begin
 	reset = 1'b0;
+end 
+
+// clock
+always
+begin
+	clock = 1'b0;
+	clock = #1000 1'b1;
+	#1000;
+end 
+// entradaDeDadosIO[ 3 ]
+initial
+begin
+	entradaDeDadosIO[3] = 1'b0;
+end 
+// entradaDeDadosIO[ 2 ]
+initial
+begin
+	entradaDeDadosIO[2] = 1'b0;
+end 
+// entradaDeDadosIO[ 1 ]
+initial
+begin
+	entradaDeDadosIO[1] = 1'b0;
+end 
+// entradaDeDadosIO[ 0 ]
+initial
+begin
+	entradaDeDadosIO[0] = 1'b0;
 end 
 endmodule
 

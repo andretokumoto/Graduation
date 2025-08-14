@@ -113,7 +113,7 @@ module CPU(
     mux6 muxRegistro(.dadoRegControl(dadoRegControl),.HiLoData(HILOdata),.resulULA(resultadoULA),.valorRegRS(rs),.dadoMEM(dadoMem),.dadosEntrada(dadosDeEntrada),.imediato(imediatoExtendido),.PC(pcsomado),.DadosRegistro(dadosMux6),.pc_contexto(pc_contexto));
     
     //correçao desvio
-    correcaoDesvio desvio( .desvioOriginal(imediatoExtendido),.processo_atual(processo_atual),.desvioCorrigido(desvioCorrigido) );
+    //correcaoDesvio desvio( .desvioOriginal(imediatoExtendido),.processo_atual(processo_atual),.desvioCorrigido(desvioCorrigido) );
     
     //ligaçao com memoria de dados
     simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
@@ -160,13 +160,13 @@ module CPU(
          else  resulSomador <= pcsomado; //atualização normal de PC
          
          if(jumpControl) concatena <= {pc[31:26],rs[25:0]};
-         else concatena <= {pc[31:26],desvioCorrigido[25:0]};
+         else concatena <= {pc[31:26],jump};
     end
     
     always@(posedge clk or posedge reset)
     begin
         if(reset) pc<=32'd0;
-        else if(encerrarBios==1'b1) pc<=32'd0;
+        //else if(encerrarBios==1'b1) pc<=32'd0;
         else if(troca_contexto == 1'b1) pc<= Escalonador;
         else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
         else if (comandoOUT == 1'b1) pc <= PCout;

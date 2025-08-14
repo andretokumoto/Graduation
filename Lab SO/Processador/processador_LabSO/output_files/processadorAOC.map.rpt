@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorAOC
-Thu Aug 14 15:12:51 2025
+Thu Aug 14 16:25:24 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -29,25 +29,23 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  21. Parameter Settings for User Entity Instance: ContadorDeQuantum:quantum
  22. Parameter Settings for User Entity Instance: UnidadeDeControle:uco
  23. Parameter Settings for User Entity Instance: ULA:alu
- 24. Parameter Settings for User Entity Instance: correcaoDesvio:desvio
- 25. Parameter Settings for User Entity Instance: simple_dual_port_ram_dual_clock:mem
- 26. Parameter Settings for Inferred Entity Instance: simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0
- 27. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Mod0
- 28. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_mult:Mult0
- 29. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Div0
- 30. altsyncram Parameter Settings by Entity Instance
- 31. lpm_mult Parameter Settings by Entity Instance
- 32. Port Connectivity Checks: "BCD:bcd"
- 33. Port Connectivity Checks: "simple_dual_port_ram_dual_clock:mem"
- 34. Port Connectivity Checks: "correcaoDesvio:desvio"
- 35. Port Connectivity Checks: "mux6:muxRegistro"
- 36. Port Connectivity Checks: "UnidadeDeControle:uco"
- 37. Port Connectivity Checks: "ContadorDeQuantum:quantum"
- 38. Port Connectivity Checks: "MEMInstrucoes:inst"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
- 42. Analysis & Synthesis Suppressed Messages
+ 24. Parameter Settings for User Entity Instance: simple_dual_port_ram_dual_clock:mem
+ 25. Parameter Settings for Inferred Entity Instance: simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0
+ 26. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Mod0
+ 27. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Div0
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. lpm_mult Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "BCD:bcd"
+ 32. Port Connectivity Checks: "simple_dual_port_ram_dual_clock:mem"
+ 33. Port Connectivity Checks: "mux6:muxRegistro"
+ 34. Port Connectivity Checks: "UnidadeDeControle:uco"
+ 35. Port Connectivity Checks: "ContadorDeQuantum:quantum"
+ 36. Port Connectivity Checks: "MEMInstrucoes:inst"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
+ 40. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -74,13 +72,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Aug 14 15:12:50 2025          ;
+; Analysis & Synthesis Status        ; Successful - Thu Aug 14 16:25:24 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 3,896                                          ;
-;     Total combinational functions  ; 3,820                                          ;
+; Total logic elements               ; 3,865                                          ;
+;     Total combinational functions  ; 3,790                                          ;
 ;     Dedicated logic registers      ; 301                                            ;
 ; Total registers                    ; 301                                            ;
 ; Total pins                         ; 427                                            ;
@@ -212,7 +210,6 @@ https://fpgasoftware.intel.com/eula.
 ; ParadaSistema.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ParadaSistema.v                   ;         ;
 ; clock_divider.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/clock_divider.v                   ;         ;
 ; simple_dual_port_ram_dual_clock.v ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simple_dual_port_ram_dual_clock.v ;         ;
-; correcaoDesvio.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/correcaoDesvio.v                  ;         ;
 ; ContadorDeQuantum.v               ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ContadorDeQuantum.v               ;         ;
 ; altsyncram.tdf                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                         ;         ;
 ; stratix_ram_block.inc             ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                  ;         ;
@@ -247,17 +244,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 3,896                          ;
+; Estimated Total logic elements              ; 3,865                          ;
 ;                                             ;                                ;
-; Total combinational functions               ; 3820                           ;
+; Total combinational functions               ; 3790                           ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 1945                           ;
-;     -- 3 input functions                    ; 1532                           ;
-;     -- <=2 input functions                  ; 343                            ;
+;     -- 4 input functions                    ; 1908                           ;
+;     -- 3 input functions                    ; 1557                           ;
+;     -- <=2 input functions                  ; 325                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 2501                           ;
-;     -- arithmetic mode                      ; 1319                           ;
+;     -- normal mode                          ; 2477                           ;
+;     -- arithmetic mode                      ; 1313                           ;
 ;                                             ;                                ;
 ; Total registers                             ; 301                            ;
 ;     -- Dedicated logic registers            ; 301                            ;
@@ -270,7 +267,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; clock_divider:comb_3|clock_out ;
 ; Maximum fan-out                             ; 234                            ;
-; Total fan-out                               ; 15194                          ;
+; Total fan-out                               ; 15116                          ;
 ; Average fan-out                             ; 3.03                           ;
 +---------------------------------------------+--------------------------------+
 
@@ -280,14 +277,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name                     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |CPU                                      ; 3820 (243)          ; 301 (100)                 ; 32768       ; 8            ; 0       ; 4         ; 427  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
+; |CPU                                      ; 3790 (243)          ; 301 (100)                 ; 32768       ; 8            ; 0       ; 4         ; 427  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
 ;    |BCD:bcd|                              ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
-;    |BancoRegistradores:br|                ; 137 (137)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
+;    |BancoRegistradores:br|                ; 114 (114)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
 ;    |ContadorDeQuantum:quantum|            ; 79 (79)             ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ContadorDeQuantum:quantum                                                                                                     ; ContadorDeQuantum               ; work         ;
 ;    |EntradaSaida:IO|                      ; 301 (1)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO                                                                                                               ; EntradaSaida                    ; work         ;
 ;       |BCD:bcd|                           ; 300 (300)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO|BCD:bcd                                                                                                       ; BCD                             ; work         ;
-;    |MEMInstrucoes:inst|                   ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
-;    |ParadaSistema:mest|                   ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ParadaSistema:mest                                                                                                            ; ParadaSistema                   ; work         ;
+;    |MEMInstrucoes:inst|                   ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
+;    |ParadaSistema:mest|                   ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ParadaSistema:mest                                                                                                            ; ParadaSistema                   ; work         ;
 ;    |ULA:alu|                              ; 2699 (449)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
 ;       |lpm_divide:Div0|                   ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0                                                                                                       ; lpm_divide                      ; work         ;
 ;          |lpm_divide_hkm:auto_generated|  ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm                  ; work         ;
@@ -300,7 +297,7 @@ https://fpgasoftware.intel.com/eula.
 ;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc                     ; work         ;
 ;       |lpm_mult:Mult0|                    ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0                                                                                                        ; lpm_mult                        ; work         ;
 ;          |mult_7dt:auto_generated|        ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt                        ; work         ;
-;    |UnidadeDeControle:uco|                ; 84 (84)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
+;    |UnidadeDeControle:uco|                ; 81 (81)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
 ;    |clock_divider:comb_3|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|clock_divider:comb_3                                                                                                          ; clock_divider                   ; work         ;
 ;    |displaySete:displayCentena|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayCentena                                                                                                    ; displaySete                     ; work         ;
 ;    |displaySete:displayDezena|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayDezena                                                                                                     ; displaySete                     ; work         ;
@@ -459,7 +456,7 @@ Encoding Type:  One-Hot
 ; ULA:alu|saidaULA[25]                                 ; ULA:alu|Mux32                  ; yes                    ;
 ; regLO[25]                                            ; always5                        ; yes                    ;
 ; ULA:alu|saidaULA[26]                                 ; ULA:alu|Mux32                  ; yes                    ;
-; Number of user-specified and inferred latches = 216  ;                                ;                        ;
+; Number of user-specified and inferred latches = 215  ;                                ;                        ;
 +------------------------------------------------------+--------------------------------+------------------------+
 Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -1611,11 +1608,11 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[35][18]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[35][19]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[35][20]                 ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[35][21]                 ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[35][22]                 ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[35][23]                 ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[35][24]                 ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[35][25]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[35][21]                 ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[35][22]                 ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[35][23]                 ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[35][24]                 ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[35][25]                 ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[35][26]                 ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[35][27]                 ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[35][28]                 ; Stuck at VCC due to stuck port data_in ;
@@ -2609,7 +2606,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Total registers                              ; 301   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
-; Number of registers using Synchronous Load   ; 41    ;
+; Number of registers using Synchronous Load   ; 55    ;
 ; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 196   ;
@@ -2631,15 +2628,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|BancoRegistradores:br|bancoDeRegistradores[0][10] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|ContadorDeQuantum:quantum|contador[1]             ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |CPU|pc[18]                                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|BancoRegistradores:br|bancoDeRegistradores[0][27] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|ContadorDeQuantum:quantum|contador[5]             ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |CPU|pc[0]                                             ;
 ; 9:1                ; 21 bits   ; 126 LEs       ; 105 LEs              ; 21 LEs                 ; No         ; |CPU|mux6:muxRegistro|Mux19                            ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; No         ; |CPU|mux6:muxRegistro|Mux27                            ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; No         ; |CPU|mux6:muxRegistro|Mux23                            ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |CPU|mux6:muxRegistro|Mux31                            ;
-; 13:1               ; 31 bits   ; 248 LEs       ; 186 LEs              ; 62 LEs                 ; No         ; |CPU|ULA:alu|Mux20                                     ;
+; 13:1               ; 31 bits   ; 248 LEs       ; 186 LEs              ; 62 LEs                 ; No         ; |CPU|ULA:alu|Mux26                                     ;
 ; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |CPU|BancoRegistradores:br|Mux20                       ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |CPU|BancoRegistradores:br|Mux48                       ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |CPU|BancoRegistradores:br|Mux49                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -2803,16 +2800,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; maior          ; 01110 ; Unsigned Binary             ;
 ; seguidor       ; 11111 ; Unsigned Binary             ;
 +----------------+-------+-----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: correcaoDesvio:desvio  ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; TAM_BLOCO      ; 00000000000000000000000100101100 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -3029,16 +3016,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "correcaoDesvio:desvio"                                                                                                                                                                                ;
-+-------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                    ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; processo_atual          ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; desvioCorrigido[31..26] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-+-------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------+
 ; Port Connectivity Checks: "mux6:muxRegistro"       ;
 +------------------+-------+----------+--------------+
@@ -3090,24 +3067,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 32                          ;
 ;     ENA SCLR          ; 32                          ;
 ;     SCLR              ; 5                           ;
-;     SLD               ; 41                          ;
-;     plain             ; 59                          ;
-; cycloneiii_lcell_comb ; 3826                        ;
-;     arith             ; 1319                        ;
-;         2 data inputs ; 128                         ;
-;         3 data inputs ; 1191                        ;
-;     normal            ; 2507                        ;
-;         0 data inputs ; 64                          ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 144                         ;
-;         3 data inputs ; 341                         ;
-;         4 data inputs ; 1945                        ;
+;     SLD               ; 55                          ;
+;     plain             ; 45                          ;
+; cycloneiii_lcell_comb ; 3795                        ;
+;     arith             ; 1313                        ;
+;         2 data inputs ; 126                         ;
+;         3 data inputs ; 1187                        ;
+;     normal            ; 2482                        ;
+;         0 data inputs ; 62                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 130                         ;
+;         3 data inputs ; 370                         ;
+;         4 data inputs ; 1908                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 130.50                      ;
-; Average LUT depth     ; 80.22                       ;
+; Average LUT depth     ; 80.72                       ;
 +-----------------------+-----------------------------+
 
 
@@ -3116,7 +3093,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:42     ;
+; Top            ; 00:01:07     ;
 +----------------+--------------+
 
 
@@ -3126,7 +3103,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Aug 14 15:11:45 2025
+    Info: Processing started: Thu Aug 14 16:23:49 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -3493,8 +3470,6 @@ Info (10041): Inferred latch for "saidaULA[31]" at ULA.v(13) File: C:/Users/Acer
 Info (12128): Elaborating entity "unidadeDeComparacao" for hierarchy "unidadeDeComparacao:compara" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 110
 Warning (10235): Verilog HDL Always Construct warning at unidadeDeComparacao.v(10): variable "branchTipo" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/unidadeDeComparacao.v Line: 10
 Info (12128): Elaborating entity "mux6" for hierarchy "mux6:muxRegistro" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 113
-Info (12128): Elaborating entity "correcaoDesvio" for hierarchy "correcaoDesvio:desvio" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 116
-Warning (10235): Verilog HDL Always Construct warning at correcaoDesvio.v(19): variable "valorCorrecao" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/correcaoDesvio.v Line: 19
 Info (12128): Elaborating entity "simple_dual_port_ram_dual_clock" for hierarchy "simple_dual_port_ram_dual_clock:mem" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 119
 Info (12128): Elaborating entity "EntradaSaida" for hierarchy "EntradaSaida:IO" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 122
 Info (12128): Elaborating entity "BCD" for hierarchy "EntradaSaida:IO|BCD:bcd" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EntradaSaida.v Line: 16
@@ -3596,7 +3571,7 @@ Info (12133): Instantiated megafunction "ULA:alu|lpm_divide:Div0" with the follo
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hkm.tdf
     Info (12023): Found entity 1: lpm_divide_hkm File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/db/lpm_divide_hkm.tdf Line: 25
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 222 buffer(s)
     Info (13019): Ignored 222 SOFT buffer(s)
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
@@ -3613,17 +3588,17 @@ Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "processo_atual[7]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Info (13026): Duplicate LATCH primitive "processo_atual[5]" merged with LATCH primitive "Testeprocesso_atual[5]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
 Warning (13012): Latch UnidadeDeControle:uco|status has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 5
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch ULA:alu|saidaULA[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadeDeControle:uco|ulaOP[3] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (13012): Latch UnidadeDeControle:uco|dadoRegControl[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|dadoRegControl[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|HILOcontrol has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|dadoRegControl[2] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch ULA:alu|saidaULA[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadeDeControle:uco|ulaOP[2] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (13012): Latch ULA:alu|saidaULA[2] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
@@ -3687,44 +3662,41 @@ Warning (13012): Latch ULA:alu|saidaULA[30] has unsafe behavior File: C:/Users/A
 Warning (13012): Latch ULA:alu|saidaULA[31] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadeDeControle:uco|ulaOP[2] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (13012): Latch UnidadeDeControle:uco|DesvioControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|branchControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|branchTipo has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|valueULA has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|memControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|entradaSaidaControl[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|entradaSaidaControl[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|ledControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|comandoOUT has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
-Warning (13012): Latch UnidadeDeControle:uco|encerrarBios[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|ulaOP[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|ulaOP[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|ulaOP[3] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|ulaOP[2] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|escritaRegControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|mudaProcesso has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (13012): Latch UnidadeDeControle:uco|jumpControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|status" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 5
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|DesvioControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|branchControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|memControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-Warning (14026): LATCH primitive "UnidadeDeControle:uco|encerrarBios[0]" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|escritaRegControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|mudaProcesso" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|jumpControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
@@ -3809,24 +3781,22 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Testeprocesso_atual[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 896 registers lost all their fanouts during netlist optimizations.
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "concatena[7]~19" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 157
 Info (144001): Generated suppressed messages file C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/output_files/processadorAOC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "botaoPlaca" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 4
-Info (21057): Implemented 4397 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4389 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 420 output pins
-    Info (21061): Implemented 3930 logic cells
+    Info (21061): Implemented 3922 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 265 warnings
-    Info: Peak virtual memory: 4818 megabytes
-    Info: Processing ended: Thu Aug 14 15:12:51 2025
-    Info: Elapsed time: 00:01:06
-    Info: Total CPU time (on all processors): 00:01:21
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 261 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Thu Aug 14 16:25:24 2025
+    Info: Elapsed time: 00:01:35
+    Info: Total CPU time (on all processors): 00:01:29
 
 
 +------------------------------------------+
