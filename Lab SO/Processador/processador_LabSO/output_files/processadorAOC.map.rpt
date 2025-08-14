@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorAOC
-Tue Aug  5 10:52:29 2025
+Thu Aug 14 15:12:51 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -29,28 +29,25 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  21. Parameter Settings for User Entity Instance: ContadorDeQuantum:quantum
  22. Parameter Settings for User Entity Instance: UnidadeDeControle:uco
  23. Parameter Settings for User Entity Instance: ULA:alu
- 24. Parameter Settings for User Entity Instance: EnderecoRelativo:er
- 25. Parameter Settings for User Entity Instance: correcaoDesvio:desvio
- 26. Parameter Settings for User Entity Instance: simple_dual_port_ram_dual_clock:mem
- 27. Parameter Settings for Inferred Entity Instance: simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0
- 28. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Mod0
- 29. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_mult:Mult0
- 30. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Div0
- 31. Parameter Settings for Inferred Entity Instance: EnderecoRelativo:er|lpm_mult:Mult0
- 32. altsyncram Parameter Settings by Entity Instance
- 33. lpm_mult Parameter Settings by Entity Instance
- 34. Port Connectivity Checks: "BCD:bcd"
- 35. Port Connectivity Checks: "simple_dual_port_ram_dual_clock:mem"
- 36. Port Connectivity Checks: "correcaoDesvio:desvio"
- 37. Port Connectivity Checks: "EnderecoRelativo:er"
- 38. Port Connectivity Checks: "mux6:muxRegistro"
- 39. Port Connectivity Checks: "UnidadeDeControle:uco"
- 40. Port Connectivity Checks: "ContadorDeQuantum:quantum"
- 41. Port Connectivity Checks: "MEMInstrucoes:inst"
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
- 45. Analysis & Synthesis Suppressed Messages
+ 24. Parameter Settings for User Entity Instance: correcaoDesvio:desvio
+ 25. Parameter Settings for User Entity Instance: simple_dual_port_ram_dual_clock:mem
+ 26. Parameter Settings for Inferred Entity Instance: simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0
+ 27. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Mod0
+ 28. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_mult:Mult0
+ 29. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Div0
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. lpm_mult Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "BCD:bcd"
+ 33. Port Connectivity Checks: "simple_dual_port_ram_dual_clock:mem"
+ 34. Port Connectivity Checks: "correcaoDesvio:desvio"
+ 35. Port Connectivity Checks: "mux6:muxRegistro"
+ 36. Port Connectivity Checks: "UnidadeDeControle:uco"
+ 37. Port Connectivity Checks: "ContadorDeQuantum:quantum"
+ 38. Port Connectivity Checks: "MEMInstrucoes:inst"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+ 42. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -77,16 +74,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Aug  5 10:52:29 2025          ;
+; Analysis & Synthesis Status        ; Successful - Thu Aug 14 15:12:50 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 3,921                                          ;
-;     Total combinational functions  ; 3,845                                          ;
+; Total logic elements               ; 3,896                                          ;
+;     Total combinational functions  ; 3,820                                          ;
 ;     Dedicated logic registers      ; 301                                            ;
 ; Total registers                    ; 301                                            ;
-; Total pins                         ; 395                                            ;
+; Total pins                         ; 427                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 32,768                                         ;
 ; Embedded Multiplier 9-bit elements ; 8                                              ;
@@ -217,7 +214,6 @@ https://fpgasoftware.intel.com/eula.
 ; simple_dual_port_ram_dual_clock.v ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simple_dual_port_ram_dual_clock.v ;         ;
 ; correcaoDesvio.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/correcaoDesvio.v                  ;         ;
 ; ContadorDeQuantum.v               ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ContadorDeQuantum.v               ;         ;
-; EnderecoRelativo.v                ; yes             ; User Verilog HDL File        ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EnderecoRelativo.v                ;         ;
 ; altsyncram.tdf                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                         ;         ;
 ; stratix_ram_block.inc             ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                  ;         ;
 ; lpm_mux.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                            ;         ;
@@ -243,23 +239,6 @@ https://fpgasoftware.intel.com/eula.
 ; altshift.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altshift.inc                                           ;         ;
 ; db/mult_7dt.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/db/mult_7dt.tdf                   ;         ;
 ; db/lpm_divide_hkm.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/db/lpm_divide_hkm.tdf             ;         ;
-; multcore.tdf                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/multcore.tdf                                           ;         ;
-; csa_add.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/csa_add.inc                                            ;         ;
-; mpar_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/mpar_add.inc                                           ;         ;
-; muleabz.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/muleabz.inc                                            ;         ;
-; mul_lfrg.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/mul_lfrg.inc                                           ;         ;
-; mul_boothc.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/mul_boothc.inc                                         ;         ;
-; alt_ded_mult.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_ded_mult.inc                                       ;         ;
-; alt_ded_mult_y.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                     ;         ;
-; dffpipe.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/dffpipe.inc                                            ;         ;
-; mpar_add.tdf                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/mpar_add.tdf                                           ;         ;
-; lpm_add_sub.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf                                        ;         ;
-; addcore.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/addcore.inc                                            ;         ;
-; look_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/look_add.inc                                           ;         ;
-; alt_stratix_add_sub.inc           ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                ;         ;
-; db/add_sub_mgh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/db/add_sub_mgh.tdf                ;         ;
-; db/add_sub_qgh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/db/add_sub_qgh.tdf                ;         ;
-; altshift.tdf                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altshift.tdf                                           ;         ;
 +-----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -268,77 +247,71 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 3,921                          ;
+; Estimated Total logic elements              ; 3,896                          ;
 ;                                             ;                                ;
-; Total combinational functions               ; 3845                           ;
+; Total combinational functions               ; 3820                           ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 1964                           ;
-;     -- 3 input functions                    ; 1548                           ;
-;     -- <=2 input functions                  ; 333                            ;
+;     -- 4 input functions                    ; 1945                           ;
+;     -- 3 input functions                    ; 1532                           ;
+;     -- <=2 input functions                  ; 343                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 2516                           ;
-;     -- arithmetic mode                      ; 1329                           ;
+;     -- normal mode                          ; 2501                           ;
+;     -- arithmetic mode                      ; 1319                           ;
 ;                                             ;                                ;
 ; Total registers                             ; 301                            ;
 ;     -- Dedicated logic registers            ; 301                            ;
 ;     -- I/O registers                        ; 0                              ;
 ;                                             ;                                ;
-; I/O pins                                    ; 395                            ;
+; I/O pins                                    ; 427                            ;
 ; Total memory bits                           ; 32768                          ;
 ;                                             ;                                ;
 ; Embedded Multiplier 9-bit elements          ; 8                              ;
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; clock_divider:comb_3|clock_out ;
-; Maximum fan-out                             ; 235                            ;
-; Total fan-out                               ; 15196                          ;
-; Average fan-out                             ; 3.05                           ;
+; Maximum fan-out                             ; 234                            ;
+; Total fan-out                               ; 15194                          ;
+; Average fan-out                             ; 3.03                           ;
 +---------------------------------------------+--------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                             ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name                     ; Library Name ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |CPU                                           ; 3845 (243)          ; 301 (100)                 ; 32768       ; 8            ; 0       ; 4         ; 395  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
-;    |BCD:bcd|                                   ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
-;    |BancoRegistradores:br|                     ; 137 (137)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
-;    |ContadorDeQuantum:quantum|                 ; 79 (79)             ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ContadorDeQuantum:quantum                                                                                                     ; ContadorDeQuantum               ; work         ;
-;    |EnderecoRelativo:er|                       ; 22 (8)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EnderecoRelativo:er                                                                                                           ; EnderecoRelativo                ; work         ;
-;       |lpm_mult:Mult0|                         ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EnderecoRelativo:er|lpm_mult:Mult0                                                                                            ; lpm_mult                        ; work         ;
-;          |multcore:mult_core|                  ; 14 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core                                                                         ; multcore                        ; work         ;
-;             |mpar_add:padder|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                         ; mpar_add                        ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                    ; lpm_add_sub                     ; work         ;
-;                   |add_sub_mgh:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_mgh:auto_generated         ; add_sub_mgh                     ; work         ;
-;    |EntradaSaida:IO|                           ; 301 (1)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO                                                                                                               ; EntradaSaida                    ; work         ;
-;       |BCD:bcd|                                ; 300 (300)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO|BCD:bcd                                                                                                       ; BCD                             ; work         ;
-;    |MEMInstrucoes:inst|                        ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
-;    |ParadaSistema:mest|                        ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ParadaSistema:mest                                                                                                            ; ParadaSistema                   ; work         ;
-;    |ULA:alu|                                   ; 2700 (450)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
-;       |lpm_divide:Div0|                        ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0                                                                                                       ; lpm_divide                      ; work         ;
-;          |lpm_divide_hkm:auto_generated|       ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm                  ; work         ;
-;             |sign_div_unsign_9nh:divider|      ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
-;                |alt_u_div_6af:divider|         ; 1077 (1077)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
-;       |lpm_divide:Mod0|                        ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0                                                                                                       ; lpm_divide                      ; work         ;
-;          |lpm_divide_kcm:auto_generated|       ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm                  ; work         ;
-;             |sign_div_unsign_9nh:divider|      ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
-;                |alt_u_div_6af:divider|         ; 1094 (1093)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
-;                   |add_sub_8pc:add_sub_1|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc                     ; work         ;
-;       |lpm_mult:Mult0|                         ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0                                                                                                        ; lpm_mult                        ; work         ;
-;          |mult_7dt:auto_generated|             ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt                        ; work         ;
-;    |UnidadeDeControle:uco|                     ; 84 (84)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
-;    |clock_divider:comb_3|                      ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|clock_divider:comb_3                                                                                                          ; clock_divider                   ; work         ;
-;    |displaySete:displayCentena|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayCentena                                                                                                    ; displaySete                     ; work         ;
-;    |displaySete:displayDezena|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayDezena                                                                                                     ; displaySete                     ; work         ;
-;    |displaySete:displayUnidade|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayUnidade                                                                                                    ; displaySete                     ; work         ;
-;    |displaySete:displayprocessouni|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayprocessouni                                                                                                ; displaySete                     ; work         ;
-;    |mux6:muxRegistro|                          ; 171 (171)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mux6:muxRegistro                                                                                                              ; mux6                            ; work         ;
-;    |simple_dual_port_ram_dual_clock:mem|       ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|simple_dual_port_ram_dual_clock:mem                                                                                           ; simple_dual_port_ram_dual_clock ; work         ;
-;       |altsyncram:ram_rtl_0|                   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0                                                                      ; altsyncram                      ; work         ;
-;          |altsyncram_eg81:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0|altsyncram_eg81:auto_generated                                       ; altsyncram_eg81                 ; work         ;
-;    |unidadeDeComparacao:compara|               ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|unidadeDeComparacao:compara                                                                                                   ; unidadeDeComparacao             ; work         ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name                     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
+; |CPU                                      ; 3820 (243)          ; 301 (100)                 ; 32768       ; 8            ; 0       ; 4         ; 427  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
+;    |BCD:bcd|                              ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
+;    |BancoRegistradores:br|                ; 137 (137)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
+;    |ContadorDeQuantum:quantum|            ; 79 (79)             ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ContadorDeQuantum:quantum                                                                                                     ; ContadorDeQuantum               ; work         ;
+;    |EntradaSaida:IO|                      ; 301 (1)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO                                                                                                               ; EntradaSaida                    ; work         ;
+;       |BCD:bcd|                           ; 300 (300)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO|BCD:bcd                                                                                                       ; BCD                             ; work         ;
+;    |MEMInstrucoes:inst|                   ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
+;    |ParadaSistema:mest|                   ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ParadaSistema:mest                                                                                                            ; ParadaSistema                   ; work         ;
+;    |ULA:alu|                              ; 2699 (449)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
+;       |lpm_divide:Div0|                   ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0                                                                                                       ; lpm_divide                      ; work         ;
+;          |lpm_divide_hkm:auto_generated|  ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm                  ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
+;                |alt_u_div_6af:divider|    ; 1077 (1077)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
+;       |lpm_divide:Mod0|                   ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0                                                                                                       ; lpm_divide                      ; work         ;
+;          |lpm_divide_kcm:auto_generated|  ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm                  ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
+;                |alt_u_div_6af:divider|    ; 1094 (1093)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
+;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc                     ; work         ;
+;       |lpm_mult:Mult0|                    ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0                                                                                                        ; lpm_mult                        ; work         ;
+;          |mult_7dt:auto_generated|        ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt                        ; work         ;
+;    |UnidadeDeControle:uco|                ; 84 (84)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
+;    |clock_divider:comb_3|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|clock_divider:comb_3                                                                                                          ; clock_divider                   ; work         ;
+;    |displaySete:displayCentena|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayCentena                                                                                                    ; displaySete                     ; work         ;
+;    |displaySete:displayDezena|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayDezena                                                                                                     ; displaySete                     ; work         ;
+;    |displaySete:displayUnidade|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayUnidade                                                                                                    ; displaySete                     ; work         ;
+;    |displaySete:displayprocessouni|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayprocessouni                                                                                                ; displaySete                     ; work         ;
+;    |mux6:muxRegistro|                     ; 171 (171)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mux6:muxRegistro                                                                                                              ; mux6                            ; work         ;
+;    |simple_dual_port_ram_dual_clock:mem|  ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|simple_dual_port_ram_dual_clock:mem                                                                                           ; simple_dual_port_ram_dual_clock ; work         ;
+;       |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0                                                                      ; altsyncram                      ; work         ;
+;          |altsyncram_eg81:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0|altsyncram_eg81:auto_generated                                       ; altsyncram_eg81                 ; work         ;
+;    |unidadeDeComparacao:compara|          ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|unidadeDeComparacao:compara                                                                                                   ; unidadeDeComparacao             ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -2637,7 +2610,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Total registers                              ; 301   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
 ; Number of registers using Synchronous Load   ; 41    ;
-; Number of registers using Asynchronous Clear ; 35    ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 196   ;
 ; Number of registers using Preset             ; 0     ;
@@ -2658,15 +2631,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|BancoRegistradores:br|bancoDeRegistradores[0][13] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|ContadorDeQuantum:quantum|contador[9]             ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |CPU|pc[10]                                            ;
-; 9:1                ; 21 bits   ; 126 LEs       ; 105 LEs              ; 21 LEs                 ; No         ; |CPU|mux6:muxRegistro|Mux20                            ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; No         ; |CPU|mux6:muxRegistro|Mux21                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|BancoRegistradores:br|bancoDeRegistradores[0][10] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|ContadorDeQuantum:quantum|contador[1]             ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |CPU|pc[18]                                            ;
+; 9:1                ; 21 bits   ; 126 LEs       ; 105 LEs              ; 21 LEs                 ; No         ; |CPU|mux6:muxRegistro|Mux19                            ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; No         ; |CPU|mux6:muxRegistro|Mux27                            ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |CPU|mux6:muxRegistro|Mux31                            ;
-; 13:1               ; 31 bits   ; 248 LEs       ; 186 LEs              ; 62 LEs                 ; No         ; |CPU|ULA:alu|Mux4                                      ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |CPU|BancoRegistradores:br|Mux1                        ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |CPU|BancoRegistradores:br|Mux43                       ;
+; 13:1               ; 31 bits   ; 248 LEs       ; 186 LEs              ; 62 LEs                 ; No         ; |CPU|ULA:alu|Mux20                                     ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |CPU|BancoRegistradores:br|Mux20                       ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |CPU|BancoRegistradores:br|Mux48                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -2834,16 +2807,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: EnderecoRelativo:er    ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; TamBloco       ; 00000000000000000000000100101100 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: correcaoDesvio:desvio  ;
 +----------------+----------------------------------+-----------------+
 ; Parameter Name ; Value                            ; Type            ;
@@ -3006,41 +2969,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: EnderecoRelativo:er|lpm_mult:Mult0 ;
-+------------------------------------------------+--------------+---------------------+
-; Parameter Name                                 ; Value        ; Type                ;
-+------------------------------------------------+--------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 10           ; Untyped             ;
-; LPM_WIDTHB                                     ; 9            ; Untyped             ;
-; LPM_WIDTHP                                     ; 19           ; Untyped             ;
-; LPM_WIDTHR                                     ; 19           ; Untyped             ;
-; LPM_WIDTHS                                     ; 1            ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
-; LPM_PIPELINE                                   ; 0            ; Untyped             ;
-; LATENCY                                        ; 0            ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
-; USE_EAB                                        ; OFF          ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
-+------------------------------------------------+--------------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                     ;
 +-------------------------------------------+----------------------------------------------------------+
@@ -3061,35 +2989,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                             ;
-+---------------------------------------+------------------------------------+
-; Name                                  ; Value                              ;
-+---------------------------------------+------------------------------------+
-; Number of entity instances            ; 2                                  ;
-; Entity Instance                       ; ULA:alu|lpm_mult:Mult0             ;
-;     -- LPM_WIDTHA                     ; 32                                 ;
-;     -- LPM_WIDTHB                     ; 32                                 ;
-;     -- LPM_WIDTHP                     ; 64                                 ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                 ;
-;     -- USE_EAB                        ; OFF                                ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
-; Entity Instance                       ; EnderecoRelativo:er|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 10                                 ;
-;     -- LPM_WIDTHB                     ; 9                                  ;
-;     -- LPM_WIDTHP                     ; 19                                 ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                ;
-;     -- USE_EAB                        ; OFF                                ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
-+---------------------------------------+------------------------------------+
++----------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                 ;
++---------------------------------------+------------------------+
+; Name                                  ; Value                  ;
++---------------------------------------+------------------------+
+; Number of entity instances            ; 1                      ;
+; Entity Instance                       ; ULA:alu|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                     ;
+;     -- LPM_WIDTHB                     ; 32                     ;
+;     -- LPM_WIDTHP                     ; 64                     ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED               ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                     ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                     ;
+;     -- USE_EAB                        ; OFF                    ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                   ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                     ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                     ;
++---------------------------------------+------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -3120,15 +3037,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; processo_atual          ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; desvioCorrigido[31..26] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 +-------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "EnderecoRelativo:er"                                                                                    ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                     ; Type   ; Severity ; Details                                                                             ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; enderecoRelativo[31..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------+
@@ -3176,31 +3084,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 395                         ;
+; boundary_port         ; 427                         ;
 ; cycloneiii_ff         ; 301                         ;
-;     CLR               ; 3                           ;
 ;     ENA               ; 132                         ;
 ;     ENA CLR           ; 32                          ;
 ;     ENA SCLR          ; 32                          ;
 ;     SCLR              ; 5                           ;
 ;     SLD               ; 41                          ;
-;     plain             ; 56                          ;
-; cycloneiii_lcell_comb ; 3851                        ;
-;     arith             ; 1329                        ;
+;     plain             ; 59                          ;
+; cycloneiii_lcell_comb ; 3826                        ;
+;     arith             ; 1319                        ;
 ;         2 data inputs ; 128                         ;
-;         3 data inputs ; 1201                        ;
-;     normal            ; 2522                        ;
+;         3 data inputs ; 1191                        ;
+;     normal            ; 2507                        ;
 ;         0 data inputs ; 64                          ;
 ;         1 data inputs ; 13                          ;
-;         2 data inputs ; 134                         ;
-;         3 data inputs ; 347                         ;
-;         4 data inputs ; 1964                        ;
+;         2 data inputs ; 144                         ;
+;         3 data inputs ; 341                         ;
+;         4 data inputs ; 1945                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 130.50                      ;
-; Average LUT depth     ; 79.76                       ;
+; Average LUT depth     ; 80.22                       ;
 +-----------------------+-----------------------------+
 
 
@@ -3209,7 +3116,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:50     ;
+; Top            ; 00:00:42     ;
 +----------------+--------------+
 
 
@@ -3219,13 +3126,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Aug  5 10:51:14 2025
+    Info: Processing started: Thu Aug 14 15:11:45 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file simple_dual_port_ram_single_clock.v
     Info (12023): Found entity 1: simple_dual_port_ram_single_clock File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simple_dual_port_ram_single_clock.v Line: 5
-Warning (10263): Verilog HDL Event Control warning at CPU.v(245): event expression contains "|" or "||" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 245
+Warning (10263): Verilog HDL Event Control warning at CPU.v(220): event expression contains "|" or "||" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 220
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
     Info (12023): Found entity 1: CPU File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 1
 Warning (10263): Verilog HDL Event Control warning at MEMInstrucoes.v(42): event expression contains "|" or "||" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 42
@@ -3281,156 +3188,154 @@ Info (12021): Found 1 design units, including 1 entities, in source file contado
     Info (12023): Found entity 1: ContadorDeQuantum File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ContadorDeQuantum.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file enderecorelativo.v
     Info (12023): Found entity 1: EnderecoRelativo File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EnderecoRelativo.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at CPU.v(72): created implicit net for "biosEmExecucao" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 72
-Critical Warning (10846): Verilog HDL Instantiation warning at CPU.v(65): instance has no name File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 65
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(92): created implicit net for "biosEmExecucao" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 92
+Critical Warning (10846): Verilog HDL Instantiation warning at CPU.v(89): instance has no name File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 89
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Warning (10858): Verilog HDL warning at CPU.v(46): object InstrucaIO used but never assigned File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 46
-Warning (10235): Verilog HDL Always Construct warning at CPU.v(207): variable "imediatoExtendido" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
-Warning (10240): Verilog HDL Always Construct warning at CPU.v(203): inferring latch(es) for variable "processo_atual", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 203
-Warning (10240): Verilog HDL Always Construct warning at CPU.v(203): inferring latch(es) for variable "Testeprocesso_atual", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 203
-Warning (10235): Verilog HDL Always Construct warning at CPU.v(224): variable "ulaOP" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Warning (10240): Verilog HDL Always Construct warning at CPU.v(222): inferring latch(es) for variable "regHI", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 222
-Warning (10240): Verilog HDL Always Construct warning at CPU.v(222): inferring latch(es) for variable "regLO", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 222
-Warning (10235): Verilog HDL Always Construct warning at CPU.v(237): variable "regHI" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 237
-Warning (10235): Verilog HDL Always Construct warning at CPU.v(238): variable "regLO" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 238
-Warning (10235): Verilog HDL Always Construct warning at CPU.v(272): variable "valueULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 272
-Warning (10030): Net "InstrucaIO" at CPU.v(46) has no driver or initial value, using a default initial value '0' File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 46
-Warning (10034): Output port "testeImediato" at CPU.v(51) has no driver File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-Warning (10034): Output port "testeReg" at CPU.v(51) has no driver File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-Info (10041): Inferred latch for "regLO[0]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[1]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[2]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[3]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[4]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[5]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[6]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[7]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[8]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[9]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[10]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[11]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[12]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[13]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[14]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[15]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[16]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[17]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[18]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[19]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[20]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[21]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[22]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[23]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[24]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[25]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[26]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[27]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[28]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[29]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[30]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regLO[31]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[0]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[1]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[2]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[3]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[4]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[5]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[6]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[7]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[8]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[9]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[10]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[11]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[12]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[13]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[14]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[15]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[16]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[17]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[18]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[19]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[20]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[21]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[22]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[23]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[24]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[25]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[26]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[27]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[28]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[29]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[30]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "regHI[31]" at CPU.v(224) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 224
-Info (10041): Inferred latch for "Testeprocesso_atual[0]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[1]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[2]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[3]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[4]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[5]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[6]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[7]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[8]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[9]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[10]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[11]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[12]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[13]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[14]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[15]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[16]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[17]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[18]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[19]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[20]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[21]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[22]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[23]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[24]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[25]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[26]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[27]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[28]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[29]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[30]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "Testeprocesso_atual[31]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[0]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[1]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[2]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[3]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[4]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[5]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[6]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[7]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[8]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[9]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[10]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[11]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[12]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[13]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[14]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[15]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[16]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[17]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[18]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[19]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[20]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[21]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[22]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[23]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[24]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[25]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[26]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[27]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[28]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[29]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[30]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (10041): Inferred latch for "processo_atual[31]" at CPU.v(205) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:comb_3" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 65
-Info (12128): Elaborating entity "MEMInstrucoes" for hierarchy "MEMInstrucoes:inst" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 72
+Warning (10858): Verilog HDL warning at CPU.v(84): object InstrucaIO used but never assigned File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 84
+Warning (10235): Verilog HDL Always Construct warning at CPU.v(194): variable "imediatoExtendido" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 194
+Warning (10240): Verilog HDL Always Construct warning at CPU.v(190): inferring latch(es) for variable "processo_atual", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 190
+Warning (10240): Verilog HDL Always Construct warning at CPU.v(190): inferring latch(es) for variable "Testeprocesso_atual", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 190
+Warning (10235): Verilog HDL Always Construct warning at CPU.v(207): variable "ulaOP" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Warning (10240): Verilog HDL Always Construct warning at CPU.v(205): inferring latch(es) for variable "regHI", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
+Warning (10240): Verilog HDL Always Construct warning at CPU.v(205): inferring latch(es) for variable "regLO", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
+Warning (10235): Verilog HDL Always Construct warning at CPU.v(216): variable "regHI" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 216
+Warning (10235): Verilog HDL Always Construct warning at CPU.v(217): variable "regLO" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 217
+Warning (10235): Verilog HDL Always Construct warning at CPU.v(244): variable "valueULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 244
+Warning (10030): Net "InstrucaIO" at CPU.v(84) has no driver or initial value, using a default initial value '0' File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 84
+Info (10041): Inferred latch for "regLO[0]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[1]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[2]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[3]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[4]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[5]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[6]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[7]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[8]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[9]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[10]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[11]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[12]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[13]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[14]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[15]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[16]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[17]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[18]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[19]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[20]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[21]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[22]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[23]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[24]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[25]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[26]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[27]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[28]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[29]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[30]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regLO[31]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[0]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[1]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[2]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[3]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[4]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[5]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[6]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[7]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[8]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[9]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[10]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[11]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[12]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[13]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[14]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[15]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[16]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[17]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[18]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[19]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[20]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[21]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[22]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[23]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[24]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[25]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[26]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[27]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[28]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[29]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[30]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "regHI[31]" at CPU.v(207) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 207
+Info (10041): Inferred latch for "Testeprocesso_atual[0]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[1]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[2]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[3]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[4]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[5]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[6]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[7]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[8]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[9]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[10]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[11]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[12]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[13]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[14]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[15]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[16]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[17]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[18]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[19]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[20]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[21]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[22]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[23]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[24]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[25]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[26]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[27]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[28]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[29]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[30]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "Testeprocesso_atual[31]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[0]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[1]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[2]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[3]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[4]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[5]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[6]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[7]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[8]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[9]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[10]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[11]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[12]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[13]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[14]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[15]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[16]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[17]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[18]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[19]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[20]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[21]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[22]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[23]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[24]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[25]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[26]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[27]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[28]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[29]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[30]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (10041): Inferred latch for "processo_atual[31]" at CPU.v(192) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:comb_3" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 89
+Info (12128): Elaborating entity "MEMInstrucoes" for hierarchy "MEMInstrucoes:inst" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 92
 Warning (10030): Net "memoria[3000..38]" at MEMInstrucoes.v(18) has no driver or initial value, using a default initial value '0' File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 18
 Warning (10034): Output port "biosEmExecucao" at MEMInstrucoes.v(11) has no driver File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 11
-Info (12128): Elaborating entity "ContadorDeQuantum" for hierarchy "ContadorDeQuantum:quantum" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 75
-Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:uco" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 78
+Info (12128): Elaborating entity "ContadorDeQuantum" for hierarchy "ContadorDeQuantum:quantum" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 95
+Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:uco" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 98
 Warning (10272): Verilog HDL Case Statement warning at UnidadeDeControle.v(911): case item expression covers a value already covered by a previous case item File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 911
 Warning (10270): Verilog HDL Case Statement warning at UnidadeDeControle.v(28): incomplete case statement has no default case item File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 28
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "DesvioControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
@@ -3481,10 +3386,10 @@ Info (10041): Inferred latch for "escritaRegControl" at UnidadeDeControle.v(25) 
 Info (10041): Inferred latch for "jumpControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "branchControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "DesvioControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (12128): Elaborating entity "ParadaSistema" for hierarchy "ParadaSistema:mest" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 81
+Info (12128): Elaborating entity "ParadaSistema" for hierarchy "ParadaSistema:mest" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 101
 Warning (10235): Verilog HDL Always Construct warning at ParadaSistema.v(12): variable "estadoAtual" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ParadaSistema.v Line: 12
-Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:br" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 84
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:alu" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 87
+Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:br" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 104
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:alu" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 107
 Warning (10270): Verilog HDL Case Statement warning at ULA.v(13): incomplete case statement has no default case item File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
 Warning (10240): Verilog HDL Always Construct warning at ULA.v(13): inferring latch(es) for variable "saidaULA", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
 Warning (10240): Verilog HDL Always Construct warning at ULA.v(13): inferring latch(es) for variable "saidaHI", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
@@ -3585,15 +3490,13 @@ Info (10041): Inferred latch for "saidaULA[28]" at ULA.v(13) File: C:/Users/Acer
 Info (10041): Inferred latch for "saidaULA[29]" at ULA.v(13) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
 Info (10041): Inferred latch for "saidaULA[30]" at ULA.v(13) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
 Info (10041): Inferred latch for "saidaULA[31]" at ULA.v(13) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
-Info (12128): Elaborating entity "unidadeDeComparacao" for hierarchy "unidadeDeComparacao:compara" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 90
+Info (12128): Elaborating entity "unidadeDeComparacao" for hierarchy "unidadeDeComparacao:compara" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 110
 Warning (10235): Verilog HDL Always Construct warning at unidadeDeComparacao.v(10): variable "branchTipo" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/unidadeDeComparacao.v Line: 10
-Info (12128): Elaborating entity "mux6" for hierarchy "mux6:muxRegistro" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 93
-Info (12128): Elaborating entity "EnderecoRelativo" for hierarchy "EnderecoRelativo:er" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 96
-Warning (10235): Verilog HDL Always Construct warning at EnderecoRelativo.v(17): variable "desvio" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EnderecoRelativo.v Line: 17
-Info (12128): Elaborating entity "correcaoDesvio" for hierarchy "correcaoDesvio:desvio" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 99
+Info (12128): Elaborating entity "mux6" for hierarchy "mux6:muxRegistro" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 113
+Info (12128): Elaborating entity "correcaoDesvio" for hierarchy "correcaoDesvio:desvio" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 116
 Warning (10235): Verilog HDL Always Construct warning at correcaoDesvio.v(19): variable "valorCorrecao" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/correcaoDesvio.v Line: 19
-Info (12128): Elaborating entity "simple_dual_port_ram_dual_clock" for hierarchy "simple_dual_port_ram_dual_clock:mem" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 104
-Info (12128): Elaborating entity "EntradaSaida" for hierarchy "EntradaSaida:IO" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 107
+Info (12128): Elaborating entity "simple_dual_port_ram_dual_clock" for hierarchy "simple_dual_port_ram_dual_clock:mem" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 119
+Info (12128): Elaborating entity "EntradaSaida" for hierarchy "EntradaSaida:IO" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 122
 Info (12128): Elaborating entity "BCD" for hierarchy "EntradaSaida:IO|BCD:bcd" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EntradaSaida.v Line: 16
 Warning (10235): Verilog HDL Always Construct warning at BCD.v(11): variable "controlesaida" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BCD.v Line: 11
 Warning (10230): Verilog HDL assignment warning at BCD.v(27): truncated value with size 32 to match size of target (4) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BCD.v Line: 27
@@ -3615,7 +3518,17 @@ Info (10041): Inferred latch for "unidade[0]" at BCD.v(11) File: C:/Users/Acer/D
 Info (10041): Inferred latch for "unidade[1]" at BCD.v(11) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BCD.v Line: 11
 Info (10041): Inferred latch for "unidade[2]" at BCD.v(11) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BCD.v Line: 11
 Info (10041): Inferred latch for "unidade[3]" at BCD.v(11) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BCD.v Line: 11
-Info (12128): Elaborating entity "displaySete" for hierarchy "displaySete:displayUnidade" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 110
+Info (12128): Elaborating entity "displaySete" for hierarchy "displaySete:displayUnidade" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 125
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "botaoIN" is missing source, defaulting to GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 56
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "botaoIN" is missing source, defaulting to GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 56
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "botaoIN" is missing source, defaulting to GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 56
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "botaoIN" is missing source, defaulting to GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 56
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "botaoIN" is missing source, defaulting to GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 56
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "simple_dual_port_ram_dual_clock:mem|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
@@ -3628,11 +3541,10 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_PORT_A set to OLD_DATA
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-Info (278001): Inferred 4 megafunctions from design logic
+Info (278001): Inferred 3 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ULA:alu|Mod0" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 27
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ULA:alu|Mult0" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 21
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ULA:alu|Div0" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 25
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "EnderecoRelativo:er|Mult0" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EnderecoRelativo.v Line: 12
 Info (12130): Elaborated megafunction instantiation "simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0"
 Info (12133): Instantiated megafunction "simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
@@ -3684,55 +3596,34 @@ Info (12133): Instantiated megafunction "ULA:alu|lpm_divide:Div0" with the follo
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hkm.tdf
     Info (12023): Found entity 1: lpm_divide_hkm File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/db/lpm_divide_hkm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EnderecoRelativo.v Line: 12
-Info (12133): Instantiated megafunction "EnderecoRelativo:er|lpm_mult:Mult0" with the following parameter: File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EnderecoRelativo.v Line: 12
-    Info (12134): Parameter "LPM_WIDTHA" = "10"
-    Info (12134): Parameter "LPM_WIDTHB" = "9"
-    Info (12134): Parameter "LPM_WIDTHP" = "19"
-    Info (12134): Parameter "LPM_WIDTHR" = "19"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12131): Elaborated megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
-Info (12131): Elaborated megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
-Info (12131): Elaborated megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mgh.tdf
-    Info (12023): Found entity 1: add_sub_mgh File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/db/add_sub_mgh.tdf Line: 23
-Info (12131): Elaborated megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
-Info (12131): Elaborated megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_qgh.tdf
-    Info (12023): Found entity 1: add_sub_qgh File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/db/add_sub_qgh.tdf Line: 23
-Info (12131): Elaborated megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "EnderecoRelativo:er|lpm_mult:Mult0" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 222 buffer(s)
     Info (13019): Ignored 222 SOFT buffer(s)
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "processo_atual[0]" merged with LATCH primitive "Testeprocesso_atual[0]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "processo_atual[1]" merged with LATCH primitive "Testeprocesso_atual[1]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "processo_atual[2]" merged with LATCH primitive "Testeprocesso_atual[2]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "processo_atual[3]" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[8]$latch" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "processo_atual[8]" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "processo_atual[4]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[9]$latch" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "processo_atual[9]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[7]$latch" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "processo_atual[7]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Info (13026): Duplicate LATCH primitive "processo_atual[5]" merged with LATCH primitive "Testeprocesso_atual[5]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
+    Info (13026): Duplicate LATCH primitive "processo_atual[0]" merged with LATCH primitive "Testeprocesso_atual[0]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[1]" merged with LATCH primitive "Testeprocesso_atual[1]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[2]" merged with LATCH primitive "Testeprocesso_atual[2]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[3]" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[8]$latch" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[8]" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[4]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[9]$latch" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[9]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[7]$latch" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[7]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[5]" merged with LATCH primitive "Testeprocesso_atual[5]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
 Warning (13012): Latch UnidadeDeControle:uco|status has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 5
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
 Warning (13012): Latch ULA:alu|saidaULA[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadeDeControle:uco|ulaOP[3] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (13012): Latch UnidadeDeControle:uco|dadoRegControl[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
 Warning (13012): Latch UnidadeDeControle:uco|dadoRegControl[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
 Warning (13012): Latch UnidadeDeControle:uco|HILOcontrol has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
 Warning (13012): Latch UnidadeDeControle:uco|dadoRegControl[2] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
 Warning (13012): Latch ULA:alu|saidaULA[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadeDeControle:uco|ulaOP[2] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (13012): Latch ULA:alu|saidaULA[2] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
@@ -3796,185 +3687,146 @@ Warning (13012): Latch ULA:alu|saidaULA[30] has unsafe behavior File: C:/Users/A
 Warning (13012): Latch ULA:alu|saidaULA[31] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadeDeControle:uco|ulaOP[2] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (13012): Latch UnidadeDeControle:uco|DesvioControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|branchTipo has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|entradaSaidaControl[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|entradaSaidaControl[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|ledControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|comandoOUT has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|encerrarBios[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|ulaOP[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|ulaOP[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|valueULA has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|ulaOP[3] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|ulaOP[2] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|escritaRegControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|memControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
-Warning (13012): Latch UnidadeDeControle:uco|mudaProcesso has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
 Warning (13012): Latch UnidadeDeControle:uco|branchControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|branchTipo has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|valueULA has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|memControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|entradaSaidaControl[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|entradaSaidaControl[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|ledControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|comandoOUT has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|encerrarBios[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|ulaOP[0] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|ulaOP[1] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|ulaOP[3] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|ulaOP[2] has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|escritaRegControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
+Warning (13012): Latch UnidadeDeControle:uco|mudaProcesso has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
 Warning (13012): Latch UnidadeDeControle:uco|jumpControl has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 173
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 169
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|status" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 5
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|DesvioControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
+Warning (14026): LATCH primitive "UnidadeDeControle:uco|branchControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
+Warning (14026): LATCH primitive "UnidadeDeControle:uco|memControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|encerrarBios[0]" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|escritaRegControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
-Warning (14026): LATCH primitive "UnidadeDeControle:uco|memControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|mudaProcesso" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
-Warning (14026): LATCH primitive "UnidadeDeControle:uco|branchControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|jumpControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "enRS[0]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 58
-    Warning (13410): Pin "testeImediato[0]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[1]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[2]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[3]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[4]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[5]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[7]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[8]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[9]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[13]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[14]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[15]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[17]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[18]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[19]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[20]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[21]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[22]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[23]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[24]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[25]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[26]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[27]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[28]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[29]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[30]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeImediato[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[0]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[1]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[2]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[3]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[4]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[5]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[7]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[8]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[9]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[13]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[14]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[15]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[17]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[18]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[19]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[20]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[21]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[22]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[23]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[24]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[25]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[26]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[27]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[28]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[29]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[30]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeReg[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 51
-    Warning (13410): Pin "testeIN[4]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[5]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[7]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[8]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[9]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[13]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[14]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[15]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[17]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[18]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[19]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[20]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[21]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[22]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[23]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[24]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[25]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[26]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[27]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[28]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[29]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[30]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeIN[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 55
-    Warning (13410): Pin "testeJump[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 59
-    Warning (13410): Pin "testeJump[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 59
-    Warning (13410): Pin "testeJump[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 59
-    Warning (13410): Pin "Testeprocesso_atual[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[13]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[14]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[15]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[17]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[18]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[19]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[20]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[21]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[22]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[23]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[24]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[25]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[26]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[27]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[28]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[29]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[30]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
-    Warning (13410): Pin "Testeprocesso_atual[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 205
+    Warning (13410): Pin "enRS[0]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 19
+    Warning (13410): Pin "testeImediato[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[13]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[14]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[15]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[17]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[18]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[19]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[20]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[21]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[22]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[23]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[24]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[25]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[26]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[27]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[28]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[29]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[30]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeIN[4]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[5]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[7]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[8]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[9]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[13]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[14]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[15]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[17]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[18]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[19]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[20]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[21]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[22]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[23]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[24]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[25]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[26]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[27]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[28]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[29]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[30]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeIN[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeJump[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
+    Warning (13410): Pin "testeJump[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
+    Warning (13410): Pin "testeJump[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
+    Warning (13410): Pin "Testeprocesso_atual[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[13]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[14]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[15]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[17]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[18]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[19]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[20]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[21]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[22]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[23]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[24]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[25]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[26]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[27]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[28]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[29]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[30]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 896 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "concatena[7]~19" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 143
+    Info (17048): Logic cell "concatena[7]~19" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 157
 Info (144001): Generated suppressed messages file C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/output_files/processadorAOC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4390 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "botaoPlaca" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 4
+Info (21057): Implemented 4397 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 388 output pins
-    Info (21061): Implemented 3955 logic cells
+    Info (21059): Implemented 420 output pins
+    Info (21061): Implemented 3930 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 297 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Tue Aug  5 10:52:29 2025
-    Info: Elapsed time: 00:01:15
-    Info: Total CPU time (on all processors): 00:01:26
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 265 warnings
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Thu Aug 14 15:12:51 2025
+    Info: Elapsed time: 00:01:06
+    Info: Total CPU time (on all processors): 00:01:21
 
 
 +------------------------------------------+
