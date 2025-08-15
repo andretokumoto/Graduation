@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorAOC
-Thu Aug 14 16:25:24 2025
+Fri Aug 15 14:50:13 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -72,15 +72,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Aug 14 16:25:24 2025          ;
+; Analysis & Synthesis Status        ; Successful - Fri Aug 15 14:50:13 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 3,865                                          ;
-;     Total combinational functions  ; 3,790                                          ;
-;     Dedicated logic registers      ; 301                                            ;
-; Total registers                    ; 301                                            ;
+; Total logic elements               ; 3,861                                          ;
+;     Total combinational functions  ; 3,786                                          ;
+;     Dedicated logic registers      ; 299                                            ;
+; Total registers                    ; 299                                            ;
 ; Total pins                         ; 427                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 32,768                                         ;
@@ -244,20 +244,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 3,865                          ;
+; Estimated Total logic elements              ; 3,861                          ;
 ;                                             ;                                ;
-; Total combinational functions               ; 3790                           ;
+; Total combinational functions               ; 3786                           ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 1908                           ;
-;     -- 3 input functions                    ; 1557                           ;
-;     -- <=2 input functions                  ; 325                            ;
+;     -- 4 input functions                    ; 1922                           ;
+;     -- 3 input functions                    ; 1560                           ;
+;     -- <=2 input functions                  ; 304                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 2477                           ;
+;     -- normal mode                          ; 2473                           ;
 ;     -- arithmetic mode                      ; 1313                           ;
 ;                                             ;                                ;
-; Total registers                             ; 301                            ;
-;     -- Dedicated logic registers            ; 301                            ;
+; Total registers                             ; 299                            ;
+;     -- Dedicated logic registers            ; 299                            ;
 ;     -- I/O registers                        ; 0                              ;
 ;                                             ;                                ;
 ; I/O pins                                    ; 427                            ;
@@ -268,7 +268,7 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum fan-out node                        ; clock_divider:comb_3|clock_out ;
 ; Maximum fan-out                             ; 234                            ;
 ; Total fan-out                               ; 15116                          ;
-; Average fan-out                             ; 3.03                           ;
+; Average fan-out                             ; 3.04                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -277,15 +277,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name                     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |CPU                                      ; 3790 (243)          ; 301 (100)                 ; 32768       ; 8            ; 0       ; 4         ; 427  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
-;    |BCD:bcd|                              ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
+; |CPU                                      ; 3786 (236)          ; 299 (98)                  ; 32768       ; 8            ; 0       ; 4         ; 427  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
+;    |BCD:bcd|                              ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
 ;    |BancoRegistradores:br|                ; 114 (114)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
 ;    |ContadorDeQuantum:quantum|            ; 79 (79)             ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ContadorDeQuantum:quantum                                                                                                     ; ContadorDeQuantum               ; work         ;
 ;    |EntradaSaida:IO|                      ; 301 (1)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO                                                                                                               ; EntradaSaida                    ; work         ;
 ;       |BCD:bcd|                           ; 300 (300)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO|BCD:bcd                                                                                                       ; BCD                             ; work         ;
 ;    |MEMInstrucoes:inst|                   ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
 ;    |ParadaSistema:mest|                   ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ParadaSistema:mest                                                                                                            ; ParadaSistema                   ; work         ;
-;    |ULA:alu|                              ; 2699 (449)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
+;    |ULA:alu|                              ; 2702 (452)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
 ;       |lpm_divide:Div0|                   ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0                                                                                                       ; lpm_divide                      ; work         ;
 ;          |lpm_divide_hkm:auto_generated|  ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm                  ; work         ;
 ;             |sign_div_unsign_9nh:divider| ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
@@ -297,7 +297,7 @@ https://fpgasoftware.intel.com/eula.
 ;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc                     ; work         ;
 ;       |lpm_mult:Mult0|                    ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0                                                                                                        ; lpm_mult                        ; work         ;
 ;          |mult_7dt:auto_generated|        ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt                        ; work         ;
-;    |UnidadeDeControle:uco|                ; 81 (81)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
+;    |UnidadeDeControle:uco|                ; 84 (84)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
 ;    |clock_divider:comb_3|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|clock_divider:comb_3                                                                                                          ; clock_divider                   ; work         ;
 ;    |displaySete:displayCentena|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayCentena                                                                                                    ; displaySete                     ; work         ;
 ;    |displaySete:displayDezena|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayDezena                                                                                                     ; displaySete                     ; work         ;
@@ -456,7 +456,7 @@ Encoding Type:  One-Hot
 ; ULA:alu|saidaULA[25]                                 ; ULA:alu|Mux32                  ; yes                    ;
 ; regLO[25]                                            ; always5                        ; yes                    ;
 ; ULA:alu|saidaULA[26]                                 ; ULA:alu|Mux32                  ; yes                    ;
-; Number of user-specified and inferred latches = 215  ;                                ;                        ;
+; Number of user-specified and inferred latches = 209  ;                                ;                        ;
 +------------------------------------------------------+--------------------------------+------------------------+
 Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -1492,36 +1492,36 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[31][30]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[31][31]                 ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][0]                  ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][1]                  ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][1]                  ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][2]                  ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][3]                  ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][4]                  ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][5]                  ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][4]                  ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][5]                  ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][6]                  ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][7]                  ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][8]                  ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][9]                  ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][7]                  ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][8]                  ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][9]                  ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][10]                 ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][11]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][12]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][13]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][14]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][15]                 ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][12]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][13]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][14]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][15]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][16]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][17]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][18]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][19]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][20]                 ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][17]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][18]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][19]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][20]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][21]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][22]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][23]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][24]                 ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][25]                 ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][26]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][27]                 ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][28]                 ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][29]                 ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[32][30]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][26]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][27]                 ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][28]                 ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][29]                 ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[32][30]                 ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[32][31]                 ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[33][0]                  ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[33][1]                  ; Stuck at GND due to stuck port data_in ;
@@ -1685,518 +1685,520 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[37][31]                 ; Stuck at GND due to stuck port data_in ;
 ; ContadorDeQuantum:quantum|intrucaoIOContexto       ; Stuck at GND due to stuck port data_in ;
 ; clock_divider:comb_3|counter[0..27]                ; Stuck at GND due to stuck port data_in ;
-; BancoRegistradores:br|bancoDeRegistradores[5][0]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][0]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][0]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][0]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][0]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][0]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][0]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][0]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][1]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][1]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][1]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][1]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][1]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][1]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][1]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][1]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][2]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][2]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][2]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][2]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][2]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][2]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][2]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][2]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][3]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][3]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][3]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][3]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][3]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][3]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][3]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][3]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][4]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][4]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][4]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][4]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][4]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][4]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][4]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][4]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][5]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][5]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][5]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][5]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][5]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][5]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][5]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][5]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][6]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][6]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][6]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][6]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][6]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][6]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][6]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][6]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][7]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][7]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][7]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][7]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][7]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][7]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][7]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][7]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][8]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][8]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][8]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][8]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][8]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][8]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][8]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][8]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][9]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][9]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][9]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][9]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][9]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][9]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][9]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][9]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][10]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][10]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][10]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][10] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][10] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][10] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][10] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][10] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][11]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][11]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][11]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][11] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][11] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][11] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][11] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][11] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][12]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][12]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][12]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][12] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][12] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][12] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][12] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][12] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][13]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][13]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][13]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][13] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][13] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][13] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][13] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][13] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][14]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][14]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][14]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][14] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][14] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][14] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][14] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][14] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][15]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][15]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][15]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][15] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][15] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][15] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][15] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][15] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][16]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][16]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][16]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][16] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][16] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][16] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][16] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][16] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][17]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][17]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][17]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][17] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][17] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][17] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][17] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][17] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][18]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][18]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][18]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][18] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][18] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][18] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][18] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][18] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][19]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][19]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][19]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][19] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][19] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][19] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][19] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][19] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][20]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][20]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][20]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][20] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][20] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][20] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][20] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][20] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][21]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][21]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][21]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][21] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][21] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][21] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][21] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][21] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][22]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][22]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][22]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][22] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][22] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][22] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][22] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][22] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][23]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][23]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][23]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][23] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][23] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][23] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][23] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][23] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][24]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][24]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][24]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][24] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][24] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][24] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][24] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][24] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][25]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][25]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][25]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][25] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][25] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][25] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][25] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][25] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][26]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][26]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][26]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][26] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][26] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][26] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][26] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][26] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][27]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][27]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][27]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][27] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][27] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][27] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][27] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][27] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][28]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][28]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][28]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][28] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][28] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][28] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][28] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][28] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][29]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][29]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][29]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][29] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][29] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][29] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][29] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][29] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][30]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][30]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][30]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][30] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][30] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][30] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][30] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][30] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[5][31]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[7][31]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[9][31]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[11][31] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[21][31] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[23][31] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[25][31] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[27][31] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][0]   ; Lost fanout                            ;
+; lednumprocessos~reg0                               ; Stuck at GND due to stuck port data_in ;
+; ledprocesso~reg0                                   ; Stuck at GND due to stuck port data_in ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][0]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][0]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][0]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][0]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][0]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][0]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][0]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][0]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][0]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][0]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][0]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][0]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][0]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][0]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][0]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][0]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][1]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][0]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][0]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][0]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][1]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][1]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][1]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][1]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][1]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][1]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][1]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][1]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][1]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][1]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][1]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][1]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][1]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][1]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][1]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][1]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][2]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][1]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][1]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][1]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][2]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][2]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][2]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][2]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][2]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][2]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][2]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][2]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][2]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][2]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][2]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][2]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][2]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][2]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][2]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][2]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][3]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][2]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][2]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][2]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][3]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][3]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][3]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][3]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][3]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][3]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][3]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][3]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][3]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][3]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][3]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][3]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][3]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][3]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][3]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][3]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][4]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][3]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][3]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][3]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][4]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][4]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][4]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][4]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][4]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][4]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][4]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][4]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][4]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][4]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][4]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][4]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][4]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][4]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][4]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][4]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][5]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][4]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][4]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][4]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][5]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][5]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][5]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][5]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][5]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][5]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][5]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][5]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][5]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][5]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][5]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][5]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][5]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][5]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][5]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][5]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][6]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][5]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][5]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][5]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][6]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][6]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][6]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][6]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][6]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][6]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][6]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][6]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][6]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][6]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][6]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][6]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][6]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][6]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][6]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][6]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][7]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][6]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][6]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][6]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][7]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][7]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][7]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][7]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][7]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][7]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][7]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][7]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][7]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][7]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][7]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][7]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][7]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][7]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][7]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][7]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][8]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][7]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][7]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][7]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][8]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][8]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][8]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][8]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][8]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][8]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][8]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][8]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][8]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][8]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][8]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][8]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][8]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][8]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][8]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][8]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][9]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][8]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][8]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][8]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][9]   ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][9]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][9]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][9]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][9]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][9]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][9]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][9]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][9]   ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][9]   ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][9]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][9]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][9]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][9]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][9]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][9]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][10]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][9]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][9]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][9]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][10]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][10]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][10]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][10]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][10]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][10] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][10] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][10] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][10]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][10]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][10] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][10] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][10] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][10] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][10] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][10] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][11]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][10] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][10] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][10] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][11]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][11]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][11]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][11]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][11]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][11] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][11] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][11] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][11]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][11]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][11] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][11] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][11] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][11] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][11] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][11] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][12]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][11] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][11] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][11] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][12]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][12]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][12]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][12]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][12]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][12] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][12] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][12] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][12]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][12]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][12] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][12] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][12] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][12] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][12] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][12] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][13]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][12] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][12] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][12] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][13]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][13]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][13]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][13]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][13]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][13] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][13] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][13] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][13]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][13]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][13] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][13] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][13] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][13] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][13] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][13] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][14]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][13] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][13] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][13] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][14]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][14]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][14]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][14]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][14]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][14] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][14] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][14] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][14]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][14]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][14] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][14] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][14] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][14] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][14] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][14] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][15]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][14] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][14] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][14] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][15]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][15]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][15]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][15]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][15]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][15] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][15] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][15] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][15]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][15]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][15] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][15] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][15] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][15] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][15] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][15] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][16]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][15] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][15] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][15] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][16]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][16]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][16]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][16]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][16]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][16] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][16] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][16] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][16]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][16]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][16] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][16] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][16] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][16] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][16] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][16] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][17]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][16] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][16] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][16] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][17]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][17]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][17]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][17]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][17]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][17] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][17] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][17] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][17]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][17]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][17] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][17] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][17] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][17] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][17] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][17] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][18]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][17] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][17] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][17] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][18]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][18]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][18]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][18]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][18]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][18] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][18] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][18] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][18]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][18]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][18] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][18] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][18] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][18] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][18] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][18] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][19]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][18] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][18] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][18] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][19]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][19]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][19]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][19]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][19]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][19] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][19] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][19] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][19]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][19]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][19] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][19] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][19] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][19] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][19] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][19] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][20]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][19] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][19] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][19] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][20]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][20]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][20]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][20]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][20]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][20] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][20] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][20] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][20]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][20]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][20] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][20] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][20] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][20] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][20] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][20] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][21]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][20] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][20] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][20] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][21]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][21]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][21]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][21]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][21]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][21] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][21] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][21] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][21]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][21]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][21] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][21] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][21] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][21] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][21] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][21] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][22]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][21] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][21] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][21] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][22]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][22]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][22]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][22]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][22]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][22] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][22] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][22] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][22]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][22]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][22] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][22] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][22] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][22] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][22] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][22] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][23]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][22] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][22] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][22] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][23]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][23]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][23]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][23]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][23]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][23] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][23] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][23] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][23]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][23]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][23] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][23] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][23] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][23] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][23] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][23] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][24]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][23] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][23] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][23] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][24]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][24]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][24]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][24]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][24]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][24] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][24] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][24] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][24]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][24]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][24] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][24] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][24] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][24] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][24] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][24] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][25]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][24] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][24] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][24] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][25]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][25]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][25]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][25]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][25]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][25] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][25] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][25] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][25]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][25]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][25] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][25] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][25] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][25] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][25] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][25] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][26]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][25] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][25] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][25] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][26]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][26]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][26]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][26]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][26]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][26] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][26] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][26] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][26]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][26]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][26] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][26] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][26] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][26] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][26] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][26] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][27]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][26] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][26] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][26] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][27]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][27]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][27]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][27]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][27]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][27] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][27] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][27] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][27]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][27]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][27] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][27] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][27] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][27] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][27] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][27] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][28]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][27] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][27] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][27] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][28]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][28]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][28]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][28]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][28]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][28] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][28] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][28] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][28]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][28]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][28] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][28] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][28] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][28] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][28] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][28] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][29]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][28] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][28] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][28] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][29]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][29]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][29]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][29]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][29]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][29] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][29] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][29] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][29]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][29]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][29] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][29] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][29] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][29] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][29] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][29] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][30]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][29] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][29] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][29] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][30]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][30]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][30]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][30]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][30]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][30] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][30] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][30] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][30]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][30]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][30] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][30] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][30] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][30] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][30] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][30] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[4][31]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][30] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][30] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][30] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[6][31]  ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[8][31]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[7][31]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[4][31]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[5][31]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[10][31] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[20][31] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[11][31] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[8][31]  ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[9][31]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[22][31] ; Lost fanout                            ;
-; BancoRegistradores:br|bancoDeRegistradores[24][31] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[23][31] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[20][31] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[21][31] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[26][31] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[27][31] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[24][31] ; Lost fanout                            ;
+; BancoRegistradores:br|bancoDeRegistradores[25][31] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[16][0]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[17][0]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[18][0]  ; Lost fanout                            ;
@@ -2581,22 +2583,23 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; BancoRegistradores:br|bancoDeRegistradores[3][31]  ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[28][31] ; Lost fanout                            ;
 ; BancoRegistradores:br|bancoDeRegistradores[29][31] ; Lost fanout                            ;
-; Total Number of Removed Registers = 2169           ;                                        ;
+; Total Number of Removed Registers = 2171           ;                                        ;
 +----------------------------------------------------+----------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                        ;
-+---------------------------------------------------+---------------------------+----------------------------------------------------+
-; Register name                                     ; Reason for Removal        ; Registers Removed due to This Register             ;
-+---------------------------------------------------+---------------------------+----------------------------------------------------+
-; BancoRegistradores:br|bancoDeRegistradores[16][0] ; Lost Fanouts              ; BancoRegistradores:br|bancoDeRegistradores[14][0], ;
-;                                                   ;                           ; BancoRegistradores:br|bancoDeRegistradores[28][0]  ;
-; MEMInstrucoes:inst|memoria[0][0]                  ; Stuck at GND              ; ContadorDeQuantum:quantum|intrucaoIOContexto       ;
-;                                                   ; due to stuck port data_in ;                                                    ;
-; MEMInstrucoes:inst|memoria[0][11]                 ; Stuck at GND              ; BancoRegistradores:br|bancoDeRegistradores[29][26] ;
-;                                                   ; due to stuck port data_in ;                                                    ;
-+---------------------------------------------------+---------------------------+----------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                          ;
++---------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; Register name                                     ; Reason for Removal        ; Registers Removed due to This Register                                               ;
++---------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; MEMInstrucoes:inst|memoria[0][0]                  ; Stuck at GND              ; ContadorDeQuantum:quantum|intrucaoIOContexto, lednumprocessos~reg0, ledprocesso~reg0 ;
+;                                                   ; due to stuck port data_in ;                                                                                      ;
+; BancoRegistradores:br|bancoDeRegistradores[16][0] ; Lost Fanouts              ; BancoRegistradores:br|bancoDeRegistradores[14][0],                                   ;
+;                                                   ;                           ; BancoRegistradores:br|bancoDeRegistradores[28][0]                                    ;
+; MEMInstrucoes:inst|memoria[0][11]                 ; Stuck at GND              ; BancoRegistradores:br|bancoDeRegistradores[29][26]                                   ;
+;                                                   ; due to stuck port data_in ;                                                                                      ;
+; BancoRegistradores:br|bancoDeRegistradores[6][4]  ; Lost Fanouts              ; BancoRegistradores:br|bancoDeRegistradores[2][0]                                     ;
++---------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -2604,9 +2607,9 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 301   ;
-; Number of registers using Synchronous Clear  ; 37    ;
-; Number of registers using Synchronous Load   ; 55    ;
+; Total registers                              ; 299   ;
+; Number of registers using Synchronous Clear  ; 35    ;
+; Number of registers using Synchronous Load   ; 52    ;
 ; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 196   ;
@@ -3062,29 +3065,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 427                         ;
-; cycloneiii_ff         ; 301                         ;
+; cycloneiii_ff         ; 299                         ;
 ;     ENA               ; 132                         ;
 ;     ENA CLR           ; 32                          ;
 ;     ENA SCLR          ; 32                          ;
-;     SCLR              ; 5                           ;
-;     SLD               ; 55                          ;
-;     plain             ; 45                          ;
-; cycloneiii_lcell_comb ; 3795                        ;
+;     SCLR              ; 3                           ;
+;     SLD               ; 52                          ;
+;     plain             ; 48                          ;
+; cycloneiii_lcell_comb ; 3791                        ;
 ;     arith             ; 1313                        ;
-;         2 data inputs ; 126                         ;
-;         3 data inputs ; 1187                        ;
-;     normal            ; 2482                        ;
+;         2 data inputs ; 129                         ;
+;         3 data inputs ; 1184                        ;
+;     normal            ; 2478                        ;
 ;         0 data inputs ; 62                          ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 130                         ;
-;         3 data inputs ; 370                         ;
-;         4 data inputs ; 1908                        ;
+;         2 data inputs ; 106                         ;
+;         3 data inputs ; 376                         ;
+;         4 data inputs ; 1922                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 130.50                      ;
-; Average LUT depth     ; 80.72                       ;
+; Average LUT depth     ; 80.76                       ;
 +-----------------------+-----------------------------+
 
 
@@ -3093,7 +3096,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:07     ;
+; Top            ; 00:00:45     ;
 +----------------+--------------+
 
 
@@ -3103,7 +3106,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Aug 14 16:23:49 2025
+    Info: Processing started: Fri Aug 15 14:48:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -3113,7 +3116,6 @@ Warning (10263): Verilog HDL Event Control warning at CPU.v(220): event expressi
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
     Info (12023): Found entity 1: CPU File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 1
 Warning (10263): Verilog HDL Event Control warning at MEMInstrucoes.v(42): event expression contains "|" or "||" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 42
-Warning (10229): Verilog HDL Expression warning at MEMInstrucoes.v(81): truncated literal to match 11 bits File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 81
 Info (12021): Found 1 design units, including 1 entities, in source file meminstrucoes.v
     Info (12023): Found entity 1: MEMInstrucoes File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bancoregistradores.v
@@ -3578,14 +3580,9 @@ Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "processo_atual[0]" merged with LATCH primitive "Testeprocesso_atual[0]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Info (13026): Duplicate LATCH primitive "processo_atual[1]" merged with LATCH primitive "Testeprocesso_atual[1]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Info (13026): Duplicate LATCH primitive "processo_atual[2]" merged with LATCH primitive "Testeprocesso_atual[2]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[8]$latch" merged with LATCH primitive "Testeprocesso_atual[2]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Info (13026): Duplicate LATCH primitive "processo_atual[8]" merged with LATCH primitive "Testeprocesso_atual[2]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Info (13026): Duplicate LATCH primitive "processo_atual[3]" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
-    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[8]$latch" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
-    Info (13026): Duplicate LATCH primitive "processo_atual[8]" merged with LATCH primitive "Testeprocesso_atual[3]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
-    Info (13026): Duplicate LATCH primitive "processo_atual[4]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
-    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[9]$latch" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
-    Info (13026): Duplicate LATCH primitive "processo_atual[9]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
-    Info (13026): Duplicate LATCH primitive "Testeprocesso_atual[7]$latch" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
-    Info (13026): Duplicate LATCH primitive "processo_atual[7]" merged with LATCH primitive "Testeprocesso_atual[4]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Info (13026): Duplicate LATCH primitive "processo_atual[5]" merged with LATCH primitive "Testeprocesso_atual[5]$latch" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
 Warning (13012): Latch UnidadeDeControle:uco|status has unsafe behavior File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 5
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pc[11] File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 170
@@ -3701,8 +3698,13 @@ Warning (14026): LATCH primitive "UnidadeDeControle:uco|escritaRegControl" is pe
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|mudaProcesso" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 9
 Warning (14026): LATCH primitive "UnidadeDeControle:uco|jumpControl" is permanently enabled File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 4
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "lednumprocessos" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 11
+    Warning (13410): Pin "ledprocesso" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 12
     Warning (13410): Pin "enRS[0]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 19
+    Warning (13410): Pin "testeImediato[4]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
     Warning (13410): Pin "testeImediato[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[7]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
+    Warning (13410): Pin "testeImediato[9]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
     Warning (13410): Pin "testeImediato[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
     Warning (13410): Pin "testeImediato[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
     Warning (13410): Pin "testeImediato[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 22
@@ -3753,10 +3755,16 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "testeIN[29]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
     Warning (13410): Pin "testeIN[30]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
     Warning (13410): Pin "testeIN[31]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 31
+    Warning (13410): Pin "testeJump[4]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
     Warning (13410): Pin "testeJump[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
+    Warning (13410): Pin "testeJump[7]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
+    Warning (13410): Pin "testeJump[9]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
     Warning (13410): Pin "testeJump[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
     Warning (13410): Pin "testeJump[16]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 37
+    Warning (13410): Pin "Testeprocesso_atual[4]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Warning (13410): Pin "Testeprocesso_atual[6]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[7]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
+    Warning (13410): Pin "Testeprocesso_atual[9]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Warning (13410): Pin "Testeprocesso_atual[10]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Warning (13410): Pin "Testeprocesso_atual[11]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
     Warning (13410): Pin "Testeprocesso_atual[12]" is stuck at GND File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 192
@@ -3786,17 +3794,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "botaoPlaca" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 4
-Info (21057): Implemented 4389 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4382 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 420 output pins
-    Info (21061): Implemented 3922 logic cells
+    Info (21061): Implemented 3915 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 261 warnings
-    Info: Peak virtual memory: 4833 megabytes
-    Info: Processing ended: Thu Aug 14 16:25:24 2025
-    Info: Elapsed time: 00:01:35
-    Info: Total CPU time (on all processors): 00:01:29
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 271 warnings
+    Info: Peak virtual memory: 4829 megabytes
+    Info: Processing ended: Fri Aug 15 14:50:13 2025
+    Info: Elapsed time: 00:01:14
+    Info: Total CPU time (on all processors): 00:01:26
 
 
 +------------------------------------------+

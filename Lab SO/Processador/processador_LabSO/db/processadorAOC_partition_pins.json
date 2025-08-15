@@ -96,14 +96,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "lednumprocessos",
-					"strict" : false
-				},
-				{
-					"name" : "ledprocesso",
-					"strict" : false
-				},
-				{
 					"name" : "ledin",
 					"strict" : false
 				},
@@ -464,23 +456,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "testeImediato[4]",
-					"strict" : false
-				},
-				{
 					"name" : "testeImediato[5]",
 					"strict" : false
 				},
 				{
-					"name" : "testeImediato[7]",
-					"strict" : false
-				},
-				{
 					"name" : "testeImediato[8]",
-					"strict" : false
-				},
-				{
-					"name" : "testeImediato[9]",
 					"strict" : false
 				},
 				{
@@ -1128,23 +1108,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "testeJump[4]",
-					"strict" : false
-				},
-				{
 					"name" : "testeJump[5]",
 					"strict" : false
 				},
 				{
-					"name" : "testeJump[7]",
-					"strict" : false
-				},
-				{
 					"name" : "testeJump[8]",
-					"strict" : false
-				},
-				{
-					"name" : "testeJump[9]",
 					"strict" : false
 				},
 				{
@@ -1220,23 +1188,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Testeprocesso_atual[4]",
-					"strict" : false
-				},
-				{
 					"name" : "Testeprocesso_atual[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Testeprocesso_atual[7]",
-					"strict" : false
-				},
-				{
 					"name" : "Testeprocesso_atual[8]",
-					"strict" : false
-				},
-				{
-					"name" : "Testeprocesso_atual[9]",
 					"strict" : false
 				},
 				{

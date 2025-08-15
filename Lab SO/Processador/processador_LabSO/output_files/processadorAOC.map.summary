@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Aug 14 16:25:24 2025
+Analysis & Synthesis Status : Successful - Fri Aug 15 14:50:13 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : processadorAOC
 Top-level Entity Name : CPU
 Family : Cyclone IV E
-Total logic elements : 3,865
-    Total combinational functions : 3,790
-    Dedicated logic registers : 301
-Total registers : 301
+Total logic elements : 3,861
+    Total combinational functions : 3,786
+    Dedicated logic registers : 299
+Total registers : 299
 Total pins : 427
 Total virtual pins : 0
 Total memory bits : 32,768
