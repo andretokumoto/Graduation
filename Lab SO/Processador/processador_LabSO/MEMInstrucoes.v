@@ -360,7 +360,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd254] = {j,endMenu};
 			
 						//----entrada processo
-			memoria[32'd255] = {led,26'd7};//led 7
+			memoria[32'd255] = {led,26'd7};//led 7 
 			memoria[32'd256] = {in,R21,21'd0};//in r21 processo que ira rodar
 			memoria[32'd257] = {led,26'd8};//led 8
 			memoria[32'd258] = {movi,R24,RZERO,RZERO,11'd11};//movi r24, 11
