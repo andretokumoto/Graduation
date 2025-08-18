@@ -46,7 +46,6 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 		//bios ---------------------------------------------------------------			
 			memoria[32'd0] = {cproc,26'd0};					  //cproc rzero
-			//memoria[32'd1] = {cproc,26'd5};					  // apenas teste retirar
 			memoria[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
 			memoria[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd0};// movi r1, 0
 			memoria[32'd3] = {6'b011010,5'd2,5'd0,5'd0,11'd0};// movi r2, 0
@@ -77,11 +76,12 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd28] = {6'b011010,5'd27,5'd0,5'd0,11'd0};// movi r27, 0
 			memoria[32'd29] = {6'b011010,5'd28,5'd0,5'd0,11'd0};// movi r28, 0
 			memoria[32'd30] = {6'b011010,5'd29,5'd0,5'd0,11'd0};// movi r29, 0
-			memoria[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd300};// movi r30, 300
-			memoria[32'd32] = {6'b000101,5'd31,5'd30,5'd30,11'd10};// multi r31,3000
-						
-			memoria[32'd33] = {sw,5'd0,5'd30,5'd30,11'd1};//sw r30, 1(r30)
-			memoria[32'd34] = {addi,5'd30,5'd30,5'd30,11'd300};//addi r30,r30,300
+			memoria[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd1};// movi r30, 1
+			memoria[32'd32] = {6'b011010,5'd31,5'd30,5'd30,11'd10};//movi r31 , 10
+			
+			//inicia os status dos processos
+			memoria[32'd33] = {sw,5'd0,5'd30,RZERO,11'd1};//sw rzero,30, 1(r30)
+			memoria[32'd34] = {addi,5'd30,5'd30,5'd30,11'd1};//addi r30,r30,1
 			memoria[32'd35] = {beq,5'd0,5'd30,5'd31,11'd2};//beq r30,r31, pc+2
 			memoria[32'd36] = {j,26'd33};					//jump 33
 			
@@ -366,7 +366,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd258] = {movi,R24,RZERO,RZERO,11'd11};//movi r24, 11
 			memoria[32'd259] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // salva qual processo vai ser executado
 			memoria[32'd260] = {movi,R23,RZERO,RZERO,11'd12};//movi r23, 12 //endereço de onde esta o contador de processos
-			memoria[32'd261] = {lw,R22,R23,RZERO,11'd1};//lw r22, 1(r23) // puxa o valor do contador de processos iniciados
+			memoria[32'd261] = {lw,R22,R23,R23,11'd1};//lw r22, 1(r23) // puxa o valor do contador de processos iniciados
 			memoria[32'd262] = {addi,R22,R22,RZERO,11'd1};//addi r22,r22,1 // incrementa contador
 			memoria[32'd263] = {sw,RZERO,R23,R22,11'd1};//sw r22 , 1(r23) // salva contador
 			memoria[32'd264] = {j,iniciaProcesso};//jump inicia processo

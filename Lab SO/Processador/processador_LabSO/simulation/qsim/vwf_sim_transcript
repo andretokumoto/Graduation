@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform6.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform6.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform8.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform8.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,33 +26,25 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Aug 15 15:08:39 2025
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform6.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform6.vwf.vt"
+    Info: Processing started: Sun Aug 17 20:49:55 2025
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform8.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform8.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-s
+ng test bench files
 
-put pin "ValorRS[1]" in vector source file when writing test bench files
+Ignoring output pin "testeImediato[12]" in vector source file when writing test bench files
 
-201005): Ignoring output pin "testeDadosMux[27]" in vector source file when writing test bench files
+tput pin "dezena[3]" in vector source file when writing test bench files
 
-h files
+esteUla[14]" in vector source file when writing test bench files
 
-r source file when writing test bench files
+urce file when writing test bench files
 
- when writing test bench files
+05): Ignoring output pin "testeDadosMux[4]" in vector source file when writing test bench files
 
-teUla[15]" in vector source file when writing test bench files
+05): Ignoring output pin "testeIN[1]" in vector source file when writing test bench files
 
-file when writing test bench files
-
-gnoring output pin "testeoperando[5]" in vector source file when writing test bench files
-
-s Prime EDA Netlist Writer was successful. 0 errors, 444 warnings
-    Info: Peak virtual memory: 4657 megabytes
-    Info: Processing ended: Fri Aug 15 15:08:40 2025
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+1005): Ignoring output pin "testeSelMux[0]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -79,15 +71,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Aug 15 15:08:41 2025
+    Info: Processing started: Sun Aug 17 20:49:58 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/" processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file processadorAOC.vo in folder "C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4673 megabytes
-    Info: Processing ended: Fri Aug 15 15:08:43 2025
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4674 megabytes
+    Info: Processing ended: Sun Aug 17 20:50:01 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 Completed successfully. 
 
@@ -113,7 +105,7 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 15:08:45 on Aug 15,2025
+# Start time: 20:50:03 on Aug 17,2025
 
 # vlog -work work processadorAOC.vo 
 
@@ -126,15 +118,15 @@ Reading pref.tcl
 # Top level modules:
 # 	CPU
 
-# End time: 15:08:47 on Aug 15,2025, Elapsed time: 0:00:02
+# End time: 20:50:05 on Aug 17,2025, Elapsed time: 0:00:02
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 15:08:47 on Aug 15,2025
+# Start time: 20:50:05 on Aug 17,2025
 
-# vlog -work work Waveform6.vwf.vt 
+# vlog -work work Waveform8.vwf.vt 
 
 # -- Compiling module CPU_vlg_vec_tst
 
@@ -143,12 +135,12 @@ Reading pref.tcl
 # Top level modules:
 # 	CPU_vlg_vec_tst
 
-# End time: 15:08:47 on Aug 15,2025, Elapsed time: 0:00:00
+# End time: 20:50:05 on Aug 17,2025, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPU_vlg_vec_tst 
-# Start time: 15:08:47 on Aug 15,2025
+# Start time: 20:50:05 on Aug 17,2025
 # Loading work.CPU_vlg_vec_tst
 # Loading work.CPU
 # Loading work.hard_block
@@ -168,7 +160,7 @@ Reading pref.tcl
 # Loading cycloneive_ver.cycloneive_ram_register
 # Loading cycloneive_ver.cycloneive_ram_pulse_generator
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 10609 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 17200 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 
 # after#26
@@ -189,39 +181,135 @@ Reading pref.tcl
 
 # Simulation time: 0 ps
 
-# Simulation time: 197000 ps
+# Simulation time: 84500 ps
 
-# Simulation time: 197000 ps
+# Simulation time: 84500 ps
 
-# Simulation time: 197000 ps
+# Simulation time: 84500 ps
 
-# Simulation time: 197000 ps
+# Simulation time: 84500 ps
 
-# Simulation time: 197000 ps
+# Simulation time: 84500 ps
 
-# Simulation time: 197000 ps
+# Simulation time: 84500 ps
 
-# Simulation time: 197000 ps
+# Simulation time: 84500 ps
 
-# Simulation time: 197000 ps
+# Simulation time: 84500 ps
 
-# ** Note: $finish    : Waveform6.vwf.vt(115)
+# Simulation time: 114500 ps
+
+# Simulation time: 114500 ps
+
+# Simulation time: 114500 ps
+
+# Simulation time: 114500 ps
+
+# Simulation time: 114500 ps
+
+# Simulation time: 114500 ps
+
+# Simulation time: 114500 ps
+
+# Simulation time: 114500 ps
+
+# Simulation time: 178500 ps
+
+# Simulation time: 178500 ps
+
+# Simulation time: 178500 ps
+
+# Simulation time: 178500 ps
+
+# Simulation time: 178500 ps
+
+# Simulation time: 178500 ps
+
+# Simulation time: 178500 ps
+
+# Simulation time: 178500 ps
+
+# Simulation time: 206500 ps
+
+# Simulation time: 206500 ps
+
+# Simulation time: 206500 ps
+
+# Simulation time: 206500 ps
+
+# Simulation time: 206500 ps
+
+# Simulation time: 206500 ps
+
+# Simulation time: 206500 ps
+
+# Simulation time: 206500 ps
+
+# Simulation time: 418500 ps
+
+# Simulation time: 418500 ps
+
+# Simulation time: 418500 ps
+
+# Simulation time: 418500 ps
+
+# Simulation time: 418500 ps
+
+# Simulation time: 418500 ps
+
+# Simulation time: 418500 ps
+
+# Simulation time: 418500 ps
+
+# Simulation time: 444500 ps
+
+# Simulation time: 444500 ps
+
+# Simulation time: 444500 ps
+
+# Simulation time: 444500 ps
+
+# Simulation time: 444500 ps
+
+# Simulation time: 444500 ps
+
+# Simulation time: 444500 ps
+
+# Simulation time: 602500 ps
+
+# Simulation time: 602500 ps
+
+# Simulation time: 602500 ps
+
+# Simulation time: 602500 ps
+
+# Simulation time: 602500 ps
+
+# Simulation time: 602500 ps
+
+# Simulation time: 602500 ps
+
+# Simulation time: 602500 ps
+
+# Simulation time: 870500 ps
+
+# ** Note: $finish    : Waveform8.vwf.vt(115)
 #    Time: 1 us  Iteration: 0  Instance: /CPU_vlg_vec_tst
 
-# End time: 15:09:30 on Aug 15,2025, Elapsed time: 0:00:43
+# End time: 20:52:48 on Aug 17,2025, Elapsed time: 0:02:43
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform6.vwf...
+Reading C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform8.vwf...
 
 Reading C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/processadorAOC.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/processadorAOC_20250815150931.sim.vwf
+Writing the resulting VWF to C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/processadorAOC_20250817205249.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -121,6 +121,9 @@ module CPU(
     //ligaçao com entrada e saida
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(dadoMem),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
     
+	 
+	 //FALTA O DEBOUNCE DO BOTAO IN
+	 
     //ligaçao com display
     displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));
     displaySete displayDezena(.entrada(inDezena),.saidas(dezena));
@@ -147,7 +150,7 @@ module CPU(
     assign enRS = endRS;
     assign enRT = endRT;
     assign testeDadosMux = dadosMux6;
-    //assign botaoIN = botaoPlaca;
+    assign botaoIN = botaoPlaca;
     assign testesaidaUNI = inUnidade;
     assign testesaidaDez = inDezena;
     assign testesaidaCent = inCentena;
