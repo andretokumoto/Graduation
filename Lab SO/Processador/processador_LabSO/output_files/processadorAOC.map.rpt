@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorAOC
-Mon Aug 18 15:40:12 2025
+Mon Aug 18 15:57:54 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 18 15:40:12 2025          ;
+; Analysis & Synthesis Status        ; Successful - Mon Aug 18 15:57:54 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
@@ -188,7 +188,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -3284,7 +3284,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:37     ;
+; Top            ; 00:00:45     ;
 +----------------+--------------+
 
 
@@ -3294,7 +3294,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Aug 18 15:39:09 2025
+    Info: Processing started: Mon Aug 18 15:56:39 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -3960,9 +3960,9 @@ Info (21057): Implemented 6455 device resources after synthesis - the final reso
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 240 warnings
     Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Mon Aug 18 15:40:12 2025
-    Info: Elapsed time: 00:01:03
-    Info: Total CPU time (on all processors): 00:01:22
+    Info: Processing ended: Mon Aug 18 15:57:54 2025
+    Info: Elapsed time: 00:01:15
+    Info: Total CPU time (on all processors): 00:01:28
 
 
 +------------------------------------------+
