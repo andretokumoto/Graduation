@@ -77,7 +77,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd29] = {6'b011010,5'd28,5'd0,5'd0,11'd0};// movi r28, 0
 			memoria[32'd30] = {6'b011010,5'd29,5'd0,5'd0,11'd0};// movi r29, 0
 			memoria[32'd31] = {6'b011010,5'd30,5'd0,5'd0,11'd1};// movi r30, 1
-			memoria[32'd32] = {6'b011010,5'd31,5'd30,5'd30,11'd10};//movi r31 , 10
+			memoria[32'd32] = {6'b011010,5'd31,5'd30,5'd30,11'd11};//movi r31 , 10
 			
 			//inicia os status dos processos
 			memoria[32'd33] = {sw,5'd0,5'd30,RZERO,11'd1};//sw rzero,30, 1(r30)
