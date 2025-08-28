@@ -488,6 +488,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "testeImediato[9]",
+					"strict" : false
+				},
+				{
 					"name" : "testeSelMux[0]",
 					"strict" : false
 				},
@@ -1152,6 +1156,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "testeJump[9]",
+					"strict" : false
+				},
+				{
 					"name" : "testeJump[11]",
 					"strict" : false
 				},
@@ -1245,6 +1253,10 @@
 				},
 				{
 					"name" : "Testeprocesso_atual[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Testeprocesso_atual[9]",
 					"strict" : false
 				},
 				{
