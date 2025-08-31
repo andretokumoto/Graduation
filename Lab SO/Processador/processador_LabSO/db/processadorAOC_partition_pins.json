@@ -1392,6 +1392,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "teste_troca_contexto",
+					"strict" : false
+				},
+				{
 					"name" : "botaoPlaca",
 					"strict" : false
 				},

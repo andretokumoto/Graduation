@@ -157,7 +157,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			memoria[32'd83] = {beq,RZERO,R22,R20,11'd7};//beq r22 , r20, L1 , pc+6// fim do laço por não achar processo normal
 			memoria[32'd84] = {beq,RZERO,R25,R20,11'd2};//beq r25,r20, pc+2 // incrementa index --- e o processo atual
-			memoria[32'd85] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
+			memoria[32'd85] = {lw,R24,R20,RZERO,11'd10};//lw r24, 1(r20) // pega o estado naquele index
 			memoria[32'd86] = {beq,R24,R21,RZERO,11'd3};//beq r24,r21, muda processo atual pc+3
 			memoria[32'd87] = {addi,R20,R20,RZERO,11'd1};//addi r20,1//incrementa contador
 			memoria[32'd88] = {j,endL0};//jump LO

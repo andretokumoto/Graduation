@@ -426,6 +426,7 @@ testeoperando[29] <= operando[29].DB_MAX_OUTPUT_PORT_TYPE
 testeoperando[30] <= operando[30].DB_MAX_OUTPUT_PORT_TYPE
 testeoperando[31] <= operando[31].DB_MAX_OUTPUT_PORT_TYPE
 testeMemControl <= memControl.DB_MAX_OUTPUT_PORT_TYPE
+teste_troca_contexto <= ContadorDeQuantum:quantum.troca_contexto
 
 
 |CPU|clock_divider:comb_3

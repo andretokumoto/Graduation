@@ -37,7 +37,8 @@ module CPU(
     output wire [25:0] testeJump,
     output reg [31:0] Testeprocesso_atual,
 	 output reg [31:0] testeoperando,
-	 output wire testeMemControl
+	 output wire testeMemControl,
+	 output wire teste_troca_contexto
 );
 
     // Declarações internas
@@ -83,7 +84,7 @@ module CPU(
     wire [31:0] pc_contexto;
     wire InstrucaIO, fimProcesso;
 
-    parameter Escalonador = 32'd1, IntrucaoIO = 32'd92, PCout = 32'd160;
+    parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160;
 
     // divisor de clock
     clock_divider(.clock_in(clock), .clock_out(clk));
@@ -153,6 +154,7 @@ module CPU(
     assign testesaidaCent = inCentena;
     assign testeDesvioControl = DesvioControl;
     assign testeOPCODE = opcode;
+	 assign teste_troca_contexto = troca_contexto;
     
     always@(negedge clk) 
     begin
