@@ -1,5 +1,5 @@
 Flow report for processadorAOC
-Fri Aug 29 15:34:54 2025
+Sun Aug 31 17:15:29 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Fri Aug 29 15:34:54 2025          ;
+; Flow Status                        ; Successful - Sun Aug 31 17:15:29 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE115F29C7                                  ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 5,404 / 114,480 ( 5 % )                        ;
-;     Total combinational functions  ; 4,992 / 114,480 ( 4 % )                        ;
+; Total logic elements               ; 5,503 / 114,480 ( 5 % )                        ;
+;     Total combinational functions  ; 5,088 / 114,480 ( 4 % )                        ;
 ;     Dedicated logic registers      ; 1,225 / 114,480 ( 1 % )                        ;
 ; Total registers                    ; 1225                                           ;
 ; Total pins                         ; 428 / 529 ( 81 % )                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/29/2025 15:16:31 ;
+; Start date & time ; 08/31/2025 16:54:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processadorAOC      ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+----------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+----------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 277375815945034.175649139104432        ; --             ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 277375815945034.175667009517524        ; --             ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --             ; --          ; --         ;
@@ -95,13 +95,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:08     ; 1.0                     ; 4839 MB             ; 00:01:27                           ;
-; Fitter               ; 00:09:32     ; 1.0                     ; 5456 MB             ; 00:10:22                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4728 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:13     ; 1.1                     ; 4996 MB             ; 00:00:14                           ;
+; Analysis & Synthesis ; 00:01:10     ; 1.0                     ; 4839 MB             ; 00:01:30                           ;
+; Fitter               ; 00:14:48     ; 1.0                     ; 5478 MB             ; 00:15:37                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4728 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.1                     ; 4953 MB             ; 00:00:16                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4665 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4682 MB             ; 00:00:02                           ;
-; Total                ; 00:11:01     ; --                      ; --                  ; 00:12:10                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4686 MB             ; 00:00:02                           ;
+; Total                ; 00:16:22     ; --                      ; --                  ; 00:17:31                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -126,7 +126,7 @@ quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -
 quartus_fit --read_settings_files=off --write_settings_files=off processadorAOC -c processadorAOC
 quartus_asm --read_settings_files=off --write_settings_files=off processadorAOC -c processadorAOC
 quartus_sta processadorAOC -c processadorAOC
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform16.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform16.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform18.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform18.vwf.vt"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/" processadorAOC -c processadorAOC
 
 

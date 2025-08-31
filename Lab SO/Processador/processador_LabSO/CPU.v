@@ -193,7 +193,7 @@ module CPU(
     begin
         if(mudaProcesso==1'b1) 
         begin
-            processo_atual = imediatoExtendido;
+            processo_atual = rt;
             Testeprocesso_atual = processo_atual;
         end
     end
