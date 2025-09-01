@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorAOC
-Sun Aug 31 16:56:05 2025
+Mon Sep  1 16:29:31 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -72,13 +72,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Aug 31 16:56:05 2025          ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep  1 16:29:31 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 6,058                                          ;
-;     Total combinational functions  ; 5,087                                          ;
+; Total logic elements               ; 6,419                                          ;
+;     Total combinational functions  ; 5,448                                          ;
 ;     Dedicated logic registers      ; 1,225                                          ;
 ; Total registers                    ; 1225                                           ;
 ; Total pins                         ; 428                                            ;
@@ -244,16 +244,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 6,058                          ;
+; Estimated Total logic elements              ; 6,419                          ;
 ;                                             ;                                ;
-; Total combinational functions               ; 5087                           ;
+; Total combinational functions               ; 5448                           ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 3109                           ;
-;     -- 3 input functions                    ; 1638                           ;
-;     -- <=2 input functions                  ; 340                            ;
+;     -- 4 input functions                    ; 3451                           ;
+;     -- 3 input functions                    ; 1639                           ;
+;     -- <=2 input functions                  ; 358                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 3747                           ;
+;     -- normal mode                          ; 4108                           ;
 ;     -- arithmetic mode                      ; 1340                           ;
 ;                                             ;                                ;
 ; Total registers                             ; 1225                           ;
@@ -267,8 +267,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; clock_divider:comb_3|clock_out ;
 ; Maximum fan-out                             ; 1130                           ;
-; Total fan-out                               ; 23001                          ;
-; Average fan-out                             ; 3.19                           ;
+; Total fan-out                               ; 24408                          ;
+; Average fan-out                             ; 3.22                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -277,27 +277,27 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name                     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |CPU                                      ; 5087 (279)          ; 1225 (100)                ; 32768       ; 8            ; 0       ; 4         ; 428  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
-;    |BCD:bcd|                              ; 89 (89)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
-;    |BancoRegistradores:br|                ; 1047 (1047)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
+; |CPU                                      ; 5448 (279)          ; 1225 (100)                ; 32768       ; 8            ; 0       ; 4         ; 428  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
+;    |BCD:bcd|                              ; 90 (90)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
+;    |BancoRegistradores:br|                ; 1401 (1401)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
 ;    |ContadorDeQuantum:quantum|            ; 79 (79)             ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ContadorDeQuantum:quantum                                                                                                     ; ContadorDeQuantum               ; work         ;
 ;    |EntradaSaida:IO|                      ; 301 (1)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO                                                                                                               ; EntradaSaida                    ; work         ;
 ;       |BCD:bcd|                           ; 300 (300)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO|BCD:bcd                                                                                                       ; BCD                             ; work         ;
-;    |MEMInstrucoes:inst|                   ; 236 (236)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
+;    |MEMInstrucoes:inst|                   ; 246 (246)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
 ;    |ParadaSistema:mest|                   ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ParadaSistema:mest                                                                                                            ; ParadaSistema                   ; work         ;
-;    |ULA:alu|                              ; 2700 (450)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
+;    |ULA:alu|                              ; 2697 (450)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
 ;       |lpm_divide:Div0|                   ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0                                                                                                       ; lpm_divide                      ; work         ;
 ;          |lpm_divide_hkm:auto_generated|  ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm                  ; work         ;
 ;             |sign_div_unsign_9nh:divider| ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
 ;                |alt_u_div_6af:divider|    ; 1077 (1077)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
-;       |lpm_divide:Mod0|                   ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0                                                                                                       ; lpm_divide                      ; work         ;
-;          |lpm_divide_kcm:auto_generated|  ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm                  ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
-;                |alt_u_div_6af:divider|    ; 1094 (1093)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
+;       |lpm_divide:Mod0|                   ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0                                                                                                       ; lpm_divide                      ; work         ;
+;          |lpm_divide_kcm:auto_generated|  ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm                  ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
+;                |alt_u_div_6af:divider|    ; 1091 (1090)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
 ;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc                     ; work         ;
 ;       |lpm_mult:Mult0|                    ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0                                                                                                        ; lpm_mult                        ; work         ;
 ;          |mult_7dt:auto_generated|        ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt                        ; work         ;
-;    |UnidadeDeControle:uco|                ; 104 (104)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
+;    |UnidadeDeControle:uco|                ; 103 (103)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
 ;    |clock_divider:comb_3|                 ; 38 (38)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|clock_divider:comb_3                                                                                                          ; clock_divider                   ; work         ;
 ;    |displaySete:displayCentena|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayCentena                                                                                                    ; displaySete                     ; work         ;
 ;    |displaySete:displayDezena|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayDezena                                                                                                     ; displaySete                     ; work         ;
@@ -3347,9 +3347,9 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[89][29]           ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[89][30]           ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[89][31]           ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[90][0]            ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[90][0]            ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[90][1]            ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[90][2]            ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[90][2]            ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[90][3]            ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[90][4]            ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[90][5]            ; Stuck at GND due to stuck port data_in ;
@@ -3649,8 +3649,8 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[99][11]           ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[99][12]           ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[99][13]           ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[99][14]           ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[99][15]           ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[99][14]           ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[99][15]           ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[99][16]           ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[99][17]           ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[99][18]           ; Stuck at VCC due to stuck port data_in ;
@@ -3969,8 +3969,8 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[109][11]          ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[109][12]          ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[109][13]          ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[109][14]          ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[109][15]          ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[109][14]          ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[109][15]          ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[109][16]          ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[109][17]          ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[109][18]          ; Stuck at VCC due to stuck port data_in ;
@@ -4611,22 +4611,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 33                          ;
 ;     SLD               ; 57                          ;
 ;     plain             ; 40                          ;
-; cycloneiii_lcell_comb ; 5098                        ;
+; cycloneiii_lcell_comb ; 5459                        ;
 ;     arith             ; 1340                        ;
 ;         2 data inputs ; 152                         ;
 ;         3 data inputs ; 1188                        ;
-;     normal            ; 3758                        ;
+;     normal            ; 4119                        ;
 ;         0 data inputs ; 62                          ;
 ;         1 data inputs ; 18                          ;
-;         2 data inputs ; 119                         ;
-;         3 data inputs ; 450                         ;
-;         4 data inputs ; 3109                        ;
+;         2 data inputs ; 137                         ;
+;         3 data inputs ; 451                         ;
+;         4 data inputs ; 3451                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 133.50                      ;
-; Average LUT depth     ; 82.79                       ;
+; Max LUT depth         ; 134.50                      ;
+; Average LUT depth     ; 88.41                       ;
 +-----------------------+-----------------------------+
 
 
@@ -4635,7 +4635,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:39     ;
+; Top            ; 00:00:42     ;
 +----------------+--------------+
 
 
@@ -4645,7 +4645,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Aug 31 16:54:54 2025
+    Info: Processing started: Mon Sep  1 16:28:17 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -5300,17 +5300,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/output_files/processadorAOC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 6585 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6946 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 421 output pins
-    Info (21061): Implemented 6117 logic cells
+    Info (21061): Implemented 6478 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 214 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Sun Aug 31 16:56:05 2025
-    Info: Elapsed time: 00:01:11
-    Info: Total CPU time (on all processors): 00:01:31
+    Info: Peak virtual memory: 4840 megabytes
+    Info: Processing ended: Mon Sep  1 16:29:31 2025
+    Info: Elapsed time: 00:01:14
+    Info: Total CPU time (on all processors): 00:01:33
 
 
 +------------------------------------------+
