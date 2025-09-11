@@ -150,14 +150,25 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd77] = {beq,RZERO,R22,RZERO,11'd5};//beq r22 , rzero , volta menu , pc+5
 			memoria[32'd78] = {movi,R22,RZERO,RZERO,11'd11};//movi r22, 11 // condição de saida do laço 
 			memoria[32'd79] = {movi,R23,RZERO,RZERO,11'd1};//movi r23,1
-			memoria[32'd80] = {lw,R25,R23,RZERO,11'd13};//lw r25, 13(r23)
+			memoria[32'd80] = {lw,R25,R23,RZERO,11'd13};//lw r25, 13(r23) - pega estado atual
 			memoria[32'd81] = {j,endL0};//jump L0
 			memoria[32'd82] = {j,endMenu};//jump menu
+			
+			
+			
 		//LO - procura um processo interrompido que esteja com processamento normal(não IO)
 
+			memoria[32'd87] = {addi,R25,R25,RZERO,11'd1};// r25 = r25 + 1 - pega a proxima instução na fila
+			memoria[32'd83] = {beq,RZERO,R22,R25,11'd5};//beq r22 , r20, L1 , pc+5// fim do laço por não achar processo normal
+			memoria[32'd85] = {lw,R24,R25,RZERO,11'd1};//lw r24, 1(r25) // pega o estado naquele index
+			memoria[32'd86] = {beq,R24,R21,R24,11'd2};//beq r24,r21, muda processo atual pc+3
+			memoria[32'd88] = {j,endL0};//jump LO
+			memoria[32'd88] = {mov,R20,R25,R25,11'd0}//atribui valor de r25 para r20
+			memoria[32'd89] = {j,endTrocaProcessoexecutando};//jump sai do laço
+			
+		//L1	
 			memoria[32'd83] = {beq,RZERO,R22,R20,11'd7};//beq r22 , r20, L1 , pc+6// fim do laço por não achar processo normal
-			memoria[32'd84] = {beq,RZERO,R25,R20,11'd2};//beq r25,r20, pc+2 // incrementa index --- e o processo atual
-			memoria[32'd85] = {lw,R24,R20,RZERO,11'd10};//lw r24, 1(r20) // pega o estado naquele index
+			memoria[32'd85] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
 			memoria[32'd86] = {beq,R24,R21,R24,11'd3};//beq r24,r21, muda processo atual pc+3
 			memoria[32'd87] = {addi,R20,R20,RZERO,11'd1};//addi r20,1//incrementa contador
 			memoria[32'd88] = {j,endL0};//jump LO
@@ -171,7 +182,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 		//L1 - procura processo saida de dados
 
-			memoria[32'd94] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador
+			memoria[32'd94] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador  end 94
 			memoria[32'd95] = {movi,R21,RZERO,RZERO,11'd2};//movi r21 , 2 // estado processo como 2(IO)
 			memoria[32'd96] = {beq,RZERO,R22,R20,11'd7};//beq r22 , r20, L1 , pc+6// fim do laço por não achar processo normal
 			memoria[32'd97] = {beq,RZERO,R25,R20,11'd2};//beq r25,r20, pc+2 // incrementa index --- e o processo atual
