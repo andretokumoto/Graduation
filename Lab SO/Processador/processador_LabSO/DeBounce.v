@@ -2,53 +2,48 @@ module DeBounce(
     input clk,
     input reset,
     input button_in,
-    output reg DB_out
+    output reg button_out
 );
 
-    // Parameters
-    parameter COUNTER_MAX = 20_000_000; // Ajuste para o tempo de debounce (exemplo: 20ms para 50MHz)
+    // Parâmetros para ajuste fácil
+    localparam DEBOUNCE_TIME = 20'd500000; // ~50ms @ 10MHz
 
-    // Internal signals
-    reg [31:0] counter;
-    reg button_sync1, button_sync2;
-    reg button_stable;
+    // Sinais internos
+    reg [19:0] counter;
+    reg button_filtered;
+    reg button_sync_1;
+    reg button_sync_2;
 
-    // Synchronize the button input to the clock domain
+    // Sincronizador de entrada para evitar metaestabilidade
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            button_sync1 <= 0;
-            button_sync2 <= 0;
+            button_sync_1 <= 1'b0;
+            button_sync_2 <= 1'b0;
         end else begin
-            button_sync1 <= button_in;
-            button_sync2 <= button_sync1;
+            button_sync_1 <= button_in;
+            button_sync_2 <= button_sync_1;
         end
     end
 
-    // Debounce logic
+    // Lógica principal do debounce
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            counter <= 0;
-            button_stable <= 0;
+            counter <= 20'd0;
+            button_filtered <= 1'b0;
+            button_out <= 1'b0;
         end else begin
-            if (button_sync2 != button_stable) begin
-                // Button state changed, start counter
-                counter <= counter + 1;
-                if (counter >= COUNTER_MAX) begin
-                    button_stable <= button_sync2;
-                    counter <= 0; // Reset counter after stabilizing
+            // Se o sinal de entrada for diferente do sinal filtrado
+            if (button_sync_2 != button_filtered) begin
+                if (counter == DEBOUNCE_TIME) begin
+                    button_filtered <= button_sync_2; // Atualiza o sinal filtrado
+                    button_out <= button_sync_2;      // Atualiza a saída
+                    counter <= 20'd0;
+                end else begin
+                    counter <= counter + 1'b1;
                 end
             end else begin
-                counter <= 0; // Reset counter if no change
+                counter <= 20'd0; // Sinal estável, reseta o contador
             end
-        end
-    end
-
-    // Output the stable button state
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            DB_out <= 0;
-        end else begin
-            DB_out <= button_stable;
         end
     end
 
