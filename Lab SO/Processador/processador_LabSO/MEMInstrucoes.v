@@ -19,8 +19,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	 //reg [31:0] cursorDePosicao;//guarda a prosição de começo de pilha para um programa que será carregado para a memInst
 	 	
 	parameter TAM_BLOCO = 32'd300;//tamanho dos blocos na memoria
-	parameter endEscalonador = 26'd73, endMenu = 26'd37,entradaNovoProcesso = 26'd65,entradaProcesso = 26'd55,iniciaProcesso = 26'd47, endCarregaContexto = 26'd999 , endTrocaProcessoexecutando = 26'd91; //pc do escalonador
-	parameter endSaidaDeDados=26'd999,endEntradaDeDados=26'd999 , endL0 = 26'd83, endL1 = 26'd96, endL2 = 26'd106; //MUDAR !!!!!!!
+	parameter endEscalonador = 26'd73, endMenu = 26'd37,entradaNovoProcesso = 26'd65,entradaProcesso = 26'd55,iniciaProcesso = 26'd47, endCarregaContexto = 26'd121 , endTrocaProcessoexecutando = 26'd97; //pc do escalonador
+	parameter endSaidaDeDados=26'd999,endEntradaDeDados=26'd999 , endL0 = 26'd83, endL1 = 26'd90, endL2 = 26'd100, endL3 = 26'd110; //MUDAR !!!!!!!
 
 	parameter add=6'b000000,addi=6'b000001,sub=6'b000010,subi=6'b000011,mult=6'b000100;
 	parameter j=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b010101,blt=6'b010110;
@@ -169,7 +169,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd91] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
 			memoria[32'd92] = {beq,R24,R21,R24,11'd3};//beq r24,r21, muda processo atual pc+3
 			memoria[32'd93] = {addi,R20,R20,RZERO,11'd1};//addi r20,1//incrementa contador
-			memoria[32'd94] = {j,endL0};//jump LO
+		    memoria[32'd94] = {j,endL1};//jump LO
 			memoria[32'd95] = {j,endTrocaProcessoexecutando};//jump sai do laço
 			memoria[32'd96] = {j,26'd100};//jump procura processo saida
 			
@@ -178,7 +178,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd98] = {sw,RZERO,R21,R20,11'd1};//sw r20, 1(r21)//muda o processo em execução
 			memoria[32'd99] = {j,endCarregaContexto};//jump muda para carregar contexto
 
-		//L1 - procura processo saida de dados
+		//L2 - procura processo saida de dados
 
 			memoria[32'd100] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador  end 94
 			memoria[32'd101] = {movi,R21,RZERO,RZERO,11'd2};//movi r21 , 2 // estado processo como 2(IO)
@@ -187,9 +187,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd104] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
 			memoria[32'd105] = {beq,R24,R21,R24,11'd3};//beq r24,r21, muda processo atual pc+3
 			memoria[32'd106] = {addi,R20,R20,RZERO,11'd1};//addi r20,1//incrementa contador
-			memoria[32'd107] = {j,endL1};//jump LO
+		    memoria[32'd107] = {j,endL2};//jump LO
 			memoria[32'd108] = {j,endSaidaDeDados};//jump sai do laço
-			memoria[32'd109] = {j,26'd104};//jump procura processo entada
+		    memoria[32'd109] = {j,26'd102};//jump procura processo entrada
 
 		//L3 - procura processo entrada de dados
 
@@ -200,11 +200,11 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd115] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
 			memoria[32'd116] = {beq,R24,R21,R24,11'd3};//beq r24,r21, muda processo atual pc+3
 			memoria[32'd117] = {addi,R20,R20,RZERO,11'd1};//addi r20,1//incrementa contador
-			memoria[32'd118] = {j,endL2};//jump L2
+		    memoria[32'd118] = {j,endL3};//jump L3
 			memoria[32'd119] = {j,endEntradaDeDados};//jump sai do laço
 			memoria[32'd120] = {j,endMenu};//jump procura processo entada		
 
-/*
+
 			//-----------carrega contexto------
 			memoria[32'd121] = {movi,R20,RZERO,RZERO,11'd13};//movi r20, 13 
 			memoria[32'd122] = {lw,R21,R20,RZERO,11'd1};//lw r21, 1(r20)//puxa numero do processo atual
@@ -272,7 +272,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd170] = {cproc,RZERO,R24,R24,11'd0};//cproc, r24 -- comando para mudar o processo
 			memoria[32'd171] = {jumpR,RZERO,R22,R22,11'd0};//jr r22 // retorna o pocessamento do processo
 			//------------------------------fim mudança de contexto---------------------------
-*/			
+			
 			
 			
 		// -- muda para o processo
@@ -510,4 +510,5 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 endmodule
+
 
