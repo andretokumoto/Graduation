@@ -157,7 +157,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		//LO - procura um processo interrompido que esteja com processamento normal(não IO)
 
 		   memoria[32'd83] = {addi,R25,R25,RZERO,11'd1};// r25 = r25 + 1 - pega a proxima instução na fila
-		   memoria[32'd84] = {beq,RZERO,R22,R25,11'd5};//beq r22 , r20, L1 , pc+5// fim do laço por não achar processo normal
+		   memoria[32'd84] = {beq,RZERO,R22,R25,11'd6};//beq r22 , r20, L1 , pc+5// fim do laço por não achar processo normal
 			memoria[32'd85] = {lw,R24,R25,RZERO,11'd1};//lw r24, 1(r25) // pega o estado naquele index
 			memoria[32'd86] = {beq,R24,R21,R24,11'd2};//beq r24,r21, muda processo atual pc+3
 		   memoria[32'd87] = {j,endL0};//jump LO
@@ -510,3 +510,4 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 endmodule
+
