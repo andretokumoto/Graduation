@@ -161,7 +161,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd85] = {lw,R24,R25,RZERO,11'd1};//lw r24, 1(r25) // pega o estado naquele index
 			memoria[32'd86] = {beq,R24,R21,R24,11'd2};//beq r24,r21, muda processo atual pc+3
 		   memoria[32'd87] = {j,endL0};//jump LO
-			memoria[32'd88] = {mov,R20,R25,R25,11'd0}//atribui valor de r25 para r20
+			memoria[32'd88] = {mov,R20,R25,R25,11'd0};//atribui valor de r25 para r20
 			memoria[32'd89] = {j,endTrocaProcessoexecutando};//jump sai do laço
 			
 		//L1	
@@ -187,9 +187,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd104] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
 			memoria[32'd105] = {beq,R24,R21,R24,11'd3};//beq r24,r21, muda processo atual pc+3
 			memoria[32'd106] = {addi,R20,R20,RZERO,11'd1};//addi r20,1//incrementa contador
-		    memoria[32'd107] = {j,endL2};//jump LO
+		   memoria[32'd107] = {j,endL2};//jump LO
 			memoria[32'd108] = {j,endSaidaDeDados};//jump sai do laço
-		    memoria[32'd109] = {j,26'd102};//jump procura processo entrada
+		   memoria[32'd109] = {j,26'd102};//jump procura processo entrada
 
 		//L3 - procura processo entrada de dados
 
@@ -200,7 +200,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd115] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
 			memoria[32'd116] = {beq,R24,R21,R24,11'd3};//beq r24,r21, muda processo atual pc+3
 			memoria[32'd117] = {addi,R20,R20,RZERO,11'd1};//addi r20,1//incrementa contador
-		    memoria[32'd118] = {j,endL3};//jump L3
+		   memoria[32'd118] = {j,endL3};//jump L3
 			memoria[32'd119] = {j,endEntradaDeDados};//jump sai do laço
 			memoria[32'd120] = {j,endMenu};//jump procura processo entada		
 

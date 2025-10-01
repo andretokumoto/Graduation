@@ -1,26 +1,26 @@
 # do processadorAOC.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:52:57 on Sep 01,2025
+# Start time: 21:18:24 on Sep 30,2025
 # vlog -work work processadorAOC.vo 
 # -- Compiling module CPU
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	CPU
-# End time: 17:52:58 on Sep 01,2025, Elapsed time: 0:00:01
+# End time: 21:18:25 on Sep 30,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:52:58 on Sep 01,2025
-# vlog -work work Waveform20.vwf.vt 
+# Start time: 21:18:25 on Sep 30,2025
+# vlog -work work Waveform21.vwf.vt 
 # -- Compiling module CPU_vlg_vec_tst
 # 
 # Top level modules:
 # 	CPU_vlg_vec_tst
-# End time: 17:52:58 on Sep 01,2025, Elapsed time: 0:00:00
+# End time: 21:18:26 on Sep 30,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPU_vlg_vec_tst 
-# Start time: 17:52:59 on Sep 01,2025
+# Start time: 21:18:26 on Sep 30,2025
 # Loading work.CPU_vlg_vec_tst
 # Loading work.CPU
 # Loading work.hard_block
@@ -40,7 +40,7 @@
 # Loading cycloneive_ver.cycloneive_ram_register
 # Loading cycloneive_ver.cycloneive_ram_pulse_generator
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 18044 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 18166 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#26
 # Simulation time: 0 ps
@@ -51,87 +51,52 @@
 # Simulation time: 0 ps
 # Simulation time: 0 ps
 # Simulation time: 0 ps
-# Simulation time: 62900 ps
-# Simulation time: 62900 ps
-# Simulation time: 62900 ps
-# Simulation time: 62900 ps
-# Simulation time: 62900 ps
-# Simulation time: 62900 ps
-# Simulation time: 62900 ps
-# Simulation time: 62900 ps
-# Simulation time: 230900 ps
-# Simulation time: 230900 ps
-# Simulation time: 230900 ps
-# Simulation time: 230900 ps
-# Simulation time: 230900 ps
-# Simulation time: 230900 ps
-# Simulation time: 230900 ps
-# Simulation time: 230900 ps
-# Simulation time: 260900 ps
-# Simulation time: 260900 ps
-# Simulation time: 260900 ps
-# Simulation time: 260900 ps
-# Simulation time: 260900 ps
-# Simulation time: 260900 ps
-# Simulation time: 260900 ps
-# Simulation time: 260900 ps
-# Simulation time: 291300 ps
-# Simulation time: 291300 ps
-# Simulation time: 291300 ps
-# Simulation time: 291300 ps
-# Simulation time: 291300 ps
-# Simulation time: 291300 ps
-# Simulation time: 291300 ps
-# Simulation time: 291300 ps
-# Simulation time: 312500 ps
-# Simulation time: 312500 ps
-# Simulation time: 312500 ps
-# Simulation time: 312500 ps
-# Simulation time: 312500 ps
-# Simulation time: 312500 ps
-# Simulation time: 312500 ps
-# Simulation time: 312500 ps
-# Simulation time: 334100 ps
-# Simulation time: 334100 ps
-# Simulation time: 334100 ps
-# Simulation time: 334100 ps
-# Simulation time: 334100 ps
-# Simulation time: 334100 ps
-# Simulation time: 334100 ps
-# Simulation time: 334100 ps
-# Simulation time: 355700 ps
-# Simulation time: 355700 ps
-# Simulation time: 355700 ps
-# Simulation time: 355700 ps
-# Simulation time: 355700 ps
-# Simulation time: 355700 ps
-# Simulation time: 355700 ps
-# Simulation time: 355700 ps
-# Simulation time: 377300 ps
-# Simulation time: 377300 ps
-# Simulation time: 377300 ps
-# Simulation time: 377300 ps
-# Simulation time: 377300 ps
-# Simulation time: 377300 ps
-# Simulation time: 377300 ps
-# Simulation time: 377300 ps
-# Simulation time: 398900 ps
-# Simulation time: 398900 ps
-# Simulation time: 398900 ps
-# Simulation time: 398900 ps
-# Simulation time: 398900 ps
-# Simulation time: 398900 ps
-# Simulation time: 398900 ps
-# Simulation time: 398900 ps
-# Simulation time: 419300 ps
-# Simulation time: 419300 ps
-# Simulation time: 419300 ps
-# Simulation time: 419300 ps
-# Simulation time: 419300 ps
-# Simulation time: 419300 ps
-# Simulation time: 419300 ps
-# Simulation time: 932300 ps
-# ** Note: $finish    : Waveform20.vwf.vt(117)
+# Simulation time: 73700 ps
+# Simulation time: 73700 ps
+# Simulation time: 73700 ps
+# Simulation time: 73700 ps
+# Simulation time: 73700 ps
+# Simulation time: 73700 ps
+# Simulation time: 73700 ps
+# Simulation time: 73700 ps
+# Simulation time: 240500 ps
+# Simulation time: 240500 ps
+# Simulation time: 240500 ps
+# Simulation time: 240500 ps
+# Simulation time: 240500 ps
+# Simulation time: 240500 ps
+# Simulation time: 240500 ps
+# Simulation time: 240500 ps
+# Simulation time: 277700 ps
+# Simulation time: 277700 ps
+# Simulation time: 277700 ps
+# Simulation time: 277700 ps
+# Simulation time: 277700 ps
+# Simulation time: 277700 ps
+# Simulation time: 277700 ps
+# Simulation time: 277700 ps
+# Simulation time: 310100 ps
+# Simulation time: 310100 ps
+# Simulation time: 310100 ps
+# Simulation time: 310100 ps
+# Simulation time: 310100 ps
+# Simulation time: 310100 ps
+# Simulation time: 310100 ps
+# Simulation time: 310100 ps
+# Simulation time: 346100 ps
+# Simulation time: 346100 ps
+# Simulation time: 346100 ps
+# Simulation time: 346100 ps
+# Simulation time: 346100 ps
+# Simulation time: 346100 ps
+# Simulation time: 346100 ps
+# Simulation time: 346100 ps
+# Simulation time: 412100 ps
+# Simulation time: 412100 ps
+# Simulation time: 412100 ps
+# Simulation time: 412100 ps
+# Simulation time: 412100 ps
+# ** Note: $finish    : Waveform21.vwf.vt(117)
 #    Time: 1 us  Iteration: 0  Instance: /CPU_vlg_vec_tst
-# End time: 17:56:42 on Sep 01,2025, Elapsed time: 0:03:43
+# End time: 21:20:42 on Sep 30,2025, Elapsed time: 0:02:16
 # Errors: 0, Warnings: 1
