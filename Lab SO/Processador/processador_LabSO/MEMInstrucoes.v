@@ -169,7 +169,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd91] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
 			memoria[32'd92] = {beq,R24,R21,R24,11'd3};//beq r24,r21, muda processo atual pc+3
 			memoria[32'd93] = {addi,R20,R20,RZERO,11'd1};//addi r20,1//incrementa contador
-		    memoria[32'd94] = {j,endL1};//jump LO
+		   memoria[32'd94] = {j,endL1};//jump LO
 			memoria[32'd95] = {j,endTrocaProcessoexecutando};//jump sai do laço
 			memoria[32'd96] = {j,26'd100};//jump procura processo saida
 			
@@ -194,6 +194,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		//L3 - procura processo entrada de dados
 
 			memoria[32'd110] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador
+			memoria[32'd111] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador
 			memoria[32'd112] = {movi,R21,RZERO,RZERO,11'd3};//movi r21 , 2 // estado processo como 3(entrada)
 			memoria[32'd113] = {beq,RZERO,R22,R20,11'd7};//beq r22 , r20, L1 , pc+6// fim do laço por não achar processo normal
 			memoria[32'd114] = {beq,RZERO,R25,R20,11'd2};//beq r25,r20, pc+2 // incrementa index --- e o processo atual
@@ -212,65 +213,65 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd124] = {lw,R22,R21,RZERO,11'd1};//lw r22, 1(r21)//pega pc do processo atual
 			//--- puxa o contexto dos registradores
 
-			memoria[32'd118] = {movi,R20,RZERO,RZERO,11'd1};//movi r20, 1
-			memoria[32'd119] = {add,R21,R21,R20,11'd0};//add r21,r21,r20
+			memoria[32'd125] = {movi,R20,RZERO,RZERO,11'd1};//movi r20, 1
+			memoria[32'd126] = {add,R21,R21,R20,11'd0};//add r21,r21,r20
 
 			//pega o contexto do reg na mem de dados
-			memoria[32'd120] = {lw,5'd1,R21,RZERO,11'd1};//lw r1, 1(r21)
-			memoria[32'd121] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd122] = {lw,5'd2,R21,RZERO,11'd1};//lw r2, 1(r21)
-			memoria[32'd123] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd124] = {lw,5'd3,R21,RZERO,11'd1};//lw r3, 1(r21)
-			memoria[32'd125] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd126] = {lw,5'd4,R21,RZERO,11'd1};//lw r4, 1(r21)
-			memoria[32'd127] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd128] = {lw,5'd5,R21,RZERO,11'd1};//lw r5, 1(r21)
-			memoria[32'd129] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd130] = {lw,5'd6,R21,RZERO,11'd1};//lw r6, 1(r21)
-			memoria[32'd131] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd132] = {lw,5'd7,R21,RZERO,11'd1};//lw r7, 1(r21)
-			memoria[32'd133] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd134] = {lw,5'd8,R21,RZERO,11'd1};//lw r8, 1(r21)
-			memoria[32'd135] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd136] = {lw,5'd9,R21,RZERO,11'd1};//lw r9, 1(r21)
-			memoria[32'd137] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd138] = {lw,5'd10,R21,RZERO,11'd1};//lw r10, 1(r21)
-			memoria[32'd139] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd140] = {lw,5'd11,R21,RZERO,11'd1};//lw r11, 1(r21)
-			memoria[32'd141] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd142] = {lw,5'd12,R21,RZERO,11'd1};//lw r12, 1(r21)
-			memoria[32'd143] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd144] = {lw,5'd13,R21,RZERO,11'd1};//lw r13, 1(r21)
-			memoria[32'd145] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd146] = {lw,5'd14,R21,RZERO,11'd1};//lw r14, 1(r21)
-			memoria[32'd147] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd148] = {lw,5'd15,R21,RZERO,11'd1};//lw r15, 1(r21)
-			memoria[32'd149] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd150] = {lw,5'd16,R21,RZERO,11'd1};//lw r16, 1(r21)
-			memoria[32'd151] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd152] = {lw,5'd17,R21,RZERO,11'd1};//lw r17, 1(r21)
-			memoria[32'd153] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd154] = {lw,5'd18,R21,RZERO,11'd1};//lw r18, 1(r21)
-			memoria[32'd155] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd156] = {lw,5'd19,R21,RZERO,11'd1};//lw r19, 1(r21)
-			memoria[32'd157] = {addi,R21,R21,RZERO,11'd5};//addi r21,5
-			memoria[32'd158] = {lw,5'd26,R21,RZERO,11'd1};//lw r26, 1(r21)
-			memoria[32'd159] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd160] = {lw,5'd27,R21,RZERO,11'd1};//lw r27, 1(r21)
-			memoria[32'd161] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd162] = {lw,5'd28,R21,RZERO,11'd1};//lw r28, 1(r21)
-			memoria[32'd163] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd164] = {lw,5'd29,R21,RZERO,11'd1};//lw r29, 1(r21)
-			memoria[32'd165] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
-			memoria[32'd166] = {lw,5'd30,R21,RZERO,11'd1};//lw r30, 1(r21)
-			memoria[32'd167] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd127] = {lw,5'd1,R21,RZERO,11'd1};//lw r1, 1(r21)
+			memoria[32'd128] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd129] = {lw,5'd2,R21,RZERO,11'd1};//lw r2, 1(r21)
+			memoria[32'd130] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd131] = {lw,5'd3,R21,RZERO,11'd1};//lw r3, 1(r21)
+			memoria[32'd132] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd133] = {lw,5'd4,R21,RZERO,11'd1};//lw r4, 1(r21)
+			memoria[32'd134] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd135] = {lw,5'd5,R21,RZERO,11'd1};//lw r5, 1(r21)
+			memoria[32'd136] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd137] = {lw,5'd6,R21,RZERO,11'd1};//lw r6, 1(r21)
+			memoria[32'd138] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd139] = {lw,5'd7,R21,RZERO,11'd1};//lw r7, 1(r21)
+			memoria[32'd140] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd141] = {lw,5'd8,R21,RZERO,11'd1};//lw r8, 1(r21)
+			memoria[32'd142] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd143] = {lw,5'd9,R21,RZERO,11'd1};//lw r9, 1(r21)
+			memoria[32'd144] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd145] = {lw,5'd10,R21,RZERO,11'd1};//lw r10, 1(r21)
+			memoria[32'd146] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd147] = {lw,5'd11,R21,RZERO,11'd1};//lw r11, 1(r21)
+			memoria[32'd148] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd149] = {lw,5'd12,R21,RZERO,11'd1};//lw r12, 1(r21)
+			memoria[32'd150] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd151] = {lw,5'd13,R21,RZERO,11'd1};//lw r13, 1(r21)
+			memoria[32'd152] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd153] = {lw,5'd14,R21,RZERO,11'd1};//lw r14, 1(r21)
+			memoria[32'd154] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd155] = {lw,5'd15,R21,RZERO,11'd1};//lw r15, 1(r21)
+			memoria[32'd156] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd157] = {lw,5'd16,R21,RZERO,11'd1};//lw r16, 1(r21)
+			memoria[32'd158] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd159] = {lw,5'd17,R21,RZERO,11'd1};//lw r17, 1(r21)
+			memoria[32'd160] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd161] = {lw,5'd18,R21,RZERO,11'd1};//lw r18, 1(r21)
+			memoria[32'd162] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd163] = {lw,5'd19,R21,RZERO,11'd1};//lw r19, 1(r21)
+			memoria[32'd164] = {addi,R21,R21,RZERO,11'd5};//addi r21,5
+			memoria[32'd165] = {lw,5'd26,R21,RZERO,11'd1};//lw r26, 1(r21)
+			memoria[32'd166] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd167] = {lw,5'd27,R21,RZERO,11'd1};//lw r27, 1(r21)
+			memoria[32'd168] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd169] = {lw,5'd28,R21,RZERO,11'd1};//lw r28, 1(r21)
+			memoria[32'd170] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd171] = {lw,5'd29,R21,RZERO,11'd1};//lw r29, 1(r21)
+			memoria[32'd172] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
+			memoria[32'd173] = {lw,5'd30,R21,RZERO,11'd1};//lw r30, 1(r21)
+			memoria[32'd174] = {addi,R21,R21,RZERO,11'd1};//addi r21,1
 
 			//muda processamento para o processo
 
-			memoria[32'd168] = {movi,R23,RZERO,RZERO,11'd13};//movi r23, 13
-			memoria[32'd169] = {lw,R24,R23,RZERO,11'd1};//lw r24, 1(r23)
-			memoria[32'd170] = {cproc,RZERO,R24,R24,11'd0};//cproc, r24 -- comando para mudar o processo
-			memoria[32'd171] = {jumpR,RZERO,R22,R22,11'd0};//jr r22 // retorna o pocessamento do processo
+			memoria[32'd175] = {movi,R23,RZERO,RZERO,11'd13};//movi r23, 13
+			memoria[32'd176] = {lw,R24,R23,RZERO,11'd1};//lw r24, 1(r23)
+			memoria[32'd177] = {cproc,RZERO,R24,R24,11'd0};//cproc, r24 -- comando para mudar o processo
+			memoria[32'd178] = {jumpR,RZERO,R22,R22,11'd0};//jr r22 // retorna o pocessamento do processo
 			//------------------------------fim mudança de contexto---------------------------
 			
 			

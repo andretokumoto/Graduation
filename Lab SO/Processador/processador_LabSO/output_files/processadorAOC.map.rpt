@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorAOC
-Tue Sep 30 20:30:07 2025
+Thu Oct  2 21:32:17 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -72,13 +72,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 30 20:30:06 2025          ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct  2 21:32:17 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 6,518                                          ;
-;     Total combinational functions  ; 5,547                                          ;
+; Total logic elements               ; 6,516                                          ;
+;     Total combinational functions  ; 5,545                                          ;
 ;     Dedicated logic registers      ; 1,225                                          ;
 ; Total registers                    ; 1225                                           ;
 ; Total pins                         ; 428                                            ;
@@ -188,7 +188,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -244,16 +244,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 6,518                          ;
+; Estimated Total logic elements              ; 6,516                          ;
 ;                                             ;                                ;
-; Total combinational functions               ; 5547                           ;
+; Total combinational functions               ; 5545                           ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 3527                           ;
-;     -- 3 input functions                    ; 1645                           ;
+;     -- 4 input functions                    ; 3533                           ;
+;     -- 3 input functions                    ; 1637                           ;
 ;     -- <=2 input functions                  ; 375                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 4207                           ;
+;     -- normal mode                          ; 4205                           ;
 ;     -- arithmetic mode                      ; 1340                           ;
 ;                                             ;                                ;
 ; Total registers                             ; 1225                           ;
@@ -277,7 +277,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name                     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |CPU                                      ; 5547 (284)          ; 1225 (100)                ; 32768       ; 8            ; 0       ; 4         ; 428  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
+; |CPU                                      ; 5545 (282)          ; 1225 (100)                ; 32768       ; 8            ; 0       ; 4         ; 428  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
 ;    |BCD:bcd|                              ; 89 (89)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
 ;    |BancoRegistradores:br|                ; 1399 (1399)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
 ;    |ContadorDeQuantum:quantum|            ; 79 (79)             ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ContadorDeQuantum:quantum                                                                                                     ; ContadorDeQuantum               ; work         ;
@@ -285,15 +285,15 @@ https://fpgasoftware.intel.com/eula.
 ;       |BCD:bcd|                           ; 300 (300)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO|BCD:bcd                                                                                                       ; BCD                             ; work         ;
 ;    |MEMInstrucoes:inst|                   ; 338 (338)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
 ;    |ParadaSistema:mest|                   ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ParadaSistema:mest                                                                                                            ; ParadaSistema                   ; work         ;
-;    |ULA:alu|                              ; 2701 (452)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
+;    |ULA:alu|                              ; 2701 (454)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
 ;       |lpm_divide:Div0|                   ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0                                                                                                       ; lpm_divide                      ; work         ;
 ;          |lpm_divide_hkm:auto_generated|  ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm                  ; work         ;
 ;             |sign_div_unsign_9nh:divider| ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
 ;                |alt_u_div_6af:divider|    ; 1077 (1077)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
-;       |lpm_divide:Mod0|                   ; 1093 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0                                                                                                       ; lpm_divide                      ; work         ;
-;          |lpm_divide_kcm:auto_generated|  ; 1093 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm                  ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 1093 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
-;                |alt_u_div_6af:divider|    ; 1093 (1092)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
+;       |lpm_divide:Mod0|                   ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0                                                                                                       ; lpm_divide                      ; work         ;
+;          |lpm_divide_kcm:auto_generated|  ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm                  ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
+;                |alt_u_div_6af:divider|    ; 1091 (1090)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af                   ; work         ;
 ;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc                     ; work         ;
 ;       |lpm_mult:Mult0|                    ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0                                                                                                        ; lpm_mult                        ; work         ;
 ;          |mult_7dt:auto_generated|        ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt                        ; work         ;
@@ -3635,7 +3635,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[98][29]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[98][30]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[98][31]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[99][0]        ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[99][0]        ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[99][1]        ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[99][2]        ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[99][3]        ; Stuck at VCC due to stuck port data_in ;
@@ -4019,6 +4019,38 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[110][29]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[110][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[110][31]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][0]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][1]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][2]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][3]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][4]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][5]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][6]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][7]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][8]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][9]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][10]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][11]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][12]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][13]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][14]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][15]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][16]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][17]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][18]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][19]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][20]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][26]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][29]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[111][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[112][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[112][1]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[112][2]       ; Stuck at GND due to stuck port data_in ;
@@ -4211,13 +4243,13 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[117][29]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[117][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[117][31]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][0]       ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][1]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][2]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][3]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][0]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][1]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][2]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][3]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][4]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][5]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][6]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][5]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][6]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][7]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][8]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][9]       ; Stuck at GND due to stuck port data_in ;
@@ -4234,53 +4266,53 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[118][20]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][23]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][25]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][26]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][26]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][27]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][28]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[118][29]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[118][29]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[118][31]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][0]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][1]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][2]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][0]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][1]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][2]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][3]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][4]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][5]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][6]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][7]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][8]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][9]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][5]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][6]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][7]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][8]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][9]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][10]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][11]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][12]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][13]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][13]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][14]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][15]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][16]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][15]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][16]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][17]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][18]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][18]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][19]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][20]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][23]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][25]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][26]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][26]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][27]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[119][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[119][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[119][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][1]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[120][2]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[120][2]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][3]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][4]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[120][5]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[120][5]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][6]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][7]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][8]       ; Stuck at GND due to stuck port data_in ;
@@ -4291,26 +4323,26 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[120][13]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][14]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][15]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[120][16]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[120][16]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][17]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[120][18]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[120][18]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][19]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[120][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[120][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[120][20]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[120][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][23]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][24]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[120][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[120][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[120][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[120][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][29]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[120][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][1]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][2]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][3]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][2]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][3]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][4]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][5]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][6]       ; Stuck at GND due to stuck port data_in ;
@@ -4323,21 +4355,21 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[121][13]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][14]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][15]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][16]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][16]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][17]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][18]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][18]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][19]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][20]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][24]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][25]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][26]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][27]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][28]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[121][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][29]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[121][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[121][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4355,31 +4387,31 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[122][13]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][14]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][15]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[122][16]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[122][16]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][17]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[122][21]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[122][22]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[122][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[122][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[122][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[122][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[122][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[122][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][26]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][27]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][29]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[122][31]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[123][0]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[123][0]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][1]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[123][2]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[123][3]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[123][2]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[123][3]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][4]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[123][5]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[123][5]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][6]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][7]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[123][8]       ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[123][8]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][9]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][10]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][11]      ; Stuck at GND due to stuck port data_in ;
@@ -4399,7 +4431,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[123][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][26]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[123][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[123][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][29]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[123][31]      ; Stuck at GND due to stuck port data_in ;
@@ -4424,11 +4456,11 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[124][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[124][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[124][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[124][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[124][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[124][22]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[124][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[124][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[124][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[124][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[124][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[124][26]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[124][27]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[124][28]      ; Stuck at VCC due to stuck port data_in ;
@@ -4451,23 +4483,23 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[125][13]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][14]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][15]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[125][16]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[125][16]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][17]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[125][18]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[125][18]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][19]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[125][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[125][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[125][20]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[125][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][24]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][25]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[125][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[125][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[125][26]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[125][27]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][28]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[125][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[125][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[125][29]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[125][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[125][31]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][0]       ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][0]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][1]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][2]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][3]       ; Stuck at GND due to stuck port data_in ;
@@ -4480,24 +4512,24 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[126][10]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][11]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][12]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][13]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][13]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][14]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][15]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][15]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][16]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][17]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][25]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][26]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[126][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[126][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[126][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[127][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[127][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4522,14 +4554,14 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[127][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[127][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[127][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[127][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[127][23]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[127][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[127][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[127][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[127][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[127][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[127][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[127][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[127][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[127][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[127][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[127][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[127][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[128][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[128][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4556,12 +4588,12 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[128][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[128][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[128][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[128][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[128][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[128][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[128][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[128][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[128][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[128][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[128][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[128][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[128][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[128][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[129][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[129][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4584,16 +4616,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[129][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[129][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[129][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[129][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[129][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[129][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[129][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[129][22]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[129][23]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[129][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[129][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[129][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[129][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[129][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[129][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[129][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[129][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[129][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[129][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[129][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[129][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4616,16 +4648,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[130][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[130][21]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[130][22]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[130][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[130][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[130][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[130][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[130][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[130][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[130][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[130][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[130][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[130][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[130][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[131][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[131][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4649,15 +4681,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[131][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[131][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[131][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[131][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[131][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[131][22]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[131][23]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[131][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[131][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[131][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[131][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[131][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[131][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[131][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[131][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[131][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[131][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[131][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[131][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4681,15 +4713,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[132][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[132][22]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[132][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[132][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[132][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[132][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[132][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[132][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[132][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[132][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[132][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[132][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4712,16 +4744,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[133][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[133][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[133][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[133][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[133][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[133][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[133][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[133][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[133][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[133][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[133][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[133][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[134][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[134][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4744,16 +4776,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[134][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[134][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[134][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[134][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[134][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[134][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[134][23]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[134][24]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[134][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[134][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[134][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[134][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[134][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[134][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[134][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[134][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[134][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[134][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[134][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[134][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[134][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[135][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[135][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4780,12 +4812,12 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[135][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[135][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[135][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[135][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[135][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[135][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[135][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[135][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[135][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[135][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[135][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[135][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[135][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[135][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[136][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[136][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4810,14 +4842,14 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[136][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[136][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[136][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[136][23]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[136][24]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[136][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[136][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[136][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[136][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[136][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[136][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[136][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[136][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[136][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[136][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[136][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[136][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[136][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4840,16 +4872,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[137][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[137][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[137][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[137][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[137][22]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[137][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[137][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[137][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[137][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[137][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[137][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[137][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[137][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[137][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[138][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[138][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4872,16 +4904,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[138][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[138][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[138][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[138][21]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[138][22]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[138][23]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[138][24]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[138][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[138][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[138][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[138][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[138][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[138][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[138][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[138][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[138][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[138][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[138][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[138][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[138][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[138][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[138][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4905,15 +4937,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[139][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[139][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[139][22]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[139][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[139][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[139][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[139][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[139][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[139][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[139][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[139][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[139][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[140][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[140][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4937,15 +4969,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[140][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[140][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[140][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[140][22]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[140][23]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[140][24]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[140][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[140][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[140][23]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[140][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[140][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[140][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[140][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[140][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[140][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[140][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[140][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[140][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[140][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[140][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[141][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[141][1]       ; Stuck at GND due to stuck port data_in ;
@@ -4968,16 +5000,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[141][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[141][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[141][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[141][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[141][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[141][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[141][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[141][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[141][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[141][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[141][24]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[141][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[141][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[141][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[141][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[141][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[141][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[141][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[141][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[141][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[141][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5000,16 +5032,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[142][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[142][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[142][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[142][24]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[142][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[142][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[142][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[142][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[142][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[142][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[142][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[142][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[142][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[142][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[143][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[143][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5034,14 +5066,14 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[143][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[143][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[143][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[143][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[143][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[143][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[143][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[143][24]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[143][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[143][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[143][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[143][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[143][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[143][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[143][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[143][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[143][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[143][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[144][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[144][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5067,13 +5099,13 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[144][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[144][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[144][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[144][24]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[144][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[144][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[144][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[144][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[144][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[144][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[144][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[144][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[144][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[144][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[144][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[144][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[145][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[145][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5096,16 +5128,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[145][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[145][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[145][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[145][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[145][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[145][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[145][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[145][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[145][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[145][22]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[145][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[145][24]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[145][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[145][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[145][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[145][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[145][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[145][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[145][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[145][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[145][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[145][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[146][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[146][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5128,16 +5160,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[146][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[146][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[146][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[146][21]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[146][22]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[146][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[146][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[146][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[146][24]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[146][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[146][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[146][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[146][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[146][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[146][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[146][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[146][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[146][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[146][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[146][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[146][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[147][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[147][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5161,15 +5193,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[147][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[147][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[147][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[147][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[147][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[147][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[147][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[147][22]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[147][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[147][24]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[147][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[147][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[147][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[147][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[147][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[147][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[147][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[147][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[147][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[147][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[148][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[148][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5193,15 +5225,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[148][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[148][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[148][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[148][22]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[148][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[148][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[148][24]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[148][25]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[148][24]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[148][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[148][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[148][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[148][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[148][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[148][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[148][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[148][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[148][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[148][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5224,16 +5256,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[149][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[149][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[149][21]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[149][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[149][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[149][24]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[149][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[149][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[149][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[149][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[149][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[149][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[149][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[149][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5256,16 +5288,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[150][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[150][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[150][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[150][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[150][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][24]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[150][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[150][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[150][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[150][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[150][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[150][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[150][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[151][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[151][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5291,13 +5323,13 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[151][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[151][22]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[151][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[151][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[151][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[151][24]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[151][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[151][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[151][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[151][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[151][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[151][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[151][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[151][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[151][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[151][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5322,14 +5354,14 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[152][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][21]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][22]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[152][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[152][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][24]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[152][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[152][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[152][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[152][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[152][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[152][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[152][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[153][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[153][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5352,16 +5384,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[153][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[153][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[153][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[153][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[153][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[153][21]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[153][22]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[153][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[153][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[153][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[153][24]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[153][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[153][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[153][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[153][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[153][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[153][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[153][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[153][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[153][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[153][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5384,16 +5416,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[154][18]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[154][21]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[154][22]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[154][23]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[154][21]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[154][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[154][23]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][24]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][25]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[154][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[154][28]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[154][27]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[154][28]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[154][30]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[154][30]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[154][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[155][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[155][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5417,15 +5449,15 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[155][19]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[155][20]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[155][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[155][22]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[155][22]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[155][23]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[155][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[155][25]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[155][24]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[155][25]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[155][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[155][27]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[155][28]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[155][27]      ; Stuck at VCC due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[155][28]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[155][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[155][30]      ; Stuck at GND due to stuck port data_in ;
+; MEMInstrucoes:inst|memoria[155][30]      ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[155][31]      ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[156][0]       ; Stuck at VCC due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[156][1]       ; Stuck at GND due to stuck port data_in ;
@@ -5434,39 +5466,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; MEMInstrucoes:inst|memoria[156][4]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[156][5]       ; Stuck at GND due to stuck port data_in ;
 ; MEMInstrucoes:inst|memoria[156][6]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][7]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][8]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][9]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][10]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][11]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][12]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][13]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][14]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][15]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][16]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][17]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][18]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][19]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][20]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][21]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][22]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][23]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][24]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][25]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][26]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][27]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][28]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][29]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][30]      ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[156][31]      ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[157][0]       ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[157][1]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[157][2]       ; Stuck at VCC due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[157][3]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[157][4]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[157][5]       ; Stuck at GND due to stuck port data_in ;
-; MEMInstrucoes:inst|memoria[157][6]       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 5501 ;                                        ;
+; Total Number of Removed Registers = 5757 ;                                        ;
 +------------------------------------------+----------------------------------------+
 * Table truncated at 5000 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
@@ -5548,7 +5548,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------------------------+-------------------+
 ; Parameter Name ; Value                        ; Type              ;
 +----------------+------------------------------+-------------------+
-; DIVISOR        ; 0000000000000000000000000011 ; Unsigned Binary   ;
+; DIVISOR        ; 0000000000000000000000000101 ; Unsigned Binary   ;
 +----------------+------------------------------+-------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -5564,7 +5564,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; entradaNovoProcesso        ; 00000000000000000001000001       ; Unsigned Binary ;
 ; entradaProcesso            ; 00000000000000000000110111       ; Unsigned Binary ;
 ; iniciaProcesso             ; 00000000000000000000101111       ; Unsigned Binary ;
-; endCarregaContexto         ; 00000000000000000001111001       ; Unsigned Binary ;
+; endCarregaContexto         ; 00000000000000000001111000       ; Unsigned Binary ;
 ; endTrocaProcessoexecutando ; 00000000000000000001100001       ; Unsigned Binary ;
 ; endSaidaDeDados            ; 00000000000000001111100111       ; Unsigned Binary ;
 ; endEntradaDeDados          ; 00000000000000001111100111       ; Unsigned Binary ;
@@ -5963,22 +5963,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 33                          ;
 ;     SLD               ; 57                          ;
 ;     plain             ; 40                          ;
-; cycloneiii_lcell_comb ; 5558                        ;
+; cycloneiii_lcell_comb ; 5556                        ;
 ;     arith             ; 1340                        ;
 ;         2 data inputs ; 152                         ;
 ;         3 data inputs ; 1188                        ;
-;     normal            ; 4218                        ;
+;     normal            ; 4216                        ;
 ;         0 data inputs ; 62                          ;
 ;         1 data inputs ; 18                          ;
 ;         2 data inputs ; 154                         ;
-;         3 data inputs ; 457                         ;
-;         4 data inputs ; 3527                        ;
+;         3 data inputs ; 449                         ;
+;         4 data inputs ; 3533                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 135.50                      ;
-; Average LUT depth     ; 88.47                       ;
+; Average LUT depth     ; 88.80                       ;
 +-----------------------+-----------------------------+
 
 
@@ -5987,7 +5987,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:09     ;
+; Top            ; 00:00:35     ;
 +----------------+--------------+
 
 
@@ -5997,7 +5997,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Sep 30 20:27:39 2025
+    Info: Processing started: Thu Oct  2 21:31:06 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -6202,8 +6202,7 @@ Info (10041): Inferred latch for "processo_atual[30]" at CPU.v(194) File: C:/Use
 Info (10041): Inferred latch for "processo_atual[31]" at CPU.v(194) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 194
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:comb_3" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 90
 Info (12128): Elaborating entity "MEMInstrucoes" for hierarchy "MEMInstrucoes:inst" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 93
-Warning (10030): Net "memoria[3000..172]" at MEMInstrucoes.v(18) has no driver or initial value, using a default initial value '0' File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 18
-Warning (10030): Net "memoria[111]" at MEMInstrucoes.v(18) has no driver or initial value, using a default initial value '0' File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 18
+Warning (10030): Net "memoria[3000..179]" at MEMInstrucoes.v(18) has no driver or initial value, using a default initial value '0' File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 18
 Warning (10034): Output port "biosEmExecucao" at MEMInstrucoes.v(11) has no driver File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v Line: 11
 Info (12128): Elaborating entity "ContadorDeQuantum" for hierarchy "ContadorDeQuantum:quantum" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 96
 Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:uco" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 99
@@ -6653,17 +6652,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/output_files/processadorAOC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7045 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7043 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 421 output pins
-    Info (21061): Implemented 6577 logic cells
+    Info (21061): Implemented 6575 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 215 warnings
-    Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Tue Sep 30 20:30:07 2025
-    Info: Elapsed time: 00:02:28
-    Info: Total CPU time (on all processors): 00:02:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 214 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Thu Oct  2 21:32:17 2025
+    Info: Elapsed time: 00:01:11
+    Info: Total CPU time (on all processors): 00:01:28
 
 
 +------------------------------------------+
