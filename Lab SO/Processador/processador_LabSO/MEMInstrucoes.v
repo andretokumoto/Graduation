@@ -88,9 +88,6 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			
 			//-------------------------------------------------------------------------------------
 //---------------------------SO---------------------------------------------------
-	
-
-			//memoria[32'd37] = {j,endMenu};//jump menu
 
 
 			// -------  menu --------
@@ -272,77 +269,66 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd176] = {lw,R24,R23,RZERO,11'd1};//lw r24, 1(r23)
 			memoria[32'd177] = {cproc,RZERO,R24,R24,11'd0};//cproc, r24 -- comando para mudar o processo
 			memoria[32'd178] = {jumpR,RZERO,R22,R22,11'd0};//jr r22 // retorna o pocessamento do processo
-			//------------------------------fim mudança de contexto---------------------------
-			
-			
-			
-		// -- muda para o processo
+		
 
-		//	memoria[32'd248] = {j,26'd33};//jump carrega contexto
-
-
-		//------------------------------------mudança contexto-----------
 			//-----------salva contexto--------
-			/*memoria[32'd71] = {cproc,RZERO,RZERO,RZERO,11'd0};//muda processo para SO
-   		    memoria[32'd72] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
-			memoria[32'd73] = {movi,R21,RZERO,RZERO,11'd13};//movi r21, 13
-			memoria[32'd74] = {lw,R22,R20,RZERO,11'd1};//lw r22, 1(r20)//puxa numero do processo atual
-			memoria[32'd75] = {multi,R22,R22,R22,11'd300};//multi r22, r22, 200
-			memoria[32'd76] = {sw,RZERO,R22,R20,11'd1};//sw r20, 1(r22)//salva contexto do pc
-			memoria[32'd77] = {movi,R23,RZERO,RZERO,11'd1}; //movi r3 , 1			
-			memoria[32'd78] = {sw,RZERO,R23,5'd1,11'd1}; //sw , r1 , 1(r23)
-			memoria[32'd79] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd80] = {sw,RZERO,R23,5'd2,11'd1}; //sw , r2 , 1(r23)
-			memoria[32'd81] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd82] = {sw,RZERO,R23,5'd3,11'd1}; //sw , r3 , 1(r23)
-			memoria[32'd83] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd84] = {sw,RZERO,R23,5'd4,11'd1}; //sw , r4 , 1(r23)
-			memoria[32'd85] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd86] = {sw,RZERO,R23,5'd5,11'd1}; //sw , r5 , 1(r23)
-			memoria[32'd87] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd88] = {sw,RZERO,R23,5'd6,11'd1}; //sw , r6 , 1(r23)
-			memoria[32'd89] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd90] = {sw,RZERO,R23,5'd7,11'd1}; //sw , r7 , 1(r23)
-			memoria[32'd91] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd92] = {sw,RZERO,R23,5'd8,11'd1}; //sw , r8 , 1(r23)
-			memoria[32'd93] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd94] = {sw,RZERO,R23,5'd9,11'd1}; //sw , r9 , 1(r23)
-			memoria[32'd95] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd96] = {sw,RZERO,R23,5'd10,11'd1}; //sw , r10 , 1(r23)
-			memoria[32'd97] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd98] = {sw,RZERO,R23,5'd11,11'd1}; //sw , r11 , 1(r23)
-			memoria[32'd99] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd100] = {sw,RZERO,R23,5'd12,11'd1}; //sw , r12 , 1(r23)
-			memoria[32'd101] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd102] = {sw,RZERO,R23,5'd13,11'd1}; //sw , r13 , 1(r23)
-			memoria[32'd103] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd104] = {sw,RZERO,R23,5'd14,11'd1}; //sw , r14 , 1(r23)
-			memoria[32'd105] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd106] = {sw,RZERO,R23,5'd15,11'd1}; //sw , r15 , 1(r23)
-			memoria[32'd107] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd108] = {sw,RZERO,R23,5'd16,11'd1}; //sw , r16 , 1(r23)
-			memoria[32'd109] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd110] = {sw,RZERO,R23,5'd17,11'd1}; //sw , r17 , 1(r23)
-			memoria[32'd111] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd112] = {sw,RZERO,R23,5'd18,11'd1}; //sw , r18 , 1(r23)
-			memoria[32'd113] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd114] = {sw,RZERO,R23,5'd19,11'd1}; //sw , r19 , 1(r23)
-			memoria[32'd115] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd116] = {sw,RZERO,R23,5'd26,11'd1}; //sw , r26 , 1(r23)
-			memoria[32'd117] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd118] = {sw,RZERO,R23,5'd27,11'd1}; //sw , r27 , 1(r23)
-			memoria[32'd119] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd120] = {sw,RZERO,R23,5'd28,11'd1}; //sw , r28 , 1(r23)
-			memoria[32'd121] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd122] = {sw,RZERO,R23,5'd29,11'd1}; //sw , r29 , 1(r23)
-			memoria[32'd123] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
-			memoria[32'd124] = {sw,RZERO,R23,5'd30,11'd1}; //sw , r30 , 1(r23)
-			memoria[32'd125] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1
-			memoria[32'd126] = {sw,RZERO,R23,5'd31,11'd1}; //sw , r31 , 1(r23)
-			memoria[32'd127] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1
-			
-			memoria[32'd128] = {j,endEscalonador};		   //jump escalonador
-*/
+			memoria[32'd179] = {cproc,RZERO,RZERO,RZERO,11'd0};//muda processo para SO
+   		memoria[32'd180] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
+			memoria[32'd181] = {movi,R21,RZERO,RZERO,11'd13};//movi r21, 13
+			memoria[32'd182] = {lw,R22,R20,RZERO,11'd1};//lw r23, 1(r20)//puxa numero do processo atual
+			memoria[32'd183] = {multi,R22,R22,R22,11'd300};//multi r23, r23, 300
+			memoria[32'd184] = {sw,RZERO,R22,R20,11'd1};//sw r20, 1(r23)//salva contexto do pc
+			memoria[32'd185] = {addi,R23,R23,R23,11'd1}; //addi r23 , 1			
+			memoria[32'd186] = {sw,RZERO,R23,5'd1,11'd1}; //sw , r1 , 1(r23)
+			memoria[32'd187] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd185] = {sw,RZERO,R23,5'd2,11'd1}; //sw , r2 , 1(r23)
+			memoria[32'd186] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd187] = {sw,RZERO,R23,5'd3,11'd1}; //sw , r3 , 1(r23)
+			memoria[32'd188] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd189] = {sw,RZERO,R23,5'd4,11'd1}; //sw , r4 , 1(r23)
+			memoria[32'd190] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd191] = {sw,RZERO,R23,5'd5,11'd1}; //sw , r5 , 1(r23)
+			memoria[32'd192] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd193] = {sw,RZERO,R23,5'd6,11'd1}; //sw , r6 , 1(r23)
+			memoria[32'd194] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd195] = {sw,RZERO,R23,5'd7,11'd1}; //sw , r7 , 1(r23)
+			memoria[32'd196] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd197] = {sw,RZERO,R23,5'd8,11'd1}; //sw , r8 , 1(r23)
+			memoria[32'd198] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd199] = {sw,RZERO,R23,5'd9,11'd1}; //sw , r9 , 1(r23)
+			memoria[32'd200] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd201] = {sw,RZERO,R23,5'd10,11'd1}; //sw , r10 , 1(r23)
+			memoria[32'd202] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd203] = {sw,RZERO,R23,5'd11,11'd1}; //sw , r11 , 1(r23)
+			memoria[32'd204] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd205] = {sw,RZERO,R23,5'd12,11'd1}; //sw , r12 , 1(r23)
+			memoria[32'd206] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd207] = {sw,RZERO,R23,5'd13,11'd1}; //sw , r13 , 1(r23)
+			memoria[32'd208] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd209] = {sw,RZERO,R23,5'd14,11'd1}; //sw , r14 , 1(r23)
+			memoria[32'd210] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd211] = {sw,RZERO,R23,5'd15,11'd1}; //sw , r15 , 1(r23)
+			memoria[32'd212] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd213] = {sw,RZERO,R23,5'd16,11'd1}; //sw , r16 , 1(r23)
+			memoria[32'd214] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd215] = {sw,RZERO,R23,5'd17,11'd1}; //sw , r17 , 1(r23)
+			memoria[32'd216] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd217] = {sw,RZERO,R23,5'd18,11'd1}; //sw , r18 , 1(r23)
+			memoria[32'd218] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd219] = {sw,RZERO,R23,5'd19,11'd1}; //sw , r19 , 1(r23)
+			memoria[32'd220] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd221] = {sw,RZERO,R23,5'd26,11'd1}; //sw , r26 , 1(r23)
+			memoria[32'd222] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd223] = {sw,RZERO,R23,5'd27,11'd1}; //sw , r27 , 1(r23)
+			memoria[32'd224] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd225] = {sw,RZERO,R23,5'd28,11'd1}; //sw , r28 , 1(r23)
+			memoria[32'd226] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd227] = {sw,RZERO,R23,5'd29,11'd1}; //sw , r29 , 1(r23)
+			memoria[32'd228] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
+			memoria[32'd229] = {sw,RZERO,R23,5'd30,11'd1}; //sw , r30 , 1(r23)
+			memoria[32'd230] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1
+			memoria[32'd231] = {sw,RZERO,R23,5'd31,11'd1}; //sw , r31 , 1(r23)
+			memoria[32'd232] = {j,endEscalonador};		   //jump escalonador
 
 			
 	/*		//-----interrupção para entrada de dados ------ 
