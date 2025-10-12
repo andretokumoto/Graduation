@@ -84,7 +84,7 @@ module CPU(
     wire [31:0] pc_contexto;
     wire InstrucaIO, fimProcesso;
 
-    parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160;
+    parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd233;
 
     // divisor de clock
     clock_divider(.clock_in(clock), .clock_out(clk));
@@ -172,6 +172,7 @@ module CPU(
         else if(troca_contexto == 1'b1) pc<= Escalonador;
         else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
         else if (comandoOUT == 1'b1) pc <= PCout;
+		  else if (fimProcesso == 1'b1) pc <= PCout;//
         else 
         begin
             if(parada) pc <= pc;

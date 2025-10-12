@@ -780,7 +780,7 @@ always@(opcode)
 		end 
 
 
-   pause:
+   fim:
      begin
 	     escritaRegControl= 1'b0;
 	     jumpControl= 1'b0;
@@ -788,9 +788,9 @@ always@(opcode)
 		  branchControl = 1'b0;
 	     memControl= 1'b0;
 	     entradaSaidaControl = 2'b00;
-		  status=1'b1;
+		  status=1'b0;
 		  mudaProcesso = 1'b0;
-		  fimprocesso	= 1'b0;
+		  fimprocesso	= 1'b1;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
