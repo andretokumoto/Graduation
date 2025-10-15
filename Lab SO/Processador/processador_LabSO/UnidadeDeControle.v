@@ -16,7 +16,7 @@ parameter OR=6'b001001,AND=6'b001010,NOT=6'b001011,XOR=6'b001100,NOR=6'b001101,N
 parameter jump=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b010101,blt=6'b010110;
 parameter lw=6'b010111,sw=6'b011000;
 parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
-parameter in=6'b011101,out=6'b011110,fim=6'b011111,pause=6'b100000,spc = 6'b100110;
+parameter in=6'b011101,out=6'b011110,fim=6'b111111,pause=6'b100000,spc = 6'b100110;
 //op de SO
 parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011,encBios = 6'b100100,led = 6'b100101, inproc = 6'b100110,outproc = 6'b100111;
 
@@ -769,7 +769,7 @@ always@(opcode)
 		  entradaSaidaControl = 2'b01;
 		  dadoRegControl = 3'b000;
 		  ulaOP = 5'b00010;
-		  status=1'b0;
+		  status=1'b1;
 		  mudaProcesso = 1'b0;
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;

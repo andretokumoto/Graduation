@@ -23,7 +23,7 @@ module ContadorDeQuantum(
 		end
 		
 		
-		else if(processoAtual != 32'd0)//não faz a contagem do SO
+		else if(/*processoAtual != 32'd0*/ pc > 32'd300)//não faz a contagem do SO
 			begin
 				
 					if(contador>=quantum) //quantum atingido 

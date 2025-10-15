@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorAOC
-Sun Oct 12 20:56:22 2025
+Tue Oct 14 22:18:38 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -18,34 +18,33 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  10. State Machine - |CPU|ParadaSistema:mest|estadoAtual
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Registers Packed Into Inferred Megafunctions
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0|altsyncram_eg81:auto_generated
- 18. Parameter Settings for User Entity Instance: Top-level Entity: |CPU
- 19. Parameter Settings for User Entity Instance: clock_divider:comb_3
- 20. Parameter Settings for User Entity Instance: MEMInstrucoes:inst
- 21. Parameter Settings for User Entity Instance: ContadorDeQuantum:quantum
- 22. Parameter Settings for User Entity Instance: UnidadeDeControle:uco
- 23. Parameter Settings for User Entity Instance: ULA:alu
- 24. Parameter Settings for User Entity Instance: simple_dual_port_ram_dual_clock:mem
- 25. Parameter Settings for Inferred Entity Instance: simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0
- 26. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Mod0
- 27. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_mult:Mult0
- 28. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Div0
- 29. altsyncram Parameter Settings by Entity Instance
- 30. lpm_mult Parameter Settings by Entity Instance
- 31. Port Connectivity Checks: "BCD:bcd"
- 32. Port Connectivity Checks: "simple_dual_port_ram_dual_clock:mem"
- 33. Port Connectivity Checks: "mux6:muxRegistro"
- 34. Port Connectivity Checks: "UnidadeDeControle:uco"
- 35. Port Connectivity Checks: "ContadorDeQuantum:quantum"
- 36. Port Connectivity Checks: "MEMInstrucoes:inst"
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
- 40. Analysis & Synthesis Suppressed Messages
+ 13. General Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0|altsyncram_eg81:auto_generated
+ 17. Parameter Settings for User Entity Instance: Top-level Entity: |CPU
+ 18. Parameter Settings for User Entity Instance: clock_divider:comb_3
+ 19. Parameter Settings for User Entity Instance: MEMInstrucoes:inst
+ 20. Parameter Settings for User Entity Instance: ContadorDeQuantum:quantum
+ 21. Parameter Settings for User Entity Instance: UnidadeDeControle:uco
+ 22. Parameter Settings for User Entity Instance: ULA:alu
+ 23. Parameter Settings for User Entity Instance: simple_dual_port_ram_dual_clock:mem
+ 24. Parameter Settings for Inferred Entity Instance: simple_dual_port_ram_dual_clock:mem|altsyncram:ram_rtl_0
+ 25. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Mod0
+ 26. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_mult:Mult0
+ 27. Parameter Settings for Inferred Entity Instance: ULA:alu|lpm_divide:Div0
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. lpm_mult Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "BCD:bcd"
+ 31. Port Connectivity Checks: "simple_dual_port_ram_dual_clock:mem"
+ 32. Port Connectivity Checks: "mux6:muxRegistro"
+ 33. Port Connectivity Checks: "UnidadeDeControle:uco"
+ 34. Port Connectivity Checks: "ContadorDeQuantum:quantum"
+ 35. Port Connectivity Checks: "MEMInstrucoes:inst"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -72,13 +71,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 12 20:56:22 2025          ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 14 22:18:38 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 6,655                                          ;
-;     Total combinational functions  ; 5,684                                          ;
+; Total logic elements               ; 6,676                                          ;
+;     Total combinational functions  ; 5,705                                          ;
 ;     Dedicated logic registers      ; 1,225                                          ;
 ; Total registers                    ; 1225                                           ;
 ; Total pins                         ; 428                                            ;
@@ -188,7 +187,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -244,16 +243,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 6,655                          ;
+; Estimated Total logic elements              ; 6,676                          ;
 ;                                             ;                                ;
-; Total combinational functions               ; 5684                           ;
+; Total combinational functions               ; 5705                           ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 3716                           ;
-;     -- 3 input functions                    ; 1589                           ;
-;     -- <=2 input functions                  ; 379                            ;
+;     -- 4 input functions                    ; 3729                           ;
+;     -- 3 input functions                    ; 1588                           ;
+;     -- <=2 input functions                  ; 388                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 4344                           ;
+;     -- normal mode                          ; 4365                           ;
 ;     -- arithmetic mode                      ; 1340                           ;
 ;                                             ;                                ;
 ; Total registers                             ; 1225                           ;
@@ -267,7 +266,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; clock_divider:comb_3|clock_out ;
 ; Maximum fan-out                             ; 1130                           ;
-; Total fan-out                               ; 25360                          ;
+; Total fan-out                               ; 25427                          ;
 ; Average fan-out                             ; 3.25                           ;
 +---------------------------------------------+--------------------------------+
 
@@ -277,15 +276,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name                     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |CPU                                      ; 5684 (284)          ; 1225 (100)                ; 32768       ; 8            ; 0       ; 4         ; 428  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
+; |CPU                                      ; 5705 (282)          ; 1225 (100)                ; 32768       ; 8            ; 0       ; 4         ; 428  ; 0            ; |CPU                                                                                                                               ; CPU                             ; work         ;
 ;    |BCD:bcd|                              ; 90 (90)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD:bcd                                                                                                                       ; BCD                             ; work         ;
 ;    |BancoRegistradores:br|                ; 1399 (1399)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BancoRegistradores:br                                                                                                         ; BancoRegistradores              ; work         ;
-;    |ContadorDeQuantum:quantum|            ; 79 (79)             ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ContadorDeQuantum:quantum                                                                                                     ; ContadorDeQuantum               ; work         ;
-;    |EntradaSaida:IO|                      ; 301 (1)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO                                                                                                               ; EntradaSaida                    ; work         ;
-;       |BCD:bcd|                           ; 300 (300)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO|BCD:bcd                                                                                                       ; BCD                             ; work         ;
-;    |MEMInstrucoes:inst|                   ; 479 (479)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
+;    |ContadorDeQuantum:quantum|            ; 89 (89)             ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ContadorDeQuantum:quantum                                                                                                     ; ContadorDeQuantum               ; work         ;
+;    |EntradaSaida:IO|                      ; 299 (1)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO                                                                                                               ; EntradaSaida                    ; work         ;
+;       |BCD:bcd|                           ; 298 (298)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|EntradaSaida:IO|BCD:bcd                                                                                                       ; BCD                             ; work         ;
+;    |MEMInstrucoes:inst|                   ; 484 (484)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MEMInstrucoes:inst                                                                                                            ; MEMInstrucoes                   ; work         ;
 ;    |ParadaSistema:mest|                   ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ParadaSistema:mest                                                                                                            ; ParadaSistema                   ; work         ;
-;    |ULA:alu|                              ; 2699 (451)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
+;    |ULA:alu|                              ; 2706 (458)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu                                                                                                                       ; ULA                             ; work         ;
 ;       |lpm_divide:Div0|                   ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0                                                                                                       ; lpm_divide                      ; work         ;
 ;          |lpm_divide_hkm:auto_generated|  ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm                  ; work         ;
 ;             |sign_div_unsign_9nh:divider| ; 1077 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh             ; work         ;
@@ -297,7 +296,7 @@ https://fpgasoftware.intel.com/eula.
 ;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:alu|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc                     ; work         ;
 ;       |lpm_mult:Mult0|                    ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0                                                                                                        ; lpm_mult                        ; work         ;
 ;          |mult_7dt:auto_generated|        ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |CPU|ULA:alu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt                        ; work         ;
-;    |UnidadeDeControle:uco|                ; 101 (101)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
+;    |UnidadeDeControle:uco|                ; 104 (104)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeDeControle:uco                                                                                                         ; UnidadeDeControle               ; work         ;
 ;    |clock_divider:comb_3|                 ; 38 (38)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|clock_divider:comb_3                                                                                                          ; clock_divider                   ; work         ;
 ;    |displaySete:displayCentena|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayCentena                                                                                                    ; displaySete                     ; work         ;
 ;    |displaySete:displayDezena|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|displaySete:displayDezena                                                                                                     ; displaySete                     ; work         ;
@@ -368,7 +367,7 @@ Encoding Type:  One-Hot
 ; EntradaSaida:IO|BCD:bcd|centena[1]                   ; BCD:bcd|Equal0                 ; yes                    ;
 ; EntradaSaida:IO|BCD:bcd|centena[2]                   ; BCD:bcd|Equal0                 ; yes                    ;
 ; EntradaSaida:IO|BCD:bcd|centena[3]                   ; BCD:bcd|Equal0                 ; yes                    ;
-; UnidadeDeControle:uco|status                         ; UnidadeDeControle:uco|WideOr26 ; yes                    ;
+; UnidadeDeControle:uco|status                         ; UnidadeDeControle:uco|WideOr13 ; yes                    ;
 ; BCD:bcd|unidade[0]                                   ; BCD:bcd|Equal0                 ; yes                    ;
 ; BCD:bcd|unidade[1]                                   ; BCD:bcd|Equal0                 ; yes                    ;
 ; BCD:bcd|unidade[2]                                   ; BCD:bcd|Equal0                 ; yes                    ;
@@ -5471,16 +5470,6 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 * Table truncated at 5000 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                  ;
-+-----------------------------------+---------------------------+----------------------------------------------+
-; Register name                     ; Reason for Removal        ; Registers Removed due to This Register       ;
-+-----------------------------------+---------------------------+----------------------------------------------+
-; MEMInstrucoes:inst|memoria[0][26] ; Stuck at VCC              ; ContadorDeQuantum:quantum|intrucaoIOContexto ;
-;                                   ; due to stuck port data_in ;                                              ;
-+-----------------------------------+---------------------------+----------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -5510,7 +5499,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|BancoRegistradores:br|bancoDeRegistradores[0][8] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|BancoRegistradores:br|bancoDeRegistradores[0][7] ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|ContadorDeQuantum:quantum|contador[24]           ;
 ; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |CPU|pc[14]                                           ;
 ; 9:1                ; 21 bits   ; 126 LEs       ; 105 LEs              ; 21 LEs                 ; No         ; |CPU|mux6:muxRegistro|Mux7                            ;
@@ -5596,7 +5585,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; mflo                       ; 011100                           ; Unsigned Binary ;
 ; in                         ; 011101                           ; Unsigned Binary ;
 ; out                        ; 011110                           ; Unsigned Binary ;
-; fim                        ; 011111                           ; Unsigned Binary ;
+; fim                        ; 111111                           ; Unsigned Binary ;
 ; spc                        ; 100110                           ; Unsigned Binary ;
 ; scpc                       ; 100001                           ; Unsigned Binary ;
 ; scrg                       ; 100010                           ; Unsigned Binary ;
@@ -5660,7 +5649,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; mflo           ; 011100 ; Unsigned Binary                          ;
 ; in             ; 011101 ; Unsigned Binary                          ;
 ; out            ; 011110 ; Unsigned Binary                          ;
-; fim            ; 011111 ; Unsigned Binary                          ;
+; fim            ; 111111 ; Unsigned Binary                          ;
 ; pause          ; 100000 ; Unsigned Binary                          ;
 ; spc            ; 100110 ; Unsigned Binary                          ;
 ; scpc           ; 100001 ; Unsigned Binary                          ;
@@ -5964,22 +5953,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 33                          ;
 ;     SLD               ; 57                          ;
 ;     plain             ; 41                          ;
-; cycloneiii_lcell_comb ; 5695                        ;
+; cycloneiii_lcell_comb ; 5716                        ;
 ;     arith             ; 1340                        ;
 ;         2 data inputs ; 152                         ;
 ;         3 data inputs ; 1188                        ;
-;     normal            ; 4355                        ;
+;     normal            ; 4376                        ;
 ;         0 data inputs ; 62                          ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 159                         ;
-;         3 data inputs ; 401                         ;
-;         4 data inputs ; 3716                        ;
+;         2 data inputs ; 168                         ;
+;         3 data inputs ; 400                         ;
+;         4 data inputs ; 3729                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 135.50                      ;
-; Average LUT depth     ; 88.62                       ;
+; Max LUT depth         ; 136.50                      ;
+; Average LUT depth     ; 88.96                       ;
 +-----------------------+-----------------------------+
 
 
@@ -5988,7 +5977,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:55     ;
+; Top            ; 00:00:48     ;
 +----------------+--------------+
 
 
@@ -5998,7 +5987,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Oct 12 20:54:22 2025
+    Info: Processing started: Tue Oct 14 22:16:52 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -6210,15 +6199,12 @@ Info (12128): Elaborating entity "ContadorDeQuantum" for hierarchy "ContadorDeQu
 Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:uco" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 99
 Warning (10272): Verilog HDL Case Statement warning at UnidadeDeControle.v(911): case item expression covers a value already covered by a previous case item File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 911
 Warning (10270): Verilog HDL Case Statement warning at UnidadeDeControle.v(28): incomplete case statement has no default case item File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "escritaRegControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "jumpControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "DesvioControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "branchControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "jumpControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "escritaRegControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "valueULA", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "linkControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "memControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "entradaSaidaControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "ulaOP", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "status", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "mudaProcesso", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "fimprocesso", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
@@ -6227,6 +6213,9 @@ Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25)
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "ledControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "comandoIN", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "comandoOUT", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "valueULA", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "linkControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "ulaOP", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "branchTipo", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "dadoRegControl", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(25): inferring latch(es) for variable "HILOcontrol", which holds its previous value in one or more paths through the always construct File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
@@ -6235,6 +6224,13 @@ Info (10041): Inferred latch for "dadoRegControl[0]" at UnidadeDeControle.v(25) 
 Info (10041): Inferred latch for "dadoRegControl[1]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "dadoRegControl[2]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "branchTipo" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "ulaOP[0]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "ulaOP[1]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "ulaOP[2]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "ulaOP[3]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "ulaOP[4]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "linkControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "valueULA" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "comandoOUT" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "comandoIN" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "ledControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
@@ -6244,20 +6240,13 @@ Info (10041): Inferred latch for "intrucaoIOContexto" at UnidadeDeControle.v(25)
 Info (10041): Inferred latch for "fimprocesso" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "mudaProcesso" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "status" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "ulaOP[0]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "ulaOP[1]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "ulaOP[2]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "ulaOP[3]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "ulaOP[4]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "entradaSaidaControl[0]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "entradaSaidaControl[1]" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "memControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "linkControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "valueULA" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "escritaRegControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
-Info (10041): Inferred latch for "jumpControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "branchControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (10041): Inferred latch for "DesvioControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "jumpControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
+Info (10041): Inferred latch for "escritaRegControl" at UnidadeDeControle.v(25) File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v Line: 25
 Info (12128): Elaborating entity "ParadaSistema" for hierarchy "ParadaSistema:mest" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 102
 Warning (10235): Verilog HDL Always Construct warning at ParadaSistema.v(12): variable "estadoAtual" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ParadaSistema.v Line: 12
 Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:br" File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 105
@@ -6654,17 +6643,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/output_files/processadorAOC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7181 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7202 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 421 output pins
-    Info (21061): Implemented 6713 logic cells
+    Info (21061): Implemented 6734 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 215 warnings
-    Info: Peak virtual memory: 4870 megabytes
-    Info: Processing ended: Sun Oct 12 20:56:22 2025
-    Info: Elapsed time: 00:02:00
-    Info: Total CPU time (on all processors): 00:02:15
+    Info: Peak virtual memory: 4879 megabytes
+    Info: Processing ended: Tue Oct 14 22:18:38 2025
+    Info: Elapsed time: 00:01:46
+    Info: Total CPU time (on all processors): 00:01:34
 
 
 +------------------------------------------+

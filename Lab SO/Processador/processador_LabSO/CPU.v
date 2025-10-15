@@ -172,7 +172,7 @@ module CPU(
         else if(troca_contexto == 1'b1) pc<= Escalonador;
         else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
         else if (comandoOUT == 1'b1) pc <= PCout;
-		  else if (fimProcesso == 1'b1) pc <= PCout;//
+		  else if (fimProcesso == 1'b1) pc <= EndfimProcesso;//
         else 
         begin
             if(parada) pc <= pc;

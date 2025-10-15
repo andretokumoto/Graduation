@@ -1,5 +1,5 @@
 Flow report for processadorAOC
-Sun Oct 12 20:56:22 2025
+Tue Oct 14 22:18:38 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Oct 12 20:56:22 2025          ;
+; Flow Status                        ; Successful - Tue Oct 14 22:18:38 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE115F29C7                                  ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 6,655                                          ;
-;     Total combinational functions  ; 5,684                                          ;
+; Total logic elements               ; 6,676                                          ;
+;     Total combinational functions  ; 5,705                                          ;
 ;     Dedicated logic registers      ; 1,225                                          ;
 ; Total registers                    ; 1225                                           ;
 ; Total pins                         ; 428                                            ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/12/2025 20:54:23 ;
+; Start date & time ; 10/14/2025 22:16:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processadorAOC      ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+----------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+----------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 277375815945034.176031326317688        ; --             ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 277375815945034.176049101206896        ; --             ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --             ; --          ; --         ;
@@ -95,8 +95,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:59     ; 1.0                     ; 4870 MB             ; 00:02:14                           ;
-; Total                ; 00:01:59     ; --                      ; --                  ; 00:02:14                           ;
+; Analysis & Synthesis ; 00:01:45     ; 1.0                     ; 4879 MB             ; 00:01:33                           ;
+; Total                ; 00:01:45     ; --                      ; --                  ; 00:01:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
