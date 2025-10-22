@@ -1,26 +1,26 @@
 # do processadorAOC.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:57:36 on Oct 14,2025
+# Start time: 22:03:30 on Oct 21,2025
 # vlog -work work processadorAOC.vo 
 # -- Compiling module CPU
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	CPU
-# End time: 21:57:37 on Oct 14,2025, Elapsed time: 0:00:01
+# End time: 22:03:31 on Oct 21,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:57:37 on Oct 14,2025
-# vlog -work work Waveform25.vwf.vt 
+# Start time: 22:03:31 on Oct 21,2025
+# vlog -work work Waveform27.vwf.vt 
 # -- Compiling module CPU_vlg_vec_tst
 # 
 # Top level modules:
 # 	CPU_vlg_vec_tst
-# End time: 21:57:38 on Oct 14,2025, Elapsed time: 0:00:01
+# End time: 22:03:31 on Oct 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPU_vlg_vec_tst 
-# Start time: 21:57:38 on Oct 14,2025
+# Start time: 22:03:31 on Oct 21,2025
 # Loading work.CPU_vlg_vec_tst
 # Loading work.CPU
 # Loading work.hard_block
@@ -31,16 +31,16 @@
 # Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_lcell_comb
 # Loading altera_ver.dffeas
-# Loading cycloneive_ver.cycloneive_ram_block
-# Loading cycloneive_ver.cycloneive_ram_register
-# Loading cycloneive_ver.cycloneive_ram_pulse_generator
 # Loading cycloneive_ver.cycloneive_mac_mult
 # Loading cycloneive_ver.cycloneive_mac_data_reg
 # Loading cycloneive_ver.cycloneive_mac_sign_reg
 # Loading cycloneive_ver.cycloneive_mac_mult_internal
 # Loading cycloneive_ver.cycloneive_mac_out
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 18522 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 18744 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#26
 # Simulation time: 0 ps
@@ -51,72 +51,64 @@
 # Simulation time: 0 ps
 # Simulation time: 0 ps
 # Simulation time: 0 ps
-# Simulation time: 44450 ps
-# Simulation time: 44450 ps
-# Simulation time: 44450 ps
-# Simulation time: 44450 ps
-# Simulation time: 44450 ps
-# Simulation time: 44450 ps
-# Simulation time: 44450 ps
-# Simulation time: 44450 ps
-# Simulation time: 62450 ps
-# Simulation time: 62450 ps
-# Simulation time: 62450 ps
-# Simulation time: 62450 ps
-# Simulation time: 62450 ps
-# Simulation time: 62450 ps
-# Simulation time: 62450 ps
-# Simulation time: 62450 ps
-# Simulation time: 220450 ps
-# Simulation time: 220450 ps
-# Simulation time: 220450 ps
-# Simulation time: 220450 ps
-# Simulation time: 220450 ps
-# Simulation time: 220450 ps
-# Simulation time: 220450 ps
-# Simulation time: 220450 ps
-# Simulation time: 244550 ps
-# Simulation time: 244550 ps
-# Simulation time: 244550 ps
-# Simulation time: 244550 ps
-# Simulation time: 244550 ps
-# Simulation time: 244550 ps
-# Simulation time: 244550 ps
-# Simulation time: 244550 ps
-# Simulation time: 270450 ps
-# Simulation time: 270450 ps
-# Simulation time: 270450 ps
-# Simulation time: 270450 ps
-# Simulation time: 270450 ps
-# Simulation time: 270450 ps
-# Simulation time: 270450 ps
-# Simulation time: 270450 ps
-# Simulation time: 290450 ps
-# Simulation time: 290450 ps
-# Simulation time: 290450 ps
-# Simulation time: 290450 ps
-# Simulation time: 290450 ps
-# Simulation time: 290450 ps
-# Simulation time: 290450 ps
-# Simulation time: 290450 ps
-# Simulation time: 313450 ps
-# Simulation time: 313450 ps
-# Simulation time: 313450 ps
-# Simulation time: 313450 ps
-# Simulation time: 313450 ps
-# Simulation time: 313450 ps
-# Simulation time: 313450 ps
-# Simulation time: 313450 ps
-# Simulation time: 333450 ps
-# Simulation time: 333450 ps
-# Simulation time: 333450 ps
-# Simulation time: 333450 ps
-# Simulation time: 333450 ps
-# Simulation time: 333450 ps
-# Simulation time: 333450 ps
-# Simulation time: 333450 ps
-# Simulation time: 864650 ps
-# ** Note: $finish    : Waveform25.vwf.vt(117)
+# Simulation time: 46450 ps
+# Simulation time: 46450 ps
+# Simulation time: 46450 ps
+# Simulation time: 46450 ps
+# Simulation time: 46450 ps
+# Simulation time: 46450 ps
+# Simulation time: 46450 ps
+# Simulation time: 46450 ps
+# Simulation time: 65450 ps
+# Simulation time: 65450 ps
+# Simulation time: 65450 ps
+# Simulation time: 65450 ps
+# Simulation time: 65450 ps
+# Simulation time: 65450 ps
+# Simulation time: 65450 ps
+# Simulation time: 65450 ps
+# Simulation time: 276450 ps
+# Simulation time: 276450 ps
+# Simulation time: 276450 ps
+# Simulation time: 276450 ps
+# Simulation time: 276450 ps
+# Simulation time: 276450 ps
+# Simulation time: 276450 ps
+# Simulation time: 276450 ps
+# Simulation time: 297450 ps
+# Simulation time: 297450 ps
+# Simulation time: 297450 ps
+# Simulation time: 297450 ps
+# Simulation time: 297450 ps
+# Simulation time: 297450 ps
+# Simulation time: 297450 ps
+# Simulation time: 297450 ps
+# Simulation time: 324450 ps
+# Simulation time: 324450 ps
+# Simulation time: 324450 ps
+# Simulation time: 324450 ps
+# Simulation time: 324450 ps
+# Simulation time: 324450 ps
+# Simulation time: 324450 ps
+# Simulation time: 324450 ps
+# Simulation time: 347450 ps
+# Simulation time: 347450 ps
+# Simulation time: 347450 ps
+# Simulation time: 347450 ps
+# Simulation time: 347450 ps
+# Simulation time: 347450 ps
+# Simulation time: 347450 ps
+# Simulation time: 347450 ps
+# Simulation time: 372450 ps
+# Simulation time: 372450 ps
+# Simulation time: 372450 ps
+# Simulation time: 372450 ps
+# Simulation time: 372450 ps
+# Simulation time: 372450 ps
+# Simulation time: 372450 ps
+# Simulation time: 372450 ps
+# Simulation time: 833301 ps
+# ** Note: $finish    : Waveform27.vwf.vt(121)
 #    Time: 1 us  Iteration: 0  Instance: /CPU_vlg_vec_tst
-# End time: 22:00:44 on Oct 14,2025, Elapsed time: 0:03:06
+# End time: 22:06:17 on Oct 21,2025, Elapsed time: 0:02:46
 # Errors: 0, Warnings: 1

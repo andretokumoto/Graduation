@@ -140,7 +140,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	//-------------- escalonador --------------
 
 	
-			memoria[32'd73] = {cproc,26'd0};//cproc,rzero
+			memoria[32'd73] = {cproc,RZERO,RZERO,RZERO,11'd0};//cproc,rzero
 			memoria[32'd74] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador
 			memoria[32'd75] = {movi,R21,RZERO,RZERO,11'd1};//movi r21 , 1 // estado processo como 01
 			memoria[32'd76] = {lw,R22,RZERO,RZERO,11'd0};//lw r22, 0(rzero) //numero de processos ativos

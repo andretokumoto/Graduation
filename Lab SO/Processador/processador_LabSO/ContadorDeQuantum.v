@@ -10,7 +10,7 @@ module ContadorDeQuantum(
   output reg intrucaoIOContexto//sinal para dar salto em intrução de io
 );
 
- parameter quantum = 32'd10; 
+ parameter quantum = 32'd5; 
  reg [31:0] contador=32'd0;
  
  always@(negedge clock || reset)
@@ -46,6 +46,11 @@ module ContadorDeQuantum(
 							contador = contador + 32'd1;
 						end
 						
+			end
+		else 
+			begin
+				troca_contexto = 1'b0;//para pc atualizar normalmente
+				intrucaoIOContexto = 1'b0;
 			end
 		
 	end

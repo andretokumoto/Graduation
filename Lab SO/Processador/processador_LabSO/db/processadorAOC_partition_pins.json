@@ -1484,6 +1484,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "teste_sinal_cproc",
+					"strict" : false
+				},
+				{
+					"name" : "teste_fim",
+					"strict" : false
+				},
+				{
 					"name" : "botaoPlaca",
 					"strict" : false
 				},

@@ -38,7 +38,9 @@ module CPU(
     output reg [31:0] Testeprocesso_atual,
 	 output reg [31:0] testeoperando,
 	 output wire testeMemControl,
-	 output wire teste_troca_contexto
+	 output wire teste_troca_contexto,
+	 output wire teste_sinal_cproc,
+	 output wire teste_fim
 );
 
     // Declarações internas
@@ -84,7 +86,7 @@ module CPU(
     wire [31:0] pc_contexto;
     wire InstrucaIO, fimProcesso;
 
-    parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd233;
+    parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd233, endSalvaProcesso = 32'd179;
 
     // divisor de clock
     clock_divider(.clock_in(clock), .clock_out(clk));
@@ -155,6 +157,8 @@ module CPU(
     assign testeDesvioControl = DesvioControl;
     assign testeOPCODE = opcode;
 	 assign teste_troca_contexto = troca_contexto;
+	 assign teste_sinal_cproc = mudaProcesso;
+	 assign teste_fim = fimprocesso;
     
     always@(negedge clk) 
     begin
@@ -169,10 +173,10 @@ module CPU(
     begin
         if(reset) pc<=32'd0;
        
-        else if(troca_contexto == 1'b1) pc<= Escalonador;
+        else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
         else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
         else if (comandoOUT == 1'b1) pc <= PCout;
-		  else if (fimProcesso == 1'b1) pc <= EndfimProcesso;//
+		  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;//
         else 
         begin
             if(parada) pc <= pc;
@@ -190,9 +194,9 @@ module CPU(
         pcsomado = pc + 32'd1;
     end
     
-    always@(mudaProcesso)
+    always@(posedge mudaProcesso)
     begin
-        if(mudaProcesso==1'b1) 
+        if(mudaProcesso) 
         begin
             processo_atual = rt;
             Testeprocesso_atual = processo_atual;
