@@ -1,5 +1,5 @@
 Flow report for processadorAOC
-Sun Nov  2 20:09:03 2025
+Tue Nov  4 21:13:07 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Nov  2 20:09:03 2025          ;
+; Flow Status                        ; Successful - Tue Nov  4 21:13:07 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; processadorAOC                                 ;
 ; Top-level Entity Name              ; CPU                                            ;
@@ -101,7 +101,9 @@ https://fpgasoftware.intel.com/eula.
 ; Timing Analyzer      ; 00:00:18     ; 1.1                     ; 4977 MB             ; 00:00:19                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4692 MB             ; 00:00:03                           ;
-; Total                ; 00:46:17     ; --                      ; --                  ; 00:45:29                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4681 MB             ; 00:00:02                           ;
+; Total                ; 00:46:20     ; --                      ; --                  ; 00:45:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,6 +118,8 @@ https://fpgasoftware.intel.com/eula.
 ; Timing Analyzer      ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-U70Q231  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -126,6 +130,8 @@ quartus_map --read_settings_files=on --write_settings_files=off processadorAOC -
 quartus_fit --read_settings_files=off --write_settings_files=off processadorAOC -c processadorAOC
 quartus_asm --read_settings_files=off --write_settings_files=off processadorAOC -c processadorAOC
 quartus_sta processadorAOC -c processadorAOC
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform28.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform28.vwf.vt"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/" processadorAOC -c processadorAOC
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform28.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform28.vwf.vt"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/" processadorAOC -c processadorAOC
 
