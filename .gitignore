@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------- #
+# Arquivos e diretórios gerados pelo Quartus/Altera/Intel FPGA
+# ---------------------------------------------------------------- #
+
+# Diretórios de compilação/banco de dados
+*/db/
+*/incremental_db/
+*/output_files/
+
+# Arquivos de projeto/configuração não essenciais
+*.bak
+*.rpt
+*.rbf
+*.sof
+*.pof
+*.sao
+*.cmp
+*.pin
+*.qws
+*.qula
+*.qdb
+*.qsm
+
+# Arquivos de simulação e VCD (Value Change Dump)
+# Estes arquivos são gerados durante a simulação e tendem a ser muito grandes.
+# O arquivo que está causando seu erro é o "processadorAOC.msim.vcd"
+# Incluímos o padrão para todos os arquivos .vcd e o diretório de simulação.
+*/simulation/
+*.vcd
