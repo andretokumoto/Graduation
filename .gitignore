@@ -27,3 +27,4 @@
 # Incluímos o padrão para todos os arquivos .vcd e o diretório de simulação.
 */simulation/
 *.vcd
+*.vcd
