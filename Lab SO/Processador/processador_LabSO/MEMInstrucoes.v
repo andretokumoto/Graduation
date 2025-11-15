@@ -275,9 +275,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd179] = {cproc,RZERO,RZERO,RZERO,11'd0};//muda processo para SO
    		memoria[32'd180] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
 			memoria[32'd181] = {movi,R21,RZERO,RZERO,11'd13};//movi r21, 13
-			memoria[32'd182] = {lw,R22,R21,RZERO,11'd1};//lw r22, 1(r21)//puxa numero do processo atual
-			memoria[32'd183] = {multi,R22,R22,R22,11'd300};//multi r23, r23, 300
-			memoria[32'd184] = {sw,RZERO,R22,R20,11'd1};//sw r20, 1(r23)//salva contexto do pc
+			memoria[32'd182] = {lw,R23,R21,RZERO,11'd1};//lw r23, 1(r21)//puxa numero do processo atual
+			memoria[32'd183] = {multi,R23,R23,R23,11'd300};//multi r23, r23, 300
+			memoria[32'd184] = {sw,RZERO,R23,R20,11'd1};//sw r20, 1(r23)//salva contexto do pc
 			memoria[32'd185] = {addi,R23,R23,R23,11'd1}; //addi r23 , 1			
 			memoria[32'd186] = {sw,RZERO,R23,5'd1,11'd1}; //sw , r1 , 1(r23)
 			memoria[32'd187] = {addi,R23,R23,R23,11'd1};//addi r23, r23, 1			
@@ -393,7 +393,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		//memoria[32'd300] = {6'b100110,5'd2,5'd0,5'd0,11'd0};//in r2
 		//memoria[32'd300] = {mov,5'd2,R25,R25,11'd0};
 		memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd3};//in r2
-		memoria[32'd301] = {6'b011010,5'd0,5'd0,5'd0,11'd1};//movi r0,1
+		memoria[32'd301] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
 		memoria[32'd302] = {6'b011010,5'd1,5'd0,5'd0,11'd1};//movi r1,1
 		memoria[32'd303] = {6'b011001,5'd3,5'd1,5'd1,11'd0};//mov r3,r1
 		memoria[32'd304] = {6'b010100,5'd8,5'd1,5'd2,11'd4};//beq r1,r2,+4
