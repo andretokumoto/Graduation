@@ -400,7 +400,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd305] = {6'b000100,5'd3,5'd3,5'd2,11'd0};//mult r3,r3,r2
 		memoria[32'd306] = {6'b000011,5'd2,5'd2,5'd2,11'd1};//subi r2,r2,1
 		memoria[32'd307] = {6'b010001,26'd304};//j linha 4
-		memoria[32'd308] = {6'b011000,5'd3,5'd3,5'd3,11'd0};//sw r3,0(r0)
+		memoria[32'd308] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
 		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
 		memoria[32'd310] = {fim,5'd0,5'd0,5'd0,11'd0};//out r3
 		//memoria[32'd310] = {6'b100111,5'd3,5'd3,5'd0,11'd0};//outproc
