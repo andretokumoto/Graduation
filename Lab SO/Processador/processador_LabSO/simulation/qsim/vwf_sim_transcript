@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform29.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform29.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform31.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform31.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,27 +26,27 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sat Nov 15 14:41:32 2025
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform29.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform29.vwf.vt"
+    Info: Processing started: Sat Nov 15 20:27:50 2025
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform31.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform31.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 les
 
-): Ignoring output pin "centena[5]" in vector source file when writing test bench files
+n vector source file when writing test bench files
 
-): Ignoring output pin "testeDadosMux[28]" in vector source file when writing test bench files
+ector source file when writing test bench files
 
-h files
+ files
+
+ source file when writing test bench files
 
 when writing test bench files
 
-eUla[16]" in vector source file when writing test bench files
+eUla[15]" in vector source file when writing test bench files
 
-file when writing test bench files
+e when writing test bench files
 
-gnoring output pin "testeoperando[8]" in vector source file when writing test bench files
-
- file when writing test bench files
+ring output pin "testeoperando[8]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -73,14 +73,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sat Nov 15 14:41:33 2025
+    Info: Processing started: Sat Nov 15 20:27:51 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/" processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file processadorAOC.vo in folder "C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4688 megabytes
-    Info: Processing ended: Sat Nov 15 14:41:35 2025
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Sat Nov 15 20:27:54 2025
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
@@ -107,8 +107,7 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 14:41:38 on Nov 15,2025
-
+# Start time: 20:27:55 on Nov 15,2025
 # vlog -work work processadorAOC.vo 
 
 # -- Compiling module CPU
@@ -120,15 +119,15 @@ Reading pref.tcl
 # Top level modules:
 # 	CPU
 
-# End time: 14:41:39 on Nov 15,2025, Elapsed time: 0:00:01
+# End time: 20:27:57 on Nov 15,2025, Elapsed time: 0:00:02
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 14:41:39 on Nov 15,2025
+# Start time: 20:27:57 on Nov 15,2025
 
-# vlog -work work Waveform29.vwf.vt 
+# vlog -work work Waveform31.vwf.vt 
 
 # -- Compiling module CPU_vlg_vec_tst
 
@@ -137,12 +136,12 @@ Reading pref.tcl
 # Top level modules:
 # 	CPU_vlg_vec_tst
 
-# End time: 14:41:39 on Nov 15,2025, Elapsed time: 0:00:00
+# End time: 20:27:57 on Nov 15,2025, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPU_vlg_vec_tst 
-# Start time: 14:41:39 on Nov 15,2025
+# Start time: 20:27:57 on Nov 15,2025
 # Loading work.CPU_vlg_vec_tst
 # Loading work.CPU
 # Loading work.hard_block
@@ -162,7 +161,7 @@ Reading pref.tcl
 # Loading cycloneive_ver.cycloneive_ram_register
 # Loading cycloneive_ver.cycloneive_ram_pulse_generator
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 18832 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 18778 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 
 # after#26
@@ -183,305 +182,317 @@ Reading pref.tcl
 
 # Simulation time: 0 ps
 
-# Simulation time: 9890 ps
+# Simulation time: 18580 ps
 
-# Simulation time: 9890 ps
+# Simulation time: 18580 ps
 
-# Simulation time: 9890 ps
+# Simulation time: 18580 ps
 
-# Simulation time: 9890 ps
+# Simulation time: 18580 ps
 
-# Simulation time: 9890 ps
+# Simulation time: 18580 ps
 
-# Simulation time: 9890 ps
+# Simulation time: 18580 ps
 
-# Simulation time: 9890 ps
+# Simulation time: 18580 ps
 
-# Simulation time: 9890 ps
+# Simulation time: 18580 ps
 
-# Simulation time: 14490 ps
+# Simulation time: 26580 ps
 
-# Simulation time: 14490 ps
+# Simulation time: 26580 ps
 
-# Simulation time: 14490 ps
+# Simulation time: 26580 ps
 
-# Simulation time: 14490 ps
+# Simulation time: 26580 ps
 
-# Simulation time: 14490 ps
+# Simulation time: 26580 ps
 
-# Simulation time: 14490 ps
+# Simulation time: 26580 ps
 
-# Simulation time: 14490 ps
+# Simulation time: 26580 ps
 
-# Simulation time: 14490 ps
+# Simulation time: 26580 ps
 
-# Simulation time: 210890 ps
+# Simulation time: 200180 ps
 
-# Simulation time: 210890 ps
+# Simulation time: 200180 ps
 
-# Simulation time: 210890 ps
+# Simulation time: 200180 ps
 
-# Simulation time: 210890 ps
+# Simulation time: 200180 ps
 
-# Simulation time: 210890 ps
+# Simulation time: 200180 ps
 
-# Simulation time: 210890 ps
+# Simulation time: 200180 ps
 
-# Simulation time: 210890 ps
+# Simulation time: 200180 ps
 
-# Simulation time: 210890 ps
+# Simulation time: 200180 ps
 
-# Simulation time: 216690 ps
+# Simulation time: 209380 ps
 
-# Simulation time: 216690 ps
+# Simulation time: 209380 ps
 
-# Simulation time: 216690 ps
+# Simulation time: 209380 ps
 
-# Simulation time: 216690 ps
+# Simulation time: 209380 ps
 
-# Simulation time: 216690 ps
+# Simulation time: 209380 ps
 
-# Simulation time: 216690 ps
+# Simulation time: 209380 ps
 
-# Simulation time: 216690 ps
+# Simulation time: 209380 ps
 
-# Simulation time: 216690 ps
+# Simulation time: 209380 ps
 
-# Simulation time: 221790 ps
+# Simulation time: 219380 ps
 
-# Simulation time: 221790 ps
+# Simulation time: 219380 ps
 
-# Simulation time: 221790 ps
+# Simulation time: 219380 ps
 
-# Simulation time: 221790 ps
+# Simulation time: 219380 ps
 
-# Simulation time: 221790 ps
+# Simulation time: 219380 ps
 
-# Simulation time: 221790 ps
+# Simulation time: 219380 ps
 
-# Simulation time: 221790 ps
+# Simulation time: 219380 ps
 
-# Simulation time: 221790 ps
+# Simulation time: 219380 ps
 
-# Simulation time: 227490 ps
+# Simulation time: 228980 ps
 
-# Simulation time: 227490 ps
+# Simulation time: 228980 ps
 
-# Simulation time: 227490 ps
+# Simulation time: 228980 ps
 
-# Simulation time: 227490 ps
+# Simulation time: 228980 ps
 
-# Simulation time: 227490 ps
+# Simulation time: 228980 ps
 
-# Simulation time: 227490 ps
+# Simulation time: 228980 ps
 
-# Simulation time: 227490 ps
+# Simulation time: 228980 ps
 
-# Simulation time: 227490 ps
+# Simulation time: 228980 ps
 
-# Simulation time: 233090 ps
+# Simulation time: 238180 ps
 
-# Simulation time: 233090 ps
+# Simulation time: 238180 ps
 
-# Simulation time: 233090 ps
+# Simulation time: 238180 ps
 
-# Simulation time: 233090 ps
+# Simulation time: 238180 ps
 
-# Simulation time: 233090 ps
+# Simulation time: 238180 ps
 
-# Simulation time: 233090 ps
+# Simulation time: 238180 ps
 
-# Simulation time: 233090 ps
+# Simulation time: 238180 ps
 
-# Simulation time: 233090 ps
+# Simulation time: 238180 ps
 
-# Simulation time: 237290 ps
+# Simulation time: 249380 ps
 
-# Simulation time: 237290 ps
+# Simulation time: 249380 ps
 
-# Simulation time: 237290 ps
+# Simulation time: 249380 ps
 
-# Simulation time: 237290 ps
+# Simulation time: 249380 ps
 
-# Simulation time: 237290 ps
+# Simulation time: 249380 ps
 
-# Simulation time: 237290 ps
+# Simulation time: 249380 ps
 
-# Simulation time: 237290 ps
+# Simulation time: 249380 ps
 
-# Simulation time: 242890 ps
+# Simulation time: 249380 ps
 
-# Simulation time: 242890 ps
+# Simulation time: 256580 ps
 
-# Simulation time: 242890 ps
+# Simulation time: 256580 ps
 
-# Simulation time: 242890 ps
+# Simulation time: 256580 ps
 
-# Simulation time: 242890 ps
+# Simulation time: 256580 ps
 
-# Simulation time: 242890 ps
+# Simulation time: 256580 ps
 
-# Simulation time: 242890 ps
+# Simulation time: 256580 ps
 
-# Simulation time: 242890 ps
+# Simulation time: 256580 ps
 
-# Simulation time: 248090 ps
+# Simulation time: 256580 ps
 
-# Simulation time: 248090 ps
+# Simulation time: 266580 ps
 
-# Simulation time: 248090 ps
+# Simulation time: 266580 ps
 
-# Simulation time: 248090 ps
+# Simulation time: 266580 ps
 
-# Simulation time: 248090 ps
+# Simulation time: 266580 ps
 
-# Simulation time: 248090 ps
+# Simulation time: 266580 ps
 
-# Simulation time: 248090 ps
+# Simulation time: 266580 ps
 
-# Simulation time: 248090 ps
+# Simulation time: 266580 ps
 
-# Simulation time: 252290 ps
+# Simulation time: 266580 ps
 
-# Simulation time: 252290 ps
+# Simulation time: 276580 ps
 
-# Simulation time: 252290 ps
+# Simulation time: 276580 ps
 
-# Simulation time: 252290 ps
+# Simulation time: 276580 ps
 
-# Simulation time: 252290 ps
+# Simulation time: 276580 ps
 
-# Simulation time: 252290 ps
+# Simulation time: 276580 ps
 
-# Simulation time: 252290 ps
+# Simulation time: 276580 ps
 
-# Simulation time: 252290 ps
+# Simulation time: 276580 ps
 
-# Simulation time: 256890 ps
+# Simulation time: 284580 ps
 
-# Simulation time: 256890 ps
+# Simulation time: 284580 ps
 
-# Simulation time: 256890 ps
+# Simulation time: 284580 ps
 
-# Simulation time: 256890 ps
+# Simulation time: 284580 ps
 
-# Simulation time: 256890 ps
+# Simulation time: 284580 ps
 
-# Simulation time: 256890 ps
+# Simulation time: 284580 ps
 
-# Simulation time: 256890 ps
+# Simulation time: 284580 ps
 
-# Simulation time: 256890 ps
+# Simulation time: 284580 ps
 
-# Simulation time: 262790 ps
+# Simulation time: 291380 ps
 
-# Simulation time: 262790 ps
+# Simulation time: 291380 ps
 
-# Simulation time: 262790 ps
+# Simulation time: 291380 ps
 
-# Simulation time: 262790 ps
+# Simulation time: 291380 ps
 
-# Simulation time: 262790 ps
+# Simulation time: 291380 ps
 
-# Simulation time: 262790 ps
+# Simulation time: 291380 ps
 
-# Simulation time: 262790 ps
+# Simulation time: 291380 ps
 
-# Simulation time: 262790 ps
+# Simulation time: 291380 ps
 
-# Simulation time: 269490 ps
+# Simulation time: 300980 ps
 
-# Simulation time: 269490 ps
+# Simulation time: 300980 ps
 
-# Simulation time: 269490 ps
+# Simulation time: 300980 ps
 
-# Simulation time: 269490 ps
+# Simulation time: 300980 ps
 
-# Simulation time: 269490 ps
+# Simulation time: 300980 ps
 
-# Simulation time: 269490 ps
+# Simulation time: 300980 ps
 
-# Simulation time: 269490 ps
+# Simulation time: 300980 ps
 
-# Simulation time: 269490 ps
+# Simulation time: 300980 ps
 
-# Simulation time: 273890 ps
+# Simulation time: 309780 ps
 
-# Simulation time: 273890 ps
+# Simulation time: 309780 ps
 
-# Simulation time: 273890 ps
+# Simulation time: 309780 ps
 
-# Simulation time: 273890 ps
+# Simulation time: 309780 ps
 
-# Simulation time: 273890 ps
+# Simulation time: 309780 ps
 
-# Simulation time: 273890 ps
+# Simulation time: 309780 ps
 
-# Simulation time: 273890 ps
+# Simulation time: 309780 ps
 
-# Simulation time: 273890 ps
+# Simulation time: 309780 ps
 
-# Simulation time: 280090 ps
+# Simulation time: 329380 ps
 
-# Simulation time: 280090 ps
+# Simulation time: 329380 ps
 
-# Simulation time: 280090 ps
+# Simulation time: 329380 ps
 
-# Simulation time: 280090 ps
+# Simulation time: 329380 ps
 
-# Simulation time: 280090 ps
+# Simulation time: 329380 ps
 
-# Simulation time: 280090 ps
+# Simulation time: 329380 ps
 
-# Simulation time: 280090 ps
+# Simulation time: 329380 ps
 
-# Simulation time: 280090 ps
+# Simulation time: 329380 ps
 
-# Simulation time: 510250 ps
+# Simulation time: 337380 ps
 
-# Simulation time: 510250 ps
+# Simulation time: 337380 ps
 
-# Simulation time: 510250 ps
+# Simulation time: 337380 ps
 
-# Simulation time: 510250 ps
+# Simulation time: 337380 ps
 
-# Simulation time: 510250 ps
+# Simulation time: 337380 ps
 
-# Simulation time: 510250 ps
+# Simulation time: 337380 ps
 
-# Simulation time: 510250 ps
+# Simulation time: 337380 ps
 
-# Simulation time: 510250 ps
+# Simulation time: 337380 ps
 
-# Simulation time: 791170 ps
+# Simulation time: 344580 ps
 
-# Simulation time: 791170 ps
+# Simulation time: 344580 ps
 
-# Simulation time: 791170 ps
+# Simulation time: 344580 ps
 
-# Simulation time: 791170 ps
+# Simulation time: 344580 ps
 
-# Simulation time: 791170 ps
+# Simulation time: 344580 ps
 
-# Simulation time: 791170 ps
+# Simulation time: 344580 ps
 
-# ** Note: $finish    : Waveform29.vwf.vt(121)
+# Simulation time: 344580 ps
+
+# Simulation time: 344580 ps
+
+# Simulation time: 764580 ps
+
+# Simulation time: 764580 ps
+
+# Simulation time: 764580 ps
+
+# Simulation time: 764580 ps
+
+# ** Note: $finish    : Waveform31.vwf.vt(121)
 #    Time: 1 us  Iteration: 0  Instance: /CPU_vlg_vec_tst
 
-# End time: 14:47:55 on Nov 15,2025, Elapsed time: 0:06:16
+# End time: 20:34:28 on Nov 15,2025, Elapsed time: 0:06:31
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform29.vwf...
+Reading C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform31.vwf...
 
 Reading C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/processadorAOC.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/processadorAOC_20251115144755.sim.vwf
+Writing the resulting VWF to C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/processadorAOC_20251115203429.sim.vwf
 
 Finished VCD to VWF conversion.
 
