@@ -13,7 +13,7 @@ module ContadorDeQuantum(
  parameter quantum = 32'd5; 
  reg [31:0] contador=32'd0;
  
- always@(posedge clock || reset)
+ always@(negedge clock || reset)
 	begin
 		
 		if(reset || fimProcesso==1'd1)begin
