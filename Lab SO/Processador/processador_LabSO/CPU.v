@@ -69,7 +69,7 @@ module CPU(
     wire [31:0] dadosDeEntrada;
     wire resultComparacao;
     wire [25:0] jump;
-    wire [31:0] dadosMux6, desvioCorrigido;
+    wire [31:0] dadosMux6, processo_rodando;
     wire [10:0] imediato;
     wire [1:0] mudaProcesso;
     wire ocorrenciaIO;
@@ -88,6 +88,9 @@ module CPU(
 
     parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd233, endSalvaProcesso = 32'd179;
 
+	 //leds e mostrador de processo
+	 PC moduleLedsProcesso (.pc_atual(pc), .opcode(opcode),.processo_atual(processo_rodando),.ledmenu(ledmenu),.lednumprocessos,.ledprocesso(ledprocesso),.ledin(ledin));
+	 
     // divisor de clock
     clock_divider(.clock_in(clock), .clock_out(clk));
     
@@ -224,7 +227,7 @@ module CPU(
         else  HILOdata = regLO;
     end
     
-    always@(posedge clk || ledControl)
+   /* always@(posedge clk || ledControl)
     begin
         if (reset)
         begin
@@ -244,7 +247,7 @@ module CPU(
              else if (imediato == 11'd7) ledprocesso = 1'b1;
              else if (imediato == 11'd8) ledprocesso = 1'b0;
         end
-    end
+    end*/
     
     always@(imediatoExtendido,rt)
     begin
