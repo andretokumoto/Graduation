@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dC:/Users/Acer/Documents/processadorLSO/simulation/qsim
 vCPU
-Z1 !s110 1763249277
+Z1 !s110 1763734431
 !i10b 1
-!s100 UBW]F^@lL^OQ`h0nf2:M71
+!s100 >4^CZ;lI=0;2^:>Em1o]81
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IRiG5fe3cb5INdW[PCKn>82
+I?hf[f263bVXzkmMiWfj<c1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 dC:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim
-Z5 w1763249274
+Z5 w1763734426
 Z6 8processadorAOC.vo
 Z7 FprocessadorAOC.vo
-!i122 206
-L0 32 148868
+!i122 208
+L0 32 143908
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1763249275.000000
+Z9 !s108 1763734429.000000
 Z10 !s107 processadorAOC.vo|
 Z11 !s90 -work|work|processadorAOC.vo|
 !i113 1
@@ -36,29 +36,29 @@ n@c@p@u
 vCPU_vlg_vec_tst
 R1
 !i10b 1
-!s100 U<oK]3RH2JhKn=0ORJGVg1
+!s100 C7Od@]]OZ3If2Kn1O=Y4`0
 R2
-I2j8aJ^Kbz^k4k9cEO10k82
+I=5ZRA[9c=a1kOEBNJF6mA0
 R3
 R4
-w1763249271
-Z14 8Waveform31.vwf.vt
-Z15 FWaveform31.vwf.vt
-!i122 207
+w1763734423
+8Waveform32.vwf.vt
+FWaveform32.vwf.vt
+!i122 209
 L0 30 138
 R8
 r1
 !s85 0
 31
-!s108 1763249277.000000
-Z16 !s107 Waveform31.vwf.vt|
-Z17 !s90 -work|work|Waveform31.vwf.vt|
+!s108 1763734431.000000
+!s107 Waveform32.vwf.vt|
+!s90 -work|work|Waveform32.vwf.vt|
 !i113 1
 R12
 R13
 n@c@p@u_vlg_vec_tst
 vGerenciador_memoria
-Z18 !s110 1738626626
+Z14 !s110 1738626626
 !i10b 1
 !s100 RRlgK_ZX]6lN[kJHkfX4l3
 R2
@@ -74,7 +74,7 @@ R8
 r1
 !s85 0
 31
-Z19 !s108 1738626626.000000
+Z15 !s108 1738626626.000000
 R10
 R11
 !i113 1
@@ -82,7 +82,7 @@ R12
 R13
 n@gerenciador_memoria
 vGerenciador_memoria_vlg_vec_tst
-R18
+R14
 !i10b 1
 !s100 je>B4hhBJ14VQI`LLLS1m0
 R2
@@ -90,17 +90,17 @@ II4YUYF9n7=?fP3>^99_4F2
 R3
 R0
 w1738626622
-R14
-R15
+8Waveform31.vwf.vt
+FWaveform31.vwf.vt
 !i122 109
 L0 30 428
 R8
 r1
 !s85 0
 31
-R19
-R16
-R17
+R15
+!s107 Waveform31.vwf.vt|
+!s90 -work|work|Waveform31.vwf.vt|
 !i113 1
 R12
 R13
@@ -108,16 +108,16 @@ n@gerenciador_memoria_vlg_vec_tst
 vhard_block
 R1
 !i10b 1
-!s100 d6]kWl33jiU2P[fzzT42N0
+!s100 IX0VVOoE_jn6YWeToka_z2
 R2
-IX3l]?XCeN;ilgT]=Y5EBA1
+I@B:MbR6:Zd`5`mK6X?f:10
 R3
 R4
 R5
 R6
 R7
-!i122 206
-L0 148901 34
+!i122 208
+L0 143941 34
 R8
 r1
 !s85 0
