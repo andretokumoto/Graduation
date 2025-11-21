@@ -262,7 +262,7 @@ module CPU(
 	 
 	   parameter in=6'b011101,out=6'b011110;
 
-  always@(*)
+/*  always@(*)
     begin
 	 
 	    if(opcode == in) 
@@ -324,7 +324,7 @@ module CPU(
 			  ledin= 1'b0;
 			end
 	
-	 end
+	 end*/
 	 
 	 
 
