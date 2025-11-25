@@ -418,8 +418,23 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd609] = {out,5'd1,5'd1,5'd1,11'd0};//out r1
 		memoria[32'd610] = {fim,5'd0,5'd0,5'd0,11'd0};// end	
 		
-		
 */
+
+		/* fibo
+		
+		memoria[32'd900] = {movi,5'd1,5'd0,5'd0,11'd1};// movi r1, 1
+		memoria[32'd901] = {in,5'd2,RZERO,RZERO,11'd0};// in r2
+		memoria[32'd902] = {beq,5'd8,5'd0,5'd2,11'd4};// beq RZERO, r2 , +4
+		memoria[32'd903] = {mult,5'd1,5'd1,5'd2,11'd0};// mult r1, r1, r2
+		memoria[32'd904] = {subi,5'd2,5'd2,5'd2,11'd1};// subi r2, r2 , 1
+		memoria[32'd905] = {6'b010001,26'd903};// jump [3]
+		memoria[32'd906] = {out,5'd1,5'd1,5'd1,11'd0};// out r1
+		memoria[32'd907] = {fim,5'd0,5'd0,5'd0,11'd0};// end
+		
+		
+		
+		
+		*/
 
 
 
@@ -521,6 +536,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 endmodule
+
 
 
 
