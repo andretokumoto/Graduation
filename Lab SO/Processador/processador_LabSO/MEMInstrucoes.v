@@ -420,7 +420,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		
 */
 
-		/* fibo
+		/* fatorial v2
 		
 		memoria[32'd900] = {movi,5'd1,5'd0,5'd0,11'd1};// movi r1, 1
 		memoria[32'd901] = {in,5'd2,RZERO,RZERO,11'd0};// in r2
@@ -434,6 +434,24 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		
 		
 		
+		*/
+
+		/*fibo 
+		
+			//movi r1, 1
+			//movi r2, 1
+			//movi r3, 1
+			//movi r4, 3	//contador
+			//in r5
+			//blt r5,r4, +6
+			//[6] add r3,r1,r2
+			//beq r5,r4, + 4 
+			//mov r1,r2
+			//mov r2,r3
+			//addi r4,r4,1
+			//jump [6]
+			//out r2
+			//fim
 		*/
 
 
@@ -536,6 +554,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 endmodule
+
 
 
 
