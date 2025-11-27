@@ -46,7 +46,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 		//bios ---------------------------------------------------------------			
-		/*	memoria[32'd0] = {cproc,26'd0};					  //cproc rzero
+			memoria[32'd0] = {cproc,26'd0};					  //cproc rzero
 			memoria[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
 			memoria[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd0};// movi r1, 0
 			memoria[32'd3] = {6'b011010,5'd2,5'd0,5'd0,11'd0};// movi r2, 0
@@ -267,8 +267,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			memoria[32'd175] = {movi,R23,RZERO,RZERO,11'd13};//movi r23, 13
 			memoria[32'd176] = {lw,R24,R23,RZERO,11'd1};//lw r24, 1(r23)
-			memoria[32'd177] = {cproc,RZERO,R24,R24,11'd0};//cproc, r24 -- comando para mudar o processo
-			memoria[32'd178] = {jumpR,RZERO,R22,R22,11'd0};//jr r22 // retorna o pocessamento do processo
+			memoria[32'd177] = {multi,R24,R24,R24,11'd300};//multi -- comando para mudar o processo
+			memoria[32'd178] = {jumpR,R24,R24,R24,11'd0};//jr r24 // retorna o pocessamento do processo
 		
 
 			//-----------salva contexto--------
@@ -384,29 +384,15 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			
 			entradaNovoProcesso,entradaProcesso,iniciaProcesso
-		*/	
+		
 
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
-
-		
-		memoria[32'd0] = {movi,5'd2,5'd0,5'd0,11'd3};//in r2
-		memoria[32'd1] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
-		memoria[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd1};//movi r1,1
-		memoria[32'd3] = {6'b011001,5'd3,5'd1,5'd1,11'd0};//mov r3,r1
-		memoria[32'd4] = {6'b010100,5'd8,5'd1,5'd2,11'd4};//beq r1,r2,+4
-		memoria[32'd5] = {6'b000100,5'd3,5'd3,5'd2,11'd0};//mult r3,r3,r2
-		memoria[32'd6] = {6'b000011,5'd2,5'd2,5'd2,11'd1};//subi r2,r2,1
-		memoria[32'd7] = {6'b010001,26'd4};//j linha 4
-		memoria[32'd8] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
-		memoria[32'd9] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
-		memoria[32'd10] = {fim,5'd0,5'd0,5'd0,11'd0};	
-			
 			
 //fatorial
 		//memoria[32'd300] = {6'b100110,5'd2,5'd0,5'd0,11'd0};//in r2
 		//memoria[32'd300] = {mov,5'd2,R25,R25,11'd0};
-		/*memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd3};//in r2
+		memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd3};//in r2
 		memoria[32'd301] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
 		memoria[32'd302] = {6'b011010,5'd1,5'd0,5'd0,11'd1};//movi r1,1
 		memoria[32'd303] = {6'b011001,5'd3,5'd1,5'd1,11'd0};//mov r3,r1
@@ -416,7 +402,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd307] = {6'b010001,26'd304};//j linha 4
 		memoria[32'd308] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
 		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
-		memoria[32'd310] = {fim,5'd0,5'd0,5'd0,11'd0};//fim*/
+		memoria[32'd310] = {fim,5'd0,5'd0,5'd0,11'd0};//fim
 		//memoria[32'd310] = {6'b100111,5'd3,5'd3,5'd0,11'd0};//outproc
 /* exponencial
 

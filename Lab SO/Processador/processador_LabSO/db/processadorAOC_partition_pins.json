@@ -236,6 +236,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "enRD[4]",
+					"strict" : false
+				},
+				{
 					"name" : "enRS[0]",
 					"strict" : false
 				},
@@ -248,11 +252,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "enRS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "enRS[4]",
+					"strict" : false
+				},
+				{
 					"name" : "enRT[0]",
 					"strict" : false
 				},
 				{
 					"name" : "enRT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "enRT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "enRT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "enRT[4]",
 					"strict" : false
 				},
 				{
@@ -401,6 +425,26 @@
 				},
 				{
 					"name" : "testeImediato[4]",
+					"strict" : false
+				},
+				{
+					"name" : "testeImediato[5]",
+					"strict" : false
+				},
+				{
+					"name" : "testeImediato[6]",
+					"strict" : false
+				},
+				{
+					"name" : "testeImediato[7]",
+					"strict" : false
+				},
+				{
+					"name" : "testeImediato[8]",
+					"strict" : false
+				},
+				{
+					"name" : "testeImediato[9]",
 					"strict" : false
 				},
 				{
@@ -1052,11 +1096,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "testeJump[5]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[6]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[7]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[8]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[9]",
+					"strict" : false
+				},
+				{
 					"name" : "testeJump[11]",
 					"strict" : false
 				},
 				{
 					"name" : "testeJump[12]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[13]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[14]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[15]",
 					"strict" : false
 				},
 				{
@@ -1069,6 +1145,14 @@
 				},
 				{
 					"name" : "testeJump[18]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[19]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[20]",
 					"strict" : false
 				},
 				{
@@ -1085,6 +1169,10 @@
 				},
 				{
 					"name" : "testeJump[24]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[25]",
 					"strict" : false
 				},
 				{
