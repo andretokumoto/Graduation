@@ -268,12 +268,12 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd175] = {movi,R23,RZERO,RZERO,11'd13};//movi r23, 13
 			memoria[32'd176] = {lw,R24,R23,RZERO,11'd1};//lw r24, 1(r23)
 			memoria[32'd177] = {multi,R24,R24,R24,11'd300};//multi -- comando para mudar o processo
-			memoria[32'd178] = {jumpR,R24,R24,R24,11'd0};//jr r24 // retorna o pocessamento do processo
-		
+			memoria[32'd178] = {lw,R22,R24,R24,11'd1};//lw r22 1(r24) // retorna o pocessamento do processo
+			memoria[32'd179] = {jumpR,R22,R22,R22,11'd0};//muda processo para SO
 
 			//-----------salva contexto--------
-			memoria[32'd179] = {cproc,RZERO,RZERO,RZERO,11'd0};//muda processo para SO
-   		memoria[32'd180] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
+			
+   			memoria[32'd180] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
 			memoria[32'd181] = {movi,R21,RZERO,RZERO,11'd13};//movi r21, 13
 			memoria[32'd182] = {lw,R23,R21,RZERO,11'd1};//lw r23, 1(r21)//puxa numero do processo atual
 			memoria[32'd183] = {multi,R23,R23,R23,11'd300};//multi r23, r23, 300
@@ -554,6 +554,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 endmodule
+
 
 
 
