@@ -273,7 +273,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			//-----------salva contexto--------
 			
-   			memoria[32'd180] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
+   		memoria[32'd180] = {scpc,R20,21'd0};//scpc r20 -- salva o contexto do pc - pc em um registrador no escalonador
 			memoria[32'd181] = {movi,R21,RZERO,RZERO,11'd13};//movi r21, 13
 			memoria[32'd182] = {lw,R23,R21,RZERO,11'd1};//lw r23, 1(r21)//puxa numero do processo atual
 			memoria[32'd183] = {multi,R23,R23,R23,11'd300};//multi r23, r23, 300
@@ -384,7 +384,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			
 			entradaNovoProcesso,entradaProcesso,iniciaProcesso
-		
+		*/
 
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
