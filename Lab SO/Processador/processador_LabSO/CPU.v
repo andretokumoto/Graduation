@@ -35,7 +35,7 @@ module CPU(
     output wire [3:0] testesaidaDez,
     output wire [3:0] testesaidaCent,
     output wire [25:0] testeJump,
-    output wire [31:0] Testeprocesso_atual,
+    output reg [31:0] Testeprocesso_atual,
 	 output reg [31:0] testeoperando,
 	 output wire testeMemControl,
 	 output wire teste_troca_contexto,
@@ -110,7 +110,7 @@ module CPU(
     BancoRegistradores br(.clk(clk),.escritaRegControl(escritaRegControl),.inRS(endRS),.inRT(endRT),.inRD(endRD),.dados(dadosMux6),.outRS(rs),.outRT(rt),.linkControl(linkControl));
     
     //ligaçao com ULA
-    ULA alu(.clock(clk),.ulaOP(ulaOP),.RS(rs),.RT(operando),.saidaULA(resultadoULA),.saidaHI(HI),.saidaLO(LO));
+    ULA alu(.ulaOP(ulaOP),.RS(rs),.RT(operando),.saidaULA(resultadoULA),.saidaHI(HI),.saidaLO(LO));
     
     //ligaçao com unidade de comparaçao
     unidadeDeComparacao compara(.branchTipo(branchTipo),.resultadoULA(resultadoULA),.resultadoComparacao(resultComparacao));
@@ -162,7 +162,7 @@ module CPU(
 	 assign teste_troca_contexto = troca_contexto;
 	 assign teste_sinal_cproc = mudaProcesso;
 	 assign teste_fim = fimprocesso;
-	 assign Testeprocesso_atual = processo_rodando;
+	 //assign Testeprocesso_atual = processo_rodando;
     
     always@(negedge clk) 
     begin
@@ -190,7 +190,7 @@ module CPU(
                 else pc <= resulSomador;
             end    
         end
-        testePC = pc;
+        testePC <= pc;
     end
     
     always@(pc)
@@ -198,7 +198,7 @@ module CPU(
         pcsomado = pc + 32'd1;
 		  
 		  
-				if(pc == 32'd41) 
+				/*if(pc == 32'd41) 
 					begin
 						ledmenu = 1'b1;
 						lednumprocessos = 1'b0;
@@ -241,7 +241,7 @@ module CPU(
 										else if(pc < 32'd3000) processo_atual = 32'd9;
 										else if(pc < 32'd3300) processo_atual = 32'd10;
 								end
-					end
+					end*/
 		  
     end
     

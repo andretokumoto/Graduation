@@ -21,11 +21,13 @@ endmodule*/
 
 module clock_divider(
     input wire clock_in,  // Sinal de entrada (clock da FPGA)
-    output reg clock_out  // Sinal de saída (clock dividido)
+    output reg clock_out,  // Sinal de saída (clock dividido)
 );
-    parameter DIVISOR = /*28'd5000000*/28'd10;  // Parâmetro para o divisor de frequência
+    parameter DIVISOR = /*28'd5000000*/28'd5;  // Parâmetro para o divisor de frequência
+	 
     
     reg [27:0] counter = 28'd0;  // Registrador para contagem do clock
+	// reg [27:0] counterMedio = 28'd0; 
     
     always @(posedge clock_in) begin
         // Incrementa o contador
@@ -36,5 +38,8 @@ module clock_divider(
             counter <= 28'd0;          // Reinicia o contador
             clock_out <= ~clock_out;   // Alterna o clock de saída
         end
+		 
+		  
+		  
     end
 endmodule
