@@ -2,7 +2,7 @@ module ULA(ulaOP,RS,RT,saidaULA,saidaHI,saidaLO);
 
 input [31:0] RS,RT;
 input  [4:0]ulaOP;
-input clock;
+
 
 output reg[31:0] saidaULA,saidaHI,saidaLO;
 reg [31:0] inRS,inRT;

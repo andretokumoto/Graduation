@@ -21,7 +21,7 @@ endmodule*/
 
 module clock_divider(
     input wire clock_in,  // Sinal de entrada (clock da FPGA)
-    output reg clock_out,  // Sinal de saída (clock dividido)
+    output reg clock_out  // Sinal de saída (clock dividido)
 );
     parameter DIVISOR = /*28'd5000000*/28'd5;  // Parâmetro para o divisor de frequência
 	 
