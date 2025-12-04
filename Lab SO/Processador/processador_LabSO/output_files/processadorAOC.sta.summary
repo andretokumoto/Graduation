@@ -3,48 +3,48 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : -133.496
-TNS   : -5857.287
+Slack : -142.585
+TNS   : -6205.776
 
 Type  : Slow 1200mV 85C Model Setup 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : -26.219
-TNS   : -283.848
+Slack : -27.020
+TNS   : -296.728
 
 Type  : Slow 1200mV 85C Model Setup 'clock_divider:comb_3|clock_out'
-Slack : -17.670
-TNS   : -16930.190
+Slack : -17.827
+TNS   : -17328.527
 
 Type  : Slow 1200mV 85C Model Setup 'pc[0]'
-Slack : -13.578
-TNS   : -227.308
+Slack : -12.607
+TNS   : -221.537
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -9.492
-TNS   : -165.939
+Slack : -11.099
+TNS   : -168.749
 
 Type  : Slow 1200mV 85C Model Hold 'pc[0]'
-Slack : -8.180
-TNS   : -85.379
+Slack : -7.295
+TNS   : -85.846
 
 Type  : Slow 1200mV 85C Model Hold 'clock_divider:comb_3|clock_out'
-Slack : -3.751
-TNS   : -58.384
+Slack : -3.270
+TNS   : -102.353
 
 Type  : Slow 1200mV 85C Model Hold 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : -0.823
-TNS   : -3.329
+Slack : -0.906
+TNS   : -7.348
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.527
+Slack : 0.532
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : 3.742
+Slack : 4.854
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pc[0]'
-Slack : -5.897
-TNS   : -1154.463
+Slack : -5.709
+TNS   : -1469.542
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
@@ -55,56 +55,56 @@ Slack : -1.285
 TNS   : -1531.720
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : 0.395
+Slack : 0.384
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : 0.437
+Slack : 0.469
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : -120.664
-TNS   : -5318.403
+Slack : -128.894
+TNS   : -5633.835
 
 Type  : Slow 1200mV 0C Model Setup 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : -23.845
-TNS   : -258.299
+Slack : -24.545
+TNS   : -269.679
 
 Type  : Slow 1200mV 0C Model Setup 'clock_divider:comb_3|clock_out'
-Slack : -16.131
-TNS   : -15377.541
+Slack : -16.249
+TNS   : -15701.879
 
 Type  : Slow 1200mV 0C Model Setup 'pc[0]'
-Slack : -12.682
-TNS   : -212.601
+Slack : -11.914
+TNS   : -206.324
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -8.751
-TNS   : -150.237
+Slack : -10.225
+TNS   : -153.038
 
 Type  : Slow 1200mV 0C Model Hold 'pc[0]'
-Slack : -7.298
-TNS   : -76.131
+Slack : -6.525
+TNS   : -78.785
 
 Type  : Slow 1200mV 0C Model Hold 'clock_divider:comb_3|clock_out'
-Slack : -3.378
-TNS   : -54.003
+Slack : -2.950
+TNS   : -94.988
 
 Type  : Slow 1200mV 0C Model Hold 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : -0.812
-TNS   : -3.542
+Slack : -0.901
+TNS   : -8.570
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.479
+Slack : 0.483
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : 3.497
+Slack : 4.539
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pc[0]'
-Slack : -5.446
-TNS   : -1032.691
+Slack : -5.188
+TNS   : -1313.536
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
@@ -115,71 +115,71 @@ Slack : -1.285
 TNS   : -1531.720
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : 0.321
+Slack : 0.367
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : 0.342
+Slack : 0.408
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : -66.072
-TNS   : -2875.801
+Slack : -70.907
+TNS   : -3075.524
 
 Type  : Fast 1200mV 0C Model Setup 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : -12.263
-TNS   : -131.862
+Slack : -12.752
+TNS   : -139.333
 
 Type  : Fast 1200mV 0C Model Setup 'clock_divider:comb_3|clock_out'
-Slack : -8.877
-TNS   : -8399.360
+Slack : -9.103
+TNS   : -8677.200
 
 Type  : Fast 1200mV 0C Model Setup 'pc[0]'
-Slack : -6.927
-TNS   : -110.129
+Slack : -6.254
+TNS   : -105.070
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -4.696
-TNS   : -64.754
+Slack : -5.080
+TNS   : -65.738
 
 Type  : Fast 1200mV 0C Model Hold 'pc[0]'
-Slack : -4.516
-TNS   : -48.004
+Slack : -4.248
+TNS   : -45.734
 
 Type  : Fast 1200mV 0C Model Hold 'clock_divider:comb_3|clock_out'
-Slack : -2.032
-TNS   : -37.478
+Slack : -1.683
+TNS   : -62.776
 
 Type  : Fast 1200mV 0C Model Hold 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : -0.565
-TNS   : -3.211
+Slack : -0.605
+TNS   : -8.155
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.240
+Slack : 0.242
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : 1.591
+Slack : 2.230
 TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pc[0]'
+Slack : -3.093
+TNS   : -568.026
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -47.461
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pc[0]'
-Slack : -2.849
-TNS   : -430.827
+TNS   : -47.442
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:comb_3|clock_out'
 Slack : -1.000
 TNS   : -1192.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UnidadeDeControle:uco|entradaSaidaControl[0]'
-Slack : 0.216
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UnidadeDeControle:uco|ulaOP[1]'
+Slack : 0.262
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UnidadeDeControle:uco|ulaOP[1]'
-Slack : 0.264
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UnidadeDeControle:uco|entradaSaidaControl[0]'
+Slack : 0.290
 TNS   : 0.000
 
 ------------------------------------------------------------

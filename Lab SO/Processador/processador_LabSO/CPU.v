@@ -86,7 +86,7 @@ module CPU(
     wire [31:0] pc_contexto;
     wire InstrucaIO, fimProcesso;
 
-    parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd233, endSalvaProcesso = 32'd180;
+    parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd236, endSalvaProcesso = 32'd180;
 	 parameter in=6'b011101,out=6'b011110;
 	 //leds e mostrador de processo
 	 //EnderecoRelativo ledsAviso(.pc_atual(pc), .opcode(opcode),.processo_atual(processo_rodando),.ledmenu(ledmenu),.lednumprocessos,.ledprocesso(ledprocesso),.ledin(ledin));
