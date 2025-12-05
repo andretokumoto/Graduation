@@ -122,7 +122,7 @@ module CPU(
     simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
         
     //ligaçao com entrada e saida
-    EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(dadoMem),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
+    EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(/*dadoMem*/rt),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
     
 	 
 	 //FALTA O DEBOUNCE DO BOTAO IN
@@ -198,7 +198,7 @@ module CPU(
         pcsomado = pc + 32'd1;
 		  
 		  
-				/*if(pc == 32'd41) 
+				if(pc == 32'd41) 
 					begin
 						ledmenu = 1'b1;
 						lednumprocessos = 1'b0;
@@ -241,8 +241,9 @@ module CPU(
 										else if(pc < 32'd3000) processo_atual = 32'd9;
 										else if(pc < 32'd3300) processo_atual = 32'd10;
 								end
-					end*/
-		  
+					end
+				  
+							Testeprocesso_atual<=processo_atual;
     end
     
    /* always@(posedge mudaProcesso)

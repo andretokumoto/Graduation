@@ -402,7 +402,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd307] = {6'b010001,26'd304};//j linha 4
 		memoria[32'd308] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
 		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
-		memoria[32'd310] = {fim,5'd0,5'd0,5'd0,11'd0};//fim
+		memoria[32'd310] = {j,26'd236};//fim
+		//memoria[32'd310] = {fim,5'd0,5'd0,5'd0,11'd0};//fim
 		//memoria[32'd310] = {6'b100111,5'd3,5'd3,5'd0,11'd0};//outproc
 /* exponencial
 
@@ -414,7 +415,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd605] = {mult,5'd1,5'd1,5'd3,11'd0};// mult r1, r1, r3
 		memoria[32'd606] = {beq,5'd8,5'd2,5'd4,11'd3};// beq r4, r2, +3
 		memoria[32'd607] = {addi,5'd2,5'd2,5'd2,11'd1};// addi r2 , 1
-		memoria[32'd608] = {6'b010001,26'd605};// jump [5]
+		memoria[32'd608] = {j,26'd605};// jump [5]
 		memoria[32'd609] = {out,5'd1,5'd1,5'd1,11'd0};//out r1
 		memoria[32'd610] = {fim,5'd0,5'd0,5'd0,11'd0};// end	
 		
