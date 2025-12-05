@@ -278,7 +278,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd182] = {lw,R23,R21,RZERO,11'd1};//lw r23, 1(r21)//puxa numero do processo atual
 			memoria[32'd183] = {multi,R23,R23,R23,11'd300};//multi r23, r23, 300
 			memoria[32'd184] = {sw,RZERO,R23,R25,11'd1};//sw r20, 1(r23)//salva contexto do pc
-			memoria[32'd185] = {addi,R25,R23,R23,11'd1}; //addi r20,r23 , 1			
+			memoria[32'd185] = {addi,R20,R23,R23,11'd1}; //addi r20,r23 , 1			
 			memoria[32'd186] = {sw,RZERO,R25,5'd1,11'd1}; //sw , r1 , 1(r23)
 			memoria[32'd187] = {addi,R20,R20,R20,11'd1};//addi r23, r23, 1			
 			memoria[32'd188] = {sw,RZERO,R20,5'd2,11'd1}; //sw , r2 , 1(r23)
