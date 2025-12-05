@@ -92,6 +92,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "ledmenu",
+					"strict" : false
+				},
+				{
+					"name" : "lednumprocessos",
+					"strict" : false
+				},
+				{
+					"name" : "ledprocesso",
+					"strict" : false
+				},
+				{
+					"name" : "ledin",
+					"strict" : false
+				},
+				{
 					"name" : "testePC[0]",
 					"strict" : false
 				},
@@ -1173,6 +1189,22 @@
 				},
 				{
 					"name" : "testeJump[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Testeprocesso_atual[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Testeprocesso_atual[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Testeprocesso_atual[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Testeprocesso_atual[3]",
 					"strict" : false
 				},
 				{
