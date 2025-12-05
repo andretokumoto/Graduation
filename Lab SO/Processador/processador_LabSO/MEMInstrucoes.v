@@ -96,7 +96,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd39] = {movi,R22,RZERO,RZERO,11'd12};//movi r22, 0 // contador de processos que foram iniciados
 			memoria[32'd40] = {sw,RZERO,R22,RZERO,11'd1};//sw rzero 1(r22)
 			memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
-			memoria[32'd42] = {led,26'd6};//led, 6
+			memoria[32'd42] = {led,26'd6};//led, 6		
 			memoria[32'd43] = {sw,RZERO,R20,R20,11'd0};//sw r20, 0, rzero // salva na memoria de dados o numero de processos rodando
 			memoria[32'd44] = {beq,RZERO,R20,RZERO,11'd2};//MUDAR beq r20, rzero // volta para o menu(sem processos para rodar)
 			memoria[32'd45] = {j,entradaProcesso};
@@ -404,22 +404,24 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
 		memoria[32'd310] = {j,26'd236};//fim
 		//memoria[32'd310] = {fim,5'd0,5'd0,5'd0,11'd0};//fim
-		//memoria[32'd310] = {6'b100111,5'd3,5'd3,5'd0,11'd0};//outproc
-/* exponencial
+		//memoria[32'd310] = {6'b100111,5'd3,5'd3,5'd0,11'd0};//outproc*/
+		
+ //exponencial
 
-	    memoria[32'd600] = {in,5'd3,RZERO,RZERO,11'd0};  //in r3
+	   //memoria[32'd600] = {in,5'd3,RZERO,RZERO,11'd0};  //in r3
+		memoria[32'd600] = {movi,5'd3,RZERO,RZERO,11'd3};  //in r3
 		memoria[32'd601] = {movi,5'd1,5'd0,5'd0,11'd1};// movi , r1, 1
 		memoria[32'd602] = {movi,5'd2,5'd0,5'd0,11'd1};// movi , r2, 1
-		memoria[32'd603] = {in,5'd4,RZERO,RZERO,11'd0};// in r4
+		memoria[32'd603] = {movi,5'd4,RZERO,RZERO,11'd2};// in r4
 		memoria[32'd604] = {beq,5'd8,5'd0,5'd4,11'd5};// beq RZERO, r4, +5
 		memoria[32'd605] = {mult,5'd1,5'd1,5'd3,11'd0};// mult r1, r1, r3
 		memoria[32'd606] = {beq,5'd8,5'd2,5'd4,11'd3};// beq r4, r2, +3
 		memoria[32'd607] = {addi,5'd2,5'd2,5'd2,11'd1};// addi r2 , 1
 		memoria[32'd608] = {j,26'd605};// jump [5]
 		memoria[32'd609] = {out,5'd1,5'd1,5'd1,11'd0};//out r1
-		memoria[32'd610] = {fim,5'd0,5'd0,5'd0,11'd0};// end	
+		memoria[32'd10] = {j,26'd236};//fim
 		
-*/
+
 
 		/* fatorial v2
 		

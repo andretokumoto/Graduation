@@ -769,7 +769,9 @@ always@(opcode)
 		  entradaSaidaControl = 2'b01;
 		  dadoRegControl = 3'b000;
 		  ulaOP = 5'b00010;
-		  status=1'b1;
+		  //status=1'b1;
+		  status=1'b0;
+		  
 		  mudaProcesso = 1'b0;
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;

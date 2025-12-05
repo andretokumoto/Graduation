@@ -122,7 +122,7 @@ module CPU(
     simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
         
     //ligaçao com entrada e saida
-    EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(/*dadoMem*/rt),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
+    EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
     
 	 
 	 //FALTA O DEBOUNCE DO BOTAO IN
@@ -132,7 +132,7 @@ module CPU(
     displaySete displayDezena(.entrada(inDezena),.saidas(dezena));
     displaySete displayCentena(.entrada(inCentena),.saidas(centena));
       
-    BCD bcd(.binario(processo_rodando),.unidade(un),.dezena(dez),.centena(cen),.controlesaida(entradaSaidaControl)); 
+    BCD bcd(.binario(processo_atual),.unidade(un),.dezena(dez),.centena(cen),.controlesaida(entradaSaidaControl)); 
     displaySete displayprocessouni(.entrada(un),.saidas(uniProc));
     
     assign selecaoMuxDesvio = branchControl & resultComparacao;
