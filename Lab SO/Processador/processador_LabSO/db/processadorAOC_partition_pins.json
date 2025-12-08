@@ -276,6 +276,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "enRD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "enRD[4]",
+					"strict" : false
+				},
+				{
 					"name" : "enRS[0]",
 					"strict" : false
 				},
@@ -288,6 +296,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "enRS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "enRS[4]",
+					"strict" : false
+				},
+				{
 					"name" : "enRT[0]",
 					"strict" : false
 				},
@@ -297,6 +313,14 @@
 				},
 				{
 					"name" : "enRT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "enRT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "enRT[4]",
 					"strict" : false
 				},
 				{
@@ -444,6 +468,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "testeImediato[4]",
+					"strict" : false
+				},
+				{
 					"name" : "testeImediato[5]",
 					"strict" : false
 				},
@@ -453,6 +481,14 @@
 				},
 				{
 					"name" : "testeImediato[7]",
+					"strict" : false
+				},
+				{
+					"name" : "testeImediato[8]",
+					"strict" : false
+				},
+				{
+					"name" : "testeImediato[9]",
 					"strict" : false
 				},
 				{
@@ -741,6 +777,10 @@
 				},
 				{
 					"name" : "testeOPCODE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "testeOPCODE[5]",
 					"strict" : false
 				},
 				{
@@ -1096,6 +1136,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "testeJump[4]",
+					"strict" : false
+				},
+				{
 					"name" : "testeJump[5]",
 					"strict" : false
 				},
@@ -1105,6 +1149,14 @@
 				},
 				{
 					"name" : "testeJump[7]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[8]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[9]",
 					"strict" : false
 				},
 				{
@@ -1120,6 +1172,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "testeJump[14]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[15]",
+					"strict" : false
+				},
+				{
 					"name" : "testeJump[16]",
 					"strict" : false
 				},
@@ -1132,6 +1192,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "testeJump[19]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[20]",
+					"strict" : false
+				},
+				{
 					"name" : "testeJump[21]",
 					"strict" : false
 				},
@@ -1141,6 +1209,14 @@
 				},
 				{
 					"name" : "testeJump[23]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[24]",
+					"strict" : false
+				},
+				{
+					"name" : "testeJump[25]",
 					"strict" : false
 				},
 				{
@@ -1293,6 +1369,14 @@
 				},
 				{
 					"name" : "teste_troca_contexto",
+					"strict" : false
+				},
+				{
+					"name" : "teste_sinal_cproc",
+					"strict" : false
+				},
+				{
+					"name" : "teste_fim",
 					"strict" : false
 				},
 				{

@@ -50,8 +50,14 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		//bios ---------------------------------------------------------------		
 
 			memoria[32'd0] = {cproc,26'd0};					  //cproc rzero
-			memoria[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
-			memoria[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd0};// movi r1, 0
+		//	memoria[32'd1] = {6'b011010,5'd0,5'd0,5'd0,11'd0};// movi r0, 0
+		//	memoria[32'd2] = {6'b011010,5'd1,5'd0,5'd0,11'd0};// movi r1, 0
+		
+		//////////////////////////////////////
+			memoria[32'd1] = {movi,R22,RZERO,RZERO,11'd300};
+			memoria[32'd2] = {sw,RZERO,R22,R22,11'd1};
+			//////////////////////
+		
 			memoria[32'd3] = {6'b011010,5'd2,5'd0,5'd0,11'd0};// movi r2, 0
 			memoria[32'd4] = {6'b011010,5'd3,5'd0,5'd0,11'd0};// movi r3, 0
 			memoria[32'd5] = {6'b011010,5'd4,5'd0,5'd0,11'd0};// movi r4, 0
@@ -94,8 +100,11 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 			// -------  menu --------
-			memoria[32'd37] = {led,26'd2};//led , 2
-			memoria[32'd38] = {led,26'd5};//led, 5
+			//memoria[32'd37] = {led,26'd2};//led , 2
+			//memoria[32'd38] = {led,26'd5};//led, 5
+			memoria[32'd37] = {movi,R22,RZERO,RZERO,11'd1};
+			memoria[32'd38] = {sw,RZERO,R22,R22,11'd1};
+			
 			memoria[32'd39] = {movi,R22,RZERO,RZERO,11'd12};//movi r22, 0 // contador de processos que foram iniciados
 			memoria[32'd40] = {sw,RZERO,R22,RZERO,11'd1};//sw rzero 1(r22)
 			memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
@@ -392,8 +401,10 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			
 //fatorial
-/*
-		memoria[32'd300] = {in,5'd2,5'd0,5'd0,11'd3};//in r2
+
+		memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd4};
+		//memoria[32'd300] = {in,5'd2,5'd0,5'd0,11'd3};//in r2
+		
 		memoria[32'd301] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
 		memoria[32'd302] = {6'b011010,5'd1,5'd0,5'd0,11'd1};//movi r1,1
 		memoria[32'd303] = {6'b011001,5'd3,5'd1,5'd1,11'd0};//mov r3,r1
@@ -404,17 +415,18 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd308] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
 		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
 		memoria[32'd310] = {j,26'd236};//fim
-		*/
 	
  //exponencial
 
-	   //memoria[32'd600] = {in,5'd3,RZERO,RZERO,11'd0};  //in r3
-		/*
-		memoria[32'd600] = {in,5'd3,21'd0};  //in r3
+	   memoria[32'd600] = {movi,5'd3,RZERO,RZERO,11'd3};  //in r3
+		
+		//memoria[32'd600] = {in,5'd3,21'd0};  //in r3
 		memoria[32'd601] = {movi,5'd1,5'd0,5'd0,11'd1};// movi , r1, 1
 		memoria[32'd602] = {movi,5'd2,5'd0,5'd0,11'd1};// movi , r2, 1
-		//memoria[32'd603] = {movi,5'd4,RZERO,RZERO,11'd2};// in r4
-		memoria[32'd603] = {in,5'd4,21'd0};= {in,5'd3,21'd0};
+		memoria[32'd603] = {movi,5'd4,RZERO,RZERO,11'd2};// in r4
+		
+		
+		//memoria[32'd603] = {in,5'd4,21'd0};= {in,5'd3,21'd0};
 		memoria[32'd604] = {beq,5'd8,5'd0,5'd4,11'd5};// beq RZERO, r4, +5
 		memoria[32'd605] = {mult,5'd1,5'd1,5'd3,11'd0};// mult r1, r1, r3
 		memoria[32'd606] = {beq,5'd8,5'd2,5'd4,11'd3};// beq r4, r2, +3
@@ -423,16 +435,17 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd609] = {out,5'd1,5'd1,5'd1,11'd0};//out r1
 		memoria[32'd610] = {j,26'd236};//fim
 		
-*/
 
 
 		//fibo
-	/*	
-			memoria[32'd900] = {movi,5'd1,RZERO,RZERO,11'd1};//movi r1, 1
+	
+		/*	memoria[32'd900] = {movi,5'd1,RZERO,RZERO,11'd1};//movi r1, 1
 			memoria[32'd901] = {movi,5'd2,RZERO,RZERO,11'd1};//movi r2, 1
 			memoria[32'd902] = {movi,5'd4,RZERO,RZERO,11'd1};//movi r3, 1
 			memoria[32'd903] = {movi,5'd4,RZERO,RZERO,11'd3};//movi r4, 3	//contador
-			memoria[32'd904] = {in,5'd5,21'd0};//in r5
+			//memoria[32'd904] = {in,5'd5,21'd0};//in r5
+			memoria[32'd903] = {movi,5'd5,RZERO,RZERO,11'd6};
+			
 			memoria[32'd905] = {blt,5'd0,5'd4,5'd5,11'd7};//blt r5,r4, +6
 			memoria[32'd906] = {add,5'd3,5'd1,5'd2,11'd0};//[6] add r3,r1,r2
 			memoria[32'd907] = {beq,5'd0,5'd5,5'd4,11'd5};//beq r5,r4, + 4 
@@ -441,91 +454,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd910] = {addi,5'd4,5'd4,5'd4,11'd1};//addi r4,r4,1
 			memoria[32'd911] = {j,26'd906};	//jump [6]
 			memoria[32'd912] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
-			memoria[32'd913] = {j,26'd236};
-*/
+			memoria[32'd913] = {j,26'd236};*/
 
-		
-//potencia de 2
-		/*memoria[32'd600] = {6'b011010,5'b11010,5'b00000,16'd1};
-		memoria[32'd601] = {6'b011010,5'b11011,5'b00000,16'd30};
-		memoria[32'd602] = {6'b010001,26'd3};
-		//main
-		memoria[32'd603] = {6'b010111,5'b00001,5'b11010,16'd1};
-		memoria[32'd604] = {6'b100110,5'b11111,21'd0};
-		memoria[32'd605] = {6'b011001,5'b11111,5'b11001,5'b00000,11'd0};
-		memoria[32'd606] = {6'b011001,5'b00001,5'b11111,16'd0};
-		memoria[32'd607] = {6'b011000,5'b00000,5'b11010,5'b00001,11'd1};
-		memoria[32'd608] = {6'b010111,5'b00010,5'b11010,16'd2};
-		memoria[32'd609] = {6'b011010,5'b00011,5'b00000,16'd1};
-		memoria[32'd610] = {6'b011001,5'b00010,5'b00011,16'd0};
-		memoria[32'd611] = {6'b011000,5'b00000,5'b11010,5'b00010,11'd2};
-		memoria[32'd612] = {6'b010111,5'b00100,5'b11010,16'd3};
-		memoria[32'd613] = {6'b011010,5'b00101,5'b00000,16'd0};
-		memoria[32'd614] = {6'b011001,5'b00100,5'b00101,16'd0};
-		memoria[32'd615] = {6'b011000,5'b00000,5'b11010,5'b00100,11'd3};
-		//L0
-		memoria[32'd616] = {6'b010111,5'b00110,5'b11010,16'd3};
-		memoria[32'd617] = {6'b010111,5'b00111,5'b11010,16'd1};
-		memoria[32'd618] = {6'b100010,5'b00110,5'b00111,16'd26};
-		memoria[32'd619] = {6'b010111,5'b01000,5'b11010,16'd2};
-		memoria[32'd620] = {6'b010111,5'b01001,5'b11010,16'd2};
-		memoria[32'd621] = {6'b011010,5'b01010,5'b00000,16'd2};
-		memoria[32'd622] = {6'b000100,5'b01011,5'b01001,5'b01010,11'd0};
-		memoria[32'd623] = {6'b011001,5'b01000,5'b01011,16'd0};
-		memoria[32'd624] = {6'b011000,5'b00000,5'b11010,5'b01000,11'd2};
-		memoria[32'd625] = {6'b010001,26'd16};
-		//L1
-		memoria[32'd626] = {6'b010111,5'b01100,5'b11010,16'd2};
-		memoria[32'd627] = {6'b011001,5'b01101,5'b01100,16'd0};
-		memoria[32'd628] = {6'b100111,5'b00000,5'b01101,16'd0};
-		memoria[32'd629] = {6'b010001,26'd30};
-		//end
-		memoria[32'd630] = {6'b011111,5'b00000,5'b00000,5'b00000,11'd0};
 
-//fibinati
-	memoria[32'd900] = {6'b011010,5'b11010,5'b00000,16'd1};
-	memoria[32'd901] = {6'b011010,5'b11011,5'b00000,16'd30};
-	memoria[32'd902] = {6'b010001,26'd3};
-	//main
-	memoria[32'd903] = {6'b010111,5'b00001,5'b11010,16'd1};
-	memoria[32'd904] = {6'b011101,5'b11111,21'd0};
-	memoria[32'd905] = {6'b011001,5'b11111,5'b11001,5'b00000,11'd0};
-	memoria[32'd906] = {6'b011001,5'b00001,5'b11111,16'd0};
-	memoria[32'd907] = {6'b011000,5'b00000,5'b11010,5'b00001,11'd1};
-	memoria[32'd908] = {6'b010111,5'b00010,5'b11010,16'd4};
-	memoria[32'd909] = {6'b011010,5'b00011,5'b00000,16'd1};
-	memoria[32'd910] = {6'b011001,5'b00010,5'b00011,16'd0};
-	memoria[32'd911] = {6'b011000,5'b00000,5'b11010,5'b00010,11'd4};
-	memoria[32'd912] = {6'b010111,5'b00100,5'b11010,16'd2};
-	memoria[32'd913] = {6'b011010,5'b00101,5'b00000,16'd1};
-	memoria[32'd914] = {6'b011001,5'b00100,5'b00101,16'd0};
-	memoria[32'd915] = {6'b011000,5'b00000,5'b11010,5'b00100,11'd2};
-	memoria[32'd916] = {6'b010111,5'b00110,5'b11010,16'd3};
-	memoria[32'd917] = {6'b011010,5'b00111,5'b00000,16'd1};
-	memoria[32'd918] = {6'b011001,5'b00110,5'b00111,16'd0};
-	memoria[32'd919] = {6'b011000,5'b00000,5'b11010,5'b00110,11'd3};
-	memoria[32'd920] = {6'b010111,5'b01000,5'b11010,16'd5};
-	memoria[32'd921] = {6'b011010,5'b01001,5'b00000,16'd1};
-	memoria[32'd922] = {6'b011001,5'b01000,5'b01001,16'd0};
-	memoria[32'd923] = {6'b011000,5'b00000,5'b11010,5'b01000,11'd5};
-	//L0
-	memoria[32'd924] = {6'b010111,5'b01010,5'b11010,16'd4};
-	memoria[32'd925] = {6'b010111,5'b01011,5'b11010,16'd1};
-	memoria[32'd926] = {6'b100010,5'b01010,5'b01011,16'd48};
-	memoria[32'd927] = {6'b010111,5'b01100,5'b11010,16'd5};
-	memoria[32'd928] = {6'b010111,5'b00001,5'b11010,16'd2};
-	memoria[32'd929] = {6'b010111,5'b00010,5'b11010,16'd3};
-	memoria[32'd930] = {6'b000000,5'b00011,5'b00001,5'b00010,11'd0};
-	memoria[32'd931] = {6'b011001,5'b01100,5'b00011,16'd0};
-	memoria[32'd932] = {6'b011000,5'b00000,5'b11010,5'b01100,11'd5};
-	memoria[32'd933] = {6'b010111,5'b00100,5'b11010,16'd2};
-	memoria[32'd934] = {6'b010111,5'b00101,5'b11010,16'd3};
-	memoria[32'd935] = {6'b011001,5'b00100,5'b00101,16'd0};
-	memoria[32'd936] = {6'b011000,5'b00000,5'b11010,5'b00100,11'd2};
-	memoria[32'd937] = {6'b010111,5'b00110,5'b11010,16'd3};
-	memoria[32'd938] = {6'b010111,5'b00111,5'b11010,16'd5};
-	memoria[32'd939] = {6'b011001,5'b00110,5'b00111,16'd0};
-	memoria[32'd940] = {6'b011000,5'b00000,5'b11010,5'b00110,11'd3};*/
 
     end
 	 
