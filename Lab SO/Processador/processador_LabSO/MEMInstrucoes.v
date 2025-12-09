@@ -421,25 +421,25 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	   memoria[32'd600] = {movi,5'd3,RZERO,RZERO,11'd3};  //in r3
 		
 		//memoria[32'd600] = {in,5'd3,21'd0};  //in r3
-		memoria[32'd601] = {movi,5'd1,5'd0,5'd0,11'd1};// movi , r1, 1
+		memoria[32'd601] = {movi,5'd7,5'd0,5'd0,11'd1};// movi , r1, 1
 		memoria[32'd602] = {movi,5'd2,5'd0,5'd0,11'd1};// movi , r2, 1
 		memoria[32'd603] = {movi,5'd4,RZERO,RZERO,11'd2};// in r4
 		
 		
 		//memoria[32'd603] = {in,5'd4,21'd0};= {in,5'd3,21'd0};
 		memoria[32'd604] = {beq,5'd8,5'd0,5'd4,11'd5};// beq RZERO, r4, +5
-		memoria[32'd605] = {mult,5'd1,5'd1,5'd3,11'd0};// mult r1, r1, r3
+		memoria[32'd605] = {mult,5'd7,5'd7,5'd3,11'd0};// mult r1, r1, r3
 		memoria[32'd606] = {beq,5'd8,5'd2,5'd4,11'd3};// beq r4, r2, +3
 		memoria[32'd607] = {addi,5'd2,5'd2,5'd2,11'd1};// addi r2 , 1
 		memoria[32'd608] = {j,26'd605};// jump [5]
-		memoria[32'd609] = {out,5'd1,5'd1,5'd1,11'd0};//out r1
+		memoria[32'd609] = {out,5'd7,5'd7,5'd7,11'd0};//out r1
 		memoria[32'd610] = {j,26'd236};//fim
 		
 
 
 		//fibo
 	
-		/*	memoria[32'd900] = {movi,5'd1,RZERO,RZERO,11'd1};//movi r1, 1
+		/*	memoria[32'd900] = {movi,5'd7,RZERO,RZERO,11'd1};//movi r1, 1
 			memoria[32'd901] = {movi,5'd2,RZERO,RZERO,11'd1};//movi r2, 1
 			memoria[32'd902] = {movi,5'd4,RZERO,RZERO,11'd1};//movi r3, 1
 			memoria[32'd903] = {movi,5'd4,RZERO,RZERO,11'd3};//movi r4, 3	//contador
@@ -447,9 +447,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd903] = {movi,5'd5,RZERO,RZERO,11'd6};
 			
 			memoria[32'd905] = {blt,5'd0,5'd4,5'd5,11'd7};//blt r5,r4, +6
-			memoria[32'd906] = {add,5'd3,5'd1,5'd2,11'd0};//[6] add r3,r1,r2
+			memoria[32'd906] = {add,5'd3,5'd7,5'd2,11'd0};//[6] add r3,r1,r2
 			memoria[32'd907] = {beq,5'd0,5'd5,5'd4,11'd5};//beq r5,r4, + 4 
-			memoria[32'd908] = {mov,5'd1,5'd2,5'd2,11'd12};//mov r1,r2
+			memoria[32'd908] = {mov,5'd7,5'd2,5'd2,11'd12};//mov r1,r2
 			memoria[32'd909] = {mov,5'd2,5'd3,5'd3,11'd12};//mov r2,r3
 			memoria[32'd910] = {addi,5'd4,5'd4,5'd4,11'd1};//addi r4,r4,1
 			memoria[32'd911] = {j,26'd906};	//jump [6]
