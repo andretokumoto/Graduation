@@ -125,7 +125,8 @@ module CPU(
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
     
 	 
-	 //FALTA O DEBOUNCE DO BOTAO IN
+	 //debaunce
+	  DebounceSimples deb(.botaoEntrada(botaoPlaca),.clock(clk),.botaoFiltrado(botaoIN));
 	 
     //ligaçao com display
     displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));

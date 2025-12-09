@@ -1,50 +1,49 @@
-module DeBounce(
-    input clk,
-    input reset,
-    input button_in,
-    output reg button_out
+module DebounceSimples (
+    input  botaoEntrada,  // Sinal de entrada do botão (com ruído)
+    input  clock,         // Sinal de clock do sistema
+    output reg botaoFiltrado // Sinal de saída do botão (filtrado)
 );
 
-    // Parâmetros para ajuste fácil
-    localparam DEBOUNCE_TIME = 20'd500000; // ~50ms @ 10MHz
+// --- Configuração ---
+// Ajuste COUNTER_MAX de acordo com a frequência do seu clock.
+// Exemplo: 16 bits para 65535 ciclos (~1.3ms em 50MHz).
+parameter COUNTER_WIDTH = 16;
+parameter COUNTER_MAX = 16'hFFFF; 
 
-    // Sinais internos
-    reg [19:0] counter;
-    reg button_filtered;
-    reg button_sync_1;
-    reg button_sync_2;
+// --- Sinais Internos ---
+logic [COUNTER_WIDTH-1:0] contador;
 
-    // Sincronizador de entrada para evitar metaestabilidade
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            button_sync_1 <= 1'b0;
-            button_sync_2 <= 1'b0;
-        end else begin
-            button_sync_1 <= button_in;
-            button_sync_2 <= button_sync_1;
+// Note que 'botaoFiltrado' é implicitamente um registrador (reg/logic) 
+// por ser atribuído dentro do bloco 'always'.
+
+// --- Lógica Principal ---
+always @(posedge clock) begin
+    
+    // Se a entrada é diferente do estado filtrado atual (botaoFiltrado),
+    // o sinal mudou ou está com ruído.
+    if (botaoEntrada != botaoFiltrado) begin
+        
+        // 1. Contagem
+        if (contador < COUNTER_MAX) begin
+            // Incrementa o contador para ver se a mudança é estável
+            contador <= contador + 1;
+        end 
+        
+        // 2. Transição Concluída
+        else begin
+            // Se o contador atingiu o máximo, a mudança é válida.
+            botaoFiltrado <= botaoEntrada; // Atualiza a saída
+            contador <= 0;                // Reinicia o contador para a próxima transição
         end
+        
+    end 
+    
+    // 3. Sinal Estável (Sem Mudança)
+    else begin
+        // Se a entrada for igual à saída filtrada, o estado é estável.
+        // Reinicia o contador para zero, esperando a próxima borda.
+        contador <= 0;
     end
-
-    // Lógica principal do debounce
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            counter <= 20'd0;
-            button_filtered <= 1'b0;
-            button_out <= 1'b0;
-        end else begin
-            // Se o sinal de entrada for diferente do sinal filtrado
-            if (button_sync_2 != button_filtered) begin
-                if (counter == DEBOUNCE_TIME) begin
-                    button_filtered <= button_sync_2; // Atualiza o sinal filtrado
-                    button_out <= button_sync_2;      // Atualiza a saída
-                    counter <= 20'd0;
-                end else begin
-                    counter <= counter + 1'b1;
-                end
-            end else begin
-                counter <= 20'd0; // Sinal estável, reseta o contador
-            end
-        end
-    end
+end
 
 endmodule
