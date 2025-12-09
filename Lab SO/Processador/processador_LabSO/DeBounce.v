@@ -11,7 +11,7 @@ parameter COUNTER_WIDTH = 16;
 parameter COUNTER_MAX = 16'hFFFF; 
 
 // --- Sinais Internos ---
-logic [COUNTER_WIDTH-1:0] contador;
+reg [COUNTER_WIDTH-1:0] contador;
 
 // Note que 'botaoFiltrado' é implicitamente um registrador (reg/logic) 
 // por ser atribuído dentro do bloco 'always'.

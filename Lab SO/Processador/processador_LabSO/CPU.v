@@ -11,10 +11,10 @@ module CPU(
     output reg lednumprocessos,
     output reg ledprocesso,
     output reg ledin,
-    output wire [6:0] uniProc,
+    output wire [6:0] uniProc
 	 
 	 //***********************testes***********************
-	 output reg [31:0] testePC,
+	 /*output reg [31:0] testePC,
     output wire [4:0] enRD,
     output wire [4:0] enRS,
     output wire [4:0] enRT,
@@ -40,7 +40,7 @@ module CPU(
 	 output wire testeMemControl,
 	 output wire teste_troca_contexto,
 	 output wire teste_sinal_cproc,
-	 output wire teste_fim
+	 output wire teste_fim*/
 );
 
     // Declarações internas
@@ -139,7 +139,7 @@ module CPU(
     assign selecaoMuxDesvio = branchControl & resultComparacao;
     
     assign halt = parada;
-	 assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
+	/* assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
 	 assign testeBranchControl = branchControl;
     assign testeResultComparacao = resultComparacao;
     assign testeIN = dadosDeEntrada;
@@ -163,7 +163,7 @@ module CPU(
 	 assign teste_troca_contexto = troca_contexto;
 	 assign teste_sinal_cproc = mudaProcesso;
 	 assign teste_fim = fimprocesso;
-	 //assign Testeprocesso_atual = processo_rodando;
+	 //assign Testeprocesso_atual = processo_rodando;*/
     
     always@(negedge clk) 
     begin
@@ -191,7 +191,7 @@ module CPU(
                 else pc <= resulSomador;
             end    
         end
-        testePC <= pc;
+       // testePC <= pc;
     end
     
     always@(pc)
@@ -226,25 +226,24 @@ module CPU(
 							ledprocesso = 1'b1;
 							
 							if (opcode == in)ledin = 1'b1;
+							if (opcode == out)ledin = 1'b0;
 							
-							else
-								begin
-										ledin = 1'b0;
+						
 								
-										if(pc < 32'd600)  processo_atual = 32'd1;
-										else if(pc < 32'd900)  processo_atual = 32'd2;
-										else if(pc < 32'd1200) processo_atual = 32'd3;
-										else if(pc < 32'd1500) processo_atual = 32'd4;
-										else if(pc < 32'd1800) processo_atual = 32'd5;
-										else if(pc < 32'd2100) processo_atual = 32'd6;
-										else if(pc < 32'd2400) processo_atual = 32'd7;
-										else if(pc < 32'd2700) processo_atual = 32'd8;
-										else if(pc < 32'd3000) processo_atual = 32'd9;
-										else if(pc < 32'd3300) processo_atual = 32'd10;
-								end
+							if(pc < 32'd600)  processo_atual = 32'd1;
+							else if(pc < 32'd900)  processo_atual = 32'd2;
+							else if(pc < 32'd1200) processo_atual = 32'd3;
+							else if(pc < 32'd1500) processo_atual = 32'd4;
+							else if(pc < 32'd1800) processo_atual = 32'd5;
+							else if(pc < 32'd2100) processo_atual = 32'd6;
+							else if(pc < 32'd2400) processo_atual = 32'd7;
+							else if(pc < 32'd2700) processo_atual = 32'd8;
+							else if(pc < 32'd3000) processo_atual = 32'd9;
+							else if(pc < 32'd3300) processo_atual = 32'd10;
+								
 					end
 				  
-							Testeprocesso_atual<=processo_atual;
+							//Testeprocesso_atual<=processo_atual;
     end
     
    /* always@(posedge mudaProcesso)
@@ -259,7 +258,7 @@ module CPU(
     always@(imediato)
     begin
         imediatoExtendido = {21'b000000000000000000000,imediato};
-        testeImediato = imediatoExtendido;
+        //testeImediato = imediatoExtendido;
     end
     
     always@(HI,LO)
@@ -304,7 +303,7 @@ module CPU(
          if(valueULA) operando = imediatoExtendido;
          else operando = rt;
 			
-			testeoperando = operando;
+			//testeoperando = operando;
     end
 	 
 	 //**************************************************************************************
