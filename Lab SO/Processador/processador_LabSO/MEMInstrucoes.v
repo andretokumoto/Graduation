@@ -396,8 +396,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			
 //fatorial
-
-		//memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd4};
+	//memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd4};
 		memoria[32'd300] = {in,5'd2,5'd0,5'd0,11'd3};//in r2
 		memoria[32'd301] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
 		memoria[32'd302] = {6'b011010,5'd7,5'd0,5'd0,11'd1};//movi r7,1

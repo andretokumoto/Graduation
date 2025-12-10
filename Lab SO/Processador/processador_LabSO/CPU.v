@@ -11,9 +11,10 @@ module CPU(
     output reg lednumprocessos,
     output reg ledprocesso,
     output reg ledin,
-    output wire [6:0] uniProc
+    output wire [6:0] uniProc,
 	 
 	 //***********************testes***********************
+	 output wire testeSinal
 	 /*output reg [31:0] testePC,
     output wire [4:0] enRD,
     output wire [4:0] enRS,
@@ -56,7 +57,7 @@ module CPU(
     reg [31:0] processo_atual;
 
     wire [3:0] inUnidade, inDezena, inCentena, un, dez, cen;
-    wire botaoIN;
+    wire botaoIN,ButtonNeg;
     wire selecaoMuxDesvio;
     wire parada;
     wire status;
@@ -126,8 +127,9 @@ module CPU(
     
 	 
 	 //debaunce
-	  //DeBounce deb(.botaoEntrada(botaoPlaca),.clock(clk),.botaoFiltrado(botaoIN));
-	  assign botaoIN = botaoPlaca;
+	  DeBounce deb(.botaoEntrada(ButtonNeg),.clock(clk),.botaoFiltrado(botaoIN));
+	  assign ButtonNeg = ~botaoPlaca;
+	  assign testeSinal =  botaoIN;
 	 
     //ligaçao com display
     displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));

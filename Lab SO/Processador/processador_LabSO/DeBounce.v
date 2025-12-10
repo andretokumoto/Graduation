@@ -1,49 +1,39 @@
-module DebounceSimples (
+module DeBounce (
     input  botaoEntrada,  // Sinal de entrada do botão (com ruído)
     input  clock,         // Sinal de clock do sistema
     output reg botaoFiltrado // Sinal de saída do botão (filtrado)
 );
 
-// --- Configuração ---
-// Ajuste COUNTER_MAX de acordo com a frequência do seu clock.
-// Exemplo: 16 bits para 65535 ciclos (~1.3ms em 50MHz).
-parameter COUNTER_WIDTH = 16;
-parameter COUNTER_MAX = 16'hFFFF; 
+// Sinais internos (registradores) para as saídas dos Flip-Flops (FF1, FF2, FF3)
+// Estes representam os estados internos do registrador de deslocamento de 3 estágios.
+reg FF1_out; 
+reg FF2_out;
+reg FF3_out;
 
-// --- Sinais Internos ---
-reg [COUNTER_WIDTH-1:0] contador;
+// --- Lógica Sequencial (Flip-Flops) ---
+// O bloco 'always @(posedge clock)' define o comportamento sequencial 
+// do registrador de deslocamento.
 
-// Note que 'botaoFiltrado' é implicitamente um registrador (reg/logic) 
-// por ser atribuído dentro do bloco 'always'.
-
-// --- Lógica Principal ---
 always @(posedge clock) begin
+    // Estágio 1 (FF1): Captura a entrada do botão e armazena em FF1_out
+    FF1_out <= botaoEntrada; 
     
-    // Se a entrada é diferente do estado filtrado atual (botaoFiltrado),
-    // o sinal mudou ou está com ruído.
-    if (botaoEntrada != botaoFiltrado) begin
-        
-        // 1. Contagem
-        if (contador < COUNTER_MAX) begin
-            // Incrementa o contador para ver se a mudança é estável
-            contador <= contador + 1;
-        end 
-        
-        // 2. Transição Concluída
-        else begin
-            // Se o contador atingiu o máximo, a mudança é válida.
-            botaoFiltrado <= botaoEntrada; // Atualiza a saída
-            contador <= 0;                // Reinicia o contador para a próxima transição
-        end
-        
-    end 
+    // Estágio 2 (FF2): Desloca o valor de FF1_out para FF2_out
+    FF2_out <= FF1_out;
     
-    // 3. Sinal Estável (Sem Mudança)
-    else begin
-        // Se a entrada for igual à saída filtrada, o estado é estável.
-        // Reinicia o contador para zero, esperando a próxima borda.
-        contador <= 0;
-    end
+    // Estágio 3 (FF3): Desloca o valor de FF2_out para FF3_out
+    FF3_out <= FF2_out;
+end
+
+// --- Lógica Combinacional (Porta AND) ---
+// O bloco 'always @(*)' define a lógica combinacional (a porta AND)
+// que opera com as saídas dos Flip-Flops.
+
+always @(*) begin
+    // O sinal filtrado é a AND lógica das saídas dos três Flip-Flops.
+    // Isso garante que a entrada só será considerada estável se for a mesma (alta) 
+    // por pelo menos 3 ciclos de clock consecutivos (FF1, FF2 e FF3 sendo '1').
+    botaoFiltrado = FF1_out & FF2_out & (~FF3_out);
 end
 
 endmodule
