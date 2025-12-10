@@ -126,7 +126,7 @@ module CPU(
     
 	 
 	 //debaunce
-	  DebounceSimples deb(.botaoEntrada(botaoPlaca),.clock(clk),.botaoFiltrado(botaoIN));
+	  DeBounce deb(.botaoEntrada(botaoPlaca),.clock(clk),.botaoFiltrado(botaoIN));
 	 
     //ligaçao com display
     displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));
@@ -198,6 +198,11 @@ module CPU(
     begin
         pcsomado = pc + 32'd1;
 		  
+		    	if (opcode == in)ledin = 1'b1;
+				else
+					begin
+						ledin = 1'b0;
+					end
 		  
 				if(pc == 32'd41) 
 					begin
@@ -225,12 +230,10 @@ module CPU(
 							lednumprocessos = 1'b0;
 							ledprocesso = 1'b1;
 							
-							if (opcode == in)ledin = 1'b1;
-							if (opcode == out)ledin = 1'b0;
 							
-						
 								
-							if(pc < 32'd600)  processo_atual = 32'd1;
+							if	(pc < 32'd300) processo_atual = 32'd0;
+							else if(pc < 32'd600)  processo_atual = 32'd1;
 							else if(pc < 32'd900)  processo_atual = 32'd2;
 							else if(pc < 32'd1200) processo_atual = 32'd3;
 							else if(pc < 32'd1500) processo_atual = 32'd4;
