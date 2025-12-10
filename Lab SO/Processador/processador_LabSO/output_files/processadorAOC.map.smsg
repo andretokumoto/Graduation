@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at CPU.v(52): object "fimprocesso" differs only in case from object "fimProcesso" in the same scope File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 52
+Info (10281): Verilog HDL Declaration information at CPU.v(53): object "fimprocesso" differs only in case from object "fimProcesso" in the same scope File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v Line: 53
 Warning (10268): Verilog HDL information at Escalonador.v(32): always construct contains both blocking and non-blocking assignments File: C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Escalonador.v Line: 32

@@ -26,8 +26,9 @@ module CPU(
     reg [31:0] dadosRegistro;
     reg [31:0] pc, pcsomado;
     reg [31:0] operando;
-    reg [31:0] processo_atual;
-
+    //reg [31:0] processo_atual;
+	
+	 wire [31:0] processo_atual;
     wire [3:0] inUnidade, inDezena, inCentena, un, dez, cen;
     wire botaoIN,ButtonNeg;
     wire selecaoMuxDesvio;
@@ -92,7 +93,7 @@ module CPU(
     mux6 muxRegistro(.dadoRegControl(dadoRegControl),.HiLoData(HILOdata),.resulULA(resultadoULA),.valorRegRS(rs),.dadoMEM(dadoMem),.dadosEntrada(dadosDeEntrada),.imediato(imediatoExtendido),.PC(pcsomado),.DadosRegistro(dadosMux6),.pc_contexto(pc_contexto));
        
     //ligaçao com memoria de dados
-    simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
+    simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem),.proc(processo_atual));
         
     //ligaçao com entrada e saida
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
@@ -305,7 +306,7 @@ module CPU(
 					begin
 						ledmenu = 1'b1;
 						lednumprocessos = 1'b0;
-						processo_atual = 32'd0;
+						//processo_atual = 32'd0;
 						ledprocesso = 1'b0;
 						ledin = 1'b0;					
 					end
@@ -314,7 +315,7 @@ module CPU(
 					begin
 						lednumprocessos = 1'b1;
 						ledmenu = 1'b0;
-						processo_atual = 32'd0;
+						//processo_atual = 32'd0;
 						ledprocesso = 1'b0;
 						ledin = 1'b0;					
 					end
@@ -323,7 +324,7 @@ module CPU(
 					begin
 						lednumprocessos = 1'b0;
 						ledmenu = 1'b0;
-						processo_atual = 32'd1;
+						//processo_atual = 32'd1;
 						ledprocesso = 1'b1;
 						ledin = 1'b1;					
 					end
@@ -332,7 +333,7 @@ module CPU(
 					begin
 						lednumprocessos = 1'b0;
 						ledmenu = 1'b0;
-						processo_atual = 32'd1;
+						//processo_atual = 32'd1;
 						ledprocesso = 1'b1;
 						ledin = 1'b0;					
 	
@@ -342,7 +343,7 @@ module CPU(
 					begin
 						lednumprocessos = 1'b0;
 						ledmenu = 1'b0;
-						processo_atual = 32'd2;
+						//processo_atual = 32'd2;
 						ledprocesso = 1'b1;
 						ledin = 1'b1;					
 					end
@@ -352,7 +353,7 @@ module CPU(
 					begin
 						lednumprocessos = 1'b0;
 						ledmenu = 1'b0;
-						processo_atual = 32'd2;
+						//processo_atual = 32'd2;
 						ledprocesso = 1'b1;
 						ledin = 1'b1;					
 					end	
@@ -361,7 +362,7 @@ module CPU(
 					begin
 						lednumprocessos = 1'b0;
 						ledmenu = 1'b0;
-						processo_atual = 32'd2;
+						//processo_atual = 32'd2;
 						ledprocesso = 1'b1;
 						ledin = 1'b0;					
 					end				
@@ -370,7 +371,7 @@ module CPU(
 					begin
 						lednumprocessos = 1'b0;
 						ledmenu = 1'b0;
-						processo_atual = 32'd3;
+						//processo_atual = 32'd3;
 						ledprocesso = 1'b1;
 						ledin = 1'b1;					
 					end		
@@ -379,11 +380,19 @@ module CPU(
 					begin
 						lednumprocessos = 1'b0;
 						ledmenu = 1'b0;
-						processo_atual = 32'd3;
+						//processo_atual = 32'd3;
 						ledprocesso = 1'b1;
 						ledin = 1'b0;					
 					end		
 		
+		
+				default:
+					begin
+						lednumprocessos = 1'b0;
+						ledmenu = 1'b0;
+						ledprocesso = 1'b0;
+						ledin = 1'b0;					
+					end		
 			endcase
 			
 		end

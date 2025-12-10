@@ -19,7 +19,7 @@ BCD bcd(.binario(saidaDeDados/*dadosEscrita*/),.unidade(unidade),.dezena(dezena)
  always@(*)//saida
   begin
   
-   if(entradaSaidaControl==2'b01) assign saidaDeDados = dadosEscrita;
+   if(entradaSaidaControl==2'b01)  saidaDeDados = dadosEscrita;
 	
   end
   

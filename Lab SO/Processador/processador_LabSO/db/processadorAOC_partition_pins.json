@@ -128,6 +128,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "uniProc[5]",
+					"strict" : false
+				},
+				{
 					"name" : "uniProc[6]",
 					"strict" : false
 				},
@@ -136,11 +140,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "botaoPlaca",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "botaoPlaca",
 					"strict" : false
 				},
 				{

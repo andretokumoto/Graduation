@@ -8,8 +8,8 @@ module simple_dual_port_ram_dual_clock
 	input [(DATA_WIDTH-1):0] data,
 	input [(ADDR_WIDTH-1):0] read_addr, write_addr,
 	input we, read_clock, write_clock,
-	output reg [(DATA_WIDTH-1):0] q
-	//output wire [(DATA_WIDTH-1):0] q
+	output reg [(DATA_WIDTH-1):0] q,
+	output wire [(DATA_WIDTH-1):0] proc
 );
 	
 	// Declare the RAM variable
@@ -28,6 +28,6 @@ module simple_dual_port_ram_dual_clock
 		q <= ram[read_addr];
 	end
 	
-	//assign q = ram[read_addr];
+	assign proc = ram[32'd13];//teste
 	
 endmodule
