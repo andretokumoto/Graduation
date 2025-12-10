@@ -1,0 +1,110 @@
+Quartus Prime Archive log --	C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/FuncinouRemotoV1.qarlog
+
+Archive:	C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/FuncinouRemotoV1.qar
+Date:		Wed Dec 10 11:28:11 2025
+Quartus Prime		23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BCD.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/BancoRegistradores.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/CPU.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ContadorDeQuantum.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/DeBounce.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/DeBouncebuton.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EnderecoRelativo.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/EntradaSaida.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Escalonador.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Gerenciador_memoria.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MEMInstrucoes.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/MemoriaDados.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/PC.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ParadaSistema.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/ULA.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/UnidadeDeControle.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform1.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform10.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform11.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform12.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform13.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform14.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform15.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform16.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform17.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform18.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform19.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform2.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform20.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform21.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform22.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform23.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform24.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform25.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform26.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform27.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform28.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform29.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform3.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform30.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform31.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform32.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform33.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform34.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform35.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform36.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform37.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform38.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform39.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform4.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform40.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform41.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform42.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform43.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform44.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform45.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform46.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform47.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform48.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform49.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform5.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform50.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform51.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform53.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform54.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform55.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform56.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform57.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform58.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform59.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform6.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform60.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform61.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform62.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform63.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform64.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform65.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform7.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform8.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform9.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/WaveformSO.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform_testeSO.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/assignment_defaults.qdf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/clock_divider.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/correcaoDesvio.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/displaySete.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/monostable.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/mux6.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/muxDesvio.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/output_files/Waveform.vwf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processadorAOC.qpf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processadorAOC.qsf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/processadorAOC_assignment_defaults.qdf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/pulsoBotao.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simple_dual_port_ram_dual_clock.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simple_dual_port_ram_single_clock.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/tratamentoBotao.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/unidadeDeComparacao.v
+	======= Total: 99 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

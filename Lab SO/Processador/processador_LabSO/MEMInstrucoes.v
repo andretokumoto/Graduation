@@ -1,6 +1,6 @@
-module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock/*, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao*/, biosEmExecucao, encerrarBios);
+module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, biosEmExecucao, encerrarBios);
 
-    input [31:0] pc/*, entradaDeInstrucao*/;
+    input [31:0] pc;
     input clock, reset;
     input encerrarBios;
     /*input [1:0] controleSalvaInstrucao,ControleFimDeLeitura;*/
