@@ -296,7 +296,99 @@ module CPU(
 	 
 	 //**************************************************************************************
 	 
-	 always@(halt)
+	 always@(*)
+		begin
+		   
+			case(pc)
+			
+				32'd41:
+					begin
+						ledmenu = 1'b1;
+						lednumprocessos = 1'b0;
+						processo_atual = 32'd0;
+						ledprocesso = 1'b0;
+						ledin = 1'b0;					
+					end
+					
+				32'd56:
+					begin
+						lednumprocessos = 1'b1;
+						ledmenu = 1'b0;
+						processo_atual = 32'd0;
+						ledprocesso = 1'b0;
+						ledin = 1'b0;					
+					end
+
+				32'd300:
+					begin
+						lednumprocessos = 1'b0;
+						ledmenu = 1'b0;
+						processo_atual = 32'd1;
+						ledprocesso = 1'b1;
+						ledin = 1'b1;					
+					end
+					
+				32'd309:
+					begin
+						lednumprocessos = 1'b0;
+						ledmenu = 1'b0;
+						processo_atual = 32'd1;
+						ledprocesso = 1'b1;
+						ledin = 1'b0;					
+	
+					end	
+				
+				32'd600:
+					begin
+						lednumprocessos = 1'b0;
+						ledmenu = 1'b0;
+						processo_atual = 32'd2;
+						ledprocesso = 1'b1;
+						ledin = 1'b1;					
+					end
+	
+				
+				32'd606:
+					begin
+						lednumprocessos = 1'b0;
+						ledmenu = 1'b0;
+						processo_atual = 32'd2;
+						ledprocesso = 1'b1;
+						ledin = 1'b1;					
+					end	
+				
+				32'd609:
+					begin
+						lednumprocessos = 1'b0;
+						ledmenu = 1'b0;
+						processo_atual = 32'd2;
+						ledprocesso = 1'b1;
+						ledin = 1'b0;					
+					end				
+	
+				32'd904:
+					begin
+						lednumprocessos = 1'b0;
+						ledmenu = 1'b0;
+						processo_atual = 32'd3;
+						ledprocesso = 1'b1;
+						ledin = 1'b1;					
+					end		
+
+				32'd912:
+					begin
+						lednumprocessos = 1'b0;
+						ledmenu = 1'b0;
+						processo_atual = 32'd3;
+						ledprocesso = 1'b1;
+						ledin = 1'b0;					
+					end		
+		
+			endcase
+			
+		end
+	 
+	/* always@(halt)
 		begin
 			
 			if(halt == 1'b1)
@@ -387,7 +479,7 @@ module CPU(
 						
 					end
 				end
-		end
+		end*/
 	 
 	 
 	 

@@ -136,11 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "botaoPlaca",
 					"strict" : false
 				},
 				{
-					"name" : "botaoPlaca",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
