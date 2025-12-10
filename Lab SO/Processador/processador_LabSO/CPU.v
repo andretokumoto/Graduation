@@ -126,7 +126,8 @@ module CPU(
     
 	 
 	 //debaunce
-	  DeBounce deb(.botaoEntrada(botaoPlaca),.clock(clk),.botaoFiltrado(botaoIN));
+	  //DeBounce deb(.botaoEntrada(botaoPlaca),.clock(clk),.botaoFiltrado(botaoIN));
+	  assign botaoIN = botaoPlaca;
 	 
     //ligaçao com display
     displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));

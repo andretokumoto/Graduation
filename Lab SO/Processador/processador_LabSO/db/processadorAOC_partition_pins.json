@@ -136,15 +136,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "botaoPlaca",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				},
 				{
 					"name" : "clock",
-					"strict" : false
-				},
-				{
-					"name" : "botaoPlaca",
 					"strict" : false
 				},
 				{
