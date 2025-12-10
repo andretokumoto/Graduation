@@ -98,7 +98,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd38] = {led,26'd5};//led, 5		
 			memoria[32'd39] = {movi,R22,RZERO,RZERO,11'd12};//movi r22, 0 // contador de processos que foram iniciados
 			memoria[32'd40] = {sw,RZERO,R22,RZERO,11'd1};//sw rzero 1(r22)
-			memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
+			//memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
+			memoria[32'd41] = {movi,R20,RZERO,RZERO,11'd1};
+			
 			memoria[32'd42] = {led,26'd6};//led, 6		
 			memoria[32'd43] = {sw,RZERO,R20,R20,11'd0};//sw r20, 0, rzero // salva na memoria de dados o numero de processos rodando
 			memoria[32'd44] = {beq,RZERO,R20,RZERO,11'd2};//MUDAR beq r20, rzero // volta para o menu(sem processos para rodar)
@@ -119,7 +121,9 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			//----entrada processo
 			memoria[32'd55] = {led,26'd7};//led 7 
-			memoria[32'd56] = {in,R21,21'd0};//in r21 processo que ira rodar
+			//memoria[32'd56] = {in,R21,21'd0};//in r21 processo que ira rodar
+			memoria[32'd56] = {movi,R21,RZERO,RZERO,11'd3};
+			
 			memoria[32'd57] = {led,26'd8};//led 8
 			memoria[32'd58] = {movi,R24,RZERO,RZERO,11'd11};//movi r24, 11
 			memoria[32'd59] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // salva qual processo vai ser executado
@@ -429,10 +433,11 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	
 			memoria[32'd900] = {movi,5'd7,RZERO,RZERO,11'd1};//movi r7, 1
 			memoria[32'd901] = {movi,5'd2,RZERO,RZERO,11'd1};//movi r2, 1
-			memoria[32'd902] = {movi,5'd4,RZERO,RZERO,11'd1};//movi r3, 1
+			memoria[32'd902] = {movi,5'd4,RZERO,RZERO,11'd1};//movi r3, 1		
 			memoria[32'd903] = {movi,5'd4,RZERO,RZERO,11'd3};//movi r4, 3	//contador
-			//memoria[32'd904] = {in,5'd5,21'd0};//in r5
-			memoria[32'd903] = {movi,5'd5,RZERO,RZERO,11'd6};
+			
+			memoria[32'd904] = {in,5'd5,21'd0};//in r5
+			//memoria[32'd904] = {movi,5'd5,RZERO,RZERO,11'd7};
 			
 			memoria[32'd905] = {blt,5'd0,5'd4,5'd5,11'd7};//blt r5,r4, +6
 			memoria[32'd906] = {add,5'd3,5'd7,5'd2,11'd0};//[6] add r3,r7,r2
