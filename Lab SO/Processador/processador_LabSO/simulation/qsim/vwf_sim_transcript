@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Dec  9 08:00:21 2025
+    Info: Processing started: Wed Dec 10 20:10:48 2025
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processadorAOC -c processadorAOC --vector_source="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/Waveform65.vwf" --testbench_file="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/Waveform65.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -75,15 +75,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Dec  9 08:00:23 2025
+    Info: Processing started: Wed Dec 10 20:10:53 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/" processadorAOC -c processadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file processadorAOC.vo in folder "C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4681 megabytes
-    Info: Processing ended: Tue Dec  9 08:00:25 2025
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Wed Dec 10 20:10:58 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 Completed successfully. 
 
@@ -109,7 +109,7 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 08:00:27 on Dec 09,2025
+# Start time: 20:11:03 on Dec 10,2025
 
 # vlog -work work processadorAOC.vo 
 
@@ -122,13 +122,13 @@ Reading pref.tcl
 # Top level modules:
 # 	CPU
 
-# End time: 08:00:29 on Dec 09,2025, Elapsed time: 0:00:02
+# End time: 20:11:06 on Dec 10,2025, Elapsed time: 0:00:03
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 08:00:29 on Dec 09,2025
+# Start time: 20:11:06 on Dec 10,2025
 
 # vlog -work work Waveform65.vwf.vt 
 
@@ -139,12 +139,12 @@ Reading pref.tcl
 # Top level modules:
 # 	CPU_vlg_vec_tst
 
-# End time: 08:00:29 on Dec 09,2025, Elapsed time: 0:00:00
+# End time: 20:11:06 on Dec 10,2025, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPU_vlg_vec_tst 
-# Start time: 08:00:29 on Dec 09,2025
+# Start time: 20:11:06 on Dec 10,2025
 # Loading work.CPU_vlg_vec_tst
 # Loading work.CPU
 # Loading work.hard_block
@@ -164,7 +164,7 @@ Reading pref.tcl
 # Loading cycloneive_ver.cycloneive_ram_register
 # Loading cycloneive_ver.cycloneive_ram_pulse_generator
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 18341 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 17744 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 
 # after#26
@@ -185,716 +185,112 @@ Reading pref.tcl
 
 # Simulation time: 0 ps
 
-# Simulation time: 10490 ps
+# Simulation time: 109430 ps
 
-# Simulation time: 10490 ps
+# Simulation time: 109430 ps
 
-# Simulation time: 10490 ps
+# Simulation time: 109430 ps
 
-# Simulation time: 10490 ps
+# Simulation time: 109430 ps
 
-# Simulation time: 10490 ps
+# Simulation time: 109430 ps
 
-# Simulation time: 10490 ps
+# Simulation time: 109430 ps
 
-# Simulation time: 10490 ps
+# Simulation time: 109430 ps
 
-# Simulation time: 10490 ps
+# Simulation time: 109430 ps
 
-# Simulation time: 42790 ps
+# Simulation time: 239840 ps
 
-# Simulation time: 42790 ps
+# Simulation time: 239840 ps
 
-# Simulation time: 42790 ps
+# Simulation time: 239840 ps
 
-# Simulation time: 42790 ps
+# Simulation time: 239840 ps
 
-# Simulation time: 42790 ps
+# Simulation time: 239840 ps
 
-# Simulation time: 42790 ps
+# Simulation time: 239840 ps
 
-# Simulation time: 42790 ps
+# Simulation time: 239840 ps
 
-# Simulation time: 42790 ps
+# Simulation time: 239840 ps
 
-# Simulation time: 182890 ps
+# Simulation time: 385730 ps
 
-# Simulation time: 182890 ps
+# Simulation time: 385730 ps
 
-# Simulation time: 182890 ps
+# Simulation time: 385730 ps
 
-# Simulation time: 182890 ps
+# Simulation time: 385730 ps
 
-# Simulation time: 182890 ps
+# Simulation time: 385730 ps
 
-# Simulation time: 182890 ps
+# Simulation time: 385730 ps
 
-# Simulation time: 182890 ps
+# Simulation time: 385730 ps
 
-# Simulation time: 182890 ps
+# Simulation time: 385730 ps
 
-# Simulation time: 187290 ps
+# Simulation time: 522770 ps
 
-# Simulation time: 187290 ps
+# Simulation time: 522770 ps
 
-# Simulation time: 187290 ps
+# Simulation time: 522770 ps
 
-# Simulation time: 187290 ps
+# Simulation time: 522770 ps
 
-# Simulation time: 187290 ps
+# Simulation time: 522770 ps
 
-# Simulation time: 187290 ps
+# Simulation time: 522770 ps
 
-# Simulation time: 187290 ps
+# Simulation time: 522770 ps
 
-# Simulation time: 187290 ps
+# Simulation time: 522770 ps
 
-# Simulation time: 192890 ps
+# Simulation time: 660121 ps
 
-# Simulation time: 192890 ps
+# Simulation time: 660121 ps
 
-# Simulation time: 192890 ps
+# Simulation time: 660121 ps
 
-# Simulation time: 192890 ps
+# Simulation time: 660121 ps
 
-# Simulation time: 192890 ps
+# Simulation time: 660121 ps
 
-# Simulation time: 192890 ps
+# Simulation time: 660121 ps
 
-# Simulation time: 192890 ps
+# Simulation time: 660121 ps
 
-# Simulation time: 192890 ps
+# Simulation time: 660121 ps
 
-# Simulation time: 198490 ps
+# Simulation time: 802560 ps
 
-# Simulation time: 198490 ps
+# Simulation time: 802560 ps
 
-# Simulation time: 198490 ps
+# Simulation time: 802560 ps
 
-# Simulation time: 198490 ps
+# Simulation time: 802560 ps
 
-# Simulation time: 198490 ps
+# Simulation time: 802560 ps
 
-# Simulation time: 198490 ps
+# Simulation time: 802560 ps
 
-# Simulation time: 198490 ps
+# Simulation time: 802560 ps
 
-# Simulation time: 198490 ps
+# Simulation time: 802560 ps
 
-# Simulation time: 204090 ps
+# Simulation time: 946340 ps
 
-# Simulation time: 204090 ps
+# Simulation time: 946340 ps
 
-# Simulation time: 204090 ps
+# Simulation time: 946340 ps
 
-# Simulation time: 204090 ps
-
-# Simulation time: 204090 ps
-
-# Simulation time: 204090 ps
-
-# Simulation time: 204090 ps
-
-# Simulation time: 209290 ps
-
-# Simulation time: 209290 ps
-
-# Simulation time: 209290 ps
-
-# Simulation time: 209290 ps
-
-# Simulation time: 209290 ps
-
-# Simulation time: 209290 ps
-
-# Simulation time: 209290 ps
-
-# Simulation time: 209290 ps
-
-# Simulation time: 215190 ps
-
-# Simulation time: 215190 ps
-
-# Simulation time: 215190 ps
-
-# Simulation time: 215190 ps
-
-# Simulation time: 215190 ps
-
-# Simulation time: 215190 ps
-
-# Simulation time: 215190 ps
-
-# Simulation time: 215190 ps
-
-# Simulation time: 220890 ps
-
-# Simulation time: 220890 ps
-
-# Simulation time: 220890 ps
-
-# Simulation time: 220890 ps
-
-# Simulation time: 220890 ps
-
-# Simulation time: 220890 ps
-
-# Simulation time: 220890 ps
-
-# Simulation time: 220890 ps
-
-# Simulation time: 226390 ps
-
-# Simulation time: 226390 ps
-
-# Simulation time: 226390 ps
-
-# Simulation time: 226390 ps
-
-# Simulation time: 226390 ps
-
-# Simulation time: 226390 ps
-
-# Simulation time: 226390 ps
-
-# Simulation time: 226390 ps
-
-# Simulation time: 232090 ps
-
-# Simulation time: 232090 ps
-
-# Simulation time: 232090 ps
-
-# Simulation time: 232090 ps
-
-# Simulation time: 232090 ps
-
-# Simulation time: 232090 ps
-
-# Simulation time: 232090 ps
-
-# Simulation time: 232090 ps
-
-# Simulation time: 237490 ps
-
-# Simulation time: 237490 ps
-
-# Simulation time: 237490 ps
-
-# Simulation time: 237490 ps
-
-# Simulation time: 237490 ps
-
-# Simulation time: 237490 ps
-
-# Simulation time: 237490 ps
-
-# Simulation time: 237490 ps
-
-# Simulation time: 243090 ps
-
-# Simulation time: 243090 ps
-
-# Simulation time: 243090 ps
-
-# Simulation time: 243090 ps
-
-# Simulation time: 243090 ps
-
-# Simulation time: 243090 ps
-
-# Simulation time: 243090 ps
-
-# Simulation time: 243090 ps
-
-# Simulation time: 249090 ps
-
-# Simulation time: 249090 ps
-
-# Simulation time: 249090 ps
-
-# Simulation time: 249090 ps
-
-# Simulation time: 249090 ps
-
-# Simulation time: 249090 ps
-
-# Simulation time: 249090 ps
-
-# Simulation time: 249090 ps
-
-# Simulation time: 253690 ps
-
-# Simulation time: 253690 ps
-
-# Simulation time: 253690 ps
-
-# Simulation time: 253690 ps
-
-# Simulation time: 253690 ps
-
-# Simulation time: 253690 ps
-
-# Simulation time: 253690 ps
-
-# Simulation time: 253690 ps
-
-# Simulation time: 258490 ps
-
-# Simulation time: 258490 ps
-
-# Simulation time: 258490 ps
-
-# Simulation time: 258490 ps
-
-# Simulation time: 258490 ps
-
-# Simulation time: 258490 ps
-
-# Simulation time: 258490 ps
-
-# Simulation time: 258490 ps
-
-# Simulation time: 264290 ps
-
-# Simulation time: 264290 ps
-
-# Simulation time: 264290 ps
-
-# Simulation time: 264290 ps
-
-# Simulation time: 264290 ps
-
-# Simulation time: 264290 ps
-
-# Simulation time: 264290 ps
-
-# Simulation time: 264290 ps
-
-# Simulation time: 269290 ps
-
-# Simulation time: 269290 ps
-
-# Simulation time: 269290 ps
-
-# Simulation time: 269290 ps
-
-# Simulation time: 269290 ps
-
-# Simulation time: 269290 ps
-
-# Simulation time: 269290 ps
-
-# Simulation time: 269290 ps
-
-# Simulation time: 274290 ps
-
-# Simulation time: 274290 ps
-
-# Simulation time: 274290 ps
-
-# Simulation time: 274290 ps
-
-# Simulation time: 274290 ps
-
-# Simulation time: 274290 ps
-
-# Simulation time: 274290 ps
-
-# Simulation time: 274290 ps
-
-# Simulation time: 280290 ps
-
-# Simulation time: 280290 ps
-
-# Simulation time: 280290 ps
-
-# Simulation time: 280290 ps
-
-# Simulation time: 280290 ps
-
-# Simulation time: 280290 ps
-
-# Simulation time: 280290 ps
-
-# Simulation time: 280290 ps
-
-# Simulation time: 286690 ps
-
-# Simulation time: 286690 ps
-
-# Simulation time: 286690 ps
-
-# Simulation time: 286690 ps
-
-# Simulation time: 286690 ps
-
-# Simulation time: 286690 ps
-
-# Simulation time: 286690 ps
-
-# Simulation time: 286690 ps
-
-# Simulation time: 292690 ps
-
-# Simulation time: 292690 ps
-
-# Simulation time: 292690 ps
-
-# Simulation time: 292690 ps
-
-# Simulation time: 292690 ps
-
-# Simulation time: 292690 ps
-
-# Simulation time: 292690 ps
-
-# Simulation time: 292690 ps
-
-# Simulation time: 297490 ps
-
-# Simulation time: 297490 ps
-
-# Simulation time: 297490 ps
-
-# Simulation time: 297490 ps
-
-# Simulation time: 297490 ps
-
-# Simulation time: 297490 ps
-
-# Simulation time: 297490 ps
-
-# Simulation time: 297490 ps
-
-# Simulation time: 487420 ps
-
-# Simulation time: 487420 ps
-
-# Simulation time: 487420 ps
-
-# Simulation time: 487420 ps
-
-# Simulation time: 487420 ps
-
-# Simulation time: 487420 ps
-
-# Simulation time: 487420 ps
-
-# Simulation time: 487420 ps
-
-# Simulation time: 505890 ps
-
-# Simulation time: 505890 ps
-
-# Simulation time: 505890 ps
-
-# Simulation time: 505890 ps
-
-# Simulation time: 505890 ps
-
-# Simulation time: 505890 ps
-
-# Simulation time: 505890 ps
-
-# Simulation time: 505890 ps
-
-# Simulation time: 510890 ps
-
-# Simulation time: 510890 ps
-
-# Simulation time: 510890 ps
-
-# Simulation time: 510890 ps
-
-# Simulation time: 510890 ps
-
-# Simulation time: 510890 ps
-
-# Simulation time: 510890 ps
-
-# Simulation time: 510890 ps
-
-# Simulation time: 515690 ps
-
-# Simulation time: 515690 ps
-
-# Simulation time: 515690 ps
-
-# Simulation time: 515690 ps
-
-# Simulation time: 515690 ps
-
-# Simulation time: 515690 ps
-
-# Simulation time: 515690 ps
-
-# Simulation time: 515690 ps
-
-# Simulation time: 521490 ps
-
-# Simulation time: 521490 ps
-
-# Simulation time: 521490 ps
-
-# Simulation time: 521490 ps
-
-# Simulation time: 521490 ps
-
-# Simulation time: 521490 ps
-
-# Simulation time: 521490 ps
-
-# Simulation time: 521490 ps
-
-# Simulation time: 526090 ps
-
-# Simulation time: 526090 ps
-
-# Simulation time: 526090 ps
-
-# Simulation time: 526090 ps
-
-# Simulation time: 526090 ps
-
-# Simulation time: 526090 ps
-
-# Simulation time: 526090 ps
-
-# Simulation time: 526090 ps
-
-# Simulation time: 531290 ps
-
-# Simulation time: 531290 ps
-
-# Simulation time: 531290 ps
-
-# Simulation time: 531290 ps
-
-# Simulation time: 531290 ps
-
-# Simulation time: 531290 ps
-
-# Simulation time: 531290 ps
-
-# Simulation time: 537890 ps
-
-# Simulation time: 537890 ps
-
-# Simulation time: 537890 ps
-
-# Simulation time: 537890 ps
-
-# Simulation time: 537890 ps
-
-# Simulation time: 537890 ps
-
-# Simulation time: 537890 ps
-
-# Simulation time: 537890 ps
-
-# Simulation time: 542890 ps
-
-# Simulation time: 542890 ps
-
-# Simulation time: 542890 ps
-
-# Simulation time: 542890 ps
-
-# Simulation time: 542890 ps
-
-# Simulation time: 542890 ps
-
-# Simulation time: 542890 ps
-
-# Simulation time: 542890 ps
-
-# Simulation time: 547090 ps
-
-# Simulation time: 547090 ps
-
-# Simulation time: 547090 ps
-
-# Simulation time: 547090 ps
-
-# Simulation time: 547090 ps
-
-# Simulation time: 547090 ps
-
-# Simulation time: 547090 ps
-
-# Simulation time: 547090 ps
-
-# Simulation time: 551890 ps
-
-# Simulation time: 551890 ps
-
-# Simulation time: 551890 ps
-
-# Simulation time: 551890 ps
-
-# Simulation time: 551890 ps
-
-# Simulation time: 551890 ps
-
-# Simulation time: 551890 ps
-
-# Simulation time: 551890 ps
-
-# Simulation time: 557490 ps
-
-# Simulation time: 557490 ps
-
-# Simulation time: 557490 ps
-
-# Simulation time: 557490 ps
-
-# Simulation time: 557490 ps
-
-# Simulation time: 557490 ps
-
-# Simulation time: 557490 ps
-
-# Simulation time: 557490 ps
-
-# Simulation time: 562490 ps
-
-# Simulation time: 562490 ps
-
-# Simulation time: 562490 ps
-
-# Simulation time: 562490 ps
-
-# Simulation time: 562490 ps
-
-# Simulation time: 562490 ps
-
-# Simulation time: 562490 ps
-
-# Simulation time: 562490 ps
-
-# Simulation time: 567490 ps
-
-# Simulation time: 567490 ps
-
-# Simulation time: 567490 ps
-
-# Simulation time: 567490 ps
-
-# Simulation time: 567490 ps
-
-# Simulation time: 567490 ps
-
-# Simulation time: 567490 ps
-
-# Simulation time: 567490 ps
-
-# Simulation time: 573090 ps
-
-# Simulation time: 573090 ps
-
-# Simulation time: 573090 ps
-
-# Simulation time: 573090 ps
-
-# Simulation time: 573090 ps
-
-# Simulation time: 573090 ps
-
-# Simulation time: 573090 ps
-
-# Simulation time: 573090 ps
-
-# Simulation time: 578890 ps
-
-# Simulation time: 578890 ps
-
-# Simulation time: 578890 ps
-
-# Simulation time: 578890 ps
-
-# Simulation time: 578890 ps
-
-# Simulation time: 578890 ps
-
-# Simulation time: 578890 ps
-
-# Simulation time: 578890 ps
-
-# Simulation time: 583490 ps
-
-# Simulation time: 583490 ps
-
-# Simulation time: 583490 ps
-
-# Simulation time: 583490 ps
-
-# Simulation time: 583490 ps
-
-# Simulation time: 583490 ps
-
-# Simulation time: 583490 ps
-
-# Simulation time: 583490 ps
-
-# Simulation time: 588090 ps
-
-# Simulation time: 588090 ps
-
-# Simulation time: 588090 ps
-
-# Simulation time: 588090 ps
-
-# Simulation time: 588090 ps
-
-# Simulation time: 588090 ps
-
-# Simulation time: 588090 ps
-
-# Simulation time: 588090 ps
-
-# Simulation time: 594290 ps
-
-# Simulation time: 594290 ps
-
-# Simulation time: 594290 ps
-
-# Simulation time: 594290 ps
-
-# Simulation time: 594290 ps
-
-# Simulation time: 594290 ps
-
-# Simulation time: 594290 ps
-
-# Simulation time: 594290 ps
-
-# Simulation time: 605290 ps
-
-# Simulation time: 605290 ps
-
-# Simulation time: 605290 ps
-
-# Simulation time: 605290 ps
-
-# Simulation time: 605290 ps
-
-# Simulation time: 605290 ps
-
-# Simulation time: 605290 ps
-
-# Simulation time: 605290 ps
-
-# Simulation time: 875952 ps
-
-# Simulation time: 875952 ps
-
-# Simulation time: 875952 ps
-
-# ** Note: $finish    : Waveform65.vwf.vt(121)
+# ** Note: $finish    : Waveform65.vwf.vt(69)
 #    Time: 1 us  Iteration: 0  Instance: /CPU_vlg_vec_tst
 
-# End time: 08:15:38 on Dec 09,2025, Elapsed time: 0:15:09
+# End time: 20:13:38 on Dec 10,2025, Elapsed time: 0:02:32
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -907,7 +303,787 @@ Reading C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/processadorAOC_20251209081538.sim.vwf
+Warning: Testeprocesso_atual[31] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[30] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[29] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[28] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[27] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[26] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[25] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[24] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[23] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[22] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[21] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[20] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[19] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[18] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[17] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[16] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[15] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[14] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[13] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[12] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[11] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[10] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[9] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[8] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[7] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[6] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[5] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[4] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[3] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[2] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[1] - signal not found in VCD.
+
+Warning: Testeprocesso_atual[0] - signal not found in VCD.
+
+Warning: ValorRS[31] - signal not found in VCD.
+
+Warning: ValorRS[30] - signal not found in VCD.
+
+Warning: ValorRS[29] - signal not found in VCD.
+
+Warning: ValorRS[28] - signal not found in VCD.
+
+Warning: ValorRS[27] - signal not found in VCD.
+
+Warning: ValorRS[26] - signal not found in VCD.
+
+Warning: ValorRS[25] - signal not found in VCD.
+
+Warning: ValorRS[24] - signal not found in VCD.
+
+Warning: ValorRS[23] - signal not found in VCD.
+
+Warning: ValorRS[22] - signal not found in VCD.
+
+Warning: ValorRS[21] - signal not found in VCD.
+
+Warning: ValorRS[20] - signal not found in VCD.
+
+Warning: ValorRS[19] - signal not found in VCD.
+
+Warning: ValorRS[18] - signal not found in VCD.
+
+Warning: ValorRS[17] - signal not found in VCD.
+
+Warning: ValorRS[16] - signal not found in VCD.
+
+Warning: ValorRS[15] - signal not found in VCD.
+
+Warning: ValorRS[14] - signal not found in VCD.
+
+Warning: ValorRS[13] - signal not found in VCD.
+
+Warning: ValorRS[12] - signal not found in VCD.
+
+Warning: ValorRS[11] - signal not found in VCD.
+
+Warning: ValorRS[10] - signal not found in VCD.
+
+Warning: ValorRS[9] - signal not found in VCD.
+
+Warning: ValorRS[8] - signal not found in VCD.
+
+Warning: ValorRS[7] - signal not found in VCD.
+
+Warning: ValorRS[6] - signal not found in VCD.
+
+Warning: ValorRS[5] - signal not found in VCD.
+
+Warning: ValorRS[4] - signal not found in VCD.
+
+Warning: ValorRS[3] - signal not found in VCD.
+
+Warning: ValorRS[2] - signal not found in VCD.
+
+Warning: ValorRS[1] - signal not found in VCD.
+
+Warning: ValorRS[0] - signal not found in VCD.
+
+Warning: ValorRT[31] - signal not found in VCD.
+
+Warning: ValorRT[30] - signal not found in VCD.
+
+Warning: ValorRT[29] - signal not found in VCD.
+
+Warning: ValorRT[28] - signal not found in VCD.
+
+Warning: ValorRT[27] - signal not found in VCD.
+
+Warning: ValorRT[26] - signal not found in VCD.
+
+Warning: ValorRT[25] - signal not found in VCD.
+
+Warning: ValorRT[24] - signal not found in VCD.
+
+Warning: ValorRT[23] - signal not found in VCD.
+
+Warning: ValorRT[22] - signal not found in VCD.
+
+Warning: ValorRT[21] - signal not found in VCD.
+
+Warning: ValorRT[20] - signal not found in VCD.
+
+Warning: ValorRT[19] - signal not found in VCD.
+
+Warning: ValorRT[18] - signal not found in VCD.
+
+Warning: ValorRT[17] - signal not found in VCD.
+
+Warning: ValorRT[16] - signal not found in VCD.
+
+Warning: ValorRT[15] - signal not found in VCD.
+
+Warning: ValorRT[14] - signal not found in VCD.
+
+Warning: ValorRT[13] - signal not found in VCD.
+
+Warning: ValorRT[12] - signal not found in VCD.
+
+Warning: ValorRT[11] - signal not found in VCD.
+
+Warning: ValorRT[10] - signal not found in VCD.
+
+Warning: ValorRT[9] - signal not found in VCD.
+
+Warning: ValorRT[8] - signal not found in VCD.
+
+Warning: ValorRT[7] - signal not found in VCD.
+
+Warning: ValorRT[6] - signal not found in VCD.
+
+Warning: ValorRT[5] - signal not found in VCD.
+
+Warning: ValorRT[4] - signal not found in VCD.
+
+Warning: ValorRT[3] - signal not found in VCD.
+
+Warning: ValorRT[2] - signal not found in VCD.
+
+Warning: ValorRT[1] - signal not found in VCD.
+
+Warning: ValorRT[0] - signal not found in VCD.
+
+Warning: enRD[4] - signal not found in VCD.
+
+Warning: enRD[3] - signal not found in VCD.
+
+Warning: enRD[2] - signal not found in VCD.
+
+Warning: enRD[1] - signal not found in VCD.
+
+Warning: enRD[0] - signal not found in VCD.
+
+Warning: enRS[4] - signal not found in VCD.
+
+Warning: enRS[3] - signal not found in VCD.
+
+Warning: enRS[2] - signal not found in VCD.
+
+Warning: enRS[1] - signal not found in VCD.
+
+Warning: enRS[0] - signal not found in VCD.
+
+Warning: enRT[4] - signal not found in VCD.
+
+Warning: enRT[3] - signal not found in VCD.
+
+Warning: enRT[2] - signal not found in VCD.
+
+Warning: enRT[1] - signal not found in VCD.
+
+Warning: enRT[0] - signal not found in VCD.
+
+Warning: testeBranchControl - signal not found in VCD.
+
+Warning: testeDadosMux[31] - signal not found in VCD.
+
+Warning: testeDadosMux[30] - signal not found in VCD.
+
+Warning: testeDadosMux[29] - signal not found in VCD.
+
+Warning: testeDadosMux[28] - signal not found in VCD.
+
+Warning: testeDadosMux[27] - signal not found in VCD.
+
+Warning: testeDadosMux[26] - signal not found in VCD.
+
+Warning: testeDadosMux[25] - signal not found in VCD.
+
+Warning: testeDadosMux[24] - signal not found in VCD.
+
+Warning: testeDadosMux[23] - signal not found in VCD.
+
+Warning: testeDadosMux[22] - signal not found in VCD.
+
+Warning: testeDadosMux[21] - signal not found in VCD.
+
+Warning: testeDadosMux[20] - signal not found in VCD.
+
+Warning: testeDadosMux[19] - signal not found in VCD.
+
+Warning: testeDadosMux[18] - signal not found in VCD.
+
+Warning: testeDadosMux[17] - signal not found in VCD.
+
+Warning: testeDadosMux[16] - signal not found in VCD.
+
+Warning: testeDadosMux[15] - signal not found in VCD.
+
+Warning: testeDadosMux[14] - signal not found in VCD.
+
+Warning: testeDadosMux[13] - signal not found in VCD.
+
+Warning: testeDadosMux[12] - signal not found in VCD.
+
+Warning: testeDadosMux[11] - signal not found in VCD.
+
+Warning: testeDadosMux[10] - signal not found in VCD.
+
+Warning: testeDadosMux[9] - signal not found in VCD.
+
+Warning: testeDadosMux[8] - signal not found in VCD.
+
+Warning: testeDadosMux[7] - signal not found in VCD.
+
+Warning: testeDadosMux[6] - signal not found in VCD.
+
+Warning: testeDadosMux[5] - signal not found in VCD.
+
+Warning: testeDadosMux[4] - signal not found in VCD.
+
+Warning: testeDadosMux[3] - signal not found in VCD.
+
+Warning: testeDadosMux[2] - signal not found in VCD.
+
+Warning: testeDadosMux[1] - signal not found in VCD.
+
+Warning: testeDadosMux[0] - signal not found in VCD.
+
+Warning: testeDesvioControl - signal not found in VCD.
+
+Warning: testeIN[31] - signal not found in VCD.
+
+Warning: testeIN[30] - signal not found in VCD.
+
+Warning: testeIN[29] - signal not found in VCD.
+
+Warning: testeIN[28] - signal not found in VCD.
+
+Warning: testeIN[27] - signal not found in VCD.
+
+Warning: testeIN[26] - signal not found in VCD.
+
+Warning: testeIN[25] - signal not found in VCD.
+
+Warning: testeIN[24] - signal not found in VCD.
+
+Warning: testeIN[23] - signal not found in VCD.
+
+Warning: testeIN[22] - signal not found in VCD.
+
+Warning: testeIN[21] - signal not found in VCD.
+
+Warning: testeIN[20] - signal not found in VCD.
+
+Warning: testeIN[19] - signal not found in VCD.
+
+Warning: testeIN[18] - signal not found in VCD.
+
+Warning: testeIN[17] - signal not found in VCD.
+
+Warning: testeIN[16] - signal not found in VCD.
+
+Warning: testeIN[15] - signal not found in VCD.
+
+Warning: testeIN[14] - signal not found in VCD.
+
+Warning: testeIN[13] - signal not found in VCD.
+
+Warning: testeIN[12] - signal not found in VCD.
+
+Warning: testeIN[11] - signal not found in VCD.
+
+Warning: testeIN[10] - signal not found in VCD.
+
+Warning: testeIN[9] - signal not found in VCD.
+
+Warning: testeIN[8] - signal not found in VCD.
+
+Warning: testeIN[7] - signal not found in VCD.
+
+Warning: testeIN[6] - signal not found in VCD.
+
+Warning: testeIN[5] - signal not found in VCD.
+
+Warning: testeIN[4] - signal not found in VCD.
+
+Warning: testeIN[3] - signal not found in VCD.
+
+Warning: testeIN[2] - signal not found in VCD.
+
+Warning: testeIN[1] - signal not found in VCD.
+
+Warning: testeIN[0] - signal not found in VCD.
+
+Warning: testeImediato[31] - signal not found in VCD.
+
+Warning: testeImediato[30] - signal not found in VCD.
+
+Warning: testeImediato[29] - signal not found in VCD.
+
+Warning: testeImediato[28] - signal not found in VCD.
+
+Warning: testeImediato[27] - signal not found in VCD.
+
+Warning: testeImediato[26] - signal not found in VCD.
+
+Warning: testeImediato[25] - signal not found in VCD.
+
+Warning: testeImediato[24] - signal not found in VCD.
+
+Warning: testeImediato[23] - signal not found in VCD.
+
+Warning: testeImediato[22] - signal not found in VCD.
+
+Warning: testeImediato[21] - signal not found in VCD.
+
+Warning: testeImediato[20] - signal not found in VCD.
+
+Warning: testeImediato[19] - signal not found in VCD.
+
+Warning: testeImediato[18] - signal not found in VCD.
+
+Warning: testeImediato[17] - signal not found in VCD.
+
+Warning: testeImediato[16] - signal not found in VCD.
+
+Warning: testeImediato[15] - signal not found in VCD.
+
+Warning: testeImediato[14] - signal not found in VCD.
+
+Warning: testeImediato[13] - signal not found in VCD.
+
+Warning: testeImediato[12] - signal not found in VCD.
+
+Warning: testeImediato[11] - signal not found in VCD.
+
+Warning: testeImediato[10] - signal not found in VCD.
+
+Warning: testeImediato[9] - signal not found in VCD.
+
+Warning: testeImediato[8] - signal not found in VCD.
+
+Warning: testeImediato[7] - signal not found in VCD.
+
+Warning: testeImediato[6] - signal not found in VCD.
+
+Warning: testeImediato[5] - signal not found in VCD.
+
+Warning: testeImediato[4] - signal not found in VCD.
+
+Warning: testeImediato[3] - signal not found in VCD.
+
+Warning: testeImediato[2] - signal not found in VCD.
+
+Warning: testeImediato[1] - signal not found in VCD.
+
+Warning: testeImediato[0] - signal not found in VCD.
+
+Warning: testeJump[25] - signal not found in VCD.
+
+Warning: testeJump[24] - signal not found in VCD.
+
+Warning: testeJump[23] - signal not found in VCD.
+
+Warning: testeJump[22] - signal not found in VCD.
+
+Warning: testeJump[21] - signal not found in VCD.
+
+Warning: testeJump[20] - signal not found in VCD.
+
+Warning: testeJump[19] - signal not found in VCD.
+
+Warning: testeJump[18] - signal not found in VCD.
+
+Warning: testeJump[17] - signal not found in VCD.
+
+Warning: testeJump[16] - signal not found in VCD.
+
+Warning: testeJump[15] - signal not found in VCD.
+
+Warning: testeJump[14] - signal not found in VCD.
+
+Warning: testeJump[13] - signal not found in VCD.
+
+Warning: testeJump[12] - signal not found in VCD.
+
+Warning: testeJump[11] - signal not found in VCD.
+
+Warning: testeJump[10] - signal not found in VCD.
+
+Warning: testeJump[9] - signal not found in VCD.
+
+Warning: testeJump[8] - signal not found in VCD.
+
+Warning: testeJump[7] - signal not found in VCD.
+
+Warning: testeJump[6] - signal not found in VCD.
+
+Warning: testeJump[5] - signal not found in VCD.
+
+Warning: testeJump[4] - signal not found in VCD.
+
+Warning: testeJump[3] - signal not found in VCD.
+
+Warning: testeJump[2] - signal not found in VCD.
+
+Warning: testeJump[1] - signal not found in VCD.
+
+Warning: testeJump[0] - signal not found in VCD.
+
+Warning: testeMemControl - signal not found in VCD.
+
+Warning: testeOPCODE[5] - signal not found in VCD.
+
+Warning: testeOPCODE[4] - signal not found in VCD.
+
+Warning: testeOPCODE[3] - signal not found in VCD.
+
+Warning: testeOPCODE[2] - signal not found in VCD.
+
+Warning: testeOPCODE[1] - signal not found in VCD.
+
+Warning: testeOPCODE[0] - signal not found in VCD.
+
+Warning: testePC[31] - signal not found in VCD.
+
+Warning: testePC[30] - signal not found in VCD.
+
+Warning: testePC[29] - signal not found in VCD.
+
+Warning: testePC[28] - signal not found in VCD.
+
+Warning: testePC[27] - signal not found in VCD.
+
+Warning: testePC[26] - signal not found in VCD.
+
+Warning: testePC[25] - signal not found in VCD.
+
+Warning: testePC[24] - signal not found in VCD.
+
+Warning: testePC[23] - signal not found in VCD.
+
+Warning: testePC[22] - signal not found in VCD.
+
+Warning: testePC[21] - signal not found in VCD.
+
+Warning: testePC[20] - signal not found in VCD.
+
+Warning: testePC[19] - signal not found in VCD.
+
+Warning: testePC[18] - signal not found in VCD.
+
+Warning: testePC[17] - signal not found in VCD.
+
+Warning: testePC[16] - signal not found in VCD.
+
+Warning: testePC[15] - signal not found in VCD.
+
+Warning: testePC[14] - signal not found in VCD.
+
+Warning: testePC[13] - signal not found in VCD.
+
+Warning: testePC[12] - signal not found in VCD.
+
+Warning: testePC[11] - signal not found in VCD.
+
+Warning: testePC[10] - signal not found in VCD.
+
+Warning: testePC[9] - signal not found in VCD.
+
+Warning: testePC[8] - signal not found in VCD.
+
+Warning: testePC[7] - signal not found in VCD.
+
+Warning: testePC[6] - signal not found in VCD.
+
+Warning: testePC[5] - signal not found in VCD.
+
+Warning: testePC[4] - signal not found in VCD.
+
+Warning: testePC[3] - signal not found in VCD.
+
+Warning: testePC[2] - signal not found in VCD.
+
+Warning: testePC[1] - signal not found in VCD.
+
+Warning: testePC[0] - signal not found in VCD.
+
+Warning: testeResultComparacao - signal not found in VCD.
+
+Warning: testeSelMux[2] - signal not found in VCD.
+
+Warning: testeSelMux[1] - signal not found in VCD.
+
+Warning: testeSelMux[0] - signal not found in VCD.
+
+Warning: testeSelecaoMuxDesvio - signal not found in VCD.
+
+Warning: testeUla[31] - signal not found in VCD.
+
+Warning: testeUla[30] - signal not found in VCD.
+
+Warning: testeUla[29] - signal not found in VCD.
+
+Warning: testeUla[28] - signal not found in VCD.
+
+Warning: testeUla[27] - signal not found in VCD.
+
+Warning: testeUla[26] - signal not found in VCD.
+
+Warning: testeUla[25] - signal not found in VCD.
+
+Warning: testeUla[24] - signal not found in VCD.
+
+Warning: testeUla[23] - signal not found in VCD.
+
+Warning: testeUla[22] - signal not found in VCD.
+
+Warning: testeUla[21] - signal not found in VCD.
+
+Warning: testeUla[20] - signal not found in VCD.
+
+Warning: testeUla[19] - signal not found in VCD.
+
+Warning: testeUla[18] - signal not found in VCD.
+
+Warning: testeUla[17] - signal not found in VCD.
+
+Warning: testeUla[16] - signal not found in VCD.
+
+Warning: testeUla[15] - signal not found in VCD.
+
+Warning: testeUla[14] - signal not found in VCD.
+
+Warning: testeUla[13] - signal not found in VCD.
+
+Warning: testeUla[12] - signal not found in VCD.
+
+Warning: testeUla[11] - signal not found in VCD.
+
+Warning: testeUla[10] - signal not found in VCD.
+
+Warning: testeUla[9] - signal not found in VCD.
+
+Warning: testeUla[8] - signal not found in VCD.
+
+Warning: testeUla[7] - signal not found in VCD.
+
+Warning: testeUla[6] - signal not found in VCD.
+
+Warning: testeUla[5] - signal not found in VCD.
+
+Warning: testeUla[4] - signal not found in VCD.
+
+Warning: testeUla[3] - signal not found in VCD.
+
+Warning: testeUla[2] - signal not found in VCD.
+
+Warning: testeUla[1] - signal not found in VCD.
+
+Warning: testeUla[0] - signal not found in VCD.
+
+Warning: teste_fim - signal not found in VCD.
+
+Warning: teste_sinal_cproc - signal not found in VCD.
+
+Warning: teste_troca_contexto - signal not found in VCD.
+
+Warning: testedadoMem[31] - signal not found in VCD.
+
+Warning: testedadoMem[30] - signal not found in VCD.
+
+Warning: testedadoMem[29] - signal not found in VCD.
+
+Warning: testedadoMem[28] - signal not found in VCD.
+
+Warning: testedadoMem[27] - signal not found in VCD.
+
+Warning: testedadoMem[26] - signal not found in VCD.
+
+Warning: testedadoMem[25] - signal not found in VCD.
+
+Warning: testedadoMem[24] - signal not found in VCD.
+
+Warning: testedadoMem[23] - signal not found in VCD.
+
+Warning: testedadoMem[22] - signal not found in VCD.
+
+Warning: testedadoMem[21] - signal not found in VCD.
+
+Warning: testedadoMem[20] - signal not found in VCD.
+
+Warning: testedadoMem[19] - signal not found in VCD.
+
+Warning: testedadoMem[18] - signal not found in VCD.
+
+Warning: testedadoMem[17] - signal not found in VCD.
+
+Warning: testedadoMem[16] - signal not found in VCD.
+
+Warning: testedadoMem[15] - signal not found in VCD.
+
+Warning: testedadoMem[14] - signal not found in VCD.
+
+Warning: testedadoMem[13] - signal not found in VCD.
+
+Warning: testedadoMem[12] - signal not found in VCD.
+
+Warning: testedadoMem[11] - signal not found in VCD.
+
+Warning: testedadoMem[10] - signal not found in VCD.
+
+Warning: testedadoMem[9] - signal not found in VCD.
+
+Warning: testedadoMem[8] - signal not found in VCD.
+
+Warning: testedadoMem[7] - signal not found in VCD.
+
+Warning: testedadoMem[6] - signal not found in VCD.
+
+Warning: testedadoMem[5] - signal not found in VCD.
+
+Warning: testedadoMem[4] - signal not found in VCD.
+
+Warning: testedadoMem[3] - signal not found in VCD.
+
+Warning: testedadoMem[2] - signal not found in VCD.
+
+Warning: testedadoMem[1] - signal not found in VCD.
+
+Warning: testedadoMem[0] - signal not found in VCD.
+
+Warning: testeoperando[31] - signal not found in VCD.
+
+Warning: testeoperando[30] - signal not found in VCD.
+
+Warning: testeoperando[29] - signal not found in VCD.
+
+Warning: testeoperando[28] - signal not found in VCD.
+
+Warning: testeoperando[27] - signal not found in VCD.
+
+Warning: testeoperando[26] - signal not found in VCD.
+
+Warning: testeoperando[25] - signal not found in VCD.
+
+Warning: testeoperando[24] - signal not found in VCD.
+
+Warning: testeoperando[23] - signal not found in VCD.
+
+Warning: testeoperando[22] - signal not found in VCD.
+
+Warning: testeoperando[21] - signal not found in VCD.
+
+Warning: testeoperando[20] - signal not found in VCD.
+
+Warning: testeoperando[19] - signal not found in VCD.
+
+Warning: testeoperando[18] - signal not found in VCD.
+
+Warning: testeoperando[17] - signal not found in VCD.
+
+Warning: testeoperando[16] - signal not found in VCD.
+
+Warning: testeoperando[15] - signal not found in VCD.
+
+Warning: testeoperando[14] - signal not found in VCD.
+
+Warning: testeoperando[13] - signal not found in VCD.
+
+Warning: testeoperando[12] - signal not found in VCD.
+
+Warning: testeoperando[11] - signal not found in VCD.
+
+Warning: testeoperando[10] - signal not found in VCD.
+
+Warning: testeoperando[9] - signal not found in VCD.
+
+Warning: testeoperando[8] - signal not found in VCD.
+
+Warning: testeoperando[7] - signal not found in VCD.
+
+Warning: testeoperando[6] - signal not found in VCD.
+
+Warning: testeoperando[5] - signal not found in VCD.
+
+Warning: testeoperando[4] - signal not found in VCD.
+
+Warning: testeoperando[3] - signal not found in VCD.
+
+Warning: testeoperando[2] - signal not found in VCD.
+
+Warning: testeoperando[1] - signal not found in VCD.
+
+Warning: testeoperando[0] - signal not found in VCD.
+
+Warning: testesaidaCent[3] - signal not found in VCD.
+
+Warning: testesaidaCent[2] - signal not found in VCD.
+
+Warning: testesaidaCent[1] - signal not found in VCD.
+
+Warning: testesaidaCent[0] - signal not found in VCD.
+
+Warning: testesaidaDez[3] - signal not found in VCD.
+
+Warning: testesaidaDez[2] - signal not found in VCD.
+
+Warning: testesaidaDez[1] - signal not found in VCD.
+
+Warning: testesaidaDez[0] - signal not found in VCD.
+
+Warning: testesaidaUNI[3] - signal not found in VCD.
+
+Warning: testesaidaUNI[2] - signal not found in VCD.
+
+Warning: testesaidaUNI[1] - signal not found in VCD.
+
+Warning: testesaidaUNI[0] - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim/processadorAOC_20251210201338.sim.vwf
 
 Finished VCD to VWF conversion.
 

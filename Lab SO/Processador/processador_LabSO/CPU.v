@@ -12,8 +12,36 @@ module CPU(
     output reg ledprocesso,
     output reg ledin,
     output wire [6:0] uniProc,
+	 
+	 //***********************testes***********************
 	 output wire testeSinal
-
+	 /*output reg [31:0] testePC,
+    output wire [4:0] enRD,
+    output wire [4:0] enRS,
+    output wire [4:0] enRT,
+    output wire [31:0] testeDadosMux,
+    output reg [31:0] testeImediato,
+    output wire [2:0] testeSelMux,
+    output wire [31:0] ValorRS,
+	 output wire [31:0] ValorRT,
+    output wire [5:0] testeOPCODE,
+    output wire testeDesvioControl,
+	 output wire testeBranchControl,
+    output wire testeSelecaoMuxDesvio,
+    output wire testeResultComparacao,
+    output wire [31:0] testeIN,
+    output wire [31:0] testedadoMem,
+    output wire [31:0] testeUla,
+    output wire [3:0] testesaidaUNI,
+    output wire [3:0] testesaidaDez,
+    output wire [3:0] testesaidaCent,
+    output wire [25:0] testeJump,
+    output reg [31:0] Testeprocesso_atual,
+	 output reg [31:0] testeoperando,
+	 output wire testeMemControl,
+	 output wire teste_troca_contexto,
+	 output wire teste_sinal_cproc,
+	 output wire teste_fim*/
 );
 
     // Declarações internas
@@ -26,9 +54,8 @@ module CPU(
     reg [31:0] dadosRegistro;
     reg [31:0] pc, pcsomado;
     reg [31:0] operando;
-    //reg [31:0] processo_atual;
-	
-	 wire [31:0] processo_atual;
+    reg [31:0] processo_atual;
+
     wire [3:0] inUnidade, inDezena, inCentena, un, dez, cen;
     wire botaoIN,ButtonNeg;
     wire selecaoMuxDesvio;
@@ -93,7 +120,7 @@ module CPU(
     mux6 muxRegistro(.dadoRegControl(dadoRegControl),.HiLoData(HILOdata),.resulULA(resultadoULA),.valorRegRS(rs),.dadoMEM(dadoMem),.dadosEntrada(dadosDeEntrada),.imediato(imediatoExtendido),.PC(pcsomado),.DadosRegistro(dadosMux6),.pc_contexto(pc_contexto));
        
     //ligaçao com memoria de dados
-    simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem),.proc(processo_atual));
+    simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
         
     //ligaçao com entrada e saida
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
@@ -115,7 +142,31 @@ module CPU(
     assign selecaoMuxDesvio = branchControl & resultComparacao;
     
     assign halt = parada;
-	
+	/* assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
+	 assign testeBranchControl = branchControl;
+    assign testeResultComparacao = resultComparacao;
+    assign testeIN = dadosDeEntrada;
+    assign testedadoMem = dadoMem;
+    assign testeMemControl = memControl;
+    assign testeJump = jump;
+    assign testeUla = resultadoULA;
+    assign testeSelMux = dadoRegControl;
+    assign ValorRS = rs;
+	 assign ValorRT = rt;
+    assign enRD = endRD;
+    assign enRS = endRS;
+    assign enRT = endRT;
+    assign testeDadosMux = dadosMux6;
+    assign botaoIN = botaoPlaca;
+    assign testesaidaUNI = inUnidade;
+    assign testesaidaDez = inDezena;
+    assign testesaidaCent = inCentena;
+    assign testeDesvioControl = DesvioControl;
+    assign testeOPCODE = opcode;
+	 assign teste_troca_contexto = troca_contexto;
+	 assign teste_sinal_cproc = mudaProcesso;
+	 assign teste_fim = fimprocesso;
+	 //assign Testeprocesso_atual = processo_rodando;*/
     
     always@(negedge clk) 
     begin
@@ -128,11 +179,7 @@ module CPU(
     
     always@(posedge clk or posedge reset)
     begin
-        if(reset) 
-				begin
-					pc<=32'd0;
-					//processo_atual = 32'd0;
-				end
+        if(reset) pc<=32'd0;
        
         else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
         else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
@@ -154,7 +201,12 @@ module CPU(
     begin
         pcsomado = pc + 32'd1;
 		  
-		  /*
+		    	if (opcode == in)ledin = 1'b1;
+				else
+					begin
+						ledin = 1'b0;
+					end
+		  
 				if(pc == 32'd41) 
 					begin
 						ledmenu = 1'b1;
@@ -175,84 +227,29 @@ module CPU(
 						
 					end
 					
-				else if(pc == 32'd300)  
+				else
 					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd1;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;
-						
-					end	
-					
-				 else if(pc == 32'd309)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd1;
-						ledprocesso = 1'b1;
-						ledin = 1'b0;
-						
-					end		
-					
-				 else if(pc == 32'd600 || pc == 32'd606)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd2;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;
-						
-					end		
-					
-				else if(pc == 32'd609)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd2;
-						ledprocesso = 1'b1;
-						ledin = 1'b0;
-						
-					end	
-		
-				else if(pc == 32'd904)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd3;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;
-						
+							ledmenu = 1'b0;
+							lednumprocessos = 1'b0;
+							ledprocesso = 1'b1;
+							
+							
+								
+							if	(pc < 32'd300) processo_atual <= 32'd0;
+							else if(pc < 32'd600)  processo_atual <= 32'd1;
+							else if(pc < 32'd900)  processo_atual <= 32'd2;
+							else if(pc < 32'd1200) processo_atual <= 32'd3;
+							else if(pc < 32'd1500) processo_atual <= 32'd4;
+							else if(pc < 32'd1800) processo_atual <= 32'd5;
+							else if(pc < 32'd2100) processo_atual <= 32'd6;
+							else if(pc < 32'd2400) processo_atual <= 32'd7;
+							else if(pc < 32'd2700) processo_atual <= 32'd8;
+							else if(pc < 32'd3000) processo_atual <= 32'd9;
+							else if(pc < 32'd3300) processo_atual <= 32'd10;
+								
 					end
-					
-				else if(pc == 32'd912)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd3;
-						ledprocesso = 1'b1;
-						ledin = 1'b0;
-						
-					end
-				
-				else 
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd0;
-						ledprocesso = 1'b0;
-						ledin = 1'b0;
-						
-					end	
-					
-				*/
+				  
+							//Testeprocesso_atual<=processo_atual;
     end
     
    /* always@(posedge mudaProcesso)
@@ -285,7 +282,27 @@ module CPU(
         else  HILOdata = regLO;
     end
     
-
+   /* always@(posedge clk || ledControl)
+    begin
+        if (reset)
+        begin
+            ledmenu = 1'b0;
+            lednumprocessos = 1'b0;
+            ledprocesso = 1'b0;
+            ledin = 1'b0;
+        end
+        else if(ledControl)
+        begin
+             if (imediato == 11'd1) ledmenu = 1'b1;
+             else if (imediato == 11'd2) ledmenu = 1'b0;
+             else if (imediato == 11'd3) ledin = 1'b1;
+             else if (imediato == 11'd4) ledin = 1'b0;
+             else if (imediato == 11'd5) lednumprocessos = 1'b1;
+             else if (imediato == 11'd6) lednumprocessos = 1'b0;
+             else if (imediato == 11'd7) ledprocesso = 1'b1;
+             else if (imediato == 11'd8) ledprocesso = 1'b0;
+        end
+    end*/
     
     always@(imediatoExtendido,rt)
     begin
@@ -297,199 +314,71 @@ module CPU(
 	 
 	 //**************************************************************************************
 	 
-	 always@(*)
-		begin
-		   
-			case(pc)
-			
-				32'd41:
-					begin
-						ledmenu = 1'b1;
-						lednumprocessos = 1'b0;
-						//processo_atual = 32'd0;
-						ledprocesso = 1'b0;
-						ledin = 1'b0;					
-					end
-					
-				32'd56:
-					begin
-						lednumprocessos = 1'b1;
-						ledmenu = 1'b0;
-						//processo_atual = 32'd0;
-						ledprocesso = 1'b0;
-						ledin = 1'b0;					
-					end
+	   
 
-				32'd300:
-					begin
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						//processo_atual = 32'd1;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;					
-					end
-					
-				32'd309:
-					begin
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						//processo_atual = 32'd1;
-						ledprocesso = 1'b1;
-						ledin = 1'b0;					
-	
-					end	
-				
-				32'd600:
-					begin
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						//processo_atual = 32'd2;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;					
-					end
-	
-				
-				32'd606:
-					begin
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						//processo_atual = 32'd2;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;					
-					end	
-				
-				32'd609:
-					begin
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						//processo_atual = 32'd2;
-						ledprocesso = 1'b1;
-						ledin = 1'b0;					
-					end				
-	
-				32'd904:
-					begin
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						//processo_atual = 32'd3;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;					
-					end		
-
-				32'd912:
-					begin
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						//processo_atual = 32'd3;
-						ledprocesso = 1'b1;
-						ledin = 1'b0;					
-					end		
-		
-		
-				default:
-					begin
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						ledprocesso = 1'b0;
-						ledin = 1'b0;					
-					end		
-			endcase
-			
-		end
+/*  always@(*)
+    begin
 	 
-	/* always@(halt)
-		begin
-			
-			if(halt == 1'b1)
-				begin
-						if(pc == 32'd41) 
-					begin
-						ledmenu = 1'b1;
-						lednumprocessos = 1'b0;
-						processo_atual = 32'd0;
-						ledprocesso = 1'b0;
-						ledin = 1'b0;
-					end
+	    if(opcode == in) 
+			begin
+				ledin = 1'b1;
 				
-				else if(pc == 32'd56)  
+				if(pc < 32'd300)       processo_atual = 32'd0;
+				
+				if(pc == 32'd41)  ledmenu = 1'b1;
+				
+				if(pc == 32'd56)  lednumprocessos = 1'b1;
+				
+				else
 					begin
-					
-						lednumprocessos = 1'b1;
-						ledmenu = 1'b0;
-						processo_atual = 32'd0;
-						ledprocesso = 1'b0;
-						ledin = 1'b0;
 						
+						ledprocesso = 1'b1;
+						
+						if(pc < 32'd600)  processo_atual = 32'd1;
+						else if(pc < 32'd900)  processo_atual = 32'd2;
+						else if(pc < 32'd1200) processo_atual = 32'd3;
+						else if(pc < 32'd1500) processo_atual = 32'd4;
+						else if(pc < 32'd1800) processo_atual = 32'd5;
+						else if(pc < 32'd2100) processo_atual = 32'd6;
+						else if(pc < 32'd2400) processo_atual = 32'd7;
+						else if(pc < 32'd2700) processo_atual = 32'd8;
+						else if(pc < 32'd3000) processo_atual = 32'd9;
+						else if(pc < 32'd3300) processo_atual = 32'd10;
 					end
-					
-				else if(pc == 32'd300)  
+			end
+			
+		else if (opcode == out) 
+			begin
+			
+				if(pc < 32'd300)       processo_atual = 32'd0;
+				
+				else
 					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd1;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;
 						
-					end	
-					
-				 else if(pc == 32'd309)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd1;
 						ledprocesso = 1'b1;
-						ledin = 1'b0;
 						
-					end		
-					
-				 else if(pc == 32'd600 || pc == 32'd606)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd2;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;
-						
-					end		
-					
-				else if(pc == 32'd609)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd2;
-						ledprocesso = 1'b1;
-						ledin = 1'b0;
-						
-					end	
+						if(pc < 32'd600)  processo_atual = 32'd1;
+						else if(pc < 32'd900)  processo_atual = 32'd2;
+						else if(pc < 32'd1200) processo_atual = 32'd3;
+						else if(pc < 32'd1500) processo_atual = 32'd4;
+						else if(pc < 32'd1800) processo_atual = 32'd5;
+						else if(pc < 32'd2100) processo_atual = 32'd6;
+						else if(pc < 32'd2400) processo_atual = 32'd7;
+						else if(pc < 32'd2700) processo_atual = 32'd8;
+						else if(pc < 32'd3000) processo_atual = 32'd9;
+						else if(pc < 32'd3300) processo_atual = 32'd10;
+					end
+			end
 		
-				else if(pc == 32'd904)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd3;
-						ledprocesso = 1'b1;
-						ledin = 1'b1;
-						
-					end
-					
-				else if(pc == 32'd912)  
-					begin
-					
-						lednumprocessos = 1'b0;
-						ledmenu = 1'b0;
-						processo_atual = 32'd3;
-						ledprocesso = 1'b1;
-						ledin = 1'b0;
-						
-					end
-				end
-		end*/
-	 
+		else
+			begin
+			  ledmenu = 1'b0;
+			  lednumprocessos= 1'b0;
+			  ledprocesso= 1'b0;
+			  ledin= 1'b0;
+			end
+	
+	 end*/
 	 
 	 
 

@@ -94,8 +94,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 			// -------  menu --------
-			memoria[32'd37] = {led,26'd2};//led , 2
-			memoria[32'd38] = {led,26'd5};//led, 5		
+			memoria[32'd37] = {led,26'd2};//led , 27
+			memoria[32'd38] = {led,26'd5};//led, 5
 			memoria[32'd39] = {movi,R22,RZERO,RZERO,11'd12};//movi r22, 0 // contador de processos que foram iniciados
 			memoria[32'd40] = {sw,RZERO,R22,RZERO,11'd1};//sw rzero 1(r22)
 			memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
