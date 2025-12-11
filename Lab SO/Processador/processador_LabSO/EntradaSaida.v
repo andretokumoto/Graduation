@@ -19,7 +19,7 @@ BCD bcd(.binario(saidaDeDados/*dadosEscrita*/),.unidade(unidade),.dezena(dezena)
  always@(*)//saida
   begin
   
-   if(entradaSaidaControl==2'b01)  saidaDeDados = dadosEscrita;
+   if(entradaSaidaControl==2'b01 || entradaSaidaControl==2'b10)  saidaDeDados = dadosEscrita;
 	
   end
   
@@ -27,7 +27,7 @@ BCD bcd(.binario(saidaDeDados/*dadosEscrita*/),.unidade(unidade),.dezena(dezena)
   
   always@(posedge clk)//entrada
    begin 
-	  if(entradaSaidaControl==2'b10) DadosLidos = {28'b0000000000000000000000000000,entradaDeDados};
+	  if(entradaSaidaControl==2'b10 ) DadosLidos = {28'b0000000000000000000000000000,entradaDeDados};
 	end
 
 endmodule 

@@ -98,7 +98,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd38] = {led,26'd5};//led, 5
 			memoria[32'd39] = {movi,R22,RZERO,RZERO,11'd12};//movi r22, 0 // contador de processos que foram iniciados
 			memoria[32'd40] = {sw,RZERO,R22,RZERO,11'd1};//sw rzero 1(r22)
-			memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
+			memoria[32'd41] = {in,R20,RZERO,RZERO,11'd0};//in r20 // entrada do numero de processos que irão rodar
 			//memoria[32'd41] = {movi,R20,RZERO,RZERO,11'd1};
 			
 			memoria[32'd42] = {led,26'd6};//led, 6		
@@ -121,7 +121,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			//----entrada processo
 			memoria[32'd55] = {led,26'd7};//led 7 
-			memoria[32'd56] = {in,R21,21'd0};//in r21 processo que ira rodar
+			memoria[32'd56] = {in,R21,RZERO,RZERO,11'd0};//in r21 processo que ira rodar
 			//memoria[32'd56] = {movi,R21,RZERO,RZERO,11'd3};
 			
 			memoria[32'd57] = {led,26'd8};//led 8
