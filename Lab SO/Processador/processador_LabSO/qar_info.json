@@ -1,7 +1,7 @@
 {
-	"common_dir" : "/home/aluno/Downloads/andre_restored/",
-	"acds_version" : "Version 20.1.0",
-	"platform" : "linux",
-	"os" : "Ubuntu 18.04.6",
+	"common_dir" : "C:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/",
+	"acds_version" : "Version 23.1std.1",
+	"platform" : "windows",
+	"os" : "Windows 10",
 	"qpf" : "processadorAOC.qpf"
 }

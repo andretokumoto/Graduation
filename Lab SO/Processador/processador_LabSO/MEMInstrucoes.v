@@ -1,6 +1,6 @@
-module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock, biosEmExecucao, encerrarBios);
+module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clock/*, entradaDeInstrucao,ControleFimDeLeitura, controleSalvaInstrucao*/, biosEmExecucao, encerrarBios);
 
-    input [31:0] pc;
+    input [31:0] pc/*, entradaDeInstrucao*/;
     input clock, reset;
     input encerrarBios;
     /*input [1:0] controleSalvaInstrucao,ControleFimDeLeitura;*/
@@ -94,11 +94,11 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 			// -------  menu --------
-			memoria[32'd37] = {led,26'd2};//led , 27
-			memoria[32'd38] = {led,26'd5};//led, 5
+			memoria[32'd37] = {led,26'd2};//led , 2
+			memoria[32'd38] = {led,26'd5};//led, 5		
 			memoria[32'd39] = {movi,R22,RZERO,RZERO,11'd12};//movi r22, 0 // contador de processos que foram iniciados
 			memoria[32'd40] = {sw,RZERO,R22,RZERO,11'd1};//sw rzero 1(r22)
-			memoria[32'd41] = {in,R20,RZERO,RZERO,11'd0};//in r20 // entrada do numero de processos que irão rodar
+			memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
 			//memoria[32'd41] = {movi,R20,RZERO,RZERO,11'd1};
 			
 			memoria[32'd42] = {led,26'd6};//led, 6		
@@ -121,7 +121,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			//----entrada processo
 			memoria[32'd55] = {led,26'd7};//led 7 
-			memoria[32'd56] = {in,R21,RZERO,RZERO,11'd0};//in r21 processo que ira rodar
+			memoria[32'd56] = {in,R21,21'd0};//in r21 processo que ira rodar
 			//memoria[32'd56] = {movi,R21,RZERO,RZERO,11'd3};
 			
 			memoria[32'd57] = {led,26'd8};//led 8
@@ -397,7 +397,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			
 //fatorial
 	//memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd4};
-		memoria[32'd300] = {in,5'd2,5'd0,5'd0,11'd3};//in r2
+		memoria[32'd300] = {in,5'd2,5'd0,5'd0,11'd1};//in r2
 		memoria[32'd301] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
 		memoria[32'd302] = {6'b011010,5'd7,5'd0,5'd0,11'd1};//movi r7,1
 		memoria[32'd303] = {6'b011001,5'd3,5'd7,5'd7,11'd0};//mov r3,r7
@@ -406,24 +406,24 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd306] = {6'b000011,5'd2,5'd2,5'd2,11'd1};//subi r2,r2,1
 		memoria[32'd307] = {6'b010001,26'd304};//j linha 4
 		memoria[32'd308] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
-		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
+		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd1};//out r3
 		memoria[32'd310] = {j,26'd236};//fim
 	
  //exponencial
 
 	   //memoria[32'd600] = {movi,5'd3,RZERO,RZERO,11'd3};  //in r3
 		
-		memoria[32'd600] = {in,5'd3,21'd0};  //in r3
+		memoria[32'd600] = {in,5'd3,21'd2};  //in r3
 		memoria[32'd601] = {movi,5'd7,5'd0,5'd0,11'd1};// movi , r7, 1
 		memoria[32'd602] = {movi,5'd2,5'd0,5'd0,11'd1};// movi , r2, 1
 		//memoria[32'd603] = {movi,5'd4,RZERO,RZERO,11'd2};// movi r4
-		memoria[32'd603] = {in,5'd4,21'd0};// in r4
+		memoria[32'd603] = {in,5'd4,21'd2};// in r4
 		memoria[32'd604] = {beq,5'd8,5'd0,5'd4,11'd5};// beq RZERO, r4, +5
 		memoria[32'd605] = {mult,5'd7,5'd7,5'd3,11'd0};// mult r7, r7, r3
 		memoria[32'd606] = {beq,5'd8,5'd2,5'd4,11'd3};// beq r4, r2, +3
 		memoria[32'd607] = {addi,5'd2,5'd2,5'd2,11'd1};// addi r2 , 1
 		memoria[32'd608] = {j,26'd605};// jump [5]
-		memoria[32'd609] = {out,5'd7,5'd7,5'd7,11'd0};//out r7
+		memoria[32'd609] = {out,5'd7,5'd7,5'd7,11'd2};//out r7
 		memoria[32'd610] = {j,26'd236};//fim
 		
 
@@ -435,7 +435,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd902] = {movi,5'd4,RZERO,RZERO,11'd1};//movi r3, 1		
 			memoria[32'd903] = {movi,5'd4,RZERO,RZERO,11'd3};//movi r4, 3	//contador
 			
-			memoria[32'd904] = {in,5'd5,21'd0};//in r5
+			memoria[32'd904] = {in,5'd5,21'd3};//in r5
 			//memoria[32'd904] = {movi,5'd5,RZERO,RZERO,11'd7};
 			
 			memoria[32'd905] = {blt,5'd0,5'd4,5'd5,11'd7};//blt r5,r4, +6
@@ -445,7 +445,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd909] = {mov,5'd2,5'd3,5'd3,11'd12};//mov r2,r3
 			memoria[32'd910] = {addi,5'd4,5'd4,5'd4,11'd1};//addi r4,r4,1
 			memoria[32'd911] = {j,26'd906};	//jump [6]
-			memoria[32'd912] = {out,5'd3,5'd3,5'd3,11'd0};//out r3
+			memoria[32'd912] = {out,5'd3,5'd3,5'd3,11'd3};//out r3
 			memoria[32'd913] = {j,26'd236};
 
 
