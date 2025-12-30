@@ -199,7 +199,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			memoria[32'd110] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador
 			memoria[32'd111] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador
-			memoria[32'd112] = {movi,R21,RZERO,RZERO,11'd3};//movi r21 , 2 // estado processo como 3(entrada)
+		    memoria[32'd112] = {movi,R21,RZERO,RZERO,11'd3};//movi r21 , 3 // estado processo como 3(entrada)
 			memoria[32'd113] = {beq,RZERO,R22,R20,11'd7};//beq r22 , r20, L1 , pc+6// fim do laço por não achar processo normal
 			memoria[32'd114] = {beq,RZERO,R25,R20,11'd2};//beq r25,r20, pc+2 // incrementa index --- e o processo atual
 			memoria[32'd115] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
@@ -350,47 +350,45 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd244] = {j,endEscalonador};//jump escalonador
 
 	
-	/*		//-----interrupção para entrada de dados ------ 
-			memoria[32'd187] = {cproc,26'd0};//cproc,rzero --- muda processo para o SO
-			memoria[32'd188] = {movi,R20,RZERO,RZERO,11'd13};//movi r20,13 // pega numero do processo
-			memoria[32'd189] = {movi,R21,RZERO,RZERO,11'd2};//movi r21, 2 //valor de status esperando io
-			memoria[32'd190] = {lw,R24,R20,R20,11'd1};//lw r24, 1(r20)//pega o processo interrompidoS
-			memoria[32'd191] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // muda status do processo
-			memoria[32'd192] = {movi,R21,RZERO,RZERO,11'd14};//movi r21, 14// posição com contador de processos io
-			memoria[32'd193] = {movi,R20,RZERO,RZERO,11'd15};//movi r20,15
-			memoria[32'd194] = {lw,R23,R20,RZERO,11'd1};//lw r23, 1(r20) //inicio da fila de processos IO
-			memoria[32'd195] ={add,R23,R23,R22,11'd0};//add r23, r23,r22 // pega a proxima posição da fila
+			//-----interrupção para entrada de dados ------ 
+			memoria[32'd245] = {cproc,26'd0};//cproc,rzero --- muda processo para o SO
+			memoria[32'd246] = {movi,R20,RZERO,RZERO,11'd13};//movi r20,13 // pega numero do processo
+		    memoria[32'd247] = {movi,R21,RZERO,RZERO,11'd3};//movi r21, 3 //valor de status esperando io
+			memoria[32'd248] = {lw,R24,R20,R20,11'd1};//lw r24, 1(r20)//pega o processo interrompidoS
+			memoria[32'd249] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // muda status do processo
+			memoria[32'd250] = {j,endEscalonador}; //jump escalonador
 			
-			memoria[32'd196] = {sw,RZERO,R23,R24,11'd1};//sw r24 , 1(r23) //salva processo na fila
-			memoria[32'd197] = {addi,R22,R22,RZERO,11'd1};//addi r22, 1 //incrementa o numero de processos io
-			memoria[32'd198] = {sw,RZERO,R21,R22,11'd1};//sw r22 , 1(r21)//atualiza numero de processos io
-			memoria[32'd199] = {movi,R21,RZERO,RZERO,11'd15};//movi r21, 15 // ponteiro para inicio da fila
-			memoria[32'd200] = {sw,RZERO,R21,R23,11'd1};//sw r23, 1(r21)//salva o ponteiro
-			memoria[32'd201] = {j,endEscalonador}; //jump escalonador
-*/			
-
+			//-----interrupção para saida de dados ------ 
+			memoria[32'd251] = {movi,R20,RZERO,RZERO,11'd13};//movi r20,13 // pega numero do processo
+			memoria[32'd252] = {movi,R21,RZERO,RZERO,11'd2};//movi r21, 2 //valor de status esperando io
+			memoria[32'd253] = {lw,R24,R20,R20,11'd1};//lw r24, 1(r20)//pega o processo interrompidoS
+			memoria[32'd254] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // muda status do processo
+			memoria[32'd255] = {j,endEscalonador}; //jump escalonador
 
 			//------------fim escalonador --------------
 
-          /*
 			//--------entrada de dados---------
-			memoria[32'd226] = {led,26'd3};//led , 3
+			memoria[32'd251] = {movi,R20,RZERO,RZERO,11'd13};
+		    memoria[32'd252] = {movi,R23,RZERO,RZERO,11'd1};
+			memoria[32'd253] = {lw,R24,R20,R20,11'd1};//pega o processo
+		    memoria[32'd254] = {sw,RZERO,R24,R23,11'd1};//sw r23, 1(r24) // muda status do processo
+		    memoria[32'd229] = {multi,R21,R24,R24,11'd300};//multi r21, r20, 300	
+			memoria[32'd229] = {addi,R21,R21,R21,11'd30};//addi r23, r23, 1	
 			memoria[32'd227] = {in,R25,RZERO,RZERO,11'd0};//in r25 -- entrada de dados do usuario
-			memoria[32'd228] = {led,26'd4};// led , 4
-			memoria[32'd229] = {j,26'd33};//jump carrega contexto
+			memoria[32'd234] = {sw,RZERO,R21,R25,11'd1};//sw r24, 1(r21)//salva a entrada na memoria do processo
+			memoria[32'd255] = {j,endEscalonador};
 
 			//----saida de dados----------------
 
-			memoria[32'd230] = {scpc,R20,21'd0};//scpc r20 - armazena pc do processo
-			memoria[32'd231] = {addi,R20,R20,RZERO,11'd1};//addi r20,r20,1 -- pc+1
-			memoria[32'd232] = {mov,R24,5'b11111,5'b11111,11'd0};//mov r24, rret -- move o valor do registrador de retorno do processo para um registrador de sistema
-			memoria[32'd233] = {movi,R21,RZERO,RZERO,11'd16};//movi r21,16
-			memoria[32'd234] = {sw,RZERO,R21,R24,11'd1};//sw r24, 1(r21)
-			memoria[32'd235] = {out,RZERO,R21,R21,11'd1};//out 1(r21)
-			memoria[32'd236] = {jumpR,RZERO,R20,R20,11'd0};//jr r20 - retorna para o processo
-			*/
-		
-		
+			memoria[32'd251] = {movi,R20,RZERO,RZERO,11'd13};
+		    memoria[32'd252] = {movi,R23,RZERO,RZERO,11'd1};
+			memoria[32'd253] = {lw,R24,R20,R20,11'd1};//pega o processo
+		    memoria[32'd254] = {sw,RZERO,R24,R23,11'd1};//sw r23, 1(r24) // muda status do processo
+		    memoria[32'd229] = {multi,R21,R24,R24,11'd300};//multi r21, r20, 300	
+		    memoria[32'd229] = {addi,R21,R21,R21,11'd31};//addi r23, r23, 1	
+			memoria[32'd253] = {lw,R25,R21,R21,11'd1};//pega o dado de saida
+			memoria[32'd235] = {out,RZERO,R25,R25,11'd1};//out 1(r21)
+		    memoria[32'd255] = {j,endEscalonador};
 
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
@@ -465,6 +463,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 
 endmodule
+
 
 
 
