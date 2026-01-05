@@ -948,7 +948,7 @@ always@(opcode)
 				  status=1'b0;
 				  mudaProcesso = 1'b0;
 				  fimprocesso	= 1'b0;
-				  intrucaoIOContexto = 1'b0;
+				  intrucaoIOContexto = 1'b1;
 				  encerrarBios = 2'b00;
 				  ledControl = 1'b0;
 				  comandoIN = 1'd0;
