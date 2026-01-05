@@ -44,8 +44,7 @@ module ContadorDeQuantum(
 
 					else if(InstrucaIO)//intruçao de entrada/saida
 						begin
-							pc_processo_trocado = pc+32'd1; //salva pc do processo atual + 1
-							intrucaoIOContexto = 1'b1;
+							contador = 32'd0;
 						end
 					
 					else
