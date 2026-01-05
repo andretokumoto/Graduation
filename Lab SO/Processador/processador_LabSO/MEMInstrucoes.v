@@ -27,7 +27,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	parameter lw=6'b010111,sw=6'b011000,multi=6'b000101,div=6'b000110,divi=6'b000111,rdiv=6'b001000;
 	parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
 	parameter in=6'b011101,out=6'b011110,fim=6'b111111,spc = 6'b100110;
-	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101;
+	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101, inproc = 6'b100110,outproc = 6'b100111;
 	
 	parameter R20 = 5'd20,R21 = 5'd21,R22 = 5'd22,R23 = 5'd23,R24 = 5'd24,R25 = 5'd25 ,RZERO = 5'd0;
 
@@ -199,7 +199,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			memoria[32'd110] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador
 			memoria[32'd111] = {movi,R20,RZERO,RZERO,11'd1};//movi r20 , 1 // inicia o contador
-		    memoria[32'd112] = {movi,R21,RZERO,RZERO,11'd3};//movi r21 , 3 // estado processo como 3(entrada)
+		   memoria[32'd112] = {movi,R21,RZERO,RZERO,11'd3};//movi r21 , 3 // estado processo como 3(entrada)
 			memoria[32'd113] = {beq,RZERO,R22,R20,11'd7};//beq r22 , r20, L1 , pc+6// fim do laço por não achar processo normal
 			memoria[32'd114] = {beq,RZERO,R25,R20,11'd2};//beq r25,r20, pc+2 // incrementa index --- e o processo atual
 			memoria[32'd115] = {lw,R24,R20,RZERO,11'd1};//lw r24, 1(r20) // pega o estado naquele index
@@ -353,7 +353,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//-----interrupção para entrada de dados ------ 
 			memoria[32'd245] = {cproc,26'd0};//cproc,rzero --- muda processo para o SO
 			memoria[32'd246] = {movi,R20,RZERO,RZERO,11'd13};//movi r20,13 // pega numero do processo
-		    memoria[32'd247] = {movi,R21,RZERO,RZERO,11'd3};//movi r21, 3 //valor de status esperando io
+		    memoria[32'd247] ={movi,R21,RZERO,RZERO,11'd3};//movi r21, 3 //valor de status esperando io
 			memoria[32'd248] = {lw,R24,R20,R20,11'd1};//lw r24, 1(r20)//pega o processo interrompidoS
 			memoria[32'd249] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // muda status do processo
 			memoria[32'd250] = {j,endEscalonador}; //jump escalonador
@@ -368,50 +368,53 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//------------fim escalonador --------------
 
 			//--------entrada de dados---------
-			memoria[32'd251] = {movi,R20,RZERO,RZERO,11'd13};
-		    memoria[32'd252] = {movi,R23,RZERO,RZERO,11'd1};
-			memoria[32'd253] = {lw,R24,R20,R20,11'd1};//pega o processo
-		    memoria[32'd254] = {sw,RZERO,R24,R23,11'd1};//sw r23, 1(r24) // muda status do processo
-		    memoria[32'd229] = {multi,R21,R24,R24,11'd300};//multi r21, r20, 300	
-			memoria[32'd229] = {addi,R21,R21,R21,11'd30};//addi r23, r23, 1	
-			memoria[32'd227] = {in,R25,RZERO,RZERO,11'd0};//in r25 -- entrada de dados do usuario
-			memoria[32'd234] = {sw,RZERO,R21,R25,11'd1};//sw r24, 1(r21)//salva a entrada na memoria do processo
-			memoria[32'd255] = {j,endEscalonador};
+			memoria[32'd256] = {movi,R20,RZERO,RZERO,11'd13};
+		   memoria[32'd257] = {movi,R23,RZERO,RZERO,11'd1};
+			memoria[32'd258] = {lw,R24,R20,R20,11'd1};//pega o processo
+		   memoria[32'd259] = {sw,RZERO,R24,R23,11'd1};//sw r23, 1(r24) // muda status do processo
+		   memoria[32'd260] = {multi,R21,R24,R24,11'd300};//multi r21, r20, 300	
+			memoria[32'd261] = {addi,R21,R21,R21,11'd30};//addi r23, r23, 1	
+			memoria[32'd262] = {in,R25,R24,RZERO,11'd0};//in r25 -- entrada de dados do usuario
+			memoria[32'd263] = {sw,RZERO,R21,R25,11'd1};//sw r24, 1(r21)//salva a entrada na memoria do processo
+			memoria[32'd264] = {j,endEscalonador};
 
 			//----saida de dados----------------
 
-			memoria[32'd251] = {movi,R20,RZERO,RZERO,11'd13};
-		    memoria[32'd252] = {movi,R23,RZERO,RZERO,11'd1};
-			memoria[32'd253] = {lw,R24,R20,R20,11'd1};//pega o processo
-		    memoria[32'd254] = {sw,RZERO,R24,R23,11'd1};//sw r23, 1(r24) // muda status do processo
-		    memoria[32'd229] = {multi,R21,R24,R24,11'd300};//multi r21, r20, 300	
-		    memoria[32'd229] = {addi,R21,R21,R21,11'd31};//addi r23, r23, 1	
-			memoria[32'd253] = {lw,R25,R21,R21,11'd1};//pega o dado de saida
-			memoria[32'd235] = {out,RZERO,R25,R25,11'd1};//out 1(r21)
-		    memoria[32'd255] = {j,endEscalonador};
+			memoria[32'd265] = {movi,R20,RZERO,RZERO,11'd13};
+		   memoria[32'd266] = {movi,R23,RZERO,RZERO,11'd1};
+			memoria[32'd267] = {lw,R24,R20,R20,11'd1};//pega o processo
+		   memoria[32'd268] = {sw,RZERO,R24,R23,11'd1};//sw r23, 1(r24) // muda status do processo
+		   memoria[32'd269] = {multi,R21,R24,R24,11'd300};//multi r21, r20, 300	
+		   memoria[32'd270] = {addi,R21,R21,R21,11'd31};//addi r23, r23, 1	
+			memoria[32'd271] = {lw,R25,R21,R21,11'd1};//pega o dado de saida
+			memoria[32'd272] = {out,RZERO,R24,R25,11'd1};//out 1(r21)
+		   memoria[32'd273] = {j,endEscalonador};
 
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
 			
 //fatorial
-	//memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd4};
-		memoria[32'd300] = {in,5'd2,5'd0,5'd0,11'd1};//in r2
-		memoria[32'd301] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
-		memoria[32'd302] = {6'b011010,5'd7,5'd0,5'd0,11'd1};//movi r7,1
-		memoria[32'd303] = {6'b011001,5'd3,5'd7,5'd7,11'd0};//mov r3,r7
-		memoria[32'd304] = {6'b010100,5'd8,5'd7,5'd2,11'd4};//beq r7,r2,+4
-		memoria[32'd305] = {6'b000100,5'd3,5'd3,5'd2,11'd0};//mult r3,r3,r2
-		memoria[32'd306] = {6'b000011,5'd2,5'd2,5'd2,11'd1};//subi r2,r2,1
-		memoria[32'd307] = {6'b010001,26'd304};//j linha 4
-		memoria[32'd308] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
-		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd1};//out r3
-		memoria[32'd310] = {j,26'd236};//fim
+	   memoria[32'd300] = {inproc,5'd2,21'd2};  //in r3
+		memoria[32'd301] = {movi,5'd10,5'd0,5'd0,11'd330};// movi , r7, 1
+		memoria[32'd302] = {lw,5'd2,5'd10,5'd10,11'd1};
+		memoria[32'd303] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
+		memoria[32'd304] = {6'b011010,5'd7,5'd0,5'd0,11'd1};//movi r7,1
+		memoria[32'd305] = {6'b011001,5'd3,5'd7,5'd7,11'd0};//mov r3,r7
+		memoria[32'd306] = {6'b010100,5'd8,5'd7,5'd2,11'd4};//beq r7,r2,+4
+		memoria[32'd307] = {6'b000100,5'd3,5'd3,5'd2,11'd0};//mult r3,r3,r2
+		memoria[32'd308] = {6'b000011,5'd2,5'd2,5'd2,11'd1};//subi r2,r2,1
+		memoria[32'd309] = {6'b010001,26'd304};//j linha 4
+		memoria[32'd310] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
+		memoria[32'd311] = {out,5'd3,5'd3,5'd3,11'd1};//out r3
+		memoria[32'd312] = {j,26'd236};//fim
 	
  //exponencial
 
 	   //memoria[32'd600] = {movi,5'd3,RZERO,RZERO,11'd3};  //in r3
 		
-		memoria[32'd600] = {in,5'd3,21'd2};  //in r3
+		memoria[32'd600] = {inproc,5'd3,21'd2};  //in r3
+		memoria[32'd601] = {movi,5'd10,5'd0,5'd0,11'd630};// movi , r7, 1
+		memoria[32'd267] = {lw,5'd3,5'd10,5'd10,11'd1};
 		memoria[32'd601] = {movi,5'd7,5'd0,5'd0,11'd1};// movi , r7, 1
 		memoria[32'd602] = {movi,5'd2,5'd0,5'd0,11'd1};// movi , r2, 1
 		//memoria[32'd603] = {movi,5'd4,RZERO,RZERO,11'd2};// movi r4

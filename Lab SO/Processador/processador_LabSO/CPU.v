@@ -87,7 +87,7 @@ module CPU(
     wire [31:0] pc_contexto;
     wire InstrucaIO, fimProcesso;
 
-    parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd236, endSalvaProcesso = 32'd180;
+    parameter Escalonador = 32'd73, PCout = 32'd251, PCin = 32'd245,EndfimProcesso = 32'd236, endSalvaProcesso = 32'd180;
 	 parameter in=6'b011101,out=6'b011110;
 	 //leds e mostrador de processo
 	 //EnderecoRelativo ledsAviso(.pc_atual(pc), .opcode(opcode),.processo_atual(processo_rodando),.ledmenu(ledmenu),.lednumprocessos,.ledprocesso(ledprocesso),.ledin(ledin));
@@ -142,7 +142,7 @@ module CPU(
     assign selecaoMuxDesvio = branchControl & resultComparacao;
     
     assign halt = parada;
-	 assign un = imediato[3:0];
+	 assign un = rs[3:0];
 	/* assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
 	 assign testeBranchControl = branchControl;
     assign testeResultComparacao = resultComparacao;
@@ -183,7 +183,7 @@ module CPU(
         if(reset) pc<=32'd0;
        
         else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
-        else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
+        else if(comandoIN == 1'b1) pc <= PCin;
         else if (comandoOUT == 1'b1) pc <= PCout;
 		  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;//
         else 
