@@ -7,7 +7,7 @@ module ContadorDeQuantum(
   input processoAtual,
   input [5:0] opcode,
   output reg troca_contexto, // Sinal de troca de contexto
-  output reg [31:0] pc_processo_trocado,//salva o pc do processo interrompido
+  output reg [31:0] pc_processo_trocado//salva o pc do processo interrompido
 );
 
  parameter quantum = 32'd5;

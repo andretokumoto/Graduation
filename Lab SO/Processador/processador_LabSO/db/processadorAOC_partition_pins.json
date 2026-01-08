@@ -160,11 +160,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "entradaDeDadosIO[3]",
+					"name" : "entradaDeDadosIO[2]",
 					"strict" : false
 				},
 				{
-					"name" : "entradaDeDadosIO[2]",
+					"name" : "entradaDeDadosIO[3]",
 					"strict" : false
 				}
 			]
