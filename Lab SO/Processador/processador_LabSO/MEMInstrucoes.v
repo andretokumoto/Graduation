@@ -20,7 +20,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	 	
 	parameter TAM_BLOCO = 32'd300;//tamanho dos blocos na memoria
 	parameter endEscalonador = 26'd73, endMenu = 26'd37,entradaNovoProcesso = 26'd65,entradaProcesso = 26'd55,iniciaProcesso = 26'd47, endCarregaContexto = 26'd121 , endTrocaProcessoexecutando = 26'd97; //pc do escalonador
-	parameter endSaidaDeDados=26'd265,endEntradaDeDados=26'd256 , endL0 = 26'd83, endL1 = 26'd90, endL2 = 26'd100, endL3 = 26'd110; //MUDAR !!!!!!!
+	parameter endSaidaDeDados=26'd265,endEntradaDeDados=26'd256 , endL0 = 26'd83, endL1 = 26'd90, endL2 = 26'd100, endL3 = 26'd110 , endSalvacontexto = 26'd180; //MUDAR !!!!!!!
 
 	parameter add=6'b000000,addi=6'b000001,sub=6'b000010,subi=6'b000011,mult=6'b000100;
 	parameter j=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b010101,blt=6'b010110;
@@ -356,14 +356,14 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		    memoria[32'd247] ={movi,R21,RZERO,RZERO,11'd3};//movi r21, 3 //valor de status esperando io
 			memoria[32'd248] = {lw,R24,R20,R20,11'd1};//lw r24, 1(r20)//pega o processo interrompidoS
 			memoria[32'd249] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // muda status do processo
-			memoria[32'd250] = {j,endEscalonador}; //jump escalonador
+			memoria[32'd250] = {j,endSalvacontexto}; //jump escalonador
 			
 			//-----interrupção para saida de dados ------ 
 			memoria[32'd251] = {movi,R20,RZERO,RZERO,11'd13};//movi r20,13 // pega numero do processo
 			memoria[32'd252] = {movi,R21,RZERO,RZERO,11'd2};//movi r21, 2 //valor de status esperando io
 			memoria[32'd253] = {lw,R24,R20,R20,11'd1};//lw r24, 1(r20)//pega o processo interrompidoS
 			memoria[32'd254] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // muda status do processo
-			memoria[32'd255] = {j,endEscalonador}; //jump escalonador
+			memoria[32'd255] = {j,endSalvacontexto}; //jump escalonador
 
 			//------------fim escalonador --------------
 
@@ -376,7 +376,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd261] = {addi,R21,R21,R21,11'd30};//addi r23, r23, 1	
 			memoria[32'd262] = {in,R25,R24,RZERO,11'd0};//in r25 -- entrada de dados do usuario
 			memoria[32'd263] = {sw,RZERO,R21,R25,11'd1};//sw r24, 1(r21)//salva a entrada na memoria do processo
-			memoria[32'd264] = {j,endEscalonador};
+			memoria[32'd264] = {j,endSalvacontexto};
 
 			//----saida de dados----------------
 
@@ -388,7 +388,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		   memoria[32'd270] = {addi,R21,R21,R21,11'd31};//addi r23, r23, 1	
 			memoria[32'd271] = {lw,R25,R21,R21,11'd1};//pega o dado de saida
 			memoria[32'd272] = {out,RZERO,R24,R25,11'd1};//out 1(r21)
-		   memoria[32'd273] = {j,endEscalonador};
+		   memoria[32'd273] = {j,endSalvacontexto};
 
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
