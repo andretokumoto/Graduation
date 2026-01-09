@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Jan  7 20:52:02 2026
+Fitter Status : Successful - Thu Jan  8 21:16:59 2026
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : processadorAOC
 Top-level Entity Name : CPU
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 6,082 / 114,480 ( 5 % )
-    Total combinational functions : 5,846 / 114,480 ( 5 % )
+Total logic elements : 6,133 / 114,480 ( 5 % )
+    Total combinational functions : 5,859 / 114,480 ( 5 % )
     Dedicated logic registers : 1,224 / 114,480 ( 1 % )
 Total registers : 1224
 Total pins : 41 / 529 ( 8 % )
