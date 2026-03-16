@@ -127,7 +127,7 @@ module CPU(
     
 	 
 	 //debaunce
-	  DeBounce deb(.botaoEntrada(ButtonNeg),.clock(clk),.botaoFiltrado(botaoIN));
+	  //DeBounce deb(.botaoEntrada(ButtonNeg),.clock(clk),.botaoFiltrado(botaoIN));
 	  assign ButtonNeg = ~botaoPlaca;
 	  assign testeSinal =  botaoIN;
 	 

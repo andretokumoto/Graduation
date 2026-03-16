@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dC:/Users/Acer/Documents/processadorLSO/simulation/qsim
 vCPU
-Z1 !s110 1773616154
+Z1 !s110 1773698311
 !i10b 1
-!s100 n9Kd0hcE?@k4PG;VSQ1Rm2
+!s100 _ON=HzNaMPJa2IA8UEMS]2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I<f]l3c;eng186G8fni`kG2
+IQ0`mbnLU^^hU:LE`S:;;F2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 dC:/Users/Acer/Documents/GitHub/Graduation/Lab SO/Processador/processador_LabSO/simulation/qsim
-Z5 w1773616148
+Z5 w1773698305
 Z6 8processadorAOC.vo
 Z7 FprocessadorAOC.vo
-!i122 305
-L0 32 149516
+!i122 307
+L0 32 149681
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1773616152.000000
+Z9 !s108 1773698309.000000
 Z10 !s107 processadorAOC.vo|
 Z11 !s90 -work|work|processadorAOC.vo|
 !i113 1
@@ -34,31 +34,31 @@ Z12 o-work work
 Z13 tCvgOpt 0
 n@c@p@u
 vCPU_vlg_vec_tst
-!s110 1773616155
+R1
 !i10b 1
-!s100 I<Pk9CSbk^:_[4H]zNS5U3
+!s100 :HD9O]<h9dmhVZJ<[J=El2
 R2
-InLACc2EUWfWd:;CeaT>S>0
+IhYV29[Vm2?c6PkU2H@3[H0
 R3
 R4
-w1773616144
-Z14 8Waveform.vwf.vt
-Z15 FWaveform.vwf.vt
-!i122 306
+w1773698302
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 308
 L0 30 140
 R8
 r1
 !s85 0
 31
-!s108 1773616154.000000
-Z16 !s107 Waveform.vwf.vt|
-Z17 !s90 -work|work|Waveform.vwf.vt|
+!s108 1773698311.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
 !i113 1
 R12
 R13
 n@c@p@u_vlg_vec_tst
 vGerenciador_memoria
-Z18 !s110 1738626626
+Z14 !s110 1738626626
 !i10b 1
 !s100 RRlgK_ZX]6lN[kJHkfX4l3
 R2
@@ -74,7 +74,7 @@ R8
 r1
 !s85 0
 31
-Z19 !s108 1738626626.000000
+Z15 !s108 1738626626.000000
 R10
 R11
 !i113 1
@@ -82,7 +82,7 @@ R12
 R13
 n@gerenciador_memoria
 vGerenciador_memoria_vlg_vec_tst
-R18
+R14
 !i10b 1
 !s100 je>B4hhBJ14VQI`LLLS1m0
 R2
@@ -98,7 +98,7 @@ R8
 r1
 !s85 0
 31
-R19
+R15
 !s107 Waveform31.vwf.vt|
 !s90 -work|work|Waveform31.vwf.vt|
 !i113 1
@@ -108,16 +108,16 @@ n@gerenciador_memoria_vlg_vec_tst
 vhard_block
 R1
 !i10b 1
-!s100 CZ5iU>hZONYG_4aJKZ<L90
+!s100 fe405Q[zcc<kdS=e1_an42
 R2
-IWY_^1d>zJZ]58Ca30mz8:3
+ImWO6iijDeVnA3J=IDVdO[1
 R3
 R4
 R5
 R6
 R7
-!i122 305
-L0 149549 34
+!i122 307
+L0 149714 34
 R8
 r1
 !s85 0
@@ -161,8 +161,8 @@ I;=?EiX[Jb0i8hdKng;P`B3
 R3
 R4
 w1746806483
-R14
-R15
+8Waveform.vwf.vt
+FWaveform.vwf.vt
 !i122 119
 L0 30 242
 R8
@@ -170,8 +170,8 @@ r1
 !s85 0
 31
 !s108 1746806492.000000
-R16
-R17
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
 !i113 1
 R12
 R13
