@@ -183,7 +183,7 @@ module CPU(
         if(reset) pc<=32'd0;
        
         else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
-        else if(comandoIN == 1'b1) pc <= PCin;
+        else if(comandoIN == 1'b1) pc <= PCin;/*!*/
         else if (comandoOUT == 1'b1) pc <= PCout;
 		  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;//
         else 

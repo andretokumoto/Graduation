@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/16/2026 18:58:21"
+// Generated on "03/18/2026 19:39:51"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          CPU
 // 
@@ -144,6 +144,8 @@ end
 initial
 begin
 	entradaDeDadosIO[1] = 1'b0;
+	entradaDeDadosIO[1] = #660000 1'b1;
+	entradaDeDadosIO[1] = #30000 1'b0;
 end 
 // entradaDeDadosIO[ 0 ]
 initial
@@ -158,6 +160,8 @@ initial
 begin
 	botaoPlaca = 1'b0;
 	botaoPlaca = #310000 1'b1;
+	botaoPlaca = #10000 1'b0;
+	botaoPlaca = #350000 1'b1;
 	botaoPlaca = #10000 1'b0;
 end 
 

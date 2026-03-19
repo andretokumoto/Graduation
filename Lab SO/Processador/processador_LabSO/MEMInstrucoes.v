@@ -351,7 +351,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 	
 			//-----interrupção para entrada de dados ------ 
-			memoria[32'd245] = {cproc,26'd0};//cproc,rzero --- muda processo para o SO
+			memoria[32'd245] = {cproc,26'd0};//cproc,rzero --- muda processo para o SO*
 			memoria[32'd246] = {movi,R20,RZERO,RZERO,11'd13};//movi r20,13 // pega numero do processo
 		    memoria[32'd247] ={movi,R21,RZERO,RZERO,11'd3};//movi r21, 3 //valor de status esperando io
 			memoria[32'd248] = {lw,R24,R20,R20,11'd1};//lw r24, 1(r20)//pega o processo interrompidoS
