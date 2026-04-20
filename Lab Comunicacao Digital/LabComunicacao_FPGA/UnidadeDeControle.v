@@ -1,9 +1,9 @@
-module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,linkControl,escritaRegControl,branchControl,branchTipo,dadoRegControl,memControl,HILOcontrol,entradaSaidaControl,mudaProcesso,encerrarBios,fimprocesso,intrucaoIOContexto,ledControl,comandoIN,comandoOUT);
+module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,linkControl,escritaRegControl,branchControl,branchTipo,dadoRegControl,memControl,HILOcontrol,entradaSaidaControl,mudaProcesso,encerrarBios,fimprocesso,intrucaoIOContexto,ledControl,comandoIN,comandoOUT,tipoEntrada,w_tx_start);
 
 input [5:0] opcode;
-output reg DesvioControl,HILOcontrol,branchControl,branchTipo,jumpControl,escritaRegControl,valueULA,linkControl,memControl;//sinal 1 bit
+output reg DesvioControl,w_tx_start,HILOcontrol,branchControl,branchTipo,jumpControl,escritaRegControl,valueULA,linkControl,memControl;//sinal 1 bit
 output reg status = 0;
-output reg  [1:0] entradaSaidaControl,encerrarBios;//sinal 2 bits
+output reg  [1:0] entradaSaidaControl,encerrarBios,tipoEntrada;//sinal 2 bits
 output reg  [2:0] dadoRegControl;//sinal de 3 bits
 output reg  [4:0] ulaOP;//sinal 5 bits 
 output reg mudaProcesso,fimprocesso,intrucaoIOContexto,ledControl,comandoIN,comandoOUT;
@@ -18,7 +18,7 @@ parameter lw=6'b010111,sw=6'b011000;
 parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
 parameter in=6'b011101,out=6'b011110,fim=6'b111111,pause=6'b100000,spc = 6'b100110;
 //op de SO
-parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011,encBios = 6'b100100,led = 6'b100101, inproc = 6'b100110,outproc = 6'b100111;
+parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011,encBios = 6'b100100,led = 6'b100101, inRX = 6'b100110,outTX = 6'b100111;
 
 
                                
@@ -48,7 +48,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+		  tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;
 		end
     
 	 addi:
@@ -72,7 +74,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end
 		
 	 sub:
@@ -96,7 +100,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end
 		
 	 subi:
@@ -120,7 +126,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end
 	 
 	 
@@ -145,7 +153,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end
 	 
 	 multi:
@@ -169,7 +179,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end
 	 
 	div:
@@ -193,7 +205,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 
 	
 
@@ -218,7 +232,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end	
 	
    rdiv:
@@ -242,7 +258,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 	
 	 
 	OR:
@@ -264,6 +282,8 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
+        tipoEntrada = 2'b00;
+		  w_tx_start = 1'd0; 
 		  
 		end 	 
 		
@@ -286,7 +306,8 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
-		  
+        tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end 
 	
 
@@ -309,7 +330,8 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
-		  
+        tipoEntrada = 2'b00;	
+	     w_tx_start = 1'd0;	  
 		end 
 	
 
@@ -332,7 +354,8 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
-		  
+        tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end 
 	
 
@@ -355,7 +378,8 @@ always@(opcode)
 		  fimprocesso	= 1'b0;
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
-		  
+        tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end 
 	
 
@@ -379,7 +403,8 @@ always@(opcode)
 		  intrucaoIOContexto = 1'b0;
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
-		  
+	     tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end 
 	
 
@@ -404,7 +429,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 	
 	
      LT:
@@ -428,7 +455,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end
 		
 	 jump:
@@ -449,7 +478,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 	
 		
 	  jumpR:
@@ -470,7 +501,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 
 	
     jal:
@@ -492,7 +525,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end	
 	 
 	
@@ -517,7 +552,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end
  
 
@@ -541,7 +578,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end
  
  
@@ -565,7 +604,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end
 
    
@@ -589,7 +630,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end 
 		
 	 sw:
@@ -611,7 +654,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 
 	
     spc:
@@ -633,7 +678,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end  
 	
 	 mov:
@@ -656,7 +703,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 	
 
 		
@@ -680,7 +729,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end 	
 		
 	 mfhi:
@@ -704,7 +755,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 
    
 	mflo:
@@ -728,7 +781,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 
   
   in:
@@ -752,7 +807,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b01;
+        w_tx_start = 1'd0;		  
 		end 
 
   out:
@@ -776,7 +833,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;	
+        w_tx_start = 1'd0;		  
 		end 
 
 
@@ -795,7 +854,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 	  end 
 	  
 	scpc:	
@@ -817,7 +878,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;			  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;
+        w_tx_start = 1'd0;		  
 		end 
 		
 	cproc:
@@ -839,7 +902,9 @@ always@(opcode)
 		  encerrarBios = 2'b00;
 		  ledControl = 1'b0;
 		  comandoIN = 1'd0;
-		  comandoOUT = 1'd0;		  
+		  comandoOUT = 1'd0;	
+        tipoEntrada = 2'b00;	
+	     w_tx_start = 1'd0;	  
 		end 
 			
 	scrg:
@@ -861,7 +926,9 @@ always@(opcode)
 				  encerrarBios = 2'b00;
 				  ledControl = 1'b0;
 				  comandoIN = 1'd0;
-				  comandoOUT = 1'd0;		  
+				  comandoOUT = 1'd0;	
+			     tipoEntrada = 2'b00;
+              w_tx_start = 1'd0;		  
 		end 
 	
 	encBios:
@@ -883,7 +950,9 @@ always@(opcode)
 				  encerrarBios = 2'b01;
 				  ledControl = 1'b0;
 				  comandoIN = 1'd0;
-				  comandoOUT = 1'd0;		  
+				  comandoOUT = 1'd0;
+		        tipoEntrada = 2'b00;	
+              w_tx_start = 1'd0;		  
 		end 
 
 	led:
@@ -905,10 +974,12 @@ always@(opcode)
 				  encerrarBios = 2'b00;
 				  ledControl = 1'b1;
 				  comandoIN = 1'd0;
-				  comandoOUT = 1'd0;		  
+				  comandoOUT = 1'd0;	
+			     tipoEntrada = 2'b00;
+              w_tx_start = 1'd0;		  
 		end 
 
-	inproc:
+	inRX:
 		
 				begin
 		
@@ -929,10 +1000,11 @@ always@(opcode)
 				  ledControl = 1'b0;
 				  comandoIN = 1'd1;
 				  comandoOUT = 1'd0;
-		  
+              tipoEntrada = 2'b10;	
+              w_tx_start = 1'd0;		  
 		end 
 
-	outproc:
+	outTX:
 		
 				begin
 		
@@ -952,7 +1024,9 @@ always@(opcode)
 				  encerrarBios = 2'b00;
 				  ledControl = 1'b0;
 				  comandoIN = 1'd0;
-				  comandoOUT = 1'd1;		  
+				  comandoOUT = 1'd1;	
+              tipoEntrada = 2'b00;	
+              w_tx_start = 1'd1;	  
 		end 	
 
  endcase

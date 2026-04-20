@@ -95,7 +95,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS OFF
 set_location_assignment PIN_E22 -to testeSinal
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE simple_dual_port_ram_single_clock.v
 set_global_assignment -name VERILOG_FILE CPU.v
 set_global_assignment -name VERILOG_FILE MEMInstrucoes.v
@@ -122,3 +121,5 @@ set_global_assignment -name VERILOG_FILE ContadorDeQuantum.v
 set_global_assignment -name VERILOG_FILE EnderecoRelativo.v
 set_global_assignment -name VERILOG_FILE uart_tx.v
 set_global_assignment -name VERILOG_FILE uart_rx.v
+set_global_assignment -name VERILOG_FILE muxEntrada.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

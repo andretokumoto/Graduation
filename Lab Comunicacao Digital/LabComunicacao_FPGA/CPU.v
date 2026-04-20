@@ -16,7 +16,7 @@ module CPU(
     output wire [6:0] uniProc,
 	 
 	 //***********************testes***********************
-	 output wire testeSinal
+	 //output wire testeSinal,
 	 output reg [31:0] testePC,
     output wire [4:0] enRD,
     output wire [4:0] enRS,
@@ -50,6 +50,7 @@ module CPU(
     reg [31:0] concatena;
     reg [31:0] resulSomador;
     reg [31:0] imediatoExtendido;
+    reg [31:0] dadoLidoArduinoExtendido;
     reg [31:0] HILOdata;
     reg [31:0] dadosEscrita;
     reg [31:0] regHI, regLO;
@@ -69,7 +70,7 @@ module CPU(
     wire [31:0] resultadoULA;
     wire [31:0] HI, LO;
     wire [31:0] dadoMem;
-    wire [31:0] dadosDeEntrada;
+    wire [31:0] dadosDeEntrada,DadosLidos;
     wire resultComparacao;
     wire [25:0] jump;
     wire [31:0] dadosMux6, processo_rodando;
@@ -84,10 +85,17 @@ module CPU(
     wire [1:0] entradaSaidaControl, encerrarBios;
     wire valueULA;
     wire DesvioControl, branchControl, branchTipo, jumpControl, linkControl, memControl, HILOcontrol, escritaRegControl;
-    wire [2:0] dadoRegControl;
+    wire [1:0] tipoEntrada;
+	 wire [2:0] dadoRegControl;
     wire [4:0] ulaOP;
     wire [31:0] pc_contexto;
     wire InstrucaIO, fimProcesso;
+	 
+	 //fios especificos da comunicação
+	 wire w_rx_ready;
+	 wire w_tx_busy;
+	 wire w_tx_start;
+	 wire [7:0] dadoLidoArduino;
 
     parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd236, endSalvaProcesso = 32'd180;
 	 parameter in=6'b011101,out=6'b011110;
@@ -104,7 +112,7 @@ module CPU(
     ContadorDeQuantum quantum( .clock(clk),.reset(reset),.pc(pc),.InstrucaIO(ocorrenciaIO),.fimProcesso(fimProcesso),.processoAtual(processo_atual),.opcode(opcode),.troca_contexto(troca_contexto),.pc_processo_trocado(pc_contexto),.intrucaoIOContexto(intrucaoIOContexto));
     
     //ligaçao com unidade de controle
-    UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl),.comandoIN(comandoIN),.comandoOUT(comandoOUT));
+    UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl),.comandoIN(comandoIN),.comandoOUT(comandoOUT),.tipoEntrada(tipoEntrada),.w_tx_start(w_tx_start));
     
     //ligaçao com  parada de sistema
     ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada));
@@ -124,18 +132,22 @@ module CPU(
     //ligaçao com memoria de dados
     simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
         
-	 //ligação do modulo uart_tx
-
-		
+	 //ligação do modulo uart_tx - tranmisão fpga>arduino
+    uart_tx mtx (.clk(clock),.reset(reset),.data_in(rt[7:0]),.data_valid(w_tx_start),.tx(saidaUART[0]),.busy(w_tx_busy));
+	 
+	 //ligando modulo uart_rx - recepção arduino>fpga
+	 uart_rx mrx(.clk(clock),.reset(reset),.rx(entradaUART[0]),.data_out(dadoLidoArduino),.data_ready(w_rx_ready));	
 		  
     //ligaçao com entrada e saida
-    EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
+    EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(DadosLidos),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
     
+	 //mux que escolhe dados de entrada entre placa e uart
+	 muxEntrada m_in(.tipoEntrada(tipoEntrada),.DadosLidos(DadosLidos),.dadoLidoArduinoExtendido(dadoLidoArduinoExtendido),.dadosDeEntrada(dadosDeEntrada));
 	 
 	 //debaunce
 	  DeBounce deb(.botaoEntrada(ButtonNeg),.clock(clk),.botaoFiltrado(botaoIN));
 	  assign ButtonNeg = ~botaoPlaca;
-	  assign testeSinal =  botaoIN;
+	  //assign testeSinal =  botaoIN;
 	 
     //ligaçao com display
     displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));
@@ -146,10 +158,11 @@ module CPU(
     displaySete displayprocessouni(.entrada(un),.saidas(uniProc));
     
     assign selecaoMuxDesvio = branchControl & resultComparacao;
+	 
     
     assign halt = parada;
 	 assign un = imediato[3:0];
-	assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
+	 assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
 	 assign testeBranchControl = branchControl;
     assign testeResultComparacao = resultComparacao;
     assign testeIN = dadosDeEntrada;
@@ -164,7 +177,7 @@ module CPU(
     assign enRS = endRS;
     assign enRT = endRT;
     assign testeDadosMux = dadosMux6;
-    assign botaoIN = botaoPlaca;
+    //assign botaoIN = botaoPlaca;
     assign testesaidaUNI = inUnidade;
     assign testesaidaDez = inDezena;
     assign testesaidaCent = inCentena;
@@ -190,7 +203,7 @@ module CPU(
        
         else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
         else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
-        else if (comandoOUT == 1'b1) pc <= PCout;
+       // else if (comandoOUT == 1'b1) pc <= PCout;
 		  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;//
         else 
         begin
@@ -268,6 +281,12 @@ module CPU(
         end
     end*/
     
+	 always@(dadoLidoArduino)
+		begin
+		  dadoLidoArduinoExtendido = {24'b000000000000000000000000,dadoLidoArduino};
+		end
+	 
+	 
     always@(imediato)
     begin
         imediatoExtendido = {21'b000000000000000000000,imediato};

@@ -26,7 +26,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	parameter j=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b010101,blt=6'b010110;
 	parameter lw=6'b010111,sw=6'b011000,multi=6'b000101,div=6'b000110,divi=6'b000111,rdiv=6'b001000;
 	parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
-	parameter in=6'b011101,out=6'b011110,fim=6'b111111,spc = 6'b100110;
+	parameter in=6'b011101,out=6'b011110,fim=6'b111111,spc = 6'b100110,inRX = 6'b100110,outTX = 6'b100111;
 	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101;
 	
 	parameter R20 = 5'd20,R21 = 5'd21,R22 = 5'd22,R23 = 5'd23,R24 = 5'd24,R25 = 5'd25 ,RZERO = 5'd0;
@@ -98,8 +98,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd38] = {led,26'd5};//led, 5		
 			memoria[32'd39] = {movi,R22,RZERO,RZERO,11'd12};//movi r22, 0 // contador de processos que foram iniciados
 			memoria[32'd40] = {sw,RZERO,R22,RZERO,11'd1};//sw rzero 1(r22)
-			memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
-			//memoria[32'd41] = {movi,R20,RZERO,RZERO,11'd1};
+			//memoria[32'd41] = {in,R20,21'd0};//in r20 // entrada do numero de processos que irão rodar
+			memoria[32'd41] = {movi,R20,RZERO,RZERO,11'd1};
 			
 			memoria[32'd42] = {led,26'd6};//led, 6		
 			memoria[32'd43] = {sw,RZERO,R20,R20,11'd0};//sw r20, 0, rzero // salva na memoria de dados o numero de processos rodando
@@ -121,8 +121,8 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			//----entrada processo
 			memoria[32'd55] = {led,26'd7};//led 7 
-			memoria[32'd56] = {in,R21,21'd0};//in r21 processo que ira rodar
-			//memoria[32'd56] = {movi,R21,RZERO,RZERO,11'd3};
+			//memoria[32'd56] = {in,R21,21'd0};//in r21 processo que ira rodar
+			memoria[32'd56] = {movi,R21,RZERO,RZERO,11'd1};
 			
 			memoria[32'd57] = {led,26'd8};//led 8
 			memoria[32'd58] = {movi,R24,RZERO,RZERO,11'd11};//movi r24, 11
@@ -349,65 +349,19 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			memoria[32'd243] = {sw,RZERO,R21,R23,11'd0};//sw r23, 0(rzero)//salva novo numero de processos rodando
 			memoria[32'd244] = {j,endEscalonador};//jump escalonador
 
-	
-	/*		//-----interrupção para entrada de dados ------ 
-			memoria[32'd187] = {cproc,26'd0};//cproc,rzero --- muda processo para o SO
-			memoria[32'd188] = {movi,R20,RZERO,RZERO,11'd13};//movi r20,13 // pega numero do processo
-			memoria[32'd189] = {movi,R21,RZERO,RZERO,11'd2};//movi r21, 2 //valor de status esperando io
-			memoria[32'd190] = {lw,R24,R20,R20,11'd1};//lw r24, 1(r20)//pega o processo interrompidoS
-			memoria[32'd191] = {sw,RZERO,R24,R21,11'd1};//sw r21, 1(r24) // muda status do processo
-			memoria[32'd192] = {movi,R21,RZERO,RZERO,11'd14};//movi r21, 14// posição com contador de processos io
-			memoria[32'd193] = {movi,R20,RZERO,RZERO,11'd15};//movi r20,15
-			memoria[32'd194] = {lw,R23,R20,RZERO,11'd1};//lw r23, 1(r20) //inicio da fila de processos IO
-			memoria[32'd195] ={add,R23,R23,R22,11'd0};//add r23, r23,r22 // pega a proxima posição da fila
-			
-			memoria[32'd196] = {sw,RZERO,R23,R24,11'd1};//sw r24 , 1(r23) //salva processo na fila
-			memoria[32'd197] = {addi,R22,R22,RZERO,11'd1};//addi r22, 1 //incrementa o numero de processos io
-			memoria[32'd198] = {sw,RZERO,R21,R22,11'd1};//sw r22 , 1(r21)//atualiza numero de processos io
-			memoria[32'd199] = {movi,R21,RZERO,RZERO,11'd15};//movi r21, 15 // ponteiro para inicio da fila
-			memoria[32'd200] = {sw,RZERO,R21,R23,11'd1};//sw r23, 1(r21)//salva o ponteiro
-			memoria[32'd201] = {j,endEscalonador}; //jump escalonador
-*/			
-
-
-			//------------fim escalonador --------------
-
-          /*
-			//--------entrada de dados---------
-			memoria[32'd226] = {led,26'd3};//led , 3
-			memoria[32'd227] = {in,R25,RZERO,RZERO,11'd0};//in r25 -- entrada de dados do usuario
-			memoria[32'd228] = {led,26'd4};// led , 4
-			memoria[32'd229] = {j,26'd33};//jump carrega contexto
-
-			//----saida de dados----------------
-
-			memoria[32'd230] = {scpc,R20,21'd0};//scpc r20 - armazena pc do processo
-			memoria[32'd231] = {addi,R20,R20,RZERO,11'd1};//addi r20,r20,1 -- pc+1
-			memoria[32'd232] = {mov,R24,5'b11111,5'b11111,11'd0};//mov r24, rret -- move o valor do registrador de retorno do processo para um registrador de sistema
-			memoria[32'd233] = {movi,R21,RZERO,RZERO,11'd16};//movi r21,16
-			memoria[32'd234] = {sw,RZERO,R21,R24,11'd1};//sw r24, 1(r21)
-			memoria[32'd235] = {out,RZERO,R21,R21,11'd1};//out 1(r21)
-			memoria[32'd236] = {jumpR,RZERO,R20,R20,11'd0};//jr r20 - retorna para o processo
-			*/
 		
 		
 
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
 			
-//fatorial
-	//memoria[32'd300] = {movi,5'd2,5'd0,5'd0,11'd4};
-		memoria[32'd300] = {in,5'd2,5'd0,5'd0,11'd1};//in r2
-		memoria[32'd301] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
-		memoria[32'd302] = {6'b011010,5'd7,5'd0,5'd0,11'd1};//movi r7,1
-		memoria[32'd303] = {6'b011001,5'd3,5'd7,5'd7,11'd0};//mov r3,r7
-		memoria[32'd304] = {6'b010100,5'd8,5'd7,5'd2,11'd4};//beq r7,r2,+4
-		memoria[32'd305] = {6'b000100,5'd3,5'd3,5'd2,11'd0};//mult r3,r3,r2
-		memoria[32'd306] = {6'b000011,5'd2,5'd2,5'd2,11'd1};//subi r2,r2,1
-		memoria[32'd307] = {6'b010001,26'd304};//j linha 4
-		memoria[32'd308] = {6'b011000,5'd3,5'd6,5'd3,11'd30};//sw r3,0(r0)
-		memoria[32'd309] = {out,5'd3,5'd3,5'd3,11'd1};//out r3
-		memoria[32'd310] = {j,26'd236};//fim
+//teste comunicação
+	
+		memoria[32'd300] = {inRX,5'd2,5'd0,5'd0,11'd1};//inRX r2
+		memoria[32'd301] = {multi,5'd2,5'd2,5'd2,11'd2};//multi r2,2
+		memoria[32'd302] = {outTX,5'd2,5'd2,5'd2,11'd1};//outTX r2
+		memoria[32'd303] = {j,26'd300};//mov r3,r7
+
 	
  //exponencial
 

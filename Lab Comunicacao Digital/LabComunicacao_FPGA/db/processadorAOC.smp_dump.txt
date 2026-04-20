@@ -1,0 +1,20 @@
+
+State Machine - |CPU|uart_rx:mrx|state
+Name state.STOP state.DATA state.START state.IDLE 
+state.IDLE 0 0 0 0 
+state.START 0 0 1 1 
+state.DATA 0 1 0 1 
+state.STOP 1 0 0 1 
+
+State Machine - |CPU|uart_tx:mtx|state
+Name state.STOP state.DATA state.START state.IDLE 
+state.IDLE 0 0 0 0 
+state.START 0 0 1 1 
+state.DATA 0 1 0 1 
+state.STOP 1 0 0 1 
+
+State Machine - |CPU|ParadaSistema:mest|estadoAtual
+Name estadoAtual.00 estadoAtual.10 estadoAtual.01 
+estadoAtual.10 0 0 0 
+estadoAtual.01 0 1 1 
+estadoAtual.00 1 1 0 
