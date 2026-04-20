@@ -3,6 +3,8 @@ module CPU(
     input clock,
     input botaoPlaca,
     input [3:0] entradaDeDadosIO,
+	 input [7:0] entradaUART,
+	 output wire [7:0] saidaUART,
     output wire [6:0] unidade,
     output wire [6:0] dezena,
     output wire [6:0] centena,
@@ -122,6 +124,10 @@ module CPU(
     //ligaçao com memoria de dados
     simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
         
+	 //ligação do modulo uart_tx
+
+		
+		  
     //ligaçao com entrada e saida
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(dadosDeEntrada),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
     
