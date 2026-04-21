@@ -3,8 +3,8 @@ module CPU(
     input clock,
     input botaoPlaca,
     input [3:0] entradaDeDadosIO,
-	 input [7:0] entradaUART,
-	 output wire [7:0] saidaUART,
+	 input entradaUART,
+	 output wire saidaUART,
     output wire [6:0] unidade,
     output wire [6:0] dezena,
     output wire [6:0] centena,
@@ -16,7 +16,7 @@ module CPU(
     output wire [6:0] uniProc,
 	 
 	 //***********************testes***********************
-	 //output wire testeSinal,
+	 output wire testeSinal,
 	 output reg [31:0] testePC,
     output wire [4:0] enRD,
     output wire [4:0] enRS,
@@ -133,10 +133,10 @@ module CPU(
     simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
         
 	 //ligação do modulo uart_tx - tranmisão fpga>arduino
-    uart_tx mtx (.clk(clock),.reset(reset),.data_in(rt[7:0]),.data_valid(w_tx_start),.tx(saidaUART[0]),.busy(w_tx_busy));
+    uart_tx mtx (.clk(clock),.reset(reset),.data_in(rt[7:0]),.data_valid(w_tx_start),.tx(saidaUART),.busy(w_tx_busy));
 	 
 	 //ligando modulo uart_rx - recepção arduino>fpga
-	 uart_rx mrx(.clk(clock),.reset(reset),.rx(entradaUART[0]),.data_out(dadoLidoArduino),.data_ready(w_rx_ready));	
+	 uart_rx mrx(.clk(clock),.reset(reset),.rx(entradaUART),.data_out(dadoLidoArduino),.data_ready(w_rx_ready));	
 		  
     //ligaçao com entrada e saida
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(DadosLidos),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
@@ -186,7 +186,7 @@ module CPU(
 	 assign teste_troca_contexto = troca_contexto;
 	 assign teste_sinal_cproc = mudaProcesso;
 	 assign teste_fim = fimprocesso;
-	 //assign Testeprocesso_atual = processo_rodando;
+	 //assign Testeprocesso_atual = processo_rodando;*/
     
     always@(negedge clk) 
     begin
@@ -214,7 +214,7 @@ module CPU(
                 else pc <= resulSomador;
             end    
         end
-       // testePC <= pc;
+        testePC <= pc;
     end
     
     always@(pc)
@@ -338,73 +338,7 @@ module CPU(
 			//testeoperando = operando;
     end
 	 
-	 //**************************************************************************************
-	 
-	   
-
-/*  always@(*)
-    begin
-	 
-	    if(opcode == in) 
-			begin
-				ledin = 1'b1;
-				
-				if(pc < 32'd300)       processo_atual = 32'd0;
-				
-				if(pc == 32'd41)  ledmenu = 1'b1;
-				
-				if(pc == 32'd56)  lednumprocessos = 1'b1;
-				
-				else
-					begin
-						
-						ledprocesso = 1'b1;
-						
-						if(pc < 32'd600)  processo_atual = 32'd1;
-						else if(pc < 32'd900)  processo_atual = 32'd2;
-						else if(pc < 32'd1200) processo_atual = 32'd3;
-						else if(pc < 32'd1500) processo_atual = 32'd4;
-						else if(pc < 32'd1800) processo_atual = 32'd5;
-						else if(pc < 32'd2100) processo_atual = 32'd6;
-						else if(pc < 32'd2400) processo_atual = 32'd7;
-						else if(pc < 32'd2700) processo_atual = 32'd8;
-						else if(pc < 32'd3000) processo_atual = 32'd9;
-						else if(pc < 32'd3300) processo_atual = 32'd10;
-					end
-			end
-			
-		else if (opcode == out) 
-			begin
-			
-				if(pc < 32'd300)       processo_atual = 32'd0;
-				
-				else
-					begin
-						
-						ledprocesso = 1'b1;
-						
-						if(pc < 32'd600)  processo_atual = 32'd1;
-						else if(pc < 32'd900)  processo_atual = 32'd2;
-						else if(pc < 32'd1200) processo_atual = 32'd3;
-						else if(pc < 32'd1500) processo_atual = 32'd4;
-						else if(pc < 32'd1800) processo_atual = 32'd5;
-						else if(pc < 32'd2100) processo_atual = 32'd6;
-						else if(pc < 32'd2400) processo_atual = 32'd7;
-						else if(pc < 32'd2700) processo_atual = 32'd8;
-						else if(pc < 32'd3000) processo_atual = 32'd9;
-						else if(pc < 32'd3300) processo_atual = 32'd10;
-					end
-			end
-		
-		else
-			begin
-			  ledmenu = 1'b0;
-			  lednumprocessos= 1'b0;
-			  ledprocesso= 1'b0;
-			  ledin= 1'b0;
-			end
 	
-	 end*/
 	 
 	 
 

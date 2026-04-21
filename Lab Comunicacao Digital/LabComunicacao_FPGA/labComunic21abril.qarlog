@@ -1,0 +1,41 @@
+Quartus Prime Archive log --	C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/labComunic21abril.qarlog
+
+Archive:	C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/labComunic21abril.qar
+Date:		Tue Apr 21 13:26:13 2026
+Quartus Prime		23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/BCD.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/BancoRegistradores.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/CPU.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/ContadorDeQuantum.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/DeBounce.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/DeBouncebuton.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/EnderecoRelativo.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/EntradaSaida.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/MEMInstrucoes.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/MemoriaDados.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/PC.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/ParadaSistema.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/ULA.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/UnidadeDeControle.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/assignment_defaults.qdf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/clock_divider.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/displaySete.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/mux6.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/muxDesvio.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/muxEntrada.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/processadorAOC.qpf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/processadorAOC.qsf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/processadorAOC_assignment_defaults.qdf
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/pulsoBotao.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/simple_dual_port_ram_dual_clock.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/simple_dual_port_ram_single_clock.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/tratamentoBotao.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/uart_rx.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/uart_tx.v
+C:/Users/Acer/Documents/GitHub/Graduation/Lab Comunicacao Digital/LabComunicacao_FPGA/unidadeDeComparacao.v
+	======= Total: 30 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
