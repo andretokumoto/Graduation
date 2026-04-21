@@ -16,7 +16,7 @@ module CPU(
     output wire [6:0] uniProc,
 	 
 	 //***********************testes***********************
-	 output wire testeSinal,
+	/* output wire testeSinal,
 	 output reg [31:0] testePC,
     output wire [4:0] enRD,
     output wire [4:0] enRS,
@@ -43,7 +43,7 @@ module CPU(
 	 output wire testeMemControl,
 	 output wire teste_troca_contexto,
 	 output wire teste_sinal_cproc,
-	 output wire teste_fim
+	 output wire teste_fim*/
 );
 
     // Declarações internas
@@ -161,7 +161,7 @@ module CPU(
 	 
     
     assign halt = parada;
-	 assign un = imediato[3:0];
+	/* assign un = imediato[3:0];
 	 assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
 	 assign testeBranchControl = branchControl;
     assign testeResultComparacao = resultComparacao;
@@ -214,7 +214,7 @@ module CPU(
                 else pc <= resulSomador;
             end    
         end
-        testePC <= pc;
+       // testePC <= pc;
     end
     
     always@(pc)
