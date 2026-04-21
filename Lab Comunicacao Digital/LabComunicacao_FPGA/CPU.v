@@ -13,7 +13,7 @@ module CPU(
     output reg lednumprocessos,
     output reg ledprocesso,
     output reg ledin,
-    output wire [6:0] uniProc,
+    output wire [6:0] uniProc
 	 
 	 //***********************testes***********************
 	/* output wire testeSinal,
