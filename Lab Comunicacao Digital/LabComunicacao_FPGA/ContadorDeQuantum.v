@@ -12,7 +12,7 @@ module ContadorDeQuantum(
 );
 
  parameter quantum = 32'd5;
- parameter jump=6'b010001,jumpR=6'b010010,beq=6'b010100,in=6'b011101,out=6'b011110;
+ parameter jump=6'b010001,jumpR=6'b010010,beq=6'b010100,in=6'b011101,out=6'b011110,inRX = 6'b100110,outTX = 6'b100111;
  
  reg [31:0] contador=32'd0;
  
@@ -30,7 +30,7 @@ module ContadorDeQuantum(
 		else if(pc > 32'd300)//não faz a contagem do SO
 			begin
 				
-					if (opcode == jump || opcode == jumpR || opcode == beq || opcode == in || opcode == out) 
+					if (opcode == jump || opcode == jumpR || opcode == beq || opcode == in || opcode == out || inRX || outTX) 
 						begin
 							 contador = contador+1;
 						end
