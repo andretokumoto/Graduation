@@ -95,6 +95,7 @@ module CPU(
 	 wire w_rx_ready;
 	 wire w_tx_busy;
 	 wire w_tx_start;
+	 wire sinal_start_tx;
 	 wire [7:0] dadoLidoArduino;
 
     parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd236, endSalvaProcesso = 32'd180;
@@ -133,7 +134,7 @@ module CPU(
     simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
         
 	 //ligação do modulo uart_tx - tranmisão fpga>arduino
-    uart_tx mtx (.clk(clock),.reset(reset),.data_in(rt[7:0]),.data_valid(w_tx_start),.tx(saidaUART),.busy(w_tx_busy));
+    uart_tx mtx (.clk(clock),.reset(reset),.data_in(rt[7:0]),.data_valid(sinal_start_tx),.tx(saidaUART),.busy(w_tx_busy));
 	 
 	 //ligando modulo uart_rx - recepção arduino>fpga
 	 uart_rx mrx(.clk(clock),.reset(reset),.rx(entradaUART),.data_out(dadoLidoArduino),.data_ready(w_rx_ready));	
@@ -158,7 +159,7 @@ module CPU(
     displaySete displayprocessouni(.entrada(un),.saidas(uniProc));
     
     assign selecaoMuxDesvio = branchControl & resultComparacao;
-	 
+	assign sinal_start_tx = w_tx_start & ~w_tx_busy;
     
     assign halt = parada;
 	/* assign un = imediato[3:0];
@@ -207,7 +208,7 @@ module CPU(
 		  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;//
         else 
         begin
-            if(parada) pc <= pc;
+			if(parada || w_tx_busy) pc <= pc;
             else
             begin
                 if(DesvioControl) pc <= concatena;
