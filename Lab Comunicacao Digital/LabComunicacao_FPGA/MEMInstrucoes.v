@@ -358,9 +358,10 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 //teste comunicação
 	
 		memoria[32'd300] = {inRX,5'd2,5'd0,5'd0,11'd1};//inRX r2
-		memoria[32'd301] = {multi,5'd2,5'd2,5'd2,11'd2};//multi r2,2
-		memoria[32'd302] = {outTX,5'd2,5'd2,5'd2,11'd1};//outTX r2
-		memoria[32'd303] = {j,26'd300};//mov r3,r7
+		memoria[32'd301] = {out,5'd2,5'd2,5'd2,11'd2};//out r2
+		memoria[32'd302] = {in,5'd3,21'd2};  //in r3
+		memoria[32'd303] = {outTX,5'd3,5'd3,5'd3,11'd1};//outTX r2
+		memoria[32'd304] = {j,26'd300};//mov r3,r7
 
 	
  //exponencial
