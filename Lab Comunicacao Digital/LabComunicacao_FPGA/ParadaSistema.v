@@ -1,4 +1,4 @@
-module ParadaSistema(clock,pausa,botaoIN,status);
+module ParadaSistema(clock,pausa,botaoIN,status,data_ready);
   
   input botaoIN,clock;
   input pausa;
@@ -56,7 +56,7 @@ module ParadaSistema(clock,pausa,botaoIN,status);
 	 
 	 always@(posedge botaoIN or posedge clock)
 	  begin
-	      if(botaoIN) estadoAtual = 2'b10;
+		  if(botaoIN || data_ready) estadoAtual = 2'b10;
 			else estadoAtual = estadoFuturo;
 	  end
 	 
