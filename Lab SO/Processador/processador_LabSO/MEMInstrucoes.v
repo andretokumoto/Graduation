@@ -27,7 +27,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	parameter lw=6'b010111,sw=6'b011000,multi=6'b000101,div=6'b000110,divi=6'b000111,rdiv=6'b001000;
 	parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
 	parameter in=6'b011101,out=6'b011110,fim=6'b111111,spc = 6'b100110;
-	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101, inproc = 6'b100110,outproc = 6'b100111;
+	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101, inproc = 6'b110110,outproc = 6'b100111,dif = 6'b101111;
 	
 	parameter R20 = 5'd20,R21 = 5'd21,R22 = 5'd22,R23 = 5'd23,R24 = 5'd24,R25 = 5'd25 ,RZERO = 5'd0;
 
@@ -394,7 +394,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 
 			
 //fatorial
-	   memoria[32'd300] = {inproc,5'd2,21'd2};  //in r3
+	  /* memoria[32'd300] = {inproc,5'd2,21'd2};  //in r3
 		memoria[32'd301] = {movi,5'd10,5'd0,5'd0,11'd330};// movi , r7, 1
 		memoria[32'd302] = {lw,5'd2,5'd10,5'd10,11'd1};
 		memoria[32'd303] = {6'b011010,5'd6,5'd0,5'd0,11'd1};//movi r6,1
@@ -407,9 +407,19 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd310] = {movi,5'd10,5'd0,5'd0,11'd331};
 		memoria[32'd311] = {sw,RZERO,5'd10,5'd3,11'd1};
 		memoria[32'd312] = {outproc,5'd7,5'd7,5'd7,11'd2};//out r7	
-		memoria[32'd313] = {j,26'd236};//fim
+		memoria[32'd313] = {j,26'd236};//fim*/
 	
  //exponencial
+ 
+ //calculo diferença
+      memoria[32'd300] = {movi,5'd10,5'd0,5'd0,11'd0};// r10 = 0
+		memoria[32'd301] = {in,5'd5,21'd2};//in r5
+		memoria[32'd302] = {movi,5'd10,5'd0,5'd0,11'd4};// aqui vai ter a entrada da uart
+		memoria[32'd303] = {dif,5'd15,5'd10,5'd5,11'd0}; // r15 = |r10 - r5|
+		memoria[32'd304] = {out,5'd15,5'd15,5'd15,11'd1}; // out r15
+		//comolcar saida para uart
+		memoria[32'd305] = {j,26'd236}; // depois alterar para jump na entrada de dados da uart
+ 
 
 	   //memoria[32'd600] = {movi,5'd3,RZERO,RZERO,11'd3};  //in r3
 		

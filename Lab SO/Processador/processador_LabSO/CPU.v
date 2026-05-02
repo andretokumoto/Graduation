@@ -11,10 +11,10 @@ module CPU(
     output reg lednumprocessos,
     output reg ledprocesso,
     output reg ledin,
-    output wire [6:0] uniProc,
+    output wire [6:0] uniProc
 	 
 	 //***********************testes***********************
-	 output wire testeSinal,
+	/* output wire testeSinal,
 	 output reg [31:0] testePC,
     output wire [4:0] enRD,
     output wire [4:0] enRS,
@@ -41,7 +41,7 @@ module CPU(
 	 output wire testeMemControl,
 	 output wire teste_troca_contexto,
 	 output wire teste_sinal_cproc,
-	 output wire teste_fim
+	 output wire teste_fim*/
 );
 
     // Declarações internas
@@ -129,7 +129,7 @@ module CPU(
 	 //debaunce
 	  //DeBounce deb(.botaoEntrada(ButtonNeg),.clock(clk),.botaoFiltrado(botaoIN));
 	  assign ButtonNeg = ~botaoPlaca;
-	  assign testeSinal =  botaoIN;
+	  //assign testeSinal =  botaoIN;
 	 
     //ligaçao com display
     displaySete displayUnidade(.entrada(inUnidade),.saidas(unidade));
@@ -143,7 +143,8 @@ module CPU(
     
     assign halt = parada;
 	 assign un = rs[3:0];
-	assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
+	 assign botaoIN = botaoPlaca;//
+/*	assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
 	 assign testeBranchControl = branchControl;
     assign testeResultComparacao = resultComparacao;
     assign testeIN = dadosDeEntrada;
@@ -167,7 +168,7 @@ module CPU(
 	 assign teste_troca_contexto = troca_contexto;
 	 assign teste_sinal_cproc = mudaProcesso;
 	 assign teste_fim = fimprocesso;
-	 //assign Testeprocesso_atual = processo_rodando;
+	 //assign Testeprocesso_atual = processo_rodando;*/
     
     always@(negedge clk) 
     begin
@@ -195,7 +196,7 @@ module CPU(
                 else pc <= resulSomador;
             end    
         end
-       testePC <= pc;
+      // testePC <= pc;
     end
     
     always@(pc)

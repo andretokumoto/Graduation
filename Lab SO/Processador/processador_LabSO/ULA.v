@@ -9,7 +9,7 @@ reg [31:0] inRS,inRT;
 
 
 parameter soma=5'b00000,subtracao=5'b00001,multiplicacao=5'b00010,divisao=5'b00011,restoDivisao=5'b00100,OPor=5'b00101,OPand=5'b00110,OPnot=5'b00111;
-parameter OPxor=5'b01000,OPnor=5'b01001,OPnand=5'b01010,OPxnor=5'b01011,maior=5'b01110, seguidor = 5'b11111;
+parameter OPxor=5'b01000,OPnor=5'b01001,OPnand=5'b01010,OPxnor=5'b01011,maior=5'b01110,diferenca = 5'b01111, seguidor = 5'b11111;
 
 
 /*always@(posedge clock)
@@ -52,6 +52,12 @@ begin
     OPxnor : saidaULA = ~(RS ^ RT);
 	 
 	 seguidor : saidaULA = RT; //apenas retorna valor
+	 
+	 diferenca: 
+		begin
+			if(RS > RT) saidaULA = RS - RT;
+			else saidaULA = RT - RS;
+		end
 	 
 	 maior :
 	   begin

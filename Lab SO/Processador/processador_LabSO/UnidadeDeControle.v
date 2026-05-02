@@ -11,14 +11,14 @@ output reg mudaProcesso,fimprocesso,intrucaoIOContexto,ledControl,comandoIN,coma
 
 
 //opcode de cada operaçao
-parameter add=6'b000000,addi=6'b000001,sub=6'b000010,subi=6'b000011,mult=6'b000100,multi=6'b000101,div=6'b000110,divi=6'b000111,rdiv=6'b001000;
+parameter add=6'b000000,addi=6'b000001,sub=6'b000010,subi=6'b000011,mult=6'b000100,multi=6'b000101,div=6'b000110,divi=6'b000111,rdiv=6'b001000,dif = 6'b101111;
 parameter OR=6'b001001,AND=6'b001010,NOT=6'b001011,XOR=6'b001100,NOR=6'b001101,NAND=6'b001110,XNOR=6'b001111,LT=6'b010000;
 parameter jump=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b010101,blt=6'b010110;
 parameter lw=6'b010111,sw=6'b011000;
 parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
 parameter in=6'b011101,out=6'b011110,fim=6'b111111,pause=6'b100000,spc = 6'b100110;
 //op de SO
-parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011,encBios = 6'b100100,led = 6'b100101, inproc = 6'b100110,outproc = 6'b100111;
+parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011,encBios = 6'b100100,led = 6'b100101, inproc = 6'b110110,outproc = 6'b100111;
 
 
                                
@@ -98,6 +98,30 @@ always@(opcode)
 		  comandoIN = 1'd0;
 		  comandoOUT = 1'd0;			  
 		end
+		
+	 dif:
+	   begin
+		
+		  DesvioControl = 1'b0;
+		  branchControl = 1'b0;
+		  branchTipo= 1'b0;
+		  jumpControl= 1'b0;
+		  escritaRegControl= 1'b1;
+		  valueULA= 1'b0;
+		  linkControl = 1'b0;
+		  memControl= 1'b0;
+		  entradaSaidaControl = 2'b00;
+		  dadoRegControl = 3'b001;
+		  ulaOP = 5'b01111;
+		  status=1'b0;
+		  mudaProcesso = 1'b0;
+		  fimprocesso	= 1'b0;
+		  intrucaoIOContexto = 1'b0;
+		  encerrarBios = 2'b00;
+		  ledControl = 1'b0;
+		  comandoIN = 1'd0;
+		  comandoOUT = 1'd0;			  
+		end		
 		
 	 subi:
 	   begin
