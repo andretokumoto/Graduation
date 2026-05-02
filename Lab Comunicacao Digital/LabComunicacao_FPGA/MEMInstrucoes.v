@@ -27,7 +27,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	parameter lw=6'b010111,sw=6'b011000,multi=6'b000101,div=6'b000110,divi=6'b000111,rdiv=6'b001000;
 	parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
 	parameter in=6'b011101,out=6'b011110,fim=6'b111111,spc = 6'b100110,inRX = 6'b100110,outTX = 6'b100111;
-	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101;
+	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101, dif =6'b101111;
 	
 	parameter R20 = 5'd20,R21 = 5'd21,R22 = 5'd22,R23 = 5'd23,R24 = 5'd24,R25 = 5'd25 ,RZERO = 5'd0;
 
@@ -355,31 +355,14 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
 			
-//teste comunicação
-	
-		memoria[32'd300] = {inRX,5'd2,5'd0,5'd0,11'd1};//inRX r2
-		memoria[32'd301] = {out,5'd2,5'd2,5'd2,11'd2};//out r2
-		memoria[32'd302] = {in,5'd3,21'd2};  //in r3
-		memoria[32'd303] = {outTX,5'd3,5'd3,5'd3,11'd1};//outTX r2
-		memoria[32'd304] = {j,26'd300};//mov r3,r7
-
-	
- //exponencial
-
-	   //memoria[32'd600] = {movi,5'd3,RZERO,RZERO,11'd3};  //in r3
-		
-		memoria[32'd600] = {in,5'd3,21'd2};  //in r3
-		memoria[32'd601] = {movi,5'd7,5'd0,5'd0,11'd1};// movi , r7, 1
-		memoria[32'd602] = {movi,5'd2,5'd0,5'd0,11'd1};// movi , r2, 1
-		//memoria[32'd603] = {movi,5'd4,RZERO,RZERO,11'd2};// movi r4
-		memoria[32'd603] = {in,5'd4,21'd2};// in r4
-		memoria[32'd604] = {beq,5'd8,5'd0,5'd4,11'd5};// beq RZERO, r4, +5
-		memoria[32'd605] = {mult,5'd7,5'd7,5'd3,11'd0};// mult r7, r7, r3
-		memoria[32'd606] = {beq,5'd8,5'd2,5'd4,11'd3};// beq r4, r2, +3
-		memoria[32'd607] = {addi,5'd2,5'd2,5'd2,11'd1};// addi r2 , 1
-		memoria[32'd608] = {j,26'd605};// jump [5]
-		memoria[32'd609] = {out,5'd7,5'd7,5'd7,11'd2};//out r7
-		memoria[32'd610] = {j,26'd236};//fim
+ //calculo diferença
+      memoria[32'd300] = {movi,5'd10,5'd0,5'd0,11'd0};// r10 = 0
+		memoria[32'd301] = {in,5'd5,21'd2};//in r5
+		memoria[32'd302] = {movi,5'd10,5'd0,5'd0,11'd4};// aqui vai ter a entrada da uart
+		memoria[32'd303] = {dif,5'd15,5'd10,5'd5,11'd0}; // r15 = |r10 - r5|
+		memoria[32'd304] = {out,5'd15,5'd15,5'd15,11'd1}; // out r15
+		//comolcar saida para uart
+		memoria[32'd305] = {j,26'd236}; // depois alterar para jump na entrada de dados da uart
 		
 
 
