@@ -81,20 +81,17 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_E25 -to ledmenu
 set_location_assignment PIN_F18 -to ledin
 set_location_assignment PIN_H21 -to biosEmExecucao
-set_location_assignment PIN_G19 -to lednumprocessos
+set_location_assignment PIN_H17 -to lednumprocessos
 set_location_assignment PIN_E19 -to ledprocesso
-set_location_assignment PIN_AD18 -to uniProc[6]
-set_location_assignment PIN_AC18 -to uniProc[5]
-set_location_assignment PIN_AB18 -to uniProc[4]
-set_location_assignment PIN_AH19 -to uniProc[3]
-set_location_assignment PIN_AG19 -to uniProc[2]
-set_location_assignment PIN_AF18 -to uniProc[1]
-set_location_assignment PIN_AH18 -to uniProc[0]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS OFF
 set_location_assignment PIN_E22 -to testeSinal
+set_instance_assignment -name IO_STANDARD "2.5 V" -to entradaUART
+set_location_assignment PIN_AB22 -to entradaUART
+set_instance_assignment -name IO_STANDARD "2.5 V" -to saidaUART
+set_location_assignment PIN_AC15 -to saidaUART
 set_global_assignment -name VERILOG_FILE simple_dual_port_ram_single_clock.v
 set_global_assignment -name VERILOG_FILE CPU.v
 set_global_assignment -name VERILOG_FILE MEMInstrucoes.v
@@ -122,17 +119,26 @@ set_global_assignment -name VERILOG_FILE EnderecoRelativo.v
 set_global_assignment -name VERILOG_FILE uart_tx.v
 set_global_assignment -name VERILOG_FILE uart_rx.v
 set_global_assignment -name VERILOG_FILE muxEntrada.v
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to entradaUART[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to entradaUART
-set_location_assignment PIN_AB22 -to entradaUART
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to saidaUART
-set_location_assignment PIN_AC15 -to saidaUART
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uniProc[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uniProc[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uniProc[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uniProc[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uniProc[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uniProc[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uniProc[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uniProc
+set_global_assignment -name VERILOG_FILE display_pc.v
+set_location_assignment PIN_AD18 -to unidadePC[0]
+set_location_assignment PIN_AC18 -to unidadePC[1]
+set_location_assignment PIN_AB18 -to unidadePC[2]
+set_location_assignment PIN_AH19 -to unidadePC[3]
+set_location_assignment PIN_AG19 -to unidadePC[4]
+set_location_assignment PIN_AF18 -to unidadePC[5]
+set_location_assignment PIN_AH18 -to unidadePC[6]
+set_location_assignment PIN_AA17 -to dezenaPC[0]
+set_location_assignment PIN_AB16 -to dezenaPC[1]
+set_location_assignment PIN_AA16 -to dezenaPC[2]
+set_location_assignment PIN_AB17 -to dezenaPC[3]
+set_location_assignment PIN_AB15 -to dezenaPC[4]
+set_location_assignment PIN_AA15 -to dezenaPC[5]
+set_location_assignment PIN_AC17 -to dezenaPC[6]
+set_location_assignment PIN_AD17 -to centenaPC[0]
+set_location_assignment PIN_AE17 -to centenaPC[1]
+set_location_assignment PIN_AG17 -to centenaPC[2]
+set_location_assignment PIN_AH17 -to centenaPC[3]
+set_location_assignment PIN_AF17 -to centenaPC[4]
+set_location_assignment PIN_AG18 -to centenaPC[5]
+set_location_assignment PIN_AA14 -to centenaPC[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

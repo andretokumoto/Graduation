@@ -13,10 +13,14 @@ module CPU(
     output reg lednumprocessos,
     output reg ledprocesso,
     output reg ledin,
-    output wire [6:0] uniProc
+	 output wire [6:0] unidadePC,
+    output wire [6:0] dezenaPC,
+    output wire [6:0] centenaPC
 	 
 	 //***********************testes***********************
-	/* output wire testeSinal,
+	/* 
+	 output wire [6:0] uniProc,
+	 output wire testeSinal,
 	 output reg [31:0] testePC,
     output wire [4:0] enRD,
     output wire [4:0] enRS,
@@ -97,6 +101,8 @@ module CPU(
 	 wire w_tx_start;
 	 wire sinal_start_tx;
 	 wire [7:0] dadoLidoArduino;
+	 reg w_tx_start_delay;
+    //wire pulse_start_tx;
 
     parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd236, endSalvaProcesso = 32'd180;
 	 parameter in=6'b011101,out=6'b011110;
@@ -116,7 +122,7 @@ module CPU(
     UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl),.comandoIN(comandoIN),.comandoOUT(comandoOUT),.tipoEntrada(tipoEntrada),.w_tx_start(w_tx_start));
     
     //ligaçao com  parada de sistema
-    ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada));
+    ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada),.data_ready(w_rx_ready));
     
     //ligaçao com banco registradores
     BancoRegistradores br(.clk(clk),.escritaRegControl(escritaRegControl),.inRS(endRS),.inRT(endRT),.inRD(endRD),.dados(dadosMux6),.outRS(rs),.outRT(rt),.linkControl(linkControl));
@@ -156,10 +162,13 @@ module CPU(
     displaySete displayCentena(.entrada(inCentena),.saidas(centena));
       
    // BCD bcd(.binario(imediatoExtendido),.unidade(un),.dezena(dez),.centena(cen),.controlesaida(entradaSaidaControl)); 
-    displaySete displayprocessouni(.entrada(un),.saidas(uniProc));
+    //displaySete displayprocessouni(.entrada(un),.saidas(uniProc));
     
+	Display_PC dpc(.pc_atual(pc),.unidadePC(unidadePC),.dezenaPC(dezenaPC),.centenaPC(centenaPC));		 
+		 
     assign selecaoMuxDesvio = branchControl & resultComparacao;
-	assign sinal_start_tx = w_tx_start & ~w_tx_busy;
+	assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
+	
     
     assign halt = parada;
 	/* assign un = imediato[3:0];
@@ -200,6 +209,9 @@ module CPU(
     
     always@(posedge clk or posedge reset)
     begin
+	 
+		  w_tx_start_delay <= w_tx_start;
+	 
         if(reset) pc<=32'd0;
        
         else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
@@ -207,14 +219,14 @@ module CPU(
        // else if (comandoOUT == 1'b1) pc <= PCout;
 		  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;//
         else 
-        begin
-			if(parada || w_tx_busy) pc <= pc;
-            else
-            begin
-                if(DesvioControl) pc <= concatena;
-                else pc <= resulSomador;
-            end    
-        end
+			  begin
+				if(parada || w_tx_busy) pc <= pc;
+					else
+					begin
+						 if(DesvioControl) pc <= concatena;
+						 else pc <= resulSomador;
+					end    
+			  end
        // testePC <= pc;
     end
     

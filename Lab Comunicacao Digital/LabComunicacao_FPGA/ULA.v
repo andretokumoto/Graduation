@@ -49,7 +49,7 @@ begin
 	 
 	 seguidor : saidaULA = RT; //apenas retorna valor
 	 
-	 deiferenca: 
+	 diferenca: 
 		begin
 			if(RS > RT) saidaULA = RS - RT;
 			else saidaULA = RT - RS;
@@ -64,6 +64,3 @@ begin
 end
 
 endmodule 
-
-
------------------------

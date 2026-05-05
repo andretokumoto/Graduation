@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "saidaUART",
-					"strict" : false
-				},
-				{
 					"name" : "unidade[0]",
 					"strict" : false
 				},
@@ -112,11 +108,95 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "unidadePC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadePC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadePC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadePC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadePC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadePC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadePC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dezenaPC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dezenaPC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dezenaPC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dezenaPC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dezenaPC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dezenaPC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dezenaPC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaPC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaPC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaPC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaPC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaPC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaPC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaPC[6]",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
 					"strict" : false
 				},
 				{
@@ -137,6 +217,10 @@
 				},
 				{
 					"name" : "entradaDeDadosIO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaUART",
 					"strict" : false
 				}
 			]
