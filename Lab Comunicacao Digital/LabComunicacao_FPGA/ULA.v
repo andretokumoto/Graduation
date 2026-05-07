@@ -4,7 +4,7 @@ input [31:0] RS,RT;
 input  [4:0]ulaOP;
 
 
-output reg[31:0] saidaULA,saidaHI,saidaLO;
+output reg signed[31:0] saidaULA,saidaHI,saidaLO;
 reg [31:0] inRS,inRT;
 
 
@@ -21,7 +21,7 @@ begin
 
     soma: saidaULA = RS + RT;
 	 
-	 subtracao : saidaULA = RS - RT;
+	 subtracao: saidaULA = $signed(RS) - $signed(RT);
 	 
 	  multiplicacao: 
 	  begin

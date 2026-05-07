@@ -55,6 +55,8 @@ centenaPC[3] << Display_PC:dpc.centenaPC
 centenaPC[4] << Display_PC:dpc.centenaPC
 centenaPC[5] << Display_PC:dpc.centenaPC
 centenaPC[6] << Display_PC:dpc.centenaPC
+sinal_busy << uart_tx:mtx.busy
+sinal_recebe << UnidadeDeControle:uco.comandoIN
 
 
 |CPU|clock_divider:comb_3

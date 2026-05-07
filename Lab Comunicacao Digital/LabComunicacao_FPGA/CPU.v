@@ -15,7 +15,9 @@ module CPU(
     output reg ledin,
 	 output wire [6:0] unidadePC,
     output wire [6:0] dezenaPC,
-    output wire [6:0] centenaPC
+    output wire [6:0] centenaPC,
+	 output wire sinal_busy,
+	 output wire sinal_recebe
 	 
 	 //***********************testes***********************
 	/* 
@@ -168,8 +170,10 @@ module CPU(
 		 
     assign selecaoMuxDesvio = branchControl & resultComparacao;
 	assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
-	
-    
+	assign sinal_busy = w_tx_busy;
+   assign sinal_recebe = comandoIN;
+	 
+	 
     assign halt = parada;
 	/* assign un = imediato[3:0];
 	 assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
