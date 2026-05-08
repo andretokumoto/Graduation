@@ -57,6 +57,8 @@ centenaPC[5] << Display_PC:dpc.centenaPC
 centenaPC[6] << Display_PC:dpc.centenaPC
 sinal_busy << uart_tx:mtx.busy
 sinal_recebe << UnidadeDeControle:uco.comandoIN
+teste_recebimento << entradaUART.DB_MAX_OUTPUT_PORT_TYPE
+teste_envio << uart_tx:mtx.tx
 
 
 |CPU|clock_divider:comb_3

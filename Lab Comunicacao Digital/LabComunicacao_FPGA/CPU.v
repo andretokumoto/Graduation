@@ -17,7 +17,9 @@ module CPU(
     output wire [6:0] dezenaPC,
     output wire [6:0] centenaPC,
 	 output wire sinal_busy,
-	 output wire sinal_recebe
+	 output wire sinal_recebe,
+	 output wire teste_recebimento,
+	 output wire teste_envio
 	 
 	 //***********************testes***********************
 	/* 
@@ -168,12 +170,12 @@ module CPU(
     
 	Display_PC dpc(.pc_atual(pc),.unidadePC(unidadePC),.dezenaPC(dezenaPC),.centenaPC(centenaPC));		 
 		 
-    assign selecaoMuxDesvio = branchControl & resultComparacao;
+   assign selecaoMuxDesvio = branchControl & resultComparacao;
 	assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
 	assign sinal_busy = w_tx_busy;
    assign sinal_recebe = comandoIN;
-	 
-	 
+	assign teste_recebimento = entradaUART;
+	assign teste_envio = saidaUART;
     assign halt = parada;
 	/* assign un = imediato[3:0];
 	 assign testeSelecaoMuxDesvio = selecaoMuxDesvio;

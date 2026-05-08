@@ -192,6 +192,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "teste_recebimento",
+					"strict" : false
+				},
+				{
+					"name" : "entradaUART",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				},
@@ -217,10 +225,6 @@
 				},
 				{
 					"name" : "entradaDeDadosIO[2]",
-					"strict" : false
-				},
-				{
-					"name" : "entradaUART",
 					"strict" : false
 				}
 			]
