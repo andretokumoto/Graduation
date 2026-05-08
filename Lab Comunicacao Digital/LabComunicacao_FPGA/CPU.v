@@ -66,6 +66,7 @@ module CPU(
     reg [31:0] pc, pcsomado;
     reg [31:0] operando;
     reg [31:0] processo_atual;
+	 reg [31:0] buffer_uart;
 
     wire [3:0] inUnidade, inDezena, inCentena, un, dez, cen;
     wire botaoIN,ButtonNeg;
@@ -126,7 +127,7 @@ module CPU(
     UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl),.comandoIN(comandoIN),.comandoOUT(comandoOUT),.tipoEntrada(tipoEntrada),.w_tx_start(w_tx_start));
     
     //ligaçao com  parada de sistema
-    ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada),.data_ready(w_rx_ready));
+    ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada));
     
     //ligaçao com banco registradores
     BancoRegistradores br(.clk(clk),.escritaRegControl(escritaRegControl),.inRS(endRS),.inRT(endRT),.inRD(endRD),.dados(dadosMux6),.outRS(rs),.outRT(rt),.linkControl(linkControl));
@@ -153,7 +154,7 @@ module CPU(
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(DadosLidos),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
     
 	 //mux que escolhe dados de entrada entre placa e uart
-	 muxEntrada m_in(.tipoEntrada(tipoEntrada),.DadosLidos(DadosLidos),.dadoLidoArduinoExtendido(dadoLidoArduinoExtendido),.dadosDeEntrada(dadosDeEntrada));
+	 muxEntrada m_in(.tipoEntrada(tipoEntrada),.DadosLidos(DadosLidos),.dadoLidoArduinoExtendido(buffer_uart),.dadosDeEntrada(dadosDeEntrada));
 	 
 	 //debaunce
 	  DeBounce deb(.botaoEntrada(ButtonNeg),.clock(clk),.botaoFiltrado(botaoIN));
@@ -216,9 +217,13 @@ module CPU(
     always@(posedge clk or posedge reset)
     begin
 	 
-		  w_tx_start_delay <= w_tx_start;
-	 
-        if(reset) pc<=32'd0;
+		  
+        if(reset) 
+				begin
+					pc<=32'd0;
+					buffer_uart <= 32'd0;
+					w_tx_start_delay <= 1'b0;
+			   end
        
         else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
         else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
@@ -226,6 +231,15 @@ module CPU(
 		  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;//
         else 
 			  begin
+				   
+			   w_tx_start_delay <= w_tx_start;		  
+		  
+			  	if (w_rx_ready) 
+					begin
+						buffer_uart <= {24'b000000000000000000000000,dadoLidoArduino};
+					end
+	 
+			  
 				if(parada || w_tx_busy) pc <= pc;
 					else
 					begin
@@ -300,10 +314,10 @@ module CPU(
         end
     end*/
     
-	 always@(dadoLidoArduino)
+	 /*always@(dadoLidoArduino)
 		begin
 		  dadoLidoArduinoExtendido = {24'b000000000000000000000000,dadoLidoArduino};
-		end
+		end*/
 	 
 	 
     always@(imediato)

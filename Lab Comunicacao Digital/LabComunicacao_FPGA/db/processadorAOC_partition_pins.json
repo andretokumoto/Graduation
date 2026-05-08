@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "saidaUART",
+					"strict" : false
+				},
+				{
 					"name" : "unidade[0]",
 					"strict" : false
 				},
@@ -192,7 +196,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "sinal_busy",
+					"strict" : false
+				},
+				{
 					"name" : "teste_recebimento",
+					"strict" : false
+				},
+				{
+					"name" : "teste_envio",
 					"strict" : false
 				},
 				{
@@ -200,11 +212,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "clock",
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
