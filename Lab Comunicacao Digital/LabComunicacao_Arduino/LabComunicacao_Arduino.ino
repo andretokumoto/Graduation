@@ -1,37 +1,72 @@
 #include <SoftwareSerial.h>
 
-// Conexões:
-// TX da FPGA -> Pino 4 (RX) do Arduino [cite: 181]
-// Pino 11 (TX) do Arduino -> Divisor de Tensão (5V para 3.3V) -> RX da FPGA [cite: 181]
+// ==========================================================
+// Conexões
+// TX da FPGA  -> pino 4 (RX do Arduino)
+// TX do Arduino (pino 11) -> RX da FPGA (usar divisor de tensão 5V -> 3.3V)
+// GND do Arduino e GND da FPGA devem estar conectados
+// ==========================================================
 SoftwareSerial fpgaserial(4, 11);
 
 void setup() {
-  Serial.begin(9600);      // Monitor Serial do PC [cite: 182]
-  fpgaserial.begin(9600);  // Comunicação com a FPGA [cite: 182]
-  
-  Serial.println("Sistema Pronto. Digite um NUMERO e aperte ENTER:"); [cite: 183]
+  // Comunicação com o PC
+  Serial.begin(9600);
+
+  // Comunicação com a FPGA
+  fpgaserial.begin(9600);
+
+  // Reduz o tempo de espera do parse de strings
+  Serial.setTimeout(50);
+
+  Serial.println("Sistema pronto.");
+  Serial.println("Digite um numero entre 0 e 255 e pressione ENTER.");
 }
 
 void loop() {
-  // 1. Recebe valor numérico do PC e manda para a FPGA
+  // ==========================================================
+  // 1. Lê uma linha completa do Monitor Serial
+  // ==========================================================
   if (Serial.available() > 0) {
-    // Lê a entrada como um número inteiro (ex: "10" vira o valor 10)
-    int valor = Serial.parseInt(); 
-    
-    // Envia apenas o byte (8 bits) para a FPGA 
-    // Isso casa com o rt[7:0] do seu módulo CPU.v [cite: 36]
-    fpgaserial.write((byte)valor); 
-    
-    Serial.print("Valor numérico enviado: ");
-    Serial.println(valor);
+    // Lê tudo até o caractere '\n'
+    String entrada = Serial.readStringUntil('\n');
+
+    // Remove '\r', espaços e tabs
+    entrada.trim();
+
+    // Só processa se realmente houver conteúdo
+    if (entrada.length() > 0) {
+      int valor = entrada.toInt();
+
+      // Mantém apenas os 8 bits menos significativos
+      byte dado = (byte)(valor & 0xFF);
+
+      // Envia o byte para a FPGA
+      fpgaserial.write(dado);
+
+      Serial.print("Valor enviado para FPGA: ");
+      Serial.println(dado);
+
+      Serial.print("Binario enviado: ");
+      for (int i = 7; i >= 0; i--) {
+        Serial.print((dado >> i) & 1);
+      }
+      Serial.println();
+    }
   }
 
-  // 2. Recebe da FPGA e manda para o PC
-  if (fpgaserial.available()) {
-    // A FPGA envia o resultado processado (ex: o resultado da instrução outTX) [cite: 36, 140]
-    byte c = fpgaserial.read(); [cite: 185]
-    
-    Serial.print("Recebido da FPGA (Resultado): ");
-    Serial.println((int)c); // Mostra o valor numérico recebido
+  // ==========================================================
+  // 2. Recebe 1 byte da FPGA
+  // ==========================================================
+  if (fpgaserial.available() > 0) {
+    byte dadoRecebido = fpgaserial.read();
+
+    Serial.print("Recebido da FPGA (decimal): ");
+    Serial.println(dadoRecebido);
+
+    Serial.print("Recebido da FPGA (binario): ");
+    for (int i = 7; i >= 0; i--) {
+      Serial.print((dadoRecebido >> i) & 1);
+    }
+    Serial.println();
   }
 }
