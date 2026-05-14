@@ -100,13 +100,27 @@ module CPU(
     wire [31:0] pc_contexto;
     wire InstrucaIO, fimProcesso;
 	 
+   // =========================================================
+    // Sinais do receptor UART
+    // =========================================================
+    wire [7:0] rx_data;
+    wire rx_done;
+
+    // =========================================================
+    // Sinais do transmissor UART
+    // =========================================================
+    reg  [7:0] tx_data = 8'd0;
+    reg        tx_start = 1'b0;
+    wire       tx_ready;
+	 
+	 wire sinal_enter;
 	 //fios especificos da comunicação
-	 wire w_rx_ready;
-	 wire w_tx_busy;
-	 wire w_tx_start;
-	 wire sinal_start_tx;
-	 wire [7:0] dadoLidoArduino;
-	 reg w_tx_start_delay;
+	// wire w_rx_ready;
+	 //wire w_tx_busy;
+	 //wire w_tx_start;
+	 //wire sinal_start_tx;
+	 //wire [7:0] dadoLidoArduino;
+	 //reg w_tx_start_delay;
     //wire pulse_start_tx;
 
     parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd236, endSalvaProcesso = 32'd180;
@@ -127,7 +141,7 @@ module CPU(
     UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl),.comandoIN(comandoIN),.comandoOUT(comandoOUT),.tipoEntrada(tipoEntrada),.w_tx_start(w_tx_start));
     
     //ligaçao com  parada de sistema
-    ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada));
+    ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada),.enter(sinal_enter));
     
     //ligaçao com banco registradores
     BancoRegistradores br(.clk(clk),.escritaRegControl(escritaRegControl),.inRS(endRS),.inRT(endRT),.inRD(endRD),.dados(dadosMux6),.outRS(rs),.outRT(rt),.linkControl(linkControl));
@@ -145,10 +159,31 @@ module CPU(
     simple_dual_port_ram_dual_clock mem(.data(rt),.read_addr(resultadoULA),.write_addr(resultadoULA),.we(memControl),.read_clock(clock),.write_clock(clock),.q(dadoMem));
         
 	 //ligação do modulo uart_tx - tranmisão fpga>arduino
-    uart_tx mtx (.clk(clock),.reset(reset),.data_in(rt[7:0]),.data_valid(sinal_start_tx),.tx(saidaUART),.busy(w_tx_busy));
+    //uart_tx mtx (.clk(clock),.reset(reset),.data_in(rt[7:0]),.data_valid(sinal_start_tx),.tx(saidaUART),.busy(w_tx_busy));
+	     uart_tx #(
+        .CLK_FREQ(50000000),
+        .BAUD_RATE(9600)
+    ) tx_inst (
+        .clk(clock),
+        .start(tx_start),
+        .data_in(tx_data),
+        .tx(saidaUART),
+        .ready(tx_ready)
+    );
+	 
 	 
 	 //ligando modulo uart_rx - recepção arduino>fpga
-	 uart_rx mrx(.clk(clock),.reset(reset),.rx(entradaUART),.data_out(dadoLidoArduino),.data_ready(w_rx_ready));	
+	 //uart_rx mrx(.clk(clock),.reset(reset),.rx(entradaUART),.data_out(dadoLidoArduino),.data_ready(w_rx_ready));	
+    uart_rx #(
+        .CLK_FREQ(50000000),
+        .BAUD_RATE(9600)
+    ) rx_inst (
+        .clk(clock),
+        .rx(entradaUART),
+        .data_out(rx_data),
+        .done(rx_done)
+    );
+		  
 		  
     //ligaçao com entrada e saida
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(DadosLidos),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
@@ -172,8 +207,9 @@ module CPU(
 	Display_PC dpc(.pc_atual(pc),.unidadePC(unidadePC),.dezenaPC(dezenaPC),.centenaPC(centenaPC));		 
 		 
    assign selecaoMuxDesvio = branchControl & resultComparacao;
-	assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
-	assign sinal_busy = w_tx_busy;
+	assign sinal_enter = (comandoOUT & tx_ready) | (comandoIN & rx_done);
+	//assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
+	//assign sinal_busy = w_tx_busy;
    assign sinal_recebe = comandoIN;
 	assign teste_recebimento = entradaUART;
 	assign teste_envio = saidaUART;
@@ -217,12 +253,13 @@ module CPU(
     always@(posedge clk or posedge reset)
     begin
 	 
+		  tx_start <= 1'b0;
 		  
         if(reset) 
 				begin
 					pc<=32'd0;
 					buffer_uart <= 32'd0;
-					w_tx_start_delay <= 1'b0;
+					//w_tx_start_delay <= 1'b0;
 			   end
        
         else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
@@ -232,15 +269,15 @@ module CPU(
         else 
 			  begin
 				   
-			   w_tx_start_delay <= w_tx_start;		  
+			   //w_tx_start_delay <= w_tx_start;		  
 		  
-			  	if (w_rx_ready) 
+			  	if (rx_done) 
 					begin
-						buffer_uart <= {24'b000000000000000000000000,dadoLidoArduino};
+						buffer_uart <= {24'b000000000000000000000000,rx_data};
 					end
 	 
 			  
-				if(parada || w_tx_busy) pc <= pc;
+				if(parada) pc <= pc;
 					else
 					begin
 						 if(DesvioControl) pc <= concatena;

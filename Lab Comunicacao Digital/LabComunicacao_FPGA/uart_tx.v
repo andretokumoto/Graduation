@@ -1,145 +1,54 @@
-module uart_tx #(parameter CLKS_PER_BIT = 5208)(
-
-    input clk,
-    input reset,
-
+module uart_tx #(parameter CLK_FREQ = 50000000, parameter BAUD_RATE = 9600) (
+    input       clk,
+    input       start,
     input [7:0] data_in,
-    input data_valid,
-
-    output reg tx,
-    output reg busy
-
+    output reg  tx,
+    output reg  ready
 );
 
-// ===============================
-// ESTADOS
-// ===============================
+localparam TICKS_PER_BIT = CLK_FREQ / BAUD_RATE;
+reg [15:0] tick_count = 0;
+reg [2:0]  bit_index  = 0;
+reg [1:0]  state      = 0;
+reg [7:0]  data_reg   = 0;
 
-localparam IDLE  = 0;
-localparam START = 1;
-localparam DATA  = 2;
-localparam STOP  = 3;
+initial tx = 1; // Linha UART em repouso fica em HIGH
 
-reg [1:0] state;
-
-reg [12:0] clk_count;
-reg [2:0] bit_index;
-
-reg [7:0] tx_data;
-
-// ===============================
-
-always @(posedge clk or posedge reset) begin
-
-    if (reset) begin
-
-        state <= IDLE;
-        tx <= 1;
-        busy <= 0;
-
-        clk_count <= 0;
-        bit_index <= 0;
-
-    end
-    else begin
-
-        case (state)
-
-        // =========================
-
-        IDLE: begin
-
+always @(posedge clk) begin
+    case (state)
+        0: begin // IDLE
+            ready <= 1;
             tx <= 1;
-            busy <= 0;
-
-            if (data_valid) begin
-
-                busy <= 1;
-                tx_data <= data_in;
-
-                clk_count <= 0;
-
-                state <= START;
-
+            if (start) begin
+                data_reg <= data_in;
+                ready <= 0;
+                state <= 1;
             end
-
         end
-
-        // =========================
-
-        START: begin
-
+        1: begin // START BIT
             tx <= 0;
-
-            if (clk_count < CLKS_PER_BIT-1)
-
-                clk_count <= clk_count + 1;
-
-            else begin
-
-                clk_count <= 0;
-                bit_index <= 0;
-
-                state <= DATA;
-
-            end
-
+            if (tick_count == TICKS_PER_BIT - 1) begin
+                tick_count <= 0;
+                state <= 2;
+            end else tick_count <= tick_count + 1;
         end
-
-        // =========================
-
-        DATA: begin
-
-            tx <= tx_data[bit_index];
-
-            if (clk_count < CLKS_PER_BIT-1)
-
-                clk_count <= clk_count + 1;
-
-            else begin
-
-                clk_count <= 0;
-
-                if (bit_index < 7)
-
-                    bit_index <= bit_index + 1;
-
-                else
-
-                    state <= STOP;
-
-            end
-
+        2: begin // DATA BITS
+            tx <= data_reg[bit_index];
+            if (tick_count == TICKS_PER_BIT - 1) begin
+                tick_count <= 0;
+                if (bit_index == 7) begin
+                    bit_index <= 0;
+                    state <= 3;
+                end else bit_index <= bit_index + 1;
+            end else tick_count <= tick_count + 1;
         end
-
-        // =========================
-
-        STOP: begin
-
+        3: begin // STOP BIT
             tx <= 1;
-
-            if (clk_count < CLKS_PER_BIT-1)
-
-                clk_count <= clk_count + 1;
-
-            else begin
-
-                state <= IDLE;
-
-            end
-
+            if (tick_count == TICKS_PER_BIT - 1) begin
+                tick_count <= 0;
+                state <= 0;
+            end else tick_count <= tick_count + 1;
         end
-
-        // =========================
-
-        default:
-
-            state <= IDLE;
-
-        endcase
-
-    end
-
+    endcase
 end
-
 endmodule
