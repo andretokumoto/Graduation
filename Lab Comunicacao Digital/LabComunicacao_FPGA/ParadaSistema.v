@@ -1,7 +1,7 @@
-module ParadaSistema(clock,pausa,botaoIN,status,enter);
+module ParadaSistema(clock,pausa,botaoIN,status,enter,reset);
   
   input botaoIN,clock,enter;
-  input pausa;
+  input pausa,reset;
   output reg status;
   
   reg [1:0] estadoAtual,estadoFuturo;
@@ -54,12 +54,11 @@ module ParadaSistema(clock,pausa,botaoIN,status,enter);
 	 end
 
 	 
-	 always@(posedge clock)
-	  begin
-	      if(botaoIN | enter) estadoAtual = 2'b10;
-			//else if(enter) estadoAtual = 2'b10;
-			else estadoAtual = estadoFuturo;
-	  end
+	always@(posedge clock) begin
+		 if (reset) estadoAtual <= 2'b00;  // parâmetro reset precisaria ser adicionado
+		 else if (botaoIN | enter) estadoAtual <= 2'b10;
+		 else estadoAtual <= estadoFuturo;
+	end
 	 
 	 
 	 

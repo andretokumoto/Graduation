@@ -30,7 +30,7 @@ module ContadorDeQuantum(
 		else if(pc > 32'd300)//não faz a contagem do SO
 			begin
 				
-					if (opcode == jump || opcode == jumpR || opcode == beq || opcode == in || opcode == out || inRX || outTX) 
+					if (opcode == jump || opcode == jumpR || opcode == beq || opcode == in || opcode == out || opcode == inRX || opcode == outTX) 
 						begin
 							 contador = contador+1;
 						end

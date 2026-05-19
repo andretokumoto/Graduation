@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "saidaUART",
+					"strict" : false
+				},
+				{
 					"name" : "unidade[0]",
 					"strict" : false
 				},
@@ -192,11 +196,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "sinal_recebe",
+					"strict" : false
+				},
+				{
 					"name" : "teste_recebimento",
 					"strict" : false
 				},
 				{
+					"name" : "teste_envio",
+					"strict" : false
+				},
+				{
 					"name" : "entradaUART",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
 					"strict" : false
 				},
 				{
@@ -205,10 +221,6 @@
 				},
 				{
 					"name" : "botaoPlaca",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
 					"strict" : false
 				},
 				{

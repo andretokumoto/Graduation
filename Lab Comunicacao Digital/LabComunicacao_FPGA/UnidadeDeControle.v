@@ -9,7 +9,7 @@ module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,
     output reg mudaProcesso,fimprocesso,intrucaoIOContexto,ledControl,comandoIN,comandoOUT;
 
     // opcode de cada operaçao
-    parameter add=6'b000000, addi=6'b000001, sub=6'b000010, subi=6'b000011, mult=6'b000100, multi=6'b000101, div=6'b000110, divi=6'b000111, rdiv=6'b001000;
+   /* parameter add=6'b000000, addi=6'b000001, sub=6'b000010, subi=6'b000011, mult=6'b000100, multi=6'b000101, div=6'b000110, divi=6'b000111, rdiv=6'b001000;
     parameter OR=6'b001001, AND=6'b001010, NOT=6'b001011, XOR=6'b001100, NOR=6'b001101, NAND=6'b001110, XNOR=6'b001111, LT=6'b010000;
     parameter jump=6'b010001, jumpR=6'b010010, jal=6'b010011, beq=6'b010100, bne=6'b010101, blt=6'b010110;
     parameter lw=6'b010111, sw=6'b011000;
@@ -18,7 +18,30 @@ module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,
 
     // op de SO
     parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100, led = 6'b100101, inRX = 6'b100110, outTX = 6'b100111;
+*/
 
+	parameter add=6'd0, addi=6'd1, sub=6'd2, subi=6'd3, mult=6'd4, multi=6'd5;
+	parameter div=6'd6, divi=6'd7, rdiv=6'd8;
+
+	// Desvios e saltos
+	parameter jump=6'd17, jumpR=6'd18, jal=6'd19, beq=6'd20, bne=6'd21, blt=6'd22;
+
+	// Memória
+	parameter lw=6'd23, sw=6'd24;
+
+	// Movimentação
+	parameter mov=6'd25, movi=6'd26, mfhi=6'd27, mflo=6'd28, spc = 6'd32;
+
+	// I/O e controle
+	parameter in=6'd29, out=6'd30;
+	parameter fim=6'd63, dif=6'd47;
+
+	// Instruções de SO
+	parameter scpc=6'd33, scrg=6'd34, cproc=6'd35, encBios=6'd36, led=6'd37;
+	parameter inRX=6'd38, outTX=6'd39;
+	
+	parameter R20 = 5'd20,R21 = 5'd21,R22 = 5'd22,R23 = 5'd23,R24 = 5'd24,R25 = 5'd25 ,RZERO = 5'd0;
+	
     always@(opcode)
     begin
         case(opcode)
@@ -280,7 +303,7 @@ module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,
                 HILOcontrol = 1'b0;
             end
 
-            OR:
+     /*       OR:
             begin
                 DesvioControl = 1'b0;
                 branchControl = 1'b0;
@@ -486,7 +509,7 @@ module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,
                 tipoEntrada = 2'b00;
                 w_tx_start = 1'd0;
                 HILOcontrol = 1'b0;
-            end
+            end*/
 
             jump:
             begin

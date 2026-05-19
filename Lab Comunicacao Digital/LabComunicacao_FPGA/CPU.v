@@ -112,12 +112,15 @@ module CPU(
     reg  [7:0] tx_data = 8'd0;
     reg        tx_start = 1'b0;
     wire       tx_ready;
+	 reg tx_ready_prev;
 	 
 	 wire sinal_enter;
+	 wire tx_done;
+	 
+	 wire w_tx_start;
 	 //fios especificos da comunicação
 	// wire w_rx_ready;
 	 //wire w_tx_busy;
-	 //wire w_tx_start;
 	 //wire sinal_start_tx;
 	 //wire [7:0] dadoLidoArduino;
 	 //reg w_tx_start_delay;
@@ -141,7 +144,7 @@ module CPU(
     UnidadeDeControle uco(.opcode(opcode),.status(status),.ulaOP(ulaOP),.valueULA(valueULA),.DesvioControl(DesvioControl),.jumpControl(jumpControl),.linkControl(linkControl),.escritaRegControl(escritaRegControl),.branchControl(branchControl),.branchTipo(branchTipo),.dadoRegControl(dadoRegControl),.memControl(memControl),.HILOcontrol(HILOcontrol),.entradaSaidaControl(entradaSaidaControl),.mudaProcesso(mudaProcesso),.encerrarBios(encerrarBios),.fimprocesso(fimprocesso),.intrucaoIOContexto(ocorrenciaIO),.ledControl(ledControl),.comandoIN(comandoIN),.comandoOUT(comandoOUT),.tipoEntrada(tipoEntrada),.w_tx_start(w_tx_start));
     
     //ligaçao com  parada de sistema
-    ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada),.enter(sinal_enter));
+    ParadaSistema mest(.clock(clk),.pausa(status),.botaoIN(botaoIN),.status(parada),.enter(sinal_enter),.reset(reset));
     
     //ligaçao com banco registradores
     BancoRegistradores br(.clk(clk),.escritaRegControl(escritaRegControl),.inRS(endRS),.inRT(endRT),.inRD(endRD),.dados(dadosMux6),.outRS(rs),.outRT(rt),.linkControl(linkControl));
@@ -207,7 +210,8 @@ module CPU(
 	Display_PC dpc(.pc_atual(pc),.unidadePC(unidadePC),.dezenaPC(dezenaPC),.centenaPC(centenaPC));		 
 		 
    assign selecaoMuxDesvio = branchControl & resultComparacao;
-	assign sinal_enter = (comandoOUT & tx_ready) | (comandoIN & rx_done);
+	//assign sinal_enter = (comandoOUT & tx_ready) | (comandoIN & rx_done);
+	assign sinal_enter = (comandoOUT & tx_done) | (comandoIN & rx_done);
 	//assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
 	//assign sinal_busy = w_tx_busy;
    assign sinal_recebe = comandoIN;
@@ -250,42 +254,41 @@ module CPU(
          else concatena <= {pc[31:26],jump};
     end
     
+    assign tx_done = tx_ready & ~tx_ready_prev;
+
     always@(posedge clk or posedge reset)
     begin
-	 
-		  tx_start <= 1'b0;
-		  
-        if(reset) 
-				begin
-					pc<=32'd0;
-					buffer_uart <= 32'd0;
-					//w_tx_start_delay <= 1'b0;
-			   end
-       
-        else if(troca_contexto == 1'b1) pc<= endSalvaProcesso;
-        else if(intrucaoIOContexto == 1'b1) pc <= InstrucaIO;
-       // else if (comandoOUT == 1'b1) pc <= PCout;
-		  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;//
-        else 
-			  begin
-				   
-			   //w_tx_start_delay <= w_tx_start;		  
-		  
-			  	if (rx_done) 
-					begin
+		  if (reset) begin
+			  pc            <= 32'd0;
+			  buffer_uart   <= 32'd0;
+			  tx_data       <= 8'd0;
+			  tx_start      <= 1'b0;
+			  tx_ready_prev <= 1'b0;
+		  end else begin
+			  tx_ready_prev <= tx_ready;
+			  tx_start      <= 1'b0; // pulso: volta a 0 por padrao todo ciclo
+
+			  // carregar dado ANTES de ativar tx_start
+			  if (w_tx_start && tx_ready) begin
+					tx_data  <= rt[7:0];
+					tx_start <= 1'b1;
+			  end
+
+			  if(troca_contexto == 1'b1) pc <= endSalvaProcesso;
+			  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;
+			  else begin
+					if (rx_done) begin
 						buffer_uart <= {24'b000000000000000000000000,rx_data};
 					end
-	 
-			  
-				if(parada) pc <= pc;
-					else
-					begin
-						 if(DesvioControl) pc <= concatena;
-						 else pc <= resulSomador;
-					end    
+
+					if(parada) pc <= pc;
+					else begin
+						if(DesvioControl) pc <= concatena;
+						else pc <= resulSomador;
+					end
 			  end
-       // testePC <= pc;
-    end
+		  end // fecha else do reset
+    end // fecha always
     
     always@(pc)
     begin

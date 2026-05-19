@@ -6,7 +6,7 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
     /*input [1:0] controleSalvaInstrucao,ControleFimDeLeitura;*/
     output reg [5:0] opcode;
     output reg [4:0] OUTrs, OUTrt, OUTrd;
-    output reg [15:0] imediato;
+    output reg [10:0] imediato;
     output reg [25:0] jump;
     output reg biosEmExecucao; // Sinal que indica que a bios está em execução
 	
@@ -22,12 +22,32 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 	parameter endEscalonador = 26'd73, endMenu = 26'd37,entradaNovoProcesso = 26'd65,entradaProcesso = 26'd55,iniciaProcesso = 26'd47, endCarregaContexto = 26'd121 , endTrocaProcessoexecutando = 26'd97; //pc do escalonador
 	parameter endSaidaDeDados=26'd999,endEntradaDeDados=26'd999 , endL0 = 26'd83, endL1 = 26'd90, endL2 = 26'd100, endL3 = 26'd110; //MUDAR !!!!!!!
 
-	parameter add=6'b000000,addi=6'b000001,sub=6'b000010,subi=6'b000011,mult=6'b000100;
+	/*parameter add=6'b000000,addi=6'b000001,sub=6'b000010,subi=6'b000011,mult=6'b000100;
 	parameter j=6'b010001,jumpR=6'b010010,jal=6'b010011,beq=6'b010100,bne=6'b010101,blt=6'b010110;
 	parameter lw=6'b010111,sw=6'b011000,multi=6'b000101,div=6'b000110,divi=6'b000111,rdiv=6'b001000;
 	parameter mov=6'b011001,movi=6'b011010,mfhi=6'b011011,mflo=6'b011100;
 	parameter in=6'b011101,out=6'b011110,fim=6'b111111,spc = 6'b100110,inRX = 6'b100110,outTX = 6'b100111;
-	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101, dif =6'b101111;
+	parameter scpc = 6'b100001, scrg=6'b100010, cproc = 6'b100011, encBios = 6'b100100 ,led = 6'b100101, dif =6'b101111;*/
+	// Operações aritméticas
+	parameter add=6'd0, addi=6'd1, sub=6'd2, subi=6'd3, mult=6'd4, multi=6'd5;
+	parameter div=6'd6, divi=6'd7, rdiv=6'd8;
+
+	// Desvios e saltos
+	parameter j=6'd17, jumpR=6'd18, jal=6'd19, beq=6'd20, bne=6'd21, blt=6'd22;
+
+	// Memória
+	parameter lw=6'd23, sw=6'd24;
+
+	// Movimentação
+	parameter mov=6'd25, movi=6'd26, mfhi=6'd27, mflo=6'd28, spc = 6'd32;
+
+	// I/O e controle
+	parameter in=6'd29, out=6'd30;
+	parameter fim=6'd63, dif=6'd47;
+
+	// Instruções de SO
+	parameter scpc=6'd33, scrg=6'd34, cproc=6'd35, encBios=6'd36, led=6'd37;
+	parameter inRX=6'd38, outTX=6'd39;
 	
 	parameter R20 = 5'd20,R21 = 5'd21,R22 = 5'd22,R23 = 5'd23,R24 = 5'd24,R25 = 5'd25 ,RZERO = 5'd0;
 
@@ -364,13 +384,13 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 		memoria[32'd305] = {j,26'd301}; // depois alterar para jump na entrada de dados da uart*/
 	
 
-      memoria[32'd300] = {movi,5'd10,5'd0,5'd0,11'd0};// r10 = 0
-		//memoria[32'd301] = {inRX,5'd5,21'd2};//in r5
-		memoria[32'd301] = {movi,5'd15,5'd0,5'd0,11'd2};
+      memoria[32'd300] = {movi,5'd10,5'd0,5'd0,11'd255};// r10 = 255
+		memoria[32'd301] = {inRX,5'd5,21'd2};//in r5
+		//memoria[32'd301] = {movi,5'd15,5'd0,5'd0,11'd2};
 		//memoria[32'd302] = {movi,5'd10,5'd0,5'd0,11'd4};// aqui vai ter a entrada da uart
-		//memoria[32'd303] = {sub,5'd15,5'd5,5'd10,11'd0}; // r15 = |r10 - r5|
-		memoria[32'd302] = {outTX,5'd15,5'd15,5'd15,11'd1}; // out r15
-		memoria[32'd303] = {j,26'd301}; // depois alterar para jump na entrada de dados da uart
+		memoria[32'd302] = {sub,5'd15,5'd10,5'd5,11'd0}; // r15 = |r10 - r5|
+		memoria[32'd303] = {outTX,5'd15,5'd15,5'd15,11'd1}; // out r15
+		memoria[32'd304] = {j,26'd301}; // depois alterar para jump na entrada de dados da uart
 		
 	
 
