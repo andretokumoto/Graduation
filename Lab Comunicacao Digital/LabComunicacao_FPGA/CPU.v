@@ -105,6 +105,7 @@ module CPU(
     // =========================================================
     wire [7:0] rx_data;
     wire rx_done;
+    reg  rx_done_flag;
 
     // =========================================================
     // Sinais do transmissor UART
@@ -211,7 +212,7 @@ module CPU(
 		 
    assign selecaoMuxDesvio = branchControl & resultComparacao;
 	//assign sinal_enter = (comandoOUT & tx_ready) | (comandoIN & rx_done);
-	assign sinal_enter = (comandoOUT & tx_done) | (comandoIN & rx_done);
+	assign sinal_enter = (comandoOUT & tx_done) | (comandoIN & rx_done_flag);
 	//assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
 	//assign sinal_busy = w_tx_busy;
    assign sinal_recebe = comandoIN;
@@ -255,6 +256,16 @@ module CPU(
     end
     
     assign tx_done = tx_ready & ~tx_ready_prev;
+
+    // Flag que estende rx_done (1 ciclo 50MHz) ate o clk lento (500Hz) capturar
+    always@(posedge clock or posedge reset) begin
+        if (reset)
+            rx_done_flag <= 1'b0;
+        else if (rx_done)
+            rx_done_flag <= 1'b1;
+        else if (sinal_enter)
+            rx_done_flag <= 1'b0;
+    end
 
     always@(posedge clk or posedge reset)
     begin
