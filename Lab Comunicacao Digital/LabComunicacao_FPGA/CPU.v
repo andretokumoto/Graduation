@@ -115,7 +115,9 @@ module CPU(
     wire       tx_ready;
 	 reg tx_ready_prev;
 	 
+	 wire sinal_enter_raw;
 	 wire sinal_enter;
+	 reg  sinal_enter_prev;
 	 wire tx_done;
 	 
 	 wire w_tx_start;
@@ -212,7 +214,8 @@ module CPU(
 		 
    assign selecaoMuxDesvio = branchControl & resultComparacao;
 	//assign sinal_enter = (comandoOUT & tx_ready) | (comandoIN & rx_done);
-	assign sinal_enter = (comandoOUT & tx_done) | (comandoIN & rx_done_flag);
+	assign sinal_enter_raw = (comandoOUT & tx_done) | (comandoIN & rx_done_flag);
+	assign sinal_enter     = sinal_enter_raw & ~sinal_enter_prev; // pulso de 1 ciclo clk
 	//assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
 	//assign sinal_busy = w_tx_busy;
    assign sinal_recebe = comandoIN;
@@ -258,13 +261,18 @@ module CPU(
     assign tx_done = tx_ready & ~tx_ready_prev;
 
     // Flag que estende rx_done (1 ciclo 50MHz) ate o clk lento (500Hz) capturar
-    always@(posedge clock or posedge reset) begin
-        if (reset)
-            rx_done_flag <= 1'b0;
-        else if (rx_done)
-            rx_done_flag <= 1'b1;
-        else if (sinal_enter)
-            rx_done_flag <= 1'b0;
+    // sinal_enter_prev detecta borda de subida para gerar pulso de 1 ciclo
+    always@(posedge clk or posedge reset) begin
+        if (reset) begin
+            rx_done_flag     <= 1'b0;
+            sinal_enter_prev <= 1'b0;
+        end else begin
+            sinal_enter_prev <= sinal_enter_raw;
+            if (rx_done)
+                rx_done_flag <= 1'b1;
+            else if (sinal_enter)  // sinal_enter ja e pulso, limpa o flag
+                rx_done_flag <= 1'b0;
+        end
     end
 
     always@(posedge clk or posedge reset)
