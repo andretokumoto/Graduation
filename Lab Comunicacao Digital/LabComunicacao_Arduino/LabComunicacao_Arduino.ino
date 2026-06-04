@@ -35,7 +35,7 @@ void loop() {
     if (tempoAtual - tempoAnterior >= tempoAmostragem) {
       
       ValorPotenciometro = analogRead(pinoPotenciometro);
-      velocidadeAtual = map(leituraADC, 0, 1023, 0, 2500);//rpm maximo desse motor a 12v eh 25000
+      velocidadeAtual = map(ValorPotenciometro, 0, 1023, 0, 2500);//rpm maximo desse motor a 12v eh 25000
       
       //erro no arduino vai ser no fpga depois
       erroAtual = velocidadeDesejada - velocidadeAtual;
@@ -58,11 +58,11 @@ void loop() {
       tempoAnterior = tempoAtual;
       
       // monitor de controle
-      Serial.print("Setpoint:"); Serial.print(setpoint);
+      Serial.print("velocidadeDesejada:"); Serial.print(velocidadeDesejada);
       Serial.print(",");
       Serial.print("VelocidadeAtual:"); Serial.print(velocidadeAtual);
       Serial.print(",");
-      Serial.print("PWM:"); Serial.println(sinalControle);
+      Serial.print("PWM:"); Serial.println(uk);
     }
     
   
