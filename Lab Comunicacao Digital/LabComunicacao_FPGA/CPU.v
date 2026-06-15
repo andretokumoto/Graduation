@@ -103,14 +103,15 @@ module CPU(
    // =========================================================
     // Sinais do receptor UART
     // =========================================================
-    wire [7:0] rx_data;
+    wire [31:0] rx_data;
     wire rx_done;
+	 wire data_valid;
     reg  rx_done_flag;
 
     // =========================================================
     // Sinais do transmissor UART
     // =========================================================
-    reg  [7:0] tx_data = 8'd0;
+    reg  [15:0] tx_data = 8'd0;
     reg        tx_start = 1'b0;
     wire       tx_ready;
 	 reg tx_ready_prev;
@@ -179,8 +180,8 @@ module CPU(
 	 
 	 
 	 //ligando modulo uart_rx - recepção arduino>fpga
-	 //uart_rx mrx(.clk(clock),.reset(reset),.rx(entradaUART),.data_out(dadoLidoArduino),.data_ready(w_rx_ready));	
-    uart_rx #(
+		
+  /*  uart_rx #(
         .CLK_FREQ(50000000),
         .BAUD_RATE(9600)
     ) rx_inst (
@@ -189,7 +190,15 @@ module CPU(
         .data_out(rx_data),
         .done(rx_done)
     );
-		  
+	*/
+
+    Comunicacao_uart u_rx (
+        .clk        (clock),
+        .uart_rx    (entradaUART),
+        .data_out   (rx_data),
+        .data_valid (data_valid),
+		  .reset(reset)
+    );	
 		  
     //ligaçao com entrada e saida
     EntradaSaida IO(.botaoIN(botaoIN),.endereco(resultadoULA),.dadosEscrita(rt),.DadosLidos(DadosLidos),.entradaSaidaControl(entradaSaidaControl),.clk(clk),.clock(clock),.entradaDeDados(entradaDeDadosIO),.unidade(inUnidade),.dezena(inDezena),.centena(inCentena));
@@ -214,7 +223,7 @@ module CPU(
 		 
    assign selecaoMuxDesvio = branchControl & resultComparacao;
 	//assign sinal_enter = (comandoOUT & tx_ready) | (comandoIN & rx_done);
-	assign sinal_enter_raw = (comandoOUT & tx_done) | (comandoIN & rx_done_flag);
+	assign sinal_enter_raw = (comandoOUT & tx_done) /*| (comandoIN & rx_done_flag)*/;
 	assign sinal_enter     = sinal_enter_raw & ~sinal_enter_prev; // pulso de 1 ciclo clk
 	//assign sinal_start_tx = w_tx_start & ~w_tx_start_delay;
 	//assign sinal_busy = w_tx_busy;
@@ -262,18 +271,18 @@ module CPU(
 
     // Flag que estende rx_done (1 ciclo 50MHz) ate o clk lento (500Hz) capturar
     // sinal_enter_prev detecta borda de subida para gerar pulso de 1 ciclo
-    always@(posedge clk or posedge reset) begin
-        if (reset) begin
-            rx_done_flag     <= 1'b0;
-            sinal_enter_prev <= 1'b0;
-        end else begin
+   // always@(posedge clk or posedge reset) begin
+       // if (reset) begin
+            //rx_done_flag     <= 1'b0;
+           // sinal_enter_prev <= 1'b0;
+        /*end else begin
             sinal_enter_prev <= sinal_enter_raw;
             if (rx_done)
                 rx_done_flag <= 1'b1;
             else if (sinal_enter)  // sinal_enter ja e pulso, limpa o flag
                 rx_done_flag <= 1'b0;
-        end
-    end
+        end*/
+    //end
 
     always@(posedge clk or posedge reset)
     begin
@@ -283,22 +292,23 @@ module CPU(
 			  tx_data       <= 8'd0;
 			  tx_start      <= 1'b0;
 			  tx_ready_prev <= 1'b0;
-		  end else begin
-			  tx_ready_prev <= tx_ready;
-			  tx_start      <= 1'b0; // pulso: volta a 0 por padrao todo ciclo
+			  sinal_enter_prev <= 1'b0;
+		  end
+		    else begin
+			   tx_ready_prev <= tx_ready;
+			   tx_start      <= 1'b0; // pulso: volta a 0 por padrao todo ciclo
 
-			  // carregar dado ANTES de ativar tx_start
 			  if (w_tx_start && tx_ready) begin
-					tx_data  <= rt[7:0];
+					tx_data  <= rt[15:0];  // complemento de 2, sinal em rt[15]
 					tx_start <= 1'b1;
 			  end
 
 			  if(troca_contexto == 1'b1) pc <= endSalvaProcesso;
 			  else if (fimprocesso == 1'b1) pc <= EndfimProcesso;
 			  else begin
-					if (rx_done) begin
-						buffer_uart <= {24'b000000000000000000000000,rx_data};
-					end
+						if (data_valid) begin
+							 buffer_uart <= rx_data;  // já vem como 32 bits de Comunicacao_uart
+						end
 
 					if(parada) pc <= pc;
 					else begin

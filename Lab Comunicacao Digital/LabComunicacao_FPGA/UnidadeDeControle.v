@@ -1069,10 +1069,10 @@ module UnidadeDeControle(opcode,status,ulaOP,valueULA,DesvioControl,jumpControl,
                 dadoRegControl = 3'b100;
                 entradaSaidaControl = 2'b00;
                 ulaOP = 5'b00000;
-                status = 1'b1;
+                status = 1'b0;
                 mudaProcesso = 1'b0;
                 fimprocesso = 1'b0;
-                intrucaoIOContexto = 1'b1;
+                intrucaoIOContexto = 1'b0;
                 encerrarBios = 2'b00;
                 ledControl = 1'b0;
                 comandoIN = 1'd1;
