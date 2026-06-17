@@ -375,44 +375,18 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
 			//-------------------------fim gerenciador de processos ----------------------------------------------
 
 			
- //calculo diferença
-     /* memoria[32'd300] = {movi,5'd10,5'd0,5'd0,11'd0};// r10 = 0
-		memoria[32'd301] = {in,5'd5,21'd2};//in r5
-		memoria[32'd302] = {movi,5'd10,5'd0,5'd0,11'd4};// aqui vai ter a entrada da uart
-		memoria[32'd303] = {sub,5'd15,5'd10,5'd5,11'd0}; // r15 = |r10 - r5|
-		memoria[32'd304] = {outTX,5'd15,5'd15,5'd15,11'd1}; // out r15
-		memoria[32'd305] = {j,26'd301}; // depois alterar para jump na entrada de dados da uart*/
+ //calculo erro
 	
 
-      memoria[32'd300] = {movi,5'd10,5'd0,5'd0,11'd255};// r10 = 255
-		memoria[32'd301] = {inRX,5'd5,21'd2};//in r5
-		//memoria[32'd301] = {movi,5'd15,5'd0,5'd0,11'd2};
-		//memoria[32'd302] = {movi,5'd10,5'd0,5'd0,11'd4};// aqui vai ter a entrada da uart
-		memoria[32'd302] = {sub,5'd15,5'd10,5'd5,11'd0}; // r15 = |r10 - r5|
-		memoria[32'd303] = {outTX,5'd15,5'd15,5'd15,11'd1}; // out r15
-		memoria[32'd304] = {j,26'd301}; // depois alterar para jump na entrada de dados da uart
+      memoria[32'd300] = {movi,5'd10,5'd0,5'd0,11'd0};// r10 = 0
+		memoria[32'd301] = {in,5'd5,21'd0};//in r5
+		memoria[32'd302] = {out,5'd5,5'd5,5'd5,11'd0};//out r5
+		memoria[32'd303] = {inRX,5'd10,21'd0};// inrx r10
+		memoria[32'd304] = {sub,5'd15,5'd10,5'd5,11'd0}; // r15 = r10 - r5
+		memoria[32'd305] = {outTX,5'd15,5'd15,5'd15,11'd1}; // out r15
+		memoria[32'd306] = {j,26'd303}; // depois alterar para jump na entrada de dados da uart
 		
-	
 
-		//fibo
-	
-			memoria[32'd900] = {movi,5'd7,RZERO,RZERO,11'd1};//movi r7, 1
-			memoria[32'd901] = {movi,5'd2,RZERO,RZERO,11'd1};//movi r2, 1
-			memoria[32'd902] = {movi,5'd4,RZERO,RZERO,11'd1};//movi r3, 1		
-			memoria[32'd903] = {movi,5'd4,RZERO,RZERO,11'd3};//movi r4, 3	//contador
-			
-			memoria[32'd904] = {in,5'd5,21'd3};//in r5
-			//memoria[32'd904] = {movi,5'd5,RZERO,RZERO,11'd7};
-			
-			memoria[32'd905] = {blt,5'd0,5'd4,5'd5,11'd7};//blt r5,r4, +6
-			memoria[32'd906] = {add,5'd3,5'd7,5'd2,11'd0};//[6] add r3,r7,r2
-			memoria[32'd907] = {beq,5'd0,5'd5,5'd4,11'd5};//beq r5,r4, + 4 
-			memoria[32'd908] = {mov,5'd7,5'd2,5'd2,11'd12};//mov r1,r2
-			memoria[32'd909] = {mov,5'd2,5'd3,5'd3,11'd12};//mov r2,r3
-			memoria[32'd910] = {addi,5'd4,5'd4,5'd4,11'd1};//addi r4,r4,1
-			memoria[32'd911] = {j,26'd906};	//jump [6]
-			memoria[32'd912] = {out,5'd3,5'd3,5'd3,11'd3};//out r3
-			memoria[32'd913] = {j,26'd236};
 
 
 
