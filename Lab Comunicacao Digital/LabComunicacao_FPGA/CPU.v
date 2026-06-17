@@ -21,37 +21,6 @@ module CPU(
 	 output wire teste_recebimento,
 	 output wire teste_envio
 	 
-	 //***********************testes***********************
-	/* 
-	 output wire [6:0] uniProc,
-	 output wire testeSinal,
-	 output reg [31:0] testePC,
-    output wire [4:0] enRD,
-    output wire [4:0] enRS,
-    output wire [4:0] enRT,
-    output wire [31:0] testeDadosMux,
-    output reg [31:0] testeImediato,
-    output wire [2:0] testeSelMux,
-    output wire [31:0] ValorRS,
-	 output wire [31:0] ValorRT,
-    output wire [5:0] testeOPCODE,
-    output wire testeDesvioControl,
-	 output wire testeBranchControl,
-    output wire testeSelecaoMuxDesvio,
-    output wire testeResultComparacao,
-    output wire [31:0] testeIN,
-    output wire [31:0] testedadoMem,
-    output wire [31:0] testeUla,
-    output wire [3:0] testesaidaUNI,
-    output wire [3:0] testesaidaDez,
-    output wire [3:0] testesaidaCent,
-    output wire [25:0] testeJump,
-    output reg [31:0] Testeprocesso_atual,
-	 output reg [31:0] testeoperando,
-	 output wire testeMemControl,
-	 output wire teste_troca_contexto,
-	 output wire teste_sinal_cproc,
-	 output wire teste_fim*/
 );
 
     // Declarações internas
@@ -124,11 +93,11 @@ module CPU(
 	 wire w_tx_start;
 	 //fios especificos da comunicação
 	// wire w_rx_ready;
-	 //wire w_tx_busy;
-	 //wire sinal_start_tx;
-	 //wire [7:0] dadoLidoArduino;
-	 //reg w_tx_start_delay;
-    //wire pulse_start_tx;
+	 wire w_tx_busy;
+	 wire sinal_start_tx;
+	 wire [15:0] dadoLidoArduino;
+	 reg w_tx_start_delay;
+    wire pulse_start_tx;
 
     parameter Escalonador = 32'd73, IntrucaoIO = 32'd92, PCout = 32'd160,EndfimProcesso = 32'd236, endSalvaProcesso = 32'd180;
 	 parameter in=6'b011101,out=6'b011110;
@@ -216,8 +185,6 @@ module CPU(
     displaySete displayDezena(.entrada(inDezena),.saidas(dezena));
     displaySete displayCentena(.entrada(inCentena),.saidas(centena));
       
-   // BCD bcd(.binario(imediatoExtendido),.unidade(un),.dezena(dez),.centena(cen),.controlesaida(entradaSaidaControl)); 
-    //displaySete displayprocessouni(.entrada(un),.saidas(uniProc));
     
 	Display_PC dpc(.pc_atual(pc),.unidadePC(unidadePC),.dezenaPC(dezenaPC),.centenaPC(centenaPC));		 
 		 
@@ -231,32 +198,7 @@ module CPU(
 	assign teste_recebimento = entradaUART;
 	assign teste_envio = saidaUART;
     assign halt = parada;
-	/* assign un = imediato[3:0];
-	 assign testeSelecaoMuxDesvio = selecaoMuxDesvio;
-	 assign testeBranchControl = branchControl;
-    assign testeResultComparacao = resultComparacao;
-    assign testeIN = dadosDeEntrada;
-    assign testedadoMem = dadoMem;
-    assign testeMemControl = memControl;
-    assign testeJump = jump;
-    assign testeUla = resultadoULA;
-    assign testeSelMux = dadoRegControl;
-    assign ValorRS = rs;
-	 assign ValorRT = rt;
-    assign enRD = endRD;
-    assign enRS = endRS;
-    assign enRT = endRT;
-    assign testeDadosMux = dadosMux6;
-    //assign botaoIN = botaoPlaca;
-    assign testesaidaUNI = inUnidade;
-    assign testesaidaDez = inDezena;
-    assign testesaidaCent = inCentena;
-    assign testeDesvioControl = DesvioControl;
-    assign testeOPCODE = opcode;
-	 assign teste_troca_contexto = troca_contexto;
-	 assign teste_sinal_cproc = mudaProcesso;
-	 assign teste_fim = fimprocesso;
-	 //assign Testeprocesso_atual = processo_rodando;*/
+
     
     always@(negedge clk) 
     begin
@@ -374,25 +316,11 @@ module CPU(
 							//Testeprocesso_atual<=processo_atual;
     end
     
-   /* always@(posedge mudaProcesso)
-    begin
-        if(mudaProcesso) 
-        begin
-            processo_atual = rt;
-           
-        end
-    end*/
-    
-	 /*always@(dadoLidoArduino)
-		begin
-		  dadoLidoArduinoExtendido = {24'b000000000000000000000000,dadoLidoArduino};
-		end*/
 	 
 	 
     always@(imediato)
     begin
         imediatoExtendido = {21'b000000000000000000000,imediato};
-        //testeImediato = imediatoExtendido;
     end
     
     always@(HI,LO)
@@ -410,38 +338,13 @@ module CPU(
         else  HILOdata = regLO;
     end
     
-   /* always@(posedge clk || ledControl)
-    begin
-        if (reset)
-        begin
-            ledmenu = 1'b0;
-            lednumprocessos = 1'b0;
-            ledprocesso = 1'b0;
-            ledin = 1'b0;
-        end
-        else if(ledControl)
-        begin
-             if (imediato == 11'd1) ledmenu = 1'b1;
-             else if (imediato == 11'd2) ledmenu = 1'b0;
-             else if (imediato == 11'd3) ledin = 1'b1;
-             else if (imediato == 11'd4) ledin = 1'b0;
-             else if (imediato == 11'd5) lednumprocessos = 1'b1;
-             else if (imediato == 11'd6) lednumprocessos = 1'b0;
-             else if (imediato == 11'd7) ledprocesso = 1'b1;
-             else if (imediato == 11'd8) ledprocesso = 1'b0;
-        end
-    end*/
     
     always@(imediatoExtendido,rt)
     begin
          if(valueULA) operando = imediatoExtendido;
          else operando = rt;
 			
-			//testeoperando = operando;
     end
 	 
 	
-	 
-	 
-
 endmodule
