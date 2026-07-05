@@ -378,12 +378,12 @@ module MEMInstrucoes(reset, pc, opcode, jump, OUTrs, OUTrt, OUTrd, imediato, clo
       memoria[32'd300] = {movi,5'd10,5'd0,5'd0,11'd0};// r10 = 0
 		memoria[32'd301] = {in,5'd5,21'd0};//in r5
 		memoria[32'd302] = {out,5'd5,5'd5,5'd5,11'd0};//out r5
-		memoria[32'd304] = {multi,5'd5,5'd5,5'd5,11'd100};//multi r5 = r5*100
-		memoria[32'd303] = {inRX,5'd10,21'd0};// inrx r10
-		memoria[32'd304] = {multi,5'd10,5'd10,5'd10,11'd10};//multi r5 = r5*10
-		memoria[32'd304] = {sub,5'd15,5'd5,5'd10,11'd0}; // r15 = r5 - r10
-		memoria[32'd305] = {outTX,5'd15,5'd15,5'd15,11'd1}; // out r15
-		memoria[32'd306] = {j,26'd303}; // depois alterar para jump na entrada de dados da uart
+		memoria[32'd303] = {multi,5'd5,5'd5,5'd5,11'd100};//multi r5 = r5*100
+		memoria[32'd304] = {inRX,5'd10,21'd0};// inrx r10
+		memoria[32'd305] = {sub,5'd15,5'd5,5'd10,11'd0}; // r15 = r5 - r10
+		memoria[32'd306] = {outTX,5'd15,5'd15,5'd15,11'd1}; // out r15
+		memoria[32'd307] = {j,26'd304}; // loop
+
 
 
 

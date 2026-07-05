@@ -103,7 +103,7 @@ module CPU(
     // =========================================================
     // Sinais do transmissor UART
     // =========================================================
-    reg  [7:0] tx_data        = 8'd0;
+    reg  signed [15:0] tx_data = 16'd0;  // 16 bits, com sinal (complemento de dois)
     reg        tx_start       = 1'b0;
     wire       tx_ready;
     reg        tx_ready_prev  = 1'b0;  // dominio: clock 50 MHz
@@ -114,8 +114,8 @@ module CPU(
     wire       sinal_enter;
     wire       w_tx_start;
 
-    // Declaracao explicita de 8 bits — evita inferencia incorreta de 1 bit
-    wire [7:0] rx_data_byte;
+    // Declaracao explicita de 16 bits — recebimento nao precisa de sinal
+    wire [15:0] rx_data_byte;
     wire [31:0] rx_data_extendido;
 
     parameter Escalonador    = 32'd73,
@@ -255,14 +255,14 @@ module CPU(
             tx_ready_prev    <= 1'b0;
             tx_done_stretched <= 1'b0;
             tx_start         <= 1'b0;
-            tx_data          <= 8'd0;
+            tx_data          <= 16'd0;
         end else begin
             tx_ready_prev <= tx_ready;
             tx_start      <= 1'b0;  // pulso: desce a cada ciclo por padrao
 
-            // Carrega dado e dispara TX
+            // Carrega dado e dispara TX (16 bits, preserva o sinal de rt)
             if (w_tx_start && tx_ready) begin
-                tx_data  <= rt[7:0];
+                tx_data  <= rt[15:0];
                 tx_start <= 1'b1;
             end
 
@@ -376,6 +376,6 @@ module CPU(
     assign teste_recebimento = entradaUART;
     assign teste_envio       = saidaUART;
     assign halt              = parada;
-    assign rx_data_extendido = {24'b0, rx_data_byte};
+    assign rx_data_extendido = {16'b0, rx_data_byte};
 
 endmodule

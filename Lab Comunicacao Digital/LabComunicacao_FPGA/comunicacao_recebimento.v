@@ -1,10 +1,10 @@
 module comunicacao_recebimento (
     input      clk,          // Clock de 50MHz
     input      rx,           // Entrada UART RX
-    output reg [7:0] dado    // Último byte recebido (disponível continuamente)
+    output reg [15:0] dado   // Última palavra de 16 bits recebida (disponível continuamente)
 );
 
-    wire [7:0] rx_data;
+    wire [15:0] rx_data;
     wire rx_done;
 
     // Recepção UART
