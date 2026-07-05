@@ -168,34 +168,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "centenaPC[0]",
-					"strict" : false
-				},
-				{
-					"name" : "centenaPC[1]",
-					"strict" : false
-				},
-				{
-					"name" : "centenaPC[2]",
-					"strict" : false
-				},
-				{
-					"name" : "centenaPC[3]",
-					"strict" : false
-				},
-				{
-					"name" : "centenaPC[4]",
-					"strict" : false
-				},
-				{
-					"name" : "centenaPC[5]",
-					"strict" : false
-				},
-				{
-					"name" : "centenaPC[6]",
-					"strict" : false
-				},
-				{
 					"name" : "sinal_recebe",
 					"strict" : false
 				},
@@ -220,10 +192,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "botaoPlaca",
-					"strict" : false
-				},
-				{
 					"name" : "entradaDeDadosIO[0]",
 					"strict" : false
 				},
@@ -232,11 +200,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "entradaDeDadosIO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaDeDadosIO[4]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaDeDadosIO[5]",
+					"strict" : false
+				},
+				{
 					"name" : "entradaDeDadosIO[3]",
 					"strict" : false
 				},
 				{
-					"name" : "entradaDeDadosIO[2]",
+					"name" : "botaoPlaca",
 					"strict" : false
 				}
 			]
