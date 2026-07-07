@@ -1,3 +1,9 @@
+#include <SoftwareSerial.h>
+
+// --- Comunicacao com a FPGA ---
+// RX no 4, TX no 11 (mesma pinagem do exemplo de comunicacao)
+SoftwareSerial fpgaserial(4, 11);
+
 const int pinoEncoder = 2;
 const int pinoPWM = 7;
 const int pinoBotao = 5;
@@ -25,6 +31,7 @@ void contarPulso() {
 
 void setup() {
   Serial.begin(9600);
+  fpgaserial.begin(9600);
   pinMode(pinoEncoder, INPUT_PULLUP);
   pinMode(pinoPWM, OUTPUT);
   pinMode(pinoBotao, INPUT_PULLUP);  // pulldown sem resistor = INPUT_PULLUP com lógica invertida
@@ -69,7 +76,27 @@ void loop() {
     interrupts();
 
     velocidadeAtual = (pulsos / (double)ranhuras) * (60000.0 / tempoAmostragem);
-    erroAtual = velocidadeDesejada - velocidadeAtual;
+
+    // --- Envia velocidadeAtual (dividida por 100) para a FPGA ---
+    // A velocidadeDesejada NAO é enviada: ela é uma entrada direta na propria placa FPGA.
+    byte dadoParaEnviar = (byte)(velocidadeAtual / 100.0);
+    fpgaserial.write(dadoParaEnviar);
+
+    // --- Aguarda o erro calculado pela FPGA (1 byte, com sinal) ---
+    unsigned long inicioEspera = millis();
+    const unsigned long timeoutFPGA = 50; // ms, cabe dentro do periodo de amostragem
+    while (fpgaserial.available() == 0) {
+      if (millis() - inicioEspera > timeoutFPGA) {
+        break; // evita travar o controle se a FPGA nao responder
+      }
+    }
+
+    if (fpgaserial.available() > 0) {
+      int8_t erroRecebido = (int8_t)fpgaserial.read();
+      erroAtual = (double)erroRecebido * 100.0; // multiplica por 100
+    }
+    // se nao houve resposta a tempo, mantem o ultimo erroAtual conhecido
+
     double T = tempoAmostragem / 1000.0;
 
     uk = uk1 + kp * (erroAtual - erroAnterior) + ki * T * erroAtual;
@@ -83,9 +110,9 @@ void loop() {
     erroAnterior = erroAtual;
     tempoAnterior = tempoAtual;
 
-    Serial.print("velocidadeDesejada:"); Serial.print(velocidadeDesejada);
-    Serial.print(",");
     Serial.print("VelocidadeAtual:"); Serial.print(velocidadeAtual);
+    Serial.print(",");
+    Serial.print("erroFPGA:"); Serial.print(erroAtual);
     Serial.print(",");
     Serial.print("PWM:"); Serial.println(uk);
   }
