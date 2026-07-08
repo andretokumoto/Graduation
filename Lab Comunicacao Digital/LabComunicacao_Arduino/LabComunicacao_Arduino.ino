@@ -1,7 +1,6 @@
 #include <SoftwareSerial.h>
 
 // --- Comunicacao com a FPGA ---
-// RX no 4, TX no 11 (mesma pinagem do exemplo de comunicacao)
 SoftwareSerial fpgaserial(4, 11);
 
 const int pinoEncoder = 2;
@@ -34,13 +33,13 @@ void setup() {
   fpgaserial.begin(9600);
   pinMode(pinoEncoder, INPUT_PULLUP);
   pinMode(pinoPWM, OUTPUT);
-  pinMode(pinoBotao, INPUT_PULLUP);  // pulldown sem resistor = INPUT_PULLUP com lógica invertida
+  pinMode(pinoBotao, INPUT_PULLUP); 
   attachInterrupt(digitalPinToInterrupt(pinoEncoder), contarPulso, RISING);
 }
 
 void loop() {
 
-  // leitura do botão com debounce simples
+  
   bool estadoBotao = digitalRead(pinoBotao);
   if (estadoBotao == LOW && estadoBotaoAnterior == HIGH) {
     delay(20); // debounce
@@ -48,7 +47,7 @@ void loop() {
       motorAtivo = !motorAtivo;
 
       if (!motorAtivo) {
-        // zera tudo ao pausar
+        
         analogWrite(pinoPWM, 0);
         uk = 0.0;
         uk1 = 0.0;
@@ -77,25 +76,23 @@ void loop() {
 
     velocidadeAtual = (pulsos / (double)ranhuras) * (60000.0 / tempoAmostragem);
 
-    // --- Envia velocidadeAtual (dividida por 100) para a FPGA ---
-    // A velocidadeDesejada NAO é enviada: ela é uma entrada direta na propria placa FPGA.
+ 
     byte dadoParaEnviar = (byte)(velocidadeAtual / 100.0);
     fpgaserial.write(dadoParaEnviar);
 
-    // --- Aguarda o erro calculado pela FPGA (1 byte, com sinal) ---
+    
     unsigned long inicioEspera = millis();
-    const unsigned long timeoutFPGA = 50; // ms, cabe dentro do periodo de amostragem
+    const unsigned long timeoutFPGA = 50; 
     while (fpgaserial.available() == 0) {
       if (millis() - inicioEspera > timeoutFPGA) {
-        break; // evita travar o controle se a FPGA nao responder
+        break; 
       }
     }
 
     if (fpgaserial.available() > 0) {
       int8_t erroRecebido = (int8_t)fpgaserial.read();
-      erroAtual = (double)erroRecebido * 100.0; // multiplica por 100
+      erroAtual = (double)erroRecebido * 100.0;
     }
-    // se nao houve resposta a tempo, mantem o ultimo erroAtual conhecido
 
     double T = tempoAmostragem / 1000.0;
 
