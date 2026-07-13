@@ -2,7 +2,7 @@ module CPU(
     input reset,
     input clock,
     input botaoPlaca,
-    input [5:0] entradaDeDadosIO,
+    input [3:0] entradaDeDadosIO,
 	 input entradaUART,
 	 output wire saidaUART,
     output wire [6:0] unidade,
